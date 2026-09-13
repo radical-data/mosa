@@ -1,3 +1,5 @@
+export const contactEmail = "mosa@radicaldata.org";
+
 export const navigation = [
   { href: "/about/", label: "Sobre MoSA" },
   { href: "/collection/", label: "Colección" },

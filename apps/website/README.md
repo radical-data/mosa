@@ -41,7 +41,7 @@ The image serves static output through nginx as an unprivileged user. The build 
 | `/visit/` | Distribution overview and institution directory |
 | `/events/` | Accessible event accordion and retrospective overview |
 | `/resources/` | Resource summaries, relationship diagram and reading references |
-| `/contact/` | Contact form layout with submission explicitly unavailable |
+| `/contact/` | Direct project email, invitation to connect and correspondence guidance |
 
 Individual collection, event and resource detail pages, ontology essays and pop-ups are intentionally outside this implementation. The Visit overview follows the content architecture; no Visit layout was supplied. The directory is a reference overview, not an interactive geographical map.
 
@@ -49,9 +49,28 @@ Individual collection, event and resource detail pages, ontology essays and pop-
 
 The collection filters combine search, concept and record type. Search ignores accents and case. Home concept links preselect the matching collection filter. With JavaScript disabled, all records and navigation remain accessible; event disclosures use native HTML.
 
+## Contact
+
+Following [ADR 015](../../docs/adrs/015-use-email-for-public-contact.md), contact uses
+`mosa@radicaldata.org`. The address is defined in `src/data/site.ts` and rendered as
+visible, selectable text in a native `mailto:` link. No obfuscation, JavaScript,
+clipboard permission, tracking or form service is required to use it. CSS permits
+visual wrapping without adding characters to the copied address. Existing contact
+links continue to open the contact page, where visitors can read the invitation
+and correspondence guidance before writing.
+
+The page identifies the MoSA team as the recipient and distinguishes correspondence
+from permission to publish or add material to the collection. It does not promise
+a response deadline, anonymity or a specific retention period.
+
+Mailbox provisioning, delivery and reply verification, individual staff access,
+inbox ownership and the complete privacy notice remain operational launch work.
+Confirm the responsible organisation, processing arrangements and retention policy
+before publishing those details. Website checks do not establish mailbox delivery.
+
 ## Pending content and integrations
 
-- Contact delivery and privacy copy: the form is disabled and explicitly states that messages are neither sent nor stored. Connect an approved endpoint and publish the privacy notice before enabling it.
+- Contact operations and the complete privacy notice: see the contact section above. A website form is deferred under ADR 015.
 - Resource files, external reading links, event registration and the institution map: summaries remain visible, with pending availability clearly labelled and no dead detail-page links.
 - Translations and social destinations: Spanish is the only implemented language; no unconfigured language switch or social links are presented.
 - Live collection publication requires the separate publication-aware data interface described above.

@@ -1,19 +1,29 @@
 ---
+import { contactEmail } from "../data/site";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title="Conectar — MoSA" description="Conecta con MoSA y forma parte de una red para la reconexión y restitución del patrimonio.">
-  <section class="container section contact-layout"><div class="contact-art"><h1>Conectar</h1><img class="contact-figure" src="/images/kavakava.webp" alt="" aria-hidden="true" width="222" height="972" /><img class="contact-tablet" src="/images/rongorongo.webp" alt="" aria-hidden="true" width="919" height="692" /></div><div><p class="contact-intro">Como el patrimonio que buscamos reconectar, MoSA también se hace en relación. Si formas parte de una comunidad, un museo, una investigación, o simplemente quieres saber más o compartir información, escríbenos.</p>
-    <form class="contact-form" aria-describedby="contact-status">
-      <p class="form-notice" id="contact-status">El formulario de contacto estará disponible próximamente. Por ahora no se envían ni se guardan mensajes.</p>
-      <fieldset disabled><legend class="sr-only">Datos de contacto</legend>
-        <label for="name">Nombre <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="name" placeholder="Tu nombre" required />
-        <label for="email">Correo electrónico <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.cl" required />
-        <label for="enquiry">¿De qué se trata tu consulta? <span aria-hidden="true">*</span></label><select id="enquiry" name="enquiry" required><option value="">Elige una opción</option><option>Restitución y reconexión</option><option>Compartir información sobre la colección</option><option>Colaboraciones e investigación</option><option>Prensa y difusión</option><option>Otra consulta</option></select>
-        <label for="subject">Asunto de la consulta <span aria-hidden="true">*</span></label><input id="subject" name="subject" placeholder="Una breve descripción de tu consulta" required />
-        <label for="message">Mensaje <span aria-hidden="true">*</span></label><textarea id="message" name="message" placeholder="Tu mensaje" rows="4" required></textarea>
-      </fieldset>
-      <div class="privacy-note"><h2 class="eyebrow">Aviso de privacidad</h2><p>La información sobre el tratamiento de datos estará disponible antes de habilitar el envío de consultas.</p></div>
-      <button class="button" type="button" disabled>Enviar</button>
-    </form>
-  </div></section>
+  <section class="container section contact-layout">
+    <div class="contact-art">
+      <h1>Conectar</h1>
+      <img class="contact-figure" src="/images/kavakava.webp" alt="" aria-hidden="true" width="222" height="972" />
+      <img class="contact-tablet" src="/images/rongorongo.webp" alt="" aria-hidden="true" width="919" height="692" />
+    </div>
+    <div class="contact-content">
+      <p class="contact-intro">Como el patrimonio que buscamos reconectar, MoSA también se hace en relación. ¿Quieres conversar sobre restitución, compartir información, proponer una colaboración o hacer una consulta de prensa? Escríbenos. No necesitas representar a una institución.</p>
+      <div class="contact-email-block">
+        <h2 class="eyebrow">Escríbele al equipo de MoSA</h2>
+        <address class="contact-address">
+          <a class="contact-email" href={`mailto:${contactEmail}`} aria-describedby="contact-email-help">{contactEmail}</a>
+        </address>
+        <p class="small muted" id="contact-email-help">El enlace abre tu aplicación de correo. También puedes copiar la dirección y escribirnos desde el correo que uses.</p>
+      </div>
+      <p>Para comenzar, basta una descripción general. Si quieres compartir información sensible o conocimientos de acceso restringido, podemos acordar primero cómo hacerlo.</p>
+      <section class="privacy-note" aria-labelledby="contact-privacy-title">
+        <h2 class="eyebrow" id="contact-privacy-title">Cómo cuidamos tu mensaje</h2>
+        <p>El equipo de MoSA recibe tu correo para responder a tu consulta. Escribirnos no autoriza la publicación de tu mensaje ni su incorporación a la colección. Cualquier uso de ese tipo se acuerda por separado.</p>
+        <p>Si necesitas corregir información o solicitar la eliminación de tu correspondencia, escríbenos a la misma dirección.</p>
+      </section>
+    </div>
+  </section>
 </Layout>

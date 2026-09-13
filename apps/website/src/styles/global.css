@@ -800,7 +800,7 @@ strong {
 }
 .contact-layout {
   display: grid;
-  grid-template-columns: 2fr 3fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
   gap: 4rem;
   padding-top: 3.5rem;
 }
@@ -815,52 +815,40 @@ strong {
 }
 .contact-tablet {
   width: 48%;
-  margin-top: 10rem;
+  margin-top: 4rem;
   transform: rotate(-18deg);
+}
+.contact-content {
+  min-width: 0;
+  max-width: 560px;
+  margin-left: auto;
 }
 .contact-intro {
   font-size: 1.3rem;
-  max-width: 560px;
-  margin-left: auto;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
-.form-notice {
-  font-size: 0.85rem;
-  border-left: 3px solid var(--coral);
-  padding-left: 1rem;
-  margin-bottom: 2rem;
+.contact-email-block {
+  padding-block: 1.5rem;
+  margin-bottom: 2.5rem;
+  border-block: 1px solid var(--rule);
 }
-.contact-form fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  min-width: 0;
+.contact-address {
+  font-style: normal;
+  margin-block: 1rem;
 }
-.contact-form label {
-  display: block;
-  font-size: 0.95rem;
+.contact-email {
+  display: inline-block;
+  max-width: 100%;
+  padding-block: 0.25rem;
+  font-size: clamp(1.35rem, 2.6vw, 2.4rem);
   font-weight: 500;
-  margin-bottom: 0.7rem;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
 }
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  display: block;
-  width: 100%;
-  padding: 0.65rem 0.25rem;
-  border: 0;
-  border-bottom: 1px solid #777;
-  border-radius: 0;
-  background: transparent;
-  margin-bottom: 2rem;
-  opacity: 1;
-  color: #595959;
-  resize: vertical;
-}
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #686868;
-  opacity: 1;
+.contact-email:hover {
+  text-decoration-thickness: 0.12em;
 }
 .privacy-note {
   margin-block: 2.5rem;
@@ -1121,7 +1109,7 @@ strong {
   }
   .contact-layout {
     gap: 2rem;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   }
   .contact-layout h1 {
     font-size: 3rem;
@@ -1331,18 +1319,16 @@ strong {
   .contact-art h1 {
     font-size: 3.5rem;
   }
-  .contact-figure {
-    position: absolute;
-    top: -1rem;
-    right: 1rem;
-    margin: 0;
-    height: 100px;
-  }
+  .contact-figure,
   .contact-tablet {
     display: none;
   }
+  .contact-content {
+    max-width: none;
+    margin-left: 0;
+  }
   .contact-intro {
-    margin-top: 2rem;
+    margin-top: 0;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
