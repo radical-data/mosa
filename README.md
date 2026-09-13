@@ -86,7 +86,7 @@ Git hooks run through mise and just. `just install` reinstalls them after a clon
 
 ## Application and publication boundaries
 
-The website currently contains a minimal holding page. It has no database connection and does not reuse the explorer's broad reader role. Before displaying collection data, define a publication-aware read interface with permissions for approved records and fields. Keep any database credentials in server/build environments. Research access and public publication are separate concerns.
+The public website is deployed at [museumofstolenartefacts.org](https://museumofstolenartefacts.org/). It contains seven Spanish-language pages with curated design reference records. It has no database connection and does not reuse the explorer's broad reader role. Before displaying research database content, define a publication-aware read interface with permissions for approved records and fields. Keep any database credentials in server/build environments. Research access and public publication are separate concerns.
 
 Database changes use committed migrations. Real or sensitive project data must not be committed as seed data.
 
@@ -94,6 +94,6 @@ Database changes use committed migrations. Real or sensitive project data must n
 
 The applications have separate images and Coolify applications. The root `Dockerfile` remains the explorer image to preserve the existing deployment configuration. `apps/website/Dockerfile` builds the static website and serves it on port 8080 without database credentials.
 
-CI checks both apps. Explorer deployment follows database migration success; website deployment has its own workflow and can run without database checks or migrations. Website deployment is manual until a hosting target and launch decision are in place.
+CI checks both apps. Explorer deployment follows database migration success; website deployment has its own workflow and can run without database checks or migrations. The website workflow supports manual deployment to its separately configured hosting target.
 
 See [deployment](docs/deployment.md), [operations](docs/operations.md) and the [monorepo decision](docs/adrs/014-monorepo-and-task-tooling.md).

@@ -98,13 +98,13 @@ A staging project and PITR can wait until there is a demonstrated need.
 
 ## Public website
 
-The `Website` workflow checks the website and builds its image on relevant changes. It does not need Supabase, database tests or database credentials. Publishing is a separate, manual action; no website deployment is enabled merely by merging the scaffold.
+The public website is deployed at [museumofstolenartefacts.org](https://museumofstolenartefacts.org/). The `Website` workflow checks the website and builds its image on relevant changes. It does not need Supabase, database tests or database credentials. Publishing through this workflow is a separate, manual action.
 
 1. Create a separate Coolify application connected to `radical-data/mosa`, branch `main`.
 2. Use Dockerfile build pack, repository/base directory `/`, Dockerfile `/apps/website/Dockerfile`, and internal port `8080`.
-3. Set the website domain and use `/` for the HTTP health check. No application secrets, persistent volumes or database connection are required.
+3. Set the website domain to `https://museumofstolenartefacts.org` and use `/` for the HTTP health check. Configure permanent redirects from HTTP to HTTPS and from `www.museumofstolenartefacts.org` to the canonical hostname, preserving paths and query strings. No application secrets, persistent volumes or database connection are required.
 4. Disable automatic Git deployments. The workflow will trigger deployments explicitly.
-5. Create the GitHub environment `website-production`, restrict it to `main`, and set its own `COOLIFY_DEPLOY_WEBHOOK` and `PRODUCTION_URL` secrets. These names match the explorer's secrets but their values belong to the website target.
+5. Create the GitHub environment `website-production` and restrict it to `main`. Under **Environment secrets**, add `COOLIFY_DEPLOY_WEBHOOK`, copied from the website application's **Configuration → Webhooks → Deploy Webhook (auth required)**, and `COOLIFY_API_TOKEN`, created under Coolify's **Keys & Tokens → API Tokens** with the `deploy` permission. Enable API Access in the self-hosted Coolify instance settings if needed. The webhook identifies the application; the token authorises the request. Under **Environment variables**, add `PRODUCTION_URL` with the value `https://museumofstolenartefacts.org/`. The URL is public configuration; the workflow reads it through `vars.PRODUCTION_URL`. The explorer's existing `production` environment is configured separately.
 6. Confirm the first deployment manually in Coolify. To deploy subsequently, run the `Website` workflow on `main` and enable its `deploy` input.
 
 The existing `production` environment and its explorer secrets remain valid. Keep the root Dockerfile selected for that application. After the repository rename, confirm Coolify's GitHub integration still points at the renamed repository.

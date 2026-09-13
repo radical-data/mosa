@@ -19,6 +19,10 @@ The app uses static output and requires no database or secrets. It owns its rout
 
 ## Production
 
+Public URL: [museumofstolenartefacts.org](https://museumofstolenartefacts.org/).
+
+`astro.config.mjs` defines the production URL used for canonical links, Open Graph page URLs and the generated sitemap. `robots.txt` advertises the sitemap. Update this configuration if the public hostname changes.
+
 ```sh
 just website-image
 docker run --rm -p 8080:8080 mosa-website:local

@@ -74,16 +74,18 @@ jobs:
       - name: Trigger website deployment
         env:
           DEPLOY_WEBHOOK: ${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}
-          PRODUCTION_URL: ${{ secrets.PRODUCTION_URL }}
+          COOLIFY_API_TOKEN: ${{ secrets.COOLIFY_API_TOKEN }}
+          PRODUCTION_URL: ${{ vars.PRODUCTION_URL }}
         run: |
-          if [ -z "$DEPLOY_WEBHOOK" ] || [ -z "$PRODUCTION_URL" ]; then
-            echo "Configure website-production deployment secrets first." >&2
+          if [ -z "$DEPLOY_WEBHOOK" ] || [ -z "$COOLIFY_API_TOKEN" ] || [ -z "$PRODUCTION_URL" ]; then
+            echo "Configure the website-production COOLIFY_DEPLOY_WEBHOOK and COOLIFY_API_TOKEN secrets and PRODUCTION_URL variable first." >&2
             exit 1
           fi
-          curl --fail --show-error --silent --request GET "$DEPLOY_WEBHOOK"
+          curl --fail --show-error --silent --request GET "$DEPLOY_WEBHOOK" \
+            --header "Authorization: Bearer $COOLIFY_API_TOKEN"
       - name: Smoke-test website
         env:
-          PRODUCTION_URL: ${{ secrets.PRODUCTION_URL }}
+          PRODUCTION_URL: ${{ vars.PRODUCTION_URL }}
         run: |
           deadline=$((SECONDS + 180))
           until curl --fail --show-error --silent --max-time 10 "$PRODUCTION_URL" >/dev/null; do

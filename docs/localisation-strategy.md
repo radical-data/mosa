@@ -155,6 +155,6 @@ The current research explorer remains an internal tool. Apply the same source-la
 
 ## Decisions requiring project evidence
 
-The final publication hostname is needed for absolute canonical and language links. Named reviewers and their availability are needed for publication. Rapa Nui collaborators determine orthographic preferences, translation authority and the scope of any tool evaluation. The award letter and approved communication plan determine project-specific funding commitments. Audience interviews and partner requirements inform Dutch content beyond those commitments.
+The publication hostname is `https://museumofstolenartefacts.org/`; use it for absolute canonical and language links. Named reviewers and their availability are needed for publication. Rapa Nui collaborators determine orthographic preferences, translation authority and the scope of any tool evaluation. The award letter and approved communication plan determine project-specific funding commitments. Audience interviews and partner requirements inform Dutch content beyond those commitments.
 
 This research does not include interviews, a usability study, a translation-quality benchmark or verification of a production API for the Rapa Nui translator. It provides a documented architecture and evidence for the proposed choices; implementation and language review remain separate work.
