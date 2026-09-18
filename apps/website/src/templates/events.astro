@@ -1,0 +1,21 @@
+---
+import Event from "../components/Event.astro";
+import PageIntro from "../components/PageIntro.astro";
+import PageLink from "../components/PageLink.astro";
+import { getCopy } from "../content/content";
+
+import { archiveEvent } from "../data/site";
+import { formatHistoricalDate } from "../i18n/format";
+import type { Locale } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("events", locale);
+---
+<Layout locale={locale} page="events" title={copy.title} description={copy.description}>
+  <PageIntro title={copy.passage03} />
+  <section class="container section events-programme" aria-label={copy.passage04}><Event locale={locale} open /></section>
+  <section class="container section editorial archive"><h2 class="eyebrow"><Fragment set:html={copy.passage06} /></h2><article class="archive-card"><img src="/images/community-gathering.webp" alt={copy.passage05} width="1200" height="900" loading="lazy" /><div><time datetime={archiveEvent.date} class="small">{formatHistoricalDate(archiveEvent.date, locale)}</time><h3><Fragment set:html={copy.passage07} /></h3><p><Fragment set:html={copy.passage08} /></p></div></article></section>
+  <section class="container section connect-strip"><h2><Fragment set:html={copy.passage09} /></h2><PageLink class="text-link" page="contact" locale={locale}>{copy.passage10}<span aria-hidden="true">↗</span></PageLink></section>
+</Layout>

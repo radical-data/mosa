@@ -1,0 +1,35 @@
+---
+import { getCopy } from "../content/content";
+import { contactEmail } from "../data/site";
+import type { Locale } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("contact", locale);
+---
+<Layout locale={locale} page="contact" title={copy.title} description={copy.description}>
+  <section class="container section contact-layout">
+    <div class="contact-art">
+      <h1><Fragment set:html={copy.passage03} /></h1>
+      <img class="contact-figure" src="/images/kavakava.webp" alt="" aria-hidden="true" width="222" height="972" />
+      <img class="contact-tablet" src="/images/rongorongo.webp" alt="" aria-hidden="true" width="919" height="692" />
+    </div>
+    <div class="contact-content">
+      <p class="contact-intro"><Fragment set:html={copy.passage04} /></p>
+      <div class="contact-email-block">
+        <h2 class="eyebrow"><Fragment set:html={copy.passage05} /></h2>
+        <address class="contact-address">
+          <a class="contact-email" href={`mailto:${contactEmail}`} aria-describedby="contact-email-help">{contactEmail}</a>
+        </address>
+        <p class="small muted" id="contact-email-help"><Fragment set:html={copy.passage06} /></p>
+      </div>
+      <p><Fragment set:html={copy.passage07} /></p>
+      <section class="privacy-note" aria-labelledby="contact-privacy-title">
+        <h2 class="eyebrow" id="contact-privacy-title"><Fragment set:html={copy.passage08} /></h2>
+        <p><Fragment set:html={copy.passage09} /></p>
+        <p><Fragment set:html={copy.passage10} /></p>
+      </section>
+    </div>
+  </section>
+</Layout>

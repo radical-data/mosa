@@ -1,12 +1,18 @@
 ---
-interface Props { open?: boolean; }
-const { open = false } = Astro.props;
+import { getCopy } from "../content/content";
+import { programme } from "../data/site";
+import { formatHistoricalDate } from "../i18n/format";
+import type { Locale } from "../i18n/routes";
+
+interface Props { open?: boolean; locale: Locale; }
+const { open = false, locale } = Astro.props;
+const copy = getCopy("programme", locale);
 ---
 <details class="event" open={open}>
   <summary>
-    <span class="event-meta"><strong>British Museum</strong><time datetime="2026-09-19">19/09/2026</time></span>
-    <span class="event-title">Guía rapa nui en el Museo Británico</span>
+    <span class="event-meta"><strong>{programme.institution}</strong><time datetime={programme.date}>{formatHistoricalDate(programme.date, locale)}</time></span>
+    <span class="event-title">{copy.title}</span>
     <span class="event-symbol" aria-hidden="true"></span>
   </summary>
-  <div class="event-body"><p>Mario Amahiro Tuki, del equipo MoSA, guiará una visita al Moai Hoa Hakananai'a y la colección rapa nui para contar su historia enunciando desde su cultura de origen, y no desde el relato de quien lo custodia. Una invitación a escuchar, frente al propio Moai, por qué su restitución, reconexión y reparación importan.</p><p class="muted small">Información de la programación de MoSA. Inscripciones por confirmar.</p></div>
+  <div class="event-body"><p>{copy.body}</p><p class="muted small">{copy.availability}</p></div>
 </details>

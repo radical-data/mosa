@@ -1,0 +1,35 @@
+---
+import PageIntro from "../components/PageIntro.astro";
+import { getCopy } from "../content/content";
+import { getCollection, getConcepts, getTypes } from "../data/site";
+import { messages } from "../i18n/catalogues";
+import { referenceCount } from "../i18n/messages";
+import type { Locale } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("collection", locale);
+const collection = getCollection(locale);
+const concepts = getConcepts(locale);
+const types = getTypes(locale);
+const t = messages(locale);
+---
+<Layout locale={locale} page="collection" title={copy.title} description={copy.description}>
+  <PageIntro title={copy.passage03} image="mahute"><p><Fragment set:html={copy.passage06} /></p><a class="text-link" href="#more-information">{copy.passage17}</a></PageIntro>
+  <section class="container section collection-section" aria-label={t.collectionExplore} data-locale={locale}>
+    <div class="collection-controls" hidden>
+      <fieldset class="view-controls"><legend class="sr-only">{t.collectionView}</legend><button type="button" data-view="grid" aria-pressed="true">{t.imageView}</button><span aria-hidden="true">/</span><button type="button" data-view="list" aria-pressed="false">{t.listView}</button></fieldset>
+      <div class="filter-controls"><label class="sr-only" for="collection-search">{t.collectionSearch}</label><input id="collection-search" type="search" placeholder={t.collectionSearch} /><label class="sr-only" for="concept-filter">{t.filterConcept}</label><select id="concept-filter"><option value="">{t.allConcepts}</option>{concepts.map((concept) => <option value={concept.id} lang={concept.language}>{concept.label}</option>)}</select><label class="sr-only" for="type-filter">{t.filterType}</label><select id="type-filter"><option value="">{t.allTypes}</option>{types.map((type) => <option value={type.id}>{type.label}</option>)}</select></div>
+    </div>
+    <p class="small muted" id="collection-count" role="status" aria-live="polite">{referenceCount(locale, { count: collection.length })}</p>
+    <div class="collection-grid" id="collection-results">{collection.map((item) => <article class="collection-card" data-concept={item.concept} data-type={item.type} data-record-id={item.id} data-search-exact={item.searchExact} data-search-foldable={item.searchFoldable}><div class="collection-image"><img src={`/images/${item.image}.webp`} alt={item.name} lang={item.nameLanguage} width="1000" height="1000" loading="lazy" /><span class="tag">{item.typeLabel}</span></div><div class="collection-caption"><h2 lang={item.nameLanguage}>{item.name}</h2><p><span>{t.conceptLabel}</span> <span lang={item.conceptLanguage}>{item.conceptLabel || messages(locale).undocumented}</span></p><p><Fragment set:html={copy.passage08} /></p><p class="institution"><span>{t.heldBy}</span> {item.institution}</p></div></article>)}</div>
+    <div class="empty-state" hidden><h2><Fragment set:html={t.noMatches} /></h2><p><Fragment set:html={t.noMatchesHelp} /></p><button class="button" type="button" id="reset-filters">{t.clearFilters}</button></div>
+    <noscript><p><Fragment set:html={t.enableCollectionScript} /></p></noscript>
+  </section>
+  <section class="container section" id="more-information"><h2 class="eyebrow"><Fragment set:html={copy.passage12} /></h2><div class="info-grid"><article class="info-card coral"><h3><Fragment set:html={copy.passage13} /></h3><p><Fragment set:html={copy.passage14} /></p></article><article class="info-card"><h3><Fragment set:html={copy.passage15} /></h3><p><Fragment set:html={copy.passage16} /></p></article></div></section>
+</Layout>
+
+<script>
+  import "../i18n/collection-client";
+</script>

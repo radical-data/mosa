@@ -1,33 +1,40 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import { messages } from "../i18n/catalogues";
+import { absolutePageURL, type Locale, localeIds, locales, type PageId } from "../i18n/routes";
 import "../styles/global.css";
 
-interface Props { title: string; description: string; }
-const { title, description } = Astro.props;
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+interface Props { title: string; description: string; locale: Locale; page?: PageId; }
+const { title, description, locale, page } = Astro.props;
+const canonicalURL = page ? absolutePageURL(page, locale) : undefined;
 ---
 <!doctype html>
-<html lang="es-CL">
+<html lang={locales[locale].language}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#ffffff" />
+    {!page && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalURL.href} />
-    <link rel="canonical" href={canonicalURL.href} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    {canonicalURL && <meta property="og:url" content={canonicalURL} />}
+    {canonicalURL && <link rel="canonical" href={canonicalURL} />}
+    {page && <>
+      {localeIds.map((id) => <link rel="alternate" hreflang={locales[id].hreflang} href={absolutePageURL(page, id)} />)}
+      <link rel="alternate" hreflang="x-default" href={absolutePageURL(page, "es")} />
+      <link rel="sitemap" href="/sitemap-index.xml" />
+    </>}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" href="/fonts/general-sans-500.woff2" as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
   </head>
   <body>
-    <a class="skip-link" href="#main">Saltar al contenido</a>
-    <Header />
+    <a class="skip-link" href="#main">{messages(locale).skip}</a>
+    <Header locale={locale} page={page} />
     <main id="main" tabindex="-1"><slot /></main>
-    <Footer />
+    <Footer locale={locale} />
   </body>
 </html>

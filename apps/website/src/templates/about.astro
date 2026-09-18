@@ -1,0 +1,20 @@
+---
+import PageIntro from "../components/PageIntro.astro";
+import { getCopy } from "../content/content";
+import type { Locale } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("about", locale);
+---
+<Layout locale={locale} page="about" title={copy.title} description={copy.description}>
+  <PageIntro title={copy.passage03} image="rongorongo"><p><Fragment set:html={copy.passage06} /></p><p><Fragment set:html={copy.introAuthority} /></p></PageIntro>
+  <section class="container section editorial"><h2 class="eyebrow"><Fragment set:html={copy.passage07} /></h2><p class="statement"><Fragment set:html={copy.passage08} /></p></section>
+  <img class="full-image landscape" src="/images/rapa-nui-absence.webp" alt={copy.passage04} width="1800" height="1200" loading="lazy" />
+  <div class="dark-section"><section class="container section editorial"><h2><Fragment set:html={copy.passage09} /></h2><div><p><Fragment set:html={copy.passage10} /></p><p><Fragment set:html={copy.passage11} /></p></div></section>
+  <section class="container section editorial"><h2><Fragment set:html={copy.passage12} /></h2><div><p><Fragment set:html={copy.passage13} /></p><p><Fragment set:html={copy.reconnectionRelationships} /></p><p><Fragment set:html={copy.passage14} /></p></div></section></div>
+  <section class="container section editorial"><h2>{copy.territoryHeading}</h2><div><p><Fragment set:html={copy.territoryRelationships} /></p><p><Fragment set:html={copy.territoryFabric} /></p><p><Fragment set:html={copy.territoryMana} /></p><p><Fragment set:html={copy.territoryDispersal} /></p><p><Fragment set:html={copy.territoryQuestions} /></p></div></section>
+  <img class="full-image workshop" src="/images/workshop.webp" alt={copy.passage05} width="1200" height="675" loading="lazy" />
+  <section class="container section editorial"><h2><Fragment set:html={copy.passage15} /></h2><div><div class="two-columns"><p><Fragment set:html={copy.passage16} /></p><p><Fragment set:html={copy.passage17} /></p><p><Fragment set:html={copy.passage18} /></p><p><Fragment set:html={copy.passage19} /></p></div></div></section>
+</Layout>

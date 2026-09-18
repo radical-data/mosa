@@ -1,0 +1,44 @@
+---
+import Event from "../components/Event.astro";
+import PageLink from "../components/PageLink.astro";
+import { getCopy } from "../content/content";
+import { getConcepts, getResources } from "../data/site";
+
+import { explore } from "../i18n/messages";
+import type { Locale } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("home", locale);
+const concepts = getConcepts(locale).filter((concept) => concept.id !== "moai");
+const resources = getResources(locale);
+---
+<Layout locale={locale} page="home" title={copy.title} description={copy.description}>
+  <section class="hero container">
+    <img class="hero-art hero-figure" src="/images/wooden-figure.webp" alt="" width="246" height="971" aria-hidden="true" />
+    <img class="hero-art hero-tablet" src="/images/rongorongo.webp" alt="" width="919" height="692" aria-hidden="true" />
+    <img class="hero-art hero-mahute" src="/images/mahute.webp" alt="" width="405" height="957" aria-hidden="true" />
+    <h1><Fragment set:html={copy.passage04} /></h1>
+    <p><Fragment set:html={copy.passage05} /></p>
+    <p><Fragment set:html={copy.introAuthority} /></p>
+  </section>
+  <section class="container section home-collection" aria-labelledby="collection-title">
+    <div class="section-heading"><div><h2 id="collection-title" class="eyebrow"><Fragment set:html={copy.passage06} /></h2><p><Fragment set:html={copy.passage07} /></p></div><PageLink class="button" page="collection" locale={locale}>{copy.passage15}<span aria-hidden="true">↗</span></PageLink></div>
+    <p class="small concepts-label"><Fragment set:html={copy.passage08} /></p>
+    <div class="concepts">{concepts.map((concept, index) => <PageLink page="collection" locale={locale} suffix={`?concept=${encodeURIComponent(concept.id)}`} class:list={["concept-row", `concept-row-${index}`]} aria-label={explore(locale, { concept: concept.label })}><span class="struck" aria-hidden="true">{concept.label}</span><span lang={concept.language}>{concept.label}</span>{Array.from({ length: 8 }, () => <span class="struck" aria-hidden="true">{concept.label}</span>)}</PageLink>)}</div>
+  </section>
+  <section class="section" aria-labelledby="resources-title">
+    <div class="container section-heading"><div><h2 id="resources-title" class="eyebrow"><Fragment set:html={copy.passage09} /></h2><p><Fragment set:html={copy.passage10} /></p></div><PageLink class="text-link" page="resources" locale={locale}>{copy.passage16}<span aria-hidden="true">↗</span></PageLink></div>
+    <div class="resource-lines">{resources.map((resource) => <PageLink class="resource-line" page="resources" locale={locale} suffix={`#${resource.id}`}><div class="container"><h3>{resource.title}</h3><span aria-hidden="true">↗</span><p>{resource.description}</p></div></PageLink>)}</div>
+  </section>
+  <section class="container section" aria-labelledby="events-title">
+    <div class="section-heading"><div><h2 id="events-title" class="eyebrow"><Fragment set:html={copy.passage11} /></h2><p><Fragment set:html={copy.passage12} /></p></div><PageLink class="text-link" page="events" locale={locale}>{copy.passage17}<span aria-hidden="true">↗</span></PageLink></div>
+    <Event locale={locale} open />
+  </section>
+  <img class="full-image landscape" src="/images/rapa-nui-absence.webp" alt={copy.passage03} width="1800" height="1200" loading="lazy" />
+  <section class="container section editorial home-about">
+    <div><h2 class="eyebrow"><Fragment set:html={copy.passage13} /></h2><img class="about-figure" src="/images/kavakava.webp" alt="" aria-hidden="true" width="222" height="972" loading="lazy" /></div>
+    <div><p class="statement"><Fragment set:html={copy.passage14} /></p><PageLink class="button" page="about" locale={locale}>{copy.passage18}<span aria-hidden="true">↗</span></PageLink></div>
+  </section>
+</Layout>

@@ -1,4 +1,13 @@
 @font-face {
+  font-family: "MoSA Eng Fallback";
+  src: url("/fonts/noto-sans-eng.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+014A-014B;
+}
+
+@font-face {
   font-family: "General Sans";
   src: url("/fonts/general-sans-300.woff2") format("woff2");
   font-weight: 300;
@@ -28,7 +37,7 @@
 }
 
 :root {
-  font-family: "General Sans", Arial, sans-serif;
+  font-family: "General Sans", "MoSA Eng Fallback", Arial, sans-serif;
   color: #000;
   background: #fff;
   font-weight: 300;
@@ -1351,5 +1360,74 @@ strong {
   .button,
   .resource-line {
     transition: none;
+  }
+}
+
+/* Language links stay visible independently of the collapsible menu. */
+.site-header {
+  flex-wrap: wrap;
+}
+.site-header nav a {
+  white-space: normal;
+}
+.site-header .language-switcher {
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  flex-basis: auto;
+  padding-block: 0;
+}
+.language-switcher a[aria-current="true"] {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+.footer-statement span {
+  white-space: normal;
+  width: auto;
+  margin-inline: var(--gutter);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1100px) {
+  .menu-toggle {
+    display: flex;
+    gap: 0.5rem;
+    background: none;
+    border: 0;
+    align-items: center;
+  }
+  .site-header #primary-navigation {
+    order: 4;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+  }
+  .site-header #primary-navigation.collapsible {
+    display: none;
+  }
+  .site-header #primary-navigation.is-open {
+    display: flex;
+  }
+}
+@media (max-width: 380px) {
+  .site-header .language-switcher {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  }
+}
+
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+.view-controls {
+  flex-wrap: wrap;
+  flex-shrink: 1;
+}
+@media (max-width: 380px) {
+  .intro-art {
+    display: none;
+  }
+  .has-art h1 {
+    max-width: 100%;
   }
 }

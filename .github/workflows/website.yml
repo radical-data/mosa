@@ -56,10 +56,21 @@ jobs:
         run: mise x -- just check
       - name: Check website
         run: mise x -- just website-check
+      - name: Test localisation
+        run: mise x -- pnpm --filter @mosa/website test
       - name: Build website
         run: mise x -- just website-build
       - name: Build production image
         run: mise x -- just website-image
+      - name: Check permanent redirects and error responses
+        run: |
+          docker run --rm -d --name mosa-website-check -p 127.0.0.1:8080:8080 mosa-website:local
+          trap 'docker stop mosa-website-check' EXIT
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:8080/es/ >/dev/null; then break; fi
+            sleep 1
+          done
+          mise x -- pnpm --filter @mosa/website test:http http://127.0.0.1:8080
 
   deploy:
     name: Deploy public website

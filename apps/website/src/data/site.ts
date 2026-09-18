@@ -1,98 +1,129 @@
+import labels from "../content/pages/reference-labels.json";
+import resources from "../content/pages/resource-summaries.json";
+import type { Locale } from "../i18n/routes";
+
 export const contactEmail = "mosa@radicaldata.org";
-
-export const navigation = [
-  { href: "/about/", label: "Sobre MoSA" },
-  { href: "/collection/", label: "Colección" },
-  { href: "/visit/", label: "Visita" },
-  { href: "/events/", label: "Eventos" },
-  { href: "/resources/", label: "Recursos" },
-  { href: "/contact/", label: "Contacto" },
-];
-
-export const concepts = [
-  "Moai de piedra",
-  "Ta'oa",
-  "Ivi tupuna",
-  "Moai kavakava",
-  "Geografía sagrada",
-  "Fuera de campo",
-];
-
-// Curated examples from the supplied layouts, independent of the research database.
-export const collection = [
+export const conceptIds = [
+  "stoneMoai",
+  "taoa",
+  "iviTupuna",
+  "moaiKavakava",
+  "sacredGeography",
+  "outOfFrame",
+  "moai",
+] as const;
+export const typeIds = ["individual", "type", "ancestors"] as const;
+const rapConcepts: readonly string[] = ["taoa", "iviTupuna", "moaiKavakava", "moai"];
+export const getConcepts = (locale: Locale) =>
+  conceptIds.map((id) => ({
+    id,
+    label: labels[locale][id],
+    language: rapConcepts.includes(id) ? "rap" : undefined,
+  }));
+export const getTypes = (locale: Locale) =>
+  typeIds.map((id) => ({ id, label: labels[locale][id] }));
+// Design reference records only. IDs, names and institutions are independent of UI locale.
+// These are not research claims or a public projection of the research database.
+const records = [
   {
-    name: "Tablilla kohau rongorongo “Mamari”",
-    concept: "Ta'oa",
-    type: "Objeto particular",
+    id: "mamari",
+    name: "mamari",
+    concept: "taoa",
+    type: "individual",
     institution: "Musei Vaticani",
-    location: "Ciudad del Vaticano",
+    location: "vatican",
     image: "collection-mamari",
+    originalLanguage: "es-CL",
   },
   {
-    name: "Moai Hoa Hakananai’a",
-    concept: "Moai de piedra",
-    type: "Objeto particular",
+    id: "hoa-hakananai-a",
+    name: "hoa",
+    concept: "stoneMoai",
+    type: "individual",
     institution: "British Museum",
-    location: "Londres, Reino Unido",
+    location: "london",
     image: "collection-hoa-hakananai-a",
+    originalLanguage: "rap",
   },
   {
-    name: "Moai Kavakava",
-    concept: "Moai kavakava",
-    type: "Objeto tipo",
+    id: "moai-kavakava",
+    name: "kavakava",
+    concept: "moaiKavakava",
+    type: "type",
     institution: "Museum of New Zealand Te Papa Tongarewa",
-    location: "Wellington, Aotearoa Nueva Zelanda",
+    location: "wellington",
     image: "collection-kavakava",
+    originalLanguage: "rap",
   },
   {
-    name: "Figura de tapa / mahute",
+    id: "mahute",
+    name: "mahute",
     concept: "",
-    type: "Objeto particular",
+    type: "individual",
     institution: "Peabody Museum of Archaeology and Ethnology",
-    location: "Cambridge, Estados Unidos",
+    location: "cambridge",
     image: "collection-mahute",
+    originalLanguage: "es-CL",
   },
   {
-    name: "Escultura en madera, mujer con vulva alargada",
-    concept: "Moai",
-    type: "Objeto particular",
+    id: "wooden-figure",
+    name: "woodenFigure",
+    concept: "moai",
+    type: "individual",
     institution: "Museo delle Civiltà",
-    location: "Roma, Italia",
+    location: "rome",
     image: "collection-wooden-figure",
+    originalLanguage: "es-CL",
   },
   {
-    name: "Ivi tupuna",
-    concept: "Ivi tupuna",
-    type: "Ancestros",
+    id: "ivi-tupuna",
+    name: "ivi",
+    concept: "iviTupuna",
+    type: "ancestors",
     institution: "Staatliche Museen zu Berlin",
-    location: "Berlín, Alemania",
+    location: "berlin",
     image: "collection-ivi-tupuna",
+    originalLanguage: "rap",
   },
-];
-
-export const resources = [
-  {
-    id: "guide",
-    title: "Guía de restitución",
-    description:
-      "La Guía de Restitución de MoSA nace en Rapa Nui y pone esa experiencia en conversación con procesos, herramientas y aprendizajes de restitución de distintos lugares del mundo.",
-  },
-  {
-    id: "letter",
-    title: "Prototipo de carta de restitución",
-    description:
-      "Adapta esta carta a tu relación y a tu proceso. No necesitas llenar todos los espacios ni compartir información que deba permanecer protegida.",
-  },
-  {
-    id: "directory",
-    title: "Directorio de organizaciones",
-    description:
-      "Este directorio reúne parte de ese trabajo para hacerlo más visible y conectable. MoSA busca sumarse a esa red, aprender de ella y ayudar a tejer nuevas alianzas.",
-  },
-  {
-    id: "generator",
-    title: "Generador de cartas multilingües",
-    description:
-      "Una herramienta en desarrollo para acompañar procesos de restitución en distintos idiomas.",
-  },
-];
+] as const;
+export function getCollection(locale: Locale) {
+  return records.map((record) => ({
+    ...record,
+    originalName: labels.es[record.name],
+    name: labels[locale][record.name],
+    nameLanguage: record.originalLanguage === "rap" ? "rap" : undefined,
+    location: labels[locale][record.location],
+    typeLabel: labels[locale][record.type],
+    conceptLabel: record.concept ? labels[locale][record.concept] : "",
+    conceptLanguage: rapConcepts.includes(record.concept) ? "rap" : undefined,
+    // Rapa Nui spelling is matched exactly (case-insensitively), without accent folding.
+    searchExact: [
+      labels.es[record.name],
+      labels.en[record.name],
+      record.institution,
+      "Rapa Nui",
+      record.concept ? labels.es[record.concept] : "",
+      record.concept ? labels.en[record.concept] : "",
+    ].join(" "),
+    searchFoldable: [
+      labels.es[record.location],
+      labels.en[record.location],
+      record.institution,
+    ].join(" "),
+  }));
+}
+const resourceIds = ["guide", "letter", "directory", "generator"] as const;
+export function getResources(locale: Locale) {
+  const copy = resources[locale];
+  return resourceIds.map((id) => ({
+    id,
+    title: copy[`${id}Title`],
+    description: copy[`${id}Description`],
+  }));
+}
+export const programme = {
+  date: "2026-09-19",
+  timeZone: "Europe/London",
+  institution: "British Museum",
+} as const;
+export const archiveEvent = { date: "2026-07-25", timeZone: "Pacific/Easter" } as const;

@@ -1,0 +1,22 @@
+{
+  "es": {
+    "guideTitle": "Guía de restitución",
+    "guideDescription": "La Guía de Restitución de MoSA nace en Rapa Nui y pone esa experiencia en conversación con procesos, herramientas y aprendizajes de restitución de distintos lugares del mundo.",
+    "letterTitle": "Prototipo de carta de restitución",
+    "letterDescription": "Adapta esta carta a tu relación y a tu proceso. No necesitas llenar todos los espacios ni compartir información que deba permanecer protegida.",
+    "directoryTitle": "Directorio de organizaciones",
+    "directoryDescription": "Este directorio reúne parte de ese trabajo para hacerlo más visible y conectable. MoSA busca sumarse a esa red, aprender de ella y ayudar a tejer nuevas alianzas.",
+    "generatorTitle": "Generador de cartas multilingües",
+    "generatorDescription": "Una herramienta en desarrollo para acompañar procesos de restitución en distintos idiomas."
+  },
+  "en": {
+    "guideTitle": "Restitution guide",
+    "guideDescription": "MoSA’s Restitution Guide originates in Rapa Nui and brings that experience into conversation with restitution processes, tools and lessons from around the world.",
+    "letterTitle": "Restitution letter template",
+    "letterDescription": "Adapt this letter to your relationship and process. You do not need to complete every field or share information that should remain protected.",
+    "directoryTitle": "Directory of organisations",
+    "directoryDescription": "This directory brings together some of this work to make it more visible and connected. MoSA seeks to join this network, learn from it and help build new alliances.",
+    "generatorTitle": "Multilingual letter generator",
+    "generatorDescription": "A tool in development to support restitution processes in different languages."
+  }
+}

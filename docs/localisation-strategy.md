@@ -1,6 +1,8 @@
 # MoSA localisation strategy
 
-Status: proposed design, not implemented. Research checked on 2026-09-13.
+Status: bilingual foundation implemented; development workflow simplified on 2026-09-15 at the project owner's request. Copy is paired by page, English may catch up during development, and human review happens at release milestones using a [manual checklist](localisation-editorial-workflow.md). Builds enforce technical checks, without content hashes or approval gates. Research checked on 2026-09-13.
+
+The formal revision and translation-authorisation model remains relevant to future research publication. It is deferred for the current website's editorial copy. See the [implementation notes](../apps/website/README.md).
 
 ## Recommendation
 
@@ -55,7 +57,7 @@ Funding therefore creates a concrete acknowledgement requirement and a reason to
 
 Store route prefixes, content language tags, formatting locales and search annotations separately. An English editorial convention does not mean the audience is restricted to the United Kingdom.
 
-The default website language is not the universal source language. Each editorial item records its original language. A contribution originally written in Rapa Nui remains the original even when Spanish and English translations exist.
+The default website language is not the universal source language. Keep the original language clear in editorial context and language tags; the initial website prose originates in Spanish. A contribution originally written in Rapa Nui remains the original even when Spanish and English translations exist.
 
 Before deciding Dutch scope, check the award letter and approved communication plan for commitments. For additional Dutch content, identify the audience task, pages, reviewer and maintenance capacity. A Dutch event page or partner brief can precede a complete Dutch website. Do not use national English-proficiency statistics as a substitute for testing whether MoSA's intended visitors can use the site.
 
@@ -109,17 +111,15 @@ Keep the public website's publication-aware data boundary. A translation is publ
 
 ## Editorial workflow
 
-Use one original revision with linked translation revisions. Record the content identifier, language, original revision reference, review state, reviewer and review date. Keep this metadata in version-controlled content initially. A translation management service becomes useful when contributors need an editing interface; it is not a launch requirement.
+During rapid development, keep Spanish and English copy together in each page or shared-content JSON file. Edit either language directly. Track pending English updates and review work in the [translation checklist](localisation-editorial-workflow.md). Existing wording can change independently; newly introduced interface keys need values in both languages so templates remain renderable.
 
-The proposed states are `draft`, `in-review`, `approved`, `stale` and `withdrawn`. When the original changes, mark dependent translations stale. Approval applies to a particular revision, not all future text under the same identifier.
+Review changed passages in both languages at release milestones. Give reviewers whole passages, context and a preview. Pay particular attention to names, uncertainty, attribution and claims about removal, custody, restitution and ancestors. If material must be removed, remove it from both language versions and shared sections that repeat it.
 
-For the seven core pages and shared interface, publish current approved Spanish and English versions together. A missing key, invalid parameter, stale required translation or unapproved required page fails the publication build. Optional articles can publish in one language, with explicit availability information. Withdrawals and urgent corrections can remove an affected page from both languages without waiting for translation.
+Builds check missing messages, invalid parameter types, content structure, routes and links. They do not enforce editorial approval, translation freshness or named reviewers. There are no website content hashes, source revision references, review state machines, temporary approval manifests or special review builds.
 
-Give translators whole passages, the original source, context and a preview. Maintain a glossary of approved terminology, spelling variants and terms retained in Rapa Nui. Identify who approved each glossary entry; do not infer approval from its presence in existing design copy.
+AI-assisted Spanish–English drafts may support material authorised for that use. Initial English copy is a draft awaiting human review. Keep model-generated wording out of the research evidence layer. Rapa Nui collaborators determine terminology, orthography and translation authority; existing design copy does not establish approval. A formal glossary, translation management service or revision-specific publication workflow can be introduced when actual contributors and publication needs justify it.
 
-AI may propose Spanish–English drafts for material authorised for that use. Human reviewers approve published wording, including claims about removal, custody, restitution and ancestors. Keep model-generated wording out of the research evidence layer.
-
-For Rapa Nui, decide with collaborators whether to trial a community-developed tool. Evaluate representative MoSA passages with fluent reviewers, including names, cultural concepts, negation, uncertainty and attribution. Check meaning and publication suitability, not only fluency or an automatic score. The design does not presume approval to send unpublished material to any external service.
+For Rapa Nui, decide with collaborators whether to trial a community-developed tool. Evaluate representative passages with fluent reviewers, including names, cultural concepts, negation, uncertainty and attribution. The design does not presume approval to send unpublished material to an external service.
 
 ## Accessibility and search metadata
 
@@ -139,14 +139,14 @@ Google currently documents ISO 639-1 language codes for these annotations. Rapa 
 
 The initial delivery is ready when:
 
-- All seven core pages exist in both languages with approved content.
+- All seven core pages exist in both languages, with pending editorial work recorded for release review.
 - Every language link opens the equivalent page and works without JavaScript.
 - Collection filters retain their meaning across a language switch.
 - Old public routes return permanent redirects to the corresponding Spanish pages.
 - Missing optional translations are labelled; their nonexistent URLs are not advertised.
 - Canonicals and reciprocal language annotations resolve to published pages.
-- Changing an original invalidates approval of dependent translations.
-- Withdrawing a source prevents publication of its dependent translations.
+- Editing existing source wording does not block development builds; pending translations are tracked in the checklist.
+- Source withdrawals are applied to both public language versions and shared passages during release preparation.
 - Names, quotations, source languages and historical date precision survive localisation.
 - Both core languages retain the funding acknowledgement and approved fund logo.
 - Keyboard access, text enlargement, font coverage and mobile layouts work in both languages.
@@ -155,6 +155,6 @@ The current research explorer remains an internal tool. Apply the same source-la
 
 ## Decisions requiring project evidence
 
-The publication hostname is `https://museumofstolenartefacts.org/`; use it for absolute canonical and language links. Named reviewers and their availability are needed for publication. Rapa Nui collaborators determine orthographic preferences, translation authority and the scope of any tool evaluation. The award letter and approved communication plan determine project-specific funding commitments. Audience interviews and partner requirements inform Dutch content beyond those commitments.
+The publication hostname is `https://museumofstolenartefacts.org/`; use it for absolute canonical and language links. Human editorial review is organised at release milestones and does not gate development builds. Rapa Nui collaborators determine orthographic preferences, translation authority and the scope of any tool evaluation. The award letter and approved communication plan determine project-specific funding commitments. Audience interviews and partner requirements inform Dutch content beyond those commitments.
 
 This research does not include interviews, a usability study, a translation-quality benchmark or verification of a production API for the Rapa Nui translator. It provides a documented architecture and evidence for the proposed choices; implementation and language review remain separate work.

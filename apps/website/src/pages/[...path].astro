@@ -1,0 +1,21 @@
+---
+import { type Locale, localeIds, type PageId, pageIds, pagePath } from "../i18n/routes";
+import About from "../templates/about.astro";
+import Collection from "../templates/collection.astro";
+import Contact from "../templates/contact.astro";
+import Events from "../templates/events.astro";
+import Home from "../templates/home.astro";
+import Resources from "../templates/resources.astro";
+import Visit from "../templates/visit.astro";
+export function getStaticPaths() {
+  return pageIds.flatMap((page) => localeIds.map((locale) => ({
+    params: { path: pagePath(page, locale).replace(/^\/|\/$/g, "") },
+    props: { locale, page },
+  })));
+}
+interface Props { locale: Locale; page: PageId; }
+const { locale, page } = Astro.props;
+const templates = { home: Home, about: About, collection: Collection, visit: Visit, events: Events, resources: Resources, contact: Contact };
+const Template = templates[page];
+---
+<Template locale={locale} />
