@@ -9,10 +9,10 @@ import Layout from "../layouts/Layout.astro";
     <img class="hero-art hero-tablet" src="/images/rongorongo.webp" alt="" width="919" height="692" aria-hidden="true" />
     <img class="hero-art hero-mahute" src="/images/mahute.webp" alt="" width="405" height="957" aria-hidden="true" />
     <h1>Un museo para volver a<br class="desktop-break" /> poner en relación lo que<br class="desktop-break" /> fue separado.</h1>
-    <p>MoSA cuestiona quién tiene el poder de nombrar, cuidar y representar el patrimonio. Trabaja para reconectar y restituir artefactos culturales y ancestros desplazados que actualmente permanecen en museos y colecciones del norte global.</p>
+    <p>MoSA es un museo dedicado a colaborar con comunidades que decidan emprender procesos de restitución y reconexión de artefactos culturales y ancestros expoliados en contextos coloniales, hoy desplazados de sus territorios y retenidos fuera de sus lugares de origen en museos y colecciones atravesados por historias coloniales.</p><p>Cuestionamos quién tiene la autoridad para nombrar, cuidar, representar y decidir sobre ellos, y construimos herramientas, redes y alianzas para impulsar procesos de restitución y volver a poner en relación aquello que fue separado.</p>
   </section>
   <section class="container section home-collection" aria-labelledby="collection-title">
-    <div class="section-heading"><div><h2 id="collection-title" class="eyebrow">Colección</h2><p>Comenzando por Rapa Nui, MoSA reúne en una sola base de datos los artefactos culturales y ancestros rapa nui que permanecen fuera de la isla. Más allá del objeto, la colección reúne también lo que rodea el despojo y la ausencia. Nombrar y relacionar ese patrimonio desde el conocimiento de los pueblos de origen es, en sí mismo, un acto de restitución.</p></div><a class="button" href="/collection/">Ver colección <span aria-hidden="true">↗</span></a></div>
+    <div class="section-heading"><div><h2 id="collection-title" class="eyebrow">Colección</h2><p>Comenzando por Rapa Nui, MoSA reúne y relaciona en una sola base de datos artefactos culturales, ancestros, archivos, memorias y registros que permanecen fuera de la isla, dispersos en museos y colecciones de distintos lugares del mundo. Más allá de cada entidad, la colección reúne también las historias, relaciones y huellas que rodean el despojo y la ausencia, y abre espacio para nombrarlas y comprenderlas desde las perspectivas de sus pueblos de origen.</p></div><a class="button" href="/collection/">Ver colección <span aria-hidden="true">↗</span></a></div>
     <p class="small concepts-label">Los conceptos base con los que definimos esta colección:</p>
     <div class="concepts">{concepts.map((concept, index) => <a href={`/collection/?concept=${encodeURIComponent(concept)}`} class:list={["concept-row", `concept-row-${index}`]} aria-label={`Explorar ${concept}`}><span class="struck" aria-hidden="true">{concept}</span><span>{concept}</span>{Array.from({ length: 8 }, () => <span class="struck" aria-hidden="true">{concept}</span>)}</a>)}</div>
   </section>
@@ -21,12 +21,12 @@ import Layout from "../layouts/Layout.astro";
     <div class="resource-lines">{resources.map((resource) => <a class="resource-line" href={`/resources/#${resource.id}`}><div class="container"><h3>{resource.title}</h3><span aria-hidden="true">↗</span><p>{resource.description}</p></div></a>)}</div>
   </section>
   <section class="container section" aria-labelledby="events-title">
-    <div class="section-heading"><div><h2 id="events-title" class="eyebrow">Eventos</h2><p>Agenda de acciones públicas sobre el patrimonio robado, la restitución y la reparación.</p></div><a class="text-link" href="/events/">Ver todos los eventos <span aria-hidden="true">↗</span></a></div>
+    <div class="section-heading"><div><h2 id="events-title" class="eyebrow">Eventos</h2><p>Agenda de acciones públicas sobre los artefactos y ancestros robados, la restitución y la reparación.</p></div><a class="text-link" href="/events/">Ver todos los eventos <span aria-hidden="true">↗</span></a></div>
     <Event open />
   </section>
   <img class="full-image landscape" src="/images/rapa-nui-absence.webp" alt="Paisaje de Rapa Nui con la silueta vacía de un moai: una ausencia en su territorio." width="1800" height="1200" loading="lazy" />
   <section class="container section editorial home-about">
     <div><h2 class="eyebrow">Sobre MoSA</h2><img class="about-figure" src="/images/kavakava.webp" alt="" aria-hidden="true" width="222" height="972" loading="lazy" /></div>
-    <div><p class="statement">Miles de artefactos <span class="struck-text">y restos ancestrales fueron extraídos de sus territorios bajo la violencia del colonialismo, y hoy siguen atrapados en vitrinas y bodegas de museos occidentales. MoSA es el primer museo dedicado a su restitución y reconexión.</span></p><a class="button" href="/about/">Conoce el proyecto <span aria-hidden="true">↗</span></a></div>
+    <div><p class="statement">Miles de artefactos <span class="struck-text">y ancestros fueron extraídos de sus territorios en contextos de violencia colonial y hoy permanecen desplazados en museos y colecciones de distintos lugares del mundo. MoSA es un museo dedicado a colaborar con comunidades que decidan emprender procesos para su restitución y reconexión.</span></p><a class="button" href="/about/">Conoce el proyecto <span aria-hidden="true">↗</span></a></div>
   </section>
 </Layout>
