@@ -1,0 +1,11 @@
+---
+import { messages } from "../i18n/catalogues";
+import Layout from "../layouts/Layout.astro";
+
+const es = messages("es");
+const en = messages("en");
+---
+<Layout locale="es" title={`404 — ${es.notFound}`} description={es.notFoundDescription}>
+  <section class="container section"><h1>404 — {es.notFound}</h1><p>{es.notFoundDescription}</p>
+  <div lang="en-GB"><h2>{en.notFound}</h2><p>{en.notFoundDescription}</p></div></section>
+</Layout>

@@ -1,15 +1,21 @@
 ---
-import { navigation } from "../data/site";
+import { messages } from "../i18n/catalogues";
+import { type Locale, pageIds, pagePath } from "../i18n/routes";
+import PageLink from "./PageLink.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = messages(locale);
 ---
 <footer class="site-footer">
-  <div class="footer-statement"><span>Volver a poner en relación lo que fue separado.</span></div>
+  <div class="footer-statement"><span>{t.footerStatement}</span></div>
   <div class="container footer-grid">
-    <a href="/" class="brand" aria-label="MoSA — Inicio"><img src="/images/logo-light.png" alt="Museum of Stolen Artefacts" width="303" height="162" loading="lazy" /></a>
-    <nav aria-label="Navegación del pie de página">{navigation.map(({ href, label }) => <a href={href}>{label}</a>)}</nav>
-    <div class="footer-purpose"><p>Un museo para reconectar.<br />Una red para restituir.</p><a class="text-link" href="/contact/">Conecta con MoSA <span aria-hidden="true">↗</span></a></div>
+    <PageLink page="home" locale={locale} class="brand" aria-label={`MoSA — ${t.home}`}><img src="/images/logo-light.png" alt="Museum of Stolen Artefacts" lang="en" width="303" height="162" loading="lazy" /></PageLink>
+    <nav aria-label={t.footerNavigation}>{pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)}>{t[id]}</a>)}</nav>
+    <div class="footer-purpose"><p>{t.footerPurpose}</p><PageLink class="text-link" page="contact" locale={locale}>{t.connect} <span aria-hidden="true">↗</span></PageLink></div>
   </div>
   <div class="container footer-bottom">
-    <p>Museum of Stolen Artefacts © {new Date().getFullYear()}.</p>
-    <div><p>Proyecto financiado por Open Call Fresh Perspectives 2024, Stimuleringsfonds Creatieve Industrie</p><img src="/images/funding-logo.webp" alt="Creative Industries Fund NL" width="3221" height="193" loading="lazy" /></div>
+    <p><span lang="en">Museum of Stolen Artefacts</span> © {new Date().getFullYear()}.</p>
+    <div><p>{t.funding}</p><img src="/images/funding-logo.webp" alt="Creative Industries Fund NL" lang="en" width="3221" height="193" loading="lazy" /></div>
   </div>
 </footer>

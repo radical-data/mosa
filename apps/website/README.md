@@ -1,59 +1,77 @@
 # MoSA public website
 
-The public Museum of Stolen Artefacts website, built with Astro. The Spanish (`es-CL`) site follows the supplied MoSA page layouts and brand guidelines, with responsive navigation, local General Sans fonts, optimised reference artwork and a shared footer.
+The static Astro website provides complete Chilean Spanish (`es-CL`) and British English (`en-GB`) experiences. Spanish is the default entry. The URL determines the language; there are no language cookies, inferred-language redirects or external translation services.
 
-## Development
+## Development and verification
 
-From the repository root, after `mise install` and `mise exec -- just install`:
+From the repository root, with the pinned tools installed:
 
 ```sh
-just website-dev
-just website-check
-just website-build
-just website-preview
+mise exec -- just website-dev
+mise exec -- just website-check
+mise exec -- pnpm --filter @mosa/website test
+mise exec -- just website-build
+mise exec -- just website-preview
 ```
 
-Use `mise exec -- just ...` if mise is not activated. The development and preview port is 4322, alongside the explorer on 4321. Build output is `apps/website/dist/`.
+Development and preview use port 4322. Production output is `apps/website/dist/`. Open `/es/` or `/en/` locally; the root and legacy HTTP redirects are provided by nginx in production.
 
-The app uses static output and requires no database or secrets. It owns its routes and components. Do not import explorer internals or give this app the explorer's database role. A publication-aware data interface must precede public collection features.
+`build` checks TypeScript and bilingual message structure, generates the static site, then checks native links, fragments, language metadata and the sitemap. Wording changes do not require hashes, approval records or synchronised translations. The Astro build hook checks message keys even when `astro build` is called directly.
+
+Use the normal development server or preview for both languages. Editorial review is tracked in the [translation checklist](../../docs/localisation-editorial-workflow.md), outside the build.
+
+## Routes
+
+| Page ID | Spanish | English |
+| --- | --- | --- |
+| `home` | `/es/` | `/en/` |
+| `about` | `/es/sobre-mosa/` | `/en/about/` |
+| `collection` | `/es/coleccion/` | `/en/collection/` |
+| `visit` | `/es/visita/` | `/en/visit/` |
+| `events` | `/es/eventos/` | `/en/events/` |
+| `resources` | `/es/recursos/` | `/en/resources/` |
+| `contact` | `/es/contacto/` | `/en/contact/` |
+
+`src/i18n/routes.ts` owns locale tags, formatting locales, search annotations, paths and shared fragment identifiers. Templates live in `src/templates/`; one generated route selects the same template for both languages. Header and footer navigation follow stable page IDs. `Español` and `English` remain visible outside the collapsed mobile menu and are ordinary links that work without JavaScript.
+
+Collection controls progressively enhance the complete static reference list. With JavaScript enabled, `q`, `concept`, `type` and `view` are restored from the URL, updated when controls change, and carried to the equivalent language page. Only declared shared fragments are retained. With JavaScript disabled, all records remain visible and language links open their equivalents; browser-specific query and fragment state cannot be read by a static HTML build. No filtering controls are misleadingly presented as functional in that case.
+
+## Editing copy
+
+Each file in `src/content/pages/` contains both languages under `es` and `en`. For example, `home.json` holds the homepage copy; `interface.json` holds navigation and control labels. `src/content/content.ts` selects the copy for the shared template. No content collection loader or editorial metadata is needed.
+
+Edit an existing value and preview it. English can catch up later: add an item to the [translation checklist](../../docs/localisation-editorial-workflow.md). If a template needs a new message key, add it in both languages to keep the page renderable. Build checks catch missing or empty messages, unsupported inline markup, type errors and broken links. They do not judge translation quality or freshness.
+
+The initial website prose comes from the Spanish design copy, with AI-assisted English drafts. Human review remains pending and happens at release milestones. There are no automatic approval or withdrawal states. If material must be removed, remove it from both versions and any shared sections that repeat it. Optional article routing and a formal editorial system can be added when needed.
+
+The app has no database access and needs no secrets. `src/data/site.ts` contains six curated design reference records, stable IDs, images and institutions. Original names remain available independently of translated display labels. These records are not a public research catalogue. Do not import explorer internals, add unsourced multilingual entity fields, or give this app the explorer's database role. A publication-aware interface must precede public research-data features.
+
+Search matches both editorial name variants and original spelling. Accent folding is confined to the explicitly separate search representation; original text is unchanged and Rapa Nui names use case-insensitive exact spelling. Any broader Rapa Nui matching rules need collaborator review.
+
+Dates use explicit `Intl` locales and retain year/month/day precision. Event time zones are stored independently from language; an unknown time is not invented. Dates currently shown are calendar dates, not timed events. Metric conventions apply in both languages.
 
 ## Production
 
+Canonical hostname: [museumofstolenartefacts.org](https://museumofstolenartefacts.org/).
+
 ```sh
-just website-image
+mise exec -- just website-image
 docker run --rm -p 8080:8080 mosa-website:local
+mise exec -- pnpm --filter @mosa/website test:http http://127.0.0.1:8080
 ```
 
-The image serves static output through nginx as an unprivileged user. The build context must be the repository root. The website workflow verifies and builds this image independently; its manual deployment requires the hosting configuration described in [deployment](../../docs/deployment.md).
+The production image uses nginx as an unprivileged user. The build context is the repository root. nginx returns real permanent HTTP `301` redirects from `/` and the six existing page paths (with or without trailing slash) to their Spanish equivalents, preserving query strings. Unknown paths return a genuine `404` and the bilingual error page. No static HTML redirect pages are generated.
 
+The `Website` workflow tests localisation, builds the production image and exercises all legacy redirects, query preservation, published routes and unknown URLs against nginx. Deployment remains the separate manual workflow described in [deployment](../../docs/deployment.md).
 
-## Site structure
+## Contact and remaining editorial work
 
-| Route | Content |
-| --- | --- |
-| `/` | Introduction, collection concepts, resources, events and project overview |
-| `/about/` | Manifesto, reconnection and team |
-| `/collection/` | Six reference records, image/list views, search and combined concept/type filters |
-| `/visit/` | Distribution overview and institution directory |
-| `/events/` | Accessible event accordion and retrospective overview |
-| `/resources/` | Resource summaries, relationship diagram and reading references |
-| `/contact/` | Contact form layout with submission explicitly unavailable |
+Contact follows [ADR 015](../../docs/adrs/015-use-email-for-public-contact.md): `mosa@radicaldata.org`, a selectable address and native email link. Both versions explain correspondence handling without treating contact as permission to publish. Mailbox ownership, delivery verification and the complete privacy notice remain operational work.
 
-Individual collection, event and resource detail pages, ontology essays and pop-ups are intentionally outside this implementation. The Visit overview follows the content architecture; no Visit layout was supplied. The directory is a reference overview, not an interactive geographical map.
+Resource files, external reading links, event registration and the institution map remain in preparation. Human Spanish–English review, collaborator approval of orthography and terminology, assistive-technology testing with readers, and review of grant-specific Dutch commitments remain outstanding. There are no complete Dutch or Rapa Nui interface routes. The internal explorer is unchanged.
 
-`src/data/site.ts` holds navigation and curated content transcribed from the supplied PDFs. These records are design examples, not a published catalogue or a query against the research database. The unknown mahute classification remains explicitly undocumented. The original placeholder cards and filler copy were omitted.
+## Assets and font coverage
 
-The collection filters combine search, concept and record type. Search ignores accents and case. Home concept links preselect the matching collection filter. With JavaScript disabled, all records and navigation remain accessible; event disclosures use native HTML.
+Existing imagery, logos and General Sans fonts remain local. Decorative images have empty alternative text. Both languages retain the supplied funding logo and acknowledgement.
 
-## Pending content and integrations
-
-- Contact delivery and privacy copy: the form is disabled and explicitly states that messages are neither sent nor stored. Connect an approved endpoint and publish the privacy notice before enabling it.
-- Resource files, external reading links, event registration and the institution map: summaries remain visible, with pending availability clearly labelled and no dead detail-page links.
-- Translations and social destinations: Spanish is the only implemented language; no unconfigured language switch or social links are presented.
-- Live collection publication requires the separate publication-aware data interface described above.
-
-## Design assets
-
-Images in `public/images/` were extracted from the user-supplied PDF layouts, resized and saved as WebP. The two logo PNGs are the supplied originals. Decorative artefact cut-outs have empty alternative text; collection and editorial images have descriptive alternatives.
-
-General Sans weights 300, 400, 500 and 600 were obtained from Fontshare using `https://api.fontshare.com/v2/css?f[]=general-sans@300,400,500,600&display=swap` and are served locally from `public/fonts/`. No external image, font, analytics or database request is needed to render the site. Brand colours are white, black and coral `#FF6D6D`.
+General Sans lacks U+014A/U+014B (`Ŋ`, `ŋ`), including the `ŋ` already present in “Haka Nonoŋa”. `public/fonts/noto-sans-eng.woff2` is a small variable-font subset of [Noto Sans from Google Fonts](https://github.com/google/fonts/tree/main/ofl/notosans), served locally only for these code points under the [SIL Open Font License](public/fonts/noto-sans-OFL.txt). The four General Sans weights plus this fallback cover all characters in the current copy; that does not establish coverage for future collaborator-approved orthographies or the availability of a suitable speech voice.

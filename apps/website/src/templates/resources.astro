@@ -1,0 +1,23 @@
+---
+import PageIntro from "../components/PageIntro.astro";
+import PageLink from "../components/PageLink.astro";
+import { getResources } from "../data/site";
+import Layout from "../layouts/Layout.astro";
+
+const readings = ["Return and Restitution Cases", "Restitutions by Country", "Fault Lines: Imagining Indigenous Futures for Colonial Collections", "We want them back!", "Declaración Universal de los Derechos Humanos", "Declaración de las Naciones Unidas sobre los Derechos de los Pueblos Indígenas", "No Humboldt21!", "Civil society: Guidelines on colonial heritage inadequate", "Decolonial law and practice", "A guide to International Repatriation", "Presentation of the procedures for the restitution of cultural property", "Guidance for restitution and return of items from university museums and collections", "Restitution and repatriation — practical guide", "Joint Guidelines for dealing with cultural property and human remains from colonial contexts"];
+
+import { getCopy } from "../content/content";
+import type { Locale } from "../i18n/routes";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("resources", locale);
+const resources = getResources(locale);
+---
+<Layout locale={locale} page="resources" title={copy.title} description={copy.description}>
+  <PageIntro title={copy.passage03} />
+  <section class="container section editorial resources-overview"><h2 class="eyebrow"><Fragment set:html={copy.passage06} /></h2><div class="info-grid">{resources.map((resource, index) => <article id={resource.id} class:list={["info-card", { coral: index === 0 }]}><span class="small availability">{copy.passage11}</span><h3>{resource.title}</h3><p>{resource.description}</p></article>)}</div></section>
+  <img class="full-image historical-image" src="/images/colonial-transport.webp" alt={copy.passage04} width="600" height="522" loading="lazy" />
+  <section class="container section editorial"><h2 class="eyebrow"><Fragment set:html={copy.passage07} /></h2><div><div class="actor-map" role="img" aria-label={copy.passage05}><span class="actor-community">{copy.passage12}</span><div class="actor-connections"><span>{copy.passage14}</span><span>{copy.passage15}</span><span>{copy.passage16}</span></div></div><div class="two-columns"><p><Fragment set:html={copy.passage08} /></p><p>{copy.passage17} <PageLink class="text-link" page="contact" locale={locale}>{copy.passage18}</PageLink>.</p></div></div></section>
+  <section class="dark-section section"><div class="container"><h2 class="eyebrow"><Fragment set:html={copy.passage09} /></h2><p class="reading-note small"><Fragment set:html={copy.passage10} /></p><div class="reading-grid">{readings.map((title, index) => <article><span class="reading-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><h3 lang={index === 4 || index === 5 ? "es" : "en"}>{title}</h3></article>)}</div></div></section>
+</Layout>

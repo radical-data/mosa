@@ -1,0 +1,9 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { type Locale, type PageId, pagePath } from "../i18n/routes";
+
+interface Props extends Omit<HTMLAttributes<"a">, "href"> { page: PageId; locale: Locale; suffix?: string; }
+const { page, locale, suffix = "", ...attributes } = Astro.props;
+---
+<!-- biome-ignore lint/a11y/useAnchorContent: Callers provide accessible link content through the Astro slot. -->
+<a {...attributes} href={`${pagePath(page, locale)}${suffix}`}><slot /></a>

@@ -1,19 +1,28 @@
 ---
-import { navigation } from "../data/site";
+import { messages } from "../i18n/catalogues";
+import { anchors, type Locale, languageLink, localeIds, locales, type PageId, pageIds, pagePath } from "../i18n/routes";
+import PageLink from "./PageLink.astro";
 
-const path = Astro.url.pathname;
+interface Props { locale: Locale; page?: PageId; }
+const { locale, page } = Astro.props;
+const t = messages(locale);
 ---
 <header class="site-header container">
-  <a class="brand" href="/" aria-label="MoSA — Inicio">
-    <img src="/images/logo-dark.png" alt="Museum of Stolen Artefacts" width="303" height="162" />
-  </a>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" hidden>Menú <span aria-hidden="true">+</span></button>
-  <nav id="primary-navigation" aria-label="Navegación principal">
-    {navigation.map(({ href, label }) => <a href={href} aria-current={path === href ? "page" : undefined}>{label}</a>)}
-    <span class="language"><span class="sr-only">Idioma: español de Chile</span><span aria-hidden="true">ES</span></span>
+  <PageLink class="brand" page="home" locale={locale} aria-label={`MoSA — ${t.home}`}><img src="/images/logo-dark.png" alt="Museum of Stolen Artefacts" lang="en" width="303" height="162" /></PageLink>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" hidden>{t.menu} <span aria-hidden="true">+</span></button>
+  <nav id="primary-navigation" aria-label={t.primaryNavigation}>
+    {pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)} aria-current={page === id ? "page" : undefined}>{t[id]}</a>)}
   </nav>
+  {page && <nav class="language-switcher" aria-label={t.language}>
+    {localeIds.map((id) => <a href={languageLink(page, id, Astro.url)} lang={locales[id].language} hreflang={locales[id].hreflang} aria-current={locale === id ? "true" : undefined} data-language-link data-anchors={JSON.stringify(page ? anchors[page] : [])} data-page={page}>{locales[id].name}</a>)}
+  </nav>}
 </header>
 <script>
+  import { updateLanguageLinks } from "../i18n/switcher";
+
+  updateLanguageLinks();
+  window.addEventListener("hashchange", updateLanguageLinks);
+  window.addEventListener("popstate", updateLanguageLinks);
   const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
   const nav = document.querySelector<HTMLElement>("#primary-navigation");
   if (toggle && nav) {
@@ -22,12 +31,11 @@ const path = Astro.url.pathname;
     const close = () => { toggle.setAttribute("aria-expanded", "false"); nav.classList.remove("is-open"); };
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") !== "true";
-      toggle.setAttribute("aria-expanded", String(open));
-      nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open)); nav.classList.toggle("is-open", open);
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") { close(); toggle.focus(); }
     });
-    window.matchMedia("(min-width: 801px)").addEventListener("change", close);
+    window.matchMedia("(min-width: 1101px)").addEventListener("change", close);
   }
 </script>
