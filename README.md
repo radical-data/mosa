@@ -90,6 +90,12 @@ The public website is deployed at [museumofstolenartefacts.org](https://museumof
 
 Database changes use committed migrations. Real or sensitive project data must not be committed as seed data.
 
+## Collection product direction
+
+- [Source-to-publication workflow](docs/collection-workflow.md): the agreed experience for source capture, research dossiers, review and public collection pages.
+- [Implementation plan](docs/collection-workflow-implementation-plan.md): ordered delivery steps, dependencies and acceptance criteria, starting with one complete manual journey.
+- [Data-entry discussion brief](docs/data-entry-efficiency-discussion.md): the original ontology and input-efficiency questions.
+
 ## Deployment
 
 The applications have separate images and Coolify applications. The root `Dockerfile` remains the explorer image to preserve the existing deployment configuration. `apps/website/Dockerfile` builds the static website and serves it on port 8080 without database credentials.
