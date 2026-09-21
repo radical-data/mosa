@@ -1,8 +1,8 @@
+import { buildPacketWork, type ImportOutcome, type ImportPlan } from "@mosa/object-dossier/import";
+import type { DossierPacket } from "@mosa/object-dossier/packet";
+import type { ResolutionPlan } from "@mosa/object-dossier/resolve";
 import { describe, expect, it } from "vitest";
-import { buildPacketWork, type ImportOutcome, type ImportPlan } from "./import";
-import type { DossierPacket } from "./packet";
 import { formatOutcome } from "./report";
-import type { ResolutionPlan } from "./resolve";
 
 function samplePacket(): DossierPacket {
   return {

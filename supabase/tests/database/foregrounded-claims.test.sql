@@ -262,14 +262,15 @@ select throws_ok(
 reset role;
 
 set local role authenticated;
-select lives_ok(
+select throws_ok(
     $$
     insert into presentation.foregrounded_claim (claim_id)
     values ('9b000000-0000-4000-8000-000000000003');
     delete from presentation.foregrounded_claim
     where claim_id = '9b000000-0000-4000-8000-000000000003';
     $$,
-    'authenticated project users can edit foregrounding selections'
+    '42501', NULL,
+    'authenticated users cannot edit foregrounding selections directly'
 );
 reset role;
 

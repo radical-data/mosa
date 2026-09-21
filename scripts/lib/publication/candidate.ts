@@ -84,7 +84,7 @@ export async function candidate(
     );
     const row = result.rows[0];
     if (row?.status !== "active" || row.relationship !== "supports" || row.complex)
-      throw Error("Slice 1 requires active claims with unqualified supporting evidence");
+      throw Error("Public cards require active claims with unqualified supporting evidence");
     sourceURL(row.reference);
     text(row.locator);
     dependencies.push(row.dependencies);
@@ -117,7 +117,7 @@ export async function candidate(
   const ns = await evidence(selection.nameSpeaker);
   const hs = await evidence(selection.holderSpeaker);
   if (!n.asserted_by_agent_id || !h.asserted_by_agent_id)
-    throw Error("Slice 1 requires identified speakers");
+    throw Error("Public cards require identified speakers");
   const identifier = await client.query<{
     namespace: string;
     value: string;

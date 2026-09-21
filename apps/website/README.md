@@ -44,7 +44,7 @@ Edit an existing value and preview it. English can catch up later: add an item t
 
 The initial website prose comes from the Spanish design copy, with AI-assisted English drafts. Human review remains pending and happens at release milestones. There are no automatic approval or withdrawal states. If material must be removed, remove it from both versions and any shared sections that repeat it. Optional article routing and a formal editorial system can be added when needed.
 
-The app has no database access and needs no secrets. `public/collection-snapshot.json` contains only the reviewed public export, validated through `@mosa/public-collection` before rendering. Slice 1 accepts zero or one card with an attributed name, reported holding institution, catalogue identifier and source links. Missing or malformed exports fail; an explicitly empty export renders an empty collection without falling back to design reference records.
+The app has no database access and needs no secrets. `public/collection-snapshot.json` contains only the reviewed public export, validated through `@mosa/public-collection` before rendering. The current pilot accepts up to two cards with an attributed name, reported holding institution, catalogue identifier and source links. Missing or malformed exports fail; an explicitly empty export renders an empty collection without falling back to design reference records.
 
 The private maintainer workflow, publication permissions and withdrawal process are documented in the [publication runbook](../../docs/collection-publication.md). The committed export contains the approved Hoa Hakananaiʻa pilot. Collection and institution pages expose the same release ID so deployment can verify the actual served snapshot.
 

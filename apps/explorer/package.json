@@ -15,7 +15,10 @@
   "dependencies": {
     "@astrojs/node": "^11.0.2",
     "astro": "7.0.9",
-    "pg": "catalog:"
+    "pg": "catalog:",
+    "@mosa/object-dossier": "workspace:*",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",

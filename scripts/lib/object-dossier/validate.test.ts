@@ -1,8 +1,8 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import type { DossierPacket } from "@mosa/object-dossier/packet";
+import { validatePacket } from "@mosa/object-dossier/validate";
 import { describe, expect, it } from "vitest";
-import type { DossierPacket } from "./packet";
-import { validatePacket } from "./validate";
 
 const EXAMPLE_PACKET_PATH = path.resolve(
   __dirname,

@@ -25,6 +25,7 @@
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "@mosa/public-collection": "workspace:*"
+    "@mosa/public-collection": "workspace:*",
+    "@mosa/object-dossier": "workspace:*"
   }
 }

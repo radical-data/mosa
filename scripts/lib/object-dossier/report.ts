@@ -1,5 +1,5 @@
-import type { ImportOutcome, ImportPlan, WorkStatus } from "./import";
-import type { EntityResolution, PacketEntityKind } from "./resolve";
+import type { ImportOutcome, ImportPlan, WorkStatus } from "@mosa/object-dossier/import";
+import type { EntityResolution, PacketEntityKind } from "@mosa/object-dossier/resolve";
 
 const ENTITY_KIND_ORDER: PacketEntityKind[] = ["object", "agent", "place", "source"];
 

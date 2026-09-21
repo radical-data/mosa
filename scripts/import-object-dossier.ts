@@ -1,9 +1,9 @@
 import path from "node:path";
 import { parseArgs } from "node:util";
-import { runImport } from "./lib/object-dossier/import";
-import { readPacketFile } from "./lib/object-dossier/packet";
+import { runImport } from "@mosa/object-dossier/import";
+import { readPacketFile } from "@mosa/object-dossier/packet";
+import { validatePacket } from "@mosa/object-dossier/validate";
 import { formatOutcome } from "./lib/object-dossier/report";
-import { validatePacket } from "./lib/object-dossier/validate";
 import { resolveImportDatabaseUrl } from "./lib/supabase-local";
 
 const projectRoot = path.resolve(__dirname, "..");

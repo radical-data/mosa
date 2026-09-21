@@ -1,0 +1,16 @@
+{
+  "name": "@mosa/object-dossier",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    "./import": "./import.ts",
+    "./packet": "./packet.ts",
+    "./resolve": "./resolve.ts",
+    "./validate": "./validate.ts"
+  },
+  "dependencies": {
+    "pg": "catalog:",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  }
+}

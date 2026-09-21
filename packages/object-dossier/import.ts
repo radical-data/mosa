@@ -442,17 +442,68 @@ async function runPostImportAssertions(
   }
 }
 
-function truncateError(message: string): string {
-  const limit = 4000;
-  return message.length > limit ? `${message.slice(0, limit)}…` : message;
+// Call only inside a transaction owned by the caller. Draft promotion and all
+// canonical writes then commit together. All importer entry points share this lock.
+export async function lockImport(client: ClientBase) {
+  await client.query("select pg_advisory_xact_lock(1297040193, 2)");
 }
-
+export async function importInTransaction(
+  client: ClientBase,
+  packet: DossierPacket,
+  bindings: Record<string, string> = {},
+): Promise<ImportOutcome> {
+  await lockImport(client);
+  const plan = await planImport(client, packet);
+  if (plan.resolution.errors.length)
+    throw new ImportError("identity resolution failed", plan.resolution.errors);
+  if (plan.alreadyImported)
+    return {
+      mode: "apply",
+      plan,
+      applied: false,
+      noop: true,
+      created: { entities: 0, identifiers: 0, claims: 0, evidence: 0 },
+    };
+  const datasetId = (
+    await client.query(
+      `insert into ingestion.dataset(key,title) values($1,$2)
+     on conflict(key) do update set title=coalesce(excluded.title,ingestion.dataset.title) returning id`,
+      [packet.dataset.key, packet.dataset.title ?? null],
+    )
+  ).rows[0].id;
+  // Human-confirmed identities, never label matches. The caller must validate
+  // both the kind and the authority to bind these existing entities.
+  for (const [key, id] of Object.entries(bindings)) {
+    await client.query(
+      `insert into ingestion.entity_binding(dataset_id,local_key,entity_id)
+      values($1,$2,$3) on conflict(dataset_id,local_key) do nothing`,
+      [datasetId, key, id],
+    );
+    const bound = await client.query(
+      `select entity_id from ingestion.entity_binding where dataset_id=$1 and local_key=$2`,
+      [datasetId, key],
+    );
+    if (bound.rows[0].entity_id !== id)
+      throw new ImportError("Existing identity binding differs from the confirmed identity");
+  }
+  const runId = (
+    await client.query(
+      `insert into ingestion.run(dataset_id,packet_version,packet_sha256,importer_version)
+    values($1,$2,$3,$4) returning id`,
+      [datasetId, packet.dataset.version, plan.sha256, IMPORTER_VERSION],
+    )
+  ).rows[0].id;
+  const created = await applyCanonicalWrites(client, packet, datasetId);
+  await client.query("update ingestion.run set status='succeeded',finished_at=now() where id=$1", [
+    runId,
+  ]);
+  return { mode: "apply", plan, applied: true, noop: false, runId, created };
+}
 export interface RunImportOptions {
   databaseUrl: string;
   apply: boolean;
   applicationName?: string;
 }
-
 export async function runImport(
   packet: DossierPacket,
   options: RunImportOptions,
@@ -461,17 +512,12 @@ export async function runImport(
     application_name: options.applicationName ?? "mosa-object-dossier-importer",
     connectionString: options.databaseUrl,
   });
-
   await client.connect();
-
   try {
-    const plan = await planImport(client, packet);
-
-    if (plan.resolution.errors.length > 0) {
-      throw new ImportError("identity resolution failed", plan.resolution.errors);
-    }
-
     if (!options.apply) {
+      const plan = await planImport(client, packet);
+      if (plan.resolution.errors.length)
+        throw new ImportError("identity resolution failed", plan.resolution.errors);
       return {
         mode: "dry-run",
         plan,
@@ -480,98 +526,32 @@ export async function runImport(
         created: { entities: 0, identifiers: 0, claims: 0, evidence: 0 },
       };
     }
-
-    if (plan.alreadyImported) {
-      return {
-        mode: "apply",
-        plan,
-        applied: false,
-        noop: true,
-        created: { entities: 0, identifiers: 0, claims: 0, evidence: 0 },
-      };
-    }
-
-    // Bookkeeping happens outside the canonical transaction so a failed
-    // import still leaves a failed run record behind.
-    const datasetResult = await client.query<{ id: string }>(
-      `insert into ingestion.dataset (key, title)
-       values ($1, $2)
-       on conflict (key) do update
-           set title = coalesce(excluded.title, ingestion.dataset.title)
-       returning id`,
-      [packet.dataset.key, packet.dataset.title ?? null],
-    );
-    const datasetId = datasetResult.rows[0].id;
-
-    const runResult = await client.query<{ id: string }>(
-      `insert into ingestion.run (dataset_id, packet_version, packet_sha256, importer_version)
-       values ($1, $2, $3, $4)
-       returning id`,
-      [datasetId, packet.dataset.version, plan.sha256, IMPORTER_VERSION],
-    );
-    const runId = runResult.rows[0].id;
-
+    await client.query("begin");
     try {
-      await client.query("begin");
-      await client.query("select pg_advisory_xact_lock(hashtextextended($1, 0))", [
-        `ingestion:dataset:${packet.dataset.key}`,
-      ]);
-
-      // Re-check under the lock: a concurrent import may have finished
-      // between planning and locking.
-      if (await hasSucceededRun(client, datasetId, plan.sha256)) {
-        await client.query("rollback");
-        await client.query(
-          `update ingestion.run
-              set status = 'failed',
-                  finished_at = now(),
-                  error = $2
-            where id = $1`,
-          [runId, "packet already imported by a concurrent run"],
-        );
-        return {
-          mode: "apply",
-          plan,
-          applied: false,
-          noop: true,
-          runId,
-          created: { entities: 0, identifiers: 0, claims: 0, evidence: 0 },
-        };
-      }
-
-      const created = await applyCanonicalWrites(client, packet, datasetId);
-
+      const outcome = await importInTransaction(client, packet);
       await client.query("commit");
-
-      await client.query(
-        `update ingestion.run
-            set status = 'succeeded',
-                finished_at = now()
-          where id = $1`,
-        [runId],
-      );
-
-      return {
-        mode: "apply",
-        plan,
-        applied: true,
-        noop: false,
-        runId,
-        created,
-      };
+      return outcome;
     } catch (error) {
       await client.query("rollback");
-
-      const message = error instanceof Error ? error.message : String(error);
+      // Preserve failed CLI attempts without leaving partial canonical writes.
+      const datasetId = (
+        await client.query(
+          `insert into ingestion.dataset(key,title) values($1,$2)
+        on conflict(key) do update set title=ingestion.dataset.title returning id`,
+          [packet.dataset.key, packet.dataset.title ?? null],
+        )
+      ).rows[0].id;
       await client.query(
-        `update ingestion.run
-            set status = 'failed',
-                finished_at = now(),
-                error = $2
-          where id = $1`,
-        [runId, truncateError(message)],
+        `insert into ingestion.run(dataset_id,packet_version,packet_sha256,importer_version,status,finished_at,error)
+        values($1,$2,$3,$4,'failed',now(),$5)`,
+        [
+          datasetId,
+          packet.dataset.version,
+          packetSha256(packet),
+          IMPORTER_VERSION,
+          (error instanceof Error ? error.message : String(error)).slice(0, 4000),
+        ],
       );
-
       throw error;
     }
   } finally {

@@ -4,13 +4,13 @@
 
 Implement the [agreed collection workflow](collection-workflow.md) through small, usable releases. Each slice completes a user task across the required data, permissions and interface layers. Implement only the infrastructure that task needs.
 
-Status: slice 1 is implemented and production publication is configured. The empty release has been verified live and the approved Hoa Hakananaiʻa export is committed; the publication ledger records which release is live. Later slices are planned. Updated 2026-09-21. This sequence replaces the previous plan's nine preparatory steps before a first manual release. The product direction remains source capture, identity confirmation, claim review, research dossiers and authorised public presentation. The delivery sequence starts with existing research data so that the website becomes useful sooner.
+Status: slice 1 is implemented and production publication is configured. The empty release has been verified live and the approved Hoa Hakananaiʻa export is committed; the publication ledger records which release is live. Slice 2 is implemented and awaiting production activation; see the [capture runbook](source-capture.md). Later slices are planned. Updated 2026-09-21. This sequence replaces the previous plan's nine preparatory steps before a first manual release. The product direction remains source capture, identity confirmation, claim review, research dossiers and authorised public presentation. The delivery sequence starts with existing research data so that the website becomes useful sooner.
 
 ## Baseline
 
 The baseline is `main` at `a9000f6`. It already contains:
 
-- A [transactional importer](../scripts/lib/object-dossier/import.ts), [identity resolution](../scripts/lib/object-dossier/resolve.ts), [validation](../scripts/lib/object-dossier/validate.ts) and [v1 packet contract](../schemas/object-dossier-packet.schema.json).
+- A [transactional importer](../packages/object-dossier/import.ts), [identity resolution](../packages/object-dossier/resolve.ts), [validation](../packages/object-dossier/validate.ts) and [v1 packet contract](../schemas/object-dossier-packet.schema.json). These links follow their current shared-package locations.
 - A [read-only explorer](../apps/explorer/) and research projections.
 - A [static website](../apps/website/), with a [collection adapter](../apps/website/src/data/site.ts), [collection page](../apps/website/src/templates/collection.astro) and [institution listing](../apps/website/src/templates/visit.astro).
 - [Foregrounded-claim selection](../supabase/migrations/20260831120000_create_foregrounded_claims.sql), which does not establish publication permission.
@@ -24,6 +24,23 @@ The baseline is `main` at `a9000f6`. It already contains:
 4. Restrict each slice to its stated content types and operations. Do not build a general workflow engine, role designer, source processor or ontology editor in anticipation of later slices.
 5. Preserve working slices while extending contracts. Add permissions, source types and publication fields when a delivered task requires them.
 6. Use synthetic content for development and tests. Release real content only after the responsible person has authorised the particular public material.
+7. Remove duplicated decisions when a slice touches them. Prefer one concrete implementation over a new abstraction layer. Do not split files merely to reduce their length.
+8. Keep this page as the current delivery checklist. Put operating procedures in the runbooks and historical reasoning in the workflow discussion and ADRs.
+
+## Current implementation checklist
+
+The complexity review identifies duplicated claim reading, screen orchestration and event-title decisions. Address these within the user task that touches each area; preserve attributed claims, competing accounts, explicit identity decisions and publication authority.
+
+- [x] Share the canonical write operation between the importer and research interface. Commit dossier acceptance and its draft revision in one transaction.
+- [x] Implement URL capture, identity confirmation, manual review and acceptance in the existing research app. Keep packet keys and evidence bookkeeping behind those actions.
+- [ ] Activate slice 2 at the proposed `research.museumofstolenartefacts.org` address: configure the separate Coolify application, DNS, runtime credentials, email delivery and first researcher account. Follow the [capture runbook](source-capture.md).
+- [ ] Demonstrate a real second object from source entry through publication and withdrawal. Automated synthetic checks do not complete this release criterion.
+- [ ] Before expanding the public model in slice 3, complete a small publication-operations slice: show a readable candidate, record approval, then run export, Git changes, commit selection, deployment and served-output verification through one operation. Provide the equivalent withdrawal operation. Reuse the existing publication ledger, deployment gate and static website. A failed or interrupted operation must be recoverable without repeating the approval or reporting an unverified release as live.
+- [ ] As slice 3 adds dossier correction and evidence display, consolidate claim/evidence types, row conversion and evidence loading from `queries.ts` and `provenance.ts` into one implementation. Keep event-specific grouping in provenance. Preserve ordering, attribution and evidence relationships in regression checks.
+- [ ] In that same dossier slice, give each screen one explicit data-loading entry point. Establish entity type before loading type-specific data. Reuse or remove the unused `get-item-summary.ts` path; keep page templates responsible for presentation.
+- [ ] When changing provenance presentation, return the event title and the predicates it expresses from one decision function. Remove the second title decision tree. Compare SQL event-label rules with the interface requirements before deciding whether they should share a rule. Preserve meaningful differences and verify event titles and remaining facts together.
+
+The completion measure is a demonstrated ability to add, correct, publish and withdraw a dossier, with one obvious home for each rule. New predicates, processing services and interfaces require a demonstrated research task.
 
 ## Release sequence
 
@@ -87,6 +104,8 @@ Do not infer a geographical location from the holder. Do not export origin, imag
 **Release evidence:** one authorised card live, its supporting research references, the live snapshot identity, a successful withdrawal rehearsal and a short maintainer runbook. Application accounts, source storage workers and a general publication UI are not release prerequisites.
 
 ## Slice 2 — Add another object from a URL
+
+Implementation: [source capture and review](source-capture.md). The bounded flow and two-card publication support are implemented. Production account activation and a real second-object demonstration remain pending.
 
 **User task:** a researcher adds a catalogue URL, confirms the object identity, enters a name, holder and identifier with evidence, reviews the proposed record and submits it for publication through slice 1.
 

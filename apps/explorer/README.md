@@ -25,3 +25,7 @@ The app defaults to the standard local Supabase PostgreSQL URL. Override it by c
 - `/claims/:id` shows one claim and all attached evidence.
 - `/events/:id` shows one provenance event and its attributed statements.
 - Item pages show sourced provenance events ordered by reported date.
+
+## Source capture and review
+
+The private `/research` workspace adds invited email-code sign-in, source drafts, identity confirmation and reviewed promotion through the shared `@mosa/object-dossier` importer. Reader routes remain available. See [source capture](../../docs/source-capture.md) for permissions, runtime configuration and publication.
