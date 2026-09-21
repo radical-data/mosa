@@ -1,3 +1,5 @@
+import { type PublicCollection, parseCollection } from "@mosa/public-collection";
+import snapshot from "../../public/collection-snapshot.json";
 import labels from "../content/pages/reference-labels.json";
 import resources from "../content/pages/resource-summaries.json";
 import type { Locale } from "../i18n/routes";
@@ -22,95 +24,26 @@ export const getConcepts = (locale: Locale) =>
   }));
 export const getTypes = (locale: Locale) =>
   typeIds.map((id) => ({ id, label: labels[locale][id] }));
-// Design reference records only. IDs, names and institutions are independent of UI locale.
-// These are not research claims or a public projection of the research database.
-const records = [
-  {
-    id: "mamari",
-    name: "mamari",
-    concept: "taoa",
-    type: "individual",
-    institution: "Musei Vaticani",
-    location: "vatican",
-    image: "collection-mamari",
-    originalLanguage: "es-CL",
-  },
-  {
-    id: "hoa-hakananai-a",
-    name: "hoa",
-    concept: "stoneMoai",
-    type: "individual",
-    institution: "British Museum",
-    location: "london",
-    image: "collection-hoa-hakananai-a",
-    originalLanguage: "rap",
-  },
-  {
-    id: "moai-kavakava",
-    name: "kavakava",
-    concept: "moaiKavakava",
-    type: "type",
-    institution: "Museum of New Zealand Te Papa Tongarewa",
-    location: "wellington",
-    image: "collection-kavakava",
-    originalLanguage: "rap",
-  },
-  {
-    id: "mahute",
-    name: "mahute",
-    concept: "",
-    type: "individual",
-    institution: "Peabody Museum of Archaeology and Ethnology",
-    location: "cambridge",
-    image: "collection-mahute",
-    originalLanguage: "es-CL",
-  },
-  {
-    id: "wooden-figure",
-    name: "woodenFigure",
-    concept: "moai",
-    type: "individual",
-    institution: "Museo delle Civiltà",
-    location: "rome",
-    image: "collection-wooden-figure",
-    originalLanguage: "es-CL",
-  },
-  {
-    id: "ivi-tupuna",
-    name: "ivi",
-    concept: "iviTupuna",
-    type: "ancestors",
-    institution: "Staatliche Museen zu Berlin",
-    location: "berlin",
-    image: "collection-ivi-tupuna",
-    originalLanguage: "rap",
-  },
-] as const;
-export function getCollection(locale: Locale) {
-  return records.map((record) => ({
+// All collection facts come from the strictly validated public export.
+export const publicCollection = parseCollection(snapshot);
+export function collectionRecords(data: PublicCollection) {
+  return data.records.map((record) => ({
     ...record,
-    originalName: labels.es[record.name],
-    name: labels[locale][record.name],
-    nameLanguage: record.originalLanguage === "rap" ? "rap" : undefined,
-    location: labels[locale][record.location],
-    typeLabel: labels[locale][record.type],
-    conceptLabel: record.concept ? labels[locale][record.concept] : "",
-    conceptLanguage: rapConcepts.includes(record.concept) ? "rap" : undefined,
-    // Rapa Nui spelling is matched exactly (case-insensitively), without accent folding.
+    institution: record.holder.text,
     searchExact: [
-      labels.es[record.name],
-      labels.en[record.name],
-      record.institution,
-      "Rapa Nui",
-      record.concept ? labels.es[record.concept] : "",
-      record.concept ? labels.en[record.concept] : "",
+      record.name.text,
+      record.holder.text,
+      record.name.attributedTo,
+      record.holder.attributedTo,
+      record.identifier.namespace,
+      record.identifier.value,
     ].join(" "),
-    searchFoldable: [
-      labels.es[record.location],
-      labels.en[record.location],
-      record.institution,
-    ].join(" "),
+    // Preserve original-name spelling; fold accents only in institution search.
+    searchFoldable: record.holder.text,
   }));
+}
+export function getCollection(_locale: Locale) {
+  return collectionRecords(publicCollection);
 }
 const resourceIds = ["guide", "letter", "directory", "generator"] as const;
 export function getResources(locale: Locale) {

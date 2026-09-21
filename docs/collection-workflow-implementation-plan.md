@@ -1,211 +1,194 @@
-# Implement the source-to-publication collection workflow
+# Deliver the collection through successive vertical slices
 
 ## Objective and status
 
-Implement the [agreed collection workflow](collection-workflow.md). A researcher can capture a source, confirm an object, review evidenced claims, preview a public dossier, publish authorised content, and correct or withdraw that content.
+Implement the [agreed collection workflow](collection-workflow.md) through small, usable releases. Each slice completes a user task across the required data, permissions and interface layers. Implement only the infrastructure that task needs.
 
-Status: planned, 2026-09-21. No implementation step is completed by adding this document. Each numbered step is a deliverable that can be reviewed independently; split a step into smaller changes when necessary.
+Status: slice 1 implementation added; production publication setup and a real release remain pending. Later slices are planned. Updated 2026-09-21. This sequence replaces the previous plan's nine preparatory steps before a first manual release. The product direction remains source capture, identity confirmation, claim review, research dossiers and authorised public presentation. The delivery sequence starts with existing research data so that the website becomes useful sooner.
 
-## Baseline and dependencies
+## Baseline
 
-The baseline is `main` at `a9000f6`, used to create `codex/collection-workflow-plan`. It contains the read-only explorer, research schema, v1 dossier importer, bilingual static website and foregrounded-claim selection. Reuse those components; the missing work is authoring, source preservation, review and publication integration.
+The baseline is `main` at `a9000f6`. It already contains:
 
-Use these existing components:
+- A [transactional importer](../scripts/lib/object-dossier/import.ts), [identity resolution](../scripts/lib/object-dossier/resolve.ts), [validation](../scripts/lib/object-dossier/validate.ts) and [v1 packet contract](../schemas/object-dossier-packet.schema.json).
+- A [read-only explorer](../apps/explorer/) and research projections.
+- A [static website](../apps/website/), with a [collection adapter](../apps/website/src/data/site.ts), [collection page](../apps/website/src/templates/collection.astro) and [institution listing](../apps/website/src/templates/visit.astro).
+- [Foregrounded-claim selection](../supabase/migrations/20260831120000_create_foregrounded_claims.sql), which does not establish publication permission.
+- [Bootstrap dossiers](../packets/bootstrap/README.md), which are neither proof of a production import nor publication approval.
 
-- [Packet contract](../schemas/object-dossier-packet.schema.json)
-- [Validation](../scripts/lib/object-dossier/validate.ts), [identity resolution](../scripts/lib/object-dossier/resolve.ts) and [importer](../scripts/lib/object-dossier/import.ts)
-- [Database migrations](../supabase/migrations/) and [database tests](../supabase/tests/database/)
-- [Explorer](../apps/explorer/) and its research projections
-- [Website](../apps/website/), its [collection adapter](../apps/website/src/data/site.ts) and [collection template](../apps/website/src/templates/collection.astro)
-- [Foregrounding migration](../supabase/migrations/20260831120000_create_foregrounded_claims.sql) and [decision](adrs/013-foreground-claims-and-defer-first-class-concepts.md)
-- [Bootstrap packets](../packets/bootstrap/README.md), as import examples rather than publication-approved content
+## Delivery rules
 
-Complete steps 1–9 for the first usable manual release. Add AI in step 10, provenance authoring in step 11 and restitution authoring in step 12. Existing read-only provenance views can remain available before event authoring is added.
+1. Finish a slice with a demonstrable user outcome and its correction or removal path. A schema, exporter or authentication shell alone is not a completed slice.
+2. Use existing tools for tasks that do not yet need a new interface. Maintainer-run commands are acceptable in slice 1; researchers stop needing packets for the bounded task in slice 2.
+3. Keep claim acceptance, editorial foregrounding and publication authorisation distinct from the first release. The same person can perform those actions, but one action does not imply another.
+4. Restrict each slice to its stated content types and operations. Do not build a general workflow engine, role designer, source processor or ontology editor in anticipation of later slices.
+5. Preserve working slices while extending contracts. Add permissions, source types and publication fields when a delivered task requires them.
+6. Use synthetic content for development and tests. Release real content only after the responsible person has authorised the particular public material.
 
-## Step 1 — Define the first dossier and public contract
+## Release sequence
 
-1. Review the existing research projections, foregrounded-claim selection and website adapter against this workflow. Record which fields can be derived and which require additional research or editorial decisions.
-2. Confirm the current schema and application commands before implementation; update this plan if the baseline changes.
-3. Choose one real dossier with the researcher and person responsible for publication. Establish which source content and images can be used for the pilot. Use synthetic equivalents in committed tests.
-4. Define a public record contract covering stable item identity, attributed names, separate origin and custody claims, identifiers, permitted citations, optional imagery, original text, translations and revision references. A related entity label is also public content.
-5. Record the authoring application boundary. The proposed default is an authenticated workspace within `apps/explorer`, with separate server write services and credentials. Keep its existing reader routes operational. A separate app is an alternative if deployment or access needs require it.
-6. Confirm who can capture, review, select foregrounded claims, authorise publication and withdraw content. Record source storage and withdrawal requirements before implementing the affected services.
-
-**Deliverables:** pilot dossier specification; mapping from research records to public fields; versioned public export schema with synthetic examples; recorded application and permission decisions.
-
-**Acceptance:** the contract represents two conflicting names, an unknown origin and an item without an image. The pilot distinguishes private source material from publishable claims or excerpts. No decision relies on an assumed production import.
-
-## Step 2 — Add authenticated draft and review foundations
-
-Depends on step 1.
-
-1. Add migrations for draft dossiers, source captures, claim proposals, review decisions and research coverage metadata. Keep provisional labels and notes outside canonical entities.
-2. Give drafts and proposals revision identifiers. Record the actor and UTC time for changes and decisions.
-3. Add authenticated server operations with explicit permissions for capture, review and publication work. Audit the current broad `authenticated` and reader policies before exposing a workspace; do not assume a login alone provides scoped access.
-4. Enforce the same access rules through direct database/API access and the application. Keep server credentials out of browser responses and bundles.
-5. Reject stale edits with a visible conflict response. Make draft creation and review requests retryable without duplicate records.
-
-**Deliverables:** migrations, generated database types, authenticated workspace shell, server operations and permission tests.
-
-**Acceptance:** an unauthenticated request cannot read drafts or write research data. A capture-only user cannot accept or publish a proposal through a direct request. Two editors cannot silently overwrite the same draft revision. Saving a draft creates no canonical claim or public content.
-
-## Step 3 — Build source capture and preservation
-
-Depends on step 2.
-
-1. Build **Add source** for URLs, files, photographs and archival references, with optional institution, catalogue identifier and private lead note.
-2. Add immutable source-version metadata: content hash, media type, storage reference, capture time, original reference and access conditions. Store files privately; issue access only after checking the requesting user's permission.
-3. Separate capture jobs from draft saves. Show pending, completed and failed capture states, with retry and manual continuation.
-4. For reference-only sources, record that no digital copy is held. For changed remote content, create a new version without changing earlier evidence targets.
-5. Restrict URL fetching to permitted HTTP(S) destinations; reject private/internal destinations and recheck redirects. Set file size, content-type and fetch-time limits in configuration and expose validation failures in the form.
-6. Extend the packet schema and importer for non-URL sources and version-linked evidence. Preserve v1 imports through explicit version handling; do not fabricate public URLs for private files.
-
-**Deliverables:** source capture UI, private storage integration, capture worker, versioned packet changes and compatibility tests.
-
-**Acceptance:** a museum URL, a local document and an archival reference can each start a dossier. A failed download preserves the draft and reference. Retrying a completed capture does not duplicate its version. An unauthorised user cannot retrieve a private file. Existing v1 bootstrap packets still validate and import with their existing meaning.
-
-## Step 4 — Build identity confirmation
-
-Depends on step 3.
-
-1. Search existing bindings, exact external identifiers and source references; use names only to find candidates.
-2. Show candidates with identifiers, institution, attributed names, sources and the match reason.
-3. Implement explicit link, create and defer actions. Keep deferred drafts outside canonical object creation.
-4. Reuse identity resolution during canonical writes. Detect conflicting identifiers and incompatible entity types before committing.
-5. Define how an explicit existing-entity selection becomes a trusted internal reference or binding. Keep user-supplied identifiers separate from server-authorised links; do not weaken the portable packet's identity rules.
-
-**Deliverables:** identity screen, authorised binding operations and duplicate/conflict tests.
-
-**Acceptance:** equal names alone do not merge two objects. A known institutional identifier resolves to the existing object. Conflicting identifiers require a researcher decision. Repeated or concurrent confirmation requests do not create duplicate bindings or objects.
-
-## Step 5 — Complete manual claim review and the research dossier
-
-Depends on step 4.
-
-1. Build the source/proposal review screen. Allow passage selection where supported and manual page, timestamp or visual locators for other sources.
-2. Start with the existing summary predicates: `has_name`, `made_at`, `found_at`, `located_at` and `held_by`, plus validated source relationships. Label each field in ordinary language and preserve its exact predicate meaning.
-3. Require the evidence locator, relationship and excerpt under the existing evidence rules. Record original language and asserting agent when known; do not invent a speaker.
-4. Implement accept, edit, reject and defer. Compile accepted proposals through shared validation and canonical write logic.
-5. Refactor the importer transaction boundary so that canonical writes and the proposal-to-claim promotion record commit together. Existing `runImport` owns its transaction and records run outcomes separately; wrapping it in a second transaction is insufficient.
-6. Add explicit correction/supersession operations and review history. Keep conflicting claims as distinct accounts. A changed packet checksum alone is not a correction workflow.
-7. Build the dossier overview with the ADR 011 sections, identifiers, evidence, disagreements and explicit research coverage. Allow a draft with missing origin or provenance to remain useful.
-
-**Deliverables:** manual review UI, transactional promotion service, correction operation, dossier overview and integration tests.
-
-**Acceptance:** a researcher records an attributed name and current holder without editing JSON or seeing UUIDs. Rejecting a proposal produces no canonical claim. A failed or retried promotion leaves neither partial evidence nor duplicate claims. A corrected claim retains its history. A conflicting claim remains independently readable. “Removed from Orongo” is not accepted as evidence of `found_at` solely because that field is available.
-
-## Step 6 — Add public selection and publication decisions
-
-Depends on step 5 and the public field mapping in step 1.
-
-1. Reuse `presentation.foregrounded_claim` and its active-claim projection. Add actor/time history for editorial selection without turning foregrounding into publication permission. The existing active-only filter is insufficient for public access.
-2. Add revision-specific publication decisions for the permitted claim content, related labels, identifiers, citations, excerpts, media and translations. Record the decision-maker, time, scope and basis of authority.
-3. Define the public dependency rules. Publishing an item does not publish its whole graph. Publishing a claim does not publish an entire source file. A public title cannot use a restricted name claim.
-4. Keep public translations linked to their source revision. A changed revision requires a new publication decision for changed content; dependent translations require renewed review. An unchanged previously authorised revision remains eligible only until explicitly superseded or withdrawn by the publication rules.
-5. Add authenticated preview using the same public projection rules as export. Keep draft assets protected; `noindex` is not access control.
-
-**Deliverables:** publication migrations and operations, decision UI, preview and dependency tests.
-
-**Acceptance:** accepting and foregrounding a claim leave it unpublished. A reviewer without publication permission cannot publish. Restricted excerpts and filenames do not appear in preview output intended for public release. Editing a claim does not transfer its approval to the new revision. Withdrawing a source revision invalidates public derivatives that depend on that revision.
-
-## Step 7 — Generate a restricted, versioned public export
-
-Depends on step 6.
-
-1. Implement a trusted exporter that reads only the publication-approved projection through a dedicated restricted interface. Audit grants and policies; do not give the website the explorer reader or a service-role key.
-2. Export the contract from step 1 with schema version, snapshot identity, generation time and published revision references. Validate the complete export before making it available to the website build.
-3. Re-evaluate eligibility for every value, including nested labels, source metadata, translated text, search terms, media links and counts. Generate counts from public records only.
-4. Generate only permitted media derivatives. Keep private storage references and capture logs out of the export.
-5. Make snapshot generation consistent under concurrent review and withdrawal. Bind export validity to a publication revision or equivalent marker that the deployment service can recheck.
-
-**Deliverables:** export schema, exporter, restricted read interface, synthetic snapshots and boundary tests.
-
-**Acceptance:** a deliberately restricted value is absent from JSON, media metadata and search data. An item with missing fields exports without invented values. Repeated exports of unchanged publication content agree apart from explicitly volatile metadata. An invalid export fails without replacing the last valid snapshot. A withdrawal during export prevents the stale snapshot from becoming eligible for deployment.
-
-## Step 8 — Connect the static website and public dossiers
-
-Depends on step 7.
-
-1. Replace the website's curated collection adapter with the validated export. Keep private authoring modules out of the website app.
-2. Add stable item routes and link collection cards to public dossiers. Update institution listings and other collection-derived sections from the same snapshot.
-3. Render attributed names, original wording, reviewed translations, distinct origin/custody fields, permitted sources and public provenance when available. Provide text-only cards when images are absent.
-4. Reconcile concept/type controls with the authorised data contract. Preserve stable filter IDs; omit unsupported controls rather than inventing classifications.
-5. Retain the site's Chilean Spanish and British English routing, language switching, metadata and progressive enhancement. Declare alternate-language item URLs only when the corresponding page exists.
-6. Build public search from the export only. Make collection browsing and dossier reading work without client-side JavaScript.
-
-**Deliverables:** collection adapter, item routes, updated listing/filter components and output checks.
-
-**Acceptance:** a public card opens the matching stable dossier. Both supported site languages work with missing optional translations clearly represented. A source-language name survives unchanged. Restricted content is absent from generated HTML, JSON, search data and image output. Missing images and unknown origin do not break the build or suggest fabricated information.
-
-## Step 9 — Complete publishing, withdrawal and the pilot
-
-Depends on step 8. This step completes the first manual release.
-
-1. Trigger validated website builds from publication changes. Record the snapshot, content revisions and deployment result; show authorised, deploying, live and failed states to the publisher.
-2. Recheck publication eligibility immediately before promoting a deployment. Serialise promotion against withdrawal or use an equivalent revision guard. A stale build must not replace a newer permitted release.
-3. Implement priority withdrawal: invalidate affected revisions, generate the permitted remainder, remove obsolete pages and media, update search/sitemap output and purge applicable caches.
-4. Block rollback to snapshots containing withdrawn material. Keep failed withdrawal visible and actionable; do not report removal as complete until the served output is verified.
-5. Agree and record a withdrawal deadline and test against it. Add runtime access enforcement before launch if the static deployment path cannot meet the required deadline.
-6. Run the real pilot from capture through manual review, preview, publication, correction and withdrawal. Record friction with the researcher and publication decision-maker; fix failures before expanding the dataset.
-7. Document operation, recovery and the revision-aware rollback procedure. Restore a backup in an isolated environment and confirm that private files, evidence versions and decision history remain linked.
-
-**Deliverables:** deployment integration, withdrawal operation, runbook and pilot results.
-
-**Acceptance:** the real dossier is readable at its public URL with the authorised sources and imagery. A private note never appears in public output. A failed build is visibly failed. Withdrawal removes the affected served content and dependent outputs within the agreed deadline. A concurrent older build or rollback cannot restore that content.
-
-## Step 10 — Add AI proposals to the manual review workflow
-
-Depends on the completed manual release.
-
-1. Select an extraction service only after defining which source material may be sent to it. Keep storage permission and external processing permission separate.
-2. Generate proposals referencing preserved source versions and exact passages or visual locators. Record model, prompt version, extraction time and method separately from attribution.
-3. Use the existing review actions; give the extraction worker no permission to accept, merge identities, publish or alter restitution cases.
-4. Treat retrieved text as untrusted source content. An instruction embedded in a document cannot trigger tools or change the review policy.
-5. Evaluate names and identifiers, ambiguous origin, conflicting accounts, uncertain dates, colonial removal language, unsupported predicates and sensitive sources. Record results and limitations before enabling routine use.
-
-**Acceptance:** AI proposals remain outside canonical claims until reviewed. Every accepted proposal has traceable evidence. Manual entry works during extraction failure. The model abstains or produces a reviewable unresolved proposal where the source is ambiguous. AI confidence is not stored as factual authority.
-
-## Step 11 — Add provenance authoring
-
-Depends on steps 5–9; AI is not a prerequisite.
-
-1. Extend the versioned write contract for events, structured dates, role claims and evidence.
-2. Build an event form for the reported action, object, date, places, participants, source characterisation and evidence.
-3. Preserve relocation versus transfer, uncertain or alternative dates, separate accounts and explicit identity reconciliation. Keep the source's removal characterisation attributed.
-4. Apply the existing review and publication decisions to event claims. Add public timeline output only for authorised event content.
-
-**Acceptance:** a researcher records one evidenced removal event without constructing graph rows manually. Movement origin does not become findspot or manufacture location. Partial dates retain their precision. Recording transfer does not assert title or consent. Unresolved accounts remain separate events until explicitly reconciled.
-
-## Step 12 — Add the restitution workspace
-
-Depends on the manual release and a review of the existing Phase 3 model with intended case workers. Provenance completeness is not a prerequisite for recording a request.
-
-1. Define permitted case workers and access to contacts, correspondence and community-provided material.
-2. Add validated operations for cases, parties, actions, linked documents and next actions, reusing the existing restitution constraints.
-3. Design any additional workflow states from real case tasks. Document their operational meanings before migrating the current status model.
-4. Provide a separate, explicit route to publish selected case information. Keep correspondence and contact details private unless specifically authorised.
-
-**Acceptance:** a permitted case worker records a request and next action without altering custody or provenance claims. An unauthorised user cannot retrieve case documents through direct requests. Public item pages expose only case content selected for publication. Case status does not imply moral or legal validity.
-
-## Verification and delivery discipline
-
-For each implementation step, add tests for its observable behaviour and failure boundaries. Reuse unit tests for validation, SQL tests for permissions and invariants, integration tests for promotion/export, and browser or generated-output checks for user journeys. Keep real and sensitive research data outside committed test fixtures.
-
-`mise exec -- just verify-static` runs static checks, types, unit tests and both application builds. `mise exec -- just verify` also runs database verification and generated-type checks. Full database verification resets the local test database; use a disposable local stack with no research data to preserve. For website changes, run `mise exec -- pnpm --filter @mosa/website test` and `mise exec -- just website-build`; the build also verifies generated output. Run the production HTTP checks documented in the [website README](../apps/website/README.md) when routes, redirects or serving behaviour change.
-
-Release migrations before code that depends on them. Keep existing v1 imports and read-only explorer views working unless an explicit migration replaces their contract. Test repeat imports after write-path changes. Do not apply fixture SQL or local reset procedures to staging or production.
-
-## Decisions to resolve at the relevant step
-
-| Decision | Responsible participants | Required before |
+| Slice | User outcome | New capability |
 | --- | --- | --- |
-| Authoring app boundary | Maintainer | Step 2 |
-| Pilot dossier and permitted content | Researcher and relevant publication authority | Real pilot capture/publication |
-| Authentication and permission assignments | Maintainer and research team | Step 2 |
-| Private source storage, retention and capture limits | Maintainer and source contributors where applicable | Step 3 |
-| Public fields, editorial naming and translation authority | Editorial team and relevant collaborators | Step 6 |
-| Required withdrawal deadline and operational owner | Publication authority and maintainer | Step 9 launch |
-| External AI processing permissions and provider | Research team and relevant source authority | Step 10 |
-| Case access and operational workflow | Community representatives and case workers | Step 12 |
+| 1 | A visitor can identify one real object, its reported holder and its source. | Existing research dossier to a public collection card; withdraw it. |
+| 2 | A researcher can add another object from a catalogue URL without writing JSON. | One authenticated capture, identity and manual review flow feeding the same publication path. |
+| 3 | A researcher can correct or add a conflicting account; a visitor can inspect the evidence. | Ongoing dossier review and a public item page. |
+| 4 | A researcher can use a local document, photograph or archival reference. | Preserved source versions and non-URL evidence through review and publication. |
+| 5 | A researcher can explain one reported removal or transfer. | One provenance event from entry to public timeline. |
+| 6 | A researcher can review machine-proposed claims instead of transcribing every field. | AI proposals through the established manual review path. |
+| 7 | A case worker can record a restitution request and the next action. | A bounded private restitution workflow and an optional authorised public update. |
 
-These decisions do not block documenting or developing with synthetic examples. Do not infer permission for real material from a successful technical test.
+This is the default order. Slices 5, 6 and 7 can be reprioritised after slice 4 from actual research needs. Restitution does not depend on AI or a complete provenance history.
+
+## Slice 1 — Put one real object on the collection page
+
+Implementation and operation: [publication runbook](collection-publication.md). The project owner has authorised the bootstrap dossiers; the committed export remains empty until canonical research imports and deployment credentials are configured.
+
+### User task
+
+A visitor opens the existing collection page, sees one research-backed record, identifies its reported holder and catalogue number, and follows its source. A maintainer can remove that record from every public collection surface.
+
+This is the smallest useful release. It does not require a new item page, authoring UI, login system, AI, uploaded files or images. It proves the real database-to-website connection and the publication boundary using the existing importer and deployment process.
+
+### Scope
+
+Choose one uncomplicated, publication-authorised dossier with an existing URL source. Hoa Hakananaiʻa is a possible candidate because a bootstrap packet exists; do not assume its claims or imagery are approved. Verify whether the record is already imported. If necessary, use the existing importer after review, then verify that repeating the import produces a no-op.
+
+Publish only:
+
+- Stable item identity.
+- One explicitly selected, attributed name and its language, when known.
+- One reported holding institution, with its authorised label and attribution.
+- One institutional identifier and its namespace.
+- The permitted source link or links supporting those displayed statements.
+
+Do not infer a geographical location from the holder. Do not export origin, images, source excerpts, translations of research statements, classifications or provenance in this slice. Existing interface copy remains in Chilean Spanish and British English; the same original name appears in both versions.
+
+### Implementation order
+
+1. Define a small, versioned public-card schema and one synthetic example. Reference the exact claims, evidence, related labels and identifiers used to produce the card. Reject unknown fields rather than passing through whole database rows.
+2. Add a maintainer-run command that prepares a private candidate from those explicit research records. Use existing authorised research access for preparation; do not give that access to the website. Do not select an arbitrary display label or export all active/foregrounded claims.
+3. Add a durable publication manifest in a private, access-controlled location outside public output. Record the selected record IDs, an exact content fingerprint including dependencies, decision-maker, UTC time, basis of publication authority, and active/withdrawn status. The maintainer records the actual decision; a hash alone does not establish permission. Store the reviewed snapshot immutably. The manifest selects and authorises content; it is not a hand-maintained copy of catalogue facts.
+4. Separate candidate preparation from approval and export. The trusted export operation emits only a snapshot matching an active manifest and unchanged selected research dependencies. Changed dependencies require a new review; no silent refresh of an approved card. Export generation itself does not require broad database access beyond the trusted validation boundary.
+5. Feed that JSON into the existing website collection adapter. Render a text-only card with attribution, catalogue identifier and source links. For this release, the public research list consists of the selected record; remove the six design reference records from the public catalogue rather than silently mixing them with research output. Keep design fixtures in development/test examples if useful.
+6. Update every consumer of the collection adapter, including the institution listing and search/count data. Omit unavailable locations and hide unsupported concept/type filters. Reconcile homepage links into those filters so that they do not promise unsupported results. Leave unrelated editorial pages unchanged.
+7. Build and preview both language versions, then use the existing manual deployment path. Record which snapshot is live. Gate promotion on a current manifest check and serialise publication/withdrawal operations so that an older build cannot overwrite a withdrawal. Audit rollback and alternate deployment paths for the same rule.
+8. Implement withdrawal by marking the manifest withdrawn, rebuilding the permitted remainder and deploying it. Verify that the card, institution entry and search data are removed. A valid empty collection is required; never fall back to reference records or a stale snapshot. A missing or invalid export is a build error, not an empty collection.
+
+### Demonstration and acceptance
+
+- A visitor can answer “What is this object, who reportedly holds it, and which record supports that?” without JavaScript.
+- Both language routes retain their navigation and language-switch behaviour. Source wording and proper names are not automatically translated.
+- The public build contains only the selected fields. A restricted name, private note and unselected claim seeded in the test dossier are absent from HTML, JSON, search and logs shipped to the browser.
+- The card has no broken image, invented location, fabricated classification or implied ownership statement.
+- Changing a selected claim or its displayed dependencies makes the old approval ineligible for a new deployment. The currently served snapshot does not disappear until a replacement or withdrawal is deployed; document that limitation.
+- Withdrawing the record removes it from the served collection and all derived listings. A concurrent old build and a rollback to the old snapshot are rejected. Report removal as complete only after checking the served output.
+- Agree a removal deadline with the publication owner before public release and demonstrate that the existing deployment path meets it. If it cannot, keep the pilot private until the serving path can enforce withdrawal in time.
+
+**Release evidence:** one authorised card live, its supporting research references, the live snapshot identity, a successful withdrawal rehearsal and a short maintainer runbook. Application accounts, source storage workers and a general publication UI are not release prerequisites.
+
+## Slice 2 — Add another object from a URL
+
+**User task:** a researcher adds a catalogue URL, confirms the object identity, enters a name, holder and identifier with evidence, reviews the proposed record and submits it for publication through slice 1.
+
+1. Add one authenticated capture/review flow in the research application. Confirm the application boundary before coding; extending `apps/explorer` is the default proposal. Keep the reader routes working.
+2. Persist a small private draft containing the URL, retrieval/check time, provisional workspace label, optional institution/identifier and lead note. Record proposal and review revisions. Do not add canonical preferred-name or notes columns.
+3. Search exact identifiers and known source references. Show candidates with names, institution, identifiers and match reason. Let the researcher link, create or defer. Names never cause a silent merge.
+4. Let the researcher enter `has_name` and `held_by` proposals with source relationship, locator, excerpt and asserting agent when known. Create required agent labels contextually. Use a source link and recorded excerpt initially; full webpage capture and automatic fetching are deferred to slice 4.
+5. Provide accept, edit, reject and defer actions in the same small flow. Generate validated packets internally and reuse the canonical write logic. Refactor the importer boundary so canonical writes and the promotion record commit together; `runImport` currently owns its transaction, so an outer transaction alone is insufficient.
+6. Audit broad authenticated database policies and enforce server and direct-access permissions for this operation. An ordinary capture user cannot publish. Use revision checks and request identities to prevent stale overwrites and duplicate promotion.
+7. Display the accepted dossier in the existing explorer and prepare its public candidate through slice 1. The publication decision can remain maintainer-run. Rejection and deletion of unpromoted drafts do not alter canonical research.
+
+**Acceptance:** a researcher adds the second object without editing JSON or seeing UUIDs. A duplicate identifier does not create a duplicate object. A deferred identity creates no canonical object. Rejected proposals create no claims. Retrying an acceptance creates one claim/evidence set. An unauthorised direct request cannot read drafts, promote claims or publish. The resulting card can be published and withdrawn through the existing path.
+
+**Not in this slice:** a general review queue, all predicates, a new permissions management UI, automatic extraction or public item pages.
+
+## Slice 3 — Correct a dossier and show competing accounts
+
+**User task:** a researcher adds another source, corrects an error or records a conflicting account. A visitor follows a collection card to understand the permitted accounts and evidence.
+
+1. Extend the existing draft/review flow to an existing item. Distinguish correction/supersession from another attributed account; preserve both histories.
+2. Add origin and current-place proposals using the existing `made_at`, `found_at` and `located_at` meanings. Keep missing values valid. “Removed from Orongo” alone does not support `found_at` or `made_at`; defer the event until slice 5.
+3. Add research coverage metadata for the questions now shown. Separate not researched, in progress and researched but not established. Visibility and disagreement are separate concerns; do not infer or expose private research activity through empty states.
+4. Add a stable public item route in each supported site language and link cards to it. Use the ADR 011 origin, current location, documents and provenance sections; label gaps in the public record without revealing restricted material.
+5. Extend the explicit public contract and review manifest only for the new fields. Preserve competing authorised accounts and their individual evidence. Reuse foregrounding for editorial selection, add actor/time history, and intersect it with publication permission. A claim's acceptance or prominence still does not publish it.
+6. Add authenticated preview using the export's projection rules. When a reviewed translation is added, link it to the original revision; source changes require renewed translation review. Publish original wording when no translation is available.
+7. Publish the correction and exercise withdrawal of the item page, its card, search/sitemap entries and dependent translations.
+
+**Acceptance:** a correction does not erase the earlier research record, and disagreement does not silently overwrite a claim. A visitor can distinguish two published accounts and follow their sources. The page supports missing origin and absent imagery. Private evidence, labels and counts remain excluded. A changed revision cannot inherit approval; withdrawing a dependency invalidates its public derivatives.
+
+## Slice 4 — Use a local document or archival source
+
+**User task:** a researcher adds a file, photograph or archival reference, reviews a claim against it and publishes only the permitted account or excerpt.
+
+1. Add private file storage and immutable source versions with hash, media type, capture time, original reference and access conditions. Add archival references that explicitly record when no digital copy is held.
+2. Extend the versioned import contract for non-URL sources and version-linked evidence. Preserve the meaning and repeatability of v1 imports; do not fabricate public URLs for private files.
+3. Add source viewing and manual page, timestamp or visual locators to the existing review flow. A replaced file creates a new version; earlier evidence continues to target the earlier version.
+4. Add webpage preservation for URL captures using the same versioned-source path. Separate draft saving from background capture; show failures and retry without losing the draft. Restrict fetch destinations and redirects, and configure file-size, media-type and timeout limits.
+5. Extend publication decisions to distinguish claims, citations, excerpts and files. A public claim does not grant access to the whole supporting document. Add public media derivatives and contextual alternative text only when permitted and useful for this pilot.
+6. Complete publication and withdrawal for the permitted excerpt or derivative, including removal of obsolete files and applicable caches.
+
+**Acceptance:** a local file and a reference-only source each support a reviewed claim without a public URL. An unauthorised request cannot retrieve the private original. Repeated capture does not duplicate an identical version. A failed capture retains the draft. Withdrawing a source version removes its dependent public outputs without deleting the private research history.
+
+Deliver this slice before expanding automated extraction or bulk institutional imports. The short URL-only path in slice 2 is an incremental release, not the long-term definition of admissible evidence.
+
+## Slice 5 — Explain one removal or transfer
+
+**User task:** a researcher records one source-reported event; a visitor sees the authorised account in the item's provenance section.
+
+1. Extend the write contract for an event anchor, structured date, role claims and evidence, using the existing provenance model.
+2. Build one event form for what happened, when, places, participants and source characterisation. Compile its records internally.
+3. Keep relocation distinct from transfer, uncertain dates distinct from exact dates, and movement origin distinct from findspot. Preserve descriptions such as “removed” or “gifted” as attributed claims.
+4. Review, select, authorise and render the event through the existing dossier/publication path. Correct and withdraw event claims without withdrawing unrelated authorised item fields.
+
+**Acceptance:** one evidenced event travels from the form to a public timeline. Partial dates retain precision. A transfer does not imply title, consent or physical movement. Unresolved accounts remain separate until explicitly reconciled. Withdrawing event content removes its public timeline entry and dependent search text.
+
+## Slice 6 — Review AI suggestions from one source
+
+**User task:** a researcher selects an eligible source, reviews suggested name or custody claims and publishes the accepted result through the existing process.
+
+1. Confirm permission for the source's external processing before choosing or invoking a model. Storage permission does not imply permission to send material to an AI provider.
+2. Start with the summary predicates already supported by the manual form. Generate proposals referencing source versions and exact evidence locators.
+3. Record model, prompt version, method and extraction time separately from the source speaker. Give the worker no authority to merge identities, accept claims, publish or alter cases.
+4. Reuse the existing accept/edit/reject/defer actions and publication path. Keep manual entry available after model failure or abstention.
+5. Evaluate names, identifiers, conflicting accounts, ambiguous origin, colonial removal wording and sensitive sources before routine use. Treat document instructions as untrusted content, never application authorisation.
+
+**Acceptance:** suggestions remain private proposals until reviewed; every accepted claim has source evidence. Ambiguous “from” wording does not silently become a manufacture or discovery claim. One reviewed suggestion becomes a published record and can be corrected or withdrawn. Report observed extraction errors rather than storing model confidence as factual authority.
+
+## Slice 7 — Record a restitution request and next action
+
+**User task:** an authorised case worker records a request, source document and next action; an optional authorised public update appears on the item page.
+
+1. Review the existing Phase 3 case model with a case worker. Choose one real task and define access to parties, contacts and correspondence.
+2. Add the smallest forms and validated operations for the case, relevant parties, one action, linked document and next action. Reuse the current case constraints. Add workflow states only when the chosen task demonstrates a need and their meaning is documented.
+3. Keep case material private by default. Publish a selected update only through an explicit extension of the public contract and publication decisions.
+4. Demonstrate correction and withdrawal of that update without changing historical custody/provenance claims or disclosing correspondence.
+
+**Acceptance:** a case worker can answer what was requested and what happens next. An unauthorised user cannot retrieve documents through direct requests. Public output contains only the authorised update. Case status does not imply moral or legal validity. This slice requires neither AI nor complete provenance.
+
+## Verification and release discipline
+
+Each slice includes the migrations, contract changes, interface, tests and operational instructions needed for its user task. Do not move the slice's publication or removal work into an unspecified later release.
+
+Use unit tests for validation, SQL tests for permissions/invariants, integration tests for promotion/export, and generated-output or browser checks for the visible journey. Test boundary failures relevant to the slice: duplicate identity, stale review, partial writes, restricted values, stale export and withdrawal. Keep real or sensitive material outside committed fixtures.
+
+Run `mise exec -- just verify-static` for static checks, types, unit tests and application builds. For website changes, also run `mise exec -- pnpm --filter @mosa/website test`; the website build verifies generated output. Use the [website HTTP checks](../apps/website/README.md) when serving or routes change.
+
+`mise exec -- just verify` also runs database verification and generated-type checks. It resets the local test database: use a disposable stack without research data to preserve. Never apply fixture SQL or local reset procedures to staging or production.
+
+Publish migrations before dependent application code. Keep v1 imports and existing reader views working while extending the write contract. New public fields require explicit schema and publication review; never expose them automatically because they appeared in a research query.
+
+Before each real release, demonstrate the user journey, check the served output, record its snapshot identity, and rehearse removal. When private source storage arrives, verify backup restoration in an isolated environment including source-version links and decision history.
+
+## Decisions at the point they matter
+
+| Decision | Required before |
+| --- | --- |
+| Pilot object, specific permitted fields and publication authority | Slice 1 public release |
+| Private manifest location, maintainer access and withdrawal deadline | Slice 1 public release |
+| Authoring app boundary, authentication and capture/review permissions | Slice 2 |
+| Editorial naming and translation authority for new dossier content | Slice 3 |
+| Source storage, retention, capture limits and permitted file access | Slice 4 |
+| External AI processing permissions and provider | Slice 6 |
+| Case access and the first operational restitution task | Slice 7 |
+
+The unresolved decisions do not prevent implementation with synthetic data. Neither a successful build nor an existing bootstrap packet establishes permission to publish real material.

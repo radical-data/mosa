@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - 'apps/website/**'
+      - 'packages/public-collection/**'
+      - 'scripts/publish-collection.ts'
+      - 'scripts/lib/publication/**'
       - 'apps/explorer/package.json'
       - 'biome.jsonc'
       - 'package.json'
@@ -17,6 +20,9 @@ on:
   pull_request:
     paths:
       - 'apps/website/**'
+      - 'packages/public-collection/**'
+      - 'scripts/publish-collection.ts'
+      - 'scripts/lib/publication/**'
       - 'apps/explorer/package.json'
       - 'biome.jsonc'
       - 'package.json'
@@ -58,8 +64,8 @@ jobs:
         run: mise x -- just website-check
       - name: Test localisation
         run: mise x -- pnpm --filter @mosa/website test
-      - name: Build website
-        run: mise x -- just website-build
+      - name: Verify populated and withdrawn collection output
+        run: mise x -- just collection-website-verify
       - name: Build production image
         run: mise x -- just website-image
       - name: Check permanent redirects and error responses
@@ -82,28 +88,17 @@ jobs:
       group: website-production-deploy
       cancel-in-progress: false
     steps:
-      - name: Trigger website deployment
+      - uses: actions/checkout@v5
+      - uses: jdx/mise-action@v3
+        with:
+          cache: true
+      - name: Install dependencies
+        run: mise x -- just install
+      - name: Deploy the currently authorised collection and verify served snapshot
         env:
-          DEPLOY_WEBHOOK: ${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}
+          COLLECTION_DATABASE_URL: ${{ secrets.COLLECTION_DATABASE_URL }}
+          COLLECTION_DATABASE_SSL_CA: ${{ secrets.COLLECTION_DATABASE_SSL_CA }}
+          COOLIFY_DEPLOY_WEBHOOK: ${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}
           COOLIFY_API_TOKEN: ${{ secrets.COOLIFY_API_TOKEN }}
           PRODUCTION_URL: ${{ vars.PRODUCTION_URL }}
-        run: |
-          if [ -z "$DEPLOY_WEBHOOK" ] || [ -z "$COOLIFY_API_TOKEN" ] || [ -z "$PRODUCTION_URL" ]; then
-            echo "Configure the website-production COOLIFY_DEPLOY_WEBHOOK and COOLIFY_API_TOKEN secrets and PRODUCTION_URL variable first." >&2
-            exit 1
-          fi
-          curl --fail --show-error --silent --request GET "$DEPLOY_WEBHOOK" \
-            --header "Authorization: Bearer $COOLIFY_API_TOKEN"
-      - name: Smoke-test website
-        env:
-          PRODUCTION_URL: ${{ vars.PRODUCTION_URL }}
-        run: |
-          deadline=$((SECONDS + 180))
-          until curl --fail --show-error --silent --max-time 10 "$PRODUCTION_URL" >/dev/null; do
-            if [ "$SECONDS" -ge "$deadline" ]; then
-              echo "Website did not become reachable within 180s." >&2
-              exit 1
-            fi
-            sleep 5
-          done
-          echo "Website responds; confirm the deployed revision in Coolify." >> "$GITHUB_STEP_SUMMARY"
+        run: mise x -- just collection deploy --snapshot apps/website/public/collection-snapshot.json

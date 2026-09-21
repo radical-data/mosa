@@ -151,3 +151,13 @@ explorer-image:
 
 website-image:
     docker build --file apps/website/Dockerfile --tag mosa-website:local .
+
+# Private maintainer workflow; see docs/collection-publication.md.
+collection +args:
+    pnpm exec tsx scripts/publish-collection.ts "$@"
+
+collection-verify:
+    pnpm exec tsx scripts/verify-collection-publication.ts
+
+collection-website-verify:
+    pnpm exec tsx scripts/verify-collection-website.ts

@@ -2,19 +2,19 @@
 
 ## Status and purpose
 
-Agreed product direction, recorded on 2026-09-21. Implementation is pending.
+Agreed product direction, recorded on 2026-09-21. Slice 1 is implemented; production publication setup and later slices remain pending. See the [publication runbook](collection-publication.md).
 
-MoSA needs a collection that researchers can populate and maintain, communities can use to identify displaced objects, and the website can present with attribution and publication permission. The first milestone is one real dossier travelling from source capture to an authorised public page, with correction and withdrawal working throughout.
+MoSA needs a collection that researchers can populate and maintain, communities can use to identify displaced objects, and the website can present with attribution and publication permission. Deliver this through successive vertical slices. The first milestone is one existing research object appearing on the collection page with an attributed name, reported holder, institutional identifier and source, plus a working withdrawal path. Later slices extend that working connection back through researcher-facing capture and review.
 
 This document records the outcome of the [data-entry discussion](data-entry-efficiency-discussion.md) and the subsequent discussion about connecting the collection to the website. The [implementation plan](collection-workflow-implementation-plan.md) defines the delivery sequence and acceptance criteria.
 
 ## Repository baseline
 
-The baseline is `main` at `a9000f6`. It contains the claim, evidence, provenance and restitution models; the object-dossier importer; bootstrap packets; the read-only research explorer; the public website; and the foregrounded-claim implementation. This documentation is developed on `codex/collection-workflow-plan`, created from that baseline.
+The baseline is `main` at `a9000f6`. It contains the claim, evidence, provenance and restitution models; the object-dossier importer; bootstrap packets; the read-only research explorer; the public website; and the foregrounded-claim implementation.
 
 The website is a separate static Astro app with six curated reference records, Chilean Spanish and British English routes, and client-side collection filters. Those reference records are not a public projection of the research database. The existing `presentation.foregrounded_claim` selection and its active-claim view implement editorial salience, not publication permission or a complete editorial audit history.
 
-Source preservation, draft authoring, proposal review and publication controls are planned capabilities. Existing importer bookkeeping does not establish research review or publication approval. Bootstrap packets are import candidates, not evidence of production deployment or permission to publish.
+Source preservation, draft authoring and proposal review remain planned capabilities. Slice 1 implements private publication decisions, restricted public export and gated deployment. Existing importer bookkeeping does not establish research review or publication approval. Bootstrap packets are import candidates, not evidence of production deployment or permission to publish.
 
 ## Product decision
 
@@ -30,7 +30,7 @@ The complete journey is:
 6. Generate and deploy the public collection.
 7. Correct or withdraw content when required.
 
-Manual entry completes this journey before AI extraction becomes a dependency. AI later creates proposals in the same review interface.
+Manual entry completes this journey before AI extraction becomes a dependency. AI later creates proposals in the same review interface. This is the target product journey, not a requirement to build every stage before releasing useful functionality. The first slice uses the existing importer and a maintainer-run publication process; the next slice introduces one bounded researcher-facing entry flow.
 
 ## Product surfaces
 
@@ -68,7 +68,7 @@ Research coverage is explicit workspace metadata. Distinguish not researched, re
 
 ### Public dossier
 
-Collection cards lead to public item pages. A public dossier answers, where authorised information exists:
+Once public dossier pages are introduced, collection cards lead to them. The first slice links its card directly to the supporting source and does not require a new item route. A public dossier answers, where authorised information exists:
 
 - What names are used for this object, and by whom?
 - Where is it held, and which institutional identifiers locate its record?
@@ -123,9 +123,9 @@ Add restitution through a dedicated workspace for parties, authorised contacts, 
 
 ## Scope and trade-offs
 
-The first release proves a manual path from capture to public dossier and withdrawal. It includes URL, file and archival-reference entry early so that institutional web records do not become the only practical source of knowledge.
+The first release connects one existing dossier to a public collection card and proves withdrawal. It uses a small, explicit publication manifest and the existing manual deployment path. Researcher-facing entry, ongoing corrections and competing accounts, non-URL evidence, provenance, AI proposals and restitution then arrive as complete user journeys. File and archival-reference entry precede automated extraction and bulk expansion so institutional web records do not become the only practical source of knowledge.
 
-A full CMS, general-purpose database editor, complete ontology browser, first-class Concepts, automated identity merging, exhaustive descriptive cataloguing and AI extraction are not prerequisites for that release. A public export alone can demonstrate the website connection, but does not complete the research product.
+A full CMS, general-purpose database editor, complete ontology browser, first-class Concepts, automated identity merging, exhaustive descriptive cataloguing and AI extraction are not prerequisites for the first release. Neither are application accounts, file storage or a public item page. The first slice still includes reviewed content, a visible website result and removal; an exporter alone does not complete it. Successive releases build towards the full research product.
 
 Source preservation, review and publication add infrastructure. The benefit is that researchers can work with incomplete and conflicting material without exposing it automatically or learning the database's storage mechanics.
 

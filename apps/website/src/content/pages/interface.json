@@ -22,8 +22,8 @@
     "collectionExplore": "Explorar la colección",
     "collectionSearch": "Buscar en la colección",
     "noMatches": "No hay coincidencias",
-    "noMatchesHelp": "No hay registros de referencia para esta búsqueda. Prueba otro concepto o elimina los filtros.",
-    "enableCollectionScript": "Activa JavaScript para buscar, filtrar o cambiar la vista de la colección.",
+    "noMatchesHelp": "No hay registros para esta búsqueda. Prueba otro término.",
+    "enableCollectionScript": "Activa JavaScript para buscar en la colección.",
     "collectionView": "Vista de la colección",
     "imageView": "Vista de imagen",
     "listView": "Vista de lista",
@@ -33,7 +33,15 @@
     "allTypes": "Todos los tipos",
     "conceptLabel": "Concepto:",
     "heldBy": "Retenido por:",
-    "clearFilters": "Limpiar filtros"
+    "clearFilters": "Limpiar filtros",
+    "collectionPending": "Aún no hay registros publicados en la colección.",
+    "accordingTo": "Según",
+    "reportedHolder": "Institución que lo conserva, según la fuente:",
+    "catalogueNumber": "Número de catálogo:",
+    "nameSources": "Fuentes del nombre:",
+    "holderSources": "Fuentes de la custodia:",
+    "source": "Fuente",
+    "identifierSource": "Consultar el registro de catálogo"
   },
   "en": {
     "home": "Home",
@@ -58,8 +66,8 @@
     "collectionExplore": "Explore the collection",
     "collectionSearch": "Search the collection",
     "noMatches": "No matches",
-    "noMatchesHelp": "There are no reference records for this search. Try another concept or clear the filters.",
-    "enableCollectionScript": "Enable JavaScript to search, filter or change the collection view.",
+    "noMatchesHelp": "There are no records for this search. Try another term.",
+    "enableCollectionScript": "Enable JavaScript to search the collection.",
     "collectionView": "Collection view",
     "imageView": "Image view",
     "listView": "List view",
@@ -69,6 +77,14 @@
     "allTypes": "All types",
     "conceptLabel": "Concept:",
     "heldBy": "Held by:",
-    "clearFilters": "Clear filters"
+    "clearFilters": "Clear filters",
+    "collectionPending": "There are no published collection records yet.",
+    "accordingTo": "According to",
+    "reportedHolder": "Reported holding institution:",
+    "catalogueNumber": "Catalogue number:",
+    "nameSources": "Name sources:",
+    "holderSources": "Custody sources:",
+    "source": "Source",
+    "identifierSource": "View the catalogue record"
   }
 }

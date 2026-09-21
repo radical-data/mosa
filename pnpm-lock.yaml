@@ -25,6 +25,10 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      '@mosa/public-collection':
+        specifier: workspace:*
+        version: link:packages/public-collection
     devDependencies:
       '@biomejs/biome':
         specifier: 2.5.4
@@ -90,6 +94,9 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.7.4
         version: 3.7.4
+      '@mosa/public-collection':
+        specifier: workspace:*
+        version: link:../../packages/public-collection
       astro:
         specifier: 7.0.9
         version: 7.0.9(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(tsx@4.23.1)(yaml@2.9.0)
@@ -103,6 +110,8 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
+
+  packages/public-collection: {}
 
 packages:
 

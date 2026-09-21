@@ -1431,3 +1431,23 @@ h3 {
     max-width: 100%;
   }
 }
+
+/* Public records are readable without an image or a classification. */
+.public-collection .collection-card:nth-child(n) {
+  margin-top: 0;
+}
+.public-collection .collection-card {
+  border-top: 1px solid currentColor;
+  padding-top: 1rem;
+}
+.public-collection .collection-caption {
+  padding: 0;
+}
+.public-collection .collection-caption p {
+  overflow-wrap: anywhere;
+}
+.public-collection .collection-caption a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  text-decoration: underline;
+}

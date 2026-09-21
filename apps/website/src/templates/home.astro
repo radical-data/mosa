@@ -4,7 +4,6 @@ import PageLink from "../components/PageLink.astro";
 import { getCopy } from "../content/content";
 import { getConcepts, getResources } from "../data/site";
 
-import { explore } from "../i18n/messages";
 import type { Locale } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
@@ -26,7 +25,7 @@ const resources = getResources(locale);
   <section class="container section home-collection" aria-labelledby="collection-title">
     <div class="section-heading"><div><h2 id="collection-title" class="eyebrow"><Fragment set:html={copy.passage06} /></h2><p><Fragment set:html={copy.passage07} /></p></div><PageLink class="button" page="collection" locale={locale}>{copy.passage15}<span aria-hidden="true">↗</span></PageLink></div>
     <p class="small concepts-label"><Fragment set:html={copy.passage08} /></p>
-    <div class="concepts">{concepts.map((concept, index) => <PageLink page="collection" locale={locale} suffix={`?concept=${encodeURIComponent(concept.id)}`} class:list={["concept-row", `concept-row-${index}`]} aria-label={explore(locale, { concept: concept.label })}><span class="struck" aria-hidden="true">{concept.label}</span><span lang={concept.language}>{concept.label}</span>{Array.from({ length: 8 }, () => <span class="struck" aria-hidden="true">{concept.label}</span>)}</PageLink>)}</div>
+    <div class="concepts">{concepts.map((concept, index) => <div class:list={["concept-row", `concept-row-${index}`]}><span class="struck" aria-hidden="true">{concept.label}</span><span lang={concept.language}>{concept.label}</span>{Array.from({ length: 8 }, () => <span class="struck" aria-hidden="true">{concept.label}</span>)}</div>)}</div>
   </section>
   <section class="section" aria-labelledby="resources-title">
     <div class="container section-heading"><div><h2 id="resources-title" class="eyebrow"><Fragment set:html={copy.passage09} /></h2><p><Fragment set:html={copy.passage10} /></p></div><PageLink class="text-link" page="resources" locale={locale}>{copy.passage16}<span aria-hidden="true">↗</span></PageLink></div>

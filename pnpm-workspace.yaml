@@ -1,6 +1,7 @@
 packages:
   - "."
   - "apps/*"
+  - "packages/*"
 
 engineStrict: true
 nodeVersion: 24.18.0
