@@ -12,8 +12,10 @@ Do not put passwords, tokens, certificates, or live connection strings in this r
 | `SUPABASE_PROJECT_ID` | Production project ref |
 | `SUPABASE_DB_PASSWORD` | Database password for migration apply |
 | `COOLIFY_DEPLOY_WEBHOOK` | Triggers a Coolify deploy for the app |
-| `COOLIFY_API_TOKEN` | Reserved for Coolify API use if needed later |
+| `COOLIFY_API_TOKEN` | Bearer token with deploy permission for the research application |
 | `PRODUCTION_URL` | Public URL used for post-deploy smoke tests |
+
+Create `SUPABASE_ACCESS_TOKEN` in [Supabase account access tokens](https://supabase.com/dashboard/account/tokens), with a recognisable name such as `mosa-production`. This is a personal access token, separate from the project's publishable key. Use the saved project database password for `SUPABASE_DB_PASSWORD`; if unavailable, reset it under **Database → Settings** and update any connections using that password. Set `SUPABASE_PROJECT_ID` to the project reference. Enter credentials directly as GitHub environment secrets, not in repository files or chat. See Supabase's [token documentation](https://supabase.com/docs/guides/platform/personal-access-tokens) and [password reset instructions](https://supabase.com/docs/guides/troubleshooting/how-do-i-reset-my-supabase-database-password-oTs5sB).
 
 ## Required Coolify runtime secrets
 
@@ -52,7 +54,7 @@ Unauthorized health requests return `404` and do not query PostgreSQL. External 
    - `alter role ... set default_transaction_read_only = on`
    - short `statement_timeout` and a small connection limit
 5. Build `DATABASE_URL` from that login.
-6. Disable the Data API. Leave Auth, Storage, Realtime, and Functions unused.
+6. Keep the Data API disabled. Enable email OTP in Auth for invited researchers; keep public sign-ups disabled. Storage, Realtime and Functions remain unused. See [source capture](source-capture.md) for the separate writer login and researcher allowlist.
 7. Download the database CA certificate for `DATABASE_SSL_CA`.
 8. From the Coolify host, test connectivity:
    - prefer the direct PostgreSQL endpoint if outbound IPv6 works

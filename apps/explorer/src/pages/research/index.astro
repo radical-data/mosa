@@ -1,0 +1,98 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { boundedForm, researchTransaction } from "../../lib/capture/access";
+import {
+  CaptureError,
+  newRequestId,
+  readContent,
+} from "../../lib/capture/model";
+import { createDraft, type Draft } from "../../lib/capture/store";
+
+let error = "";
+if (Astro.request.method === "POST") {
+  const form = await boundedForm(Astro.request);
+  try {
+    const draft = await researchTransaction(Astro.locals.researcher, (c) =>
+      createDraft(
+        c,
+        Astro.locals.researcher,
+        String(form.get("requestId")),
+        readContent(form),
+      ),
+    );
+    return Astro.redirect(`/research/${draft.id}`, 303);
+  } catch (e) {
+    error =
+      e instanceof CaptureError
+        ? e.message
+        : "The draft could not be saved. Please try again.";
+  }
+}
+const drafts = await researchTransaction(
+  Astro.locals.researcher,
+  async (c) =>
+    (
+      await c.query<Draft>(
+        "select * from capture.draft where owner_id=$1 and status<>'deleted' order by updated_at desc limit 100",
+        [Astro.locals.researcher],
+      )
+    ).rows,
+);
+---
+
+<Layout title="Research workspace">
+  <h1>Add an object from a source</h1>
+  <p class="lede">
+    Start with a catalogue page. Record what it says, confirm the object, then
+    review your evidence. A maintainer decides what can appear on the public
+    website.
+  </p>
+  <form method="post" class="panel">
+    <input type="hidden" name="requestId" value={newRequestId()} />
+    <label
+      >Catalogue URL<input
+        name="url"
+        type="url"
+        required
+        placeholder="https://…"
+      /></label
+    >
+    <label>Working label (optional)<input name="label" maxlength="200" /></label
+    >
+    <button type="submit">Save source and continue</button>
+  </form>
+  {
+    error && (
+      <p role="alert" class="notice">
+        {error}
+      </p>
+    )
+  }
+  <h2>Your drafts</h2>
+  <ul class="results">
+    {
+      drafts.map((d) => (
+        <li class="result-card">
+          <a href={`/research/${d.id}`}>
+            {d.content.label || d.content.name || d.content.url}
+          </a>{" "}
+          <span class="badge">{d.status}</span>
+        </li>
+      ))
+    }
+  </ul>
+  {!drafts.length && <p>No drafts yet.</p>}
+  <form method="post" action="/research/sign-out">
+    <button type="submit">Sign out</button>
+  </form>
+</Layout>
+<style>
+  .panel {
+    display: grid;
+    gap: 1rem;
+    max-width: 48rem;
+  }
+  .panel button {
+    justify-self: start;
+  }
+</style>

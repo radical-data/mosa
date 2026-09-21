@@ -162,6 +162,39 @@ async function verify() {
           () => approve(client, second.releaseId, "Test reviewer", "Restore"),
           /withdrawn/,
         );
+        const anotherItem = (await client.query("select entities.create_item('artefact') id"))
+          .rows[0].id;
+        const anotherName = await claim(anotherItem, "has_name", "Second synthetic object", null);
+        const anotherHolder = await claim(anotherItem, "held_by", null, agent);
+        const anotherIdentifier = (
+          await client.query(
+            "insert into entities.external_identifier(entity_id,namespace,value,source_id) values($1,'test','second',$2) returning id",
+            [anotherItem, source],
+          )
+        ).rows[0].id;
+        const anotherSelection = {
+          ...selection,
+          itemId: anotherItem,
+          name: anotherName.evidence,
+          holder: anotherHolder.evidence,
+          identifier: anotherIdentifier,
+        };
+        await fails(() => prepare(client, [selection, selection]), /Duplicate/);
+        const pair = await prepare(client, [selection, anotherSelection]);
+        await approve(client, pair.releaseId, "Test reviewer", "Two selected records");
+        assert.equal((await currentRelease(client)).records.length, 2);
+        const remaining = await withdraw(
+          client,
+          pair.releaseId,
+          "Test reviewer",
+          "Remove second item",
+          anotherItem,
+        );
+        assert.deepEqual(
+          remaining.records.map((record) => record.id),
+          [item],
+        );
+        assert.deepEqual(await currentRelease(client), remaining);
         await client.query(
           `insert into knowledge.claim_evidence(claim_id,source_id,relationship,locator,excerpt)
         values($1,$2,'qualifies','Qualifier','possibly')`,

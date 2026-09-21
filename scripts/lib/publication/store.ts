@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { type PublicCollection, parseCollection } from "@mosa/public-collection";
 import type { Client } from "pg";
-import { candidate, canonical, parseSelection } from "./candidate";
+import { candidate, canonical, digest, parseSelection, type Selection } from "./candidate";
 
 export const initialRelease = "00000000-0000-4000-8000-000000000000";
 export async function locked<T>(client: Client, action: () => Promise<T>): Promise<T> {
@@ -25,6 +25,22 @@ export async function transaction<T>(client: Client, action: () => Promise<T>): 
     throw error;
   }
 }
+// Existing single-record releases keep their original fingerprints.
+async function selectedCandidate(client: Client, selection: unknown, id: string) {
+  if (!Array.isArray(selection)) return candidate(client, parseSelection(selection), id);
+  if (selection.length < 1 || selection.length > 2) throw Error("Select one or two records");
+  const records = await Promise.all(
+    selection.map((value) => candidate(client, parseSelection(value), id)),
+  );
+  return {
+    snapshot: parseCollection({
+      schemaVersion: 1,
+      releaseId: id,
+      records: records.flatMap((result) => result.snapshot.records),
+    }),
+    fingerprint: digest(records.map((result) => result.fingerprint)),
+  };
+}
 export async function validateRelease(
   client: Client,
   releaseId: string,
@@ -35,7 +51,7 @@ export async function validateRelease(
   const snapshot = parseCollection(row.snapshot);
   if (snapshot.releaseId !== releaseId) throw Error("Release identity mismatch");
   if (row.selection) {
-    const current = await candidate(client, parseSelection(row.selection), releaseId);
+    const current = await selectedCandidate(client, row.selection, releaseId);
     if (
       current.fingerprint !== row.fingerprint ||
       canonical(current.snapshot) !== canonical(snapshot)
@@ -83,12 +99,14 @@ export async function recover(client: Client, id: string, actor: string, reason:
   return { releaseId: row.rows[0].desired_release_id };
 }
 export async function prepare(client: Client, selection: unknown) {
-  const selected = parseSelection(selection);
+  const selected = Array.isArray(selection)
+    ? selection.map(parseSelection)
+    : parseSelection(selection);
   const id = randomUUID();
-  const result = await candidate(client, selected, id);
+  const result = await selectedCandidate(client, selected, id);
   await client.query(
     `insert into publication.release(id,selection,fingerprint,snapshot) values ($1,$2,$3,$4)`,
-    [id, selected, result.fingerprint, result.snapshot],
+    [id, JSON.stringify(selected), result.fingerprint, result.snapshot],
   );
   return result.snapshot;
 }
@@ -107,8 +125,30 @@ export async function approve(client: Client, id: string, actor: string, authori
   await client.query("update publication.state set desired_release_id=$1 where singleton", [id]);
   return snapshot;
 }
-export async function withdraw(client: Client, id: string, actor: string, reason: string) {
+export async function withdraw(
+  client: Client,
+  id: string,
+  actor: string,
+  reason: string,
+  itemId?: string,
+) {
   await requireIdle(client);
+  let remainder: Selection[] = [];
+  if (itemId) {
+    await validateRelease(client, id);
+    const row = (
+      await client.query(
+        "select selection from publication.release where id=$1 and approved_at is not null and withdrawn_at is null",
+        [id],
+      )
+    ).rows[0];
+    if (!row?.selection) throw Error("Unknown approved selection");
+    const selections: Selection[] = (
+      Array.isArray(row.selection) ? row.selection : [row.selection]
+    ).map(parseSelection);
+    if (!selections.some((s) => s.itemId === itemId)) throw Error("Item is not in this release");
+    remainder = selections.filter((s) => s.itemId !== itemId);
+  }
   const result = await client.query(
     `update publication.release set withdrawn_by=$2, withdrawn_at=now()
     where id=$1 and withdrawn_at is null returning id`,
@@ -120,10 +160,19 @@ export async function withdraw(client: Client, id: string, actor: string, reason
   ).rows[0].desired_release_id;
   if (desired === id) {
     const emptyId = randomUUID();
-    const empty = parseCollection({ schemaVersion: 1, releaseId: emptyId, records: [] });
+    const remaining = remainder.length ? await selectedCandidate(client, remainder, emptyId) : null;
+    const empty =
+      remaining?.snapshot ?? parseCollection({ schemaVersion: 1, releaseId: emptyId, records: [] });
     await client.query(
-      `insert into publication.release(id,snapshot,approved_by,authority,approved_at) values($1,$2,$3,$4,now())`,
-      [emptyId, empty, actor, reason],
+      `insert into publication.release(id,snapshot,approved_by,authority,approved_at,selection,fingerprint) values($1,$2,$3,$4,now(),$5,$6)`,
+      [
+        emptyId,
+        empty,
+        actor,
+        reason,
+        remaining ? JSON.stringify(remainder) : null,
+        remaining?.fingerprint ?? null,
+      ],
     );
     await client.query("update publication.state set desired_release_id=$1 where singleton", [
       emptyId,

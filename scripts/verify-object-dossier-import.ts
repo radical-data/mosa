@@ -6,10 +6,10 @@
 // the Phase 1 fixture item, so identifier-based reuse is exercised for real.
 
 import path from "node:path";
+import { ImportError, runImport } from "@mosa/object-dossier/import";
+import { type DossierPacket, readPacketFile } from "@mosa/object-dossier/packet";
+import { validatePacket } from "@mosa/object-dossier/validate";
 import { Client } from "pg";
-import { ImportError, runImport } from "./lib/object-dossier/import";
-import { type DossierPacket, readPacketFile } from "./lib/object-dossier/packet";
-import { validatePacket } from "./lib/object-dossier/validate";
 import { getLocalDatabaseUrl } from "./lib/supabase-local";
 
 const projectRoot = path.resolve(__dirname, "..");

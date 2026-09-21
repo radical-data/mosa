@@ -2,6 +2,14 @@
 
 The Museum of Stolen Artefacts monorepo: a public Astro website, a research explorer, and the Supabase entities, claims and evidence database.
 
+## How MoSA works today
+
+Sources support attributed claims about objects, people, institutions and events. The research app reads those claims and their evidence from Supabase. The source capture flow lets an invited researcher save a URL, confirm identity, review statements and save a dossier. The interface and command-line imports share one write implementation in `packages/object-dossier/`.
+
+A maintainer makes a separate publication decision. The public website reads only the approved static snapshot and has no database connection. Hoa Hakananaiʻa is live at [museumofstolenartefacts.org](https://museumofstolenartefacts.org/). The new capture flow still needs production activation.
+
+Start with the [current implementation checklist](docs/collection-workflow-implementation-plan.md#current-implementation-checklist). Use the [capture runbook](docs/source-capture.md) for research setup and the [publication runbook](docs/collection-publication.md) for release and withdrawal. The [workflow design](docs/collection-workflow.md), [original discussion](docs/data-entry-efficiency-discussion.md) and [architecture decisions](docs/adrs/) explain the reasoning; they are not additional delivery checklists.
+
 ## Repository layout
 
 | Path | Responsibility |
@@ -86,16 +94,9 @@ Git hooks run through mise and just. `just install` reinstalls them after a clon
 
 ## Application and publication boundaries
 
-The public website is deployed at [museumofstolenartefacts.org](https://museumofstolenartefacts.org/). It contains seven pages in Chilean Spanish and British English. Collection pages consume a validated public snapshot; the committed export contains the approved Hoa Hakananaiʻa pilot. The site has no database connection. A private publication command prepares, approves, exports and withdraws selected research content. Research access and public publication remain separate concerns. See the [publication runbook](docs/collection-publication.md).
+The public website contains seven pages in Chilean Spanish and British English. Research access and public publication remain separate concerns. Keep attributed claims, evidence, identity checks and explicit publication decisions intact when simplifying code.
 
 Database changes use committed migrations. Real or sensitive project data must not be committed as seed data.
-
-## Collection product direction
-
-- [Publish a collection record](docs/collection-publication.md): maintainer setup, approval, deployment and withdrawal for slice 1.
-- [Source-to-publication workflow](docs/collection-workflow.md): the agreed experience for source capture, research dossiers, review and public collection pages.
-- [Implementation plan](docs/collection-workflow-implementation-plan.md): successive vertical slices and acceptance criteria, starting with one research object on the public collection page.
-- [Data-entry discussion brief](docs/data-entry-efficiency-discussion.md): the original ontology and input-efficiency questions.
 
 ## Deployment
 

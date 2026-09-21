@@ -1,4 +1,3 @@
-import { describe, expect, it } from "vitest";
 import {
   canonicalJson,
   claimEvidenceList,
@@ -6,7 +5,8 @@ import {
   derivedRefersToEvidenceKey,
   type PacketClaim,
   packetSha256,
-} from "./packet";
+} from "@mosa/object-dossier/packet";
+import { describe, expect, it } from "vitest";
 
 describe("canonicalJson", () => {
   it("sorts object keys recursively", () => {

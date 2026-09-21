@@ -3,6 +3,7 @@ import { defineConfig, envField, sessionDrivers } from "astro/config";
 
 export default defineConfig({
   output: "server",
+  vite: { ssr: { noExternal: ["@mosa/object-dossier"] } },
   adapter: node({ mode: "standalone" }),
   session: {
     driver: sessionDrivers.memory(),

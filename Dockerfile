@@ -12,6 +12,8 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY apps/explorer/package.json apps/explorer/
 COPY apps/website/package.json apps/website/
 COPY packages/public-collection packages/public-collection
+COPY packages/object-dossier packages/object-dossier
+COPY schemas/object-dossier-packet.schema.json schemas/
 
 # Skip the root prepare hook (lefthook); still run approved dependency build scripts.
 RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \

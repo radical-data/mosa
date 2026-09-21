@@ -2,7 +2,7 @@
 
 ## Scope and current state
 
-Slice 1 publishes zero or one record from the research database through a versioned static JSON export. The public card contains an attributed name, reported holding institution, institutional identifier and supporting links. The site has no database credentials. Research selection, approvals and evidence fingerprints stay in the private `publication` schema.
+The current pilot publishes up to two records from the research database through a versioned static JSON export. The public card contains an attributed name, reported holding institution, institutional identifier and supporting links. The site has no database credentials. Research selection, approvals and evidence fingerprints stay in the private `publication` schema.
 
 The bootstrap dossiers have been authorised by the project owner for publication in the implementation discussion. Use Hoa Hakananaiʻa for the initial release. Record the actual operator and the scope of that authorisation when approving its candidate. This does not authorise images or extra material outside the selected bootstrap fields.
 
@@ -21,6 +21,8 @@ A missing or invalid export fails the build; the site never falls back to the si
 5. Agree a removal deadline with the publication owner. Rehearse the complete withdrawal/deploy/verification path before putting research content live. This static workflow does not remove a served record merely because its database approval changes.
 
 Use `mise exec --` before the following `just` commands if mise is not active in the shell. Keep selection and candidate files in a private directory outside the repository. Commands that write a file use mode `0600` and replace it atomically.
+
+Slice 2 can prepare an accepted research draft directly with `prepare --draft <draft-id> --retain`; see the [capture runbook](source-capture.md). Existing single-record releases remain valid.
 
 ## Prepare the explicit selection
 
@@ -144,4 +146,4 @@ A 180-second polling timeout is a failure requiring attention, not proof that th
 - `just collection-website-verify`: sequential synthetic populated/withdrawn builds in both languages. Temporarily replaces the public snapshot, restores it in `finally`, then rebuilds the original. Do not run concurrently with another website build.
 - The website workflow runs the populated/withdrawn checks and production-image HTTP checks. The full database verification also invokes the publication integration checks.
 
-The private publication tables are maintained by the command service using explicit SQL; they are deliberately outside the app-facing generated database type schemas. No authoring UI, source-file upload, AI extraction, image publication or public dossier route is part of slice 1.
+The private publication tables are maintained by the command service using explicit SQL; they are deliberately outside the app-facing generated database type schemas. Slice 2 adds a bounded private authoring flow. Source-file upload, AI extraction, image publication and public dossier routes remain out of scope.

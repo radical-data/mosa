@@ -21,10 +21,13 @@ async function main() {
     allowPositionals: true,
     options: {
       selection: { type: "string" },
+      draft: { type: "string" },
+      retain: { type: "boolean", default: false },
       commit: { type: "string" },
       snapshot: { type: "string" },
       output: { type: "string" },
       id: { type: "string" },
+      item: { type: "string" },
       actor: { type: "string" },
       authority: { type: "string" },
     },
@@ -89,15 +92,46 @@ async function main() {
       }
       const result = await transaction(client, async () => {
         switch (command) {
-          case "prepare":
-            if (!values.selection) throw Error("--selection is required");
-            return prepare(client, JSON.parse(await readFile(values.selection, "utf8")));
+          case "prepare": {
+            if (Boolean(values.selection) === Boolean(values.draft))
+              throw Error("Use either --selection or --draft");
+            let selection: unknown;
+            if (values.draft) {
+              const draft = (
+                await client.query(
+                  "select selection from capture.publication_candidate where draft_id=$1",
+                  [values.draft],
+                )
+              ).rows[0];
+              if (!draft) throw Error("Accepted draft not found");
+              selection = draft.selection;
+            } else selection = JSON.parse(await readFile(values.selection as string, "utf8"));
+            if (values.retain) {
+              await currentRelease(client);
+              const previous = (
+                await client.query(
+                  "select r.selection from publication.state s join publication.release r on r.id=s.desired_release_id where singleton",
+                )
+              ).rows[0].selection;
+              selection = [
+                ...(previous ? (Array.isArray(previous) ? previous : [previous]) : []),
+                ...(Array.isArray(selection) ? selection : [selection]),
+              ];
+            }
+            return prepare(client, selection);
+          }
           case "approve":
             return approve(client, text(values.id), text(values.actor), text(values.authority));
           case "recover":
             return recover(client, text(values.id), text(values.actor), text(values.authority));
           case "withdraw":
-            return withdraw(client, text(values.id), text(values.actor), text(values.authority));
+            return withdraw(
+              client,
+              text(values.id),
+              text(values.actor),
+              text(values.authority),
+              values.item ? text(values.item) : undefined,
+            );
           case "export":
             return currentRelease(client);
           case "check":

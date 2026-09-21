@@ -62,8 +62,8 @@ export function parseCollection(value: unknown): PublicCollection {
   const c = object(value, ["schemaVersion", "releaseId", "records"]);
   if (c.schemaVersion !== 1 || typeof c.releaseId !== "string" || !uuid.test(c.releaseId))
     throw Error("Unsupported public collection version or release ID");
-  if (!Array.isArray(c.records) || c.records.length > 1)
-    throw Error("Slice 1 supports zero or one explicitly selected record");
+  if (!Array.isArray(c.records) || c.records.length > 2)
+    throw Error("This pilot supports at most two explicitly selected records");
   const records = c.records.map((value): PublicCard => {
     const card = object(value, ["id", "name", "holder", "identifier"]);
     if (typeof card.id !== "string" || !uuid.test(card.id)) throw Error("Invalid item ID");
@@ -79,5 +79,7 @@ export function parseCollection(value: unknown): PublicCollection {
       },
     };
   });
+  if (new Set(records.map((record) => record.id)).size !== records.length)
+    throw Error("Duplicate collection item");
   return { schemaVersion: 1, releaseId: c.releaseId, records };
 }

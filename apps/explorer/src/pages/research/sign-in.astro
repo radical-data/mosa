@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {
+  authRequest,
+  boundedForm,
+  researchTransaction,
+} from "../../lib/capture/access";
+
+let error = "";
+let sent = false;
+let email = "";
+if (Astro.request.method === "POST") {
+  const form = await boundedForm(Astro.request);
+  email = String(form.get("email") ?? "").trim();
+  const code = String(form.get("code") ?? "").trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 254)
+    error = "Enter your email address.";
+  else if (form.get("action") === "send") {
+    const result = await authRequest("otp", { email, create_user: false });
+    sent = result.ok;
+    error = result.ok
+      ? ""
+      : "We could not send a code. Check your email address or try again shortly.";
+  } else {
+    const result = await authRequest("verify", {
+      email,
+      token: code,
+      type: "email",
+    });
+    const session = await result.json();
+    if (result.ok && session.access_token && session.user?.id) {
+      try {
+        await researchTransaction(session.user.id, async () => {});
+        Astro.cookies.set("mosa-research", session.access_token, {
+          httpOnly: true,
+          secure: Astro.url.protocol === "https:",
+          sameSite: "strict",
+          path: "/research",
+          maxAge: Math.min(Number(session.expires_in) || 3600, 3600),
+        });
+        return Astro.redirect("/research", 303);
+      } catch {
+        error = "This account does not have researcher access.";
+      }
+    } else {
+      error = "That code is invalid or has expired. Request another code.";
+      sent = true;
+    }
+  }
+}
+---
+
+<Layout title="Research sign-in">
+  <h1>Sign in to research</h1>
+  <p>
+    Use your invited email address. We will send you a short-lived sign-in code.
+  </p>
+  {
+    error && (
+      <p class="notice" role="alert">
+        {error}
+      </p>
+    )
+  }
+  {
+    sent && (
+      <p role="status">Check your email for a code, then enter it below.</p>
+    )
+  }
+  <form method="post" class="panel">
+    <label
+      >Email address<input
+        name="email"
+        type="email"
+        autocomplete="email"
+        required
+        value={email}
+      /></label
+    >
+    <button name="action" value="send" type="submit">Send sign-in code</button>
+    <label
+      >Sign-in code<input
+        name="code"
+        autocomplete="one-time-code"
+        inputmode="numeric"
+        maxlength="10"
+      /></label
+    >
+    <button name="action" value="verify" type="submit">Sign in</button>
+  </form>
+</Layout>
+<style>
+  form {
+    display: grid;
+    gap: 1rem;
+    max-width: 36rem;
+  }
+  button {
+    justify-self: start;
+  }
+</style>

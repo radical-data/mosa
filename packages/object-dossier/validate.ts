@@ -1,7 +1,6 @@
-import { readFileSync } from "node:fs";
-import path from "node:path";
 import { Ajv2020, type ValidateFunction } from "ajv/dist/2020";
 import addFormats from "ajv-formats";
+import schema from "../../schemas/object-dossier-packet.schema.json";
 import {
   claimEvidenceList,
   DERIVED_REFERS_TO_PREFIX,
@@ -9,8 +8,6 @@ import {
   type PacketClaim,
   type PacketEvidence,
 } from "./packet";
-
-const SCHEMA_PATH = path.resolve(__dirname, "../../../schemas/object-dossier-packet.schema.json");
 
 // Source kinds whose evidence may reasonably lack an excerpt.
 const VISUAL_SOURCE_KINDS = new Set(["photograph", "image", "audiovisual_record", "video", "film"]);
@@ -30,7 +27,6 @@ function getCompiledSchema(): ValidateFunction {
   if (!compiledSchema) {
     const ajv = new Ajv2020({ allErrors: true });
     addFormats(ajv);
-    const schema = JSON.parse(readFileSync(SCHEMA_PATH, "utf8")) as object;
     compiledSchema = ajv.compile(schema);
   }
 

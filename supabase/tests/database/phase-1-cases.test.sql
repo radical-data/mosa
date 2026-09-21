@@ -190,15 +190,17 @@ select throws_ok(
 reset role;
 
 set local role authenticated;
-select lives_ok(
+select throws_ok(
     $$ select count(*) from entities.entity $$,
-    'authenticated users can read entities.entity'
+    '42501', NULL,
+    'authentication alone does not grant research access'
 );
-select lives_ok(
+select throws_ok(
     $$
     select entities.create_item('artefact')
     $$,
-    'authenticated users can write entities via create_item'
+    '42501', NULL,
+    'authenticated users cannot bypass the reviewed importer'
 );
 reset role;
 

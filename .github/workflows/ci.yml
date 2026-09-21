@@ -95,6 +95,16 @@ jobs:
       - name: Build production image
         run: mise x -- just explorer-image
 
+      - name: Check research sign-in in production image
+        run: |
+          docker run --rm -d --name mosa-research-check -p 127.0.0.1:4321:4321 mosa-explorer:local
+          trap 'docker stop mosa-research-check' EXIT
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:4321/research/sign-in > /tmp/sign-in.html; then break; fi
+            sleep 1
+          done
+          grep -q 'Sign in to research' /tmp/sign-in.html
+
   migrate:
     name: Apply production migrations
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -149,8 +159,11 @@ jobs:
       - name: Trigger Coolify deployment
         env:
           DEPLOY_WEBHOOK: ${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}
+          COOLIFY_API_TOKEN: ${{ secrets.COOLIFY_API_TOKEN }}
         run: |
-          curl --fail --show-error --silent --request GET \
+          test -n "$COOLIFY_API_TOKEN"
+          curl --fail --show-error --silent --request POST \
+            --header "Authorization: Bearer $COOLIFY_API_TOKEN" \
             "$DEPLOY_WEBHOOK"
 
       - name: Smoke-test production URL

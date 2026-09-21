@@ -17,6 +17,10 @@ async function verifyDatabase(): Promise<void> {
     cwd: projectRoot,
   });
 
+  await runCommand("pnpm", ["exec", "tsx", "scripts/verify-source-capture.ts"], {
+    cwd: projectRoot,
+  });
+
   await loadPhase1Fixtures();
   await loadPhase2Fixtures();
   await loadPhase3Fixtures();
@@ -91,6 +95,8 @@ async function verifyDatabase(): Promise<void> {
   // Runs last because it writes canonical rows the pgTAP fixtures tests
   // must not see.
   await verifyObjectDossierImport();
+  await runCommand("pnpm", ["--filter", "@mosa/explorer", "build"], { cwd: projectRoot });
+  await runCommand("pnpm", ["exec", "tsx", "scripts/verify-capture-http.ts"], { cwd: projectRoot });
 }
 
 async function main(): Promise<void> {

@@ -29,6 +29,12 @@ async function verify() {
       },
     ],
   };
+  snapshot.records.push({
+    ...snapshot.records[0],
+    id: "44444444-4444-4444-8444-444444444444",
+    name: { ...statement, text: "SECOND-OBJECT-SENTINEL" },
+    identifier: { ...snapshot.records[0].identifier, value: "SECOND-ID-SENTINEL" },
+  });
   const build = () =>
     runCommand("pnpm", ["--filter", "@mosa/website", "build"], { cwd: process.cwd() });
   try {
@@ -40,10 +46,18 @@ async function verify() {
         statement.text,
         "PUBLIC-HOLDER-SENTINEL",
         "PUBLIC-ID-SENTINEL",
+        "SECOND-OBJECT-SENTINEL",
+        "SECOND-ID-SENTINEL",
         "https://example.org/source",
       ])
         assert(html.includes(value));
       assert(!html.includes("collection-mamari"));
+    }
+    await writeFile(file, JSON.stringify({ ...snapshot, records: [snapshot.records[0]] }));
+    await build();
+    for (const page of ["es/coleccion", "en/collection"]) {
+      const html = await readFile(`apps/website/dist/${page}/index.html`, "utf8");
+      assert(html.includes("PUBLIC-OBJECT-SENTINEL") && !html.includes("SECOND-OBJECT-SENTINEL"));
     }
     await writeFile(
       file,
