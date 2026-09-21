@@ -14,7 +14,7 @@ The Museum of Stolen Artefacts monorepo: a public Astro website, a research expl
 | `src/lib/database.types.ts` | Generated database types |
 | `docs/` | Architecture decisions and operational documentation |
 
-Each app owns its dependencies, routes, components and build output. Do not import another app's internals. Add a workspace package under `packages/` only when there is concrete shared code, and add `packages/*` to the workspace configuration then.
+Each app owns its dependencies, routes, components and build output. Do not import another app's internals. `packages/public-collection/` contains the shared, strictly validated public export contract. Add other workspace packages only for concrete shared code.
 
 ## Tools and setup
 
@@ -86,9 +86,16 @@ Git hooks run through mise and just. `just install` reinstalls them after a clon
 
 ## Application and publication boundaries
 
-The public website is deployed at [museumofstolenartefacts.org](https://museumofstolenartefacts.org/). It contains seven Spanish-language pages with curated design reference records. It has no database connection and does not reuse the explorer's broad reader role. Before displaying research database content, define a publication-aware read interface with permissions for approved records and fields. Keep any database credentials in server/build environments. Research access and public publication are separate concerns.
+The public website is deployed at [museumofstolenartefacts.org](https://museumofstolenartefacts.org/). It contains seven pages in Chilean Spanish and British English. Collection pages consume a validated public snapshot; the default snapshot is empty until a maintainer publishes an authorised record. The site has no database connection. A private publication command prepares, approves, exports and withdraws selected research content. Research access and public publication remain separate concerns. See the [publication runbook](docs/collection-publication.md).
 
 Database changes use committed migrations. Real or sensitive project data must not be committed as seed data.
+
+## Collection product direction
+
+- [Publish a collection record](docs/collection-publication.md): maintainer setup, approval, deployment and withdrawal for slice 1.
+- [Source-to-publication workflow](docs/collection-workflow.md): the agreed experience for source capture, research dossiers, review and public collection pages.
+- [Implementation plan](docs/collection-workflow-implementation-plan.md): successive vertical slices and acceptance criteria, starting with one research object on the public collection page.
+- [Data-entry discussion brief](docs/data-entry-efficiency-discussion.md): the original ontology and input-efficiency questions.
 
 ## Deployment
 

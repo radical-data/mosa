@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseCollection } from "@mosa/public-collection";
 import {
   absolutePageURL,
   anchors,
@@ -99,4 +100,24 @@ assert.ok(
 );
 console.log(
   `Verified ${checked} static pages: native links, fragments, languages, canonicals, sitemap and funding.`,
+);
+
+const collection = parseCollection(
+  JSON.parse(readFileSync(resolve(output, "collection-snapshot.json"), "utf8")),
+);
+for (const locale of localeIds) {
+  const html = readPage(pagePath("collection", locale));
+  assert.ok(html.includes(`data-release-id="${collection.releaseId}"`));
+  assert.equal((html.match(/data-record-id=/g) ?? []).length, collection.records.length);
+  assert.ok(!html.includes('id="concept-filter"') && !html.includes('id="type-filter"'));
+  assert.ok(!html.includes('class="collection-image"'));
+  assert.ok(
+    readPage(pagePath("visit", locale)).includes(`data-release-id="${collection.releaseId}"`),
+  );
+  assert.ok(!readPage(pagePath("home", locale)).includes("?concept="));
+  for (const record of collection.records)
+    assert.ok(html.includes(`data-record-id="${record.id}"`));
+}
+console.log(
+  `Verified public collection release ${collection.releaseId}: ${collection.records.length} records.`,
 );

@@ -6,15 +6,15 @@ const dynamicMessages = {
   es: {
     referenceCount: ({ count }: { count: number }) =>
       new Intl.PluralRules(locales.es.format).select(count) === "one"
-        ? `${formatNumber(count, "es")} registro de referencia`
-        : `${formatNumber(count, "es")} registros de referencia`,
+        ? `${formatNumber(count, "es")} registro`
+        : `${formatNumber(count, "es")} registros`,
     explore: ({ concept }: { concept: string }) => `Explorar ${concept}`,
   },
   en: {
     referenceCount: ({ count }: { count: number }) =>
       new Intl.PluralRules(locales.en.format).select(count) === "one"
-        ? `${formatNumber(count, "en")} reference record`
-        : `${formatNumber(count, "en")} reference records`,
+        ? `${formatNumber(count, "en")} record`
+        : `${formatNumber(count, "en")} records`,
     explore: ({ concept }: { concept: string }) => `Explore ${concept}`,
   },
 } satisfies Record<

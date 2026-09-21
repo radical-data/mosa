@@ -13,6 +13,10 @@ async function verifyDatabase(): Promise<void> {
   await runCommand(supabase, ["start"], { cwd: projectRoot });
   await runCommand(supabase, ["db", "reset", "--local", "--no-seed"], { cwd: projectRoot });
 
+  await runCommand("pnpm", ["exec", "tsx", "scripts/verify-collection-publication.ts"], {
+    cwd: projectRoot,
+  });
+
   await loadPhase1Fixtures();
   await loadPhase2Fixtures();
   await loadPhase3Fixtures();

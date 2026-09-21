@@ -1,0 +1,6 @@
+{
+  "name": "@mosa/public-collection",
+  "version": "0.1.0",
+  "private": true,
+  "exports": "./index.ts"
+}

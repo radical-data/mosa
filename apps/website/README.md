@@ -34,7 +34,7 @@ Use the normal development server or preview for both languages. Editorial revie
 
 `src/i18n/routes.ts` owns locale tags, formatting locales, search annotations, paths and shared fragment identifiers. Templates live in `src/templates/`; one generated route selects the same template for both languages. Header and footer navigation follow stable page IDs. `Español` and `English` remain visible outside the collapsed mobile menu and are ordinary links that work without JavaScript.
 
-Collection controls progressively enhance the complete static reference list. With JavaScript enabled, `q`, `concept`, `type` and `view` are restored from the URL, updated when controls change, and carried to the equivalent language page. Only declared shared fragments are retained. With JavaScript disabled, all records remain visible and language links open their equivalents; browser-specific query and fragment state cannot be read by a static HTML build. No filtering controls are misleadingly presented as functional in that case.
+Collection search progressively enhances the complete static public list. Search matches only published names, institutions and identifiers. Unsupported concept/type controls and homepage filter links are absent. The card remains readable and its source links work without JavaScript.
 
 ## Editing copy
 
@@ -44,9 +44,11 @@ Edit an existing value and preview it. English can catch up later: add an item t
 
 The initial website prose comes from the Spanish design copy, with AI-assisted English drafts. Human review remains pending and happens at release milestones. There are no automatic approval or withdrawal states. If material must be removed, remove it from both versions and any shared sections that repeat it. Optional article routing and a formal editorial system can be added when needed.
 
-The app has no database access and needs no secrets. `src/data/site.ts` contains six curated design reference records, stable IDs, images and institutions. Original names remain available independently of translated display labels. These records are not a public research catalogue. Do not import explorer internals, add unsourced multilingual entity fields, or give this app the explorer's database role. A publication-aware interface must precede public research-data features.
+The app has no database access and needs no secrets. `public/collection-snapshot.json` contains only the reviewed public export, validated through `@mosa/public-collection` before rendering. Slice 1 accepts zero or one card with an attributed name, reported holding institution, catalogue identifier and source links. Missing or malformed exports fail; an explicitly empty export renders an empty collection without falling back to design reference records.
 
-Search matches both editorial name variants and original spelling. Accent folding is confined to the explicitly separate search representation; original text is unchanged and Rapa Nui names use case-insensitive exact spelling. Any broader Rapa Nui matching rules need collaborator review.
+The private maintainer workflow, publication permissions and withdrawal process are documented in the [publication runbook](../../docs/collection-publication.md). The committed default is empty until the research database and publication account are configured. Collection and institution pages expose the same release ID so deployment can verify the actual served snapshot.
+
+Original names remain unchanged across interface languages. Search keeps original-name spelling; accent folding applies only to the institution search representation. Additional Rapa Nui matching rules need collaborator review.
 
 Dates use explicit `Intl` locales and retain year/month/day precision. Event time zones are stored independently from language; an unknown time is not invented. Dates currently shown are calendar dates, not timed events. Metric conventions apply in both languages.
 
