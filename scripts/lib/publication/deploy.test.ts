@@ -98,6 +98,14 @@ describe("publication deployment gate", () => {
       );
     vi.stubGlobal("fetch", fetch);
     await deploy(client, snapshot, config);
+    expect(fetch).toHaveBeenNthCalledWith(
+      2,
+      config.webhook,
+      expect.objectContaining({
+        method: "POST",
+        headers: { Authorization: `Bearer ${config.token}` },
+      }),
+    );
     expect(fetch).toHaveBeenCalledTimes(8);
     expect(requireIdle).toHaveBeenCalled();
     expect(currentRelease).toHaveBeenCalledTimes(2);

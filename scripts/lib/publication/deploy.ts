@@ -55,11 +55,15 @@ export async function deploy(client: Client, expected: PublicCollection, config:
     );
   });
   const response = await fetch(config.webhook, {
+    method: "POST",
     headers: { Authorization: `Bearer ${config.token}` },
     redirect: "error",
     signal: AbortSignal.timeout(10000),
   });
-  if (!response.ok) throw Error("Hosting deployment request failed; inspect the hosting dashboard");
+  if (!response.ok)
+    throw Error(
+      `Hosting deployment request failed (HTTP ${response.status}); inspect the hosting dashboard`,
+    );
   const accepted = (await response.json()) as {
     deployments?: Array<{ resource_uuid?: string; deployment_uuid?: string }>;
   };
