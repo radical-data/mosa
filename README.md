@@ -86,7 +86,7 @@ Git hooks run through mise and just. `just install` reinstalls them after a clon
 
 ## Application and publication boundaries
 
-The public website is deployed at [museumofstolenartefacts.org](https://museumofstolenartefacts.org/). It contains seven pages in Chilean Spanish and British English. Collection pages consume a validated public snapshot; the default snapshot is empty until a maintainer publishes an authorised record. The site has no database connection. A private publication command prepares, approves, exports and withdraws selected research content. Research access and public publication remain separate concerns. See the [publication runbook](docs/collection-publication.md).
+The public website is deployed at [museumofstolenartefacts.org](https://museumofstolenartefacts.org/). It contains seven pages in Chilean Spanish and British English. Collection pages consume a validated public snapshot; the committed export contains the approved Hoa Hakananaiʻa pilot. The site has no database connection. A private publication command prepares, approves, exports and withdraws selected research content. Research access and public publication remain separate concerns. See the [publication runbook](docs/collection-publication.md).
 
 Database changes use committed migrations. Real or sensitive project data must not be committed as seed data.
 

@@ -4,7 +4,7 @@
 
 Implement the [agreed collection workflow](collection-workflow.md) through small, usable releases. Each slice completes a user task across the required data, permissions and interface layers. Implement only the infrastructure that task needs.
 
-Status: slice 1 implementation added; production publication setup and a real release remain pending. Later slices are planned. Updated 2026-09-21. This sequence replaces the previous plan's nine preparatory steps before a first manual release. The product direction remains source capture, identity confirmation, claim review, research dossiers and authorised public presentation. The delivery sequence starts with existing research data so that the website becomes useful sooner.
+Status: slice 1 is implemented and production publication is configured. The empty release has been verified live and the approved Hoa Hakananaiʻa export is committed; the publication ledger records which release is live. Later slices are planned. Updated 2026-09-21. This sequence replaces the previous plan's nine preparatory steps before a first manual release. The product direction remains source capture, identity confirmation, claim review, research dossiers and authorised public presentation. The delivery sequence starts with existing research data so that the website becomes useful sooner.
 
 ## Baseline
 
@@ -41,7 +41,7 @@ This is the default order. Slices 5, 6 and 7 can be reprioritised after slice 4 
 
 ## Slice 1 — Put one real object on the collection page
 
-Implementation and operation: [publication runbook](collection-publication.md). The project owner has authorised the bootstrap dossiers; the committed export remains empty until canonical research imports and deployment credentials are configured.
+Implementation and operation: [publication runbook](collection-publication.md). The project owner has authorised the bootstrap dossiers. Canonical research imports and deployment credentials are configured; the committed export contains only the selected Hoa Hakananaiʻa fields.
 
 ### User task
 

@@ -2,7 +2,7 @@
 
 ## Status and purpose
 
-Agreed product direction, recorded on 2026-09-21. Slice 1 is implemented; production publication setup and later slices remain pending. See the [publication runbook](collection-publication.md).
+Agreed product direction, recorded on 2026-09-21. Slice 1 is implemented and production publication is configured. The empty release has been verified live and the approved Hoa Hakananaiʻa export is committed. Later slices remain planned. See the [publication runbook](collection-publication.md) for release evidence and live-status checks.
 
 MoSA needs a collection that researchers can populate and maintain, communities can use to identify displaced objects, and the website can present with attribution and publication permission. Deliver this through successive vertical slices. The first milestone is one existing research object appearing on the collection page with an attributed name, reported holder, institutional identifier and source, plus a working withdrawal path. Later slices extend that working connection back through researcher-facing capture and review.
 

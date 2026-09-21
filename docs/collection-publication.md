@@ -6,7 +6,11 @@ Slice 1 publishes zero or one record from the research database through a versio
 
 The bootstrap dossiers have been authorised by the project owner for publication in the implementation discussion. Use Hoa Hakananaiʻa for the initial release. Record the actual operator and the scope of that authorisation when approving its candidate. This does not authorise images or extra material outside the selected bootstrap fields.
 
-No production publication connection is configured yet. The committed `apps/website/public/collection-snapshot.json` is explicitly empty. A missing or invalid file fails the build; the site never falls back to the six design reference records. Database, populated/empty website and deployment-gate tests use isolated synthetic data. A real public release and a measured removal deadline remain operational work.
+Production publication is configured through the protected `website-production` GitHub environment, restricted to `main`. The research database contains the bootstrap dossiers, and a dedicated publisher login maintains the private ledger. Coolify automatic and preview deployments are disabled; each release requires an explicit commit pin. The committed `apps/website/public/collection-snapshot.json` contains the approved Hoa Hakananaiʻa pilot. Check `just collection status` for the separately verified live release.
+
+The empty withdrawal release `bd755e80-cc57-419a-b391-195f8606a231` was verified live on 2026-09-21 at 13:18:37 UTC by [Website run 35604556798](https://github.com/radical-data/mosa/actions/runs/35604556798). The workflow took 2 minutes 11 seconds, including builds and verification. This rehearsal withdrew an approved candidate before it had been served, then deployed and verified the empty snapshot and all four bilingual collection/institution routes. Populated-to-empty removal is also covered by the automated website checks. This measurement excludes review, merge and commit-pinning time; it is not an agreed removal deadline.
+
+A missing or invalid export fails the build; the site never falls back to the six design reference records. No images or extra research fields are included in the pilot.
 
 ## Prerequisites
 
@@ -90,7 +94,7 @@ The existing manual `Website` workflow now calls the publication gate instead of
 
 1. Apply the publication migration before enabling this workflow's production step.
 2. Add `COLLECTION_DATABASE_URL` and `COLLECTION_DATABASE_SSL_CA` to the protected `website-production` environment alongside its existing hosting secrets. These credentials are used only by the deployment job, not the Docker build or static container.
-3. Give the Coolify token the read and deploy permissions needed to inspect the application and deployment. Keep a single application's production webhook in `COOLIFY_DEPLOY_WEBHOOK`; tag and preview deployment webhooks are rejected.
+3. Give the Coolify API token read and deploy permissions, and store it as `COOLIFY_API_TOKEN`. In Coolify 4.3.23, select Deploy first, then Read. This token is separate from the GitHub App that lets Coolify read the repository. Keep a single application's production webhook in `COOLIFY_DEPLOY_WEBHOOK`; tag and preview deployment webhooks are rejected. The command uses POST to request deployment.
 4. Disable automatic and preview deployments for this application. Restrict direct dashboard/webhook access to operators who follow this runbook. Cancel any pre-existing queued jobs before the first gated release. Direct administrator actions can bypass this tooling and are outside its guarantee.
 5. Pin the application's **Git commit SHA** to the complete reviewed commit that contains the exported snapshot. The command verifies `git_commit_sha` through the [application API](https://coolify.io/docs/api/endpoints/applications/get-application-by-uuid). A moving branch/`HEAD` is rejected, so a newer push cannot substitute an unreviewed snapshot during deployment.
 6. Run the `Website` workflow on that commit on `main`, with `deploy` enabled. Alternatively, run the maintainer command below from a checkout containing that commit.

@@ -46,7 +46,7 @@ The initial website prose comes from the Spanish design copy, with AI-assisted E
 
 The app has no database access and needs no secrets. `public/collection-snapshot.json` contains only the reviewed public export, validated through `@mosa/public-collection` before rendering. Slice 1 accepts zero or one card with an attributed name, reported holding institution, catalogue identifier and source links. Missing or malformed exports fail; an explicitly empty export renders an empty collection without falling back to design reference records.
 
-The private maintainer workflow, publication permissions and withdrawal process are documented in the [publication runbook](../../docs/collection-publication.md). The committed default is empty until the research database and publication account are configured. Collection and institution pages expose the same release ID so deployment can verify the actual served snapshot.
+The private maintainer workflow, publication permissions and withdrawal process are documented in the [publication runbook](../../docs/collection-publication.md). The committed export contains the approved Hoa Hakananaiʻa pilot. Collection and institution pages expose the same release ID so deployment can verify the actual served snapshot.
 
 Original names remain unchanged across interface languages. Search keeps original-name spelling; accent folding applies only to the institution search representation. Additional Rapa Nui matching rules need collaborator review.
 
