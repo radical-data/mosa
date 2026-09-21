@@ -17,6 +17,10 @@ Do not put passwords, tokens, certificates, or live connection strings in this r
 
 Create `SUPABASE_ACCESS_TOKEN` in [Supabase account access tokens](https://supabase.com/dashboard/account/tokens), with a recognisable name such as `mosa-production`. This is a personal access token, separate from the project's publishable key. Use the saved project database password for `SUPABASE_DB_PASSWORD`; if unavailable, reset it under **Database → Settings** and update any connections using that password. Set `SUPABASE_PROJECT_ID` to the project reference. Enter credentials directly as GitHub environment secrets, not in repository files or chat. See Supabase's [token documentation](https://supabase.com/docs/guides/platform/personal-access-tokens) and [password reset instructions](https://supabase.com/docs/guides/troubleshooting/how-do-i-reset-my-supabase-database-password-oTs5sB).
 
+For the pinned CLI's `link` followed by `db push`, scope the token to MoSA. Start with no access and grant **Read** for **Project Settings**, **Connection Pooling**, **API Keys** and **API Key Secrets**. Linking retrieves connection information and API keys; migrations use the separate database password. Other service-configuration reads during linking are optional. Leave other token permissions disabled. Record the token's expiry outside Git and replace the GitHub secret before it expires. Verify this permission set again when changing the CLI's linking behaviour.
+
+These three Supabase secrets belong to `production`. The separate `website-production` environment does not make its secrets available to research migration jobs.
+
 ## Required Coolify runtime secrets
 
 | Variable | Notes |
