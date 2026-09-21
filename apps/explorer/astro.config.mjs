@@ -3,6 +3,11 @@ import { defineConfig, envField, sessionDrivers } from "astro/config";
 
 export default defineConfig({
   output: "server",
+  // Coolify's proxy terminates TLS; trust its X-Forwarded-* headers for this host
+  // so Astro's origin check and Astro.url see the public HTTPS origin.
+  security: {
+    allowedDomains: [{ hostname: "research.museumofstolenartefacts.org", protocol: "https" }],
+  },
   vite: { ssr: { noExternal: ["@mosa/object-dossier"] } },
   adapter: node({ mode: "standalone" }),
   session: {
