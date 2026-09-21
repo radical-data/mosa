@@ -35,6 +35,9 @@ async function verify() {
       }
       await client.query("begin");
       try {
+        // Supabase's postgres login is not a superuser. Membership is needed to
+        // exercise SET ROLE and is rolled back with the rest of this local test.
+        await client.query("grant collection_publisher to current_user");
         async function fails(action: () => Promise<unknown>, pattern: RegExp) {
           await client.query("savepoint expected_failure");
           await assert.rejects(action, pattern);
