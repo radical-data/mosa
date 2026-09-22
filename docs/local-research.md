@@ -136,3 +136,17 @@ limits above 20 MB plus form overhead. Storage credentials stay on the server.
 Local tests use an isolated database and a storage substitute. They do not prove
 hosted sign-in or storage configuration; verify one small real import after
 deployment before uploading larger batches.
+
+### Upload fails with HTTP 503
+
+Successful sign-in does not establish that Storage is configured. In the research
+application's Coolify environment, set `SOURCE_STORAGE_KEY` as a runtime-only
+secret, then redeploy the application. Use a backend secret key from the same
+Supabase project's **Settings → API Keys**; the publishable key used for sign-in
+does not grant private storage access. Keep the key out of chat, Git and build
+arguments. Modern secret keys use the `apikey` header only; legacy `service_role`
+keys are also supported. See [Supabase's key migration guide](https://supabase.com/docs/guides/getting-started/migrating-to-new-api-keys).
+
+Application logs identify missing configuration or the Storage response status
+without recording credentials or source contents. Retry the same bundle after
+fixing configuration; existing drafts and edits are preserved.

@@ -2,7 +2,7 @@
 import Layout from "../../../layouts/Layout.astro";
 import { boundedForm, researchTransaction } from "../../../lib/capture/access";
 import { CaptureError, newRequestId, uuid } from "../../../lib/capture/model";
-import { sourceStorage } from "../../../lib/sources/storage";
+import { SourceStorageError, sourceStorage } from "../../../lib/sources/storage";
 import { getSource, reserveUpload, type SavedSource, sourceField, validatePdf } from "../../../lib/sources/store";
 
 let error = "";
@@ -34,7 +34,11 @@ if (Astro.request.method === "POST") {
     }
     return Astro.redirect(`/research/sources/${version.source_id}`, 303);
   } catch (e) {
-    error = e instanceof CaptureError ? e.message : "The upload could not finish. Retry with the same file; saved work is retained.";
+    error = e instanceof CaptureError || e instanceof SourceStorageError ? e.message : "The upload could not finish. Retry with the same file; saved work is retained.";
+    if (e instanceof SourceStorageError) {
+      Astro.response.status = 503;
+      console.error("Source upload failed", { code: e.code, storageStatus: e.status });
+    }
   }
 }
 const sources = await researchTransaction(Astro.locals.researcher, async c =>
