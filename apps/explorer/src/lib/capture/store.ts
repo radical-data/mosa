@@ -22,6 +22,22 @@ export async function resolvePreservedSource(
   };
 }
 
+async function checkPreparedWording(client: ClientBase, content: Content) {
+  if (!content.preparationId) return;
+  const version = await getVersion(client, content.sourceVersion);
+  const quote = content.nameEvidenceMode === "field" ? content.name : content.nameExcerpt;
+  if (
+    content.nameEvidenceMode === "whole" ||
+    !quote ||
+    !version.readable_text?.includes(quote) ||
+    !quote.includes(content.name)
+  )
+    throw new CaptureError(
+      "The proposed wording and quotation must occur in the saved source. Correct them before review.",
+      "nameExcerpt",
+    );
+}
+
 export interface Draft {
   id: string;
   owner_id: string;
@@ -212,7 +228,10 @@ export async function changeDraft(
   if (action === "save" || action === "review") {
     if (!content) throw new CaptureError("Draft content is required.");
     draft.content = action === "review" ? await resolveAgentLabels(client, content) : content;
-    if (action === "review") packetFor(id, revision + 1, draft.content);
+    if (action === "review") {
+      await checkPreparedWording(client, draft.content);
+      packetFor(id, revision + 1, draft.content);
+    }
     status = action === "review" ? "review" : "draft";
   } else if (["defer", "reject", "delete"].includes(action)) {
     if (action === "defer" && content) draft.content = content;
@@ -239,6 +258,7 @@ export async function changeDraft(
       throw new CaptureError(
         "An institution label or its evidence changed. Save and review this draft again.",
       );
+    await checkPreparedWording(client, draft.content);
     const packet = packetFor(id, revision, draft.content);
     const bindings: Record<string, string> = {};
     if (identity !== "new") bindings["item:object"] = identity as string;

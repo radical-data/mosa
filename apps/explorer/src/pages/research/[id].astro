@@ -116,6 +116,7 @@ const selectedCitations = {
     Copy the source’s wording, identify what it describes, and leave unresolved
     research open. Saving a draft does not publish anything.
   </p>
+  {c.preparationId && <p>Prepared with {c.preparationModel}. Review every quotation and interpretation before acceptance. Human edits are retained in the draft history.</p>}
   {error && (
     <div class="notice" role="alert">
       {errorField ? <a href={`#${errorField}`}>{error}</a> : error}

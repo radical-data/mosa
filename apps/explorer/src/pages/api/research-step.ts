@@ -1,7 +1,9 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import type { APIRoute } from "astro";
 import { Pool } from "pg";
-import { runOne } from "../../lib/sources/jobs";
+import { performCapture, runOne } from "../../lib/sources/jobs";
+import { performPreparation } from "../../lib/sources/preparation";
+import { sourceStorage } from "../../lib/sources/storage";
 
 // Called by Supabase Cron, never by source content or the browser.
 export const POST: APIRoute = async ({ request }) => {
@@ -24,7 +26,12 @@ export const POST: APIRoute = async ({ request }) => {
   });
   try {
     return Response.json(
-      { processed: await runOne(pool) },
+      {
+        processed: await runOne(pool, {
+          capture: (p, j) => performCapture(p, j, sourceStorage()),
+          prepare: performPreparation,
+        }),
+      },
       { headers: { "cache-control": "no-store" } },
     );
   } catch {

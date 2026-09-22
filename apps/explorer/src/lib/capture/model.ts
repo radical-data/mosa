@@ -36,6 +36,8 @@ export const fields = [
   "interpretation",
 ] as const;
 export type Content = Record<(typeof fields)[number], string> & {
+  preparationId?: string;
+  preparationModel?: string;
   sourceCitation?: string;
   sourceMediaType?: string;
   checkedAt: string;
@@ -79,6 +81,8 @@ export function readContent(form: FormData, previous?: Content): Content {
     if (c[key].length > 4000 || [...c[key]].some((ch) => ch.charCodeAt(0) < 9))
       throw new CaptureError("Shorten this field or remove unsupported characters.", key);
   }
+  c.preparationId = previous?.preparationId;
+  c.preparationModel = previous?.preparationModel;
   if (c.sourceVersion) {
     if (!uuid.test(c.sourceVersion)) throw new CaptureError("Choose a saved source version.");
     c.url = previous?.url ?? c.url;

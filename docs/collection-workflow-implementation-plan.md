@@ -246,3 +246,7 @@ Implemented a Supabase Postgres job queue, restricted worker login, private Stor
 ### Lean Supabase execution — 2026-09-22
 
 Following the owner's request, replace the standalone polling process with Supabase Queues and Supabase Cron invoking one bounded operation in the existing app. Remove the standalone executable and its command. Preserve source/job history and restricted runner credentials. This adds one usable refinement commit: `refactor(research): use supabase for background job delivery`. Scheduling remains a deployment operation, not a side effect of schema migration.
+
+### Slice 4 delivery evidence — 2026-09-22
+
+Implemented optional preparation on saved HTML/JSON, external-model permission, verbatim evidence validation, retained provider/prompt details and human edits. The built HTTP flow passes from fixed model output through human review and acceptance, rejects invented quotations, and reuses the existing candidate on repeated requests. Static, database, import and publication checks pass. The live-provider demonstration is explicitly pending because this workspace has no model credentials; this is not recorded as live-verified.

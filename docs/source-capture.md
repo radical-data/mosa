@@ -108,3 +108,13 @@ The queue stores job IDs only. Application job records provide researcher-visibl
 Limits: public HTTP(S) on standard ports, no credentials/cookies, four redirects, 30 seconds, 2 MB response and 200,000 readable characters. DNS answers and each redirect are checked; the connection uses the checked address. Only uncompressed HTML/JSON is supported. Script-only pages, access challenges and sign-in pages fail visibly; manual URL-based drafts remain available. HTML is parsed with parse5 and shown as text. Review the saved copy before preparing claims; challenge detection cannot recognise every site's interstitial.
 
 Parser and request implementation references: [parse5](https://parse5.js.org/), [Node HTTP](https://nodejs.org/api/http.html). Tests use synthetic sources; no access controls are bypassed.
+
+## Optional AI preparation (slice 4)
+
+Apply `20260922170000_source_preparation.sql`. Set `OPENAI_API_KEY` and `RESEARCH_MODEL` in the existing app's server environment; use an account-supported Responses model with structured outputs. No model is selected silently. The runner uses [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs), with no tools, a 60 KB input ceiling, 1,800 output-token ceiling and 60-second timeout. It does not send PDFs or hidden source files: this slice handles the readable text of saved HTML/JSON.
+
+On a saved version, confirm permission for external-model processing and choose **Prepare with AI**. One preparation job per version makes repeated requests idempotent. The saved response, model, prompt, usage and originating researcher remain on the private job; every human save remains in draft revisions. A model may propose one quoted name, classification or description. Custody, catalogue identity and other observations remain for human research. Ambiguous accounts produce observations without inventing an object. Rejected evidence remains available in the job record; use manual preparation to resolve it.
+
+The model has no tools and the runner has no canonical write grants. Proposed wording must occur inside its quotation, which must occur in the saved text. Review and acceptance recheck this for AI-prepared drafts, including after human edits. Research disclosure consent and identity confirmation remain human decisions. Repeated preparation does not overwrite edits or create another candidate after acceptance.
+
+Fixed-provider tests exercise permission, quotation rejection, preparation, human editing and acceptance through the built app. **Live provider verification remains pending:** no model API credentials are available in this workspace. Configure credentials outside chat before attempting a live run.

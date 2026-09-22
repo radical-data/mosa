@@ -434,6 +434,94 @@ async function verify() {
             }),
           ),
       });
+      const { performPreparation } = await import(
+        "../apps/explorer/src/lib/sources/preparation.js"
+      );
+      const preparationRequest = randomUUID();
+      const noConsent = await request(webLocation, "allowed", {
+        action: "ai",
+        version: captureRequest,
+        requestId: preparationRequest,
+      });
+      assert((await noConsent.text()).includes("Confirm permission"));
+      const prepareFields = {
+        action: "ai",
+        version: captureRequest,
+        requestId: preparationRequest,
+        consent: "yes",
+      };
+      assert.equal((await request(webLocation, "allowed", prepareFields)).status, 303);
+      let modelCalls = 0;
+      await runOne(worker, {
+        prepare: (p, j) =>
+          performPreparation(p, j, async () => {
+            modelCalls++;
+            return {
+              model: "synthetic-model",
+              responseId: "synthetic-response",
+              usage: { output_tokens: 40 },
+              value: {
+                statement: {
+                  predicate: "described_as",
+                  value: "synthetic wooden figure",
+                  quote: "A synthetic wooden figure from Rapa Nui, from the museum catalogue.",
+                },
+                observations: "Holder and catalogue number are not established.",
+              },
+            };
+          }),
+      });
+      const preparation = (
+        await db.query("select status,result from capture.job where id=$1", [preparationRequest])
+      ).rows[0];
+      assert.equal(preparation.status, "succeeded");
+      const aiLocation = `/research/${preparation.result.draftId}`;
+      assert((await (await request(aiLocation)).text()).includes("synthetic-model"));
+      const aiFields = {
+        ...documentFields,
+        sourceVersion: captureRequest,
+        url: "urn:mosa:source:ignored",
+        sourceRegions: "Catalogue description",
+        researchConsent: "yes",
+        name: "synthetic wooden figure",
+        nameExcerpt: "Invented quotation",
+      };
+      assert(
+        (await (await request(aiLocation, "allowed", aiFields)).text()).includes(
+          "must occur in the saved source",
+        ),
+      );
+      assert.equal(
+        (
+          await request(aiLocation, "allowed", {
+            ...aiFields,
+            nameExcerpt: "A synthetic wooden figure from Rapa Nui, from the museum catalogue.",
+          })
+        ).status,
+        303,
+      );
+      assert.equal(
+        (await request(aiLocation, "allowed", { action: "accept", revision: "2", identity: "new" }))
+          .status,
+        303,
+      );
+      assert(
+        (await (await request(aiLocation)).text()).includes("Saved to the research collection"),
+      );
+      assert.equal(
+        (await request(webLocation, "allowed", { ...prepareFields, requestId: randomUUID() }))
+          .status,
+        303,
+      );
+      assert.equal(
+        await runOne(worker, {
+          prepare: () => {
+            throw Error("Must not re-extract accepted work");
+          },
+        }),
+        false,
+      );
+      assert.equal(modelCalls, 1);
     } finally {
       await worker.end();
       await db.query(`drop role ${workerLogin}`);
