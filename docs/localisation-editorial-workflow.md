@@ -2,7 +2,7 @@
 
 ## Everyday development
 
-1. Edit the relevant file in `apps/website/src/content/pages/`. Each file keeps Spanish (`es`) and English (`en`) together. Shared templates apply layout and feature changes to both languages.
+1. Edit the relevant file in `apps/website/src/content/pages/`. Each file keeps Spanish (`es`) and English (`en`) together. Shared templates apply layout and feature changes to both languages. Events are the exception: each one is a single file in `apps/website/src/content/events/` holding its facts and both languages, described in [editing events](events-content.md).
 2. Preview the change with `mise exec -- just website-dev`. Open `/es/` or `/en/` and use the language links to compare.
 3. Update the other language when convenient. If it needs to wait, add a specific unchecked item below. New message keys need a value in both languages; existing wording can change independently.
 
@@ -18,7 +18,7 @@ Add follow-up wording changes here as they occur, with the file and the passage 
 - [ ] Review the project description and team copy (`about.json`).
 - [ ] Review collection explanations (`collection.json`).
 - [ ] Review the visit overview (`visit.json`).
-- [ ] Review events and programme descriptions (`events.json`, `programme.json`).
+- [ ] Review events page copy (`events.json`) and each event file in `src/content/events/`.
 - [ ] Review resources and their summaries (`resources.json`, `resource-summaries.json`).
 - [ ] Review the contact invitation and correspondence guidance (`contact.json`).
 - [ ] Review navigation, controls and dynamic messages (`interface.json`, `src/i18n/messages.ts`).

@@ -2,6 +2,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { z } from "astro/zod";
 import { content } from "../src/content/content";
+import { hasUnsupportedMarkup } from "../src/i18n/markup";
 
 const bilingualCopy = z
   .object({
@@ -23,22 +24,10 @@ export function validateLocalisation(entries: Record<string, unknown> = content)
       throw new Error(
         `${name}: translation keys differ (missing English: ${missing.join(", ")}; missing Spanish: ${extra.join(", ")})`,
       );
-    // Whole passages use a small set of trusted inline markup, never executable HTML.
     for (const [locale, copy] of Object.entries(result.data))
-      for (const [key, text] of Object.entries(copy)) {
-        const markup = text.match(/<[^>]*>/g) ?? [];
-        if (
-          /[<>]/.test(text.replace(/<[^>]*>/g, "")) ||
-          markup.some(
-            (tag) =>
-              !/^<(?:br(?: class="desktop-break")?\s*\/?|span(?: (?:class="struck-text"|lang="(?:rap|mi|es-CL|en-GB)"))?|\/span)>$/.test(
-                tag,
-              ),
-          )
-        ) {
+      for (const [key, text] of Object.entries(copy))
+        if (hasUnsupportedMarkup(text))
           throw new Error(`${name}.${locale}.${key}: unsupported inline markup`);
-        }
-      }
   }
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

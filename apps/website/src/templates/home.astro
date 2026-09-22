@@ -2,6 +2,8 @@
 import Event from "../components/Event.astro";
 import PageLink from "../components/PageLink.astro";
 import { getCopy } from "../content/content";
+import { getEvents } from "../data/events";
+import { storedEvents } from "../data/load-events";
 import { getConcepts, getResources } from "../data/site";
 
 import type { Locale } from "../i18n/routes";
@@ -10,8 +12,10 @@ import Layout from "../layouts/Layout.astro";
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const copy = getCopy("home", locale);
+const t = getCopy("interface", locale);
 const concepts = getConcepts(locale).filter((concept) => concept.id !== "moai");
 const resources = getResources(locale);
+const [nextEvent] = getEvents(storedEvents, locale).upcoming;
 ---
 <Layout locale={locale} page="home" title={copy.title} description={copy.description}>
   <section class="hero container">
@@ -33,7 +37,7 @@ const resources = getResources(locale);
   </section>
   <section class="container section" aria-labelledby="events-title">
     <div class="section-heading"><div><h2 id="events-title" class="eyebrow"><Fragment set:html={copy.passage11} /></h2><p><Fragment set:html={copy.passage12} /></p></div><PageLink class="text-link" page="events" locale={locale}>{copy.passage17}<span aria-hidden="true">↗</span></PageLink></div>
-    <Event locale={locale} open />
+    {nextEvent ? <Event event={nextEvent} open /> : <p class="muted">{t.eventsPending}</p>}
   </section>
   <img class="full-image landscape" src="/images/rapa-nui-absence.webp" alt={copy.passage03} width="1800" height="1200" loading="lazy" />
   <section class="container section editorial home-about">
