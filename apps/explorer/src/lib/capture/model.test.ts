@@ -131,7 +131,8 @@ describe("catalogue research without forced conclusions", () => {
     const c = readContent(form({ catalogue: "british-museum", namespace: "British Museum" }));
     expect(c.namespace).toBe("british-museum");
     expect(c.holder).toBe("A museum");
-    expect(() => readContent(form({ catalogue: "made-up" }))).toThrow(/catalogue/);
+    // Existence is checked against the registry in the write transaction.
+    expect(readContent(form({ catalogue: "another-system" })).namespace).toBe("another-system");
   });
   it("requires separate attribution when custody is unresolved", () => {
     expect(() =>

@@ -1,7 +1,6 @@
 import { randomUUID } from "node:crypto";
 import type { DossierPacket, EvidenceRelationship, PacketClaim } from "@mosa/object-dossier/packet";
 import { validatePacket } from "@mosa/object-dossier/validate";
-import { catalogues } from "./catalogues.js";
 
 export const fields = [
   "url",
@@ -94,14 +93,8 @@ export function readContent(form: FormData, previous?: Content): Content {
       throw new CaptureError("Enter a valid source check time.", "checkedAt");
     c.checkedAt = parsed.toISOString();
   }
-  // A custom namespace is preserved for existing drafts and less common catalogues.
-  // The familiar catalogues need no knowledge of internal codes.
-  if (form.has("catalogue")) {
-    const choice = String(form.get("catalogue"));
-    if (choice !== "other" && choice !== "" && !catalogues.some((x) => x.id === choice))
-      throw new CaptureError("Choose a catalogue from the list.", "catalogue");
-    c.namespace = choice === "other" ? String(form.get("customNamespace") ?? "").trim() : choice;
-  }
+  // Resolve the submitted choice against the database inside the write transaction.
+  if (form.has("catalogue")) c.namespace = String(form.get("catalogue") ?? "");
   for (const [key, allowed] of [
     ["nameBasis", ["has_name", "classified_as", "described_as"]],
     ["nameEvidenceMode", ["field", "excerpt", "whole"]],
@@ -135,11 +128,6 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
   if (c.identifier || c.namespace) {
     need("identifier", "Enter the catalogue number, or leave both catalogue fields empty.");
     need("namespace", "Choose the catalogue that assigns this number.");
-    if (!/^[a-z0-9][a-z0-9-]*$/.test(c.namespace))
-      throw new CaptureError(
-        "For another catalogue, use its agreed code: lower-case letters, numbers and hyphens. You can leave both catalogue fields empty and save a draft.",
-        "customNamespace",
-      );
   }
   if (c.holderStatus === "reported")
     need(

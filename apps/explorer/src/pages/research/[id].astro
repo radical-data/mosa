@@ -25,7 +25,8 @@ let submitted: Content | undefined;
 if (Astro.request.method === "POST") {
   const form = await boundedForm(Astro.request);
   try {
-    const action = String(form.get("action"));
+    const requestedAction = String(form.get("action"));
+    const action = requestedAction === "catalogues" ? "save" : requestedAction;
     await researchTransaction(actor, async (client) => {
       const previous = await getDraft(client, actor, id);
       if (["save", "review", "defer"].includes(action) && form.has("url")) {
@@ -38,10 +39,7 @@ if (Astro.request.method === "POST") {
           ) as Content,
         );
         if (form.has("catalogue"))
-          submitted.namespace =
-            String(form.get("catalogue")) === "other"
-              ? String(form.get("customNamespace") ?? "")
-              : String(form.get("catalogue") ?? "");
+          submitted.namespace = String(form.get("catalogue") ?? "");
         submitted = readContent(form, previous.content);
       }
       return changeDraft(
@@ -54,7 +52,12 @@ if (Astro.request.method === "POST") {
         String(form.get("identity")),
       );
     });
-    return Astro.redirect(`/research/${id}`, 303);
+    return Astro.redirect(
+      requestedAction === "catalogues"
+        ? `/research/catalogues?draft=${id}`
+        : `/research/${id}`,
+      303,
+    );
   } catch (e) {
     errorField = e instanceof CaptureError ? e.field : undefined;
     error =
@@ -63,7 +66,7 @@ if (Astro.request.method === "POST") {
         : "The change could not be saved. Please try again. No partial import was committed.";
   }
 }
-const { draft, matches, agents } = await researchTransaction(
+const { draft, matches, agents, catalogues } = await researchTransaction(
   actor,
   async (client) => {
     const draft = await getDraft(client, actor, id);
@@ -74,6 +77,7 @@ const { draft, matches, agents } = await researchTransaction(
           ? await identityMatches(client, draft.content)
           : [],
       agents: await agentChoices(client),
+      catalogues: await catalogueChoices(client),
     };
   },
 );
@@ -90,13 +94,9 @@ const evidenceText = (prefix: "name" | "holder"): string => {
 
 import AgentFields from "../../components/capture/AgentFields.astro";
 import EvidenceFields from "../../components/capture/EvidenceFields.astro";
-import { catalogueLabel, catalogues } from "../../lib/capture/catalogues";
+import { catalogueChoices, catalogueLabel } from "../../lib/capture/catalogues";
 
-const catalogue = catalogues.some((x) => x.id === c.namespace)
-  ? c.namespace
-  : c.namespace
-    ? "other"
-    : "";
+const catalogue = catalogues.find((x) => x.namespace === c.namespace);
 ---
 
 <Layout title={c.label || c.name || "Record a catalogue account"}>
@@ -173,7 +173,7 @@ const catalogue = catalogues.some((x) => x.id === c.namespace)
               <dt>Catalogue number</dt>
               <dd>
                 {c.identifier
-                  ? `${catalogueLabel(c.namespace)}: ${c.identifier}`
+                  ? `${catalogue ? catalogueLabel(catalogue) : c.namespace}: ${c.identifier}`
                   : "Not recorded"}
               </dd>
             </div>
@@ -271,30 +271,26 @@ const catalogue = catalogues.some((x) => x.id === c.namespace)
           </details>
           <label for="catalogue">Which catalogue assigns this number?</label>
           <select id="catalogue" name="catalogue">
-            <option value="" selected={!catalogue}>
+            <option value="" selected={!c.namespace}>
               No catalogue number recorded
             </option>
             {catalogues.map((x) => (
-              <option value={x.id} selected={catalogue === x.id}>
-                {x.label}
+              <option
+                value={x.namespace}
+                selected={c.namespace === x.namespace}
+              >
+                {catalogueLabel(x)}
               </option>
             ))}
-            <option value="other" selected={catalogue === "other"}>
-              Another catalogue
-            </option>
           </select>
-          <div data-when="catalogue" data-values="other">
-            <label for="customNamespace">Other catalogue’s agreed code</label>
-            <input
-              id="customNamespace"
-              name="customNamespace"
-              value={catalogue === "other" ? c.namespace : ""}
-            />
-            <p class="muted">
-              For an unlisted catalogue, ask a maintainer for its code. You can
-              leave the catalogue and number empty and keep working.
-            </p>
-          </div>
+          <button type="submit" name="action" value="catalogues" formnovalidate>
+            Add or rename catalogues
+          </button>
+          <p class="muted">
+            Saves this draft before opening the catalogue list. Catalogue names
+            describe numbering systems, such as a museum’s inventory or
+            registration numbers.
+          </p>
           <label for="identifier">Catalogue number, exactly as recorded</label>
           <input id="identifier" name="identifier" value={c.identifier} />
           <p class="muted">

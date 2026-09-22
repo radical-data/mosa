@@ -86,6 +86,7 @@ async function verify() {
     assert.match(signIn.headers.get("set-cookie") ?? "", /SameSite=Strict/i);
     assert.equal((await request("/research", "invalid")).status, 303);
     assert.equal((await request("/research", "outsider")).status, 403);
+    assert.equal((await request("/research/catalogues", "outsider")).status, 403);
     const cross = await fetch(`${origin}/research`, {
       method: "POST",
       headers: {
@@ -100,6 +101,19 @@ async function verify() {
     assert.equal(home.status, 200);
     assert.equal(home.headers.get("cache-control"), "private, no-store");
     const html = await home.text();
+    const catalogueName = `HTTP catalogue ${actor}`;
+    assert.equal(
+      (await request("/research/catalogues", "allowed", { label: catalogueName })).status,
+      303,
+    );
+    const catalogue = (
+      await db.query("select namespace from entities.catalogue where label=$1", [catalogueName])
+    ).rows[0];
+    assert(catalogue);
+    const duplicateCatalogue = await request("/research/catalogues", "allowed", {
+      label: catalogueName,
+    });
+    assert((await duplicateCatalogue.text()).includes("already exists"));
     const requestId = html.match(/name="requestId" value="([^"]+)"/)?.[1];
     assert(requestId);
     const created = await request("/research", "allowed", {
@@ -119,7 +133,8 @@ async function verify() {
     assert.equal(edit.status, 200);
     const editPage = await edit.text();
     assert(editPage.includes("Which catalogue assigns this number?"));
-    assert(editPage.includes("British Museum — museum number"));
+    assert(editPage.includes(catalogueName));
+    assert(!editPage.includes("customNamespace"));
     assert(editPage.includes('data-when="speakerMode"'));
     assert(editPage.includes("Not established from this source"));
     const invalid = await request(location, "allowed", {
@@ -127,15 +142,34 @@ async function verify() {
       action: "review",
       url: "not-a-url",
       name: "Keep my copied wording",
-      catalogue: "british-museum",
+      catalogue: catalogue.namespace,
       identifier: "Oc,+.2595",
     });
     const invalidPage = await invalid.text();
     assert(invalidPage.includes('href="#url"'));
     assert(invalidPage.includes('value="Keep my copied wording"'));
-    assert.match(invalidPage, /value="british-museum" selected/);
-    const fields = {
+    assert(invalidPage.includes(`value="${catalogue.namespace}" selected`));
+    const manage = await request(location, "allowed", {
       revision: "1",
+      action: "catalogues",
+      url: `https://example.org/http-${actor}`,
+      name: "Work preserved before catalogue editing",
+      catalogue: catalogue.namespace,
+    });
+    assert.equal(manage.status, 303);
+    assert.equal(
+      manage.headers.get("location"),
+      `/research/catalogues?draft=${location.split("/").at(-1)}`,
+    );
+    const catalogueLocation = manage.headers.get("location");
+    assert(catalogueLocation);
+    const cataloguePage = await request(catalogueLocation);
+    assert((await cataloguePage.text()).includes("Return to your saved draft"));
+    assert(
+      (await (await request(location)).text()).includes("Work preserved before catalogue editing"),
+    );
+    const fields = {
+      revision: "2",
       action: "review",
       url: `https://example.org/http-${actor}`,
       name: "HTTP object",
@@ -143,7 +177,7 @@ async function verify() {
       holderIdentity: "new",
       holderStatus: "reported",
       nameEvidenceMode: "excerpt",
-      namespace: "http-test",
+      catalogue: catalogue.namespace,
       identifier: actor,
       nameLocator: "Title",
       nameExcerpt: "HTTP object",
@@ -158,12 +192,12 @@ async function verify() {
     const review = await request(location);
     assert((await review.text()).includes("Confirm the object identity"));
     assert.equal(
-      (await request(location, "allowed", { revision: "2", action: "accept", identity: "new" }))
+      (await request(location, "allowed", { revision: "3", action: "accept", identity: "new" }))
         .status,
       303,
     );
     assert.equal(
-      (await request(location, "allowed", { revision: "2", action: "accept", identity: "new" }))
+      (await request(location, "allowed", { revision: "3", action: "accept", identity: "new" }))
         .status,
       303,
     );

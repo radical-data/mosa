@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { importInTransaction, lockImport } from "@mosa/object-dossier/import";
 import type { ClientBase } from "pg";
+import { requireCatalogue } from "./catalogues.js";
 import { CaptureError, type Content, normaliseContent, packetFor, uuid } from "./model.js";
 
 export interface Draft {
@@ -54,6 +55,7 @@ export async function createDraft(
   content: Content,
 ) {
   if (!uuid.test(requestId)) throw new CaptureError("Reload the form before saving.");
+  await requireCatalogue(client, content.namespace);
   const result = await client.query<Draft>(
     `insert into capture.draft(id,owner_id,request_id,content) values($1,$2,$3,$4)
     on conflict(owner_id,request_id) do nothing returning *`,
@@ -147,6 +149,7 @@ export async function changeDraft(
     throw new CaptureError("This draft changed in another tab. Reload it before continuing.");
   if (["accepted", "deleted"].includes(draft.status))
     throw new CaptureError("This draft can no longer be changed.");
+  if (content) await requireCatalogue(client, content.namespace);
   let status: string;
   let item: string | null = null;
   if (action === "save" || action === "review") {

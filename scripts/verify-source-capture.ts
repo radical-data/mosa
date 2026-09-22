@@ -6,6 +6,9 @@ import { getLocalDatabaseUrl } from "./lib/supabase-local";
 
 async function verify() {
   const { readContent } = await import("../apps/explorer/src/lib/capture/model.js");
+  const { catalogueChoices, saveCatalogue } = await import(
+    "../apps/explorer/src/lib/capture/catalogues.js"
+  );
   const { agentChoices, changeDraft, createDraft, getDraft, identityMatches, requireResearcher } =
     await import("../apps/explorer/src/lib/capture/store.js");
   const connectionString =
@@ -30,6 +33,10 @@ async function verify() {
     }
     for (const role of ["anon", "authenticated", "explorer_reader"]) {
       await client.query(`set local role ${role}`);
+      await fails(
+        () => client.query("insert into entities.catalogue(label) values('Forbidden')"),
+        /permission denied/,
+      );
       await fails(() => client.query("select * from capture.draft"), /permission denied/);
       await fails(
         () => client.query("select entities.create_item('artefact')"),
@@ -39,6 +46,23 @@ async function verify() {
     }
     await client.query("set local role capture_writer");
     await requireResearcher(client, actor);
+    const catalogueForm = new FormData();
+    catalogueForm.set("label", "Capture test catalogue");
+    await saveCatalogue(client, catalogueForm);
+    const catalogue = (await catalogueChoices(client)).find(
+      (c) => c.label === "Capture test catalogue",
+    );
+    assert(catalogue);
+    assert.match(catalogue.namespace, /^catalogue-/);
+    catalogueForm.set("label", "  CAPTURE   TEST CATALOGUE  ");
+    await fails(() => saveCatalogue(client, catalogueForm), /already exists/);
+    await fails(
+      () =>
+        client.query("update entities.catalogue set namespace='changed' where namespace=$1", [
+          catalogue.namespace,
+        ]),
+      /permission denied/,
+    );
     await fails(() => client.query("select * from publication.state"), /permission denied/);
     await fails(
       () => client.query("update capture.researcher set enabled=false"),
@@ -56,12 +80,16 @@ async function verify() {
       holderNameLocator: "Publisher heading",
       holderNameExcerpt: "Synthetic museum",
       speakerMode: "holder",
-      namespace: "capture-test",
+      namespace: catalogue.namespace,
       identifier: randomUUID(),
       note: "PRIVATE-DRAFT-NOTE",
     }))
       form.set(key, value);
     const content = readContent(form);
+    await fails(
+      () => createDraft(client, actor, randomUUID(), { ...content, namespace: "unregistered" }),
+      /Choose an existing catalogue/,
+    );
     const request = randomUUID();
     const draft = await createDraft(client, actor, request, content);
     assert.equal((await createDraft(client, actor, request, content)).id, draft.id);
@@ -111,6 +139,12 @@ async function verify() {
     );
     assert.equal((await client.query("select count(*) from knowledge.claim")).rows[0].count, count);
     assert.equal((await identityMatches(client, content))[0].id, accepted.item_id);
+    catalogueForm.set("namespace", catalogue.namespace);
+    catalogueForm.set("previousLabel", catalogue.label ?? "");
+    catalogueForm.set("label", "Renamed test catalogue");
+    await saveCatalogue(client, catalogueForm);
+    assert.equal((await identityMatches(client, content))[0].id, accepted.item_id);
+    await fails(() => saveCatalogue(client, catalogueForm), /changed/);
     await fails(
       () => client.query("select * from capture.publication_candidate"),
       /permission denied/,
