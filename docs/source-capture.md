@@ -95,9 +95,13 @@ Packet v3 uses `urn:mosa:source:<id>` with an immutable `version` UUID. The impo
 
 Verified with a synthetic cross-page description through the built HTTP app, including explicit research consent, unknown custody, acceptance retry and private source access. No real PDF transcription or model processing was performed.
 
-## Catalogue capture worker (slice 3)
+## Catalogue capture with Supabase (slice 3)
 
-Apply `20260922160000_catalogue_capture.sql`. Provision a separate login granted **only** `capture_worker` and set `RESEARCH_WORKER_DATABASE_URL` in the worker environment. It has no canonical or publication write grants. Give that process the same private source storage configuration, then run `just research-worker` (or `just research-worker --once` for one queued job). Do not use an administrator or the app's `capture_writer` login for this process.
+Apply `20260922160000_catalogue_capture.sql` and `20260922163000_managed_research_queue.sql`. The latter replaces custom queue polling with Supabase Queues (`pgmq`). Provision a login granted **only** `capture_worker` and set `RESEARCH_WORKER_DATABASE_URL` in the existing app. It has no canonical or publication write grants. Do not use an administrator or the app's `capture_writer` login.
+
+Set a random server-only `RESEARCH_RUNNER_SECRET` of at least 32 characters. Store the same secret as `research_runner_token` in Supabase Vault, with the app's exact HTTPS `/api/research-step` URL as `research_runner_url`. Run [`scripts/schedule-research.sql`](../scripts/schedule-research.sql) as a maintainer to schedule one bounded operation each minute. Supabase Cron calls the existing app: there is no separate always-running worker, deployment or Edge Functions runtime. The endpoint requires its own bearer secret, ignores caller-supplied work, and claims only persisted queue messages. Keep the app request timeout above 120 seconds. Reapplying the named schedule updates it; stop it with `cron.unschedule('mosa-research-step')`.
+
+The queue stores job IDs only. Application job records provide researcher-visible progress and preserve results; queue visibility handles delivery and restart. Completion acknowledges the message in the same transaction as its result. A lease token prevents an old invocation from overwriting a newer attempt. See [Supabase Queues](https://supabase.com/docs/guides/queues) and [Cron scheduling](https://supabase.com/docs/guides/functions/schedule-functions).
 
 **Your sources → Preserve a catalogue page** enqueues capture. The source page shows progress, failure, explicit retry, original URL, raw download, retrieval details and escaped readable text. **Capture another version** retains earlier versions. Each capture request has a stable ID; interrupted uploads resume the same bytes and leases expire after three minutes. After three interruptions, explicit retry is required. If the site changes before an interrupted upload can be recovered, start another capture.
 

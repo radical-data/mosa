@@ -242,3 +242,7 @@ Implemented document-backed preparation, packet v3 and exact evidence-version re
 ### Slice 3 delivery evidence — 2026-09-22
 
 Implemented a Supabase Postgres job queue, restricted worker login, private Storage snapshots, retrieval manifests, readable HTML/JSON and source-page progress/retry. Static checks and 202 unit tests pass. Database/import/publication regressions pass; focused worker and built HTTP checks pass, including immutable recovery, expired leases, changed versions and manual preparation from a captured page. Live museum access remains site-dependent; no hosted worker has been deployed.
+
+### Lean Supabase execution — 2026-09-22
+
+Following the owner's request, replace the standalone polling process with Supabase Queues and Supabase Cron invoking one bounded operation in the existing app. Remove the standalone executable and its command. Preserve source/job history and restricted runner credentials. This adds one usable refinement commit: `refactor(research): use supabase for background job delivery`. Scheduling remains a deployment operation, not a side effect of schema migration.

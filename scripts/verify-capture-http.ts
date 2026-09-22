@@ -111,6 +111,7 @@ async function verify() {
     assert.match(signIn.headers.get("set-cookie") ?? "", /HttpOnly/i);
     assert.match(signIn.headers.get("set-cookie") ?? "", /SameSite=Strict/i);
     assert.equal((await request("/research", "invalid")).status, 303);
+    assert.equal((await request("/api/research-step", "allowed", {})).status, 401);
     assert.equal((await request("/research", "outsider")).status, 403);
     assert.equal((await request("/research/catalogues", "outsider")).status, 403);
     const cross = await fetch(`${origin}/research`, {

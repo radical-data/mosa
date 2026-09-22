@@ -108,6 +108,7 @@ async function verify() {
       next,
     ]);
     await assert.rejects(() => withJob(worker, lease, async () => null), /lease expired/);
+    await admin.query("select pgmq.set_vt('research_jobs',$1,0)", [lease.message_id]);
     await runOne(worker, { capture: handler });
     assert.equal(
       (

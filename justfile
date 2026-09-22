@@ -161,7 +161,3 @@ collection-verify:
 
 collection-website-verify:
     pnpm exec tsx scripts/verify-collection-website.ts
-
-# Process durable capture/preparation jobs with a separate restricted login.
-research-worker *args:
-    pnpm exec tsx scripts/research-worker.ts "$@"

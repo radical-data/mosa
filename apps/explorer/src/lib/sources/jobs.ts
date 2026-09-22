@@ -7,6 +7,7 @@ import { type SourceStorage, sha256, sourceStorage } from "./storage.js";
 import type { SourceVersion } from "./store.js";
 
 export interface Job {
+  message_id: string;
   id: string;
   owner_id: string;
   source_id: string;
@@ -65,22 +66,10 @@ export async function transaction<T>(pool: Pool, fn: (c: ClientBase) => Promise<
   }
 }
 export async function claimJob(pool: Pool): Promise<Job | undefined> {
-  return transaction(pool, async (c) => {
-    await c.query(
-      "update capture.job set status='failed',error='Worker interrupted three times; retry explicitly.' where status='running' and lease_until<now() and attempts>=3",
-    );
-    const row = (
-      await c.query<Job>(`select j.* from capture.job j join capture.researcher r on r.user_id=j.owner_id and r.enabled
-    where (status='queued' or status='running' and lease_until<now()) and attempts<3 order by created_at for update of j skip locked limit 1`)
-    ).rows[0];
-    if (!row) return;
-    const lease = randomUUID();
-    await c.query(
-      "update capture.job set status='running',lease=$2,lease_until=now()+interval '3 minutes',attempts=attempts+1,error=null where id=$1",
-      [row.id, lease],
-    );
-    return { ...row, lease, status: "running" };
-  });
+  return transaction(
+    pool,
+    async (c) => (await c.query<Job>("select * from capture.take_job()")).rows[0],
+  );
 }
 export async function withJob<T>(
   pool: Pool,
@@ -174,21 +163,25 @@ export async function runOne(
     if (!handler)
       throw new CaptureFailure("unsupported", "This worker does not support the requested job.");
     const result = await handler(pool, job);
-    await withJob(pool, job, (c) =>
-      c.query("update capture.job set status='succeeded',result=$2,lease_until=null where id=$1", [
-        job.id,
-        result,
-      ]),
-    );
+    await withJob(pool, job, async (c) => {
+      await c.query(
+        "update capture.job set status='succeeded',result=$2,lease_until=null where id=$1",
+        [job.id, result],
+      );
+      await c.query("select capture.ack_job($1)", [job.message_id]);
+    });
   } catch (e) {
     const message =
       e instanceof CaptureFailure
         ? `${e.code}: ${e.message}`
-        : "Operation failed. Check worker configuration or retry; saved work is retained.";
-    await pool.query(
-      "update capture.job set status='failed',error=$3,lease_until=null where id=$1 and lease=$2 and status in ('running','paused')",
-      [job.id, job.lease, message],
-    );
+        : "Operation failed. Check runner configuration or retry; saved work is retained.";
+    await transaction(pool, async (c) => {
+      const changed = await c.query(
+        "update capture.job set status='failed',error=$3,lease_until=null where id=$1 and lease=$2 and status in ('running','paused')",
+        [job.id, job.lease, message],
+      );
+      if (changed.rowCount) await c.query("select capture.ack_job($1)", [job.message_id]);
+    });
   }
   return true;
 }
