@@ -1,0 +1,71 @@
+---
+import type { Content } from "../../lib/capture/model";
+import type { AgentChoice } from "../../lib/capture/store";
+
+interface Props {
+  prefix: "holder" | "speaker";
+  content: Content;
+  agents: AgentChoice[];
+}
+const { prefix, content: c, agents } = Astro.props;
+const selected = agents.find((a) => a.id === c[`${prefix}Identity`]);
+const locator = prefix === "holder" ? "holderNameLocator" : "speakerLocator";
+const excerpt = prefix === "holder" ? "holderNameExcerpt" : "speakerExcerpt";
+const needsName =
+  !selected?.evidenceId || (c[prefix] && c[prefix] !== selected.label);
+---
+
+<label for={`${prefix}Identity`}>
+  {prefix === "holder"
+    ? "Who does the source report holds this object?"
+    : "Who is making the statements in this source?"}
+</label>
+<select id={`${prefix}Identity`} name={`${prefix}Identity`} data-agent={prefix}>
+  <option value="new" selected={c[`${prefix}Identity`] === "new"}>
+    Add a person or institution not listed here
+  </option>
+  {agents.map((a) => (
+    <option
+      value={a.id}
+      selected={a.id === c[`${prefix}Identity`]}
+      data-evidenced={Boolean(a.evidenceId)}
+    >
+      {a.label}
+    </option>
+  ))}
+</select>
+<p class="muted">
+  Select an existing record only when you have checked its identity. Its
+  existing evidenced name will be reused.
+</p>
+<details open={Boolean(needsName)} data-agent-details={prefix}>
+  <summary>
+    New record, different source wording, or missing name evidence
+  </summary>
+  <label for={prefix}>
+    {prefix === "holder"
+      ? "Institution name as written in the source"
+      : "Person or institution name as written in the source"}
+  </label>
+  <input
+    id={prefix}
+    name={prefix}
+    value={c[prefix]}
+    placeholder="Leave empty to use the selected record’s name"
+  />
+  <label for={locator}>Where is this name given?</label>
+  <input
+    id={locator}
+    name={locator}
+    value={c[locator]}
+    placeholder="For example: page heading or author credit"
+  />
+  <label for={excerpt}>Copy the wording that names them</label>
+  <textarea id={excerpt} name={excerpt} maxlength="4000">{c[excerpt]}</textarea>
+  <p class="muted">
+    Complete these details for a new record or a different name.{" "}
+    {prefix === "holder"
+      ? "This names the institution; evidence that it holds this particular object is recorded separately."
+      : "Keep the original speaker distinct from a website republishing their words."}
+  </p>
+</details>

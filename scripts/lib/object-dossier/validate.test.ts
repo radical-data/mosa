@@ -71,7 +71,7 @@ describe("validatePacket schema validation", () => {
   it("rejects unknown schema versions", () => {
     const outcome = validatePacket(
       packetWith((packet) => {
-        (packet as { schemaVersion: number }).schemaVersion = 2;
+        (packet as { schemaVersion: number }).schemaVersion = 99;
       }),
     );
 
@@ -393,4 +393,16 @@ describe("validatePacket excerpt rules", () => {
 
     expect(outcome.errors.length).toBeGreaterThan(0);
   });
+});
+
+describe("versioned classification and description import", () => {
+  for (const predicate of ["classified_as", "described_as"] as const) {
+    it(`accepts ${predicate} in v2 but keeps the v1 predicate boundary`, () => {
+      const packet = minimalPacket();
+      packet.claims[0].predicate = predicate;
+      expect(validatePacket(packet).packet).toBeUndefined();
+      packet.schemaVersion = 2;
+      expect(validatePacket(packet).errors).toEqual([]);
+    });
+  }
 });

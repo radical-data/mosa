@@ -36,6 +36,10 @@ Therefore:
 
 ## Consequences
 
+### 2026-09-22 extension: preserve catalogue wording semantics
+
+Packet schema version 2 adds text-valued `classified_as` and `described_as` claims. The capture form distinguishes a name from an object type or description instead of coercing every catalogue label into `has_name`. Version 1 retains its original allowlist; existing packets remain valid and repeatable. Custody and identifiers may remain unresolved in research. The current public-card contract still requires an evidenced name, holder and identifier.
+
 ### Benefits
 
 - Real data can be loaded, audited and reloaded without touching schema history or fixtures.

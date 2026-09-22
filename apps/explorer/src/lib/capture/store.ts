@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { importInTransaction, lockImport } from "@mosa/object-dossier/import";
 import type { ClientBase } from "pg";
-import { CaptureError, type Content, packetFor, uuid } from "./model.js";
+import { CaptureError, type Content, normaliseContent, packetFor, uuid } from "./model.js";
 
 export interface Draft {
   id: string;
@@ -39,7 +39,7 @@ export async function getDraft(
     [id, actor],
   );
   if (!result.rows[0]) throw new CaptureError("Draft not found.");
-  return result.rows[0];
+  return { ...result.rows[0], content: normaliseContent(result.rows[0].content) };
 }
 async function recordRevision(client: ClientBase, draft: Draft) {
   await client.query(
@@ -77,20 +77,59 @@ export async function identityMatches(client: ClientBase, c: Content): Promise<M
     select entity_id id,'Exact catalogue identifier' reason from entities.external_identifier where namespace=$1 and value=$2
     union select c.object_entity_id,'Same source URL' from entities.source s join knowledge.claim c on c.subject_id=s.id
       where btrim(s.reference)=$3 and c.predicate='refers_to' and c.status='active'
-  ) select m.id,entities.entity_display_label(m.id) label,string_agg(distinct m.reason,', ') reason,
+  ) select m.id,(entities.entity_display_label(m.id)).display_label label,string_agg(distinct m.reason,', ') reason,
     (select string_agg(namespace||': '||value,', ') from entities.external_identifier where entity_id=m.id) identifier,
-    (select entities.entity_display_label(object_entity_id) from knowledge.claim where subject_id=m.id and predicate='held_by' and status='active' order by id limit 1) holder
+    (select (entities.entity_display_label(object_entity_id)).display_label from knowledge.claim where subject_id=m.id and predicate='held_by' and status='active' order by id limit 1) holder
     from matches m join entities.item i on i.id=m.id group by m.id order by m.id`,
       [c.namespace, c.identifier, c.url],
     )
   ).rows;
 }
-export async function agentChoices(client: ClientBase) {
+export interface AgentChoice {
+  id: string;
+  label: string;
+  evidenceId: string | null;
+}
+export async function agentChoices(client: ClientBase): Promise<AgentChoice[]> {
   return (
-    await client.query<{ id: string; label: string }>(
-      `select a.id,entities.entity_display_label(a.id) label from entities.agent a order by label,a.id limit 500`,
-    )
+    await client.query<AgentChoice>(`
+    select a.id, display.display_label label, evidence.id::text as "evidenceId"
+    from entities.agent a
+    join entities.entity_display display on display.id=a.id
+    left join lateral (
+      select e.id from knowledge.claim_evidence e
+      join knowledge.claim c on c.id=e.claim_id
+      where c.id=display.display_label_claim_id and c.status='active'
+        and c.predicate='has_name' and e.relationship='supports'
+      order by e.id limit 1
+    ) evidence on true
+    order by display.display_label,a.id
+  `)
   ).rows;
+}
+// Select existing evidence once during review. The researcher confirms the
+// readable label; the server records the exact evidence used for publication.
+async function resolveAgentLabels(client: ClientBase, value: Content): Promise<Content> {
+  const c = normaliseContent(value);
+  delete c.holderNameEvidenceId;
+  delete c.speakerNameEvidenceId;
+  const agents = await agentChoices(client);
+  for (const prefix of ["holder", "speaker"] as const) {
+    if (prefix === "holder" ? c.holderStatus === "unknown" : c.speakerMode !== "other") continue;
+    const id = c[`${prefix}Identity`];
+    if (id === "new") continue;
+    const agent = agents.find((a) => a.id === id);
+    if (!agent)
+      throw new CaptureError(
+        "The selected person or institution is no longer available.",
+        `${prefix}Identity`,
+      );
+    if (!c[prefix] || c[prefix] === agent.label) {
+      c[prefix] = agent.label;
+      if (agent.evidenceId) c[`${prefix}NameEvidenceId`] = agent.evidenceId;
+    }
+  }
+  return c;
 }
 export async function changeDraft(
   client: ClientBase,
@@ -112,8 +151,8 @@ export async function changeDraft(
   let item: string | null = null;
   if (action === "save" || action === "review") {
     if (!content) throw new CaptureError("Draft content is required.");
-    draft.content = content;
-    if (action === "review") packetFor(id, revision + 1, content);
+    draft.content = action === "review" ? await resolveAgentLabels(client, content) : content;
+    if (action === "review") packetFor(id, revision + 1, draft.content);
     status = action === "review" ? "review" : "draft";
   } else if (["defer", "reject", "delete"].includes(action)) {
     if (action === "defer" && content) draft.content = content;
@@ -127,11 +166,23 @@ export async function changeDraft(
       throw new CaptureError("A matching object now exists. Review its identity before accepting.");
     if (identity !== "new" && !matches.some((m) => m.id === identity))
       throw new CaptureError("Confirm the object identity or defer this draft.");
+    const resolved = await resolveAgentLabels(client, draft.content);
+    if (
+      resolved.holderNameEvidenceId !== draft.content.holderNameEvidenceId ||
+      resolved.speakerNameEvidenceId !== draft.content.speakerNameEvidenceId ||
+      resolved.holder !== draft.content.holder ||
+      resolved.speaker !== draft.content.speaker
+    )
+      throw new CaptureError(
+        "An institution label or its evidence changed. Save and review this draft again.",
+      );
     const packet = packetFor(id, revision, draft.content);
     const bindings: Record<string, string> = {};
     if (identity !== "new") bindings["item:object"] = identity as string;
     for (const [key, value] of [
-      ["agent:holder", draft.content.holderIdentity],
+      ...(draft.content.holderStatus === "reported"
+        ? [["agent:holder", draft.content.holderIdentity]]
+        : []),
       ...(draft.content.speakerMode === "other"
         ? [["agent:speaker", draft.content.speakerIdentity]]
         : []),

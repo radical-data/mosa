@@ -103,7 +103,10 @@ async function main() {
                   [values.draft],
                 )
               ).rows[0];
-              if (!draft) throw Error("Accepted draft not found");
+              if (!draft)
+                throw Error(
+                  "This draft is not ready for a public card. It needs an accepted name, reported holder, identifier and evidenced labels. Classifications, descriptions and unresolved research remain in the research collection.",
+                );
               selection = draft.selection;
             } else selection = JSON.parse(await readFile(values.selection as string, "utf8"));
             if (values.retain) {

@@ -4,6 +4,10 @@ import { boundedForm, researchTransaction } from "../../lib/capture/access";
 import {
   CaptureError,
   type Content,
+  fields,
+  nameBases,
+  normaliseContent,
+  publicationGaps,
   readContent,
 } from "../../lib/capture/model";
 import {
@@ -16,6 +20,7 @@ import {
 const actor = Astro.locals.researcher;
 const id = Astro.params.id ?? "";
 let error = "";
+let errorField: string | undefined;
 let submitted: Content | undefined;
 if (Astro.request.method === "POST") {
   const form = await boundedForm(Astro.request);
@@ -23,8 +28,22 @@ if (Astro.request.method === "POST") {
     const action = String(form.get("action"));
     await researchTransaction(actor, async (client) => {
       const previous = await getDraft(client, actor, id);
-      if (["save", "review", "defer"].includes(action) && form.has("url"))
+      if (["save", "review", "defer"].includes(action) && form.has("url")) {
+        submitted = normaliseContent(
+          Object.fromEntries(
+            [...fields, "checkedAt"].map((key) => [
+              key,
+              String(form.get(key) ?? ""),
+            ]),
+          ) as Content,
+        );
+        if (form.has("catalogue"))
+          submitted.namespace =
+            String(form.get("catalogue")) === "other"
+              ? String(form.get("customNamespace") ?? "")
+              : String(form.get("catalogue") ?? "");
         submitted = readContent(form, previous.content);
+      }
       return changeDraft(
         client,
         actor,
@@ -37,6 +56,7 @@ if (Astro.request.method === "POST") {
     });
     return Astro.redirect(`/research/${id}`, 303);
   } catch (e) {
+    errorField = e instanceof CaptureError ? e.field : undefined;
     error =
       e instanceof CaptureError
         ? e.message
@@ -57,358 +77,428 @@ const { draft, matches, agents } = await researchTransaction(
     };
   },
 );
-const c = submitted ?? draft.content;
-const relationships = [
-  ["supports", "Supports the statement"],
-  ["qualifies", "Qualifies the statement"],
-  ["contradicts", "Contradicts the statement"],
-  ["mentions", "Mentions it"],
-  ["provides_context", "Provides context"],
-];
+const c = normaliseContent(submitted ?? draft.content);
+const gaps = publicationGaps(c);
+const basisLabel = nameBases.find(([value]) => value === c.nameBasis)?.[1];
+const evidenceText = (prefix: "name" | "holder"): string => {
+  const mode = c[`${prefix}EvidenceMode`];
+  if (mode === "whole")
+    return "Whole catalogue record (citation; no quotation)";
+  if (mode === "shared") return evidenceText("name");
+  return `${c[`${prefix}Locator`]}: ${mode === "field" ? c.name : c[`${prefix}Excerpt`]}`;
+};
+
+import AgentFields from "../../components/capture/AgentFields.astro";
+import EvidenceFields from "../../components/capture/EvidenceFields.astro";
+import { catalogueLabel, catalogues } from "../../lib/capture/catalogues";
+
+const catalogue = catalogues.some((x) => x.id === c.namespace)
+  ? c.namespace
+  : c.namespace
+    ? "other"
+    : "";
 ---
 
-<Layout title={c.label || c.name || "Review source"}>
-  <p class="breadcrumb"><a href="/research">Your drafts</a></p>
-  <h1>{c.label || c.name || "Record what the source says"}</h1>
-  <p><span class="badge">{draft.status}</span> · Revision {draft.revision}</p>
-  {
-    error && (
-      <p class="notice" role="alert">
-        {error}
-      </p>
-    )
-  }
-  {
-    draft.status === "accepted" ? (
-      <section class="panel">
-        <h2>Saved to the research collection</h2>
-        <p>
-          <a href={`/entities/${draft.item_id}`}>Open the research record</a>
-        </p>
-        <p>
-          This acceptance does not publish anything. Ask a maintainer to review
-          the selected fields for the website.
-        </p>
-      </section>
-    ) : draft.status === "deleted" ? (
+<Layout title={c.label || c.name || "Record a catalogue account"}>
+  <p class="breadcrumb">
+    <a href="/research">Your drafts</a>
+  </p>
+  <h1>{c.label || "Record what the catalogue says"}</h1>
+  <p class="lede">
+    Copy the source’s wording, identify what it describes, and leave unresolved
+    research open. Saving a draft does not publish anything.
+  </p>
+  {error && (
+    <div class="notice" role="alert">
+      {errorField ? <a href={`#${errorField}`}>{error}</a> : error}
+    </div>
+  )}
+  {draft.status === "accepted" ? (
+    <section class="panel">
+      <h2>Saved to the research collection</h2>
       <p>
-        This draft has been removed from your workspace. No research record was
-        changed.
+        <a href={`/entities/${draft.item_id}`}>Open the research record</a>
       </p>
-    ) : (
-      <>
-        {draft.status === "review" && !error && (
-          <section class="panel" aria-label="Review proposed record">
-            <h2>Review the proposed record</h2>
-            <p>
-              <a href={c.url} target="_blank" rel="noreferrer">
-                Open the source catalogue
-              </a>{" "}
-              · Source recorded{" "}
-              {new Date(c.checkedAt).toLocaleDateString("en-GB")}
-            </p>
-            <dl class="metadata">
+      <p>
+        A maintainer separately reviews what can appear on the public website.
+      </p>
+      {gaps.length > 0 && (
+        <>
+          <h3>Before a public card can be prepared</h3>
+          <ul>
+            {gaps.map((gap) => (
+              <li>{gap}</li>
+            ))}
+          </ul>
+          <p>
+            The accepted research is retained. Do not change its meaning merely
+            to fit a card.
+          </p>
+        </>
+      )}
+    </section>
+  ) : draft.status === "deleted" ? (
+    <p>
+      This draft has been removed from your workspace. No research record was
+      changed.
+    </p>
+  ) : (
+    <>
+      {draft.status === "review" && !error && (
+        <section class="panel" aria-label="Review proposed record">
+          <h2>Review the source account</h2>
+          <p>
+            <a href={c.url} target="_blank" rel="noreferrer">
+              Open the source catalogue
+            </a>
+          </p>
+          <dl class="metadata">
+            <div>
+              <dt>{basisLabel}</dt>
+              <dd>{c.name}</dd>
+              <dd class="source-text">{evidenceText("name")}</dd>
+            </div>
+            <div>
+              <dt>Reported holder</dt>
+              <dd>
+                {c.holderStatus === "unknown"
+                  ? "Not established from this source"
+                  : c.holder}
+              </dd>
+              {c.holderStatus === "reported" && (
+                <dd class="source-text">{evidenceText("holder")}</dd>
+              )}
+            </div>
+            <div>
+              <dt>Catalogue number</dt>
+              <dd>
+                {c.identifier
+                  ? `${catalogueLabel(c.namespace)}: ${c.identifier}`
+                  : "Not recorded"}
+              </dd>
+            </div>
+            <div>
+              <dt>Who makes the statements?</dt>
+              <dd>
+                {c.speakerMode === "holder"
+                  ? c.holder
+                  : c.speakerMode === "other"
+                    ? c.speaker
+                    : "Unknown"}
+              </dd>
+            </div>
+            {c.interpretation && (
               <div>
-                <dt>Name</dt>
-                <dd>{c.name}</dd>
-                <dd>
-                  {c.nameLocator}: <q>{c.nameExcerpt}</q> ({c.nameRelationship})
-                </dd>
+                <dt>Your interpretation (private; not a source quotation)</dt>
+                <dd>{c.interpretation}</dd>
               </div>
-              <div>
-                <dt>Reported holder</dt>
-                <dd>{c.holder}</dd>
-                <dd>
-                  {c.holderLocator}: <q>{c.holderExcerpt}</q> (
-                  {c.holderRelationship})
-                </dd>
-              </div>
-              <div>
-                <dt>Catalogue identifier</dt>
-                <dd>
-                  {c.namespace}: {c.identifier}
-                </dd>
-              </div>
-              <div>
-                <dt>Statements attributed to</dt>
-                <dd>
-                  {c.speakerMode === "holder"
-                    ? c.holder
-                    : c.speakerMode === "other"
-                      ? c.speaker
-                      : "Unknown"}
-                </dd>
-              </div>
-            </dl>
-            <h3>Confirm the object identity</h3>
-            <p>
-              Names do not establish identity. These matches use the exact
-              identifier or source URL.
-            </p>
-            <form method="post">
-              <input type="hidden" name="revision" value={draft.revision} />
-              {matches.length ? (
-                matches.map((m) => (
-                  <label class="identity-choice">
-                    <input type="radio" name="identity" value={m.id} required />
-                    <span>
-                      <strong>{m.label}</strong> — {m.reason}
-                      <br />
-                      {m.identifier}
-                      {m.holder && ` · Reported holder: ${m.holder}`}
-                    </span>
-                  </label>
-                ))
-              ) : (
+            )}
+          </dl>
+          {gaps.length > 0 && (
+            <div class="notice">
+              <p>
+                This can be accepted into research, but the current public card
+                requires more information:
+              </p>
+              <ul>
+                {gaps.map((gap) => (
+                  <li>{gap}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <h3>Confirm the object identity</h3>
+          <p>
+            Matches use the exact catalogue number or source URL. No match means
+            these checks found none; it does not prove the object is new.
+          </p>
+          <form method="post">
+            <input type="hidden" name="revision" value={draft.revision} />
+            {matches.length ? (
+              matches.map((m) => (
                 <label class="identity-choice">
-                  <input type="radio" name="identity" value="new" required />
+                  <input type="radio" name="identity" value={m.id} required />
                   <span>
-                    I have checked this source and want to create a new object.
+                    <strong>{m.label}</strong> — {m.reason}
+                    <br />
+                    {m.identifier}
+                    {m.holder && ` · Reported holder: ${m.holder}`}
                   </span>
                 </label>
-              )}
-              <div class="actions">
-                <button type="submit" name="action" value="accept">
-                  Accept into research collection
-                </button>
-                <button
-                  type="submit"
-                  name="action"
-                  value="defer"
-                  formnovalidate
-                >
-                  Defer identity decision
-                </button>
-                <button
-                  type="submit"
-                  name="action"
-                  value="reject"
-                  formnovalidate
-                >
-                  Reject proposal
-                </button>
-              </div>
-            </form>
-          </section>
-        )}
-        <h2>
-          {draft.status === "review"
-            ? "Edit the proposal"
-            : "Source and statements"}
-        </h2>
-        <p>
-          Keep wording and names as written in the source. A reported holder is
-          not a statement of ownership. Unknown attribution is allowed in
-          research, but cannot yet be published.
-        </p>
-        <form method="post" class="panel">
-          <input type="hidden" name="revision" value={draft.revision} />
-          <fieldset>
-            <legend>Source</legend>
-            <label>
-              Catalogue URL
-              <input type="url" name="url" required value={c.url} />
-            </label>
-            <label>
-              Source checked at (UTC)
-              <input
-                type="datetime-local"
-                name="checkedAt"
-                required
-                value={c.checkedAt.slice(0, 16)}
-              />
-            </label>
-            <label>
-              Working label (private)
-              <input name="label" value={c.label} maxlength="200" />
-            </label>
-            <label>
-              Research note (private)
-              <textarea name="note" maxlength="4000">
-                {c.note}
-              </textarea>
-            </label>
-            <label>
-              Catalogue or institution code
-              <input
-                name="namespace"
-                value={c.namespace}
-                placeholder="For example: british-museum"
-              />
-            </label>
-            <label>
-              Catalogue identifier
-              <input name="identifier" value={c.identifier} />
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Object name</legend>
-            <label>
-              Name as written
-              <input name="name" value={c.name} />
-            </label>
-            <label>
-              Where in the source?
-              <input
-                name="nameLocator"
-                value={c.nameLocator}
-                placeholder="For example: title field"
-              />
-            </label>
-            <label>
-              Supporting quotation
-              <textarea name="nameExcerpt" maxlength="4000">
-                {c.nameExcerpt}
-              </textarea>
-            </label>
-            <label>
-              How does the source relate to this name?
-              <select name="nameRelationship">
-                {relationships.map(([value, label]) => (
-                  <option value={value} selected={value === c.nameRelationship}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Reported holding institution</legend>
-            <label>
-              Institution name as written
-              <input name="holder" value={c.holder} />
-            </label>
-            <label>
-              Confirm the institution identity
-              <select name="holderIdentity">
-                <option value="new" selected={c.holderIdentity === "new"}>
-                  Create a separate institution
-                </option>
-                {agents.map((a) => (
-                  <option value={a.id} selected={c.holderIdentity === a.id}>
-                    {a.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <p class="muted">
-              Choose an existing institution only when you have checked it is
-              the same one. Matching names never merge records automatically.
+              ))
+            ) : (
+              <label class="identity-choice">
+                <input type="radio" name="identity" value="new" required />
+                <span>
+                  I have checked for an existing record and want to create a new
+                  object.
+                </span>
+              </label>
+            )}
+            <div class="actions">
+              <button type="submit" name="action" value="accept">
+                Accept into research collection
+              </button>
+              <button type="submit" name="action" value="defer" formnovalidate>
+                Leave identity unresolved
+              </button>
+              <button type="submit" name="action" value="reject" formnovalidate>
+                Reject proposal
+              </button>
+            </div>
+          </form>
+        </section>
+      )}
+      <form method="post" class="panel" id="capture-form">
+        <input type="hidden" name="revision" value={draft.revision} />
+        <fieldset>
+          <legend>1. Source and catalogue number</legend>
+          <label for="url">Catalogue URL</label>
+          <input id="url" type="url" name="url" required value={c.url} />
+          <details>
+            <summary>Source check time — recorded automatically</summary>
+            <p>
+              Change this if you checked the source at a different time. The
+              time below is UTC.
             </p>
-            <label>
-              Where in the source?
-              <input name="holderLocator" value={c.holderLocator} />
-            </label>
-            <label>
-              Quotation supporting the holder and its name
-              <textarea name="holderExcerpt" maxlength="4000">
-                {c.holderExcerpt}
-              </textarea>
-            </label>
-            <label>
-              How does the source relate to this holder?
-              <select name="holderRelationship">
-                {relationships.map(([value, label]) => (
-                  <option
-                    value={value}
-                    selected={value === c.holderRelationship}
-                  >
-                    {label}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Who makes these statements?</legend>
-            <label>
-              Attribution
-              <select name="speakerMode">
-                <option value="unknown" selected={c.speakerMode === "unknown"}>
-                  Unknown
-                </option>
-                <option value="holder" selected={c.speakerMode === "holder"}>
-                  The holding institution, publishing its own catalogue
-                </option>
-                <option value="other" selected={c.speakerMode === "other"}>
-                  Another institution or person
-                </option>
-              </select>
-            </label>
+            <label for="checkedAt">Checked at (UTC)</label>
+            <input
+              id="checkedAt"
+              type="datetime-local"
+              name="checkedAt"
+              value={c.checkedAt.slice(0, 16)}
+            />
+          </details>
+          <label for="catalogue">Which catalogue assigns this number?</label>
+          <select id="catalogue" name="catalogue">
+            <option value="" selected={!catalogue}>
+              No catalogue number recorded
+            </option>
+            {catalogues.map((x) => (
+              <option value={x.id} selected={catalogue === x.id}>
+                {x.label}
+              </option>
+            ))}
+            <option value="other" selected={catalogue === "other"}>
+              Another catalogue
+            </option>
+          </select>
+          <div data-when="catalogue" data-values="other">
+            <label for="customNamespace">Other catalogue’s agreed code</label>
+            <input
+              id="customNamespace"
+              name="customNamespace"
+              value={catalogue === "other" ? c.namespace : ""}
+            />
             <p class="muted">
-              Complete these fields only when you selected another institution
-              or person.
+              For an unlisted catalogue, ask a maintainer for its code. You can
+              leave the catalogue and number empty and keep working.
             </p>
-            <label>
-              Asserting institution or person
-              <input name="speaker" value={c.speaker} />
-            </label>
-            <label>
-              Confirm their identity
-              <select name="speakerIdentity">
-                <option value="new" selected={c.speakerIdentity === "new"}>
-                  Create a separate record
-                </option>
-                {agents.map((a) => (
-                  <option value={a.id} selected={c.speakerIdentity === a.id}>
-                    {a.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label>
-              Where is their name given?
-              <input name="speakerLocator" value={c.speakerLocator} />
-            </label>
-            <label>
-              Supporting quotation
-              <textarea name="speakerExcerpt" maxlength="4000">
-                {c.speakerExcerpt}
-              </textarea>
-            </label>
-          </fieldset>
-          <div class="actions">
-            <button type="submit" name="action" value="save">
-              Save draft
-            </button>
-            <button type="submit" name="action" value="review">
-              Save and review
-            </button>
-            <button type="submit" name="action" value="defer" formnovalidate>
-              Defer
-            </button>
-            <button type="submit" name="action" value="delete" formnovalidate>
-              Remove draft
-            </button>
           </div>
-        </form>
-      </>
-    )
-  }
+          <label for="identifier">Catalogue number, exactly as recorded</label>
+          <input id="identifier" name="identifier" value={c.identifier} />
+          <p class="muted">
+            The catalogue publisher and the current holder may differ. Selecting
+            a catalogue does not establish custody.
+          </p>
+          <details open={Boolean(c.label || c.note)}>
+            <summary>Private working label and research note</summary>
+            <label for="label">Working label</label>
+            <input id="label" name="label" value={c.label} maxlength="200" />
+            <label for="note">Private research note</label>
+            <textarea id="note" name="note" maxlength="4000">{c.note}</textarea>
+          </details>
+        </fieldset>
+        <fieldset>
+          <legend>2. How the source identifies or describes the object</legend>
+          <label for="nameBasis">
+            What kind of information are you copying?
+          </label>
+          <select id="nameBasis" name="nameBasis">
+            {nameBases.map(([value, label]) => (
+              <option value={value} selected={c.nameBasis === value}>
+                {label}
+              </option>
+            ))}
+          </select>
+          <label for="name">Wording as written in the source</label>
+          <input id="name" name="name" value={c.name} />
+          <p class="muted">
+            For a field labelled “Object type”, choose “An object type or
+            classification”. A classification is kept as a classification, not
+            turned into a name.
+          </p>
+          <EvidenceFields prefix="name" content={c} />
+        </fieldset>
+        <fieldset>
+          <legend>3. What does this source establish about custody?</legend>
+          <label for="holderStatus">Does it establish a reported holder?</label>
+          <select id="holderStatus" name="holderStatus">
+            <option value="reported" selected={c.holderStatus === "reported"}>
+              Yes — I can identify the holder and its evidence
+            </option>
+            <option value="unknown" selected={c.holderStatus === "unknown"}>
+              Not established from this source
+            </option>
+          </select>
+          <p class="muted">
+            A catalogue publisher, legal owner and physical holder can be
+            different. “Not on display” alone does not identify the holder or
+            its location.
+          </p>
+          <div data-when="holderStatus" data-values="reported">
+            <AgentFields prefix="holder" content={c} agents={agents} />
+            <EvidenceFields prefix="holder" content={c} />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>4. Who makes these statements?</legend>
+          <label for="speakerMode">Attribution</label>
+          <select id="speakerMode" name="speakerMode">
+            <option value="unknown" selected={c.speakerMode === "unknown"}>
+              I cannot establish who makes them
+            </option>
+            <option value="holder" selected={c.speakerMode === "holder"}>
+              The reported holder, speaking in its own catalogue
+            </option>
+            <option value="other" selected={c.speakerMode === "other"}>
+              Another person or institution, including a different catalogue
+              publisher
+            </option>
+          </select>
+          <div data-when="speakerMode" data-values="other">
+            <AgentFields prefix="speaker" content={c} agents={agents} />
+          </div>
+        </fieldset>
+        <details open={Boolean(c.interpretation)}>
+          <summary>
+            Your interpretation or unresolved questions (private)
+          </summary>
+          <label for="interpretation">
+            Explain your reasoning separately from the copied source text
+          </label>
+          <textarea
+            id="interpretation"
+            name="interpretation"
+            maxlength="4000"
+          >{c.interpretation}</textarea>
+          <p class="muted">
+            This stays with the private draft and is not presented as a
+            quotation or included in the public card.
+          </p>
+        </details>
+        <p>
+          You can save incomplete work at any time. Review checks the evidence
+          for the statements you chose to record.
+        </p>
+        <div class="actions">
+          <button type="submit" name="action" value="save">
+            Save draft
+          </button>
+          <button type="submit" name="action" value="review">
+            Save and review
+          </button>
+          <button type="submit" name="action" value="defer" formnovalidate>
+            Save as unresolved
+          </button>
+          <button type="submit" name="action" value="delete" formnovalidate>
+            Remove draft
+          </button>
+        </div>
+        <noscript>
+          <p>
+            All optional sections are shown without JavaScript. Complete only
+            those that apply to your selected answers.
+          </p>
+        </noscript>
+      </form>
+    </>
+  )}
 </Layout>
+<script>
+  const form = document.querySelector<HTMLFormElement>("#capture-form");
+  function updateSections() {
+    if (!form) return;
+    for (const section of form.querySelectorAll<HTMLElement>("[data-when]")) {
+      const control = form.elements.namedItem(
+        section.dataset.when ?? "",
+      ) as HTMLSelectElement | null;
+      section.hidden = !(section.dataset.values ?? "")
+        .split(" ")
+        .includes(control?.value ?? "");
+    }
+  }
+  form?.addEventListener("change", (event) => {
+    const control = event.target;
+    if (control instanceof HTMLSelectElement && control.dataset.agent) {
+      const prefix = control.dataset.agent;
+      const name = form.elements.namedItem(prefix) as HTMLInputElement;
+      name.value = "";
+      const details = form.querySelector<HTMLDetailsElement>(
+        `[data-agent-details="${prefix}"]`,
+      );
+      if (details)
+        details.open =
+          control.value === "new" ||
+          control.selectedOptions[0]?.dataset.evidenced !== "true";
+    }
+    updateSections();
+  });
+  updateSections();
+  // Reveal the relevant optional section before navigating to a field error.
+  document
+    .querySelector<HTMLAnchorElement>('[role="alert"] a')
+    ?.addEventListener("click", (event) => {
+      const link = event.currentTarget as HTMLAnchorElement;
+      const target = document.getElementById(link.hash.slice(1));
+      for (let node = target?.parentElement; node; node = node.parentElement) {
+        if (node instanceof HTMLDetailsElement) node.open = true;
+        if (node.hidden) node.hidden = false;
+      }
+      target?.focus();
+    });
+</script>
 <style>
-  form {
+  form,
+  fieldset {
     display: grid;
-    gap: 1rem;
+    gap: 0.8rem;
   }
   fieldset {
     border: 1px solid var(--line);
     border-radius: 0.4rem;
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
+    padding: 1.2rem;
     margin-block: 0.5rem;
   }
   legend {
     font-weight: 700;
   }
-  textarea {
+  form :global(label) {
+    display: block;
+    margin-top: 0.7rem;
+  }
+  form :global(input:not([type="radio"])),
+  form :global(select),
+  form :global(textarea) {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  form :global(textarea) {
     font: inherit;
     padding: 0.7rem;
     min-height: 6rem;
     resize: vertical;
     border: 1px solid #aaa497;
     border-radius: 0.45rem;
+  }
+  form :global(details) {
+    margin-block: 0.6rem;
+  }
+  form :global(summary) {
+    cursor: pointer;
+  }
+  form :global([hidden]) {
+    display: none;
   }
   .actions {
     display: flex;
@@ -423,7 +513,8 @@ const relationships = [
   .identity-choice input {
     min-height: auto;
   }
-  .metadata dd {
+  .metadata dd,
+  .source-text {
     white-space: pre-wrap;
   }
 </style>

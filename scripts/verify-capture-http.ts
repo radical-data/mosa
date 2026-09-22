@@ -117,7 +117,23 @@ async function verify() {
     assert.equal(retry.headers.get("location"), location);
     const edit = await request(location);
     assert.equal(edit.status, 200);
-    assert((await edit.text()).includes("Record what") === false);
+    const editPage = await edit.text();
+    assert(editPage.includes("Which catalogue assigns this number?"));
+    assert(editPage.includes("British Museum — museum number"));
+    assert(editPage.includes('data-when="speakerMode"'));
+    assert(editPage.includes("Not established from this source"));
+    const invalid = await request(location, "allowed", {
+      revision: "1",
+      action: "review",
+      url: "not-a-url",
+      name: "Keep my copied wording",
+      catalogue: "british-museum",
+      identifier: "Oc,+.2595",
+    });
+    const invalidPage = await invalid.text();
+    assert(invalidPage.includes('href="#url"'));
+    assert(invalidPage.includes('value="Keep my copied wording"'));
+    assert.match(invalidPage, /value="british-museum" selected/);
     const fields = {
       revision: "1",
       action: "review",
@@ -125,12 +141,16 @@ async function verify() {
       name: "HTTP object",
       holder: "HTTP museum",
       holderIdentity: "new",
+      holderStatus: "reported",
+      nameEvidenceMode: "excerpt",
       namespace: "http-test",
       identifier: actor,
       nameLocator: "Title",
       nameExcerpt: "HTTP object",
       holderLocator: "Holder",
       holderExcerpt: "HTTP museum",
+      holderNameLocator: "Publisher heading",
+      holderNameExcerpt: "HTTP museum",
       speakerMode: "holder",
       note: "PRIVATE-HTTP-NOTE",
     };

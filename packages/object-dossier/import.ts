@@ -14,7 +14,7 @@ import {
   resolveEntities,
 } from "./resolve";
 
-export const IMPORTER_VERSION = "1.0.0";
+export const IMPORTER_VERSION = "1.1.0";
 
 export class ImportError extends Error {
   readonly details: string[];

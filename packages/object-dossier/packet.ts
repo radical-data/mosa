@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
-export const PACKET_SCHEMA_VERSION = 1;
+export const PACKET_SCHEMA_VERSION = 2;
 
 export const SUPPORTED_PREDICATES = [
   "has_name",
@@ -9,6 +9,8 @@ export const SUPPORTED_PREDICATES = [
   "found_at",
   "located_at",
   "held_by",
+  "classified_as",
+  "described_as",
 ] as const;
 
 export type SupportedPredicate = (typeof SUPPORTED_PREDICATES)[number];
@@ -85,7 +87,7 @@ export interface PacketClaim {
 }
 
 export interface DossierPacket {
-  schemaVersion: typeof PACKET_SCHEMA_VERSION;
+  schemaVersion: 1 | typeof PACKET_SCHEMA_VERSION;
   dataset: PacketDataset;
   objects: PacketObject[];
   agents: PacketAgent[];

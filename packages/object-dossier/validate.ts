@@ -98,9 +98,11 @@ function checkClaim(
   }
 
   switch (claim.predicate) {
-    case "has_name": {
+    case "has_name":
+    case "classified_as":
+    case "described_as": {
       if (!claim.literal) {
-        errors.push(`claim ${claim.key}: has_name requires a text literal value`);
+        errors.push(`claim ${claim.key}: ${claim.predicate} requires a text literal value`);
       }
       break;
     }
