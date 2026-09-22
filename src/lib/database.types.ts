@@ -39,6 +39,21 @@ export type Database = {
           },
         ]
       }
+      catalogue: {
+        Row: {
+          label: string | null
+          namespace: string
+        }
+        Insert: {
+          label?: string | null
+          namespace?: string
+        }
+        Update: {
+          label?: string | null
+          namespace?: string
+        }
+        Relationships: []
+      }
       entity: {
         Row: {
           created_at: string
@@ -92,6 +107,13 @@ export type Database = {
           value?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "external_identifier_catalogue_fkey"
+            columns: ["namespace"]
+            isOneToOne: false
+            referencedRelation: "catalogue"
+            referencedColumns: ["namespace"]
+          },
           {
             foreignKeyName: "external_identifier_entity_id_fkey"
             columns: ["entity_id"]
@@ -323,6 +345,7 @@ export type Database = {
           claim_id: string
           created_at: string
           created_by: string | null
+          evidence_mode: string
           excerpt: string | null
           id: string
           locator: string
@@ -334,6 +357,7 @@ export type Database = {
           claim_id: string
           created_at?: string
           created_by?: string | null
+          evidence_mode?: string
           excerpt?: string | null
           id?: string
           locator: string
@@ -345,6 +369,7 @@ export type Database = {
           claim_id?: string
           created_at?: string
           created_by?: string | null
+          evidence_mode?: string
           excerpt?: string | null
           id?: string
           locator?: string

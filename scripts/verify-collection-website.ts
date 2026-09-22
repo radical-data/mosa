@@ -23,6 +23,7 @@ async function verify() {
         holder: { ...statement, text: "PUBLIC-HOLDER-SENTINEL", language: "en" },
         identifier: {
           namespace: "test",
+          label: "Test catalogue",
           value: "PUBLIC-ID-SENTINEL",
           source: "https://example.org/source",
         },

@@ -28,7 +28,7 @@ const t = messages(locale);
         <p>{t.accordingTo} {item.name.attributedTo}</p>
         <p>{t.reportedHolder} <span lang={item.holder.language ?? undefined}>{item.holder.text}</span></p>
         <p>{t.accordingTo} {item.holder.attributedTo}</p>
-        <p>{t.catalogueNumber} {item.identifier.value} <span>({item.identifier.namespace})</span></p>
+        <p>{t.catalogueNumber} {item.identifier.value} <span>({item.identifier.label ?? item.identifier.namespace})</span></p>
         <p>{t.nameSources} {item.name.sources.map((source, index) => <a href={source} rel="noreferrer">{t.source} {index + 1}</a>)}</p>
         <p>{t.holderSources} {item.holder.sources.map((source, index) => <a href={source} rel="noreferrer">{t.source} {index + 1}</a>)}</p>
         <p><a href={item.identifier.source} rel="noreferrer">{t.identifierSource}</a></p>

@@ -1,0 +1,124 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { boundedForm, researchTransaction } from "../../lib/capture/access";
+import {
+  catalogueChoices,
+  catalogueLabel,
+  saveCatalogue,
+} from "../../lib/capture/catalogues";
+import { CaptureError, uuid } from "../../lib/capture/model";
+import { getDraft } from "../../lib/capture/store";
+
+const draftId = Astro.url.searchParams.get("draft") ?? "";
+const back = uuid.test(draftId) ? `/research/${draftId}` : "/research";
+let error = "";
+let submitted: FormData | undefined;
+if (Astro.request.method === "POST") {
+  const form = await boundedForm(Astro.request);
+  submitted = form;
+  try {
+    await researchTransaction(Astro.locals.researcher, (client) =>
+      saveCatalogue(client, form),
+    );
+    return Astro.redirect(`${Astro.url.pathname}${Astro.url.search}`, 303);
+  } catch (e) {
+    error =
+      e instanceof CaptureError
+        ? e.message
+        : "The catalogue could not be saved. Please try again.";
+  }
+}
+const catalogues = await researchTransaction(
+  Astro.locals.researcher,
+  async (client) => {
+    if (uuid.test(draftId))
+      await getDraft(client, Astro.locals.researcher, draftId);
+    return catalogueChoices(client);
+  },
+);
+const submittedNamespace = String(submitted?.get("namespace") ?? "");
+const submittedLabel = String(submitted?.get("label") ?? "");
+---
+
+<Layout title="Catalogues">
+  <p class="breadcrumb">
+    <a href={back}>
+      {uuid.test(draftId) ? "Return to your saved draft" : "Research workspace"}
+    </a>
+  </p>
+  <h1>Catalogues</h1>
+  <p class="lede">
+    Name the numbering systems used in research. These choices are shared with
+    other researchers. Renaming a catalogue keeps all existing object
+    identifiers and matches intact.
+  </p>
+  {error && (
+    <p class="notice" role="alert">
+      {error}
+    </p>
+  )}
+  <section class="panel">
+    <h2>Add a catalogue</h2>
+    <p>
+      Check the list first. If an institution uses several numbering systems,
+      give each one a distinct name. A catalogue does not identify the object’s
+      current holder.
+    </p>
+    <form method="post">
+      <label for="new-label">Catalogue name</label>
+      <input
+        id="new-label"
+        name="label"
+        required
+        maxlength="200"
+        value={!submittedNamespace ? submittedLabel : ""}
+        placeholder="Institution or collection — numbering system"
+      />
+      <button type="submit">Add catalogue</button>
+    </form>
+  </section>
+  <h2>Existing catalogues</h2>
+  <p>
+    Older imports may have only an internal code. Give those records readable
+    names here before creating another record for the same system.
+  </p>
+  {!catalogues.length && <p>No catalogues have been registered yet.</p>}
+  <ul class="results">
+    {catalogues.map((c) => (
+      <li class="result-card">
+        <h3>{catalogueLabel(c)}</h3>
+        <form method="post">
+          <input type="hidden" name="namespace" value={c.namespace} />
+          <input type="hidden" name="previousLabel" value={c.label ?? ""} />
+          <label for={`label-${c.namespace}`}>Catalogue name</label>
+          <input
+            id={`label-${c.namespace}`}
+            name="label"
+            required
+            maxlength="200"
+            value={
+              submittedNamespace === c.namespace
+                ? submittedLabel
+                : (c.label ?? "")
+            }
+          />
+          <button type="submit">Save name</button>
+        </form>
+      </li>
+    ))}
+  </ul>
+</Layout>
+<style>
+  form {
+    display: grid;
+    gap: 0.8rem;
+    max-width: 48rem;
+  }
+  button {
+    justify-self: start;
+  }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+</style>

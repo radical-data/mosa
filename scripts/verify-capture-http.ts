@@ -86,6 +86,7 @@ async function verify() {
     assert.match(signIn.headers.get("set-cookie") ?? "", /SameSite=Strict/i);
     assert.equal((await request("/research", "invalid")).status, 303);
     assert.equal((await request("/research", "outsider")).status, 403);
+    assert.equal((await request("/research/catalogues", "outsider")).status, 403);
     const cross = await fetch(`${origin}/research`, {
       method: "POST",
       headers: {
@@ -100,6 +101,19 @@ async function verify() {
     assert.equal(home.status, 200);
     assert.equal(home.headers.get("cache-control"), "private, no-store");
     const html = await home.text();
+    const catalogueName = `HTTP catalogue ${actor}`;
+    assert.equal(
+      (await request("/research/catalogues", "allowed", { label: catalogueName })).status,
+      303,
+    );
+    const catalogue = (
+      await db.query("select namespace from entities.catalogue where label=$1", [catalogueName])
+    ).rows[0];
+    assert(catalogue);
+    const duplicateCatalogue = await request("/research/catalogues", "allowed", {
+      label: catalogueName,
+    });
+    assert((await duplicateCatalogue.text()).includes("already exists"));
     const requestId = html.match(/name="requestId" value="([^"]+)"/)?.[1];
     assert(requestId);
     const created = await request("/research", "allowed", {
@@ -117,20 +131,60 @@ async function verify() {
     assert.equal(retry.headers.get("location"), location);
     const edit = await request(location);
     assert.equal(edit.status, 200);
-    assert((await edit.text()).includes("Record what") === false);
-    const fields = {
+    const editPage = await edit.text();
+    assert(editPage.includes("Which catalogue assigns this number?"));
+    assert(editPage.includes(catalogueName));
+    assert(!editPage.includes("customNamespace"));
+    assert(editPage.includes('data-when="speakerMode"'));
+    assert(editPage.includes("Not established from this source"));
+    const invalid = await request(location, "allowed", {
       revision: "1",
+      action: "review",
+      url: "not-a-url",
+      name: "Keep my copied wording",
+      catalogue: catalogue.namespace,
+      identifier: "Oc,+.2595",
+    });
+    const invalidPage = await invalid.text();
+    assert(invalidPage.includes('href="#url"'));
+    assert(invalidPage.includes('value="Keep my copied wording"'));
+    assert(invalidPage.includes(`value="${catalogue.namespace}" selected`));
+    const manage = await request(location, "allowed", {
+      revision: "1",
+      action: "catalogues",
+      url: `https://example.org/http-${actor}`,
+      name: "Work preserved before catalogue editing",
+      catalogue: catalogue.namespace,
+    });
+    assert.equal(manage.status, 303);
+    assert.equal(
+      manage.headers.get("location"),
+      `/research/catalogues?draft=${location.split("/").at(-1)}`,
+    );
+    const catalogueLocation = manage.headers.get("location");
+    assert(catalogueLocation);
+    const cataloguePage = await request(catalogueLocation);
+    assert((await cataloguePage.text()).includes("Return to your saved draft"));
+    assert(
+      (await (await request(location)).text()).includes("Work preserved before catalogue editing"),
+    );
+    const fields = {
+      revision: "2",
       action: "review",
       url: `https://example.org/http-${actor}`,
       name: "HTTP object",
       holder: "HTTP museum",
       holderIdentity: "new",
-      namespace: "http-test",
+      holderStatus: "reported",
+      nameEvidenceMode: "excerpt",
+      catalogue: catalogue.namespace,
       identifier: actor,
       nameLocator: "Title",
       nameExcerpt: "HTTP object",
       holderLocator: "Holder",
       holderExcerpt: "HTTP museum",
+      holderNameLocator: "Publisher heading",
+      holderNameExcerpt: "HTTP museum",
       speakerMode: "holder",
       note: "PRIVATE-HTTP-NOTE",
     };
@@ -138,12 +192,12 @@ async function verify() {
     const review = await request(location);
     assert((await review.text()).includes("Confirm the object identity"));
     assert.equal(
-      (await request(location, "allowed", { revision: "2", action: "accept", identity: "new" }))
+      (await request(location, "allowed", { revision: "3", action: "accept", identity: "new" }))
         .status,
       303,
     );
     assert.equal(
-      (await request(location, "allowed", { revision: "2", action: "accept", identity: "new" }))
+      (await request(location, "allowed", { revision: "3", action: "accept", identity: "new" }))
         .status,
       303,
     );
@@ -154,6 +208,64 @@ async function verify() {
     const result = await db.query("select item_id from capture.draft where owner_id=$1", [actor]);
     assert.equal(result.rowCount, 1);
     assert(result.rows[0].item_id);
+    // Exercise citation selection through real posted form fields, then check
+    // that review renders exactly that citation rather than another source.
+    const nameEvidence = (
+      await db.query(
+        `select e.id, c.subject_id agent_id
+      from knowledge.claim_evidence e join knowledge.claim c on c.id=e.claim_id
+      where c.predicate='has_name' and c.subject_id=(select object_entity_id
+        from knowledge.claim where subject_id=$1 and predicate='held_by')`,
+        [result.rows[0].item_id],
+      )
+    ).rows[0];
+    const citation = (
+      await db.query(
+        `insert into knowledge.claim_evidence(claim_id,source_id,relationship,locator,excerpt)
+      select claim_id,source_id,'supports','Second institution heading','SECOND-CITATION-WORDING'
+      from knowledge.claim_evidence where id=$1 returning id`,
+        [nameEvidence.id],
+      )
+    ).rows[0].id;
+    const next = await request("/research", "allowed", {
+      requestId: randomUUID(),
+      url: `https://example.org/http-second-${actor}`,
+    });
+    const nextLocation = next.headers.get("location");
+    assert(nextLocation);
+    const reuseFields = {
+      ...fields,
+      revision: "1",
+      url: `https://example.org/http-second-${actor}`,
+      identifier: `${actor}-second`,
+      holderIdentity: nameEvidence.agent_id,
+      holder: "",
+      holderNameLocator: "",
+      holderNameExcerpt: "",
+    };
+    const needsCitation = await request(nextLocation, "allowed", reuseFields);
+    assert((await needsCitation.text()).includes("Choose which existing citation"));
+    assert.equal(
+      (await request(nextLocation, "allowed", { ...reuseFields, holderNameCitation: citation }))
+        .status,
+      303,
+    );
+    const citationReview = await (await request(nextLocation)).text();
+    assert(citationReview.includes("Reused holder name evidence:"));
+    assert(citationReview.includes("SECOND-CITATION-WORDING"));
+    assert(citationReview.includes(`value="${citation}"`));
+    assert.equal(
+      (await request(nextLocation, "allowed", { revision: "2", action: "accept", identity: "new" }))
+        .status,
+      303,
+    );
+    const acceptance = (
+      await db.query("select holder_name_evidence_id from capture.acceptance where draft_id=$1", [
+        nextLocation.split("/").at(-1),
+      ])
+    ).rows[0];
+    assert.equal(acceptance.holder_name_evidence_id, citation);
+
     const publicAccess = await request(location, "invalid");
     assert.equal(publicAccess.status, 303);
     console.log(

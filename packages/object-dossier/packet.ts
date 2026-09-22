@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
-export const PACKET_SCHEMA_VERSION = 1;
+export const PACKET_SCHEMA_VERSION = 2;
 
 export const SUPPORTED_PREDICATES = [
   "has_name",
@@ -9,6 +9,8 @@ export const SUPPORTED_PREDICATES = [
   "found_at",
   "located_at",
   "held_by",
+  "classified_as",
+  "described_as",
 ] as const;
 
 export type SupportedPredicate = (typeof SUPPORTED_PREDICATES)[number];
@@ -72,6 +74,8 @@ export interface PacketEvidence {
   relationship: EvidenceRelationship;
   locator: string;
   excerpt?: string;
+  // Whole-document evidence is a structured assertion, not a locator convention.
+  mode?: "excerpt" | "whole_document";
 }
 
 export interface PacketClaim {
@@ -85,7 +89,7 @@ export interface PacketClaim {
 }
 
 export interface DossierPacket {
-  schemaVersion: typeof PACKET_SCHEMA_VERSION;
+  schemaVersion: 1 | typeof PACKET_SCHEMA_VERSION;
   dataset: PacketDataset;
   objects: PacketObject[];
   agents: PacketAgent[];
@@ -146,4 +150,13 @@ export function canonicalJson(value: unknown): string {
 
 export function packetSha256(packet: unknown): string {
   return createHash("sha256").update(canonicalJson(packet), "utf8").digest("hex");
+}
+
+// Packets written before structured modes used a whole-document locator.
+// Interpret that legacy spelling only at the import boundary; never rewrite
+// the packet, because its original content determines the import checksum.
+export function evidenceMode(evidence: PacketEvidence): "excerpt" | "whole_document" {
+  return (
+    evidence.mode ?? (/^whole\b/i.test(evidence.locator.trim()) ? "whole_document" : "excerpt")
+  );
 }

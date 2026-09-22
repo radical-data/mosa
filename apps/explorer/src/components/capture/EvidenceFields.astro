@@ -1,0 +1,95 @@
+---
+import type { Content } from "../../lib/capture/model";
+
+interface Props {
+  prefix: "name" | "holder";
+  content: Content;
+}
+const { prefix, content: c } = Astro.props;
+const mode = c[`${prefix}EvidenceMode`];
+---
+
+<div class="evidence-fields">
+  <label for={`${prefix}EvidenceMode`}>
+    Where does this information come from?
+  </label>
+  <select id={`${prefix}EvidenceMode`} name={`${prefix}EvidenceMode`}>
+    {prefix === "name" && (
+      <option value="field" selected={mode === "field"}>
+        A catalogue field — use the wording copied above
+      </option>
+    )}
+    <option value="excerpt" selected={mode === "excerpt"}>
+      A passage or several labelled catalogue fields
+    </option>
+    <option value="whole" selected={mode === "whole"}>
+      The catalogue record as a whole
+    </option>
+    {prefix === "holder" && (
+      <option value="shared" selected={mode === "shared"}>
+        The same evidence recorded above also establishes the holder
+      </option>
+    )}
+  </select>
+  <div data-when={`${prefix}EvidenceMode`} data-values="field excerpt">
+    <label for={`${prefix}Locator`}>Which field or section?</label>
+    <input
+      id={`${prefix}Locator`}
+      name={`${prefix}Locator`}
+      value={c[`${prefix}Locator`]}
+      placeholder={
+        prefix === "name"
+          ? "For example: Object type, Title or Description"
+          : "For example: Current collection or Location"
+      }
+    />
+  </div>
+  <div data-when={`${prefix}EvidenceMode`} data-values="excerpt">
+    <label for={`${prefix}Excerpt`}>Copy the source wording</label>
+    <textarea
+      id={`${prefix}Excerpt`}
+      name={`${prefix}Excerpt`}
+      maxlength="4000"
+    >{c[`${prefix}Excerpt`]}</textarea>
+    <p class="muted">
+      Keep field labels with their values, one per line. Copy only what appears
+      in the source; put your interpretation in the private note below.
+    </p>
+  </div>
+  <p class="muted" data-when={`${prefix}EvidenceMode`} data-values="whole">
+    Use this only when the record as a whole establishes the statement. This
+    records a citation, not a quotation. A website address alone does not
+    establish who holds an object.
+  </p>
+  {prefix === "holder" && (
+    <p class="muted" data-when="holderEvidenceMode" data-values="shared">
+      Check that the same passage or field also establishes custody. The
+      object’s name alone does not do this.
+    </p>
+  )}
+  <details open={c[`${prefix}Relationship`] !== "supports"}>
+    <summary>This information is uncertain, disputed or only mentioned</summary>
+    <p>
+      The ordinary path records what this source reports. Choose a different
+      relationship when the source does something else.
+    </p>
+    <label for={`${prefix}Relationship`}>What does the source do?</label>
+    <select id={`${prefix}Relationship`} name={`${prefix}Relationship`}>
+      {[
+        ["supports", "Reports or supports this statement"],
+        ["qualifies", "Adds a qualification or limitation"],
+        ["contradicts", "Disputes this statement"],
+        ["mentions", "Mentions it without establishing it"],
+        ["provides_context", "Provides background only"],
+      ].map(([value, label]) => (
+        <option value={value} selected={value === c[`${prefix}Relationship`]}>
+          {label}
+        </option>
+      ))}
+    </select>
+    <p class="muted">
+      Uncertain accounts can be saved in research. The current public card has
+      stricter evidence requirements.
+    </p>
+  </details>
+</div>

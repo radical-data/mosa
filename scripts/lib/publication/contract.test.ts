@@ -17,7 +17,12 @@ const fixture = {
       id,
       name: statement,
       holder: { ...statement, text: "Test institution", language: "en" },
-      identifier: { namespace: "test", value: "001", source: "https://example.org/record" },
+      identifier: {
+        namespace: "test",
+        label: "Test catalogue",
+        value: "001",
+        source: "https://example.org/record",
+      },
     },
   ],
 };

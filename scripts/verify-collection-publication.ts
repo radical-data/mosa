@@ -102,7 +102,11 @@ async function verify() {
           nameSpeaker: an.evidence,
           holderSpeaker: an.evidence,
           identifier,
+          catalogue: "test",
         };
+        await client.query(
+          "update entities.catalogue set label='Test catalogue' where namespace='test'",
+        );
         for (const role of ["anon", "authenticated", "explorer_reader"]) {
           await fails(async () => {
             await client.query(`set local role ${role}`);
@@ -127,6 +131,19 @@ async function verify() {
           /immutable/,
         );
         await client.query("reset role");
+        await client.query("savepoint renamed_catalogue");
+        await client.query(
+          "update entities.catalogue set label='Renamed catalogue' where namespace='test'",
+        );
+        await fails(() => validateRelease(client, prepared.releaseId), /dependencies changed/);
+        await client.query("rollback to savepoint renamed_catalogue");
+        await client.query("savepoint changed_mode");
+        await client.query(
+          "update knowledge.claim_evidence set evidence_mode='whole_document' where id=$1",
+          [n.evidence],
+        );
+        await fails(() => validateRelease(client, prepared.releaseId), /dependencies changed/);
+        await client.query("rollback to savepoint changed_mode");
         await client.query("update knowledge.claim set literal_value=$2 where id=$1", [
           n.claim,
           { type: "text", value: "Changed name" },

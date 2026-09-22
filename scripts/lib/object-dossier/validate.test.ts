@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import type { DossierPacket } from "@mosa/object-dossier/packet";
+import { buildPacketWork } from "@mosa/object-dossier/import";
+import { type DossierPacket, packetSha256 } from "@mosa/object-dossier/packet";
 import { validatePacket } from "@mosa/object-dossier/validate";
 import { describe, expect, it } from "vitest";
 
@@ -71,7 +72,7 @@ describe("validatePacket schema validation", () => {
   it("rejects unknown schema versions", () => {
     const outcome = validatePacket(
       packetWith((packet) => {
-        (packet as { schemaVersion: number }).schemaVersion = 2;
+        (packet as { schemaVersion: number }).schemaVersion = 99;
       }),
     );
 
@@ -359,7 +360,7 @@ describe("validatePacket excerpt rules", () => {
         const evidence = packet.claims[0].evidence;
         if (!Array.isArray(evidence)) {
           delete evidence.excerpt;
-          evidence.locator = "Whole catalogue record";
+          evidence.mode = "whole_document";
         }
       }),
     );
@@ -393,4 +394,37 @@ describe("validatePacket excerpt rules", () => {
 
     expect(outcome.errors.length).toBeGreaterThan(0);
   });
+});
+
+describe("versioned classification and description import", () => {
+  for (const predicate of ["classified_as", "described_as"] as const) {
+    it(`accepts ${predicate} in v2 but keeps the v1 predicate boundary`, () => {
+      const packet = minimalPacket();
+      packet.claims[0].predicate = predicate;
+      expect(validatePacket(packet).packet).toBeUndefined();
+      packet.schemaVersion = 2;
+      expect(validatePacket(packet).errors).toEqual([]);
+    });
+  }
+});
+
+describe("legacy whole-document packets", () => {
+  for (const version of [1, 2] as const) {
+    it(`preserves version ${version} evidence meaning and checksum`, () => {
+      const packet = minimalPacket();
+      packet.schemaVersion = version;
+      const evidence = packet.claims[0].evidence;
+      if (Array.isArray(evidence)) throw Error("Expected single evidence fixture");
+      delete evidence.excerpt;
+      evidence.locator = "Whole catalogue record";
+      const before = packetSha256(packet);
+      expect(validatePacket(packet).errors).toEqual([]);
+      expect(
+        buildPacketWork(packet).evidence.find((entry) => entry.localKey === evidence.key)?.mode,
+      ).toBe("whole_document");
+      expect(packetSha256(packet)).toBe(before);
+      evidence.mode = "excerpt";
+      expect(validatePacket(packet).errors).not.toEqual([]);
+    });
+  }
 });
