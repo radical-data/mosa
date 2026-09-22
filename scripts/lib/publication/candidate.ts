@@ -18,6 +18,8 @@ export interface Selection {
   nameSpeaker: string;
   holderSpeaker: string;
   identifier: string;
+  // Absence identifies releases approved before catalogue labels were published.
+  catalogue?: string;
 }
 export function parseSelection(value: unknown): Selection {
   const selected = object(value, [
@@ -28,10 +30,16 @@ export function parseSelection(value: unknown): Selection {
     "nameSpeaker",
     "holderSpeaker",
     "identifier",
+    ...(value && typeof value === "object" && "catalogue" in value ? ["catalogue"] : []),
   ]);
-  for (const id of Object.values(selected))
-    if (typeof id !== "string" || !uuid.test(id))
+  for (const [key, id] of Object.entries(selected))
+    if (key !== "catalogue" && (typeof id !== "string" || !uuid.test(id)))
       throw Error("Selection requires UUIDs for every explicit reference");
+  if (
+    "catalogue" in selected &&
+    (typeof selected.catalogue !== "string" || !selected.catalogue.trim())
+  )
+    throw Error("Selection requires a catalogue namespace");
   return selected as unknown as Selection;
 }
 export function canonical(value: unknown): string {
@@ -75,7 +83,7 @@ export async function candidate(
       select e.id, c.id claim_id, c.subject_id, c.predicate, c.object_entity_id,
              c.literal_value, c.asserted_by_agent_id, c.status, e.relationship,
              s.reference, e.locator, e.excerpt,
-             jsonb_build_array(to_jsonb(c), to_jsonb(e), to_jsonb(s)) dependencies,
+             jsonb_build_array(to_jsonb(c), ${selection.catalogue === undefined ? "to_jsonb(e) - 'evidence_mode'" : "to_jsonb(e)"}, to_jsonb(s)) dependencies,
              exists(select 1 from knowledge.claim_evidence extra
                     where extra.claim_id=c.id and extra.relationship in ('qualifies','contradicts')) complex
       from knowledge.claim_evidence e join knowledge.claim c on c.id=e.claim_id
@@ -120,18 +128,22 @@ export async function candidate(
     throw Error("Public cards require identified speakers");
   const identifier = await client.query<{
     namespace: string;
+    label: string | null;
     value: string;
     reference: string;
     dependencies: unknown;
   }>(
     `
-    select i.namespace, i.value, s.reference, jsonb_build_array(to_jsonb(i),to_jsonb(s)) dependencies
-    from entities.external_identifier i join entities.source s on s.id=i.source_id
-    where i.id=$1 and i.entity_id=$2`,
-    [selection.identifier, selection.itemId],
+     select i.namespace, c.label, i.value, s.reference,
+       jsonb_build_array(to_jsonb(i),to_jsonb(s)${selection.catalogue === undefined ? "" : ",to_jsonb(c)"}) dependencies
+     from entities.external_identifier i join entities.source s on s.id=i.source_id
+     join entities.catalogue c on c.namespace=i.namespace
+     where i.id=$1 and i.entity_id=$2 and ($3::text is null or i.namespace=$3)`,
+    [selection.identifier, selection.itemId, selection.catalogue],
   );
   const ident = identifier.rows[0];
-  if (!ident) throw Error("Identifier must belong to this item and have a source");
+  if (!ident || (selection.catalogue !== undefined && !ident.label))
+    throw Error("Identifier must belong to this item and have a named catalogue");
   dependencies.push(ident.dependencies);
   const snapshot = parseCollection({
     schemaVersion: 1,
@@ -149,7 +161,12 @@ export async function candidate(
           attributedTo: name(hs, h.asserted_by_agent_id).text,
           sources: [...new Set([h.reference, hn.reference, hs.reference])],
         },
-        identifier: { namespace: ident.namespace, value: ident.value, source: ident.reference },
+        identifier: {
+          namespace: ident.namespace,
+          ...(selection.catalogue === undefined ? {} : { label: ident.label }),
+          value: ident.value,
+          source: ident.reference,
+        },
       },
     ],
   });

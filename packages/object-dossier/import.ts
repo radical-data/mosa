@@ -4,6 +4,7 @@ import {
   type DossierPacket,
   derivedRefersToClaimKey,
   derivedRefersToEvidenceKey,
+  evidenceMode,
   type PacketTextLiteral,
   packetSha256,
 } from "./packet";
@@ -44,6 +45,7 @@ export interface EvidenceWork {
   relationship: string;
   locator: string;
   excerpt?: string;
+  mode?: "excerpt" | "whole_document";
 }
 
 export interface PacketWork {
@@ -74,6 +76,7 @@ export function buildPacketWork(packet: DossierPacket): PacketWork {
         sourceKey: source.key,
         relationship: "supports",
         locator: "Whole document",
+        mode: "whole_document",
       });
     }
   }
@@ -97,6 +100,7 @@ export function buildPacketWork(packet: DossierPacket): PacketWork {
         relationship: entry.relationship,
         locator: entry.locator,
         excerpt: entry.excerpt,
+        mode: evidenceMode(entry),
       });
     }
   }
@@ -368,8 +372,8 @@ async function applyCanonicalWrites(
 
     await withKeyContext(entry.localKey, async () => {
       const result = await client.query<{ id: string }>(
-        `insert into knowledge.claim_evidence (claim_id, source_id, relationship, locator, excerpt)
-         values ($1, $2, $3, $4, $5)
+        `insert into knowledge.claim_evidence (claim_id, source_id, relationship, locator, excerpt, evidence_mode)
+          values ($1, $2, $3, $4, $5, $6)
          returning id`,
         [
           claimIds.get(entry.claimLocalKey),
@@ -377,6 +381,7 @@ async function applyCanonicalWrites(
           entry.relationship,
           entry.locator,
           entry.excerpt ?? null,
+          entry.mode ?? "excerpt",
         ],
       );
 

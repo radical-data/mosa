@@ -15,6 +15,7 @@ export const fields = [
   "holder",
   "holderStatus",
   "holderIdentity",
+  "holderNameCitation",
   "holderLocator",
   "holderExcerpt",
   "holderRelationship",
@@ -24,6 +25,7 @@ export const fields = [
   "speakerMode",
   "speaker",
   "speakerIdentity",
+  "speakerNameCitation",
   "speakerLocator",
   "speakerExcerpt",
   "namespace",
@@ -150,7 +152,7 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
   function evidence(prefix: "name" | "holder") {
     const mode = c[`${prefix}EvidenceMode`];
     if (mode === "shared") return evidence("name");
-    if (mode === "whole") return { locator: "Whole catalogue record" };
+    if (mode === "whole") return { locator: "Catalogue record", mode: "whole_document" as const };
     need(
       `${prefix}Locator`,
       "Identify the source field or section where this information appears.",
@@ -158,7 +160,7 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
     if (mode === "field") return { locator: `Catalogue field: ${c.nameLocator}`, excerpt: c.name };
     need(
       `${prefix}Excerpt`,
-      "Copy the source wording or select ‘Whole catalogue record’. Keep your interpretation in the separate private note.",
+      "Copy the source wording or select ‘The catalogue record as a whole’. Keep your interpretation in the separate private note.",
     );
     return { locator: c[`${prefix}Locator`], excerpt: c[`${prefix}Excerpt`] };
   }
@@ -168,7 +170,7 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
     subject: string,
     predicate: PacketClaim["predicate"],
     text: string,
-    ev: { locator: string; excerpt?: string },
+    ev: { locator: string; excerpt?: string; mode?: "excerpt" | "whole_document" },
     relationship: EvidenceRelationship = "supports",
   ) {
     claims.push({
@@ -177,7 +179,13 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
       predicate,
       ...(predicate === "held_by" ? { object: text } : { literal: { type: "text", value: text } }),
       assertedBy: speaker,
-      evidence: { key: `evidence:${key}`, source: "source:catalogue", relationship, ...ev },
+      evidence: {
+        key: `evidence:${key}`,
+        source: "source:catalogue",
+        relationship,
+        mode: "excerpt",
+        ...ev,
+      },
     });
   }
   add(

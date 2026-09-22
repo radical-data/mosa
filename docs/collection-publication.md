@@ -147,3 +147,9 @@ A 180-second polling timeout is a failure requiring attention, not proof that th
 - The website workflow runs the populated/withdrawn checks and production-image HTTP checks. The full database verification also invokes the publication integration checks.
 
 The private publication tables are maintained by the command service using explicit SQL; they are deliberately outside the app-facing generated database type schemas. Slice 2 adds a bounded private authoring flow. Source-file upload, AI extraction, image publication and public dossier routes remain out of scope.
+
+## Catalogue labels and existing decisions
+
+New candidates include the catalogue’s readable name. A catalogue must have a name before a new candidate can be prepared; edit it through the research catalogue screen. The name is part of the reviewed snapshot and its dependencies. Changing it requires a new publication decision before that changed wording can be deployed.
+
+Releases approved before catalogue labels were included keep their original snapshots and fingerprints. Export, validation and individual withdrawal continue to work after the evidence-mode migration. These legacy checks exclude the newly added mode column and catalogue metadata, which were not part of the original decision; they still detect changes to the original research dependencies. Withdrawing one card preserves the surviving card’s approved wording. Preparing a new candidate, including `--retain`, adopts catalogue labels for a fresh review. No migration silently rewrites an approval.

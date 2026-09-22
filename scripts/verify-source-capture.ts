@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import { Client } from "pg";
 import { prepare } from "./lib/publication/store";
 import { getLocalDatabaseUrl } from "./lib/supabase-local";
+import { verifyCaptureUpgrade } from "./lib/verify-capture-upgrade";
 
 async function verify() {
   const { readContent } = await import("../apps/explorer/src/lib/capture/model.js");
@@ -162,10 +163,42 @@ async function verify() {
     ).rows[0].selection;
     const publication = await prepare(client, selected);
     assert.equal(publication.records[0].id, accepted.item_id);
+    assert.equal(publication.records[0].identifier.label, "Renamed test catalogue");
+    assert.equal(selected.catalogue, catalogue.namespace);
     assert(!JSON.stringify(publication).includes("PRIVATE-DRAFT-NOTE"));
     await fails(() => client.query("select * from capture.draft"), /permission denied/);
     await client.query("reset role");
     await client.query("set local role capture_writer");
+
+    // A source can describe several objects. It is a review suggestion, not an
+    // identity conflict when a different exact catalogue identifier is given.
+    const sharedSource = {
+      ...content,
+      name: "Second synthetic object on the same page",
+      nameExcerpt: "Second synthetic object on the same page",
+      identifier: randomUUID(),
+    };
+    const sharedDraft = await createDraft(client, actor, randomUUID(), sharedSource);
+    const sharedReview = await changeDraft(
+      client,
+      actor,
+      sharedDraft.id,
+      1,
+      "review",
+      sharedSource,
+    );
+    const sharedMatches = await identityMatches(client, sharedSource);
+    assert(sharedMatches.some((match) => !match.exact && match.id === accepted.item_id));
+    const sharedAccepted = await changeDraft(
+      client,
+      actor,
+      sharedDraft.id,
+      sharedReview.revision,
+      "accept",
+      undefined,
+      "new",
+    );
+    assert.notEqual(sharedAccepted.item_id, accepted.item_id);
 
     const choices = await agentChoices(client);
     const museum = choices.find((a) => a.label === "Synthetic museum");
@@ -221,6 +254,57 @@ async function verify() {
     );
     await client.query("reset role");
     await client.query("set local role capture_writer");
+
+    // Multiple citations remain reusable, but require an explicit choice.
+    await client.query("reset role");
+    const extraCitation = (
+      await client.query(
+        `
+      insert into knowledge.claim_evidence(claim_id,source_id,relationship,locator,excerpt)
+      select claim_id,source_id,'supports','Alternative heading','Synthetic museum'
+      from knowledge.claim_evidence where id=$1 returning id`,
+        [museum.evidenceId],
+      )
+    ).rows[0].id;
+    await client.query("set local role capture_writer");
+    const multiple = (await agentChoices(client)).find((entry) => entry.id === museum.id);
+    assert.equal(multiple?.citations.length, 2);
+    assert(multiple?.context.includes(content.url));
+    const multiContent = {
+      ...reusedContent,
+      identifier: randomUUID(),
+      url: `https://example.org/multi-${actor}`,
+    };
+    const multi = await createDraft(client, actor, randomUUID(), multiContent);
+    await fails(
+      () => changeDraft(client, actor, multi.id, 1, "review", multiContent),
+      /Choose which existing citation/,
+    );
+    await fails(
+      () =>
+        changeDraft(client, actor, multi.id, 1, "review", {
+          ...multiContent,
+          holderNameCitation: randomUUID(),
+        }),
+      /belongs to another record/,
+    );
+    const multiReview = await changeDraft(client, actor, multi.id, 1, "review", {
+      ...multiContent,
+      holderNameCitation: extraCitation,
+    });
+    assert.equal(multiReview.content.holderNameEvidenceId, extraCitation);
+    await changeDraft(client, actor, multi.id, 2, "accept", undefined, "new");
+    // Different source wording must create its own evidence, not show a reused citation.
+    const renamedContent = {
+      ...multiContent,
+      holder: "An alternative institution name",
+      holderNameLocator: "Heading",
+      holderNameExcerpt: "An alternative institution name",
+      holderNameCitation: extraCitation,
+    };
+    const renamed = await createDraft(client, actor, randomUUID(), renamedContent);
+    const renamedReview = await changeDraft(client, actor, renamed.id, 1, "review", renamedContent);
+    assert.equal(renamedReview.content.holderNameEvidenceId, undefined);
 
     const sparseContent = {
       ...content,
@@ -296,6 +380,8 @@ async function verify() {
     await client.query("set local role capture_writer");
     await fails(() => requireResearcher(client, actor), /access is required/);
     assert.equal((await client.query("select id from capture.draft")).rowCount, 0);
+    await client.query("reset role");
+    await verifyCaptureUpgrade(client);
     console.log(
       "Verified source capture: isolation, access, revisions, atomic promotion, identity matching and retries.",
     );

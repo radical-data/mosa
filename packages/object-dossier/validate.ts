@@ -5,16 +5,13 @@ import {
   claimEvidenceList,
   DERIVED_REFERS_TO_PREFIX,
   type DossierPacket,
+  evidenceMode,
   type PacketClaim,
   type PacketEvidence,
 } from "./packet";
 
 // Source kinds whose evidence may reasonably lack an excerpt.
 const VISUAL_SOURCE_KINDS = new Set(["photograph", "image", "audiovisual_record", "video", "film"]);
-
-// Locators such as "Whole catalogue record" or "Whole image" describe
-// whole-document evidence, which may also lack an excerpt.
-const WHOLE_DOCUMENT_LOCATOR = /^whole\b/iu;
 
 export interface ValidationOutcome {
   packet?: DossierPacket;
@@ -70,11 +67,11 @@ function checkEvidence(
   if (evidence.excerpt === undefined) {
     const sourceKind = sourceKindsByKey.get(evidence.source) ?? "";
     const isVisual = VISUAL_SOURCE_KINDS.has(sourceKind);
-    const isWholeDocument = WHOLE_DOCUMENT_LOCATOR.test(evidence.locator.trim());
+    const isWholeDocument = evidenceMode(evidence) === "whole_document";
 
     if (!isVisual && !isWholeDocument) {
       errors.push(
-        `claim ${claimKey}: evidence ${evidence.key} omits an excerpt but its source is not visual and its locator does not describe whole-document evidence`,
+        `claim ${claimKey}: evidence ${evidence.key} omits an excerpt but its source is not visual and is not marked whole-document`,
       );
     }
   }

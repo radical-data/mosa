@@ -12,7 +12,7 @@ const selected = agents.find((a) => a.id === c[`${prefix}Identity`]);
 const locator = prefix === "holder" ? "holderNameLocator" : "speakerLocator";
 const excerpt = prefix === "holder" ? "holderNameExcerpt" : "speakerExcerpt";
 const needsName =
-  !selected?.evidenceId || (c[prefix] && c[prefix] !== selected.label);
+  !selected?.citations.length || (c[prefix] && c[prefix] !== selected.label);
 ---
 
 <label for={`${prefix}Identity`}>
@@ -28,16 +28,53 @@ const needsName =
     <option
       value={a.id}
       selected={a.id === c[`${prefix}Identity`]}
-      data-evidenced={Boolean(a.evidenceId)}
+      data-evidenced={Boolean(a.citations.length)}
     >
       {a.label}
+      {a.context && ` (${a.context})`}
     </option>
   ))}
 </select>
 <p class="muted">
-  Select an existing record only when you have checked its identity. Its
-  existing evidenced name will be reused.
+  Select an existing record only when you have checked its identity. Choose
+  a supporting citation when the name has several sources.
 </p>
+<details>
+  <summary>Inspect the records before selecting one</summary>
+  <ul>
+    {agents.map((a) => (
+      <li>
+        <a href={`/entities/${a.id}`}>{a.label}</a>
+        {a.context && ` (${a.context})`}
+      </li>
+    ))}
+  </ul>
+</details>
+<div data-citation-section>
+  <label for={`${prefix}NameCitation`}>Existing evidence for this name</label>
+  <select
+    id={`${prefix}NameCitation`}
+    name={`${prefix}NameCitation`}
+    data-citations={prefix}
+  >
+    <option value="">Use the sole citation, or choose one below</option>
+    {agents.map((agent) =>
+      agent.citations.map((citation) => (
+        <option
+          value={citation.id}
+          data-citation-agent={agent.id}
+          selected={citation.id === c[`${prefix}NameCitation`]}
+        >
+          {agent.label} — {citation.source} ({citation.locator})
+        </option>
+      )),
+    )}
+  </select>
+  <p class="muted">
+    This supports the selected record’s name. For different wording, give its
+    evidence below.
+  </p>
+</div>
 <details open={Boolean(needsName)} data-agent-details={prefix}>
   <summary>
     New record, different source wording, or missing name evidence

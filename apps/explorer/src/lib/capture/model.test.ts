@@ -92,7 +92,10 @@ describe("catalogue research without forced conclusions", () => {
     );
     const packet = packetFor(id, 2, c);
     expect(packet.claims.map((c) => c.predicate)).toEqual(["described_as"]);
-    expect(packet.claims[0].evidence).toMatchObject({ locator: "Whole catalogue record" });
+    expect(packet.claims[0].evidence).toMatchObject({
+      locator: "Catalogue record",
+      mode: "whole_document",
+    });
     expect(packet.claims[0].evidence).not.toHaveProperty("excerpt");
     expect(packet.agents).toEqual([]);
     expect(packet.objects[0].externalIdentifiers).toEqual([]);
@@ -104,7 +107,10 @@ describe("catalogue research without forced conclusions", () => {
       readContent(form({ nameEvidenceMode: "whole", holderEvidenceMode: "shared" })),
     );
     expect(packet.claims[0].evidence).not.toHaveProperty("excerpt");
-    expect(packet.claims[1].evidence).toMatchObject({ locator: "Whole catalogue record" });
+    expect(packet.claims[1].evidence).toMatchObject({
+      locator: "Catalogue record",
+      mode: "whole_document",
+    });
     expect(packet.claims[2].evidence).toMatchObject({
       locator: "Publisher heading",
       excerpt: "A museum",

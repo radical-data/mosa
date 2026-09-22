@@ -97,6 +97,14 @@ import EvidenceFields from "../../components/capture/EvidenceFields.astro";
 import { catalogueChoices, catalogueLabel } from "../../lib/capture/catalogues";
 
 const catalogue = catalogues.find((x) => x.namespace === c.namespace);
+const selectedCitations = {
+  holder: agents
+    .find((agent) => agent.id === c.holderIdentity)
+    ?.citations.find((citation) => citation.id === c.holderNameEvidenceId),
+  speaker: agents
+    .find((agent) => agent.id === c.speakerIdentity)
+    ?.citations.find((citation) => citation.id === c.speakerNameEvidenceId),
+};
 ---
 
 <Layout title={c.label || c.name || "Record a catalogue account"}>
@@ -166,7 +174,22 @@ const catalogue = catalogues.find((x) => x.namespace === c.namespace);
                   : c.holder}
               </dd>
               {c.holderStatus === "reported" && (
-                <dd class="source-text">{evidenceText("holder")}</dd>
+                <>
+                  <dd class="source-text">{evidenceText("holder")}</dd>
+                  {selectedCitations.holder?.id && (
+                    <dd class="source-text">
+                      Reused holder name evidence:{" "}
+                      {selectedCitations.holder.source}
+                      {selectedCitations.holder.locator &&
+                        ` (${selectedCitations.holder.locator})`}
+                      {selectedCitations.holder.excerpt && (
+                        <blockquote>
+                          {selectedCitations.holder.excerpt}
+                        </blockquote>
+                      )}
+                    </dd>
+                  )}
+                </>
               )}
             </div>
             <div>
@@ -186,6 +209,17 @@ const catalogue = catalogues.find((x) => x.namespace === c.namespace);
                     ? c.speaker
                     : "Unknown"}
               </dd>
+              {selectedCitations.speaker?.id && c.speakerMode === "other" && (
+                <dd class="source-text">
+                  Reused speaker name evidence:{" "}
+                  {selectedCitations.speaker.source}
+                  {selectedCitations.speaker.locator &&
+                    ` (${selectedCitations.speaker.locator})`}
+                  {selectedCitations.speaker.excerpt && (
+                    <blockquote>{selectedCitations.speaker.excerpt}</blockquote>
+                  )}
+                </dd>
+              )}
             </div>
             {c.interpretation && (
               <div>
@@ -209,24 +243,26 @@ const catalogue = catalogues.find((x) => x.namespace === c.namespace);
           )}
           <h3>Confirm the object identity</h3>
           <p>
-            Matches use the exact catalogue number or source URL. No match means
-            these checks found none; it does not prove the object is new.
+            An exact catalogue number identifies an existing object. A shared
+            source URL is only a suggestion: one page can describe several
+            objects.
           </p>
           <form method="post">
             <input type="hidden" name="revision" value={draft.revision} />
-            {matches.length ? (
-              matches.map((m) => (
-                <label class="identity-choice">
-                  <input type="radio" name="identity" value={m.id} required />
-                  <span>
-                    <strong>{m.label}</strong> — {m.reason}
-                    <br />
-                    {m.identifier}
-                    {m.holder && ` · Reported holder: ${m.holder}`}
-                  </span>
-                </label>
-              ))
-            ) : (
+            {matches.length
+              ? matches.map((m) => (
+                  <label class="identity-choice">
+                    <input type="radio" name="identity" value={m.id} required />
+                    <span>
+                      <strong>{m.label}</strong> — {m.reason}
+                      <br />
+                      {m.identifier}
+                      {m.holder && ` · Reported holder: ${m.holder}`}
+                    </span>
+                  </label>
+                ))
+              : null}
+            {!matches.some((m) => m.exact) && (
               <label class="identity-choice">
                 <input type="radio" name="identity" value="new" required />
                 <span>
@@ -413,8 +449,33 @@ const catalogue = catalogues.find((x) => x.namespace === c.namespace);
 </Layout>
 <script>
   const form = document.querySelector<HTMLFormElement>("#capture-form");
+  // Keep the complete server-rendered choices for no-script use, and show
+  // only the selected record's citations when the form is enhanced.
+  const citationOptions = new Map(
+    [
+      ...(form?.querySelectorAll<HTMLSelectElement>("[data-citations]") ?? []),
+    ].map((select) => [select, [...select.options]] as const),
+  );
   function updateSections() {
     if (!form) return;
+    for (const citations of form.querySelectorAll<HTMLSelectElement>(
+      "[data-citations]",
+    )) {
+      const identity = form.elements.namedItem(
+        `${citations.dataset.citations}Identity`,
+      ) as HTMLSelectElement;
+      const selected = citations.value;
+      const available = (citationOptions.get(citations) ?? []).filter(
+        (option) =>
+          !option.value || option.dataset.citationAgent === identity.value,
+      );
+      citations.replaceChildren(...available);
+      citations.value = available.some((option) => option.value === selected)
+        ? selected
+        : "";
+      const section = citations.closest<HTMLElement>("[data-citation-section]");
+      if (section) section.hidden = available.length < 2;
+    }
     for (const section of form.querySelectorAll<HTMLElement>("[data-when]")) {
       const control = form.elements.namedItem(
         section.dataset.when ?? "",
@@ -430,6 +491,10 @@ const catalogue = catalogues.find((x) => x.namespace === c.namespace);
       const prefix = control.dataset.agent;
       const name = form.elements.namedItem(prefix) as HTMLInputElement;
       name.value = "";
+      const citations = form.elements.namedItem(
+        `${prefix}NameCitation`,
+      ) as HTMLSelectElement;
+      citations.value = "";
       const details = form.querySelector<HTMLDetailsElement>(
         `[data-agent-details="${prefix}"]`,
       );

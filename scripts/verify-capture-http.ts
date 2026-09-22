@@ -208,6 +208,64 @@ async function verify() {
     const result = await db.query("select item_id from capture.draft where owner_id=$1", [actor]);
     assert.equal(result.rowCount, 1);
     assert(result.rows[0].item_id);
+    // Exercise citation selection through real posted form fields, then check
+    // that review renders exactly that citation rather than another source.
+    const nameEvidence = (
+      await db.query(
+        `select e.id, c.subject_id agent_id
+      from knowledge.claim_evidence e join knowledge.claim c on c.id=e.claim_id
+      where c.predicate='has_name' and c.subject_id=(select object_entity_id
+        from knowledge.claim where subject_id=$1 and predicate='held_by')`,
+        [result.rows[0].item_id],
+      )
+    ).rows[0];
+    const citation = (
+      await db.query(
+        `insert into knowledge.claim_evidence(claim_id,source_id,relationship,locator,excerpt)
+      select claim_id,source_id,'supports','Second institution heading','SECOND-CITATION-WORDING'
+      from knowledge.claim_evidence where id=$1 returning id`,
+        [nameEvidence.id],
+      )
+    ).rows[0].id;
+    const next = await request("/research", "allowed", {
+      requestId: randomUUID(),
+      url: `https://example.org/http-second-${actor}`,
+    });
+    const nextLocation = next.headers.get("location");
+    assert(nextLocation);
+    const reuseFields = {
+      ...fields,
+      revision: "1",
+      url: `https://example.org/http-second-${actor}`,
+      identifier: `${actor}-second`,
+      holderIdentity: nameEvidence.agent_id,
+      holder: "",
+      holderNameLocator: "",
+      holderNameExcerpt: "",
+    };
+    const needsCitation = await request(nextLocation, "allowed", reuseFields);
+    assert((await needsCitation.text()).includes("Choose which existing citation"));
+    assert.equal(
+      (await request(nextLocation, "allowed", { ...reuseFields, holderNameCitation: citation }))
+        .status,
+      303,
+    );
+    const citationReview = await (await request(nextLocation)).text();
+    assert(citationReview.includes("Reused holder name evidence:"));
+    assert(citationReview.includes("SECOND-CITATION-WORDING"));
+    assert(citationReview.includes(`value="${citation}"`));
+    assert.equal(
+      (await request(nextLocation, "allowed", { revision: "2", action: "accept", identity: "new" }))
+        .status,
+      303,
+    );
+    const acceptance = (
+      await db.query("select holder_name_evidence_id from capture.acceptance where draft_id=$1", [
+        nextLocation.split("/").at(-1),
+      ])
+    ).rows[0];
+    assert.equal(acceptance.holder_name_evidence_id, citation);
+
     const publicAccess = await request(location, "invalid");
     assert.equal(publicAccess.status, 303);
     console.log(

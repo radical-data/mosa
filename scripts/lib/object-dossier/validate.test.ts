@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import type { DossierPacket } from "@mosa/object-dossier/packet";
+import { buildPacketWork } from "@mosa/object-dossier/import";
+import { type DossierPacket, packetSha256 } from "@mosa/object-dossier/packet";
 import { validatePacket } from "@mosa/object-dossier/validate";
 import { describe, expect, it } from "vitest";
 
@@ -359,7 +360,7 @@ describe("validatePacket excerpt rules", () => {
         const evidence = packet.claims[0].evidence;
         if (!Array.isArray(evidence)) {
           delete evidence.excerpt;
-          evidence.locator = "Whole catalogue record";
+          evidence.mode = "whole_document";
         }
       }),
     );
@@ -403,6 +404,27 @@ describe("versioned classification and description import", () => {
       expect(validatePacket(packet).packet).toBeUndefined();
       packet.schemaVersion = 2;
       expect(validatePacket(packet).errors).toEqual([]);
+    });
+  }
+});
+
+describe("legacy whole-document packets", () => {
+  for (const version of [1, 2] as const) {
+    it(`preserves version ${version} evidence meaning and checksum`, () => {
+      const packet = minimalPacket();
+      packet.schemaVersion = version;
+      const evidence = packet.claims[0].evidence;
+      if (Array.isArray(evidence)) throw Error("Expected single evidence fixture");
+      delete evidence.excerpt;
+      evidence.locator = "Whole catalogue record";
+      const before = packetSha256(packet);
+      expect(validatePacket(packet).errors).toEqual([]);
+      expect(
+        buildPacketWork(packet).evidence.find((entry) => entry.localKey === evidence.key)?.mode,
+      ).toBe("whole_document");
+      expect(packetSha256(packet)).toBe(before);
+      evidence.mode = "excerpt";
+      expect(validatePacket(packet).errors).not.toEqual([]);
     });
   }
 });

@@ -102,6 +102,17 @@ export async function prepare(client: Client, selection: unknown) {
   const selected = Array.isArray(selection)
     ? selection.map(parseSelection)
     : parseSelection(selection);
+  // Every new decision reviews catalogue labels, including retained legacy cards.
+  for (const entry of Array.isArray(selected) ? selected : [selected]) {
+    if (entry.catalogue === undefined) {
+      const identifier = await client.query(
+        "select namespace from entities.external_identifier where id=$1 and entity_id=$2",
+        [entry.identifier, entry.itemId],
+      );
+      if (!identifier.rows[0]) throw Error("Identifier must belong to this item");
+      entry.catalogue = identifier.rows[0].namespace;
+    }
+  }
   const id = randomUUID();
   const result = await selectedCandidate(client, selected, id);
   await client.query(

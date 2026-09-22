@@ -74,6 +74,8 @@ export interface PacketEvidence {
   relationship: EvidenceRelationship;
   locator: string;
   excerpt?: string;
+  // Whole-document evidence is a structured assertion, not a locator convention.
+  mode?: "excerpt" | "whole_document";
 }
 
 export interface PacketClaim {
@@ -148,4 +150,13 @@ export function canonicalJson(value: unknown): string {
 
 export function packetSha256(packet: unknown): string {
   return createHash("sha256").update(canonicalJson(packet), "utf8").digest("hex");
+}
+
+// Packets written before structured modes used a whole-document locator.
+// Interpret that legacy spelling only at the import boundary; never rewrite
+// the packet, because its original content determines the import checksum.
+export function evidenceMode(evidence: PacketEvidence): "excerpt" | "whole_document" {
+  return (
+    evidence.mode ?? (/^whole\b/i.test(evidence.locator.trim()) ? "whole_document" : "excerpt")
+  );
 }

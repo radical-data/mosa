@@ -9,7 +9,7 @@ export interface PublicCard {
   id: string;
   name: Statement;
   holder: Statement;
-  identifier: { namespace: string; value: string; source: string };
+  identifier: { namespace: string; label?: string; value: string; source: string };
 }
 export interface PublicCollection {
   schemaVersion: 1;
@@ -67,13 +67,20 @@ export function parseCollection(value: unknown): PublicCollection {
   const records = c.records.map((value): PublicCard => {
     const card = object(value, ["id", "name", "holder", "identifier"]);
     if (typeof card.id !== "string" || !uuid.test(card.id)) throw Error("Invalid item ID");
-    const id = object(card.identifier, ["namespace", "value", "source"]);
+    const identifierValue = card.identifier;
+    const id = object(
+      identifierValue,
+      identifierValue && typeof identifierValue === "object" && "label" in identifierValue
+        ? ["namespace", "label", "value", "source"]
+        : ["namespace", "value", "source"],
+    );
     return {
       id: card.id,
       name: statement(card.name),
       holder: statement(card.holder),
       identifier: {
         namespace: text(id.namespace),
+        ...(id.label === undefined ? {} : { label: text(id.label) }),
         value: text(id.value),
         source: sourceURL(id.source),
       },

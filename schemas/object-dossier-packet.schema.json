@@ -195,6 +195,10 @@
           "description": "The relevant source wording. May be omitted only for visual sources or whole-document evidence.",
           "type": "string",
           "minLength": 1
+        },
+        "mode": {
+          "description": "Whether this evidence quotes an excerpt or cites the source as a whole.",
+          "enum": ["excerpt", "whole_document"]
         }
       }
     },
