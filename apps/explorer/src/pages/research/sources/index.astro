@@ -1,0 +1,59 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { boundedForm, researchTransaction } from "../../../lib/capture/access";
+import { CaptureError, newRequestId, uuid } from "../../../lib/capture/model";
+import { sourceStorage } from "../../../lib/sources/storage";
+import { getSource, reserveUpload, type SavedSource, sourceField, validatePdf } from "../../../lib/sources/store";
+
+let error = "";
+let requestId = Astro.url.searchParams.get("retry") ?? newRequestId();
+if (!uuid.test(requestId)) requestId = newRequestId();
+let citation = "", author = "", documentDate = "";
+if (Astro.url.searchParams.has("retry")) {
+  const source = await researchTransaction(Astro.locals.researcher, c => getSource(c, requestId));
+  citation = source.citation; author = source.author; documentDate = source.document_date;
+}
+if (Astro.request.method === "POST") {
+  try {
+    const form = await boundedForm(Astro.request, 20_000_000);
+    requestId = String(form.get("requestId"));
+    citation = sourceField(form.get("citation"), "a citation", true);
+    author = sourceField(form.get("author"), "an author");
+    documentDate = sourceField(form.get("documentDate"), "a document date");
+    const file = form.get("document");
+    if (!(file instanceof File)) throw new CaptureError("Choose a PDF document.");
+    const bytes = new Uint8Array(await file.arrayBuffer());
+    validatePdf(bytes, file.type);
+    const storage = sourceStorage();
+    const version = await researchTransaction(Astro.locals.researcher, c => reserveUpload(c, Astro.locals.researcher, {
+      id: requestId, citation, author, documentDate, filename: file.name, bytes,
+    }));
+    if (version.state !== "ready") {
+      await storage.put(version.storage_key, bytes, version.media_type);
+      await researchTransaction(Astro.locals.researcher, c => c.query("update capture.source_version set state='ready' where id=$1", [version.id]));
+    }
+    return Astro.redirect(`/research/sources/${version.source_id}`, 303);
+  } catch (e) {
+    error = e instanceof CaptureError ? e.message : "The upload could not finish. Retry with the same file; saved work is retained.";
+  }
+}
+const sources = await researchTransaction(Astro.locals.researcher, async c =>
+  (await c.query<SavedSource>("select * from capture.source where not hidden order by created_at desc limit 100")).rows);
+---
+<Layout title="Your sources">
+  <p><a href="/research">Research workspace</a></p>
+  <h1>Your sources</h1>
+  <p>Preserve an original document privately. Uploading does not create an object or publish the file.</p>
+  {error && <p role="alert">{error}</p>}
+  <form method="post" enctype="multipart/form-data" class="panel">
+    <input type="hidden" name="requestId" value={requestId} />
+    <label>Citation or working title<input name="citation" value={citation} required maxlength="2000" /></label>
+    <label>Author or compiler (if known)<input name="author" value={author} maxlength="2000" /></label>
+    <label>Document date (if known)<input name="documentDate" value={documentDate} maxlength="2000" /></label>
+    <label>Original PDF (upload limit 20 MB)<input type="file" name="document" accept="application/pdf" required /></label>
+    <button type="submit">Save private document</button>
+  </form>
+  <ul class="results">{sources.map(s => <li><a href={`/research/sources/${s.id}`}>{s.citation}</a></li>)}</ul>
+  {!sources.length && <p>No saved documents yet.</p>}
+</Layout>
+<style>.panel { display:grid; gap:1rem; max-width:48rem; } .panel button { justify-self:start; }</style>

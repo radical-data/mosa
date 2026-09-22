@@ -64,3 +64,25 @@ Commit and deploy the replacement through the same gate. If dependencies have ch
 `just test-db` runs the database capture checks, importer regressions and a built-app HTTP test. It resets the local test stack; use a disposable stack. The HTTP test uses a local Auth test server and synthetic data, with a real restricted database login. Production email delivery and Auth configuration require a live check.
 
 The automated checks cover denied direct access, cross-user isolation, disabled accounts, missing evidence, stale revisions, duplicate requests, identity collisions, acceptance rollback, two-card publication and withdrawal. Source uploads, automatic extraction, AI, general permissions management and a broad editing interface remain outside this slice.
+
+## Preserved documents (discovery slice 1)
+
+`/research/sources` accepts an original PDF and a citation, with optional author
+and document date. Documents are owner-private. The entire upload request is
+limited to 20 MB (including form overhead). The source page downloads the original
+bytes through an authenticated route; the storage location is never exposed.
+Hiding a source removes it from the list without deleting its history.
+
+Apply `20260922140000_preserved_sources.sql`. Hosted Supabase creates the private
+`research-sources` bucket; the database-only local stack uses a storage substitute
+in the built-app tests. Set the server-only `SOURCE_STORAGE_KEY` to the Storage
+service credential, and optionally `SOURCE_STORAGE_URL` if different from
+`SUPABASE_URL`. Never expose this key in client code or build arguments. The
+bucket has no public access or browser write policy. The dedicated database
+login continues to use `capture_writer`.
+
+Uploads reserve metadata before writing bytes. The immutable object key is scoped
+to its owner/source/version. Only a verified read-back checksum finalises an
+upload. If finalisation fails, reopen the pending source and retry with the same
+file; this checks existing bytes without overwriting them. A different file must
+use a new upload. A pending source is never presented as preserved evidence.

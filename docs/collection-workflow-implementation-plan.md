@@ -6,7 +6,7 @@ Implement the [human and agentic discovery design](agentic-collection-discovery.
 
 Updated 2026-09-22. This is the current delivery and commit plan. It replaces the earlier manual-first expansion sequence, including the requirement to defer AI until a broad manual editor exists. The completed pilot remains the baseline. None of the new slices is implemented merely because its design or commit message exists.
 
-This task produces the plan only. Commit subjects below describe intended future changes; they do not authorise staging, committing, importing real data or deploying now.
+The project owner authorised implementation of slices 1–5 and commits on 2026-09-22. Work runs on `codex/discovery-slices-1-5`. This authorises local demonstrations as the researcher; production publication remains separate.
 
 ## Existing baseline
 
@@ -53,7 +53,9 @@ All planned subjects are lower case, scoped Conventional Commits under 72 charac
 | 11 | Find additional objects across one museum catalogue | 5 and 8 | `feat(research): expand discovery within a catalogue` |
 | 12 | Review changes to an upstream record | 3, 4 and 9 | `feat(research): review changes to captured sources` |
 
-All twelve slices are planned and unchecked. Record code completion, demonstration evidence and deployment separately when execution begins.
+Slices 1–5 are in implementation; slices 6–12 remain planned. Local checks and demonstrations use an isolated database, not the existing local research store. Production deployment has not been performed.
+
+Local delivery evidence: slice 1 passes `just verify-static` (197 unit tests and both builds) and `just test-db` against the disposable `mosa-discovery-test` stack. Built-app checks exercise PDF upload/download, cross-user denial, checksum-preserving retry and interrupted finalisation. Storage/Auth HTTP substitutes are used; hosted Storage and production sign-in are not verified by this demonstration.
 
 Start with slices 1–5 to establish both complete contribution flows. Slice 6 can follow slice 2 when inventory entry is the immediate need. Slices 9 and 10 can also follow slice 2: public usefulness must not wait for shared campaigns, batch review or catalogue expansion. These dependencies permit independent work; they do not require parallel agents or separate implementations.
 

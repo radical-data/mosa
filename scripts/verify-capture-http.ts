@@ -19,7 +19,32 @@ async function verify() {
   await db.query(`create role ${login} login password '${password}'`);
   await db.query(`grant capture_writer to ${login}`);
   await db.query("insert into capture.researcher(user_id) values($1)", [actor]);
-  const auth = createServer((req, res) => {
+  const storedFiles = new Map<string, Buffer>();
+  const auth = createServer(async (req, res) => {
+    if (req.url?.startsWith("/storage/v1/object/research-sources/")) {
+      if (req.headers.authorization !== "Bearer storage-test") {
+        res.writeHead(403).end();
+        return;
+      }
+      if (req.method === "POST") {
+        if (storedFiles.has(req.url)) {
+          res.writeHead(409).end();
+          return;
+        }
+        const chunks: Buffer[] = [];
+        for await (const chunk of req) chunks.push(Buffer.from(chunk));
+        storedFiles.set(req.url, Buffer.concat(chunks));
+        res.end("{}");
+        return;
+      }
+      const bytes = storedFiles.get(req.url);
+      if (!bytes) {
+        res.writeHead(404).end();
+        return;
+      }
+      res.end(bytes);
+      return;
+    }
     res.setHeader("content-type", "application/json");
     if (req.url === "/auth/v1/user" && req.headers.authorization === "Bearer allowed")
       res.end(JSON.stringify({ id: actor }));
@@ -51,6 +76,7 @@ async function verify() {
       CAPTURE_DATABASE_URL: captureUrl.toString(),
       SUPABASE_URL: `http://127.0.0.1:${address.port}`,
       SUPABASE_PUBLISHABLE_KEY: "local-test",
+      SOURCE_STORAGE_KEY: "storage-test",
       RESEARCH_ORIGIN: origin,
     },
     stdio: "ignore",
@@ -101,6 +127,38 @@ async function verify() {
     assert.equal(home.status, 200);
     assert.equal(home.headers.get("cache-control"), "private, no-store");
     const html = await home.text();
+    const uploadId = randomUUID();
+    const pdf = Buffer.from("%PDF-1.4\n1 0 obj <</Type /Catalog>> endobj\n%%EOF\n");
+    const upload = () => {
+      const form = new FormData();
+      form.set("requestId", uploadId);
+      form.set("citation", "Synthetic private inventory");
+      form.set("document", new Blob([pdf], { type: "application/pdf" }), "inventory.pdf");
+      return fetch(`${origin}/research/sources`, {
+        method: "POST",
+        redirect: "manual",
+        headers: { cookie: "mosa-research=allowed", origin },
+        body: form,
+      });
+    };
+    assert.equal((await upload()).status, 303);
+    assert.equal((await upload()).headers.get("location"), `/research/sources/${uploadId}`);
+    const file = await request(`/research/sources/files/${uploadId}`);
+    assert.equal(file.status, 200);
+    assert.deepEqual(Buffer.from(await file.arrayBuffer()), pdf);
+    assert.equal(file.headers.get("cache-control"), "private, no-store");
+    assert.match(file.headers.get("content-security-policy") ?? "", /sandbox/);
+    await db.query("insert into capture.researcher(user_id) values($1)", [outsider]);
+    assert.equal((await request(`/research/sources/${uploadId}`, "outsider")).status, 403);
+    assert.equal((await request(`/research/sources/files/${uploadId}`, "outsider")).status, 403);
+    await db.query("delete from capture.researcher where user_id=$1", [outsider]);
+    await db.query("update capture.source_version set state='uploading' where id=$1", [uploadId]);
+    assert.equal(
+      (await upload()).status,
+      303,
+      "An interrupted finalisation resumes against existing bytes",
+    );
+    assert.equal(storedFiles.size, 1);
     const catalogueName = `HTTP catalogue ${actor}`;
     assert.equal(
       (await request("/research/catalogues", "allowed", { label: catalogueName })).status,

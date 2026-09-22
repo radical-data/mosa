@@ -1,0 +1,33 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { boundedForm, researchTransaction } from "../../../lib/capture/access";
+import { getSource, type SourceVersion } from "../../../lib/sources/store";
+
+const id = Astro.params.id ?? "";
+if (Astro.request.method === "POST") {
+  const form = await boundedForm(Astro.request);
+  await researchTransaction(Astro.locals.researcher, async c => {
+    await getSource(c, id);
+    if (form.get("action") === "hide") await c.query("update capture.source set hidden=true where id=$1", [id]);
+  });
+  return Astro.redirect("/research/sources", 303);
+}
+const { source, versions } = await researchTransaction(Astro.locals.researcher, async c => ({
+  source: await getSource(c, id),
+  versions: (await c.query<SourceVersion>("select * from capture.source_version where source_id=$1 order by created_at desc", [id])).rows,
+}));
+---
+<Layout title={source.citation}>
+  <p><a href="/research/sources">Your sources</a></p>
+  <h1>{source.citation}</h1>
+  {source.author && <p>Author or compiler: {source.author}</p>}
+  {source.document_date && <p>Document date: {source.document_date}</p>}
+  <p>Private original. Publication and research acceptance are separate decisions.</p>
+  {versions.map(v => <section class="panel">
+    <h2>{v.filename}</h2><p>{v.state === "ready" ? "Preserved" : "Upload unfinished"} · {v.byte_count.toLocaleString("en-GB")} bytes</p>
+    <p>Uploaded: {new Date(v.created_at).toISOString()}</p>
+    {v.state === "ready" ? <p><a href={`/research/sources/files/${v.id}`}>Open original document</a></p> : <p><a href={`/research/sources?retry=${source.id}`}>Retry this upload</a></p>}
+    <details><summary>Preservation checksum</summary><code>{v.sha256}</code></details>
+  </section>)}
+  <form method="post"><button type="submit" name="action" value="hide">Hide from my source list</button></form>
+</Layout>

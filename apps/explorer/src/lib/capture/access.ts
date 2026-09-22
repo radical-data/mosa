@@ -89,7 +89,7 @@ export function checkOrigin(request: Request) {
   )
     throw new CaptureError("Submit the research form.");
 }
-export async function boundedForm(request: Request) {
+export async function boundedForm(request: Request, limit = 64000) {
   const reader = request.body?.getReader();
   if (!reader) throw new CaptureError("Missing form.");
   const chunks: Uint8Array[] = [];
@@ -98,7 +98,7 @@ export async function boundedForm(request: Request) {
     const { done, value } = await reader.read();
     if (done) break;
     size += value.length;
-    if (size > 64000) {
+    if (size > limit) {
       await reader.cancel();
       throw new CaptureError("This form is too large.");
     }
