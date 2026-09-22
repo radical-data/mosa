@@ -7,6 +7,7 @@
       "!**/dist",
       "!**/.astro",
       "!**/supabase/.temp",
+      "!**/research-local",
       "!**/src/lib/database.types.ts"
     ]
   },

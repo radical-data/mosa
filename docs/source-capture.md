@@ -93,42 +93,30 @@ From a preserved source choose **Prepare an object record**. Copy a name, classi
 
 Packet v3 uses `urn:mosa:source:<id>` with an immutable `version` UUID. The importer verifies that the version belongs to that source and is ready, then stores its reference on each evidence row. Packets v1/v2 retain their existing URL semantics. Apply `20260922150000_document_evidence.sql` before deploying the app/importer.
 
-Verified with a synthetic cross-page description through the built HTTP app, including explicit research consent, unknown custody, acceptance retry and private source access. No real PDF transcription or model processing was performed.
+Initially verified with a synthetic cross-page description through the built HTTP app, including explicit research consent, unknown custody, acceptance retry and private source access. The later [local research pilot](local-research-pilot.md) uses the supplied PDF and preserved museum pages.
 
-## Catalogue capture with Supabase (slice 3)
+## Local research bundles
 
-Apply `20260922160000_catalogue_capture.sql` and `20260922163000_managed_research_queue.sql`. The latter replaces custom queue polling with Supabase Queues (`pgmq`). Provision a login granted **only** `capture_worker` and set `RESEARCH_WORKER_DATABASE_URL` in the existing app. It has no canonical or publication write grants. Do not use an administrator or the app's `capture_writer` login.
+Discovery, web capture and AI preparation now happen in local research sessions.
+Use the [local research guide](local-research.md) to preserve catalogue pages,
+prepare proposals and import them at `/research/bundles`. Humans can also prepare
+bundles or continue using the manual forms above.
 
-Set a random server-only `RESEARCH_RUNNER_SECRET` of at least 32 characters. Store the same secret as `research_runner_token` in Supabase Vault, with the app's exact HTTPS `/api/research-step` URL as `research_runner_url`. Run [`scripts/schedule-research.sql`](../scripts/schedule-research.sql) as a maintainer to schedule one bounded operation each minute. Supabase Cron calls the existing app: there is no separate always-running worker, deployment or Edge Functions runtime. The endpoint requires its own bearer secret, ignores caller-supplied work, and claims only persisted queue messages. Keep the app request timeout above 120 seconds. Reapplying the named schedule updates it; stop it with `cron.unschedule('mosa-research-step')`.
+The website validates saved bytes and evidence, stores private sources and creates
+drafts. Review, identity confirmation and acceptance remain human actions. No
+hosted model/search adapter, background runner or Cron configuration is required.
 
-The queue stores job IDs only. Application job records provide researcher-visible progress and preserve results; queue visibility handles delivery and restart. Completion acknowledges the message in the same transaction as its result. A lease token prevents an old invocation from overwriting a newer attempt. See [Supabase Queues](https://supabase.com/docs/guides/queues) and [Cron scheduling](https://supabase.com/docs/guides/functions/schedule-functions).
+Apply all migrations through the normal deployment process, including
+`20260922200000_local_research_bundles.sql` and
+`20260922210000_retire_hosted_research.sql`. The latter stops the named research
+schedule, removes queue delivery and revokes the old runner's permissions. It
+preserves historical job inputs/results, drafts and source versions. Do not
+rewrite previously applied migrations. Supabase extensions are retained because
+other applications may use them.
 
-**Your sources → Preserve a catalogue page** enqueues capture. The source page shows progress, failure, explicit retry, original URL, raw download, retrieval details and escaped readable text. **Capture another version** retains earlier versions. Each capture request has a stable ID; interrupted uploads resume the same bytes and leases expire after three minutes. After three interruptions, explicit retry is required. If the site changes before an interrupted upload can be recovered, start another capture.
-
-Limits: public HTTP(S) on standard ports, no credentials/cookies, four redirects, 30 seconds, 2 MB response and 200,000 readable characters. DNS answers and each redirect are checked; the connection uses the checked address. Only uncompressed HTML/JSON is supported. Script-only pages, access challenges and sign-in pages fail visibly; manual URL-based drafts remain available. HTML is parsed with parse5 and shown as text. Review the saved copy before preparing claims; challenge detection cannot recognise every site's interstitial.
-
-Parser and request implementation references: [parse5](https://parse5.js.org/), [Node HTTP](https://nodejs.org/api/http.html). Tests use synthetic sources; no access controls are bypassed.
-
-## Optional AI preparation (slice 4)
-
-Apply `20260922170000_source_preparation.sql`. Set `OPENAI_API_KEY` and `RESEARCH_MODEL` in the existing app's server environment; use an account-supported Responses model with structured outputs. No model is selected silently. The runner uses [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs), with no tools, a 60 KB input ceiling, 1,800 output-token ceiling and 60-second timeout. It does not send PDFs or hidden source files: this slice handles the readable text of saved HTML/JSON.
-
-On a saved version, confirm permission for external-model processing and choose **Prepare with AI**. One preparation job per version makes repeated requests idempotent. The saved response, model, prompt, usage and originating researcher remain on the private job; every human save remains in draft revisions. A model may propose one quoted name, classification or description. Custody, catalogue identity and other observations remain for human research. Ambiguous accounts produce observations without inventing an object. Rejected evidence remains available in the job record; use manual preparation to resolve it.
-
-The model has no tools and the runner has no canonical write grants. Proposed wording must occur inside its quotation, which must occur in the saved text. Review and acceptance recheck this for AI-prepared drafts, including after human edits. Research disclosure consent and identity confirmation remain human decisions. Repeated preparation does not overwrite edits or create another candidate after acceptance.
-
-Fixed-provider tests exercise permission, quotation rejection, preparation, human editing and acceptance through the built app. **Live provider verification remains pending:** no model API credentials are available in this workspace. Configure credentials outside chat before attempting a live run.
-
-## Discovery from one lead (slice 5)
-
-Apply `20260922180000_research_leads.sql`. Configure `BRAVE_SEARCH_API_KEY` alongside the preparation model. This is the only search adapter; see [Brave Web Search](https://api-dashboard.search.brave.com/app/documentation/web-search/get-started). No crawler framework, separate worker process or additional queue is required.
-
-**Research leads** accepts an institution, object description, processing permission and positive limits. Each Cron invocation advances one saved step: search, assess, capture or prepare. The model can select a supplied result, request one follow-up search, or stop with no match or ambiguity. Search queries, results, match reasons and provider decisions remain on the lead. Source text cannot add tools, alter limits or write accepted claims. Inspect the saved source and confirm identity before acceptance; a search match is not object identity.
-
-The default allowance is 20 external requests, four AI calls and 30 elapsed minutes, including pauses. Each attempted source fetch reserves five requests for redirects; each model call reserves 70,000 tokens against the allowance before starting (60 KB maximum input plus bounded prompt/output). Reservations are conservative allowances, not actual bills; provider usage is retained where returned. Retries reserve again. Search is limited to two queries/eight results each. Storage/database calls do not consume the external discovery allowance. No new external call starts once its allowance is exhausted.
-
-**Pause and take over** stops new work after the current bounded operation. **Resume discovery** retains progress and allowances. A researcher can choose a source URL while paused or after a stopped result, then continue within the remaining allowance. Source and candidate links lead to the existing manual forms. Another discovery of an already captured URL reuses its latest ready version and preparation, including human edits or acceptance; explicit source recapture remains available separately. Nothing is merged by description.
-
-Fixed-provider integration tests cover an agent-led candidate, pause/resume, exhausted budgets, repeated results and human-selected-source hand-off without copied candidates. Built HTTP checks cover lead controls and reuse of an existing reviewed record. **Live search/model demonstrations and hosted Cron configuration remain pending:** no provider credentials or production schedule were configured in this task.
-
-A live read-only capture check on 2026-09-22 successfully fetched [Te Papa object 206768](https://collections.tepapa.govt.nz/object/206768): HTTP 200, 54,633 original bytes and 921 readable characters. This checks the actual network capture path; it is not a live model/search or production import demonstration.
+After the migration and app deployment, remove any old `OPENAI_API_KEY`,
+`RESEARCH_MODEL`, `BRAVE_SEARCH_API_KEY`, `RESEARCH_RUNNER_SECRET` and
+`RESEARCH_WORKER_DATABASE_URL` settings from the research app, and the
+`research_runner_url` / `research_runner_token` Vault secrets if they were created.
+No replacement provider keys are needed. Retain the existing authentication,
+restricted writer connection and private Storage credentials.

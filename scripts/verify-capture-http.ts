@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { randomUUID } from "node:crypto";
 import { createServer } from "node:http";
-import { Client, Pool } from "pg";
+import { Client } from "pg";
 import { getLocalDatabaseUrl } from "./lib/supabase-local";
 import { verifyBundleHttp } from "./lib/verify-bundle-http";
 
@@ -119,7 +119,7 @@ async function verify() {
     assert.match(signIn.headers.get("set-cookie") ?? "", /HttpOnly/i);
     assert.match(signIn.headers.get("set-cookie") ?? "", /SameSite=Strict/i);
     assert.equal((await request("/research", "invalid")).status, 303);
-    assert.equal((await request("/api/research-step", "allowed", {})).status, 401);
+    assert.equal((await request("/api/research-step", "allowed", {})).status, 404);
     assert.equal((await request("/research", "outsider")).status, 403);
     assert.equal((await request("/research/catalogues", "outsider")).status, 403);
     const cross = await fetch(`${origin}/research`, {
@@ -385,208 +385,6 @@ async function verify() {
     assert.match(documentEvidence.rows[0].locator, /Page 17: last row\nPage 18: first row/);
     assert(
       (await (await request(documentLocation)).text()).includes("Saved to the research collection"),
-    );
-
-    const captureRequest = randomUUID();
-    const webCapture = await request("/research/sources", "allowed", {
-      action: "capture",
-      requestId: captureRequest,
-      url: "https://example.org/catalogue",
-    });
-    assert.equal(webCapture.status, 303);
-    const webLocation = webCapture.headers.get("location");
-    assert(webLocation);
-    assert((await (await request(webLocation)).text()).includes("queued"));
-    const { runOne, performCapture } = await import("../apps/explorer/src/lib/sources/jobs.js");
-    const workerLogin = `worker_http_${randomUUID().replaceAll("-", "")}`,
-      workerPassword = randomUUID();
-    await db.query(`create role ${workerLogin} login password '${workerPassword}'`);
-    await db.query(`grant capture_worker to ${workerLogin}`);
-    const workerUrl = new URL(databaseUrl);
-    workerUrl.username = workerLogin;
-    workerUrl.password = workerPassword;
-    const worker = new Pool({ connectionString: workerUrl.toString() });
-    try {
-      await runOne(worker, {
-        capture: (p, j) =>
-          performCapture(
-            p,
-            j,
-            {
-              get: async (key) => {
-                const b = storedFiles.get(`/storage/v1/object/research-sources/${key}`);
-                if (!b) throw Error("missing");
-                return b;
-              },
-              put: async (key, bytes) => {
-                storedFiles.set(`/storage/v1/object/research-sources/${key}`, Buffer.from(bytes));
-              },
-            },
-            async () => ({
-              bytes: Buffer.from(
-                "<p>A synthetic wooden figure from Rapa Nui, from the museum catalogue.</p>",
-              ),
-              mediaType: "text/html",
-              text: "A synthetic wooden figure from Rapa Nui, from the museum catalogue.",
-              manifest: {
-                requestedUrl: "https://example.org/catalogue",
-                finalUrl: "https://example.org/catalogue",
-                redirects: [],
-                status: 200,
-                retrievedAt: new Date().toISOString(),
-                contentType: "text/html",
-                etag: null,
-                lastModified: null,
-                extractor: "mosa-readable-v1",
-              },
-            }),
-          ),
-      });
-      const { performPreparation } = await import(
-        "../apps/explorer/src/lib/sources/preparation.js"
-      );
-      const preparationRequest = randomUUID();
-      const noConsent = await request(webLocation, "allowed", {
-        action: "ai",
-        version: captureRequest,
-        requestId: preparationRequest,
-      });
-      assert((await noConsent.text()).includes("Confirm permission"));
-      const prepareFields = {
-        action: "ai",
-        version: captureRequest,
-        requestId: preparationRequest,
-        consent: "yes",
-      };
-      assert.equal((await request(webLocation, "allowed", prepareFields)).status, 303);
-      let modelCalls = 0;
-      await runOne(worker, {
-        prepare: (p, j) =>
-          performPreparation(p, j, async () => {
-            modelCalls++;
-            return {
-              model: "synthetic-model",
-              responseId: "synthetic-response",
-              usage: { output_tokens: 40 },
-              value: {
-                statement: {
-                  predicate: "described_as",
-                  value: "synthetic wooden figure",
-                  quote: "A synthetic wooden figure from Rapa Nui, from the museum catalogue.",
-                },
-                observations: "Holder and catalogue number are not established.",
-              },
-            };
-          }),
-      });
-      const preparation = (
-        await db.query("select status,result from capture.job where id=$1", [preparationRequest])
-      ).rows[0];
-      assert.equal(preparation.status, "succeeded");
-      const aiLocation = `/research/${preparation.result.draftId}`;
-      assert((await (await request(aiLocation)).text()).includes("synthetic-model"));
-      const aiFields = {
-        ...documentFields,
-        sourceVersion: captureRequest,
-        url: "urn:mosa:source:ignored",
-        sourceRegions: "Catalogue description",
-        researchConsent: "yes",
-        name: "synthetic wooden figure",
-        nameExcerpt: "Invented quotation",
-      };
-      assert(
-        (await (await request(aiLocation, "allowed", aiFields)).text()).includes(
-          "must occur in the saved source",
-        ),
-      );
-      assert.equal(
-        (
-          await request(aiLocation, "allowed", {
-            ...aiFields,
-            nameExcerpt: "A synthetic wooden figure from Rapa Nui, from the museum catalogue.",
-          })
-        ).status,
-        303,
-      );
-      assert.equal(
-        (await request(aiLocation, "allowed", { action: "accept", revision: "2", identity: "new" }))
-          .status,
-        303,
-      );
-      assert(
-        (await (await request(aiLocation)).text()).includes("Saved to the research collection"),
-      );
-      assert.equal(
-        (await request(webLocation, "allowed", { ...prepareFields, requestId: randomUUID() }))
-          .status,
-        303,
-      );
-      assert.equal(
-        await runOne(worker, {
-          prepare: () => {
-            throw Error("Must not re-extract accepted work");
-          },
-        }),
-        false,
-      );
-      assert.equal(modelCalls, 1);
-      const leadId = randomUUID();
-      const leadFields = {
-        requestId: leadId,
-        institution: "Synthetic catalogue",
-        description: "wooden figure",
-        maxRequests: "20",
-        maxModelCalls: "4",
-        minutes: "30",
-        consent: "yes",
-      };
-      assert.equal((await request("/research/leads", "allowed", leadFields)).status, 303);
-      assert(
-        (await (await request(`/research/leads/${leadId}`)).text()).includes("Synthetic catalogue"),
-      );
-      assert.equal((await request(`/research/leads/${leadId}`, "outsider")).status, 403);
-      assert.equal(
-        (await request(`/research/leads/${leadId}`, "allowed", { action: "pause" })).status,
-        303,
-      );
-      assert.equal(
-        (
-          await request(`/research/leads/${leadId}`, "allowed", {
-            action: "choose",
-            url: "https://example.org/catalogue",
-          })
-        ).status,
-        303,
-      );
-      const { performDiscovery } = await import("../apps/explorer/src/lib/sources/discovery.js");
-      for (let i = 0; i < 4; i++) await runOne(worker, { discover: performDiscovery });
-      const leadPage = await (await request(`/research/leads/${leadId}`)).text();
-      assert(leadPage.includes("candidate ready"));
-      assert(leadPage.includes(aiLocation));
-    } finally {
-      await worker.end();
-      await db.query(`drop role ${workerLogin}`);
-    }
-    assert((await (await request(webLocation)).text()).includes("Readable source copy"));
-    const webDraft = await request(webLocation, "allowed", {
-      action: "prepare",
-      version: captureRequest,
-      requestId: randomUUID(),
-    });
-    assert.equal(webDraft.status, 303);
-    const webDraftLocation = webDraft.headers.get("location");
-    assert(webDraftLocation);
-    assert.equal(
-      (
-        await request(webDraftLocation, "allowed", {
-          ...documentFields,
-          sourceVersion: captureRequest,
-          url: "urn:mosa:source:ignored",
-          sourceRegions: "Catalogue: description",
-          researchConsent: "yes",
-        })
-      ).status,
-      303,
     );
 
     await verifyBundleHttp(db, origin, actor, outsider, (count) => {

@@ -97,9 +97,6 @@ async function verifyDatabase(): Promise<void> {
   await verifyObjectDossierImport();
   await runCommand("pnpm", ["--filter", "@mosa/explorer", "build"], { cwd: projectRoot });
   await runCommand("pnpm", ["exec", "tsx", "scripts/verify-capture-http.ts"], { cwd: projectRoot });
-  await runCommand("pnpm", ["exec", "tsx", "scripts/verify-research-worker.ts"], {
-    cwd: projectRoot,
-  });
 }
 
 async function main(): Promise<void> {

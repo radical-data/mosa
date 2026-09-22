@@ -1,5 +1,11 @@
 # Deliver human and agentic discovery in working slices
 
+> Execution update (2026-09-22): slices 3–5 now use local research sessions and
+> [research bundle imports](local-research.md). The hosted search/model adapters,
+> queue delivery and Cron endpoint have been retired. Source preservation and
+> human preparation/review are retained. The earlier hosted implementation details
+> below are historical; the local research guide is the current operating procedure.
+
 ## Objective and status
 
 Implement the [human and agentic discovery design](agentic-collection-discovery.md) through narrow vertical slices. People and agents can both discover sources and prepare records. Both flows use the same evidence, human acceptance and canonical importer. Publication remains a separate decision.

@@ -60,13 +60,13 @@ function record(value: unknown, keys: string[], label: string): Record<string, u
   return result;
 }
 function text(value: unknown, label: string, max = 4000, required = true): string {
-  if (
-    typeof value !== "string" ||
-    value.length > max ||
-    (required && !value.trim()) ||
-    [...value].some((ch) => ch.charCodeAt(0) < 32 && ![9, 10, 13].includes(ch.charCodeAt(0)))
-  )
+  if (typeof value !== "string" || value.length > max || (required && !value.trim()))
     throw new CaptureError(`Invalid ${label}; use ${required ? "1–" : "0–"}${max} characters.`);
+  for (let i = 0; i < value.length; i++) {
+    const code = value.charCodeAt(i);
+    if (code < 32 && ![9, 10, 13].includes(code))
+      throw new CaptureError(`Remove unsupported control characters from ${label}.`);
+  }
   return value;
 }
 function key(value: unknown) {

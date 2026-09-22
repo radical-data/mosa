@@ -1,5 +1,11 @@
 # Human and agentic discovery for the Rapa Nui collection
 
+> Execution update (2026-09-22): discovery and preparation run in local agent or
+> human research sessions. [Local research bundles](local-research.md) replace the
+> hosted orchestrator and worker described in this original design. Hosted storage,
+> validation, private draft review and explicit human acceptance remain. Campaigns
+> and shared batch review below are future work, not implemented capabilities.
+
 ## Decision and scope
 
 Proposed design, 22 September 2026, responding to the request to prioritise finding many more Rapa Nui objects, preserving their sources and making human review quick.

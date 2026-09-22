@@ -123,8 +123,11 @@ accepted records nor publication decisions.
 
 ## Deployment
 
-Apply `20260922200000_local_research_bundles.sql` through the normal migration
-process before deploying the app. Reuse the existing researcher authentication,
+Apply all migrations, including `20260922200000_local_research_bundles.sql` and
+`20260922210000_retire_hosted_research.sql`, through the normal migration
+process before deploying the app. The retirement migration stops the old schedule
+and queue delivery while retaining historical research records. Reuse the existing
+researcher authentication,
 `CAPTURE_DATABASE_URL`, `DATABASE_SSL_CA`, `SUPABASE_URL` and private
 `SOURCE_STORAGE_KEY`. No new login or external-service credentials are required.
 The existing `research-sources` bucket remains private. Keep web/proxy upload
