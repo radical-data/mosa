@@ -5,7 +5,6 @@ import contact from "./pages/contact.json";
 import events from "./pages/events.json";
 import home from "./pages/home.json";
 import interfaceCopy from "./pages/interface.json";
-import programme from "./pages/programme.json";
 import referenceLabels from "./pages/reference-labels.json";
 import resourceSummaries from "./pages/resource-summaries.json";
 import resources from "./pages/resources.json";
@@ -20,7 +19,6 @@ export const content = {
   resources,
   contact,
   interface: interfaceCopy,
-  programme,
   "reference-labels": referenceLabels,
   "resource-summaries": resourceSummaries,
 };

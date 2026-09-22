@@ -54,9 +54,3 @@ export function getResources(locale: Locale) {
     description: copy[`${id}Description`],
   }));
 }
-export const programme = {
-  date: "2026-09-19",
-  timeZone: "Europe/London",
-  institution: "British Museum",
-} as const;
-export const archiveEvent = { date: "2026-07-25", timeZone: "Pacific/Easter" } as const;

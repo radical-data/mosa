@@ -1,18 +1,14 @@
 ---
-import { getCopy } from "../content/content";
-import { programme } from "../data/site";
-import { formatHistoricalDate } from "../i18n/format";
-import type { Locale } from "../i18n/routes";
+import type { DisplayEvent } from "../data/events";
 
-interface Props { open?: boolean; locale: Locale; }
-const { open = false, locale } = Astro.props;
-const copy = getCopy("programme", locale);
+interface Props { event: DisplayEvent; open?: boolean; }
+const { event, open = false } = Astro.props;
 ---
 <details class="event" open={open}>
   <summary>
-    <span class="event-meta"><strong>{programme.institution}</strong><time datetime={programme.date}>{formatHistoricalDate(programme.date, locale)}</time></span>
-    <span class="event-title">{copy.title}</span>
+    <span class="event-meta">{event.venue && <strong>{event.venue}</strong>}<time datetime={event.dateTime}>{event.dateLabel}</time></span>
+    <span class="event-title"><Fragment set:html={event.title} /></span>
     <span class="event-symbol" aria-hidden="true"></span>
   </summary>
-  <div class="event-body"><p>{copy.body}</p><p class="muted small">{copy.availability}</p></div>
+  <div class="event-body"><p><Fragment set:html={event.body} /></p>{event.note && <p class="muted small"><Fragment set:html={event.note} /></p>}</div>
 </details>

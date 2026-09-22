@@ -411,6 +411,9 @@ strong {
 .event[open] {
   border-bottom-color: var(--coral);
 }
+.event + .event {
+  border-top: 0;
+}
 .event summary {
   display: grid;
   grid-template-columns: 1fr 4fr 40px;
@@ -689,6 +692,12 @@ strong {
   gap: 1.5rem;
   border-block: 1px solid var(--rule);
   padding-block: 1.5rem;
+}
+.archive-card:not(:has(> img)) {
+  grid-template-columns: 1fr;
+}
+.archive-card + .archive-card {
+  border-top: 0;
 }
 .archive-card > img {
   width: 100%;
