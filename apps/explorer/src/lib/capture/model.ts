@@ -37,6 +37,7 @@ export const fields = [
 ] as const;
 export type Content = Record<(typeof fields)[number], string> & {
   sourceCitation?: string;
+  sourceMediaType?: string;
   checkedAt: string;
   // Resolved by the server at review, never accepted from a submitted form.
   holderNameEvidenceId?: string;
@@ -83,6 +84,7 @@ export function readContent(form: FormData, previous?: Content): Content {
     c.url = previous?.url ?? c.url;
     c.checkedAt = previous?.checkedAt ?? new Date().toISOString();
     c.sourceCitation = previous?.sourceCitation;
+    c.sourceMediaType = previous?.sourceMediaType;
   }
   let url: URL;
   try {
@@ -146,7 +148,8 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
       throw new CaptureError("Reload the preserved source before review.");
     if (
       !c.sourceRegions.trim() ||
-      c.sourceRegions.split(/\r?\n/).some((line) => !/^page [1-9]\d*: .+/i.test(line))
+      (c.sourceMediaType === "application/pdf" &&
+        c.sourceRegions.split(/\r?\n/).some((line) => !/^page [1-9]\d*: .+/i.test(line)))
     )
       throw new CaptureError(
         "List each source region on a separate line, for example Page 12: table, row 3, object column.",

@@ -14,11 +14,12 @@
   },
   "dependencies": {
     "@astrojs/node": "^11.0.2",
-    "astro": "7.0.9",
-    "pg": "catalog:",
     "@mosa/object-dossier": "workspace:*",
     "ajv": "^8.20.0",
-    "ajv-formats": "^3.0.1"
+    "ajv-formats": "^3.0.1",
+    "astro": "7.0.9",
+    "parse5": "^7.3.0",
+    "pg": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",

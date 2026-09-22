@@ -238,3 +238,7 @@ The twelve slices deliver both contribution flows, reviewed inventory growth, co
 ### Slice 2 delivery evidence — 2026-09-22
 
 Implemented document-backed preparation, packet v3 and exact evidence-version references. The synthetic PDF flow passed built HTTP acceptance with two page regions, no holder or identifier, explicit consent and idempotent retry. Legacy importer, publication, migration, database and unit checks pass. The claim page exposes the cited version to authorised source owners. No AI configuration is required.
+
+### Slice 3 delivery evidence — 2026-09-22
+
+Implemented a Supabase Postgres job queue, restricted worker login, private Storage snapshots, retrieval manifests, readable HTML/JSON and source-page progress/retry. Static checks and 202 unit tests pass. Database/import/publication regressions pass; focused worker and built HTTP checks pass, including immutable recovery, expired leases, changed versions and manual preparation from a captured page. Live museum access remains site-dependent; no hosted worker has been deployed.

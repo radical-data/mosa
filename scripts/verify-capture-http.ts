@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { randomUUID } from "node:crypto";
 import { createServer } from "node:http";
-import { Client } from "pg";
+import { Client, Pool } from "pg";
 import { getLocalDatabaseUrl } from "./lib/supabase-local";
 
 async function verify() {
@@ -376,6 +376,87 @@ async function verify() {
     assert.match(documentEvidence.rows[0].locator, /Page 17: last row\nPage 18: first row/);
     assert(
       (await (await request(documentLocation)).text()).includes("Saved to the research collection"),
+    );
+
+    const captureRequest = randomUUID();
+    const webCapture = await request("/research/sources", "allowed", {
+      action: "capture",
+      requestId: captureRequest,
+      url: "https://example.org/catalogue",
+    });
+    assert.equal(webCapture.status, 303);
+    const webLocation = webCapture.headers.get("location");
+    assert(webLocation);
+    assert((await (await request(webLocation)).text()).includes("queued"));
+    const { runOne, performCapture } = await import("../apps/explorer/src/lib/sources/jobs.js");
+    const workerLogin = `worker_http_${randomUUID().replaceAll("-", "")}`,
+      workerPassword = randomUUID();
+    await db.query(`create role ${workerLogin} login password '${workerPassword}'`);
+    await db.query(`grant capture_worker to ${workerLogin}`);
+    const workerUrl = new URL(databaseUrl);
+    workerUrl.username = workerLogin;
+    workerUrl.password = workerPassword;
+    const worker = new Pool({ connectionString: workerUrl.toString() });
+    try {
+      await runOne(worker, {
+        capture: (p, j) =>
+          performCapture(
+            p,
+            j,
+            {
+              get: async (key) => {
+                const b = storedFiles.get(`/storage/v1/object/research-sources/${key}`);
+                if (!b) throw Error("missing");
+                return b;
+              },
+              put: async (key, bytes) => {
+                storedFiles.set(`/storage/v1/object/research-sources/${key}`, Buffer.from(bytes));
+              },
+            },
+            async () => ({
+              bytes: Buffer.from(
+                "<p>A synthetic wooden figure from Rapa Nui, from the museum catalogue.</p>",
+              ),
+              mediaType: "text/html",
+              text: "A synthetic wooden figure from Rapa Nui, from the museum catalogue.",
+              manifest: {
+                requestedUrl: "https://example.org/catalogue",
+                finalUrl: "https://example.org/catalogue",
+                redirects: [],
+                status: 200,
+                retrievedAt: new Date().toISOString(),
+                contentType: "text/html",
+                etag: null,
+                lastModified: null,
+                extractor: "mosa-readable-v1",
+              },
+            }),
+          ),
+      });
+    } finally {
+      await worker.end();
+      await db.query(`drop role ${workerLogin}`);
+    }
+    assert((await (await request(webLocation)).text()).includes("Readable source copy"));
+    const webDraft = await request(webLocation, "allowed", {
+      action: "prepare",
+      version: captureRequest,
+      requestId: randomUUID(),
+    });
+    assert.equal(webDraft.status, 303);
+    const webDraftLocation = webDraft.headers.get("location");
+    assert(webDraftLocation);
+    assert.equal(
+      (
+        await request(webDraftLocation, "allowed", {
+          ...documentFields,
+          sourceVersion: captureRequest,
+          url: "urn:mosa:source:ignored",
+          sourceRegions: "Catalogue: description",
+          researchConsent: "yes",
+        })
+      ).status,
+      303,
     );
 
     const publicAccess = await request(location, "invalid");

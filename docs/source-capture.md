@@ -94,3 +94,13 @@ From a preserved source choose **Prepare an object record**. Copy a name, classi
 Packet v3 uses `urn:mosa:source:<id>` with an immutable `version` UUID. The importer verifies that the version belongs to that source and is ready, then stores its reference on each evidence row. Packets v1/v2 retain their existing URL semantics. Apply `20260922150000_document_evidence.sql` before deploying the app/importer.
 
 Verified with a synthetic cross-page description through the built HTTP app, including explicit research consent, unknown custody, acceptance retry and private source access. No real PDF transcription or model processing was performed.
+
+## Catalogue capture worker (slice 3)
+
+Apply `20260922160000_catalogue_capture.sql`. Provision a separate login granted **only** `capture_worker` and set `RESEARCH_WORKER_DATABASE_URL` in the worker environment. It has no canonical or publication write grants. Give that process the same private source storage configuration, then run `just research-worker` (or `just research-worker --once` for one queued job). Do not use an administrator or the app's `capture_writer` login for this process.
+
+**Your sources → Preserve a catalogue page** enqueues capture. The source page shows progress, failure, explicit retry, original URL, raw download, retrieval details and escaped readable text. **Capture another version** retains earlier versions. Each capture request has a stable ID; interrupted uploads resume the same bytes and leases expire after three minutes. After three interruptions, explicit retry is required. If the site changes before an interrupted upload can be recovered, start another capture.
+
+Limits: public HTTP(S) on standard ports, no credentials/cookies, four redirects, 30 seconds, 2 MB response and 200,000 readable characters. DNS answers and each redirect are checked; the connection uses the checked address. Only uncompressed HTML/JSON is supported. Script-only pages, access challenges and sign-in pages fail visibly; manual URL-based drafts remain available. HTML is parsed with parse5 and shown as text. Review the saved copy before preparing claims; challenge detection cannot recognise every site's interstitial.
+
+Parser and request implementation references: [parse5](https://parse5.js.org/), [Node HTTP](https://nodejs.org/api/http.html). Tests use synthetic sources; no access controls are bypassed.

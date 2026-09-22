@@ -5,6 +5,7 @@ import { MAX_SOURCE_BYTES, sha256 } from "./storage.js";
 export interface SavedSource {
   id: string;
   owner_id: string;
+  original_url: string | null;
   citation: string;
   author: string;
   document_date: string;
@@ -16,6 +17,8 @@ export interface SourceVersion {
   source_id: string;
   filename: string;
   media_type: string;
+  readable_text: string | null;
+  manifest: Record<string, unknown> | null;
   byte_count: number;
   sha256: string;
   storage_key: string;

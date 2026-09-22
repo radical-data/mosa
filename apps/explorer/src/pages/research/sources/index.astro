@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/Layout.astro";
 import { boundedForm, researchTransaction } from "../../../lib/capture/access";
 import { CaptureError, newRequestId, uuid } from "../../../lib/capture/model";
+import { enqueueCapture } from "../../../lib/sources/jobs";
 import { sourceStorage } from "../../../lib/sources/storage";
 import { getSource, reserveUpload, type SavedSource, sourceField, validatePdf } from "../../../lib/sources/store";
 
@@ -17,6 +18,10 @@ if (Astro.request.method === "POST") {
   try {
     const form = await boundedForm(Astro.request, 20_000_000);
     requestId = String(form.get("requestId"));
+    if (form.get("action") === "capture") {
+      const sourceId = await researchTransaction(Astro.locals.researcher, c => enqueueCapture(c, Astro.locals.researcher, requestId, String(form.get("url"))));
+      return Astro.redirect(`/research/sources/${sourceId}`,303);
+    }
     citation = sourceField(form.get("citation"), "a citation", true);
     author = sourceField(form.get("author"), "an author");
     documentDate = sourceField(form.get("documentDate"), "a document date");
@@ -52,6 +57,13 @@ const sources = await researchTransaction(Astro.locals.researcher, async c =>
     <label>Document date (if known)<input name="documentDate" value={documentDate} maxlength="2000" /></label>
     <label>Original PDF (upload limit 20 MB)<input type="file" name="document" accept="application/pdf" required /></label>
     <button type="submit">Save private document</button>
+  </form>
+  <form method="post" class="panel">
+    <h2>Preserve a catalogue page</h2>
+    <input type="hidden" name="requestId" value={newRequestId()} />
+    <label>Public catalogue URL<input type="url" name="url" required /></label>
+    <p>HTML and JSON pages, up to 2 MB. Capture runs in the background.</p>
+    <button type="submit" name="action" value="capture">Capture catalogue page</button>
   </form>
   <ul class="results">{sources.map(s => <li><a href={`/research/sources/${s.id}`}>{s.citation}</a></li>)}</ul>
   {!sources.length && <p>No saved documents yet.</p>}

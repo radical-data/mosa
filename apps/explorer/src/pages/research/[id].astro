@@ -295,7 +295,7 @@ const selectedCitations = {
             <input type="hidden" name="sourceVersion" value={c.sourceVersion} />
             <p><a href={`/research/sources/files/${c.sourceVersion}`}>Open preserved source</a>: {c.sourceCitation}</p>
             <label for="sourceRegions">Source regions, one per line</label>
-            <textarea id="sourceRegions" name="sourceRegions" placeholder="Page 12: table, row 3, object column">{c.sourceRegions}</textarea>
+            <textarea id="sourceRegions" name="sourceRegions" placeholder={c.sourceMediaType === "application/pdf" ? "Page 12: table, row 3, object column" : "Catalogue: object description"}>{c.sourceRegions}</textarea>
             <p>Include every region used, including a continuation on another page. Keep copied wording separate from inherited or interpreted information.</p>
             <label for="researchConsent"><input id="researchConsent" type="checkbox" name="researchConsent" value="yes" checked={c.researchConsent === "yes"} /> I confirm that the selected wording and citation may enter the research collection.</label>
           </> : <>

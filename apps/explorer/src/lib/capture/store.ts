@@ -17,6 +17,7 @@ export async function resolvePreservedSource(
     ...content,
     url: `urn:mosa:source:${source.id}`,
     sourceCitation: source.citation,
+    sourceMediaType: version.media_type,
     checkedAt: new Date(version.created_at).toISOString(),
   };
 }
