@@ -234,3 +234,7 @@ These decisions do not block the plan or unrelated slices. Record them in the re
 ## Follow-up slices triggered by demonstrated need
 
 The twelve slices deliver both contribution flows, reviewed inventory growth, corrections and a broader public collection. Add separate later slices for public dossier pages/downloads, opt-in scheduled refresh, browser-only catalogues, OCR, reference-only archival entry and recurring ontology gaps such as provenance events. Each needs a named user task, acceptance checks and scoped commit. Do not bundle these into source upload or initial agent discovery.
+
+### Slice 2 delivery evidence — 2026-09-22
+
+Implemented document-backed preparation, packet v3 and exact evidence-version references. The synthetic PDF flow passed built HTTP acceptance with two page regions, no holder or identifier, explicit consent and idempotent retry. Legacy importer, publication, migration, database and unit checks pass. The claim page exposes the cited version to authorised source owners. No AI configuration is required.

@@ -1,6 +1,6 @@
 import type { ClientBase } from "pg";
-import { CaptureError, uuid } from "../capture/model";
-import { MAX_SOURCE_BYTES, sha256 } from "./storage";
+import { CaptureError, uuid } from "../capture/model.js";
+import { MAX_SOURCE_BYTES, sha256 } from "./storage.js";
 
 export interface SavedSource {
   id: string;
@@ -33,7 +33,7 @@ export function validatePdf(bytes: Uint8Array, mediaType: string) {
   )
     throw new CaptureError("Choose a PDF document.");
 }
-export function sourceField(value: FormDataEntryValue | null, label: string, required = false) {
+export function sourceField(value: unknown, label: string, required = false) {
   const text = typeof value === "string" ? value.trim() : "";
   if (
     (required && !text) ||

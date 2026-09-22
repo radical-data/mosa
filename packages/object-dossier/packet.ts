@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
-export const PACKET_SCHEMA_VERSION = 2;
+export const PACKET_SCHEMA_VERSION = 3;
 
 export const SUPPORTED_PREDICATES = [
   "has_name",
@@ -56,7 +56,9 @@ export interface PacketPlace {
 export interface PacketSource {
   key: string;
   kind: string;
-  url: string;
+  url?: string;
+  reference?: string;
+  version?: string;
   retrievedAt: string;
   about?: string[];
   assertedBy?: string;
@@ -89,13 +91,19 @@ export interface PacketClaim {
 }
 
 export interface DossierPacket {
-  schemaVersion: 1 | typeof PACKET_SCHEMA_VERSION;
+  schemaVersion: 1 | 2 | typeof PACKET_SCHEMA_VERSION;
   dataset: PacketDataset;
   objects: PacketObject[];
   agents: PacketAgent[];
   places: PacketPlace[];
   sources: PacketSource[];
   claims: PacketClaim[];
+}
+
+export function sourceReference(source: PacketSource): string {
+  const reference = source.reference ?? source.url;
+  if (!reference) throw new Error("Missing source reference");
+  return reference.trim();
 }
 
 export async function readPacketFile(packetPath: string): Promise<unknown> {

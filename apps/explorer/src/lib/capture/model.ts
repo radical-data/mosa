@@ -3,6 +3,9 @@ import type { DossierPacket, EvidenceRelationship, PacketClaim } from "@mosa/obj
 import { validatePacket } from "@mosa/object-dossier/validate";
 
 export const fields = [
+  "sourceVersion",
+  "sourceRegions",
+  "researchConsent",
   "url",
   "label",
   "note",
@@ -33,6 +36,7 @@ export const fields = [
   "interpretation",
 ] as const;
 export type Content = Record<(typeof fields)[number], string> & {
+  sourceCitation?: string;
   checkedAt: string;
   // Resolved by the server at review, never accepted from a submitted form.
   holderNameEvidenceId?: string;
@@ -74,13 +78,22 @@ export function readContent(form: FormData, previous?: Content): Content {
     if (c[key].length > 4000 || [...c[key]].some((ch) => ch.charCodeAt(0) < 9))
       throw new CaptureError("Shorten this field or remove unsupported characters.", key);
   }
+  if (c.sourceVersion) {
+    if (!uuid.test(c.sourceVersion)) throw new CaptureError("Choose a saved source version.");
+    c.url = previous?.url ?? c.url;
+    c.checkedAt = previous?.checkedAt ?? new Date().toISOString();
+    c.sourceCitation = previous?.sourceCitation;
+  }
   let url: URL;
   try {
-    url = new URL(c.url);
+    url = new URL(c.url || (c.sourceVersion ? "urn:mosa:pending" : ""));
   } catch {
     throw new CaptureError("Enter a complete catalogue URL.", "url");
   }
-  if (!["http:", "https:"].includes(url.protocol) || url.username || url.password)
+  if (
+    !c.sourceVersion &&
+    (!["http:", "https:"].includes(url.protocol) || url.username || url.password)
+  )
     throw new CaptureError("Use an HTTP or HTTPS source URL without a password.", "url");
   c.checkedAt = previous?.url === c.url ? previous.checkedAt : new Date().toISOString();
   const checkedAt = String(form.get("checkedAt") ?? "").trim();
@@ -123,6 +136,23 @@ export function readContent(form: FormData, previous?: Content): Content {
 }
 export function packetFor(id: string, revision: number, value: Content): DossierPacket {
   const c = normaliseContent(value);
+  if (c.sourceVersion) {
+    if (c.researchConsent !== "yes")
+      throw new CaptureError(
+        "Confirm that the selected wording and citation may enter the research collection.",
+        "researchConsent",
+      );
+    if (!c.sourceCitation || !/^urn:mosa:source:[0-9a-f-]{36}$/.test(c.url))
+      throw new CaptureError("Reload the preserved source before review.");
+    if (
+      !c.sourceRegions.trim() ||
+      c.sourceRegions.split(/\r?\n/).some((line) => !/^page [1-9]\d*: .+/i.test(line))
+    )
+      throw new CaptureError(
+        "List each source region on a separate line, for example Page 12: table, row 3, object column.",
+        "sourceRegions",
+      );
+  }
   const need = (key: keyof Content, message: string) => {
     if (!c[key]) throw new CaptureError(message, key);
   };
@@ -185,6 +215,9 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
         relationship,
         mode: "excerpt",
         ...ev,
+        ...(c.sourceVersion
+          ? { locator: `${c.sourceCitation}\n${c.sourceRegions}\n${ev.locator}` }
+          : {}),
       },
     });
   }
@@ -229,7 +262,7 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
     });
   }
   const packet: DossierPacket = {
-    schemaVersion: 2,
+    schemaVersion: c.sourceVersion ? 3 : 2,
     dataset: { key: `capture-${id}`, version: String(revision) },
     objects: [
       {
@@ -248,8 +281,8 @@ export function packetFor(id: string, revision: number, value: Content): Dossier
     sources: [
       {
         key: "source:catalogue",
-        kind: "institutional_record",
-        url: c.url,
+        kind: c.sourceVersion ? "document" : "institutional_record",
+        ...(c.sourceVersion ? { reference: c.url, version: c.sourceVersion } : { url: c.url }),
         retrievedAt: c.checkedAt,
         about: ["item:object"],
         assertedBy: speaker,

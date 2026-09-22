@@ -156,10 +156,11 @@ const selectedCitations = {
         <section class="panel" aria-label="Review proposed record">
           <h2>Review the source account</h2>
           <p>
-            <a href={c.url} target="_blank" rel="noreferrer">
+            <a href={c.sourceVersion ? `/research/sources/files/${c.sourceVersion}` : c.url} target="_blank" rel="noreferrer">
               Open the source catalogue
             </a>
           </p>
+          {c.sourceVersion && <p class="source-text">{c.sourceCitation}<br />{c.sourceRegions}</p>}
           <dl class="metadata">
             <div>
               <dt>{basisLabel}</dt>
@@ -289,22 +290,20 @@ const selectedCitations = {
         <input type="hidden" name="revision" value={draft.revision} />
         <fieldset>
           <legend>1. Source and catalogue number</legend>
-          <label for="url">Catalogue URL</label>
-          <input id="url" type="url" name="url" required value={c.url} />
-          <details>
-            <summary>Source check time — recorded automatically</summary>
-            <p>
-              Change this if you checked the source at a different time. The
-              time below is UTC.
-            </p>
+          {c.sourceVersion ? <>
+            <input type="hidden" name="url" value={c.url} />
+            <input type="hidden" name="sourceVersion" value={c.sourceVersion} />
+            <p><a href={`/research/sources/files/${c.sourceVersion}`}>Open preserved source</a>: {c.sourceCitation}</p>
+            <label for="sourceRegions">Source regions, one per line</label>
+            <textarea id="sourceRegions" name="sourceRegions" placeholder="Page 12: table, row 3, object column">{c.sourceRegions}</textarea>
+            <p>Include every region used, including a continuation on another page. Keep copied wording separate from inherited or interpreted information.</p>
+            <label for="researchConsent"><input id="researchConsent" type="checkbox" name="researchConsent" value="yes" checked={c.researchConsent === "yes"} /> I confirm that the selected wording and citation may enter the research collection.</label>
+          </> : <>
+            <label for="url">Catalogue URL</label>
+            <input id="url" type="url" name="url" required value={c.url} />
             <label for="checkedAt">Checked at (UTC)</label>
-            <input
-              id="checkedAt"
-              type="datetime-local"
-              name="checkedAt"
-              value={c.checkedAt.slice(0, 16)}
-            />
-          </details>
+            <input id="checkedAt" type="datetime-local" name="checkedAt" value={c.checkedAt.slice(0,16)} />
+          </>}
           <label for="catalogue">Which catalogue assigns this number?</label>
           <select id="catalogue" name="catalogue">
             <option value="" selected={!c.namespace}>

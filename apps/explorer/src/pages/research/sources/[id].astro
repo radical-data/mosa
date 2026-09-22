@@ -1,16 +1,23 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import { boundedForm, researchTransaction } from "../../../lib/capture/access";
+import { type Content, newRequestId, normaliseContent } from "../../../lib/capture/model";
+import { createDraft } from "../../../lib/capture/store";
 import { getSource, type SourceVersion } from "../../../lib/sources/store";
 
 const id = Astro.params.id ?? "";
 if (Astro.request.method === "POST") {
   const form = await boundedForm(Astro.request);
-  await researchTransaction(Astro.locals.researcher, async c => {
-    await getSource(c, id);
+  const draft = await researchTransaction(Astro.locals.researcher, async c => {
+    const source = await getSource(c, id);
+    if (form.get("action") === "prepare") {
+      const version = (await c.query<SourceVersion>("select * from capture.source_version where id=$1 and source_id=$2 and state='ready'", [String(form.get("version")), id])).rows[0];
+      if (!version) throw new Error("Source version unavailable");
+      return createDraft(c, Astro.locals.researcher, String(form.get("requestId")), normaliseContent({sourceVersion: version.id, label: source.citation.slice(0,200), holderStatus: "unknown"} as Content));
+    }
     if (form.get("action") === "hide") await c.query("update capture.source set hidden=true where id=$1", [id]);
   });
-  return Astro.redirect("/research/sources", 303);
+  return Astro.redirect(draft ? `/research/${draft.id}` : "/research/sources", 303);
 }
 const { source, versions } = await researchTransaction(Astro.locals.researcher, async c => ({
   source: await getSource(c, id),
@@ -27,6 +34,11 @@ const { source, versions } = await researchTransaction(Astro.locals.researcher, 
     <h2>{v.filename}</h2><p>{v.state === "ready" ? "Preserved" : "Upload unfinished"} · {v.byte_count.toLocaleString("en-GB")} bytes</p>
     <p>Uploaded: {new Date(v.created_at).toISOString()}</p>
     {v.state === "ready" ? <p><a href={`/research/sources/files/${v.id}`}>Open original document</a></p> : <p><a href={`/research/sources?retry=${source.id}`}>Retry this upload</a></p>}
+    {v.state === "ready" && <form method="post">
+      <input type="hidden" name="requestId" value={newRequestId()} />
+      <input type="hidden" name="version" value={v.id} />
+      <button type="submit" name="action" value="prepare">Prepare an object record</button>
+    </form>}
     <details><summary>Preservation checksum</summary><code>{v.sha256}</code></details>
   </section>)}
   <form method="post"><button type="submit" name="action" value="hide">Hide from my source list</button></form>

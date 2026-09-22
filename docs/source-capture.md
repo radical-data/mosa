@@ -86,3 +86,11 @@ to its owner/source/version. Only a verified read-back checksum finalises an
 upload. If finalisation fails, reopen the pending source and retry with the same
 file; this checks existing bytes without overwriting them. A different file must
 use a new upload. A pending source is never presented as preserved evidence.
+
+## Document-backed records (slice 2)
+
+From a preserved source choose **Prepare an object record**. Copy a name, classification or description, list every page/region used, and confirm that the citation and wording may enter research. A description alone is sufficient; leave holder, speaker and catalogue number unresolved when the document does not establish them. The PDF stays private after acceptance. The claim page links to the exact cited version.
+
+Packet v3 uses `urn:mosa:source:<id>` with an immutable `version` UUID. The importer verifies that the version belongs to that source and is ready, then stores its reference on each evidence row. Packets v1/v2 retain their existing URL semantics. Apply `20260922150000_document_evidence.sql` before deploying the app/importer.
+
+Verified with a synthetic cross-page description through the built HTTP app, including explicit research consent, unknown custody, acceptance retry and private source access. No real PDF transcription or model processing was performed.

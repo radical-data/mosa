@@ -324,6 +324,60 @@ async function verify() {
     ).rows[0];
     assert.equal(acceptance.holder_name_evidence_id, citation);
 
+    const documentDraft = await request(`/research/sources/${uploadId}`, "allowed", {
+      action: "prepare",
+      version: uploadId,
+      requestId: randomUUID(),
+    });
+    assert.equal(documentDraft.status, 303);
+    const documentLocation = documentDraft.headers.get("location");
+    assert(documentLocation);
+    const documentFields = {
+      action: "review",
+      revision: "1",
+      sourceVersion: uploadId,
+      url: `urn:mosa:source:${uploadId}`,
+      name: "Synthetic stone figure",
+      nameBasis: "described_as",
+      nameEvidenceMode: "excerpt",
+      nameExcerpt: "Synthetic stone figure",
+      nameLocator: "Description",
+      holderStatus: "unknown",
+      speakerMode: "unknown",
+      sourceRegions: "Page 17: last row\nPage 18: first row",
+    };
+    assert(
+      (await (await request(documentLocation, "allowed", documentFields)).text()).includes(
+        "Confirm that the selected wording",
+      ),
+    );
+    assert.equal(
+      (await request(documentLocation, "allowed", { ...documentFields, researchConsent: "yes" }))
+        .status,
+      303,
+    );
+    for (let i = 0; i < 2; i++)
+      assert.equal(
+        (
+          await request(documentLocation, "allowed", {
+            action: "accept",
+            revision: "2",
+            identity: "new",
+          })
+        ).status,
+        303,
+      );
+    const documentEvidence = await db.query(
+      `select e.locator from knowledge.claim_evidence e join knowledge.claim c on c.id=e.claim_id
+      where e.source_version_id=$1 and c.predicate='described_as'`,
+      [uploadId],
+    );
+    assert.equal(documentEvidence.rowCount, 1);
+    assert.match(documentEvidence.rows[0].locator, /Page 17: last row\nPage 18: first row/);
+    assert(
+      (await (await request(documentLocation)).text()).includes("Saved to the research collection"),
+    );
+
     const publicAccess = await request(location, "invalid");
     assert.equal(publicAccess.status, 303);
     console.log(

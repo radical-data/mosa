@@ -436,7 +436,7 @@ const nonItemIncoming = isItem ? [] : incomingClaims;
                   {isHttpReference(entity.reference) ? (
                     <a href={entity.reference} rel="noreferrer">{entity.reference}</a>
                   ) : (
-                    <span>{entity.reference}</span>
+                    entity.reference.startsWith("urn:mosa:source:") ? <a href={`/research/sources/${entity.reference.slice(16)}`}>Preserved source (researcher access)</a> : <span>{entity.reference}</span>
                   )}
                 </dd>
               </div>

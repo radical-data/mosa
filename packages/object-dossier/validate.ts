@@ -8,6 +8,7 @@ import {
   evidenceMode,
   type PacketClaim,
   type PacketEvidence,
+  sourceReference,
 } from "./packet";
 
 // Source kinds whose evidence may reasonably lack an excerpt.
@@ -189,7 +190,7 @@ export function validatePacket(raw: unknown): ValidationOutcome {
 
   const seenSourceUrls = new Set<string>();
   for (const source of packet.sources) {
-    const url = source.url.trim();
+    const url = sourceReference(source);
     if (seenSourceUrls.has(url)) {
       errors.push(`source ${source.key}: duplicate source URL in packet: ${url}`);
     }

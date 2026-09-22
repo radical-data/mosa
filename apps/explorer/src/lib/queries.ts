@@ -36,6 +36,7 @@ export interface EntityDetail extends EntitySummary {
 }
 
 export interface ClaimEvidence {
+  sourceVersionId?: string | null;
   id: string;
   sourceId: string;
   sourceLabel: string;
@@ -105,6 +106,7 @@ interface ClaimRow extends QueryResultRow {
 }
 
 interface EvidenceRow extends QueryResultRow {
+  source_version_id: string | null;
   claim_evidence_id: string;
   claim_id: string;
   source_id: string;
@@ -130,6 +132,7 @@ function toEntitySummary(row: EntityRow): EntitySummary {
 
 function toEvidence(row: EvidenceRow): ClaimEvidence {
   return {
+    sourceVersionId: row.source_version_id,
     id: row.claim_evidence_id,
     sourceId: row.source_id,
     sourceLabel: row.source_label,
@@ -302,6 +305,7 @@ async function getEvidenceForClaims(
 
   const rows = await query<EvidenceRow>(
     `select
+         (select source_version_id::text from knowledge.claim_evidence where id=claim_evidence_id) source_version_id,
          claim_evidence_id::text,
          claim_id::text,
          source_id::text,

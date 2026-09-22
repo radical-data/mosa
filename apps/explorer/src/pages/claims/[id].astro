@@ -118,6 +118,7 @@ const objectHref =
                     <span class="badge">evidence</span>
                   </div>
                   <p><a href={`/entities/${evidence.sourceId}`}>{formatSourceLabel(evidence.sourceLabel)}</a></p>
+                  {evidence.sourceVersionId && <p><a href={`/research/sources/files/${evidence.sourceVersionId}`}>Open cited source version (researcher access)</a></p>}
                   {evidence.locator && <p><strong>Locator:</strong> {evidence.locator}</p>}
                   {evidence.excerpt && <blockquote>{evidence.excerpt}</blockquote>}
                   {evidence.notes && (
