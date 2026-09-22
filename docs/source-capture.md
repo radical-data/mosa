@@ -64,3 +64,59 @@ Commit and deploy the replacement through the same gate. If dependencies have ch
 `just test-db` runs the database capture checks, importer regressions and a built-app HTTP test. It resets the local test stack; use a disposable stack. The HTTP test uses a local Auth test server and synthetic data, with a real restricted database login. Production email delivery and Auth configuration require a live check.
 
 The automated checks cover denied direct access, cross-user isolation, disabled accounts, missing evidence, stale revisions, duplicate requests, identity collisions, acceptance rollback, two-card publication and withdrawal. Source uploads, automatic extraction, AI, general permissions management and a broad editing interface remain outside this slice.
+
+## Preserved documents (discovery slice 1)
+
+`/research/sources` accepts an original PDF and a citation, with optional author
+and document date. Documents are owner-private. The entire upload request is
+limited to 20 MB (including form overhead). The source page downloads the original
+bytes through an authenticated route; the storage location is never exposed.
+Hiding a source removes it from the list without deleting its history.
+
+Apply `20260922140000_preserved_sources.sql`. Hosted Supabase creates the private
+`research-sources` bucket; the database-only local stack uses a storage substitute
+in the built-app tests. Set the server-only `SOURCE_STORAGE_KEY` to the Storage
+service credential, and optionally `SOURCE_STORAGE_URL` if different from
+`SUPABASE_URL`. Never expose this key in client code or build arguments. The
+bucket has no public access or browser write policy. The dedicated database
+login continues to use `capture_writer`.
+
+Uploads reserve metadata before writing bytes. The immutable object key is scoped
+to its owner/source/version. Only a verified read-back checksum finalises an
+upload. If finalisation fails, reopen the pending source and retry with the same
+file; this checks existing bytes without overwriting them. A different file must
+use a new upload. A pending source is never presented as preserved evidence.
+
+## Document-backed records (slice 2)
+
+From a preserved source choose **Prepare an object record**. Copy a name, classification or description, list every page/region used, and confirm that the citation and wording may enter research. A description alone is sufficient; leave holder, speaker and catalogue number unresolved when the document does not establish them. The PDF stays private after acceptance. The claim page links to the exact cited version.
+
+Packet v3 uses `urn:mosa:source:<id>` with an immutable `version` UUID. The importer verifies that the version belongs to that source and is ready, then stores its reference on each evidence row. Packets v1/v2 retain their existing URL semantics. Apply `20260922150000_document_evidence.sql` before deploying the app/importer.
+
+Initially verified with a synthetic cross-page description through the built HTTP app, including explicit research consent, unknown custody, acceptance retry and private source access. The later [local research pilot](local-research-pilot.md) uses the supplied PDF and preserved museum pages.
+
+## Local research bundles
+
+Discovery, web capture and AI preparation now happen in local research sessions.
+Use the [local research guide](local-research.md) to preserve catalogue pages,
+prepare proposals and import them at `/research/bundles`. Humans can also prepare
+bundles or continue using the manual forms above.
+
+The website validates saved bytes and evidence, stores private sources and creates
+drafts. Review, identity confirmation and acceptance remain human actions. No
+hosted model/search adapter, background runner or Cron configuration is required.
+
+Apply all migrations through the normal deployment process, including
+`20260922200000_local_research_bundles.sql` and
+`20260922210000_retire_hosted_research.sql`. The latter stops the named research
+schedule, removes queue delivery and revokes the old runner's permissions. It
+preserves historical job inputs/results, drafts and source versions. Do not
+rewrite previously applied migrations. Supabase extensions are retained because
+other applications may use them.
+
+After the migration and app deployment, remove any old `OPENAI_API_KEY`,
+`RESEARCH_MODEL`, `BRAVE_SEARCH_API_KEY`, `RESEARCH_RUNNER_SECRET` and
+`RESEARCH_WORKER_DATABASE_URL` settings from the research app, and the
+`research_runner_url` / `research_runner_token` Vault secrets if they were created.
+No replacement provider keys are needed. Retain the existing authentication,
+restricted writer connection and private Storage credentials.

@@ -10,6 +10,8 @@ A maintainer makes a separate publication decision. The public website reads onl
 
 Start with the [current implementation checklist](docs/collection-workflow-implementation-plan.md#current-implementation-checklist). Use the [capture runbook](docs/source-capture.md) for research setup and the [publication runbook](docs/collection-publication.md) for release and withdrawal. The [workflow design](docs/collection-workflow.md), [original discussion](docs/data-entry-efficiency-discussion.md) and [architecture decisions](docs/adrs/) explain the reasoning; they are not additional delivery checklists.
 
+The [human and agentic discovery design](docs/agentic-collection-discovery.md) defines two parallel contribution flows: people and agents discover sources and prepare records, sharing evidence preservation, human review and validated import to grow the public finding catalogue. The [implementation plan](docs/collection-workflow-implementation-plan.md) divides this direction into twelve working slices with planned commits. These are planned capabilities, not deployed functionality.
+
 ## Repository layout
 
 | Path | Responsibility |

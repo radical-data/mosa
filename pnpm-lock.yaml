@@ -84,6 +84,9 @@ importers:
       astro:
         specifier: 7.0.9
         version: 7.0.9(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@24.13.3)(tsx@4.23.1)(yaml@2.9.0)
+      parse5:
+        specifier: ^7.3.0
+        version: 7.3.0
       pg:
         specifier: 'catalog:'
         version: 8.22.0

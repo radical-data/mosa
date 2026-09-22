@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { researchTransaction } from "../../../lib/capture/access";
+import { CaptureError, uuid } from "../../../lib/capture/model";
+import { bundleRecordId } from "../../../lib/sources/bundle";
+import type { SavedBundle } from "../../../lib/sources/bundle-import";
+
+const id = Astro.params.id ?? "";
+if (!uuid.test(id)) throw new CaptureError("Bundle not found.");
+const { bundle, drafts } = await researchTransaction(Astro.locals.researcher, async c => {
+  const bundle = (await c.query<SavedBundle>("select * from capture.bundle where id=$1", [id])).rows[0];
+  if (!bundle) throw new CaptureError("Bundle not found.");
+  const drafts = (await c.query<{id:string;status:string;content:{label?:string;name?:string}}>("select id,status,content from capture.draft where id=any($1::uuid[])", [bundle.drafts.map(d => d.id)])).rows;
+  return {bundle,drafts};
+});
+const b = bundle.manifest;
+---
+<Layout title={b.title}>
+  <p><a href="/research/bundles">Research bundles</a></p>
+  <h1>{b.title}</h1>
+  <p>Prepared by {b.preparedBy} · {b.method}{b.tool && ` · ${b.tool}`}</p>
+  <p>These preparation details and retrieval dates were supplied with the bundle. Check each proposed match against the preserved evidence.</p>
+  {b.notes && <p class="notes">{b.notes}</p>}
+  {bundle.state !== "ready" ? <p role="alert">Upload unfinished. <a href="/research/bundles">Upload the same bundle again</a> to resume.</p> : <>
+    <h2>Proposed records</h2>
+    <ul class="results">{bundle.drafts.map(d => { const draft=drafts.find(v=>v.id===d.id); return <li><a href={`/research/${d.id}`}>{draft?.content.label || draft?.content.name || d.key}</a> · {draft?.status ?? "unavailable"}</li>; })}</ul>
+    {!bundle.drafts.length && <p>No object records proposed. The research outcomes below remain available for follow-up.</p>}
+    <h2>Preserved sources</h2>
+    <ul>{b.sources.map(s => <li><a href={`/research/sources/files/${bundleRecordId(Astro.locals.researcher,b.id,`version:${s.key}`)}`}>{s.citation}</a> · {s.retrievedAt}{s.contentType.startsWith("application/pdf") && " · check PDF quotations against the original pages"}</li>)}</ul>
+  </>}
+  <h2>Research outcomes</h2>
+  {b.leads.map(l => <section class="panel"><h3>{l.description}</h3><p>{l.outcome} · {l.seedLocator}</p><p class="notes">{l.notes}</p></section>)}
+  {!b.leads.length && <p>No separate lead notes supplied.</p>}
+  <details><summary>Original proposals and provenance</summary><pre>{JSON.stringify(b,null,2)}</pre></details>
+</Layout>
+<style>.notes, pre {white-space:pre-wrap;overflow-wrap:anywhere;} .panel {margin-block:1.5rem;}</style>

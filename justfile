@@ -161,3 +161,7 @@ collection-verify:
 
 collection-website-verify:
     pnpm exec tsx scripts/verify-collection-website.ts
+
+# Capture and pack local research; no provider keys or database access required.
+research-bundle +args:
+    pnpm exec tsx scripts/research-bundle.ts "$@"

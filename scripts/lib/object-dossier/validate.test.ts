@@ -428,3 +428,16 @@ describe("legacy whole-document packets", () => {
     });
   }
 });
+
+it("requires preserved version references to use packet v3", () => {
+  const packet = minimalPacket();
+  packet.schemaVersion = 3;
+  delete packet.sources[0].url;
+  packet.sources[0].reference = "urn:mosa:source:00000000-0000-4000-8000-000000000001";
+  packet.sources[0].version = "00000000-0000-4000-8000-000000000002";
+  expect(validatePacket(packet).errors).toEqual([]);
+  for (const v of [1, 2] as const) {
+    packet.schemaVersion = v;
+    expect(validatePacket(packet).errors.length).toBeGreaterThan(0);
+  }
+});

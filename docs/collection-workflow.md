@@ -2,6 +2,8 @@
 
 ## Status and purpose
 
+The [human and agentic discovery design](agentic-collection-discovery.md) updates the product direction below: human-led and agent-led discovery and preparation are parallel contribution flows. Its [implementation plan](collection-workflow-implementation-plan.md) replaces the earlier manual-first delivery order. The source, claim, identity and publication boundaries below remain applicable; the requirement to defer AI until the manual workflow is complete is superseded.
+
 Agreed product direction, recorded on 2026-09-21. Slice 1 is implemented and production publication is configured. The empty release has been verified live and the approved Hoa Hakananaiʻa export is committed. Slice 2 adds private source capture and review; the project owner confirmed deployment at `research.museumofstolenartefacts.org` on 2026-09-22. Verification of researcher sign-in, draft saving and a real second-object demonstration remains outstanding. Later slices remain planned. See the [publication runbook](collection-publication.md) for release evidence and live-status checks.
 
 MoSA needs a collection that researchers can populate and maintain, communities can use to identify displaced objects, and the website can present with attribution and publication permission. Deliver this through successive vertical slices. The first milestone is one existing research object appearing on the collection page with an attributed name, reported holder, institutional identifier and source, plus a working withdrawal path. Later slices extend that working connection back through researcher-facing capture and review.

@@ -352,6 +352,7 @@ export type Database = {
           notes: string | null
           relationship: string
           source_id: string
+          source_version_id: string | null
         }
         Insert: {
           claim_id: string
@@ -364,6 +365,7 @@ export type Database = {
           notes?: string | null
           relationship: string
           source_id: string
+          source_version_id?: string | null
         }
         Update: {
           claim_id?: string
@@ -376,6 +378,7 @@ export type Database = {
           notes?: string | null
           relationship?: string
           source_id?: string
+          source_version_id?: string | null
         }
         Relationships: [
           {

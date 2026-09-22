@@ -1,8 +1,49 @@
 import { randomUUID } from "node:crypto";
 import { importInTransaction, lockImport } from "@mosa/object-dossier/import";
 import type { ClientBase } from "pg";
+import { getSource, getVersion } from "../sources/store.js";
 import { requireCatalogue } from "./catalogues.js";
 import { CaptureError, type Content, normaliseContent, packetFor, uuid } from "./model.js";
+
+export async function resolvePreservedSource(
+  client: ClientBase,
+  content: Content,
+): Promise<Content> {
+  if (!content.sourceVersion) return content;
+  const version = await getVersion(client, content.sourceVersion);
+  if (version.state !== "ready") throw new CaptureError("The source upload has not finished.");
+  const source = await getSource(client, version.source_id);
+  return {
+    ...content,
+    url: `urn:mosa:source:${source.id}`,
+    sourceCitation:
+      typeof version.manifest?.citation === "string" ? version.manifest.citation : source.citation,
+    sourceMediaType: version.media_type,
+    checkedAt: new Date(
+      typeof version.manifest?.retrievedAt === "string"
+        ? version.manifest.retrievedAt
+        : version.created_at,
+    ).toISOString(),
+  };
+}
+
+async function checkPreparedWording(client: ClientBase, content: Content) {
+  if (!content.preparationId && !content.bundleId) return;
+  const version = await getVersion(client, content.sourceVersion);
+  // PDF quotations require a human check against the preserved page image.
+  if (content.bundleId && version.media_type === "application/pdf") return;
+  const quote = content.nameEvidenceMode === "field" ? content.name : content.nameExcerpt;
+  if (
+    content.nameEvidenceMode === "whole" ||
+    !quote ||
+    !version.readable_text?.includes(quote) ||
+    !quote.includes(content.name)
+  )
+    throw new CaptureError(
+      "The proposed wording and quotation must occur in the saved source. Correct them before review.",
+      "nameExcerpt",
+    );
+}
 
 export interface Draft {
   id: string;
@@ -56,6 +97,7 @@ export async function createDraft(
   content: Content,
 ) {
   if (!uuid.test(requestId)) throw new CaptureError("Reload the form before saving.");
+  content = await resolvePreservedSource(client, content);
   await requireCatalogue(client, content.namespace);
   const result = await client.query<Draft>(
     `insert into capture.draft(id,owner_id,request_id,content) values($1,$2,$3,$4)
@@ -184,13 +226,19 @@ export async function changeDraft(
     throw new CaptureError("This draft changed in another tab. Reload it before continuing.");
   if (["accepted", "deleted"].includes(draft.status))
     throw new CaptureError("This draft can no longer be changed.");
-  if (content) await requireCatalogue(client, content.namespace);
+  if (content) {
+    content = await resolvePreservedSource(client, content);
+    await requireCatalogue(client, content.namespace);
+  }
   let status: string;
   let item: string | null = null;
   if (action === "save" || action === "review") {
     if (!content) throw new CaptureError("Draft content is required.");
     draft.content = action === "review" ? await resolveAgentLabels(client, content) : content;
-    if (action === "review") packetFor(id, revision + 1, draft.content);
+    if (action === "review") {
+      await checkPreparedWording(client, draft.content);
+      packetFor(id, revision + 1, draft.content);
+    }
     status = action === "review" ? "review" : "draft";
   } else if (["defer", "reject", "delete"].includes(action)) {
     if (action === "defer" && content) draft.content = content;
@@ -204,7 +252,10 @@ export async function changeDraft(
       throw new CaptureError("A matching object now exists. Review its identity before accepting.");
     if (identity !== "new" && !matches.some((m) => m.id === identity))
       throw new CaptureError("Confirm the object identity or defer this draft.");
-    const resolved = await resolveAgentLabels(client, draft.content);
+    const resolved = await resolveAgentLabels(
+      client,
+      await resolvePreservedSource(client, draft.content),
+    );
     if (
       resolved.holderNameEvidenceId !== draft.content.holderNameEvidenceId ||
       resolved.speakerNameEvidenceId !== draft.content.speakerNameEvidenceId ||
@@ -214,6 +265,7 @@ export async function changeDraft(
       throw new CaptureError(
         "An institution label or its evidence changed. Save and review this draft again.",
       );
+    await checkPreparedWording(client, draft.content);
     const packet = packetFor(id, revision, draft.content);
     const bindings: Record<string, string> = {};
     if (identity !== "new") bindings["item:object"] = identity as string;

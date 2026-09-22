@@ -7,6 +7,7 @@ import {
   evidenceMode,
   type PacketTextLiteral,
   packetSha256,
+  sourceReference,
 } from "./packet";
 import {
   loadClaimBindings,
@@ -261,7 +262,7 @@ async function applyCanonicalWrites(
           }
           const result = await client.query<{ id: string }>(
             "select entities.create_source($1, $2, $3) as id",
-            [source.kind, source.url.trim(), source.retrievedAt],
+            [source.kind, sourceReference(source), source.retrievedAt],
           );
           return result.rows[0].id;
         }
@@ -365,6 +366,21 @@ async function applyCanonicalWrites(
 
   const evidenceBindings = await loadEvidenceBindings(client, datasetId);
 
+  // Access is checked through capture's owner policies, including CLI imports.
+  // A version must belong to this source, be finalised and remain immutable.
+  for (const source of packet.sources) {
+    if (!source.version) continue;
+    const saved = await client.query<{ source_id: string; state: string }>(
+      "select source_id,state from capture.source_version where id=$1",
+      [source.version],
+    );
+    if (
+      saved.rows[0]?.state !== "ready" ||
+      sourceReference(source) !== `urn:mosa:source:${saved.rows[0].source_id}`
+    )
+      throw new ImportError("Preserved source version is unavailable or belongs to another source");
+  }
+
   for (const entry of work.evidence) {
     if (evidenceBindings.has(entry.localKey)) {
       continue;
@@ -372,8 +388,8 @@ async function applyCanonicalWrites(
 
     await withKeyContext(entry.localKey, async () => {
       const result = await client.query<{ id: string }>(
-        `insert into knowledge.claim_evidence (claim_id, source_id, relationship, locator, excerpt, evidence_mode)
-          values ($1, $2, $3, $4, $5, $6)
+        `insert into knowledge.claim_evidence (claim_id, source_id, relationship, locator, excerpt, evidence_mode, source_version_id)
+          values ($1, $2, $3, $4, $5, $6, $7)
          returning id`,
         [
           claimIds.get(entry.claimLocalKey),
@@ -382,6 +398,7 @@ async function applyCanonicalWrites(
           entry.locator,
           entry.excerpt ?? null,
           entry.mode ?? "excerpt",
+          packet.sources.find((source) => source.key === entry.sourceKey)?.version ?? null,
         ],
       );
 

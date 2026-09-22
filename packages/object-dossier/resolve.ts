@@ -1,5 +1,5 @@
 import type { ClientBase } from "pg";
-import { claimEvidenceList, type DossierPacket } from "./packet";
+import { claimEvidenceList, type DossierPacket, sourceReference } from "./packet";
 
 export type PacketEntityKind = "object" | "agent" | "place" | "source";
 
@@ -114,7 +114,7 @@ async function resolveSourceByUrl(
 
   // Exact reference match only. Aggressive URL normalisation (dropping
   // query parameters, following redirects) can merge different records.
-  const url = source.url.trim();
+  const url = sourceReference(source);
   const result = await client.query<{ id: string; source_kind: string }>(
     "select id, source_kind from entities.source where btrim(reference) = $1",
     [url],
