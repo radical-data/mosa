@@ -5,7 +5,7 @@ import { CaptureError } from "../../../lib/capture/model";
 import { MAX_BUNDLE_BYTES, validateBundle } from "../../../lib/sources/bundle";
 import { importBundle, type SavedBundle } from "../../../lib/sources/bundle-import";
 import { CaptureFailure } from "../../../lib/sources/fetch";
-import { sourceStorage } from "../../../lib/sources/storage";
+import { SourceStorageError, sourceStorage } from "../../../lib/sources/storage";
 
 let error = "";
 if (Astro.request.method === "POST") {
@@ -20,8 +20,12 @@ if (Astro.request.method === "POST") {
     const saved = await importBundle(checked, Astro.locals.researcher, action => researchTransaction(Astro.locals.researcher, action), sourceStorage());
     return Astro.redirect(`/research/bundles/${saved.id}`, 303);
   } catch (e) {
-    error = e instanceof CaptureError || e instanceof CaptureFailure ? e.message : "The import could not finish. Upload the same bundle again to resume; saved work is retained.";
+    error = e instanceof CaptureError || e instanceof CaptureFailure || e instanceof SourceStorageError ? e.message : "The import could not finish. Upload the same bundle again to resume; saved work is retained.";
     Astro.response.status = e instanceof CaptureError || e instanceof CaptureFailure ? 400 : 503;
+    if (Astro.response.status === 503) console.error("Research bundle import failed", {
+      code: e instanceof SourceStorageError ? e.code : "unexpected_import_failure",
+      storageStatus: e instanceof SourceStorageError ? e.status : undefined,
+    });
   }
 }
 const bundles = await researchTransaction(Astro.locals.researcher, async c => (await c.query<SavedBundle>("select * from capture.bundle order by created_at desc limit 100")).rows);

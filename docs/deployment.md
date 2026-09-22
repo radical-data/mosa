@@ -28,6 +28,7 @@ These three Supabase secrets belong to `production`. The separate `website-produ
 | `DATABASE_URL` | Runtime login URL (literal if the password contains `$`) |
 | `DATABASE_SSL_CA` | Supabase CA certificate (multiline) |
 | `HEALTHCHECK_TOKEN` | Shared with Docker/`X-Health-Token` health checks |
+| `SOURCE_STORAGE_KEY` | Required for PDF and bundle uploads: a Supabase backend secret key (`sb_secret_…`) or legacy `service_role` key; runtime only |
 | `NODE_ENV` | `production` |
 | `DATABASE_POOL_SIZE` | Optional; default `5` |
 | `DATABASE_STATEMENT_TIMEOUT_MS` | Optional; default `5000` |
@@ -58,7 +59,7 @@ Unauthorized health requests return `404` and do not query PostgreSQL. External 
    - `alter role ... set default_transaction_read_only = on`
    - short `statement_timeout` and a small connection limit
 5. Build `DATABASE_URL` from that login.
-6. Keep the Data API disabled. Enable email OTP in Auth for invited researchers; keep public sign-ups disabled. Storage, Realtime and Functions remain unused. See [source capture](source-capture.md) for the separate writer login and researcher allowlist.
+6. Keep the Data API disabled. Enable email OTP in Auth for invited researchers; keep public sign-ups disabled. Source uploads use private Supabase Storage. Realtime and Functions remain unused. See [source capture](source-capture.md) for the separate writer login, researcher allowlist and Storage configuration.
 7. Download the database CA certificate for `DATABASE_SSL_CA`.
 8. From the Coolify host, test connectivity:
    - prefer the direct PostgreSQL endpoint if outbound IPv6 works
