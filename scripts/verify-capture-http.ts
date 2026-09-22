@@ -4,6 +4,7 @@ import { randomUUID } from "node:crypto";
 import { createServer } from "node:http";
 import { Client, Pool } from "pg";
 import { getLocalDatabaseUrl } from "./lib/supabase-local";
+import { verifyBundleHttp } from "./lib/verify-bundle-http";
 
 async function verify() {
   const databaseUrl =
@@ -20,6 +21,7 @@ async function verify() {
   await db.query(`grant capture_writer to ${login}`);
   await db.query("insert into capture.researcher(user_id) values($1)", [actor]);
   const storedFiles = new Map<string, Buffer>();
+  let storageFailureCountdown = -1;
   const auth = createServer(async (req, res) => {
     if (req.url?.startsWith("/storage/v1/object/research-sources/")) {
       if (req.headers.authorization !== "Bearer storage-test") {
@@ -27,6 +29,12 @@ async function verify() {
         return;
       }
       if (req.method === "POST") {
+        if (storageFailureCountdown === 0) {
+          storageFailureCountdown = -1;
+          res.writeHead(503).end();
+          return;
+        }
+        if (storageFailureCountdown > 0) storageFailureCountdown--;
         if (storedFiles.has(req.url)) {
           res.writeHead(409).end();
           return;
@@ -581,6 +589,9 @@ async function verify() {
       303,
     );
 
+    await verifyBundleHttp(db, origin, actor, outsider, (count) => {
+      storageFailureCountdown = count;
+    });
     const publicAccess = await request(location, "invalid");
     assert.equal(publicAccess.status, 303);
     console.log(

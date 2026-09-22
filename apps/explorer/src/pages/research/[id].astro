@@ -117,6 +117,7 @@ const selectedCitations = {
     research open. Saving a draft does not publish anything.
   </p>
   {c.preparationId && <p>Prepared with {c.preparationModel}. Review every quotation and interpretation before acceptance. Human edits are retained in the draft history.</p>}
+  {c.bundleId && <p>Imported from a <a href={`/research/bundles/${c.bundleId}`}>local research bundle</a>. Review its preparation details, source and unresolved questions before accepting this record.</p>}
   {error && (
     <div class="notice" role="alert">
       {errorField ? <a href={`#${errorField}`}>{error}</a> : error}

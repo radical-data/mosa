@@ -1,0 +1,44 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { boundedForm, researchTransaction } from "../../../lib/capture/access";
+import { CaptureError } from "../../../lib/capture/model";
+import { MAX_BUNDLE_BYTES, validateBundle } from "../../../lib/sources/bundle";
+import { importBundle, type SavedBundle } from "../../../lib/sources/bundle-import";
+import { CaptureFailure } from "../../../lib/sources/fetch";
+import { sourceStorage } from "../../../lib/sources/storage";
+
+let error = "";
+if (Astro.request.method === "POST") {
+  try {
+    const form = await boundedForm(Astro.request, MAX_BUNDLE_BYTES + 64_000);
+    if (form.get("consent") !== "yes") throw new CaptureError("Confirm permission to preserve these sources privately.");
+    const file = form.get("bundle");
+    if (!(file instanceof File) || file.size > MAX_BUNDLE_BYTES) throw new CaptureError("Choose a research bundle of at most 20 MB.");
+    let raw: unknown;
+    try { raw = JSON.parse(await file.text()); } catch { throw new CaptureError("The bundle must be a JSON file."); }
+    const checked = validateBundle(raw);
+    const saved = await importBundle(checked, Astro.locals.researcher, action => researchTransaction(Astro.locals.researcher, action), sourceStorage());
+    return Astro.redirect(`/research/bundles/${saved.id}`, 303);
+  } catch (e) {
+    error = e instanceof CaptureError || e instanceof CaptureFailure ? e.message : "The import could not finish. Upload the same bundle again to resume; saved work is retained.";
+    Astro.response.status = e instanceof CaptureError || e instanceof CaptureFailure ? 400 : 503;
+  }
+}
+const bundles = await researchTransaction(Astro.locals.researcher, async c => (await c.query<SavedBundle>("select * from capture.bundle order by created_at desc limit 100")).rows);
+---
+<Layout title="Research bundles">
+  <p><a href="/research">Research workspace</a></p>
+  <h1>Research bundles</h1>
+  <p>Bring in sources and proposed records prepared locally by a person, an agent, or both. Each proposal becomes a private draft for you to review.</p>
+  {error && <p role="alert">{error}</p>}
+  <form method="post" enctype="multipart/form-data" class="panel">
+    <label>Research bundle (up to 20 MB)<input type="file" name="bundle" accept=".json,application/json" required /></label>
+    <label><input type="checkbox" name="consent" value="yes" required /> I have permission to preserve these sources privately for research.</label>
+    <p>Uploading does not accept or publish records. Uploading the same bundle again preserves your existing drafts and edits.</p>
+    <button type="submit">Import for review</button>
+  </form>
+  <h2>Your imports</h2>
+  <ul class="results">{bundles.map(b => <li><a href={`/research/bundles/${b.id}`}>{b.manifest.title}</a> · {b.state === "ready" ? `${b.drafts.length} drafts` : "Upload unfinished — retry the same file"}</li>)}</ul>
+  {!bundles.length && <p>No research bundles yet.</p>}
+</Layout>
+<style>.panel {display:grid;gap:1rem;max-width:48rem;} .panel button {justify-self:start;}</style>

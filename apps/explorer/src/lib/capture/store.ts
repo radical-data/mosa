@@ -16,15 +16,22 @@ export async function resolvePreservedSource(
   return {
     ...content,
     url: `urn:mosa:source:${source.id}`,
-    sourceCitation: source.citation,
+    sourceCitation:
+      typeof version.manifest?.citation === "string" ? version.manifest.citation : source.citation,
     sourceMediaType: version.media_type,
-    checkedAt: new Date(version.created_at).toISOString(),
+    checkedAt: new Date(
+      typeof version.manifest?.retrievedAt === "string"
+        ? version.manifest.retrievedAt
+        : version.created_at,
+    ).toISOString(),
   };
 }
 
 async function checkPreparedWording(client: ClientBase, content: Content) {
-  if (!content.preparationId) return;
+  if (!content.preparationId && !content.bundleId) return;
   const version = await getVersion(client, content.sourceVersion);
+  // PDF quotations require a human check against the preserved page image.
+  if (content.bundleId && version.media_type === "application/pdf") return;
   const quote = content.nameEvidenceMode === "field" ? content.name : content.nameExcerpt;
   if (
     content.nameEvidenceMode === "whole" ||
