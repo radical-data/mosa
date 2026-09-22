@@ -2,7 +2,7 @@ import type { ClientBase, Pool } from "pg";
 import { CaptureError, type Content, normaliseContent, uuid } from "../capture/model.js";
 import { createDraft } from "../capture/store.js";
 import { CaptureFailure } from "./fetch.js";
-import { type Job, withJob } from "./jobs.js";
+import { type Job, reserveBudget, withJob } from "./jobs.js";
 import { boundedBytes } from "./storage.js";
 import { getVersion } from "./store.js";
 
@@ -197,6 +197,7 @@ export async function performPreparation(pool: Pool, job: Job, model: Model = pr
   // Persist provider output before creating the candidate. A restart replays it.
   let response = previous.response as ModelResult | undefined;
   if (!response) {
+    await reserveBudget(pool, job, 1, 70000);
     response = await model(version.readable_text);
     await withJob(pool, job, (c) =>
       c.query("update capture.job set result=$2 where id=$1", [

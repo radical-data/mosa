@@ -6,7 +6,7 @@ Implement the [human and agentic discovery design](agentic-collection-discovery.
 
 Updated 2026-09-22. This is the current delivery and commit plan. It replaces the earlier manual-first expansion sequence, including the requirement to defer AI until a broad manual editor exists. The completed pilot remains the baseline. None of the new slices is implemented merely because its design or commit message exists.
 
-The project owner authorised implementation of slices 1–5 and commits on 2026-09-22. Work runs on `codex/discovery-slices-1-5`. This authorises local demonstrations as the researcher; production publication remains separate.
+The project owner authorised implementation of slices 1–5 and commits on 2026-09-22. Work runs on `discovery-slices-1-5` (initially created with the `codex/` prefix). This authorises local demonstrations as the researcher; production publication remains separate.
 
 ## Existing baseline
 
@@ -250,3 +250,7 @@ Following the owner's request, replace the standalone polling process with Supab
 ### Slice 4 delivery evidence — 2026-09-22
 
 Implemented optional preparation on saved HTML/JSON, external-model permission, verbatim evidence validation, retained provider/prompt details and human edits. The built HTTP flow passes from fixed model output through human review and acceptance, rejects invented quotations, and reuses the existing candidate on repeated requests. Static, database, import and publication checks pass. The live-provider demonstration is explicitly pending because this workspace has no model credentials; this is not recorded as live-verified.
+
+### Slice 5 delivery evidence — 2026-09-22
+
+Implemented one bounded lead at a time with Brave Search, model assessment/follow-up, preserved sources, existing preparation and human review. Supabase Queues/Cron drive saved steps in the existing app. Pause/resume, conservative request/token reservations, stopping reasons, repeated-source/candidate reuse and human-selected-source hand-off pass integration tests. AI credentials are absent, so the live provider demonstration remains pending and is not claimed complete. Slices 6–12, including Paula's CSV reconciliation, are outside this implementation.

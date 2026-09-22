@@ -522,6 +522,39 @@ async function verify() {
         false,
       );
       assert.equal(modelCalls, 1);
+      const leadId = randomUUID();
+      const leadFields = {
+        requestId: leadId,
+        institution: "Synthetic catalogue",
+        description: "wooden figure",
+        maxRequests: "20",
+        maxModelCalls: "4",
+        minutes: "30",
+        consent: "yes",
+      };
+      assert.equal((await request("/research/leads", "allowed", leadFields)).status, 303);
+      assert(
+        (await (await request(`/research/leads/${leadId}`)).text()).includes("Synthetic catalogue"),
+      );
+      assert.equal((await request(`/research/leads/${leadId}`, "outsider")).status, 403);
+      assert.equal(
+        (await request(`/research/leads/${leadId}`, "allowed", { action: "pause" })).status,
+        303,
+      );
+      assert.equal(
+        (
+          await request(`/research/leads/${leadId}`, "allowed", {
+            action: "choose",
+            url: "https://example.org/catalogue",
+          })
+        ).status,
+        303,
+      );
+      const { performDiscovery } = await import("../apps/explorer/src/lib/sources/discovery.js");
+      for (let i = 0; i < 4; i++) await runOne(worker, { discover: performDiscovery });
+      const leadPage = await (await request(`/research/leads/${leadId}`)).text();
+      assert(leadPage.includes("candidate ready"));
+      assert(leadPage.includes(aiLocation));
     } finally {
       await worker.end();
       await db.query(`drop role ${workerLogin}`);

@@ -1,6 +1,7 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import type { APIRoute } from "astro";
 import { Pool } from "pg";
+import { performDiscovery } from "../../lib/sources/discovery";
 import { performCapture, runOne } from "../../lib/sources/jobs";
 import { performPreparation } from "../../lib/sources/preparation";
 import { sourceStorage } from "../../lib/sources/storage";
@@ -30,6 +31,7 @@ export const POST: APIRoute = async ({ request }) => {
         processed: await runOne(pool, {
           capture: (p, j) => performCapture(p, j, sourceStorage()),
           prepare: performPreparation,
+          discover: performDiscovery,
         }),
       },
       { headers: { "cache-control": "no-store" } },

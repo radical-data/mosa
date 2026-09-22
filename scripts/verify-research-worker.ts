@@ -124,6 +124,132 @@ async function verify() {
       original.sha256,
     );
     assert.equal(await runOne(worker, { capture: handler }), false);
+    const { enqueueLead, performDiscovery, controlLead } = await import(
+      "../apps/explorer/src/lib/sources/discovery.js"
+    );
+    const { performPreparation } = await import("../apps/explorer/src/lib/sources/preparation.js");
+    const leadForm = (extra: Record<string, string> = {}) => {
+      const f = new FormData();
+      for (const [k, v] of Object.entries({
+        requestId: randomUUID(),
+        institution: "Synthetic museum",
+        description: "wooden figure",
+        maxRequests: "20",
+        maxModelCalls: "4",
+        minutes: "30",
+        consent: "yes",
+        ...extra,
+      }))
+        f.set(k, v);
+      return f;
+    };
+    await assert.rejects(
+      () => enqueueLead(admin, actor, leadForm({ maxRequests: "0" })),
+      /positive limits/,
+    );
+    const lead = await enqueueLead(admin, actor, leadForm());
+    let searches = 0,
+      assessments = 0,
+      preparations = 0;
+    let foundUrl = `https://example.org/discovery-${actor}`;
+    const handlers = {
+      capture: handler,
+      discover: (p: Pool, j: Parameters<typeof performDiscovery>[1]) =>
+        performDiscovery(
+          p,
+          j,
+          async () => {
+            searches++;
+            return [
+              { url: foundUrl, title: "Wooden figure", description: "Synthetic museum catalogue" },
+            ];
+          },
+          async () => {
+            assessments++;
+            return {
+              model: "synthetic-model",
+              responseId: "decision",
+              usage: {},
+              value: {
+                decision: "candidate",
+                index: 0,
+                reason: "Institution and description agree; identity still requires review",
+                query: null,
+              },
+            };
+          },
+        ),
+      prepare: (p: Pool, j: Parameters<typeof performPreparation>[1]) =>
+        performPreparation(p, j, async () => {
+          preparations++;
+          return {
+            model: "synthetic-model",
+            responseId: "proposal",
+            usage: {},
+            value: {
+              statement: { predicate: "described_as", value: "wooden figure", quote: wording },
+              observations: "Researcher must confirm identity.",
+            },
+          };
+        }),
+    };
+    await runOne(worker, handlers);
+    await controlLead(admin, lead, "pause");
+    await runOne(worker, handlers);
+    assert.equal(assessments, 0, "Pause prevents the next external operation");
+    await controlLead(admin, lead, "resume");
+    for (let i = 0; i < 12; i++) await runOne(worker, handlers);
+    const leadResult = (await admin.query("select * from capture.job where id=$1", [lead])).rows[0];
+    assert.equal(leadResult.status, "succeeded");
+    assert.equal(leadResult.result.stoppingReason, "candidate_ready");
+    assert(leadResult.result.draftId);
+    assert.equal(searches, 1);
+    assert.equal(assessments, 1);
+    assert.equal(preparations, 1);
+    assert.equal(leadResult.requests_used, 8);
+    assert.equal(leadResult.tokens_reserved, 140000);
+    const sameLead = await enqueueLead(admin, actor, leadForm());
+    for (let i = 0; i < 12; i++) await runOne(worker, handlers);
+    assert.equal(
+      (await admin.query("select result from capture.job where id=$1", [sameLead])).rows[0].result
+        .draftId,
+      leadResult.result.draftId,
+      "Repeated discovery reuses the preserved source and candidate",
+    );
+    assert.equal(preparations, 1);
+    const small = await enqueueLead(admin, actor, leadForm({ maxRequests: "1" }));
+    for (let i = 0; i < 4; i++) await runOne(worker, handlers);
+    const exhausted = (await admin.query("select * from capture.job where id=$1", [small])).rows[0];
+    assert.match(exhausted.error, /budget_exhausted/);
+    assert.equal(exhausted.requests_used, 1);
+    const humanLead = await enqueueLead(admin, actor, leadForm());
+    await controlLead(admin, humanLead, "pause");
+    await controlLead(admin, humanLead, "choose", foundUrl);
+    for (let i = 0; i < 8; i++) await runOne(worker, handlers);
+    assert.equal(
+      (await admin.query("select result from capture.job where id=$1", [humanLead])).rows[0].result
+        .draftId,
+      leadResult.result.draftId,
+      "Human-to-agent hand-off uses existing records",
+    );
+    foundUrl = `https://example.org/concurrent-${actor}`;
+    const concurrentA = await enqueueLead(admin, actor, leadForm());
+    const concurrentB = await enqueueLead(admin, actor, leadForm());
+    for (let i = 0; i < 24; i++) await runOne(worker, handlers);
+    const pair = (
+      await admin.query("select result from capture.job where id=any($1::uuid[])", [
+        [concurrentA, concurrentB],
+      ])
+    ).rows;
+    assert.equal(
+      pair[0].result.draftId,
+      pair[1].result.draftId,
+      "Concurrent leads reuse in-flight capture and preparation",
+    );
+    assert(pair[0].result.draftId);
+    console.log(
+      "Verified discovery: pause/resume, budgets, source and candidate reuse, and human hand-off.",
+    );
     console.log(
       "Verified restricted capture worker: leases, interruption, immutable versions and idempotent results.",
     );

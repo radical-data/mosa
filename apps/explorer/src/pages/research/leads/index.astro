@@ -1,0 +1,38 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { boundedForm,researchTransaction } from "../../../lib/capture/access";
+import { CaptureError,newRequestId } from "../../../lib/capture/model";
+import { enqueueLead } from "../../../lib/sources/discovery";
+import type { Job } from "../../../lib/sources/jobs";
+
+let error="";
+const requestId=newRequestId();
+if(Astro.request.method === "POST") {
+ try {
+  const form=await boundedForm(Astro.request);
+  const id=await researchTransaction(Astro.locals.researcher,c=>enqueueLead(c,Astro.locals.researcher,form));
+  return Astro.redirect(`/research/leads/${id}`,303);
+ } catch(e) {error=e instanceof CaptureError?e.message:"The lead could not be saved.";}
+}
+const jobs=await researchTransaction(Astro.locals.researcher,async c=>(await c.query<Job>("select * from capture.job where kind='discover' order by created_at desc limit 100")).rows);
+---
+<Layout title="Research leads">
+ <p><a href="/research">Research workspace</a></p><h1>Research leads</h1>
+ <p>Find a possible museum record, preserve its source and prepare a candidate for human review.</p>
+ {error && <p role="alert">{error}</p>}
+ <form method="post" class="panel">
+  <input type="hidden" name="requestId" value={requestId}/>
+  <label>Institution<input name="institution" required maxlength="200"/></label>
+  <label>Object description<textarea name="description" required maxlength="800"></textarea></label>
+  <details><summary>Limits for this lead</summary>
+   <label>External request allowance<input name="maxRequests" type="number" min="1" max="30" value="20" required/></label>
+   <label>AI call allowance<input name="maxModelCalls" type="number" min="1" max="6" value="4" required/></label>
+   <label>Elapsed minutes, including pauses<input name="minutes" type="number" min="5" max="60" value="30" required/></label>
+   <p>At most two searches. A capture reserves five requests for redirects; each AI call reserves up to 70,000 tokens. Unused reservations are not bills.</p>
+  </details>
+  <label><input type="checkbox" name="consent" value="yes" required/> I have permission to send this lead and captured public source text to the search and model services.</label>
+  <button type="submit">Start discovery</button>
+ </form>
+ <ul>{jobs.map(j=><li><a href={`/research/leads/${j.id}`}>{String(j.input.institution)} — {String(j.input.description)}</a> · {j.status}</li>)}</ul>
+</Layout>
+<style>.panel{display:grid;gap:1rem;max-width:48rem}</style>
