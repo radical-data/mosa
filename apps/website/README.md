@@ -40,7 +40,7 @@ Collection search progressively enhances the complete static public list. Search
 
 Each file in `src/content/pages/` contains both languages under `es` and `en`. For example, `home.json` holds the homepage copy; `interface.json` holds navigation and control labels. `src/content/content.ts` selects the copy for the shared template. No content collection loader or editorial metadata is needed.
 
-Events are kept per event rather than per page: each file in `src/content/events/` holds one event's facts and both languages, and is validated when the site builds. Adding or withdrawing an event is a single file operation. See [editing events](../../docs/events-content.md) and [ADR 016](../../docs/adrs/016-events-as-single-content-files.md).
+Events are kept per event rather than per page: each file in `src/content/events/` holds one event's facts and both languages, and is loaded by a small glob-based loader and validated against the shared event schema when the site builds. Adding or withdrawing an event is a single file operation. See [editing events](../../docs/events-content.md) and [ADR 016](../../docs/adrs/016-events-as-single-content-files.md).
 
 Edit an existing value and preview it. English can catch up later: add an item to the [translation checklist](../../docs/localisation-editorial-workflow.md). If a template needs a new message key, add it in both languages to keep the page renderable. Build checks catch missing or empty messages, unsupported inline markup, type errors and broken links. They do not judge translation quality or freshness.
 
@@ -52,7 +52,7 @@ The private maintainer workflow, publication permissions and withdrawal process 
 
 Original names remain unchanged across interface languages. Search keeps original-name spelling; accent folding applies only to the institution search representation. Additional Rapa Nui matching rules need collaborator review.
 
-Dates use explicit `Intl` locales and retain year/month/day precision. An event carries either a calendar day or a timed instant with its own IANA zone, and a zone is rejected without a time; an unknown time is not invented. Event time zones are stored independently from language. Metric conventions apply in both languages.
+Dates use explicit `Intl` locales and retain year/month/day precision. An event carries either a calendar day or a timed instant with its own IANA zone, and a date-only event can also retain its known zone without inventing an hour. Events move to the archive after their local day ends; date-only events without a zone use UTC for that boundary. Event time zones are stored independently from language. Metric conventions apply in both languages.
 
 ## Production
 

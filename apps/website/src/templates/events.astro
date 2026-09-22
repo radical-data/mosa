@@ -5,6 +5,7 @@ import PageLink from "../components/PageLink.astro";
 import { getCopy } from "../content/content";
 
 import { getEvents } from "../data/events";
+import { storedEvents } from "../data/load-events";
 import type { Locale } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
@@ -12,7 +13,7 @@ interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const copy = getCopy("events", locale);
 const t = getCopy("interface", locale);
-const { upcoming, past } = getEvents(locale);
+const { upcoming, past } = getEvents(storedEvents, locale);
 ---
 <Layout locale={locale} page="events" title={copy.title} description={copy.description}>
   <PageIntro title={copy.passage03} />
