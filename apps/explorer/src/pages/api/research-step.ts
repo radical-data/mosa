@@ -1,6 +1,7 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import type { APIRoute } from "astro";
 import { Pool } from "pg";
+import { resolveDatabaseConfig } from "../../lib/database-config";
 import { performDiscovery } from "../../lib/sources/discovery";
 import { performCapture, runOne } from "../../lib/sources/jobs";
 import { performPreparation } from "../../lib/sources/preparation";
@@ -19,13 +20,22 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response("Unauthorised", { status: 401 });
   const connectionString = process.env.RESEARCH_WORKER_DATABASE_URL;
   if (!connectionString) return new Response("Research runner is not configured", { status: 503 });
-  const pool = new Pool({
-    connectionString,
-    max: 1,
-    connectionTimeoutMillis: 5000,
-    statement_timeout: 15000,
-  });
+  let pool: Pool | undefined;
   try {
+    const config = resolveDatabaseConfig({
+      nodeEnv: process.env.NODE_ENV,
+      databaseUrl: connectionString,
+      databaseSslCa: process.env.DATABASE_SSL_CA,
+      databasePoolSize: "1",
+      databaseStatementTimeoutMs: "15000",
+    });
+    pool = new Pool({
+      connectionString: config.connectionString,
+      ssl: config.ssl,
+      max: config.poolSize,
+      connectionTimeoutMillis: 5000,
+      statement_timeout: config.statementTimeoutMs,
+    });
     return Response.json(
       {
         processed: await runOne(pool, {
@@ -39,6 +49,6 @@ export const POST: APIRoute = async ({ request }) => {
   } catch {
     return new Response("Research step interrupted; queued work is retained", { status: 503 });
   } finally {
-    await pool.end();
+    await pool?.end();
   }
 };
