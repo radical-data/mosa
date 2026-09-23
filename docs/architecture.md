@@ -154,7 +154,7 @@ reviewed claims, citations, provenance and restitution facts selected in the
 approved snapshot. Original private files and images remain excluded.
 
 The website build/container has no database access. Its trusted deployment job
-does: it checks the publication ledger, pinned commit, hosting job and served
+does: it checks the publication ledger, pins the current `main` commit, and verifies the hosting job and served
 snapshot. Desired, pending and verified live releases are distinct. Only the
 [publication runbook](collection-publication.md) defines release and withdrawal.
 

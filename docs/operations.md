@@ -134,14 +134,15 @@ Configure GitHub `website-production`, restricted to `main`:
 | Setting | Kind | Purpose |
 | --- | --- | --- |
 | `COOLIFY_DEPLOY_WEBHOOK` | Secret | This website's production webhook |
-| `COOLIFY_API_TOKEN` | Secret | Coolify read and deploy permissions |
+| `COOLIFY_API_TOKEN` | Secret | Coolify read, application update and deploy permissions |
 | `COLLECTION_DATABASE_URL` | Secret | Dedicated publisher login |
 | `COLLECTION_DATABASE_SSL_CA` | Secret | Verified TLS to the ledger database |
 | `PRODUCTION_URL` | Environment variable | Canonical website URL; workflow reads `vars.PRODUCTION_URL` |
 
-Enable Coolify API access, disable automatic and preview deployments, and use
-commit pinning. The publisher connection belongs only to the deployment job,
-not the website build or container. Complete the configuration and release steps
+Enable Coolify API access, disable automatic and preview deployments, and set the
+website application to branch `main`. The gated Website workflow pins the current
+`main` commit automatically and checks the served snapshot. The publisher connection belongs only to
+the deployment job, not the website build or container. Complete the configuration and release steps
 in [publication](collection-publication.md#configure-and-deploy).
 
 ## Recovery

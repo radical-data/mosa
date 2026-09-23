@@ -22,9 +22,10 @@ const config = {
 };
 const query = vi.fn(async (_sql: string, _parameters?: unknown[]) => ({ rows: [] }));
 const client = { query } as unknown as Client;
-function hosting(commit = config.commit) {
+function hosting(commit = config.commit, branch = "main") {
   return Response.json({
     git_commit_sha: commit,
+    git_branch: branch,
     settings: { is_auto_deploy_enabled: false, is_preview_deployments_enabled: false },
   });
 }
@@ -35,12 +36,55 @@ afterEach(() => {
   vi.clearAllMocks();
 });
 describe("publication deployment gate", () => {
-  it("rejects a moving hosting branch before requesting deployment", async () => {
-    const fetch = vi.fn(async () => hosting("HEAD"));
+  it("rejects a hosting application on another branch before requesting deployment", async () => {
+    const fetch = vi.fn(async () => hosting(config.commit, "staging"));
     vi.stubGlobal("fetch", fetch);
-    await expect(deploy(client, snapshot, config)).rejects.toThrow("Pin the hosting");
+    await expect(deploy(client, snapshot, config)).rejects.toThrow("use main");
     expect(fetch).toHaveBeenCalledTimes(1);
     expect(query).not.toHaveBeenCalled();
+  });
+  it("sets an old hosting pin to the reviewed commit before requesting deployment", async () => {
+    const fetch = vi
+      .fn()
+      .mockResolvedValueOnce(hosting("b".repeat(40)))
+      .mockResolvedValueOnce(Response.json({}))
+      .mockResolvedValueOnce(hosting())
+      .mockResolvedValueOnce(new Response("failure", { status: 500 }));
+    vi.stubGlobal("fetch", fetch);
+    await expect(deploy(client, snapshot, config)).rejects.toThrow("deployment request failed");
+    expect(fetch).toHaveBeenNthCalledWith(
+      2,
+      expect.any(URL),
+      expect.objectContaining({
+        method: "PATCH",
+        body: JSON.stringify({ git_commit_sha: config.commit }),
+      }),
+    );
+    expect(fetch).toHaveBeenNthCalledWith(4, config.webhook, expect.any(Object));
+  });
+  it("fails before pending or deployment if hosting cannot update the commit", async () => {
+    const fetch = vi
+      .fn()
+      .mockResolvedValueOnce(hosting("b".repeat(40)))
+      .mockResolvedValueOnce(new Response("forbidden", { status: 403 }));
+    vi.stubGlobal("fetch", fetch);
+    await expect(deploy(client, snapshot, config)).rejects.toThrow("application update access");
+    expect(fetch).toHaveBeenCalledTimes(2);
+    expect(query.mock.calls.some(([sql]) => String(sql).includes("pending_release_id=$1"))).toBe(
+      false,
+    );
+  });
+  it("fails before pending if hosting ignores the reviewed commit", async () => {
+    const fetch = vi
+      .fn()
+      .mockResolvedValueOnce(hosting("b".repeat(40)))
+      .mockResolvedValueOnce(Response.json({}))
+      .mockResolvedValueOnce(hosting("b".repeat(40)));
+    vi.stubGlobal("fetch", fetch);
+    await expect(deploy(client, snapshot, config)).rejects.toThrow("did not retain");
+    expect(query.mock.calls.some(([sql]) => String(sql).includes("pending_release_id=$1"))).toBe(
+      false,
+    );
   });
   it("rejects a stale release without triggering the webhook", async () => {
     vi.mocked(currentRelease).mockRejectedValueOnce(Error("Stale release"));
@@ -72,7 +116,7 @@ describe("publication deployment gate", () => {
         Response.json({ deployments: [{ resource_uuid: "website", deployment_uuid: "job-1" }] }),
       )
       .mockImplementation(async () =>
-        Response.json({ status: "in_progress", commit: config.commit }),
+        Response.json({ status: "finished", commit: "b".repeat(40) }),
       );
     vi.stubGlobal("fetch", fetch);
     const result = deploy(client, snapshot, config).catch((error) => error);
@@ -108,7 +152,7 @@ describe("publication deployment gate", () => {
     );
     expect(fetch).toHaveBeenCalledTimes(8);
     expect(requireIdle).toHaveBeenCalled();
-    expect(currentRelease).toHaveBeenCalledTimes(2);
+    expect(currentRelease).toHaveBeenCalledTimes(3);
     expect(query.mock.calls.some(([sql]) => String(sql).includes("live_release_id=$1"))).toBe(true);
   });
 });

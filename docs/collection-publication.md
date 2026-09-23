@@ -9,10 +9,10 @@ restitution even without a holder or catalogue number. Version 2 permits up to
 contract. The site has no database credentials. Research selection, approvals and
 dependency fingerprints stay in the private `publication` schema.
 
-The committed snapshot contains the approved Hoa Hakananaiʻa pilot.
+The committed snapshot contains the approved Hoa Hakananaiʻa and Aroukou Kurenga records.
 `just collection status` reports the separately verified live release.
 An [empty-release rehearsal](https://github.com/radical-data/mosa/actions/runs/35604556798)
-passed on 2026-09-21. Its 2 min 11 s runtime excluded review, merge and pinning;
+passed on 2026-09-21. Its 2 min 11 s runtime excluded review and merge;
 it is not a withdrawal deadline.
 
 A missing or invalid export fails the build; the site never falls back to the six
@@ -147,9 +147,12 @@ command requires the private publisher connection.
 1. Disable automatic and preview deployments. Cancel pre-existing queued jobs
    before the first gated release and restrict dashboard/webhook access to operators
    following this procedure. Direct administrator actions can bypass the gate.
-2. Pin Coolify's **Git commit SHA** to the complete reviewed commit containing the
-   export. The gate rejects moving branch/`HEAD` references.
-3. Run the `Website` workflow on that commit on `main` with `deploy` enabled, or
+2. Configure the Coolify application for branch `main`. Give the website
+   deployment token read, application update and deploy access. The gate checks
+   that the workflow still runs at the current `main` commit and sets Coolify's
+   Git commit SHA to that exact commit automatically. No per-release dashboard
+   change is needed.
+3. Run the `Website` workflow on the current `main` commit with `deploy` enabled, or
    run the following maintainer commands from a checkout containing that commit.
 
 ```sh
@@ -158,8 +161,8 @@ just collection status
 ```
 
 The command locks the publisher, checks the authorised snapshot against the
-committed file, triggers the production webhook and waits for the identified hosting
-job at the pinned commit. It then verifies the served snapshot and bilingual
+committed file, updates the hosting commit, triggers the production webhook and
+waits for the identified hosting job at that commit. It then verifies the served snapshot and bilingual
 collection/institution pages. Finding an older served copy is not sufficient.
 
 Only successful verification updates `live_release_id` and `live_verified_at`. The desired release and live release remain distinct. A persistent pending marker protects against a crashed command or uncertain HTTP result. The configured origin sends `Cache-Control: no-store` for collection, institution and snapshot responses; configure any external proxy/CDN to honour that behaviour.
@@ -176,7 +179,7 @@ just collection export --output apps/website/public/collection-snapshot.json
 just website-build
 ```
 
-Withdrawing the desired record creates a new, explicitly approved empty release. Commit and merge that export, pin Coolify to the new commit, and run the gated deployment. Verify the empty collection and institution listings in both languages and check `just collection status` before reporting removal complete. A stale build or old export fails the gate. To revert website code, make a new commit that retains the current authorised export; do not use Coolify's direct image rollback.
+Withdrawing the desired record creates a new, explicitly approved empty release. Commit and merge that export, then run the gated deployment from the current `main` commit. Verify the empty collection and institution listings in both languages and check `just collection status` before reporting removal complete. A stale build or old export fails the gate. To revert website code, make a new commit that retains the current authorised export; do not use Coolify's direct image rollback.
 
 To remove one record and retain the others, use:
 

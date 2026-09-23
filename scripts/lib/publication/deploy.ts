@@ -27,25 +27,52 @@ export async function deploy(client: Client, expected: PublicCollection, config:
   )
     throw Error("Use one application's production webhook");
   const applicationURL = new URL(`/api/v1/applications/${applicationId}`, webhook);
-  const appResponse = await fetch(applicationURL, {
-    headers: { Authorization: `Bearer ${config.token}` },
-    redirect: "error",
-    signal: AbortSignal.timeout(10000),
-  });
-  if (!appResponse.ok)
-    throw Error("Cannot verify hosting configuration; token needs read and deploy permissions");
-  const app = (await appResponse.json()) as {
+  type HostingApplication = {
     git_commit_sha?: string;
+    git_branch?: string;
     settings?: { is_auto_deploy_enabled?: boolean; is_preview_deployments_enabled?: boolean };
   };
-  if (
-    app.git_commit_sha !== config.commit ||
-    app.settings?.is_auto_deploy_enabled !== false ||
-    app.settings?.is_preview_deployments_enabled !== false
-  )
-    throw Error(
-      "Pin the hosting application to the reviewed commit and disable automatic/preview deployments first",
-    );
+  async function readApplication(): Promise<HostingApplication> {
+    const response = await fetch(applicationURL, {
+      headers: { Authorization: `Bearer ${config.token}` },
+      redirect: "error",
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!response.ok) throw Error("Cannot verify hosting configuration; token needs read access");
+    return (await response.json()) as HostingApplication;
+  }
+  function requireSafeApplication(app: HostingApplication) {
+    if (
+      app.git_branch !== "main" ||
+      app.settings?.is_auto_deploy_enabled !== false ||
+      app.settings?.is_preview_deployments_enabled !== false
+    )
+      throw Error("Hosting must use main with automatic/preview deployments disabled");
+  }
+  const app = await readApplication();
+  requireSafeApplication(app);
+  await transaction(client, async () => {
+    await requireIdle(client);
+    await currentRelease(client, expected);
+  });
+  if (app.git_commit_sha !== config.commit) {
+    const updated = await fetch(applicationURL, {
+      method: "PATCH",
+      headers: {
+        Authorization: `Bearer ${config.token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ git_commit_sha: config.commit }),
+      redirect: "error",
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!updated.ok)
+      throw Error("Cannot set the reviewed hosting commit; token needs application update access");
+    const pinned = await readApplication();
+    requireSafeApplication(pinned);
+    if (pinned.git_commit_sha !== config.commit)
+      throw Error("Hosting did not retain the reviewed commit");
+  }
   await transaction(client, async () => {
     await requireIdle(client);
     await currentRelease(client, expected);

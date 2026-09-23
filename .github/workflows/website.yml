@@ -100,6 +100,10 @@ jobs:
           cache: true
       - name: Install dependencies
         run: mise x -- just install
+      - name: Require the current main commit
+        run: |
+          git fetch origin refs/heads/main --depth=1
+          test "$(git rev-parse FETCH_HEAD)" = "$GITHUB_SHA"
       - name: Deploy the currently authorised collection and verify served snapshot
         env:
           COLLECTION_DATABASE_URL: ${{ secrets.COLLECTION_DATABASE_URL }}
