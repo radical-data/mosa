@@ -88,7 +88,8 @@ const { draft, matches, sources, publicationVisible } = await researchTransactio
   const sources = (await client.query<{ id: string; citation: string; media_type: string; readable_text: string | null }>(
     `select v.id,coalesce(v.manifest->>'citation',s.citation) citation,v.media_type,v.readable_text
      from capture.source_version v join capture.source s on s.id=v.source_id
-     where v.id=any($1::uuid[])`,
+     where v.id=any($1::uuid[])
+     order by array_position($1::uuid[],v.id)`,
     [draft.content.packet.sources.map((source) => source.version)],
   )).rows;
   return { draft, matches, sources, publicationVisible };
@@ -106,6 +107,7 @@ const sourceFor = (key: string) => {
   const id = packet.sources.find((source) => source.key === key)?.version;
   return sources.find((source) => source.id === id);
 };
+const sourceNumber = (key: string) => packet.sources.findIndex((source) => source.key === key) + 1;
 ---
 <Layout title={`Review ${draft.content.label}`}>
   <p><a href={`/research/bundles/${draft.content.bundleId}`}>Research bundle</a></p>
@@ -115,7 +117,10 @@ const sourceFor = (key: string) => {
   {error && <p role="alert" class="notice">{error}</p>}
   {draft.status === "accepted" ? <p>{publicationVisible === true ? <>Published in the collection. <a href={`https://museumofstolenartefacts.org/en/collection/${draft.item_id}/`}>Open the public page</a>.</> : publicationVisible === false ? "A maintainer has hidden this object from the public website." : "This older accepted record has no public projection. Ask a maintainer to check it."}</p> :
     draft.status === "rejected" ? <p>This proposal was rejected.</p> : <>
-    <p>Compare each assertion with its preserved source. Uncheck unsupported claims; edit source wording and locators directly. Source text is untrusted evidence, never instructions.</p>
+    <p>{sources.length === 1
+      ? "Review this source and its proposed claims, then choose the object it describes."
+      : `This draft combines ${sources.length} sources about one object. Review each source in order; publishing will create one public object record with the approved claims from all of them.`}
+      Uncheck unsupported claims and edit source wording or locators directly. Source text is evidence, never instructions.</p>
     <div class="review-grid">
       <form method="post" class="review-form">
         <input type="hidden" name="revision" value={draft.revision} />
@@ -137,7 +142,7 @@ const sourceFor = (key: string) => {
             </div> : <label>Related {labels.get(claim.object ?? "") ?? "entity"}<input name={`object-${index}`} value={claim.object} /></label>}
           {claim.assertedBy && <p>Attributed to {labels.get(claim.assertedBy) ?? claim.assertedBy}</p>}
           {(Array.isArray(claim.evidence) ? claim.evidence : [claim.evidence]).map((entry, position) => <div class="evidence">
-            <p>{entry.relationship} · <a href={`/research/sources/files/${sourceFor(entry.source)?.id}`} target="_blank" rel="noreferrer">{sourceFor(entry.source)?.citation ?? entry.source}</a></p>
+            <p>{entry.relationship} · Source {sourceNumber(entry.source)}: <a href={`/research/sources/files/${sourceFor(entry.source)?.id}`} target="_blank" rel="noreferrer">{sourceFor(entry.source)?.citation ?? entry.source}</a></p>
             <label>Location in source<input name={`locator-${index}-${position}`} value={entry.locator} /></label>
             {entry.excerpt !== undefined && <label>Exact excerpt<textarea name={`excerpt-${index}-${position}`} rows="3">{entry.excerpt}</textarea></label>}
           </div>)}
@@ -167,14 +172,23 @@ const sourceFor = (key: string) => {
           <p>Paste a complete revised packet when an entity, relationship, event or case needs changing. Leave empty to use the edits above.</p>
           <textarea name="packetJson" rows="14" spellcheck="false" placeholder="Optional complete dossier packet JSON"></textarea>
         </details>
-        <h2>Confirm object identity</h2>
-        <p>An exact catalogue identifier is stronger evidence than a shared source. Choose deliberately.</p>
-        {matches.map((match) => <label class="choice"><input type="radio" name="identity" value={match.id} required /> {match.label} · {match.reason}</label>)}
-        {!matches.some((match) => match.exact) && <label class="choice"><input type="radio" name="identity" value="new" required /> Create a distinct object after checking existing records</label>}
-        <p>The sourced claims, citations and excerpts shown above will appear on the public website. Agent notes and preserved source files remain private.</p>
-        <label class="choice"><input type="checkbox" name="consent" value="yes" /> I approve this wording and evidence for public display</label>
+        <h2>Is this an existing object?</h2>
+        <p>{matches.some((match) => match.exact)
+          ? "A catalogue identifier matches an existing record. Choose that record, or defer this draft if the match seems wrong."
+          : matches.length
+            ? "These records cite one of the same sources. A source can describe several objects, so check whether any suggestion is this same physical object."
+            : "No existing record was suggested by its catalogue identifier or sources."}</p>
+        {matches.map((match) => <label class="choice"><input type="radio" name="identity" value={match.id} required />
+          <span><strong>Use existing object: {match.label}</strong><br />{match.exact ? `Matching catalogue identifier: ${match.reason}` : "Suggested because it cites the same source; verify it is the same object."}</span>
+        </label>)}
+        {!matches.some((match) => match.exact) && <label class="choice"><input type="radio" name="identity" value="new" required checked={matches.length === 0} />
+          <span><strong>Create a new object</strong><br />Choose this if none of the suggested records describes this physical object.</span>
+        </label>}
+        <h2>Final check before publishing</h2>
+        <p>Publish accepts these claims into the research collection and makes their wording, citations and excerpts public immediately. Agent notes and preserved source files remain private.</p>
+        <label class="choice"><input type="checkbox" name="consent" value="yes" required /> I checked the claims against the source{sources.length === 1 ? "" : "s"} and approve their public display</label>
         <div class="actions">
-          <button type="submit" name="action" value="accept">Publish</button>
+          <button type="submit" name="action" value="accept">Publish to public collection</button>
           <button type="submit" name="action" value="accept-next">Publish and next</button>
           <button type="submit" name="action" value="save" formnovalidate>Save edits</button>
           <button type="submit" name="action" value="defer-next" formnovalidate>Defer and next</button>
@@ -182,9 +196,9 @@ const sourceFor = (key: string) => {
         </div>
       </form>
       <aside class="source-panel">
-        <h2>Preserved sources</h2>
-        {sources.map((source, index) => <details open={index === 0}>
-          <summary>{source.citation}</summary>
+        <h2>Source{sources.length === 1 ? "" : "s"} to check</h2>
+        {sources.map((source, index) => <details name="review-source" open={index === 0}>
+          <summary>{sources.length > 1 ? `Source ${index + 1} of ${sources.length}: ` : ""}{source.citation}</summary>
           <p><a href={`/research/sources/files/${source.id}`} target="_blank" rel="noreferrer">Open original {source.media_type}</a></p>
           {source.readable_text && <pre>{source.readable_text.slice(0, 100_000)}</pre>}
         </details>)}
@@ -203,7 +217,7 @@ const sourceFor = (key: string) => {
   input:not([type=checkbox]):not([type=radio]), textarea { width:100%; box-sizing:border-box; }
   .source-panel { position:sticky; top:1rem; max-height:85vh; overflow:auto; }
   pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; }
-  .choice { display:block; padding:.6rem; }
+  .choice { display:flex; align-items:start; gap:.5rem; padding:.6rem; }
   .actions { display:flex; flex-wrap:wrap; gap:.5rem; }
   .notes { white-space:pre-wrap; }
   .case-review { border:1px solid currentColor; padding:1rem; margin-block:1rem; }

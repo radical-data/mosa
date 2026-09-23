@@ -80,7 +80,8 @@ export async function dossierIdentityMatches(client: ClientBase, packet: Dossier
          and s.reference=any($2::text[]) and c.object_entity_id is not null
      )
      select m.id,(entities.entity_display_label(m.id)).display_label label,
-       string_agg(distinct m.reason,', ') reason,bool_or(m.exact) exact
+       coalesce(string_agg(distinct m.reason,', ') filter (where m.exact),'Shared source') reason,
+       bool_or(m.exact) exact
      from matches m join entities.item i on i.id=m.id group by m.id
      order by bool_or(m.exact) desc,m.id`,
     [JSON.stringify(identifiers), packet.sources.map((source) => source.reference ?? source.url)],
