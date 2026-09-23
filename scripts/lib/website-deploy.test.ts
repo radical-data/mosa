@@ -12,7 +12,7 @@ const collection = {
   releaseId: "11111111-1111-4111-8111-111111111111",
   records: [],
 };
-const app = (commit: string, branch = "main") =>
+const app = (commit = "HEAD", branch = "main") =>
   Response.json({
     git_branch: branch,
     git_commit_sha: commit,
@@ -24,7 +24,7 @@ afterEach(() => {
 });
 
 describe("website code deployment", () => {
-  it("refuses another hosting branch before changing it", async () => {
+  it("refuses another hosting branch before deployment", async () => {
     const fetch = vi
       .fn()
       .mockResolvedValueOnce(Response.json(collection))
@@ -33,23 +33,20 @@ describe("website code deployment", () => {
     await expect(deployWebsite(config)).rejects.toThrow("must use main");
     expect(fetch).toHaveBeenCalledTimes(2);
   });
-  it("fails before deployment when Coolify cannot set the main commit", async () => {
+  it("requires main at HEAD before deployment", async () => {
     const fetch = vi
       .fn()
       .mockResolvedValueOnce(Response.json(collection))
-      .mockResolvedValueOnce(app("b".repeat(40)))
-      .mockResolvedValueOnce(new Response("forbidden", { status: 403 }));
+      .mockResolvedValueOnce(app("b".repeat(40)));
     vi.stubGlobal("fetch", fetch);
-    await expect(deployWebsite(config)).rejects.toThrow("application update access");
-    expect(fetch).toHaveBeenCalledTimes(3);
+    await expect(deployWebsite(config)).rejects.toThrow("Commit SHA to HEAD");
+    expect(fetch).toHaveBeenCalledTimes(2);
   });
   it("verifies the served collection and both language listings", async () => {
     const fetch = vi
       .fn()
       .mockResolvedValueOnce(Response.json(collection))
-      .mockResolvedValueOnce(app("b".repeat(40)))
-      .mockResolvedValueOnce(Response.json({}))
-      .mockResolvedValueOnce(app(config.commit))
+      .mockResolvedValueOnce(app())
       .mockResolvedValueOnce(
         Response.json({ deployments: [{ resource_uuid: "website", deployment_uuid: "job-1" }] }),
       )
@@ -62,14 +59,7 @@ describe("website code deployment", () => {
       );
     vi.stubGlobal("fetch", fetch);
     await expect(deployWebsite(config)).resolves.toEqual(collection);
-    expect(fetch).toHaveBeenNthCalledWith(
-      3,
-      expect.any(URL),
-      expect.objectContaining({
-        method: "PATCH",
-        body: JSON.stringify({ git_commit_sha: config.commit }),
-      }),
-    );
-    expect(fetch).toHaveBeenCalledTimes(12);
+    expect(fetch.mock.calls.some(([, options]) => options?.method === "PATCH")).toBe(false);
+    expect(fetch).toHaveBeenCalledTimes(10);
   });
 });

@@ -35,37 +35,24 @@ export async function deployWebsite(config: WebsiteDeployment) {
   parseCollection(await feed.json());
 
   const applicationURL = new URL(`/api/v1/applications/${applicationId}`, webhook);
-  async function application() {
-    const response = await request(applicationURL, { headers });
-    if (!response.ok) throw Error("Cannot inspect website hosting application");
-    const app = (await response.json()) as {
-      git_branch?: string;
-      git_commit_sha?: string;
-      settings?: {
-        is_auto_deploy_enabled?: boolean;
-        is_preview_deployments_enabled?: boolean;
-      };
+  const applicationResponse = await request(applicationURL, { headers });
+  if (!applicationResponse.ok) throw Error("Cannot inspect website hosting application");
+  const app = (await applicationResponse.json()) as {
+    git_branch?: string;
+    git_commit_sha?: string;
+    settings?: {
+      is_auto_deploy_enabled?: boolean;
+      is_preview_deployments_enabled?: boolean;
     };
-    if (
-      app.git_branch !== "main" ||
-      app.settings?.is_auto_deploy_enabled !== false ||
-      app.settings?.is_preview_deployments_enabled !== false
-    )
-      throw Error("Website hosting must use main with automatic and preview deployments disabled");
-    return app;
-  }
-  const app = await application();
-  if (app.git_commit_sha !== config.commit) {
-    const update = await request(applicationURL, {
-      method: "PATCH",
-      headers: { ...headers, "Content-Type": "application/json" },
-      body: JSON.stringify({ git_commit_sha: config.commit }),
-    });
-    if (!update.ok)
-      throw Error("Cannot set website hosting commit; token needs application update access");
-    if ((await application()).git_commit_sha !== config.commit)
-      throw Error("Website hosting did not retain the main commit");
-  }
+  };
+  if (
+    app.git_branch !== "main" ||
+    app.settings?.is_auto_deploy_enabled !== false ||
+    app.settings?.is_preview_deployments_enabled !== false
+  )
+    throw Error("Website hosting must use main with automatic and preview deployments disabled");
+  if (app.git_commit_sha !== "HEAD")
+    throw Error("Set the website application's Commit SHA to HEAD in Coolify so it follows main");
   const started = await request(config.webhook, { method: "POST", headers });
   if (!started.ok) throw Error(`Website deployment request failed (HTTP ${started.status})`);
   const accepted = (await started.json()) as {
