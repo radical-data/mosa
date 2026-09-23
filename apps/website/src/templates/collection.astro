@@ -1,27 +1,28 @@
 ---
+import type { PublicCollection } from "@mosa/public-collection";
 import PageIntro from "../components/PageIntro.astro";
 import { getCopy } from "../content/content";
-import { getCollection, publicCollection } from "../data/site";
+import { getCollection } from "../data/site";
 import { messages } from "../i18n/catalogues";
 import { referenceCount } from "../i18n/messages";
 import { type Locale, pagePath } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
-interface Props { locale: Locale; }
-const { locale } = Astro.props;
+interface Props { locale: Locale; publicCollection: PublicCollection | null; }
+const { locale, publicCollection } = Astro.props;
 const copy = getCopy("collection", locale);
-const collection = getCollection(locale);
+const collection = publicCollection ? getCollection(locale, publicCollection) : [];
 const t = messages(locale);
 ---
 <Layout locale={locale} page="collection" title={copy.title} description={copy.description}>
   <PageIntro title={copy.passage03} image="mahute"><p><Fragment set:html={copy.passage06} /></p><a class="text-link" href="#more-information">{copy.passage17}</a></PageIntro>
-  <section class="container section collection-section" aria-label={t.collectionExplore} data-locale={locale} data-release-id={publicCollection.releaseId}>
+  <section class="container section collection-section" aria-label={t.collectionExplore} data-locale={locale} data-release-id={publicCollection?.releaseId}>
     <div class="collection-controls" hidden>
       <label for="collection-search">{t.collectionSearch}</label>
       <input id="collection-search" type="search" placeholder={t.collectionSearch} />
     </div>
     <p class="small muted" id="collection-count" role="status" aria-live="polite">{referenceCount(locale, { count: collection.length })}</p>
-    {collection.length === 0 && <p>{t.collectionPending}</p>}
+    {!publicCollection ? <p role="alert">{locale === "es" ? "La colección pública no está disponible por el momento." : "The public collection is temporarily unavailable."}</p> : collection.length === 0 && <p>{t.collectionPending}</p>}
     <div class="collection-grid public-collection" id="collection-results">{collection.map((item) => <article class="collection-card" data-record-id={item.id} data-search-exact={item.searchExact} data-search-foldable={item.searchFoldable}>
       <div class="collection-caption">
         {"kind" in item ? <>

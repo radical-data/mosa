@@ -6,8 +6,9 @@ restitution case management.
 
 Researchers prepare sources locally or in the authenticated workspace, confirm
 identity and accept reviewed proposals through the shared dossier importer.
-A maintainer separately authorises a public snapshot. The static website reads
-that snapshot without database access. Hosted discovery and preparation have
+The researcher's Publish action adds the reviewed object to a public database
+projection. The website reads it through the explorer's public feed without
+database credentials or a per-object Git change. Hosted discovery and preparation have
 been retired; local research bundles are the current contribution workflow.
 
 Public website: [museumofstolenartefacts.org](https://museumofstolenartefacts.org/).
@@ -56,7 +57,7 @@ Run `just` to list commands. `just install` also installs Git hooks.
 - [Architecture](docs/architecture.md): current system and domain boundaries.
 - [Predicates](docs/predicates.md): claim vocabulary and evidence semantics.
 - [Research](docs/local-research.md): capture, local bundles, review and acceptance.
-- [Publication](docs/collection-publication.md): approval, export, withdrawal and deployment.
+- [Publication](docs/collection-publication.md): reviewer publishing, withdrawal and code deployment.
 - [Operations](docs/operations.md): environment configuration and recovery.
 - [Website content](docs/website-content.md): copy, events and languages.
 - [Roadmap](docs/roadmap.md): open work and live checks requiring evidence.

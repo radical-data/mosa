@@ -12,19 +12,22 @@ COPY packages/public-collection packages/public-collection
 COPY packages/object-dossier packages/object-dossier
 COPY schemas/object-dossier-packet.schema.json schemas/
 
-# Skip Git hooks; still run approved dependency build scripts.
 RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile --ignore-scripts \
  && pnpm rebuild esbuild
 
 COPY apps/website apps/website
-RUN pnpm --filter @mosa/website build
+RUN pnpm --filter @mosa/website build \
+ && pnpm --filter @mosa/website deploy --legacy --prod --ignore-scripts /deploy
 
-FROM nginx:1.28-alpine AS runtime
-COPY apps/website/nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /app/apps/website/dist /usr/share/nginx/html
-USER nginx
+FROM node:24.18.0-bookworm-slim AS runtime
+WORKDIR /app
+ENV NODE_ENV=production HOST=0.0.0.0 PORT=8080
+RUN groupadd --system --gid 999 mosa \
+ && useradd --system --uid 999 --gid mosa --create-home --home-dir /home/mosa mosa
+COPY --from=build --chown=mosa:mosa /deploy ./
+USER mosa
 EXPOSE 8080
-HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
-  CMD wget --quiet --spider http://127.0.0.1:8080/ || exit 1
-CMD ["nginx", "-g", "daemon off;"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD node -e "fetch('http://127.0.0.1:8080/es/').then(r=>process.exit(r.status===200?0:1)).catch(()=>process.exit(1))"
+CMD ["node", "dist/server/entry.mjs"]

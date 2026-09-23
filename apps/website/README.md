@@ -1,8 +1,9 @@
 # MoSA public website
 
-Static Astro website with Chilean Spanish (`/es/`, `es-CL`) and British English
-(`/en/`, `en-GB`). Spanish is the default entry. The website reads the approved
-public snapshot; it has no database connection or runtime secrets.
+Server-rendered Astro website with Chilean Spanish (`/es/`, `es-CL`) and British
+English (`/en/`, `en-GB`). Spanish is the default entry. Collection and object
+pages read the explorer's validated public feed at request time. The website
+has no database credentials; publishing an object needs no website rebuild.
 
 ## Develop and verify
 
@@ -13,11 +14,11 @@ mise exec -- just website-dev
 mise exec -- just website-check
 mise exec -- pnpm --filter @mosa/website test
 mise exec -- just website-build
-mise exec -- just website-preview
+mise exec -- just collection-website-verify
 ```
 
-Development/preview use port 4322; output is `apps/website/dist/`. The build
-checks types, bilingual message structure, links, fragments, metadata and sitemap.
+The last command starts a built website against a synthetic feed and changes its
+records without rebuilding. The production server listens on port 8080.
 
 ## Code entry points
 
@@ -28,29 +29,22 @@ checks types, bilingual message structure, links, fragments, metadata and sitema
 | `src/content/content.ts` | Page-copy selection |
 | `src/templates/` | Shared templates for both languages |
 | `src/i18n/routes.ts` | Page IDs, paths, locale tags and fragment identifiers |
-| `src/i18n/markup.ts` | Allowed inline markup |
-| `src/data/event-schema.ts`, `src/data/load-events.ts`, `src/data/events.ts` | Event validation, loading and presentation |
-| `public/collection-snapshot.json` | Generated authorised public collection; do not hand-edit |
-| `nginx.conf` | Permanent redirects, response headers and real 404 responses |
+| `src/data/live-collection.ts` | Strict public feed loading |
+| `src/pages/collection-snapshot.json.ts` | Public snapshot response used for verification |
+| `src/pages/sitemap-index.xml.ts` | Sitemap from current public records |
+| `src/middleware.ts` | Legacy redirects and no-store responses |
 
-Use [website content](../../docs/website-content.md) for editing, event examples,
-translation review and accessibility. Use [publication](../../docs/collection-publication.md)
-for collection changes, and [operations](../../docs/operations.md#public-website)
-for hosting. Collection authorisation and deployment checks run outside the static app.
+Use [website content](../../docs/website-content.md) for copy and accessibility,
+[publication](../../docs/collection-publication.md) for researcher publishing and
+withdrawal, and [operations](../../docs/operations.md#public-website) for hosting.
 
 ## Production HTTP checks
 
 ```sh
 mise exec -- just website-image
-docker run --rm -p 8080:8080 mosa-website:local
 ```
 
-With the container running, use another terminal:
-
-```sh
-mise exec -- pnpm --filter @mosa/website test:http http://127.0.0.1:8080
-```
-
-The image uses unprivileged nginx on port 8080. The root and legacy paths redirect
-permanently to Spanish equivalents, preserving query strings. Unknown paths return
-404. Astro development/preview does not reproduce all nginx behaviour.
+Run the image with a synthetic feed for local HTTP tests, as in the `Website`
+workflow. The root and legacy paths redirect permanently to Spanish equivalents,
+preserving query strings. Unknown paths return 404; an unavailable public feed
+returns 503 for collection pages rather than old content.

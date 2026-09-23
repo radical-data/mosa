@@ -2,22 +2,20 @@
 
 ## Live verification
 
-Existing records report an empty withdrawal release verified on 2026-09-21 and
-research deployment confirmed by the owner on 2026-09-22. The committed public
-snapshot contains Hoa Hakananaiʻa. None establishes today's deployed revision or
-successful hosted sign-in/Storage. Recheck the actual services before claiming those outcomes.
+The earlier public release workflow served a committed snapshot. The database-driven
+Publish flow requires a production migration, explorer deployment and one website
+code deployment before it becomes live. Verify the hosted services directly; local
+tests do not prove production Auth, Storage or hosting behaviour.
 
 - [ ] Confirm the deployed research revision and complete migration history.
 - [ ] Demonstrate invited email-code sign-in and saving/reopening a private draft.
 - [ ] Import one small real bundle, reopen its preserved source and retry the same
   bundle without duplicating drafts or losing edits. Verify cross-user denial.
-- [ ] Verify the actual served public release using `just collection status` and
-  the gated deployment evidence when a release is authorised.
-- [ ] With explicit publication authority, demonstrate a real second object and
-  individual withdrawal while retaining the existing approved record.
-- [ ] Agree and rehearse the complete withdrawal deadline, including review,
-  commit/merge, pinning, deployment and caches. The old timed empty-release
-  rehearsal measured only part of that process.
+- [ ] Verify the migrated public records in `just collection status` and the
+  explorer feed, then deploy the website code and check both language routes.
+- [ ] Publish one reviewed real draft and verify it appears without a website build.
+- [ ] Rehearse hiding one object, checking both language routes, the object URL,
+  snapshot endpoint and sitemap, then measure the full withdrawal time.
 
 ## Open delivery work
 
@@ -25,9 +23,9 @@ successful hosted sign-in/Storage. Recheck the actual services before claiming t
 | --- | --- | --- |
 | Reconcile PDF/CSV inventory | Preserved documents | Raw rows, inherited context and joined regions remain traceable; selected reconciled entries become leads/proposals without AI |
 | Shared research campaign | Existing private preparation/import | Explicit membership/submission, retained contribution history, revision checks and revocation; unrelated private work stays private |
-| Selected batch review | Shared campaign | Inspect evidence, select candidates explicitly, accept each transactionally; item-level errors and resumable retries without duplicate acceptance |
+| Selected batch review | Shared campaign | Inspect evidence, select candidates explicitly, publish each transactionally; item-level errors and resumable retries without duplicate publication |
 | Correct accepted research | Existing acceptance | Separate correction from disagreement, preserve earlier evidence/history, reject stale/unauthorised changes and invalidate affected publication candidates |
-| Extend public finding catalogue | Reviewed dossier publication and current deployment gate | Public search and downloads, per-excerpt authority, and editorial language review across every public surface |
+| Extend public finding catalogue | Reviewed dossier publication and live feed | Public search and downloads, per-excerpt authority, and editorial language review across every public surface |
 | Expand within one catalogue | Local discovery and demonstrated review capacity | One permitted API/catalogue adapter, exact upstream IDs, finite budgets, checkpoint/resume and no duplicate counting |
 | Review a changed source | Preserved versions and correction | Refresh creates a new immutable version when changed; review a diff without overwriting accepted claims or human edits |
 
@@ -94,8 +92,8 @@ replace it. Retain hand-off history without duplicating sources or candidates.
 ### Corrections and expanded publication
 
 Correction supersedes a selected assertion with history; disagreement preserves
-both accounts. Acceptance and supersession must be atomic and idempotent. The
-served snapshot remains unchanged until a separate authorised deployment succeeds.
+both accounts. Publication and supersession must be atomic and idempotent. The
+public projection must update only after a fresh human Publish decision.
 
 The version 2 contract permits a reviewed classification or description as a
 display label without turning it into `has_name`. It retains the label basis and
@@ -109,11 +107,10 @@ and translations at their own scope. A private file does not become public becau
 Original-language material must remain identifiable; future research translations
 need source-revision links and their own publication authority.
 
-The exporter, ledger, parser, website and synthetic three-record release now
-cover a document-backed description without a holder/identifier and a legacy
-card. Preserve existing approvals without silently approving changed
-dependencies. Extend single-item withdrawal checks to search and any future
-downloads, with no restoration through stale exports.
+The validated public projection and website cover a document-backed description
+without a holder or identifier and a legacy card. Preserve reviewed wording when
+correcting canonical research. Extend object hiding to search and any future
+downloads; hidden records must not reappear from stale caches.
 Unresolved groups may later have a separately labelled leads view, not object counts.
 
 ### Discovery and source refresh
@@ -144,7 +141,7 @@ raw page totals are not quality measures. Earlier 30-candidate evaluation and
 | Who owns the mailbox, backup coverage, privacy notice, retention and response target? | Assign operational owners and verify receipt/reply; do not adopt example retention periods or a five-day promise |
 | Which Spanish/English wording and Rapa Nui terminology/orthography are approved? | Complete [editorial review](website-content.md#pending-translation-and-review-work) with the relevant collaborators |
 | Are Dutch outputs required by the grant? | Inspect the award letter and approved communication plan before adding a locale |
-| What withdrawal deadline applies to a proposed public cohort? | Agree the deadline with its publication owner and measure the entire release path; add runtime enforcement if static delivery cannot meet it |
+| What withdrawal deadline applies to a published object? | Agree the deadline with its publication owner and measure the hide command, live routes and caches |
 | Is a contributor-facing CMS needed, and under what hosting/control constraints? | Demonstrate an editing problem and trial representative tasks with actual editors before selecting a product |
 
 No CMS was selected or trialled. Retain file-based editing unless a task deliberately

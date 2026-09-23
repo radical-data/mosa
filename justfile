@@ -156,9 +156,13 @@ explorer-image:
 website-image:
     docker build --file apps/website/Dockerfile --tag mosa-website:local .
 
+# Deploy website code from the current main commit; collection records remain in PostgreSQL.
+website-deploy:
+    node --import tsx scripts/deploy-website.ts
+
 # Private maintainer workflow; see docs/collection-publication.md.
 collection +args:
-    pnpm exec tsx scripts/publish-collection.ts "$@"
+    pnpm exec tsx scripts/manage-public-collection.ts "$@"
 
 collection-verify:
     pnpm exec tsx scripts/verify-collection-publication.ts

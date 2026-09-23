@@ -19,9 +19,9 @@ JavaScript. Both languages share templates.
 
 `apps/website/src/i18n/routes.ts` owns paths, page IDs, locale tags, formatting
 locales, search annotations and fragments. Update that registry rather than
-scattering route translations through templates. Production nginx redirects `/`
+scattering route translations through templates. Website middleware redirects `/`
 and legacy paths to Spanish with permanent 301 responses and preserves queries.
-Unknown paths return a real 404. Preview does not substitute for nginx HTTP tests.
+Unknown paths return a real 404. Check the built Node image with the HTTP tests.
 
 Each translated page has its own canonical URL and reciprocal language links.
 The current search annotations use `es`, `en` and Spanish `x-default`. Keep
@@ -129,8 +129,8 @@ language switching and filters, then run the website tests/build. Record any
 editorial work deliberately deferred from the release.
 
 Withdraw copy from both languages and every repeated passage. Use the
-[publication workflow](collection-publication.md#configure-and-deploy) to release;
-collection removal also requires [ledger withdrawal](collection-publication.md#withdraw-or-replace-content).
+[Website workflow](collection-publication.md#deploy-website-code) to release copy;
+collection removal uses [database withdrawal](collection-publication.md#withdraw-an-object).
 
 ## Names, dates and accessibility
 

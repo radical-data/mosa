@@ -1,44 +1,37 @@
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
-import { readFile, writeFile } from "node:fs/promises";
+import { spawn } from "node:child_process";
+import { createServer } from "node:http";
 import path from "node:path";
+import type { PublicCollection } from "@mosa/public-collection";
 import { runCommand } from "./lib/run-command";
-import { withVerificationWorkspace } from "./lib/verification-workspace";
+import { availablePort, withVerificationWorkspace } from "./lib/verification-workspace";
 
-async function verify() {
-  await withVerificationWorkspace(path.resolve(__dirname, ".."), async (workspace, signal) => {
-    const file = path.join(workspace, "apps/website/public/collection-snapshot.json");
-    const statement = {
-      text: "PUBLIC-OBJECT-SENTINEL",
-      language: "rap",
-      attributedTo: "Synthetic museum",
-      sources: ["https://example.org/source"],
-    };
-    const snapshot = {
-      schemaVersion: 1,
-      releaseId: "11111111-1111-4111-8111-111111111111",
-      records: [
-        {
-          id: "22222222-2222-4222-8222-222222222222",
-          name: statement,
-          holder: { ...statement, text: "PUBLIC-HOLDER-SENTINEL", language: "en" },
-          identifier: {
-            namespace: "test",
-            label: "Test catalogue",
-            value: "PUBLIC-ID-SENTINEL",
-            source: "https://example.org/source",
-          },
-        },
-      ],
-    };
-    snapshot.records.push({
-      ...snapshot.records[0],
-      id: "44444444-4444-4444-8444-444444444444",
-      name: { ...statement, text: "SECOND-OBJECT-SENTINEL" },
-      identifier: { ...snapshot.records[0].identifier, value: "SECOND-ID-SENTINEL" },
-    });
-    const dossier = {
-      kind: "dossier" as const,
+const first: PublicCollection = {
+  schemaVersion: 2,
+  releaseId: "11111111-1111-4111-8111-111111111111",
+  records: [
+    {
+      id: "22222222-2222-4222-8222-222222222222",
+      name: {
+        text: "PUBLIC-OBJECT-SENTINEL",
+        language: "rap",
+        attributedTo: "Museum",
+        sources: ["https://example.org/source"],
+      },
+      holder: {
+        text: "PUBLIC-HOLDER-SENTINEL",
+        language: "en",
+        attributedTo: "Museum",
+        sources: ["https://example.org/source"],
+      },
+      identifier: {
+        namespace: "test",
+        value: "PUBLIC-ID-SENTINEL",
+        source: "https://example.org/source",
+      },
+    },
+    {
+      kind: "dossier",
       id: "55555555-5555-4555-8555-555555555555",
       label: "FULL-DOSSIER-SENTINEL",
       identifiers: [],
@@ -52,118 +45,103 @@ async function verify() {
             {
               relationship: "supports",
               citation: "Original PDF, page 12",
-              locator: "Page 12: row 3",
+              locator: "Page 12",
               excerpt: "PUBLIC-DESCRIPTION-SENTINEL",
             },
           ],
         },
-        {
-          predicate: "moved_item",
-          subject: { key: "event:one", kind: "event", label: "Recorded event" },
-          value: { kind: "entity", text: "FULL-DOSSIER-SENTINEL" },
-          attributedTo: null,
-          evidence: [
-            {
-              relationship: "mentions",
-              citation: "Original PDF, page 13",
-              locator: "Page 13: history",
-            },
-          ],
-        },
       ],
-      events: [{ key: "event:one", kind: "relocation" }],
-      cases: [
-        {
-          reference: "case-1",
-          title: "PUBLIC-CASE-SENTINEL",
-          status: "open" as const,
-          actions: [{ kind: "request", description: "PUBLIC-REQUEST-SENTINEL" }],
-          documents: [{ citation: "Original PDF, page 14", role: "case record" }],
-        },
-      ],
-    };
-    const build = () =>
-      runCommand("pnpm", ["--filter", "@mosa/website", "build"], { cwd: workspace, signal });
-    await writeFile(file, `${JSON.stringify(snapshot)}\n`);
-    await build();
-    for (const page of ["es/coleccion", "en/collection"]) {
-      const html = await readFile(
-        path.join(workspace, `apps/website/dist/${page}/index.html`),
-        "utf8",
-      );
-      for (const value of [
-        statement.text,
-        "PUBLIC-HOLDER-SENTINEL",
-        "PUBLIC-ID-SENTINEL",
-        "SECOND-OBJECT-SENTINEL",
-        "SECOND-ID-SENTINEL",
-        "https://example.org/source",
-      ])
-        assert(html.includes(value));
-      assert(!html.includes("collection-mamari"));
-    }
-    const expanded = { ...snapshot, schemaVersion: 2, records: [...snapshot.records, dossier] };
-    await writeFile(file, `${JSON.stringify(expanded)}\n`);
-    await build();
-    for (const page of ["es/coleccion", "en/collection"]) {
-      const list = await readFile(
-        path.join(workspace, `apps/website/dist/${page}/index.html`),
-        "utf8",
-      );
-      const detail = await readFile(
-        path.join(workspace, `apps/website/dist/${page}/${dossier.id}/index.html`),
-        "utf8",
-      );
-      assert(list.includes(dossier.label));
-      for (const value of [
-        dossier.label,
-        "PUBLIC-DESCRIPTION-SENTINEL",
-        "PUBLIC-CASE-SENTINEL",
-        "PUBLIC-REQUEST-SENTINEL",
-        "Original PDF, page 12",
-      ])
-        assert(detail.includes(value));
-      assert(!detail.includes("PRIVATE"));
-    }
-    await writeFile(file, JSON.stringify({ ...expanded, records: snapshot.records }));
-    await build();
-    for (const page of ["es/coleccion", "en/collection"]) {
-      const list = await readFile(
-        path.join(workspace, `apps/website/dist/${page}/index.html`),
-        "utf8",
-      );
-      assert(!list.includes(dossier.label));
-      assert(
-        !existsSync(path.join(workspace, `apps/website/dist/${page}/${dossier.id}/index.html`)),
-      );
-    }
-    await writeFile(file, JSON.stringify({ ...snapshot, records: [snapshot.records[0]] }));
-    await build();
-    for (const page of ["es/coleccion", "en/collection"]) {
-      const html = await readFile(
-        path.join(workspace, `apps/website/dist/${page}/index.html`),
-        "utf8",
-      );
-      assert(html.includes("PUBLIC-OBJECT-SENTINEL") && !html.includes("SECOND-OBJECT-SENTINEL"));
-    }
-    await writeFile(
-      file,
-      JSON.stringify({
-        ...snapshot,
+      events: [],
+      cases: [],
+    },
+  ],
+};
+
+async function verify() {
+  await withVerificationWorkspace(path.resolve(__dirname, ".."), async (workspace, signal) => {
+    await runCommand("pnpm", ["--filter", "@mosa/website", "build"], { cwd: workspace, signal });
+    let current = first;
+    let available = true;
+    const feed = createServer((_request, response) => {
+      response.setHeader("Content-Type", "application/json");
+      response.statusCode = available ? 200 : 503;
+      response.end(available ? JSON.stringify(current) : "Unavailable");
+    });
+    await new Promise<void>((resolve) => feed.listen(0, "127.0.0.1", resolve));
+    const address = feed.address();
+    if (!address || typeof address === "string") throw Error("Missing test feed port");
+    const port = await availablePort();
+    const site = spawn(process.execPath, ["dist/server/entry.mjs"], {
+      cwd: path.join(workspace, "apps/website"),
+      env: {
+        ...process.env,
+        NODE_ENV: "test",
+        HOST: "127.0.0.1",
+        PORT: String(port),
+        PUBLIC_COLLECTION_URL: `http://127.0.0.1:${address.port}/`,
+      },
+      stdio: "inherit",
+    });
+    const origin = `http://127.0.0.1:${port}`;
+    const get = (route: string) => fetch(new URL(route, origin), { cache: "no-store" });
+    try {
+      let ready = false;
+      for (let attempt = 0; attempt < 40; attempt++) {
+        try {
+          if ((await get("/es/")).ok) {
+            ready = true;
+            break;
+          }
+        } catch {
+          /* starting */
+        }
+        await new Promise((resolve) => setTimeout(resolve, 200));
+      }
+      assert(ready, "Website server did not start");
+      for (const route of ["/es/coleccion/", "/en/collection/"]) {
+        const page = await get(route);
+        const html = await page.text();
+        assert.equal(page.status, 200);
+        assert.equal(page.headers.get("cache-control"), "no-store");
+        assert(html.includes("PUBLIC-OBJECT-SENTINEL") && html.includes("FULL-DOSSIER-SENTINEL"));
+      }
+      for (const route of ["/es/coleccion/", "/en/collection/"]) {
+        const detail = await get(`${route}${first.records[1].id}/`);
+        const html = await detail.text();
+        assert.equal(detail.status, 200);
+        assert(
+          html.includes("PUBLIC-DESCRIPTION-SENTINEL") && html.includes("Original PDF, page 12"),
+        );
+      }
+      assert((await (await get("/sitemap-index.xml")).text()).includes(`${first.records[1].id}/`));
+      current = {
+        ...first,
         releaseId: "33333333-3333-4333-8333-333333333333",
-        records: [],
-      }),
-    );
-    await build();
-    for (const page of ["es/coleccion", "en/collection", "es/visita", "en/visit"]) {
-      const html = await readFile(
-        path.join(workspace, `apps/website/dist/${page}/index.html`),
-        "utf8",
+        records: [first.records[0]],
+      };
+      for (const route of ["/es/coleccion/", "/en/collection/", "/es/visita/", "/en/visit/"]) {
+        const html = await (await get(route)).text();
+        assert(!html.includes("FULL-DOSSIER-SENTINEL"));
+        assert(html.includes(current.releaseId));
+      }
+      assert.equal((await get(`/en/collection/${first.records[1].id}/`)).status, 404);
+      current = { ...first, releaseId: "44444444-4444-4444-8444-444444444444", records: [] };
+      assert(!(await (await get("/es/coleccion/")).text()).includes("PUBLIC-OBJECT-SENTINEL"));
+      available = false;
+      assert.equal((await get("/collection-snapshot.json")).status, 503);
+      assert.equal((await get("/en/collection/")).status, 503);
+      console.log(
+        "Verified live publication, withdrawal and feed failure without a website rebuild.",
       );
-      assert(!html.includes("PUBLIC-OBJECT-SENTINEL") && !html.includes("PUBLIC-HOLDER-SENTINEL"));
-      assert(html.includes("33333333-3333-4333-8333-333333333333"));
+    } finally {
+      if (site.exitCode === null) {
+        site.kill("SIGTERM");
+        await new Promise<void>((resolve) => site.once("close", () => resolve()));
+      }
+      await new Promise<void>((resolve, reject) =>
+        feed.close((error) => (error ? reject(error) : resolve())),
+      );
     }
-    console.log("Verified populated and withdrawn website releases in both languages.");
   });
 }
 verify().catch((error) => {

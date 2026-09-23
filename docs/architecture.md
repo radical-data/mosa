@@ -7,15 +7,16 @@
 | `apps/explorer/` | Reader routes plus invited sign-in, private sources, drafts, catalogue administration and acceptance | Separate server-side reader and writer connections |
 | `packages/object-dossier/` | Validate packets, resolve identities and import dossiers transactionally | Shared by CLI and accepted research drafts |
 | Local research bundle tooling | Preserve PDF/HTML/JSON sources and prepare complete dossier proposals | Discovery stays local; import creates owner-private drafts, not accepted records |
-| `scripts/publish-collection.ts` | Prepare, approve, export, withdraw and deploy public snapshots | Restricted maintainer connection to the private publication ledger |
-| `packages/public-collection/` | Validate versioned public snapshots | Version 2 permits up to 1,000 selected records; older approvals retain the version 1 contract |
-| `apps/website/` | Static bilingual presentation of approved cards and dossier pages | No database connection or private source access |
+| `scripts/manage-public-collection.ts` | Hide and clear public records | Restricted maintainer connection |
+| `packages/public-collection/` | Validate public records and share the accepted-draft projectors | Strict public fields; private notes and files are excluded |
+| `apps/website/` | Server-rendered bilingual presentation of published cards and dossier pages | Reads the explorer's public feed; no database connection |
 
-The flow is source → private proposal → identity review → accepted research →
-separate publication decision → static export → verified deployment. Manual URL
+The flow is source → private proposal → identity and evidence review → Publish →
+public database projection → website feed. Manual URL
 entry remains available without archiving; PDF upload and bundle import preserve
 source bytes. Local sessions may use AI, but the hosted app has no active
 search/model worker or queue delivery. See [ADR 017](adrs/017-local-research-bundles.md).
+The public delivery boundary is recorded in [ADR 019](adrs/019-review-publishes-live-collection.md).
 
 ## Domain model
 
@@ -132,31 +133,29 @@ correction and supersession are roadmap work. See [ADR 012](adrs/012-object-doss
 | --- | --- |
 | `explorer_reader` | Research read projections, with read-only database transactions |
 | `capture_writer` | Invited researcher's private drafts, sources and validated acceptance |
-| `collection_publisher` | Maintainer publication ledger and authorised export/deployment |
+| `collection_publisher` | Maintainer withdrawal and historical release ledger |
 
 Reader routes retain their existing visibility; signing in protects the private
-workspace, not every explorer route. Accepted research is readable through the
-research reader. Original private files remain protected. Consent to enter
-research is separate from permission to publish or send material to a model.
-Do not accept sensitive material on the assumption that all research pages
-require sign-in.
+workspace, not every explorer route. Published research is readable through the
+research reader. Original private files remain protected. Draft creation does
+not publish; the researcher's Publish decision does. Permission to send
+material to a model remains separate. Do not accept sensitive material on the
+assumption that all research pages require sign-in.
 
 The allowlist, row-level policies, source file access and private Storage work
 together. Authentication alone grants no general canonical write permission.
 Contributor/preparer metadata is distinct from source authorship and the actual
 signed-in reviewer. Bundle-supplied attribution is not verified authorship.
 
-Acceptance, foregrounding and publication are independent operations. Legacy
-cards still require an evidenced name, holder, identifier and attribution. A
-complete dossier can be published with a sourced name, classification,
-description or identifier while retaining unknowns. Publication includes the
-reviewed claims, citations, provenance and restitution facts selected in the
-approved snapshot. Original private files and images remain excluded.
-
-The website build/container has no database access. Its trusted deployment job
-does: it checks the publication ledger, pinned commit, hosting job and served
-snapshot. Desired, pending and verified live releases are distinct. Only the
-[publication runbook](collection-publication.md) defines release and withdrawal.
+Publish is the researcher's acceptance and public-display decision for one
+reviewed revision. Foregrounding remains editorial salience. Legacy cards need
+an evidenced name, holder, identifier and attribution; complete dossiers may
+retain unknowns. The public projection includes reviewed claims, citations,
+provenance and restitution facts, while private notes and original files remain
+excluded. The explorer serves only visible projections through its public API.
+The website has no database credentials and reads that feed at request time.
+The [publication runbook](collection-publication.md) defines withdrawal and
+website-code deployment.
 
 ## Competency coverage
 
