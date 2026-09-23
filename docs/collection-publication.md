@@ -68,10 +68,11 @@ website image to undo publication: the database projection controls visibility.
 ## Deploy website code
 
 The `Website` GitHub workflow deploys code from the current head of `main`. It
-checks the research feed first, sets Coolify's Git SHA to that exact commit
-through the API, and verifies the finished job and served collection pages.
-Coolify automatic and preview deployments stay disabled. The website token needs
-application read, update and deploy access. This code deployment is needed only
+checks the research feed and Coolify application, then verifies that the finished
+job built that exact commit and the served collection pages match the feed.
+The Coolify application must track `main` with Commit SHA set to `HEAD`; automatic
+and preview deployments stay disabled. The website token needs application read
+and deploy access. This code deployment is needed only
 when the website changes, not when researchers publish objects.
 
 ```sh

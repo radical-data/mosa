@@ -136,12 +136,13 @@ Configure GitHub `website-production`, restricted to `main`:
 | Setting | Kind | Purpose |
 | --- | --- | --- |
 | `COOLIFY_DEPLOY_WEBHOOK` | Secret | This website's production webhook |
-| `COOLIFY_API_TOKEN` | Secret | Coolify application read, update and deploy permissions |
+| `COOLIFY_API_TOKEN` | Secret | Coolify application read and deploy permissions |
 | `PRODUCTION_URL` | Environment variable | Canonical website URL; workflow reads `vars.PRODUCTION_URL` |
 
-Enable Coolify API access, set branch `main`, and disable automatic and preview
-deployments. The Website workflow pins the current `main` SHA through the API
-and verifies the finished job and live collection feed. The dedicated publisher
+Enable Coolify API access, set branch `main`, set Commit SHA to `HEAD`,
+and disable automatic and preview deployments. The Website workflow verifies
+that each finished job built the current `main` commit and serves the live feed.
+The dedicated publisher
 login is needed only for exceptional withdrawal, outside the website runtime.
 See [publication](collection-publication.md#deploy-website-code).
 
