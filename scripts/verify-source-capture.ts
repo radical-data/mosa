@@ -146,8 +146,27 @@ async function verify() {
     await saveCatalogue(client, catalogueForm);
     assert.equal((await identityMatches(client, content))[0].id, accepted.item_id);
     await fails(() => saveCatalogue(client, catalogueForm), /changed/);
+    const published = (
+      await client.query(
+        "select draft_id,record from publication.published_record where item_id=$1",
+        [accepted.item_id],
+      )
+    ).rows[0];
+    assert.equal(published.draft_id, draft.id);
+    assert.equal(published.record.id, accepted.item_id);
+    assert.equal(
+      (
+        await client.query("select count(*) from capture.publication_candidate where draft_id=$1", [
+          draft.id,
+        ])
+      ).rows[0].count,
+      "1",
+    );
     await fails(
-      () => client.query("select * from capture.publication_candidate"),
+      () =>
+        client.query("update publication.published_record set visible=false where item_id=$1", [
+          accepted.item_id,
+        ]),
       /permission denied/,
     );
     await client.query("reset role");
@@ -294,7 +313,27 @@ async function verify() {
       holderNameCitation: extraCitation,
     });
     assert.equal(multiReview.content.holderNameEvidenceId, extraCitation);
-    await changeDraft(client, actor, multi.id, 2, "accept", undefined, "new");
+    const multiAccepted = await changeDraft(client, actor, multi.id, 2, "accept", undefined, "new");
+    // A researcher cannot use one accepted draft to replace a different object.
+    await client.query("reset role");
+    await client.query("update publication.published_record set draft_id=null where item_id=$1", [
+      accepted.item_id,
+    ]);
+    await client.query("set local role capture_writer");
+    await fails(
+      () =>
+        client.query("update publication.published_record set draft_id=$1 where item_id=$2", [
+          draft.id,
+          multiAccepted.item_id,
+        ]),
+      /row-level security/,
+    );
+    await client.query("reset role");
+    await client.query("update publication.published_record set draft_id=$1 where item_id=$2", [
+      draft.id,
+      accepted.item_id,
+    ]);
+    await client.query("set local role capture_writer");
     // Different source wording must create its own evidence, not show a reused citation.
     const renamedContent = {
       ...multiContent,
@@ -320,36 +359,15 @@ async function verify() {
     };
     const sparse = await createDraft(client, actor, randomUUID(), sparseContent);
     await changeDraft(client, actor, sparse.id, 1, "review", sparseContent);
-    const sparseAccepted = await changeDraft(
-      client,
-      actor,
-      sparse.id,
-      2,
-      "accept",
-      undefined,
-      "new",
+    await fails(
+      () => changeDraft(client, actor, sparse.id, 2, "accept", undefined, "new"),
+      /missing public wording and evidence/,
     );
-    const sparseClaims = (
-      await client.query("select predicate from knowledge.claim where subject_id=$1", [
-        sparseAccepted.item_id,
-      ])
-    ).rows;
-    assert.deepEqual(
-      sparseClaims.map((c) => c.predicate),
-      ["classified_as"],
-    );
-    await client.query("reset role");
-    await client.query("set local role collection_publisher");
     assert.equal(
-      (
-        await client.query("select * from capture.publication_candidate where draft_id=$1", [
-          sparse.id,
-        ])
-      ).rowCount,
-      0,
+      (await client.query("select status from capture.draft where id=$1", [sparse.id])).rows[0]
+        .status,
+      "review",
     );
-    await client.query("reset role");
-    await client.query("set local role capture_writer");
 
     const duplicate = await createDraft(client, actor, randomUUID(), content);
     await changeDraft(client, actor, duplicate.id, 1, "review", content);
@@ -367,6 +385,53 @@ async function verify() {
       accepted.item_id,
     );
     assert.equal(linked.item_id, accepted.item_id);
+    await client.query("reset role");
+    await client.query("set local role collection_publisher");
+    assert.equal(
+      (
+        await client.query(
+          "update publication.published_record set visible=false where item_id=$1 and visible returning item_id",
+          [accepted.item_id],
+        )
+      ).rowCount,
+      1,
+    );
+    await client.query(
+      "insert into publication.record_action(item_id,action,actor,reason) values($1,'hide','Test publisher','Correction')",
+      [accepted.item_id],
+    );
+    assert.equal(
+      (
+        await client.query(
+          "select count(*) from publication.published_record where item_id=$1 and visible",
+          [accepted.item_id],
+        )
+      ).rows[0].count,
+      "0",
+    );
+    assert.equal(
+      (
+        await client.query(
+          "delete from publication.published_record where item_id=$1 and not visible returning item_id",
+          [accepted.item_id],
+        )
+      ).rowCount,
+      1,
+    );
+    await client.query(
+      "insert into publication.record_action(item_id,action,actor,reason) values($1,'clear','Test publisher','Ready for a corrected draft')",
+      [accepted.item_id],
+    );
+    assert.equal(
+      (
+        await client.query("select count(*) from publication.record_action where item_id=$1", [
+          accepted.item_id,
+        ])
+      ).rows[0].count,
+      "2",
+    );
+    await client.query("reset role");
+    await client.query("set local role capture_writer");
     for (const action of ["defer", "reject", "delete"]) {
       const d = await createDraft(client, actor, randomUUID(), content);
       const before = (await client.query("select count(*) from knowledge.claim")).rows[0].count;

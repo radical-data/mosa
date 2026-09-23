@@ -3,7 +3,8 @@
 Discovery and preparation happen in an ordinary local research session. A person,
 Codex or another agent prepares a folder containing preserved sources and a
 manifest. The research website imports that folder's packed bundle as private
-drafts. Human review, identity confirmation and acceptance remain separate.
+drafts. Human review and identity confirmation precede Publish, which accepts
+the reviewed revision and puts its public projection on the website.
 
 No model API key, search API key, background process or scheduler is needed for
 these commands. An agent's own model and search services still have their usual
@@ -163,8 +164,8 @@ inside the folder; external paths and symlinks to outside files are rejected.
 3. For dossiers, compare the saved source with each claim on the dossier review
    page. Correct wording and locators inline, or uncheck unsupported claims.
    The advanced editor handles structural changes. Confirm identity and use
-   **Accept and next** to move through the batch.
-4. Older candidates use [the existing review form](#review-and-accept-a-record).
+   **Publish and next** to move through the batch.
+4. Older candidates use [the existing review form](#review-and-publish-a-record).
 
 The import records the signed-in owner separately from the preparer named in the
 bundle. Preparation details are supplied assertions, not verified authorship.
@@ -175,7 +176,7 @@ If an upload is interrupted, submit the same file again. Sources are reserved
 before storage, checked after upload, and made ready with all drafts in one database
 transaction. Concurrent retries return the same drafts and preserve human edits.
 The same bundle ID with changed content is rejected. Uploading creates neither
-accepted records nor publication decisions.
+published records nor publication decisions.
 
 ## Research instructions for agents
 
@@ -190,14 +191,14 @@ accepted records nor publication decisions.
   silently replacing them with ontology labels or modern museum names.
 - Do not turn an aggregate row, a type-only match or several possible museum
   records into a single asserted object identity.
-- Submit proposals for human review. Do not give a research agent acceptance or
+- Submit proposals for human review. Do not give a research agent Publish or
   publication credentials, and do not contact institutions without authorisation.
 
-## Review and accept a record
+## Review and publish a record
 
 Manual drafts and older single-claim bundle candidates use this form. Complete
 dossiers use the source-and-claim review page above. Both remain private until
-human acceptance and require identity confirmation.
+the human Publish action and require identity confirmation.
 
 1. Copy a name, object type or description using its actual predicate. Retain the
    original wording. Choose field evidence, an exact quotation or a whole-record
@@ -216,33 +217,34 @@ human acceptance and require identity confirmation.
    matches and source-linked candidates. Confirm an existing item, create a
    distinct item when permitted, or defer identity. A shared source URL alone
    does not establish identity. Unresolved work can remain a draft.
-5. Confirm permission for the selected wording to enter the research reader and
-   accept the reviewed revision. The shared validator/importer writes canonical
-   records transactionally; the accepted dossier opens in the explorer.
+5. Confirm that the selected wording and citations may appear publicly, then
+   Publish the reviewed revision. The shared validator/importer writes canonical
+   research and the public projection transactionally. The public object page
+   is available without a release or website build.
 
-Editing a manual draft invalidates its review. A stale tab cannot accept a changed
+Editing a manual draft invalidates its review. A stale tab cannot publish a changed
 revision in either flow. Retry
-returns the original acceptance. Rejection, deferral and removal do not write
+returns the original result. Rejection, deferral and removal do not write
 canonical claims; removal hides the draft while retaining private revision history.
-Acceptance covers the bounded proposal, not a general multi-claim review queue.
+Publish covers the bounded proposal, not a general multi-claim review queue.
 
 Private draft labels, notes and interpretations do not silently enter canonical
-claims or the public snapshot. Accepted wording and evidence use the existing
+claims or the public projection. Published wording and evidence use the existing
 reader visibility; private files stay private. Do not confuse the unauthenticated
 reader surface with the owner-private preparation workspace.
 
 ## Publication and corrections
 
-Research acceptance does not authorise publication. Older public cards require an
-evidenced name, holder, catalogue identifier and identified speakers. Complete
-dossiers can be published with an evidenced name, classification, description or
-identifier, even when other fields remain unknown. See the [publication runbook](collection-publication.md)
-for accepted-draft preparation, approval, individual withdrawal and recovery.
+Publish is the explicit public decision. Older cards require an evidenced name,
+holder, catalogue identifier and identified speakers. Incomplete older drafts
+stay private; a complete dossier can be published with an evidenced name,
+classification, description or identifier while other fields remain unknown.
+See the [publication runbook](collection-publication.md) for withdrawal.
 
-Accepted drafts are immutable. Changing a packet and reimporting bound keys does
-not correct accepted claims. Correction/supersession needs the explicit future
-operation in [the roadmap](roadmap.md#open-delivery-work), not handcrafted SQL or
-an interface that falsely reports an update.
+Published drafts are immutable. A new reviewed draft for the same object can
+replace its public projection, but it does not erase earlier canonical claims.
+Canonical correction/supersession remains a distinct operation in
+[the roadmap](roadmap.md#open-delivery-work); do not rewrite bound packet keys.
 
 ## Verification and known limitations
 

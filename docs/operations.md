@@ -8,11 +8,12 @@ Store credentials and certificates in the relevant runtime or GitHub environment
 | Target | Build/runtime | Release path |
 | --- | --- | --- |
 | Research explorer | Root `Dockerfile`, port 4321; database/Auth/Storage runtime secrets | `CI`: static, database and image checks → production migrations → explorer deployment |
-| Public website | `apps/website/Dockerfile`, port 8080; no runtime database or secrets | Manual `Website` workflow on `main`, with private publication-ledger gate |
+| Public website | `apps/website/Dockerfile`, port 8080; reads the explorer's public feed without database credentials | Manual `Website` workflow on `main` for code changes only |
 
 Keep Coolify auto-deploy disabled. Migrations precede explorer deployment and
 remain compatible with old and new app versions. Website checks/builds do not
-need Supabase; the website **deployment job** does need publisher credentials.
+need Supabase credentials. The explorer's public collection feed must be healthy
+before the website code is deployed.
 
 ## Research configuration
 
@@ -127,22 +128,22 @@ Use a separate Coolify application, root build context,
 `/apps/website/Dockerfile` and internal port 8080. The configured canonical domain
 is `https://museumofstolenartefacts.org`. Use `/` for HTTP health checks. Redirect
 HTTP and `www` to the canonical HTTPS hostname, preserving paths and queries.
-The static container needs no database credentials or persistent volume.
+The Node container needs no database credentials or persistent volume. Collection
+pages fetch `https://research.museumofstolenartefacts.org/api/public-collection.json`.
 
 Configure GitHub `website-production`, restricted to `main`:
 
 | Setting | Kind | Purpose |
 | --- | --- | --- |
 | `COOLIFY_DEPLOY_WEBHOOK` | Secret | This website's production webhook |
-| `COOLIFY_API_TOKEN` | Secret | Coolify read and deploy permissions |
-| `COLLECTION_DATABASE_URL` | Secret | Dedicated publisher login |
-| `COLLECTION_DATABASE_SSL_CA` | Secret | Verified TLS to the ledger database |
+| `COOLIFY_API_TOKEN` | Secret | Coolify application read, update and deploy permissions |
 | `PRODUCTION_URL` | Environment variable | Canonical website URL; workflow reads `vars.PRODUCTION_URL` |
 
-Enable Coolify API access, disable automatic and preview deployments, and use
-commit pinning. The publisher connection belongs only to the deployment job,
-not the website build or container. Complete the configuration and release steps
-in [publication](collection-publication.md#configure-and-deploy).
+Enable Coolify API access, set branch `main`, and disable automatic and preview
+deployments. The Website workflow pins the current `main` SHA through the API
+and verifies the finished job and live collection feed. The dedicated publisher
+login is needed only for exceptional withdrawal, outside the website runtime.
+See [publication](collection-publication.md#deploy-website-code).
 
 ## Recovery
 
@@ -157,10 +158,12 @@ compatible follow-up. This explorer rollback procedure does not apply to the web
 
 ### Website failure or withdrawal
 
-Follow [publication recovery](collection-publication.md#recover-an-interrupted-deployment).
-Do not clear a pending deployment while an older hosting job can still finish.
-To revert website code, commit the revert while retaining the current authorised
-snapshot, then use the gate. A ledger withdrawal alone does not remove served pages.
+If the public feed is unavailable, collection pages return 503 without serving
+old content. Restore the explorer/database service and verify the feed before
+retrying the website. To revert website code, commit a compatible forward fix or
+revert and run the Website workflow; the published records stay in PostgreSQL.
+To remove a record, use [the hide command](collection-publication.md#withdraw-an-object)
+and verify the bilingual pages, snapshot endpoint and sitemap.
 
 ### Upload fails with HTTP 503
 
@@ -177,8 +180,8 @@ contents. Retry the same bundle after fixing configuration to preserve saved wor
 Rotate the affected login's password outside Git, update the corresponding
 Coolify runtime variable or GitHub publisher secret, and restart/redeploy the
 consumer. Reader verification uses authorised `/readyz` plus a normal page;
-writer verification uses a private draft; publisher verification uses
-`just collection status` without changing an approval. Inspect other consumers
+writer verification uses a private draft; publisher verification reads the
+public feed without changing any record. Inspect other consumers
 before rotating shared credentials.
 
 For outages, inspect container health, normal-page reachability, protected health

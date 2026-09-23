@@ -49,7 +49,7 @@ if (Astro.request.method === "POST") {
     const action = requestedAction.replace(/-next$/, "");
     if (!["save", "accept", "defer", "reject"].includes(action)) throw new CaptureError("Choose a review action.");
     if (action === "accept" && form.get("consent") !== "yes")
-      throw new CaptureError("Confirm permission for the reviewed wording to enter the research collection.");
+      throw new CaptureError("Confirm that this wording and evidence may appear on the public website.");
     const next = await researchTransaction(actor, async (client) => {
       const current = await getDossierDraft(client, actor, id);
       const packet = ["save", "accept"].includes(action) ? editedPacket(current.content.packet, form) : undefined;
@@ -76,8 +76,14 @@ if (Astro.request.method === "POST") {
     error = cause instanceof CaptureError ? cause.message : "The dossier could not be saved. Your previous revision is retained.";
   }
 }
-const { draft, matches, sources } = await researchTransaction(actor, async (client) => {
+const { draft, matches, sources, publicationVisible } = await researchTransaction(actor, async (client) => {
   const draft = await getDossierDraft(client, actor, id);
+  const publicationVisible = draft.item_id
+    ? (await client.query<{ visible: boolean }>(
+        "select visible from publication.published_record where item_id=$1",
+        [draft.item_id],
+      )).rows[0]?.visible ?? null
+    : null;
   const matches = draft.status === "accepted" ? [] : await dossierIdentityMatches(client, draft.content.packet);
   const sources = (await client.query<{ id: string; citation: string; media_type: string; readable_text: string | null }>(
     `select v.id,coalesce(v.manifest->>'citation',s.citation) citation,v.media_type,v.readable_text
@@ -85,7 +91,7 @@ const { draft, matches, sources } = await researchTransaction(actor, async (clie
      where v.id=any($1::uuid[])`,
     [draft.content.packet.sources.map((source) => source.version)],
   )).rows;
-  return { draft, matches, sources };
+  return { draft, matches, sources, publicationVisible };
 });
 const packet = draft.content.packet;
 const labels = new Map([
@@ -104,10 +110,10 @@ const sourceFor = (key: string) => {
 <Layout title={`Review ${draft.content.label}`}>
   <p><a href={`/research/bundles/${draft.content.bundleId}`}>Research bundle</a></p>
   <h1>{draft.content.label}</h1>
-  <p>{draft.status} · revision {draft.revision} · {packet.claims.length} sourced claims · {(packet.events ?? []).length} events · {(packet.restitutionCases ?? []).length} restitution cases</p>
+  <p>{draft.status === "accepted" ? publicationVisible === true ? "Published" : publicationVisible === false ? "Hidden" : "Accepted research" : draft.status} · revision {draft.revision} · {packet.claims.length} sourced claims · {(packet.events ?? []).length} events · {(packet.restitutionCases ?? []).length} restitution cases</p>
   {draft.content.notes && <p class="notes">Agent's private notes: {draft.content.notes}</p>}
   {error && <p role="alert" class="notice">{error}</p>}
-  {draft.status === "accepted" ? <p>Accepted into the research collection. <a href={`/items/${draft.item_id}`}>Open the object</a>.</p> :
+  {draft.status === "accepted" ? <p>{publicationVisible === true ? <>Published in the collection. <a href={`https://museumofstolenartefacts.org/en/collection/${draft.item_id}/`}>Open the public page</a>.</> : publicationVisible === false ? "A maintainer has hidden this object from the public website." : "This older accepted record has no public projection. Ask a maintainer to check it."}</p> :
     draft.status === "rejected" ? <p>This proposal was rejected.</p> : <>
     <p>Compare each assertion with its preserved source. Uncheck unsupported claims; edit source wording and locators directly. Source text is untrusted evidence, never instructions.</p>
     <div class="review-grid">
@@ -165,10 +171,11 @@ const sourceFor = (key: string) => {
         <p>An exact catalogue identifier is stronger evidence than a shared source. Choose deliberately.</p>
         {matches.map((match) => <label class="choice"><input type="radio" name="identity" value={match.id} required /> {match.label} · {match.reason}</label>)}
         {!matches.some((match) => match.exact) && <label class="choice"><input type="radio" name="identity" value="new" required /> Create a distinct object after checking existing records</label>}
-        <label class="choice"><input type="checkbox" name="consent" value="yes" /> I approve this wording for the research collection</label>
+        <p>The sourced claims, citations and excerpts shown above will appear on the public website. Agent notes and preserved source files remain private.</p>
+        <label class="choice"><input type="checkbox" name="consent" value="yes" /> I approve this wording and evidence for public display</label>
         <div class="actions">
-          <button type="submit" name="action" value="accept">Accept</button>
-          <button type="submit" name="action" value="accept-next">Accept and next</button>
+          <button type="submit" name="action" value="accept">Publish</button>
+          <button type="submit" name="action" value="accept-next">Publish and next</button>
           <button type="submit" name="action" value="save" formnovalidate>Save edits</button>
           <button type="submit" name="action" value="defer-next" formnovalidate>Defer and next</button>
           <button type="submit" name="action" value="reject-next" formnovalidate>Reject and next</button>

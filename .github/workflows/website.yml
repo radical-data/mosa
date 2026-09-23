@@ -6,11 +6,13 @@ on:
     paths:
       - 'apps/website/**'
       - 'packages/public-collection/**'
-      - 'scripts/publish-collection.ts'
+      - 'scripts/manage-public-collection.ts'
       - 'scripts/lib/publication/**'
       - 'scripts/verify-collection-website.ts'
       - 'scripts/lib/verification-workspace.ts'
       - 'scripts/lib/run-command.ts'
+      - 'scripts/deploy-website.ts'
+      - 'scripts/lib/website-deploy*'
       - 'apps/explorer/package.json'
       - 'biome.jsonc'
       - 'package.json'
@@ -24,11 +26,13 @@ on:
     paths:
       - 'apps/website/**'
       - 'packages/public-collection/**'
-      - 'scripts/publish-collection.ts'
+      - 'scripts/manage-public-collection.ts'
       - 'scripts/lib/publication/**'
       - 'scripts/verify-collection-website.ts'
       - 'scripts/lib/verification-workspace.ts'
       - 'scripts/lib/run-command.ts'
+      - 'scripts/deploy-website.ts'
+      - 'scripts/lib/website-deploy*'
       - 'apps/explorer/package.json'
       - 'biome.jsonc'
       - 'package.json'
@@ -70,13 +74,16 @@ jobs:
         run: mise x -- just website-check
       - name: Test localisation
         run: mise x -- pnpm --filter @mosa/website test
-      - name: Verify populated and withdrawn collection output
+      - name: Verify live collection changes without a rebuild
         run: mise x -- just collection-website-verify
       - name: Build production image
         run: mise x -- just website-image
       - name: Check permanent redirects and error responses
         run: |
-          docker run --rm -d --name mosa-website-check -p 127.0.0.1:8080:8080 mosa-website:local
+          docker run --rm -d --name mosa-website-check -p 127.0.0.1:8080:8080 \
+            -e NODE_ENV=test \
+            -e 'PUBLIC_COLLECTION_URL=data:application/json,{"schemaVersion":2,"releaseId":"11111111-1111-4111-8111-111111111111","records":[]}' \
+            mosa-website:local
           trap 'docker stop mosa-website-check' EXIT
           for attempt in $(seq 1 20); do
             if curl --fail --silent http://127.0.0.1:8080/es/ >/dev/null; then break; fi
@@ -100,11 +107,13 @@ jobs:
           cache: true
       - name: Install dependencies
         run: mise x -- just install
-      - name: Deploy the currently authorised collection and verify served snapshot
+      - name: Require the current main commit
+        run: |
+          git fetch origin refs/heads/main --depth=1
+          test "$(git rev-parse FETCH_HEAD)" = "$GITHUB_SHA"
+      - name: Deploy website code and verify its live collection feed
         env:
-          COLLECTION_DATABASE_URL: ${{ secrets.COLLECTION_DATABASE_URL }}
-          COLLECTION_DATABASE_SSL_CA: ${{ secrets.COLLECTION_DATABASE_SSL_CA }}
           COOLIFY_DEPLOY_WEBHOOK: ${{ secrets.COOLIFY_DEPLOY_WEBHOOK }}
           COOLIFY_API_TOKEN: ${{ secrets.COOLIFY_API_TOKEN }}
           PRODUCTION_URL: ${{ vars.PRODUCTION_URL }}
-        run: mise x -- just collection deploy --snapshot apps/website/public/collection-snapshot.json
+        run: mise x -- just website-deploy

@@ -4,6 +4,7 @@ import type { ClientBase } from "pg";
 import { getSource, getVersion } from "../sources/store.js";
 import { requireCatalogue } from "./catalogues.js";
 import { CaptureError, type Content, normaliseContent, packetFor, uuid } from "./model.js";
+import { publishAcceptedDraft } from "./publish.js";
 
 export async function resolvePreservedSource(
   client: ClientBase,
@@ -345,5 +346,6 @@ export async function changeDraft(
     )
   ).rows[0];
   await recordRevision(client, updated);
+  if (action === "accept" && item) await publishAcceptedDraft(client, id, item);
   return updated;
 }

@@ -5,16 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && node --import tsx scripts/verify-output.ts",
+    "build": "astro check && astro build",
     "check": "astro check",
     "preview": "astro preview",
     "validate:localisation": "node --import tsx scripts/validate-localisation.ts",
     "test": "vitest run --root ../.. apps/website/src",
-    "test:output": "node --import tsx scripts/verify-output.ts",
     "test:http": "node --import tsx scripts/verify-http.ts"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/node": "^11.0.2",
     "astro": "7.0.9",
     "@mosa/public-collection": "workspace:*"
   },

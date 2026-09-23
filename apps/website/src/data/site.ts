@@ -1,5 +1,4 @@
-import { type PublicCollection, parseCollection } from "@mosa/public-collection";
-import snapshot from "../../public/collection-snapshot.json";
+import type { PublicCollection } from "@mosa/public-collection";
 import labels from "../content/pages/reference-labels.json";
 import resources from "../content/pages/resource-summaries.json";
 import type { Locale } from "../i18n/routes";
@@ -24,8 +23,6 @@ export const getConcepts = (locale: Locale) =>
   }));
 export const getTypes = (locale: Locale) =>
   typeIds.map((id) => ({ id, label: labels[locale][id] }));
-// All collection facts come from the strictly validated public export.
-export const publicCollection = parseCollection(snapshot);
 export function collectionRecords(data: PublicCollection) {
   return data.records.map((record) =>
     "kind" in record
@@ -56,8 +53,8 @@ export function collectionRecords(data: PublicCollection) {
         },
   );
 }
-export function getCollection(_locale: Locale) {
-  return collectionRecords(publicCollection);
+export function getCollection(_locale: Locale, data: PublicCollection) {
+  return collectionRecords(data);
 }
 const resourceIds = ["guide", "letter", "directory", "generator"] as const;
 export function getResources(locale: Locale) {

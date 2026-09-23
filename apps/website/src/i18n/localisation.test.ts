@@ -1,3 +1,4 @@
+import type { PublicCollection } from "@mosa/public-collection";
 import { describe, expect, it } from "vitest";
 import { getCollection } from "../data/site";
 import { formatEventInstant, formatHistoricalDate, formatNumber } from "./format";
@@ -38,7 +39,22 @@ describe("localised routes and collection state", () => {
     expect(anchors.resources).toContain("guide");
   });
   it("uses the same authorised records in both languages", () => {
-    expect(getCollection("es")).toEqual(getCollection("en"));
+    const collection: PublicCollection = {
+      schemaVersion: 2,
+      releaseId: "11111111-1111-4111-8111-111111111111",
+      records: [
+        {
+          kind: "dossier",
+          id: "22222222-2222-4222-8222-222222222222",
+          label: "Source name",
+          identifiers: [],
+          claims: [],
+          events: [],
+          cases: [],
+        },
+      ],
+    };
+    expect(getCollection("es", collection)).toEqual(getCollection("en", collection));
   });
   it("keeps original-name diacritics meaningful", () => {
     expect(matchesSearch("berlin", "Berlín", "Berlín")).toBe(true);

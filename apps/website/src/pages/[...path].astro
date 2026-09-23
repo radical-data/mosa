@@ -1,4 +1,5 @@
 ---
+import { liveCollection } from "../data/live-collection";
 import { type Locale, localeIds, type PageId, pageIds, pagePath } from "../i18n/routes";
 import About from "../templates/about.astro";
 import Collection from "../templates/collection.astro";
@@ -7,15 +8,19 @@ import Events from "../templates/events.astro";
 import Home from "../templates/home.astro";
 import Resources from "../templates/resources.astro";
 import Visit from "../templates/visit.astro";
-export function getStaticPaths() {
-  return pageIds.flatMap((page) => localeIds.map((locale) => ({
-    params: { path: pagePath(page, locale).replace(/^\/|\/$/g, "") },
-    props: { locale, page },
-  })));
-}
-interface Props { locale: Locale; page: PageId; }
-const { locale, page } = Astro.props;
-const templates = { home: Home, about: About, collection: Collection, visit: Visit, events: Events, resources: Resources, contact: Contact };
-const Template = templates[page];
+import NotFound from "./404.astro";
+
+const match = pageIds.flatMap((page) => localeIds.map((locale) => ({
+  locale, page, path: pagePath(page, locale),
+}))).find((entry) => entry.path === Astro.url.pathname);
+if (!match) Astro.response.status = 404;
+const locale: Locale = match?.locale ?? "es";
+const page: PageId = match?.page ?? "home";
+const publicCollection = match && (page === "collection" || page === "visit")
+  ? await liveCollection().catch(() => null) : null;
+if (match && (page === "collection" || page === "visit") && !publicCollection)
+  Astro.response.status = 503;
+const staticTemplates = { home: Home, about: About, events: Events, resources: Resources, contact: Contact };
+const StaticTemplate = staticTemplates[page as keyof typeof staticTemplates] ?? Home;
 ---
-<Template locale={locale} />
+{!match ? <NotFound /> : page === "collection" ? <Collection locale={locale} publicCollection={publicCollection} /> : page === "visit" ? <Visit locale={locale} publicCollection={publicCollection} /> : <StaticTemplate locale={locale} />}

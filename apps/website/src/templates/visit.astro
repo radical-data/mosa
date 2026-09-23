@@ -1,21 +1,22 @@
 ---
+import type { PublicCollection } from "@mosa/public-collection";
 import PageIntro from "../components/PageIntro.astro";
 import PageLink from "../components/PageLink.astro";
 import { getCopy } from "../content/content";
-import { getCollection, publicCollection } from "../data/site";
+import { getCollection } from "../data/site";
 import { messages } from "../i18n/catalogues";
 import type { Locale } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
-interface Props { locale: Locale; }
-const { locale } = Astro.props;
+interface Props { locale: Locale; publicCollection: PublicCollection | null; }
+const { locale, publicCollection } = Astro.props;
 const copy = getCopy("visit", locale);
-const collection = getCollection(locale);
+const collection = publicCollection ? getCollection(locale, publicCollection) : [];
 const t = messages(locale);
 ---
 <Layout locale={locale} page="visit" title={copy.title} description={copy.description}>
   <PageIntro title={copy.passage03} image="rongorongo"><p><Fragment set:html={copy.passage04} /></p></PageIntro>
   <section class="container section editorial"><h2 class="eyebrow"><Fragment set:html={copy.passage05} /></h2><div><p class="statement"><Fragment set:html={copy.passage06} /></p><div class="distribution"><div class="origin"><span class="small">{copy.passage11}</span><strong>{copy.passage12}</strong></div><div class="destinations"><span>{copy.passage13}</span><span>{copy.passage14}</span><span>{copy.passage15}</span></div></div><p class="small muted"><Fragment set:html={copy.passage07} /></p></div></section>
-  <section class="container section editorial"><h2 class="eyebrow"><Fragment set:html={copy.passage08} /></h2><div class="institution-list" data-release-id={publicCollection.releaseId}>{collection.map((item) => "kind" in item ? <article><div><h3>{item.label}</h3></div><p>{item.claims.find((claim) => claim.predicate === "held_by" && claim.subject.kind === "item")?.value.text ?? "—"}</p></article> : <article><div><h3>{item.institution}</h3><p>{t.accordingTo} {item.holder.attributedTo}</p></div><p lang={item.name.language ?? undefined}>{item.name.text}</p></article>)}</div>{collection.length === 0 && <p>{t.collectionPending}</p>}</section>
+  <section class="container section editorial"><h2 class="eyebrow"><Fragment set:html={copy.passage08} /></h2><div class="institution-list" data-release-id={publicCollection?.releaseId}>{collection.map((item) => "kind" in item ? <article><div><h3>{item.label}</h3></div><p>{item.claims.find((claim) => claim.predicate === "held_by" && claim.subject.kind === "item")?.value.text ?? "—"}</p></article> : <article><div><h3>{item.institution}</h3><p>{t.accordingTo} {item.holder.attributedTo}</p></div><p lang={item.name.language ?? undefined}>{item.name.text}</p></article>)}</div>{!publicCollection ? <p role="alert">{locale === "es" ? "La colección pública no está disponible por el momento." : "The public collection is temporarily unavailable."}</p> : collection.length === 0 && <p>{t.collectionPending}</p>}</section>
   <section class="container section connect-strip"><div><h2><Fragment set:html={copy.passage09} /></h2><p><Fragment set:html={copy.passage10} /></p></div><PageLink class="button" page="events" locale={locale}>{copy.passage16}<span aria-hidden="true">↗</span></PageLink></section>
 </Layout>

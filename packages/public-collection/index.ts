@@ -1,4 +1,6 @@
 // This is the complete public boundary. Reject unknown keys at every level.
+export const productionFeed =
+  "https://research.museumofstolenartefacts.org/api/public-collection.json";
 export interface Statement {
   text: string;
   language: string | null;

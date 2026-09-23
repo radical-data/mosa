@@ -1,35 +1,34 @@
 ---
 import type { PublicClaim, PublicDossier } from "@mosa/public-collection";
-import { publicCollection } from "../../../data/site";
+import { liveCollection } from "../../../data/live-collection";
 import { predicateLabel } from "../../../i18n/predicates";
-import { type Locale, localeIds, pagePath } from "../../../i18n/routes";
+import { type Locale, pagePath } from "../../../i18n/routes";
 import Layout from "../../../layouts/Layout.astro";
 
 const copy = {
   en: { back: "Collection", details: "Source accounts", provenance: "Provenance", restitution: "Restitution", related: "Related names and places", identifiers: "Catalogue identifiers", source: "Source", according: "Attributed to", unknown: "Attribution not recorded", excerpt: "Source wording", noLocation: "Location not recorded" },
   es: { back: "Colección", details: "Relatos de las fuentes", provenance: "Procedencia", restitution: "Restitución", related: "Nombres y lugares relacionados", identifiers: "Identificadores de catálogo", source: "Fuente", according: "Atribuido a", unknown: "No se registra la atribución", excerpt: "Texto de la fuente", noLocation: "No se registra la ubicación" },
 } as const;
-export function getStaticPaths() {
-  return publicCollection.records.flatMap((record) => "kind" in record && record.kind === "dossier"
-    ? localeIds.map((locale) => ({
-        params: { lang: locale, collection: locale === "en" ? "collection" : "coleccion", id: record.id },
-        props: { locale, record },
-      })) : []);
-}
-interface Props { locale: Locale; record: PublicDossier }
-const { locale, record } = Astro.props;
+const locale: Locale = Astro.params.lang === "en" ? "en" : "es";
+const validRoute = (Astro.params.lang === "en" && Astro.params.collection === "collection") ||
+  (Astro.params.lang === "es" && Astro.params.collection === "coleccion");
+const publicCollection = validRoute ? await liveCollection().catch(() => null) : null;
+const record = publicCollection?.records.find((entry): entry is PublicDossier =>
+  "kind" in entry && entry.kind === "dossier" && entry.id === Astro.params.id);
+if (!record) Astro.response.status = validRoute && !publicCollection ? 503 : 404;
 const t = copy[locale];
-const itemClaims = record.claims.filter((claim) => claim.subject.kind === "item");
-const eventClaims = record.claims.filter((claim) => claim.subject.kind === "event");
-const relatedClaims = record.claims.filter((claim) => !["item", "event"].includes(claim.subject.kind));
+const itemClaims = record?.claims.filter((claim) => claim.subject.kind === "item") ?? [];
+const eventClaims = record?.claims.filter((claim) => claim.subject.kind === "event") ?? [];
+const relatedClaims = record?.claims.filter((claim) => !["item", "event"].includes(claim.subject.kind)) ?? [];
 const claimSections = [
   { title: t.details, claims: itemClaims },
   { title: t.provenance, claims: eventClaims },
   { title: t.related, claims: relatedClaims },
 ];
 ---
-<Layout locale={locale} page="collection" collectionItemId={record.id} title={`${record.label} — MoSA`} description={record.label}>
-  <div class="container section dossier" data-record-id={record.id} data-release-id={publicCollection.releaseId}>
+<Layout locale={locale} page={record ? "collection" : undefined} collectionItemId={record?.id} title={`${record?.label ?? "Collection"} — MoSA`} description={record?.label ?? "Collection"}>
+  {!record ? <section class="container section"><h1>{publicCollection ? (locale === "es" ? "No se encontró el objeto" : "Object not found") : (locale === "es" ? "La colección no está disponible por el momento" : "Collection temporarily unavailable")}</h1></section> :
+  <div class="container section dossier" data-record-id={record.id} data-release-id={publicCollection?.releaseId}>
     <p><a href={pagePath("collection", locale)}>← {t.back}</a></p>
     <h1>{record.label}</h1>
     {record.identifiers.length > 0 && <section><h2>{t.identifiers}</h2><ul>{record.identifiers.map((entry) => <li>{entry.namespace}: {entry.value} · {entry.url ? <a href={entry.url} rel="noreferrer">{entry.citation}</a> : entry.citation}</li>)}</ul></section>}
@@ -51,7 +50,7 @@ const claimSections = [
       <ul>{caseRecord.actions.map((action) => <li>{action.date && `${action.date} · `}{action.kind}: {action.description}</li>)}</ul>
       {caseRecord.documents.length > 0 && <ul>{caseRecord.documents.map((document) => <li>{t.source}: {document.url ? <a href={document.url} rel="noreferrer">{document.citation}</a> : document.citation} · {document.role}</li>)}</ul>}
     </article>)}</section>}
-  </div>
+  </div>}
 </Layout>
 <style>
   .dossier { max-width:72rem; }
