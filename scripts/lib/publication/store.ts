@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto";
 import { type PublicCollection, parseCollection } from "@mosa/public-collection";
 import type { Client } from "pg";
 import { candidate, canonical, digest, parseSelection, type Selection } from "./candidate";
+import { type DossierSelection, dossierCandidate, isDossierSelection } from "./dossier";
 
 export const initialRelease = "00000000-0000-4000-8000-000000000000";
 export async function locked<T>(client: Client, action: () => Promise<T>): Promise<T> {
@@ -27,14 +28,22 @@ export async function transaction<T>(client: Client, action: () => Promise<T>): 
 }
 // Existing single-record releases keep their original fingerprints.
 async function selectedCandidate(client: Client, selection: unknown, id: string) {
-  if (!Array.isArray(selection)) return candidate(client, parseSelection(selection), id);
-  if (selection.length < 1 || selection.length > 2) throw Error("Select one or two records");
+  if (!Array.isArray(selection))
+    return isDossierSelection(selection)
+      ? dossierCandidate(client, selection, id)
+      : candidate(client, parseSelection(selection), id);
+  if (selection.length < 1 || selection.length > 1000)
+    throw Error("Select between one and 1,000 records");
   const records = await Promise.all(
-    selection.map((value) => candidate(client, parseSelection(value), id)),
+    selection.map((value) =>
+      isDossierSelection(value)
+        ? dossierCandidate(client, value, id)
+        : candidate(client, parseSelection(value), id),
+    ),
   );
   return {
     snapshot: parseCollection({
-      schemaVersion: 1,
+      schemaVersion: selection.some(isDossierSelection) || selection.length > 2 ? 2 : 1,
       releaseId: id,
       records: records.flatMap((result) => result.snapshot.records),
     }),
@@ -100,10 +109,13 @@ export async function recover(client: Client, id: string, actor: string, reason:
 }
 export async function prepare(client: Client, selection: unknown) {
   const selected = Array.isArray(selection)
-    ? selection.map(parseSelection)
-    : parseSelection(selection);
+    ? selection.map((value) => (isDossierSelection(value) ? value : parseSelection(value)))
+    : isDossierSelection(selection)
+      ? selection
+      : parseSelection(selection);
   // Every new decision reviews catalogue labels, including retained legacy cards.
   for (const entry of Array.isArray(selected) ? selected : [selected]) {
+    if (isDossierSelection(entry)) continue;
     if (entry.catalogue === undefined) {
       const identifier = await client.query(
         "select namespace from entities.external_identifier where id=$1 and entity_id=$2",
@@ -144,7 +156,7 @@ export async function withdraw(
   itemId?: string,
 ) {
   await requireIdle(client);
-  let remainder: Selection[] = [];
+  let remainder: (Selection | DossierSelection)[] = [];
   if (itemId) {
     await validateRelease(client, id);
     const row = (
@@ -154,9 +166,9 @@ export async function withdraw(
       )
     ).rows[0];
     if (!row?.selection) throw Error("Unknown approved selection");
-    const selections: Selection[] = (
+    const selections: (Selection | DossierSelection)[] = (
       Array.isArray(row.selection) ? row.selection : [row.selection]
-    ).map(parseSelection);
+    ).map((value: unknown) => (isDossierSelection(value) ? value : parseSelection(value)));
     if (!selections.some((s) => s.itemId === itemId)) throw Error("Item is not in this release");
     remainder = selections.filter((s) => s.itemId !== itemId);
   }

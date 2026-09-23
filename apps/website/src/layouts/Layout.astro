@@ -2,12 +2,15 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { messages } from "../i18n/catalogues";
-import { absolutePageURL, type Locale, localeIds, locales, type PageId } from "../i18n/routes";
+import { absolutePageURL, type Locale, localeIds, locales, type PageId, pagePath, siteURL } from "../i18n/routes";
 import "../styles/global.css";
 
-interface Props { title: string; description: string; locale: Locale; page?: PageId; }
-const { title, description, locale, page } = Astro.props;
-const canonicalURL = page ? absolutePageURL(page, locale) : undefined;
+interface Props { title: string; description: string; locale: Locale; page?: PageId; collectionItemId?: string; }
+const { title, description, locale, page, collectionItemId } = Astro.props;
+const pageURL = (id: Locale) => collectionItemId
+  ? new URL(`${pagePath("collection", id)}${collectionItemId}/`, siteURL).href
+  : page ? absolutePageURL(page, id) : undefined;
+const canonicalURL = pageURL(locale);
 ---
 <!doctype html>
 <html lang={locales[locale].language}>
@@ -23,8 +26,8 @@ const canonicalURL = page ? absolutePageURL(page, locale) : undefined;
     {canonicalURL && <meta property="og:url" content={canonicalURL} />}
     {canonicalURL && <link rel="canonical" href={canonicalURL} />}
     {page && <>
-      {localeIds.map((id) => <link rel="alternate" hreflang={locales[id].hreflang} href={absolutePageURL(page, id)} />)}
-      <link rel="alternate" hreflang="x-default" href={absolutePageURL(page, "es")} />
+      {localeIds.map((id) => <link rel="alternate" hreflang={locales[id].hreflang} href={pageURL(id)} />)}
+      <link rel="alternate" hreflang="x-default" href={pageURL("es")} />
       <link rel="sitemap" href="/sitemap-index.xml" />
     </>}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

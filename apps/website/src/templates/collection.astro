@@ -4,7 +4,7 @@ import { getCopy } from "../content/content";
 import { getCollection, publicCollection } from "../data/site";
 import { messages } from "../i18n/catalogues";
 import { referenceCount } from "../i18n/messages";
-import type { Locale } from "../i18n/routes";
+import { type Locale, pagePath } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
 interface Props { locale: Locale; }
@@ -24,14 +24,21 @@ const t = messages(locale);
     {collection.length === 0 && <p>{t.collectionPending}</p>}
     <div class="collection-grid public-collection" id="collection-results">{collection.map((item) => <article class="collection-card" data-record-id={item.id} data-search-exact={item.searchExact} data-search-foldable={item.searchFoldable}>
       <div class="collection-caption">
-        <h2 lang={item.name.language ?? undefined}>{item.name.text}</h2>
-        <p>{t.accordingTo} {item.name.attributedTo}</p>
-        <p>{t.reportedHolder} <span lang={item.holder.language ?? undefined}>{item.holder.text}</span></p>
-        <p>{t.accordingTo} {item.holder.attributedTo}</p>
-        <p>{t.catalogueNumber} {item.identifier.value} <span>({item.identifier.label ?? item.identifier.namespace})</span></p>
-        <p>{t.nameSources} {item.name.sources.map((source, index) => <a href={source} rel="noreferrer">{t.source} {index + 1}</a>)}</p>
-        <p>{t.holderSources} {item.holder.sources.map((source, index) => <a href={source} rel="noreferrer">{t.source} {index + 1}</a>)}</p>
-        <p><a href={item.identifier.source} rel="noreferrer">{t.identifierSource}</a></p>
+        {"kind" in item ? <>
+          <h2><a href={`${pagePath("collection", locale)}${item.id}/`}>{item.label}</a></h2>
+          {item.claims.find((claim) => claim.predicate === "held_by" && claim.subject.kind === "item") &&
+            <p>{t.reportedHolder} {item.claims.find((claim) => claim.predicate === "held_by" && claim.subject.kind === "item")?.value.text}</p>}
+          {item.identifiers.map((identifier) => <p>{t.catalogueNumber} {identifier.value} ({identifier.namespace})</p>)}
+        </> : <>
+          <h2 lang={item.name.language ?? undefined}>{item.name.text}</h2>
+          <p>{t.accordingTo} {item.name.attributedTo}</p>
+          <p>{t.reportedHolder} <span lang={item.holder.language ?? undefined}>{item.holder.text}</span></p>
+          <p>{t.accordingTo} {item.holder.attributedTo}</p>
+          <p>{t.catalogueNumber} {item.identifier.value} <span>({item.identifier.label ?? item.identifier.namespace})</span></p>
+          <p>{t.nameSources} {item.name.sources.map((source, index) => <a href={source} rel="noreferrer">{t.source} {index + 1}</a>)}</p>
+          <p>{t.holderSources} {item.holder.sources.map((source, index) => <a href={source} rel="noreferrer">{t.source} {index + 1}</a>)}</p>
+          <p><a href={item.identifier.source} rel="noreferrer">{t.identifierSource}</a></p>
+        </>}
       </div>
     </article>)}</div>
     <div class="empty-state" hidden><h2><Fragment set:html={t.noMatches} /></h2><p><Fragment set:html={t.noMatchesHelp} /></p><button class="button" type="button" id="reset-filters">{t.clearFilters}</button></div>

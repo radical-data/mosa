@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import { randomUUID } from "node:crypto";
+import { importInTransaction } from "@mosa/object-dossier/import";
+import type { DossierPacket } from "@mosa/object-dossier/packet";
 import { Client } from "pg";
 import { candidate, type Selection } from "./lib/publication/candidate";
 import {
@@ -218,8 +220,124 @@ async function verify() {
           [h.claim, source],
         );
         await fails(() => candidate(client, selection, randomUUID()), /unqualified/);
+        const fullPacket: DossierPacket = {
+          schemaVersion: 4,
+          dataset: { key: `publication-dossier-${randomUUID()}`, version: "1" },
+          objects: [{ key: "item:one" }],
+          agents: [],
+          places: [],
+          events: [{ key: "event:one", kind: "relocation" }],
+          sources: [
+            {
+              key: "source:one",
+              kind: "institutional_record",
+              url: "https://example.org/full-dossier",
+              publicUrl: "https://example.org/full-dossier",
+              citation: "Synthetic source",
+              retrievedAt: "2026-09-23T00:00:00Z",
+              about: ["item:one"],
+            },
+          ],
+          claims: [
+            {
+              key: "claim:name",
+              subject: "item:one",
+              predicate: "has_name",
+              literal: { type: "text", value: "Full synthetic dossier" },
+              evidence: {
+                key: "evidence:name",
+                source: "source:one",
+                relationship: "supports",
+                locator: "Name",
+                excerpt: "Full synthetic dossier",
+              },
+            },
+            {
+              key: "claim:material",
+              subject: "item:one",
+              predicate: "made_of",
+              literal: { type: "text", value: "wood" },
+              evidence: {
+                key: "evidence:material",
+                source: "source:one",
+                relationship: "supports",
+                locator: "Material",
+                excerpt: "wood",
+              },
+            },
+            {
+              key: "claim:moved",
+              subject: "event:one",
+              predicate: "moved_item",
+              object: "item:one",
+              evidence: {
+                key: "evidence:moved",
+                source: "source:one",
+                relationship: "mentions",
+                locator: "History",
+                excerpt: "moved",
+              },
+            },
+          ],
+          restitutionCases: [
+            {
+              key: "case:one",
+              reference: `synthetic-${randomUUID()}`,
+              title: "Synthetic return enquiry",
+              status: "open",
+              items: ["item:one"],
+              parties: [],
+              documents: [{ key: "document:one", source: "source:one", role: "correspondence" }],
+              actions: [],
+            },
+          ],
+        };
+        await importInTransaction(client, fullPacket);
+        const fullItem = (
+          await client.query<{ entity_id: string }>(
+            `select b.entity_id from ingestion.entity_binding b join ingestion.dataset d on d.id=b.dataset_id
+           where d.key=$1 and b.local_key='item:one'`,
+            [fullPacket.dataset.key],
+          )
+        ).rows[0].entity_id;
+        const researcher = randomUUID();
+        const draftId = randomUUID();
+        await client.query("insert into capture.researcher(user_id) values($1)", [researcher]);
+        await client.query(
+          `insert into capture.draft(id,owner_id,request_id,status,content,item_id)
+           values($1,$2,$3,'accepted',$4,$5)`,
+          [draftId, researcher, randomUUID(), { kind: "dossier", packet: fullPacket }, fullItem],
+        );
+        await client.query("set local role collection_publisher");
+        const fullRelease = await prepare(client, [
+          anotherSelection,
+          { draftId, itemId: fullItem },
+        ]);
+        assert.equal(fullRelease.schemaVersion, 2);
+        assert.equal(fullRelease.records.length, 2);
+        assert("kind" in fullRelease.records[1]);
+        assert.equal(fullRelease.records[1].claims.length, 3);
+        assert.equal(fullRelease.records[1].cases.length, 1);
+        await approve(
+          client,
+          fullRelease.releaseId,
+          "Test reviewer",
+          "Synthetic dossier publication",
+        );
+        assert.deepEqual(await currentRelease(client), fullRelease);
+        const afterDossierWithdrawal = await withdraw(
+          client,
+          fullRelease.releaseId,
+          "Test reviewer",
+          "Remove synthetic dossier",
+          fullItem,
+        );
+        assert.deepEqual(
+          afterDossierWithdrawal.records.map((record) => record.id),
+          [anotherItem],
+        );
         console.log(
-          "Verified publication: private permissions, candidate approval, immutable decisions, stale dependencies, interrupted deployment recovery and withdrawal. All test writes rolled back.",
+          "Verified publication: private permissions, candidate approval, full dossiers, stale dependencies, interrupted deployment recovery and individual withdrawal. All test writes rolled back.",
         );
       } finally {
         await client.query("rollback");

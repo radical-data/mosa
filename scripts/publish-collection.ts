@@ -22,6 +22,7 @@ async function main() {
     options: {
       selection: { type: "string" },
       draft: { type: "string" },
+      drafts: { type: "string" },
       retain: { type: "boolean", default: false },
       commit: { type: "string" },
       snapshot: { type: "string" },
@@ -93,21 +94,40 @@ async function main() {
       const result = await transaction(client, async () => {
         switch (command) {
           case "prepare": {
-            if (Boolean(values.selection) === Boolean(values.draft))
-              throw Error("Use either --selection or --draft");
-            let selection: unknown;
-            if (values.draft) {
-              const draft = (
+            if ([values.selection, values.draft, values.drafts].filter(Boolean).length !== 1)
+              throw Error("Use exactly one of --selection, --draft or --drafts");
+            const selectionForDraft = async (id: string) => {
+              const dossier = (
                 await client.query(
-                  "select selection from capture.publication_candidate where draft_id=$1",
-                  [values.draft],
+                  "select draft_id,item_id from capture.public_dossier_candidate where draft_id=$1",
+                  [id],
                 )
               ).rows[0];
-              if (!draft)
-                throw Error(
-                  "This draft is not ready for a public card. It needs an accepted name, reported holder, identifier and evidenced labels. Classifications, descriptions and unresolved research remain in the research collection.",
-                );
-              selection = draft.selection;
+              const draft =
+                dossier ??
+                (
+                  await client.query(
+                    "select selection from capture.publication_candidate where draft_id=$1",
+                    [id],
+                  )
+                ).rows[0];
+              if (!draft) throw Error(`Draft ${id} is not an accepted public candidate`);
+              return dossier
+                ? { draftId: dossier.draft_id, itemId: dossier.item_id }
+                : draft.selection;
+            };
+            let selection: unknown;
+            if (values.draft) selection = await selectionForDraft(values.draft);
+            else if (values.drafts) {
+              const ids = JSON.parse(await readFile(values.drafts, "utf8"));
+              if (
+                !Array.isArray(ids) ||
+                ids.length < 1 ||
+                ids.length > 100 ||
+                ids.some((id) => typeof id !== "string")
+              )
+                throw Error("Use a JSON array of 1–100 accepted draft IDs");
+              selection = await Promise.all(ids.map(selectionForDraft));
             } else selection = JSON.parse(await readFile(values.selection as string, "utf8"));
             if (values.retain) {
               await currentRelease(client);

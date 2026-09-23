@@ -2,7 +2,12 @@
 
 ## Scope and current state
 
-The current pilot publishes up to two records from the research database through a versioned static JSON export. The public card contains an attributed name, reported holding institution, institutional identifier and supporting links. The site has no database credentials. Research selection, approvals and evidence fingerprints stay in the private `publication` schema.
+The versioned static export supports legacy public cards and complete reviewed
+dossiers. A dossier can show attributed claims, source citations, provenance and
+restitution even without a holder or catalogue number. Version 2 permits up to
+1,000 explicitly selected records; version 1 releases retain their two-card
+contract. The site has no database credentials. Research selection, approvals and
+dependency fingerprints stay in the private `publication` schema.
 
 The committed snapshot contains the approved Hoa Hakananaiʻa pilot.
 `just collection status` reports the separately verified live release.
@@ -10,7 +15,9 @@ An [empty-release rehearsal](https://github.com/radical-data/mosa/actions/runs/3
 passed on 2026-09-21. Its 2 min 11 s runtime excluded review, merge and pinning;
 it is not a withdrawal deadline.
 
-A missing or invalid export fails the build; the site never falls back to the six design reference records. No images or extra research fields are included in the pilot.
+A missing or invalid export fails the build; the site never falls back to the six
+design reference records. Approved dossier pages are built in both languages from
+the exact exported snapshot. Original private files and draft notes are excluded.
 
 ## Prerequisites
 
@@ -31,20 +38,40 @@ assembling evidence identifiers:
 just collection prepare --draft <draft-id> --retain --output /private/path/candidate.json
 ```
 
-`--retain` includes the currently authorised card after checking its dependencies.
-Review the whole candidate. Classifications/descriptions without an evidenced name,
-unresolved holders, absent catalogue identifiers, unknown speakers, non-HTTP(S)
-sources, qualifying/contradicting evidence and stale dependencies block this pilot
-projection. These are publication limits, not requirements to invent missing research.
-Private preserved-source records do not become publishable merely by being accepted.
+`--retain` includes the currently authorised records after checking their
+dependencies. A complete dossier needs an evidenced name, classification,
+description or sourced identifier for its public heading. The public candidate
+contains its reviewed claims, evidence, provenance and restitution entries;
+unknown attribution and missing custody remain visible. Original private files
+stay private. A preserved PDF can have an approved public citation and excerpt
+without exposing its Storage URL or file bytes. Inspect each proposed citation,
+excerpt and case detail before the separate publication decision.
 
-The command uses canonical evidence references recorded in `capture.acceptance`.
-It does not reconstruct them from form fields or importer keys. Existing single-card
-releases remain valid. [Research](local-research.md) describes preparation/acceptance.
+For a batch, copy the JSON array of accepted draft IDs from its research bundle
+page into a private file and prepare one release:
+
+```sh
+just collection prepare --drafts /private/path/accepted-drafts.json --retain --output /private/path/candidate.json
+```
+
+The `--drafts` file accepts 1–100 IDs. Research acceptance alone does not add an
+item to the desired or live public release.
+
+For older cards, the command uses canonical evidence references recorded in
+`capture.acceptance`. For complete dossiers it verifies the accepted packet against
+its canonical claim, evidence and restitution bindings. An inactive or changed
+dependency invalidates the prepared release. Existing version 1 releases remain
+valid. [Research](local-research.md) describes preparation and acceptance.
 
 ## Prepare the explicit selection
 
-For a manually assembled candidate, the selection identifies one item, one identifier and five evidence links. Use an array for two explicit selections; duplicate items or a third item are rejected. Each evidence link fixes its claim and source, so the exporter does not choose a name by database order. The speaker labels are also explicitly evidenced names. `holderName`, `nameSpeaker` and `holderSpeaker` can reference the same evidence link when the institution names itself and asserts both statements.
+For a manually assembled legacy card, the selection identifies one item, one
+identifier and five evidence links. Version 2 can combine these selections with
+accepted dossier selections in an array. Duplicate items are rejected. Each
+legacy evidence link fixes its claim and source, so the exporter does not choose a
+name by database order. The speaker labels are also explicitly evidenced names.
+`holderName`, `nameSpeaker` and `holderSpeaker` can reference the same evidence
+link when the institution names itself and asserts both statements.
 
 ```json
 {
@@ -58,7 +85,7 @@ For a manually assembled candidate, the selection identifies one item, one ident
 }
 ```
 
-For the Hoa bootstrap dossier, an import operator can resolve the selection using the existing ingestion bindings. Run this read-only query with an account allowed to read those bindings; the publisher role intentionally does not need ingestion access. Save the resulting JSON as the private selection file.
+For the Hoa bootstrap dossier, an import operator can resolve the selection using the existing ingestion bindings. Run this read-only query with an account allowed to read those bindings; the publisher has read-only access to binding metadata to verify accepted dossiers. Save the resulting JSON as the private selection file.
 
 ```sql
 with dataset as (
@@ -85,7 +112,10 @@ select jsonb_build_object(
 );
 ```
 
-A missing binding produces an invalid selection, not an inferred identity. The current pilot rejects claims without an identified speaker, inactive claims, non-HTTP(S) sources, and claims with qualifying or contradicting evidence. Keep those accounts in research until a versioned public contract can represent them without flattening uncertainty.
+A missing binding produces an invalid selection, not an inferred identity. Legacy
+cards still reject claims without an identified speaker, inactive claims,
+non-HTTP(S) sources and claims with qualifying or contradicting evidence. Use a
+complete dossier for reviewed qualified or incomplete accounts.
 
 ```sh
 just collection prepare --selection /private/path/hoa-selection.json --output /private/path/hoa-candidate.json
@@ -148,7 +178,7 @@ just website-build
 
 Withdrawing the desired record creates a new, explicitly approved empty release. Commit and merge that export, pin Coolify to the new commit, and run the gated deployment. Verify the empty collection and institution listings in both languages and check `just collection status` before reporting removal complete. A stale build or old export fails the gate. To revert website code, make a new commit that retains the current authorised export; do not use Coolify's direct image rollback.
 
-To remove one card and retain the other, use:
+To remove one record and retain the others, use:
 
 ```sh
 just collection withdraw --id <release-id> --item <item-id> --actor 'Actual operator' --authority 'Actual withdrawal reason'
@@ -184,7 +214,10 @@ A 180-second polling timeout is a failure requiring attention, not proof that th
 - `just collection-website-verify`: synthetic populated/withdrawn builds in both languages in a temporary source copy, leaving the working snapshot and build output untouched.
 - The website workflow runs the populated/withdrawn checks and production-image HTTP checks. The full database verification also invokes the publication integration checks.
 
-The private publication tables are maintained by the command service using explicit SQL; they are deliberately outside the app-facing generated database type schemas. Private PDF/bundle preparation is implemented in research. Image publication, public dossier routes and publication of incomplete or private-document-backed records remain outside this public contract.
+The private publication tables are maintained by the command service using
+explicit SQL; they remain outside the app-facing generated database type schemas.
+Original file downloads and images remain outside the public contract. Dossier
+pages expose only the reviewed and separately approved public snapshot.
 
 ## Catalogue labels and existing decisions
 

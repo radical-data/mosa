@@ -27,20 +27,34 @@ export const getTypes = (locale: Locale) =>
 // All collection facts come from the strictly validated public export.
 export const publicCollection = parseCollection(snapshot);
 export function collectionRecords(data: PublicCollection) {
-  return data.records.map((record) => ({
-    ...record,
-    institution: record.holder.text,
-    searchExact: [
-      record.name.text,
-      record.holder.text,
-      record.name.attributedTo,
-      record.holder.attributedTo,
-      record.identifier.namespace,
-      record.identifier.value,
-    ].join(" "),
-    // Preserve original-name spelling; fold accents only in institution search.
-    searchFoldable: record.holder.text,
-  }));
+  return data.records.map((record) =>
+    "kind" in record
+      ? {
+          ...record,
+          searchExact: [
+            record.label,
+            ...record.identifiers.map((entry) => `${entry.namespace} ${entry.value}`),
+            ...record.claims.map(
+              (claim) => `${claim.subject.label} ${claim.predicate} ${claim.value.text}`,
+            ),
+          ].join(" "),
+          searchFoldable: record.label,
+        }
+      : {
+          ...record,
+          institution: record.holder.text,
+          searchExact: [
+            record.name.text,
+            record.holder.text,
+            record.name.attributedTo,
+            record.holder.attributedTo,
+            record.identifier.namespace,
+            record.identifier.value,
+          ].join(" "),
+          // Preserve original-name spelling; fold accents only in institution search.
+          searchFoldable: record.holder.text,
+        },
+  );
 }
 export function getCollection(_locale: Locale) {
   return collectionRecords(publicCollection);
