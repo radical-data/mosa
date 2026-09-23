@@ -45,8 +45,8 @@ Private researcher sign-in and source storage need the separate configuration in
 [operations](docs/operations.md#research-access-and-storage).
 
 `just db-reset` resets local data and applies migrations without seed data.
-`just test-db` and `just verify` also reset local data. Use a disposable stack and
-preserve any local research first. Never load fixture SQL into production.
+`just test-db` and `just verify` create and remove a separate disposable test stack,
+including checks for generated database types. Never load fixture SQL into production.
 
 Run `just` to list commands. `just install` also installs Git hooks.
 

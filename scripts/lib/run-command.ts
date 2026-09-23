@@ -4,6 +4,7 @@ export interface RunCommandOptions {
   cwd?: string;
   captureOutput?: boolean;
   env?: NodeJS.ProcessEnv;
+  signal?: AbortSignal;
 }
 
 export class CommandError extends Error {
@@ -30,6 +31,7 @@ export async function runCommand(
   const captureOutput = options.captureOutput ?? false;
 
   return await new Promise<string>((resolve, reject) => {
+    options.signal?.throwIfAborted();
     const child = spawn(executable, [...args], {
       cwd: options.cwd,
       env: {
@@ -37,8 +39,22 @@ export async function runCommand(
         ...options.env,
       },
       shell: false,
+      detached: !!options.signal && process.platform !== "win32",
       stdio: captureOutput ? ["ignore", "pipe", "pipe"] : "inherit",
     });
+
+    const abort = () => {
+      if (!child.pid) return;
+      try {
+        if (process.platform === "win32") child.kill("SIGTERM");
+        else process.kill(-child.pid, "SIGTERM");
+      } catch (error) {
+        if ((error as NodeJS.ErrnoException).code !== "ESRCH") throw error;
+      }
+    };
+    options.signal?.addEventListener("abort", abort, { once: true });
+    const removeAbort = () => options.signal?.removeEventListener("abort", abort);
+    if (options.signal?.aborted) abort();
 
     let stdout = "";
     let stderr = "";
@@ -55,6 +71,7 @@ export async function runCommand(
     }
 
     child.once("error", (error) => {
+      removeAbort();
       if ((error as NodeJS.ErrnoException).code === "ENOENT") {
         reject(
           new Error(
@@ -68,6 +85,11 @@ export async function runCommand(
     });
 
     child.once("close", (exitCode) => {
+      removeAbort();
+      if (options.signal?.aborted) {
+        reject(new Error(`Verification interrupted: ${executable}`));
+        return;
+      }
       if (exitCode === 0) {
         resolve(stdout.trim());
         return;

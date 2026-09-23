@@ -1,112 +1,69 @@
+import { randomUUID } from "node:crypto";
+import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { runCommand } from "./lib/run-command";
 import { getSupabaseExecutable } from "./lib/supabase-local";
-import { loadPhase1Fixtures } from "./load-phase-1-fixtures";
-import { loadPhase2Fixtures } from "./load-phase-2-fixtures";
-import { loadPhase3Fixtures } from "./load-phase-3-fixtures";
-import { verifyObjectDossierImport } from "./verify-object-dossier-import";
+import { availablePort, withVerificationWorkspace } from "./lib/verification-workspace";
 
-const projectRoot = path.resolve(__dirname, "..");
-const supabase = getSupabaseExecutable(projectRoot);
-
-async function verifyDatabase(): Promise<void> {
-  await runCommand(supabase, ["start"], { cwd: projectRoot });
-  await runCommand(supabase, ["db", "reset", "--local", "--no-seed"], { cwd: projectRoot });
-
-  await runCommand("pnpm", ["exec", "tsx", "scripts/verify-collection-publication.ts"], {
-    cwd: projectRoot,
+async function verify(): Promise<void> {
+  const { parse, stringify } = await import("smol-toml");
+  const root = path.resolve(__dirname, "..");
+  await withVerificationWorkspace(root, async (workspace, signal) => {
+    const projectId = `mosa-verify-${randomUUID().replaceAll("-", "").slice(0, 24)}`;
+    const configPath = path.join(workspace, "supabase/config.toml");
+    const config = parse(await readFile(configPath, "utf8"));
+    const port = await availablePort();
+    config.project_id = projectId;
+    config.db = {
+      ...(config.db as object),
+      port,
+      shadow_port: await availablePort(),
+      seed: { enabled: false },
+    };
+    config.studio = { enabled: false };
+    await writeFile(configPath, stringify(config));
+    const databaseUrl = `postgresql://postgres:postgres@127.0.0.1:${port}/postgres`;
+    const env = {
+      LOCAL_DATABASE_URL: databaseUrl,
+      SUPABASE_DB_URL: databaseUrl,
+      DATABASE_URL: databaseUrl,
+      CAPTURE_TEST_DATABASE_URL: databaseUrl,
+      PUBLICATION_TEST_DATABASE_URL: databaseUrl,
+      DATABASE_SSL_CA: undefined,
+      SOURCE_STORAGE_URL: undefined,
+      RESEARCH_BUNDLE_TEST_FILE: undefined,
+    };
+    const supabase = getSupabaseExecutable(root);
+    console.log(`Verifying in disposable stack ${projectId} (port ${port}).`);
+    try {
+      await runCommand(
+        supabase,
+        [
+          "start",
+          "--exclude",
+          "analytics,edge-runtime,functions,imgproxy,inbucket,kong,meta,realtime,rest,storage,studio,vector",
+        ],
+        { cwd: workspace, env, signal },
+      );
+      await runCommand(
+        process.execPath,
+        ["--import", "tsx", "scripts/lib/verify-database-suite.ts"],
+        {
+          cwd: workspace,
+          env,
+          signal,
+        },
+      );
+    } finally {
+      // Use the unique ID explicitly, including after a partial start or interruption.
+      await runCommand(supabase, ["stop", "--project-id", projectId, "--no-backup"], {
+        cwd: workspace,
+      });
+    }
   });
-
-  await runCommand("pnpm", ["exec", "tsx", "scripts/verify-source-capture.ts"], {
-    cwd: projectRoot,
-  });
-
-  await loadPhase1Fixtures();
-  await loadPhase2Fixtures();
-  await loadPhase3Fixtures();
-
-  await runCommand(supabase, ["db", "lint", "--local", "--level", "error"], { cwd: projectRoot });
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-1-cases.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-2-mamari.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-2-te-papa-moai-kavakava.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-2-hoa-hakananai-a.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-2-hoa-hakananai-a-community.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    [
-      "test",
-      "db",
-      "supabase/tests/database/phase-2-hoa-hakananai-a-production.test.sql",
-      "--local",
-    ],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-2-la-serena-moai.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-2-benin-ama.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-3-aberdeen-head.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/phase-3-hoa-hakananai-a.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/explorer-reader-role.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-  await runCommand(
-    supabase,
-    ["test", "db", "supabase/tests/database/foregrounded-claims.test.sql", "--local"],
-    { cwd: projectRoot },
-  );
-
-  // Runs last because it writes canonical rows the pgTAP fixtures tests
-  // must not see.
-  await verifyObjectDossierImport();
-  await runCommand("pnpm", ["--filter", "@mosa/explorer", "build"], { cwd: projectRoot });
-  await runCommand("pnpm", ["exec", "tsx", "scripts/verify-capture-http.ts"], { cwd: projectRoot });
 }
 
-async function main(): Promise<void> {
-  try {
-    await verifyDatabase();
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    process.stderr.write(`error: ${message}\n`);
-    process.exitCode = 1;
-  }
-}
-
-void main();
+verify().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

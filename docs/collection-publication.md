@@ -181,7 +181,7 @@ A 180-second polling timeout is a failure requiring attention, not proof that th
 
 - `just verify-static`: checks, types, unit tests and both app builds.
 - `just collection-verify`: database integration checks in a rolled-back transaction, including permissions, stale dependencies and withdrawal. Use a migrated local test database; `PUBLICATION_TEST_DATABASE_URL` can select a separate loopback database.
-- `just collection-website-verify`: sequential synthetic populated/withdrawn builds in both languages. Temporarily replaces the public snapshot, restores it in `finally`, then rebuilds the original. Do not run concurrently with another website build.
+- `just collection-website-verify`: synthetic populated/withdrawn builds in both languages in a temporary source copy, leaving the working snapshot and build output untouched.
 - The website workflow runs the populated/withdrawn checks and production-image HTTP checks. The full database verification also invokes the publication integration checks.
 
 The private publication tables are maintained by the command service using explicit SQL; they are deliberately outside the app-facing generated database type schemas. Private PDF/bundle preparation is implemented in research. Image publication, public dossier routes and publication of incomplete or private-document-backed records remain outside this public contract.

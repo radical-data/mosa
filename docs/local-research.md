@@ -199,10 +199,7 @@ Use `just research-bundle check <bundle-file>` before upload. A successful check
 verifies the bundle contract, not object identity or permission to publish.
 Review exact saved bytes and source scope before accepting a proposal.
 
-> `just test-db` resets the local database. Preserve local research and use a
-> disposable stack before running it; do not run reset suites concurrently.
-
-The database verification includes importer, capture, source and built HTTP
+`just test-db` creates a disposable stack and includes importer, capture, source and built HTTP
 regressions. Auth/Storage substitutes cover ownership, retries, interrupted imports,
 review revisions and synthetic acceptance. They do not verify production services.
 `RESEARCH_BUNDLE_TEST_FILE` can select a private packed bundle for the HTTP harness;

@@ -32,9 +32,8 @@
 | `scripts/` | Import, publication, research bundle and verification commands |
 | `src/lib/database.types.ts` | Generated types; regenerate, do not edit by hand |
 
-App unit tests sit beside their implementation. Shared package tests currently
-live in `scripts/lib/`; Vitest discovery is defined in `vitest.config.ts`.
-Use existing test locations so new tests actually run.
+Put unit tests beside their implementation in apps or packages. Existing shared
+tests also live in `scripts/lib/`. Run a selection with `just test-unit <path>`.
 
 ## Commands
 
@@ -46,20 +45,18 @@ prefix with `mise exec --` when mise is inactive.
 
 | Change | Verification |
 | --- | --- |
-| Documentation only | Local links/anchors, referenced commands, consistency with code and `git diff --check` |
+| Documentation only | `just docs-check`, consistency with code and `git diff --check` |
 | Application or shared TypeScript | Relevant unit tests, then `just verify-static` for checks, types, unit tests and both builds |
-| Database contracts or permissions | Relevant SQL/integration checks, `just test-db`, then `just db-types-check` on a disposable local stack |
+| Database contracts or permissions | `just test-db` (includes generated-type checks) |
 | Importer or capture | Regressions in `just test-db`; `just db-import-verify` for focused importer verification |
 | Publication contract or rendering | `just collection-verify` on a migrated local test database and `just collection-website-verify` |
 | Website HTTP behaviour | Website image plus `mise exec -- pnpm --filter @mosa/website test:http http://127.0.0.1:8080` |
 
-`just verify` combines static, database and generated-type checks. `just test-db`
-and `just verify` RESET the local database. Preserve local research and use a
-disposable stack; do not run reset suites concurrently against one stack.
-`just db-reset` also deletes local data.
-
-`just collection-website-verify` temporarily replaces the committed snapshot,
-restores it and rebuilds. Run it sequentially, without another website build.
+`just verify` combines static and database checks. `just test-db` creates and
+removes its own disposable Supabase stack. Database and website verification
+use temporary source copies, including uncommitted work, with separate build output.
+`just db-reset` still deletes the normal local database; fixture loaders also
+modify that database. Preserve local research before using those development commands.
 Do not claim hosted Auth, Storage or deployment works from substitute-based tests.
 
 ## Implementation rules
