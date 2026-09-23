@@ -3,7 +3,7 @@ import { randomUUID } from "node:crypto";
 import { importInTransaction } from "@mosa/object-dossier/import";
 import type { DossierPacket } from "@mosa/object-dossier/packet";
 import { Client } from "pg";
-import { candidate, type Selection } from "./lib/publication/candidate";
+import { candidate, digest, type Selection } from "./lib/publication/candidate";
 import {
   approve,
   currentRelease,
@@ -108,6 +108,40 @@ async function verify() {
         };
         await client.query(
           "update entities.catalogue set label='Test catalogue' where namespace='test'",
+        );
+        // A legacy release predates these evidence columns. Reconstruct its
+        // original dependency projection so a new migration cannot invalidate
+        // an unchanged, already approved public card.
+        const legacySelection = { ...selection };
+        delete legacySelection.catalogue;
+        const dependencies = [];
+        for (const key of [
+          "name",
+          "holder",
+          "holderName",
+          "nameSpeaker",
+          "holderSpeaker",
+        ] as const) {
+          const result = await client.query(
+            `select jsonb_build_array(to_jsonb(c),to_jsonb(e) - 'evidence_mode' - 'source_version_id',to_jsonb(s)) value
+             from knowledge.claim_evidence e join knowledge.claim c on c.id=e.claim_id
+             join entities.source s on s.id=e.source_id where e.id=$1`,
+            [selection[key]],
+          );
+          dependencies.push(result.rows[0].value);
+        }
+        dependencies.push(
+          (
+            await client.query(
+              `select jsonb_build_array(to_jsonb(i),to_jsonb(s)) value
+           from entities.external_identifier i join entities.source s on s.id=i.source_id where i.id=$1`,
+              [selection.identifier],
+            )
+          ).rows[0].value,
+        );
+        assert.equal(
+          (await candidate(client, legacySelection, randomUUID())).fingerprint,
+          digest({ selection: legacySelection, dependencies }),
         );
         for (const role of ["anon", "authenticated", "explorer_reader"]) {
           await fails(async () => {

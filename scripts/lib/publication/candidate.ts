@@ -83,7 +83,7 @@ export async function candidate(
       select e.id, c.id claim_id, c.subject_id, c.predicate, c.object_entity_id,
              c.literal_value, c.asserted_by_agent_id, c.status, e.relationship,
              s.reference, e.locator, e.excerpt,
-             jsonb_build_array(to_jsonb(c), ${selection.catalogue === undefined ? "to_jsonb(e) - 'evidence_mode'" : "to_jsonb(e)"}, to_jsonb(s)) dependencies,
+             jsonb_build_array(to_jsonb(c), ${selection.catalogue === undefined ? "to_jsonb(e) - 'evidence_mode' - 'source_version_id'" : "to_jsonb(e)"}, to_jsonb(s)) dependencies,
              exists(select 1 from knowledge.claim_evidence extra
                     where extra.claim_id=c.id and extra.relationship in ('qualifies','contradicts')) complex
       from knowledge.claim_evidence e join knowledge.claim c on c.id=e.claim_id
