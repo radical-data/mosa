@@ -17,15 +17,18 @@
     "@types/pg": "catalog:",
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
+    "github-slugger": "^2.0.0",
     "lefthook": "^2.1.10",
+    "mdast-util-from-markdown": "^2.0.3",
     "pg": "catalog:",
+    "smol-toml": "^1.7.0",
     "supabase": "^2.109.1",
     "tsx": "^4.23.1",
     "typescript": "catalog:",
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "@mosa/public-collection": "workspace:*",
-    "@mosa/object-dossier": "workspace:*"
+    "@mosa/object-dossier": "workspace:*",
+    "@mosa/public-collection": "workspace:*"
   }
 }

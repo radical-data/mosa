@@ -1,31 +1,42 @@
 # MoSA research explorer
 
-A local, read-only Astro interface for visually inspecting the synthetic Phase 1 and Phase 2 database fixtures while the model is being developed.
+Server-rendered Astro application with research reader routes and an invited,
+authenticated workspace for private sources, drafts, catalogue administration
+and explicit acceptance through `@mosa/object-dossier`.
 
-It is intentionally not an authoring interface. It does not provide authentication, entity creation, claim creation, evidence entry, editing, deletion, import, restitution, publication, or workflow controls. It can inspect Phase 2 provenance events but cannot create or edit them.
+The reader connection is read-only. The private workspace uses a separate
+`capture_writer` connection. Reader routes are not all protected by researcher
+sign-in; private drafts and original source files are. General editing of
+accepted claims, provenance and restitution is not implemented.
 
-## Run locally
+## Develop and verify
 
-From the repository root:
+Follow [root setup](../../README.md#research-explorer). Copy `.env.example` to
+`.env` for local overrides. Outside production, database connections accept only
+loopback hosts. Use the separate [research access configuration](../../docs/operations.md#research-access-and-storage)
+for sign-in and private Storage.
 
 ```sh
-just db-start
-just db-fixtures
-just explorer-dev
+mise exec -- just explorer-dev
+mise exec -- just explorer-check
+mise exec -- just explorer-build
 ```
 
-Open <http://localhost:4321>.
+Development uses port 4321. Production uses the root `Dockerfile`.
 
-The app defaults to the standard local Supabase PostgreSQL URL. Override it by copying `.env.example` to `.env` and setting `DATABASE_URL` (or the deprecated `LOCAL_DATABASE_URL` alias). Outside production, only loopback hosts are accepted. Production requires `DATABASE_URL` and `DATABASE_SSL_CA`. Every connection opens with PostgreSQL's read-only transaction setting.
+## Code entry points
 
-## Views
+| Path under `src/` | Purpose |
+| --- | --- |
+| `pages/index.astro`, `pages/entities/`, `pages/claims/`, `pages/events/` | Entity, evidence and provenance reading |
+| `pages/restitution/` | Read-only restitution case exploration |
+| `pages/research/` | Sign-in, drafts and catalogue administration |
+| `pages/research/sources/`, `pages/research/bundles/` | Private PDFs and imported local research bundles |
+| `lib/capture/` | Access checks, proposal model, identity review and acceptance |
+| `lib/sources/` | Preserved sources, Storage, constrained fetch and bundle validation/import |
+| `lib/database-config.ts`, `lib/database.ts` | Reader connection configuration and queries |
 
-- `/` searches entities by derived display label, `has_name` values, external identifiers, or source references.
-- `/entities/:id` shows subtype data, identifiers, outgoing claims, incoming claims, and evidence summaries.
-- `/claims/:id` shows one claim and all attached evidence.
-- `/events/:id` shows one provenance event and its attributed statements.
-- Item pages show sourced provenance events ordered by reported date.
-
-## Source capture and review
-
-The private `/research` workspace adds invited email-code sign-in, source drafts, identity confirmation and reviewed promotion through the shared `@mosa/object-dossier` importer. Reader routes remain available. See [source capture](../../docs/source-capture.md) for permissions, runtime configuration and publication.
+Local discovery replaces hosted search/model jobs; there is no active background
+runner to provision. [Research](../../docs/local-research.md) describes the user
+workflow, [architecture](../../docs/architecture.md) the boundaries, and
+[operations](../../docs/operations.md) deployment and recovery.

@@ -62,15 +62,19 @@ check-fix:
 check-staged +files:
     pnpm exec biome check --write --no-errors-on-unmatched "$@"
 
+# Check local documentation links, anchors and just recipe references.
+docs-check:
+    pnpm exec tsx scripts/check-docs.ts
+
 typecheck-scripts:
     pnpm exec tsc --project tsconfig.scripts.json
 
 typecheck: typecheck-scripts explorer-check website-check
 
-test-unit:
-    pnpm exec vitest run
+test-unit *args:
+    pnpm exec vitest run "$@"
 
-# Resets the LOCAL database and loads synthetic fixtures before testing.
+# Verify fixtures, contracts and generated types in a disposable Supabase stack.
 test-db:
     pnpm exec tsx scripts/verify-database.ts
 
@@ -79,10 +83,10 @@ alias db-verify := test-db
 test: test-unit test-db
 
 # All checks that do not require Docker or a database.
-verify-static: check typecheck test-unit build
+verify-static: check docs-check typecheck test-unit build
 
-# Full verification; resets the LOCAL database.
-verify: verify-static test-db db-types-check
+# Full verification; database checks use their own disposable stack.
+verify: verify-static test-db
 
 # Pass through to the repository's pinned Supabase CLI.
 supabase +args:

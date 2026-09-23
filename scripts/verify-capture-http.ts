@@ -4,6 +4,7 @@ import { randomUUID } from "node:crypto";
 import { createServer } from "node:http";
 import { Client } from "pg";
 import { getLocalDatabaseUrl } from "./lib/supabase-local";
+import { availablePort } from "./lib/verification-workspace";
 import { verifyBundleHttp } from "./lib/verify-bundle-http";
 
 async function verify() {
@@ -69,7 +70,7 @@ async function verify() {
   await new Promise<void>((resolve) => auth.listen(0, "127.0.0.1", resolve));
   const address = auth.address();
   assert(address && typeof address !== "string");
-  const port = 44321,
+  const port = await availablePort(),
     origin = `http://127.0.0.1:${port}`;
   const captureUrl = new URL(databaseUrl);
   captureUrl.username = login;

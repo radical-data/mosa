@@ -39,6 +39,9 @@ jobs:
       - name: Format and lint
         run: mise x -- just check
 
+      - name: Documentation
+        run: mise x -- just docs-check
+
       - name: Typecheck
         run: mise x -- just typecheck
 
@@ -76,9 +79,6 @@ jobs:
 
       - name: Verify database
         run: mise x -- just test-db
-
-      - name: Check generated database types
-        run: mise x -- just db-types-check
 
   docker:
     name: Explorer image

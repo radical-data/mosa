@@ -69,3 +69,7 @@ Do not infer `moved_to → La Serena` from later presence alone. Encode a destin
 - determining who had authority to give the item;
 - reconstructing an unsupported route;
 - restitution, legal review, or publication decisions.
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-2-la-serena-moai.sql) and [SQL assertions](../../supabase/tests/database/phase-2-la-serena-moai.test.sql).

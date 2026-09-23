@@ -6,7 +6,7 @@ Accepted.
 
 ## Context
 
-The database repository already contains the Astro research explorer in a pnpm workspace. The public museum website will also use Astro. Public presentation and the underlying model are expected to evolve together.
+At the time of the decision, the database repository already contained the Astro research explorer in a pnpm workspace. The public website was also planned in Astro, with public presentation and the model expected to evolve together.
 
 ## Decision
 
@@ -23,4 +23,6 @@ A single change can include migrations, read interfaces and UI updates with comm
 
 The local Supabase project ID changes the development container namespace. Existing local volumes are retained, not automatically migrated. The hosted project identity is unchanged.
 
-The website may be developed, built and deployed without the database. Its initial deployment is manual, pending hosting configuration and the public launch decision. Separate repository access or independent teams may justify extraction later.
+The website can be developed and built without a database. Its static container
+remains database-free. The later publication workflow uses a private ledger and
+manual deployment gate; see [publication](../collection-publication.md).
