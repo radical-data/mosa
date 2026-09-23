@@ -1,4 +1,4 @@
-# Present object information in a fixed priority order
+# 011: Present object information in a fixed priority order
 
 ## Status
 
@@ -6,11 +6,9 @@ Accepted
 
 ## Context
 
-Cultural heritage objects are the primary research unit in MoSA. Readers asking about an object almost always need the same facts first: where it is from, where it is now, what documents describe it, and how it got there. Everything else — names, materials, classifications, restitution administration — matters, but later.
-
-The claim and provenance model already distinguishes these roles (`made_at`, `found_at`, `held_by`, `located_at`, sources, provenance events). The Explorer item page did not. Production and custody appeared before provenance, but documents were buried in per-claim evidence and generic incoming claims, findspot was optional, provenance had no empty state, and record metadata competed for attention at the top of the page.
-
-Without an explicit hierarchy, fixtures, competency questions, and future projections will keep optimising for schema completeness rather than object-centred reading.
+Readers need an object's origin, current location, documents and movement history
+before administrative detail. The explorer buried documents in individual claims,
+omitted some empty states and gave record metadata competing prominence.
 
 ## Decision
 
@@ -32,20 +30,9 @@ Therefore:
 
 ## Consequences
 
-### Benefits
-
-- Item pages answer the first questions readers ask.
-- Missing origin, location, documents, or provenance stays visible.
-- Fixtures and competency packets can check tier coverage without new tables.
-- Shared projection code can stay aligned across Explorer and later APIs.
-
-### Costs
-
-- Item pages become more projection-heavy.
-- Document aggregation must deduplicate sources that appear as both evidence and direct links.
-- Sparse objects will show several empty sections.
-
-These costs are accepted: empty tiers are more honest than a page that looks complete because undocumented sections are hidden.
+Missing research stays visible without adding canonical columns. Read projections
+must aggregate and deduplicate documents from evidence, direct links and restitution.
+Sparse items will display several empty sections.
 
 ## Alternatives considered
 
@@ -55,7 +42,3 @@ These costs are accepted: empty tiers are more honest than a page that looks com
 | Keep documents only as claim evidence | Forces readers to discover sources by scanning every claim. |
 | Treat restitution as tier 4 alongside provenance | Restitution is operational case management; movement history remains provenance. |
 | Hide empty tiers | Conceals what the research record does not yet know. |
-
-## Principle
-
-> For objects, present origin, current location, documents, and provenance before everything else. The hierarchy is a projection, not a schema change.

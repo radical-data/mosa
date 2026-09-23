@@ -43,3 +43,7 @@ The ancestral person and physical remains have separate identities, connected by
 ## Result
 
 Pass. No schema change required.
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-1-cases.sql) and [SQL assertions](../../supabase/tests/database/phase-1-cases.test.sql).

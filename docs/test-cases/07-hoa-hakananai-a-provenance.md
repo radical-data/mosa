@@ -92,3 +92,9 @@ The 1868 removal is represented once as a stable event anchor with separately at
 - sensitivity and publication controls;
 - resolving the preferred public narrative.
 - a general claim-certainty or confidence ontology.
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-2-hoa-hakananai-a.sql) and [SQL assertions](../../supabase/tests/database/phase-2-hoa-hakananai-a.test.sql).
+- [Fixture](../../supabase/fixtures/phase-2-hoa-hakananai-a-community.sql) and [SQL assertions](../../supabase/tests/database/phase-2-hoa-hakananai-a-community.test.sql).
+- [Fixture](../../supabase/fixtures/phase-2-hoa-hakananai-a-production.sql) and [SQL assertions](../../supabase/tests/database/phase-2-hoa-hakananai-a-production.test.sql).

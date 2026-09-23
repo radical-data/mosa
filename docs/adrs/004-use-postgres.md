@@ -1,1 +1,3 @@
-Use PostgreSQL as the primary datastore
+# 004: Use PostgreSQL
+
+Use PostgreSQL as the primary datastore.

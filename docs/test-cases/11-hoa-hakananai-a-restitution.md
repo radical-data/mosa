@@ -1,6 +1,6 @@
 # Case 11: Request for the return of Hoa Hakananaiʻa
 
-Status: proposed Phase 3 competency case.
+Status: implemented fixture and read-only explorer case.
 
 ## Purpose
 
@@ -250,3 +250,7 @@ The interface must not invent a free-text case summary. Absence of decision or h
 
 - British Museum, `Moai`:
   https://www.britishmuseum.org/about-us/british-museum-story/contested-objects-collection/moai
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-3-hoa-hakananai-a.sql) and [SQL assertions](../../supabase/tests/database/phase-3-hoa-hakananai-a.test.sql).

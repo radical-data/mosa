@@ -1,6 +1,6 @@
 # Case 10: Return of the Aberdeen Head of an Oba
 
-Status: proposed Phase 3 competency case.
+Status: implemented fixture and read-only explorer case.
 
 ## Purpose
 
@@ -301,3 +301,7 @@ The interface must not display a free-text case summary, `rightful owner`, `vali
   https://www.channelstv.com/2021/10/29/another-uk-university-officially-hands-over-looted-benin-bronze/
 - Channels Television, `Oba Of Benin Takes Delivery Of Looted 'Okpa,' 'Ilahor' Returned From UK`, 19 February 2022:
   https://www.channelstv.com/2022/02/19/oba-of-benin-takes-delivery-of-looted-okpa-ilahor-returned-from-uk/
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-3-aberdeen-head.sql) and [SQL assertions](../../supabase/tests/database/phase-3-aberdeen-head.test.sql).

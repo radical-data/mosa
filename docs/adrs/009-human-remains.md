@@ -1,4 +1,3 @@
-- put ancestral remains as: item related to the ancestral person (agent/person)
-    - Agent A: the ancestral person
-    - Item I: the physical remains or museum holding
-    - Relationship: Item I comprises or represents the physical remains of Agent A
+# 009: Distinguish ancestral people from physical remains
+
+Represent an ancestral person as an agent/person and physical remains or a documented holding as an item. Relate them through the evidenced `physical_remains_of` predicate.

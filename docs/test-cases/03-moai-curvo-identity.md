@@ -42,3 +42,7 @@ The database preserves two item identities and records their possible equivalenc
 ## Result
 
 Pass. No schema change required.
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-1-cases.sql) and [SQL assertions](../../supabase/tests/database/phase-1-cases.test.sql).

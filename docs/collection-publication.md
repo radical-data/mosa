@@ -1,14 +1,14 @@
-# Publish the first collection record
+# Publish and withdraw collection records
 
 ## Scope and current state
 
 The current pilot publishes up to two records from the research database through a versioned static JSON export. The public card contains an attributed name, reported holding institution, institutional identifier and supporting links. The site has no database credentials. Research selection, approvals and evidence fingerprints stay in the private `publication` schema.
 
-The bootstrap dossiers have been authorised by the project owner for publication in the implementation discussion. Use Hoa Hakananaiʻa for the initial release. Record the actual operator and the scope of that authorisation when approving its candidate. This does not authorise images or extra material outside the selected bootstrap fields.
-
-Production publication is configured through the protected `website-production` GitHub environment, restricted to `main`. The research database contains the bootstrap dossiers, and a dedicated publisher login maintains the private ledger. Coolify automatic and preview deployments are disabled; each release requires an explicit commit pin. The committed `apps/website/public/collection-snapshot.json` contains the approved Hoa Hakananaiʻa pilot. Check `just collection status` for the separately verified live release.
-
-The empty withdrawal release `bd755e80-cc57-419a-b391-195f8606a231` was verified live on 2026-09-21 at 13:18:37 UTC by [Website run 35604556798](https://github.com/radical-data/mosa/actions/runs/35604556798). The workflow took 2 minutes 11 seconds, including builds and verification. This rehearsal withdrew an approved candidate before it had been served, then deployed and verified the empty snapshot and all four bilingual collection/institution routes. Populated-to-empty removal is also covered by the automated website checks. This measurement excludes review, merge and commit-pinning time; it is not an agreed removal deadline.
+The committed snapshot contains the approved Hoa Hakananaiʻa pilot.
+`just collection status` reports the separately verified live release.
+An [empty-release rehearsal](https://github.com/radical-data/mosa/actions/runs/35604556798)
+passed on 2026-09-21. Its 2 min 11 s runtime excluded review, merge and pinning;
+it is not a withdrawal deadline.
 
 A missing or invalid export fails the build; the site never falls back to the six design reference records. No images or extra research fields are included in the pilot.
 
@@ -22,11 +22,29 @@ A missing or invalid export fails the build; the site never falls back to the si
 
 Use `mise exec --` before the following `just` commands if mise is not active in the shell. Keep selection and candidate files in a private directory outside the repository. Commands that write a file use mode `0600` and replace it atomically.
 
-Slice 2 can prepare an accepted research draft directly with `prepare --draft <draft-id> --retain`; see the [capture runbook](source-capture.md). Existing single-record releases remain valid.
+## Prepare an accepted research draft
+
+The accepted draft URL contains its draft ID. Prepare it without manually
+assembling evidence identifiers:
+
+```sh
+just collection prepare --draft <draft-id> --retain --output /private/path/candidate.json
+```
+
+`--retain` includes the currently authorised card after checking its dependencies.
+Review the whole candidate. Classifications/descriptions without an evidenced name,
+unresolved holders, absent catalogue identifiers, unknown speakers, non-HTTP(S)
+sources, qualifying/contradicting evidence and stale dependencies block this pilot
+projection. These are publication limits, not requirements to invent missing research.
+Private preserved-source records do not become publishable merely by being accepted.
+
+The command uses canonical evidence references recorded in `capture.acceptance`.
+It does not reconstruct them from form fields or importer keys. Existing single-card
+releases remain valid. [Research](local-research.md) describes preparation/acceptance.
 
 ## Prepare the explicit selection
 
-The selection identifies one item, one identifier and five evidence links. Each evidence link fixes its claim and source, so the exporter does not choose a name by database order. The speaker labels are also explicitly evidenced names. `holderName`, `nameSpeaker` and `holderSpeaker` can reference the same evidence link when the institution names itself and asserts both statements.
+For a manually assembled candidate, the selection identifies one item, one identifier and five evidence links. Use an array for two explicit selections; duplicate items or a third item are rejected. Each evidence link fixes its claim and source, so the exporter does not choose a name by database order. The speaker labels are also explicitly evidenced names. `holderName`, `nameSpeaker` and `holderSpeaker` can reference the same evidence link when the institution names itself and asserts both statements.
 
 ```json
 {
@@ -67,7 +85,7 @@ select jsonb_build_object(
 );
 ```
 
-A missing binding produces an invalid selection, not an inferred identity. Slice 1 rejects claims without an identified speaker, inactive claims, non-HTTP(S) sources, and claims with qualifying or contradicting evidence. Use the later dossier slice for those accounts instead of flattening uncertainty.
+A missing binding produces an invalid selection, not an inferred identity. The current pilot rejects claims without an identified speaker, inactive claims, non-HTTP(S) sources, and claims with qualifying or contradicting evidence. Keep those accounts in research until a versioned public contract can represent them without flattening uncertainty.
 
 ```sh
 just collection prepare --selection /private/path/hoa-selection.json --output /private/path/hoa-candidate.json
@@ -80,7 +98,7 @@ Review the candidate's exact public wording, attribution, identifiers and all so
 Use the `releaseId` from the reviewed candidate. Replace the example actor and authority text with the actual decision-maker and authorisation basis.
 
 ```sh
-just collection approve --id <release-id> --actor 'Actual operator' --authority 'Project owner authorised bootstrap dossier fields; reviewed this exact candidate'
+just collection approve --id <release-id> --actor 'Actual operator' --authority 'Actual authorisation basis for this exact reviewed candidate'
 just collection export --output apps/website/public/collection-snapshot.json
 just website-build
 just collection check --snapshot apps/website/public/collection-snapshot.json
@@ -92,27 +110,35 @@ Changing a selected claim, evidence link, source or identifier invalidates the c
 
 ## Configure and deploy
 
-The existing manual `Website` workflow now calls the publication gate instead of triggering an unchecked webhook.
+Configure [website hosting and deployment credentials](operations.md#public-website)
+first. The static build/container needs no database credentials; this deployment
+command requires the private publisher connection.
 
-1. Apply the publication migration before enabling this workflow's production step.
-2. Add `COLLECTION_DATABASE_URL` and `COLLECTION_DATABASE_SSL_CA` to the protected `website-production` environment alongside its existing hosting secrets. These credentials are used only by the deployment job, not the Docker build or static container.
-3. Give the Coolify API token read and deploy permissions, and store it as `COOLIFY_API_TOKEN`. In Coolify 4.3.23, select Deploy first, then Read. This token is separate from the GitHub App that lets Coolify read the repository. Keep a single application's production webhook in `COOLIFY_DEPLOY_WEBHOOK`; tag and preview deployment webhooks are rejected. The command uses POST to request deployment.
-4. Disable automatic and preview deployments for this application. Restrict direct dashboard/webhook access to operators who follow this runbook. Cancel any pre-existing queued jobs before the first gated release. Direct administrator actions can bypass this tooling and are outside its guarantee.
-5. Pin the application's **Git commit SHA** to the complete reviewed commit that contains the exported snapshot. The command verifies `git_commit_sha` through the [application API](https://coolify.io/docs/api/endpoints/applications/get-application-by-uuid). A moving branch/`HEAD` is rejected, so a newer push cannot substitute an unreviewed snapshot during deployment.
-6. Run the `Website` workflow on that commit on `main`, with `deploy` enabled. Alternatively, run the maintainer command below from a checkout containing that commit.
+1. Disable automatic and preview deployments. Cancel pre-existing queued jobs
+   before the first gated release and restrict dashboard/webhook access to operators
+   following this procedure. Direct administrator actions can bypass the gate.
+2. Pin Coolify's **Git commit SHA** to the complete reviewed commit containing the
+   export. The gate rejects moving branch/`HEAD` references.
+3. Run the `Website` workflow on that commit on `main` with `deploy` enabled, or
+   run the following maintainer commands from a checkout containing that commit.
 
 ```sh
 just collection deploy --snapshot apps/website/public/collection-snapshot.json --commit <40-character-reviewed-commit>
 just collection status
 ```
 
-The command checks that the snapshot is the currently authorised release and matches the committed file. It holds a database publisher lock while triggering the [deployment webhook](https://coolify.io/docs/core/automation/deploy-webhooks), waiting for the identified [deployment job](https://coolify.io/docs/api/endpoints/deployments/get-deployment-by-uuid) to finish at the pinned commit, and checking the served snapshot plus collection/institution pages in both languages. An already served copy of the same snapshot does not prove the new hosting job has finished.
+The command locks the publisher, checks the authorised snapshot against the
+committed file, triggers the production webhook and waits for the identified hosting
+job at the pinned commit. It then verifies the served snapshot and bilingual
+collection/institution pages. Finding an older served copy is not sufficient.
 
 Only successful verification updates `live_release_id` and `live_verified_at`. The desired release and live release remain distinct. A persistent pending marker protects against a crashed command or uncertain HTTP result. The configured origin sends `Cache-Control: no-store` for collection, institution and snapshot responses; configure any external proxy/CDN to honour that behaviour.
 
 ## Withdraw or replace content
 
-Withdrawal immediately invalidates the selected release in the ledger. It does not immediately remove an already served static page.
+Withdrawal immediately invalidates the selected release in the ledger. It does not
+immediately remove an already served static page. Confirm the intended release and
+removal scope before running the command; a pending deployment must be resolved first.
 
 ```sh
 just collection withdraw --id <release-id> --actor 'Actual operator' --authority 'Reason for withdrawal'
@@ -121,6 +147,18 @@ just website-build
 ```
 
 Withdrawing the desired record creates a new, explicitly approved empty release. Commit and merge that export, pin Coolify to the new commit, and run the gated deployment. Verify the empty collection and institution listings in both languages and check `just collection status` before reporting removal complete. A stale build or old export fails the gate. To revert website code, make a new commit that retains the current authorised export; do not use Coolify's direct image rollback.
+
+To remove one card and retain the other, use:
+
+```sh
+just collection withdraw --id <release-id> --item <item-id> --actor 'Actual operator' --authority 'Actual withdrawal reason'
+just collection export --output apps/website/public/collection-snapshot.json
+```
+
+Item-specific withdrawal checks surviving dependencies and preserves approved
+wording. If dependencies changed, it fails rather than approving changes silently.
+Omit `--item` to withdraw the whole release. Commit and deploy the replacement
+through the same gate and verify all current collection/institution surfaces.
 
 If an already withdrawn record needs to return, prepare a new candidate and record a new decision. The old decision remains immutable. Deleting the public export file is not a withdrawal operation.
 
@@ -146,7 +184,7 @@ A 180-second polling timeout is a failure requiring attention, not proof that th
 - `just collection-website-verify`: sequential synthetic populated/withdrawn builds in both languages. Temporarily replaces the public snapshot, restores it in `finally`, then rebuilds the original. Do not run concurrently with another website build.
 - The website workflow runs the populated/withdrawn checks and production-image HTTP checks. The full database verification also invokes the publication integration checks.
 
-The private publication tables are maintained by the command service using explicit SQL; they are deliberately outside the app-facing generated database type schemas. Slice 2 adds a bounded private authoring flow. Source-file upload, AI extraction, image publication and public dossier routes remain out of scope.
+The private publication tables are maintained by the command service using explicit SQL; they are deliberately outside the app-facing generated database type schemas. Private PDF/bundle preparation is implemented in research. Image publication, public dossier routes and publication of incomplete or private-document-backed records remain outside this public contract.
 
 ## Catalogue labels and existing decisions
 

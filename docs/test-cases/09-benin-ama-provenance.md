@@ -132,3 +132,7 @@ order.
 - identifying a precise British Museum storage location;
 - deciding which modern body should receive the object;
 - reintroducing explicit event-chain predicates.
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-2-benin-ama.sql) and [SQL assertions](../../supabase/tests/database/phase-2-benin-ama.test.sql).

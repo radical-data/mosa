@@ -1,79 +1,65 @@
-# Load real data through a transactional object-dossier importer
+# 012: Load real data through a transactional object-dossier importer
 
 ## Status
 
-Accepted
+Accepted; extended by packet v2/v3 and [local bundle preparation](017-local-research-bundles.md).
 
 ## Context
 
-Until now, every record in the database has been deterministic test data: fixtures with reserved UUID ranges, loaded by scripts, designed to be deleted and reinserted. Real research data has no entry path. Writing it into `seed.sql` or migrations would entangle content with schema history; copying the fixture pattern would require hand-assigning canonical UUIDs and would make repeat loads destructive.
-
-The project now needs to populate a database with actual object dossiers: an object, its external identifiers, the sources that document it, and a small set of summary claims (name, reported origin, current location, current holder). Comprehensive claim extraction — including AI-assisted extraction — is a later layer and must not block basic object registration.
-
-ADR 005 commits the project to preserving and versioning external records on ingest. Full artifact preservation (downloaded files, content hashes, object storage) is more infrastructure than the first population pass needs.
+Synthetic fixtures use reserved UUIDs and destructive reloads. Using that pattern
+for real research would make imports unsafe; putting research in migrations would
+entangle content with schema history. Initial registration needed summary dossiers
+without waiting for comprehensive extraction or source-file storage.
 
 ## Decision
 
-Real data enters the database through a small, transactional, idempotent importer that consumes validated "object dossier" packets. The importer is the only write path for real data; `seed.sql` and migrations remain schema-and-test-data only.
+Use one shared validator, identity resolver and transactional importer for canonical
+dossiers, called by the CLI and research acceptance. The
+[packet schema](../../schemas/object-dossier-packet.schema.json) defines supported writes.
 
-A packet is a versioned JSON document validated against `schemas/object-dossier-packet.schema.json`. It refers to records by symbolic local keys such as `item:hoa-hakananai-a` and never contains canonical UUIDs. PostgreSQL generates every canonical identifier via the existing `entities.create_*` functions and `insert ... returning id`.
+- PostgreSQL creates canonical identities. Packets use symbolic entity keys;
+  per-dataset bindings retain their canonical IDs across imports.
+- Resolve bindings first, then exact catalogue identifiers for items and exact
+  references for sources. Reject incompatible matches; names never merge identities.
+  The capture service binds explicitly reviewed existing items/institutions before
+  import. A common source URL does not prove object identity.
+- Guard each import with a transaction and per-dataset advisory lock. A successful
+  packet checksum replay is a no-op. Failed imports leave no partial dossier.
+- Require evidence and preserve attribution. Distinguish names, classifications,
+  descriptions, production, findspot, current location and custody; reject unsupported
+  predicates instead of substituting a convenient one.
+- Preserve bound claims/evidence on reimport. A changed packet is not a correction
+  operation; supersession needs a separate controlled write contract.
+- Keep fixtures/migrations separate from real research. Private packets stay outside
+  Git; reviewed bootstrap candidates do not constitute publication approval.
 
-Repeatability comes from bookkeeping tables in a new `ingestion` schema — `dataset`, `run`, and per-dataset bindings from local keys to canonical rows — not from deterministic UUIDs derived from keys.
+## Contract evolution
 
-Therefore:
+| Version | Change |
+| --- | --- |
+| v1 | Initial URL sources and summary claims: `has_name`, `made_at`, `found_at`, `located_at`, `held_by`; importer derives source `refers_to` links |
+| v2 | Adds `classified_as` and `described_as`, preserving catalogue wording rather than coercing it into a name |
+| v3 | Adds immutable source/evidence-version references and internal document references; preserved-version UUIDs coexist with symbolic entity keys |
 
-- fixtures remain deterministic test data and are unchanged by ingestion;
-- objects may exist before comprehensive claim extraction;
-- sources are registered before, or together with, the summary claims they evidence;
-- names and locations remain attributed claims, never columns on the object;
-- the first importer supports only `has_name`, `made_at`, `found_at`, `located_at`, optionally `held_by`, and source `refers_to` relationships; unsupported predicates are rejected, not silently accepted;
-- unknown "from" information must not be coerced into `made_at`; `made_at`, `found_at` and `located_at` remain semantically distinct;
-- every summary claim carries evidence with a locator, and an excerpt unless the evidence is visual or whole-document;
-- sources are URL-based for now: a `source_kind`, an absolute URL in `reference`, and a `retrieved_at` timestamp; evidence locators and excerpts preserve what the page said at retrieval time;
-- entity identity is resolved binding-first, then by exact external identifier or exact source reference; never by name matching; an identifier that points to an incompatible entity type fails the import instead of creating a duplicate;
-- each import is one database transaction guarded by a per-dataset advisory lock; a rerun of an already-succeeded packet checksum is a no-op;
-- AI-generated claims will later enter a staging area for review, not canonical tables directly; the packet schema is the intended output contract for such proposals.
-
-## Consequences
-
-### 2026-09-22 extension: preserve catalogue wording semantics
-
-Packet schema version 2 adds text-valued `classified_as` and `described_as` claims. The capture form distinguishes a name from an object type or description instead of coercing every catalogue label into `has_name`. Version 1 retains its original allowlist; existing packets remain valid and repeatable. Custody and identifiers may remain unresolved in research. The current public-card contract still requires an evidenced name, holder and identifier.
-
-### Benefits
-
-- Real data can be loaded, audited and reloaded without touching schema history or fixtures.
-- Canonical UUIDs stay database-generated; packets stay portable and reviewable.
-- Failed imports leave no partial dossiers; repeated imports create no duplicates.
-- The packet schema gives later AI extraction a strict, validated contract.
-- Private or sensitive packets can live outside the repository; only the schema and a synthetic example are committed.
-
-### Costs
-
-- A new `ingestion` schema and importer code must be maintained alongside fixtures.
-- Bindings must be kept consistent with canonical rows.
-- The strict predicate allowlist means richer dossiers need importer changes before they can be loaded.
-- Source preservation is deferred: a changed or vanished web page leaves only the recorded URL, retrieval timestamp, locator and excerpt.
-
-These costs are accepted because the alternative — hand-written SQL or fixture-style loads for real data — would either freeze content into migrations or normalise destructive reloads of canonical records.
-
-## Deferred work
-
-- **Artifact preservation** (ADR 005): an additive `ingestion.artifact_version` table recording downloaded files, content hashes, media types and storage URIs per source. No existing entities, sources, claims, evidence or UUIDs need to change when it arrives. Downloads happen outside the import transaction.
-- **Bootstrap rollout**: bootstrap packets for URL-backed dossiers live under `packets/bootstrap/` (`dataset.key = mosa-bootstrap`). Remaining fixture cases without absolute http(s) sources, and all non-allowlisted claims (provenance events, restitution, classifications, etc.), stay deferred. Staging/production apply: validate with `just db-import-bootstrap-check`, dry-run then `--apply` against a write role, confirm an immediate re-run reports a no-op. Do not load fixture SQL into staging or production.
-- **AI staging**: extracted claims land in staging tables for review before promotion to `knowledge.claim`.
+URL-only drafts produce v2; preserved-source drafts produce v3. Existing v1/v2
+checksums and replay semantics remain unchanged. A later capture cannot prove what
+an earlier unarchived URL contained. General provenance, restitution, materials,
+dimensions and corrections remain outside the summary importer.
 
 ## Alternatives considered
 
 | Alternative | Reason rejected |
 | --- | --- |
-| Load real data via `seed.sql` or migrations | Entangles content with schema history; production applies migrations only and forward-only. |
-| Extend the fixture pattern with reserved UUIDs | Fixture loads are delete-then-insert and hand-numbered; destructive and unscalable for canonical data. |
-| Derive deterministic UUIDs from packet keys | Couples canonical identity to packet spelling; renaming a key would fork the entity. Bindings decouple them. |
-| Allow arbitrary predicates in the first importer | Unvalidated claims would bypass the vocabulary discipline in `docs/predicates.md`. |
-| Match existing entities by name | Names are attributed claims and collide; silent merges are worse than reviewable duplicates. |
-| Build artifact storage now | URL plus retrieval timestamp plus evidence excerpts is sufficient for the first pass; storage is purely additive later. |
+| Real data in seeds/migrations or fixture-style reloads | Entangles content with schema changes and permits destructive reloads |
+| Canonical UUIDs derived from packet keys | Renaming a key would change identity; bindings decouple them |
+| Arbitrary predicates | Bypasses the validated write vocabulary |
+| Matching by name | Colliding attributed names would cause silent merges |
+| Source storage as an initial prerequisite | Delayed basic registration; v3 later added preservation without replacing identities |
 
-## Principle
+## Consequences
 
-> Real data enters through validated packets and one transaction. PostgreSQL owns every canonical identifier; packets own only symbolic keys; bindings connect the two.
+Imports are repeatable and atomic, but bindings and a strict write contract need
+maintenance. Richer authoring requires deliberate extensions; UI convenience cannot
+bypass identity, evidence or transaction rules. URL-only evidence remains vulnerable
+to upstream change, while preserved sources add storage/access responsibilities.
+Research acceptance and public-card eligibility remain separate.

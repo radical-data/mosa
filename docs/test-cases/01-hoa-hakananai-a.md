@@ -48,3 +48,7 @@ The item has one stable identity, while all names, descriptions and associations
 ## Result
 
 Pass. No schema change required.
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-1-cases.sql) and [SQL assertions](../../supabase/tests/database/phase-1-cases.test.sql).

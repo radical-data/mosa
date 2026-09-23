@@ -107,3 +107,7 @@ Mamari has one stable item identity. Seven event anchors represent two separate 
 ## Result
 
 Pass. Seven provisional event anchors represent the Mamari accounts without stored event ordering, without evidence-tuple grouping, and without inventing ownership or legal conclusions.
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-2-mamari.sql) and [SQL assertions](../../supabase/tests/database/phase-2-mamari.test.sql).

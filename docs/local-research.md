@@ -10,6 +10,33 @@ these commands. An agent's own model and search services still have their usual
 account, network and data-processing requirements. Local execution does not mean
 offline inference.
 
+## Preconditions
+
+Run commands from the repository root with the pinned tools installed. Use
+`mise exec --` before `just` if mise is not active. Local preparation requires no
+database login. Hosted import/review requires an invited researcher account and
+configured private Storage; see [operations](operations.md#research-access-and-storage).
+Obtain permission to preserve sources and to process them with any external service.
+
+## Manual source capture
+
+1. Sign in at `/research/sign-in` with an invited email-code account.
+2. For a URL-only draft, save a catalogue URL and working label at `/research`.
+   This records a reference; saving the URL does not fetch or archive the page.
+3. To preserve an original PDF, open `/research/sources`, enter its citation and
+   any known author/date, then upload it. The app checks the PDF type/signature.
+   The multipart request is bounded to 20,000,000 bytes,
+   including overhead. Reopen the private source to inspect/download the bytes.
+4. Select a saved source to prepare a record. Cite every relevant page/region,
+   including all regions needed for a cross-page description. A private internal
+   source reference is real evidence; do not fabricate a public URL for it.
+
+Uploading creates no canonical object and no publication decision. Sources and
+versions are owner-private. The interface can hide an unused source; referenced
+versions remain preserved. Interrupted upload retains its reservation for retry
+with the same file. The app does not provide hosted web capture, search or AI
+preparation actions; preserve catalogue responses with the local workflow below.
+
 ## Prepare a batch
 
 Use an ignored `research-local/` folder, outside the committed source code:
@@ -55,9 +82,8 @@ form supplies custody, attribution and catalogue identity separately.
 For PDF evidence use a locator for every region involved, for example
 `Page 16: Museo Britanico block, Rapa row, object column`. Separate multiple regions
 with newlines. PDF quotations require visual comparison with the original page;
-the importer does not claim to verify them automatically. For HTML/JSON it
-rebuilds readable text from the original bytes and rejects quotations absent from
-that text. It repeats this check when an imported draft is reviewed or accepted.
+the importer does not claim to verify them automatically. For HTML/JSON, import, review and acceptance reject quotations absent from text
+derived from the saved bytes.
 
 Add outcomes to `leads`, including unsuccessful research:
 
@@ -90,9 +116,7 @@ inside the folder; external paths and symlinks to outside files are rejected.
 1. Sign in to the research website and open **Research bundles**.
 2. Choose `bundle.mosa.json`, confirm permission to preserve the sources privately
    and select **Import for review**.
-3. Open each proposed record, compare it with the preserved source, and edit it.
-4. Confirm permission for the selected wording to enter research. Review the
-   proposal, confirm object identity and accept it when appropriate.
+3. [Review and accept](#review-and-accept-a-record) each proposed record.
 
 The import records the signed-in owner separately from the preparer named in the
 bundle. Preparation details are supplied assertions, not verified authorship.
@@ -121,32 +145,76 @@ accepted records nor publication decisions.
 - Submit proposals for human review. Do not give a research agent acceptance or
   publication credentials, and do not contact institutions without authorisation.
 
-## Deployment
+## Review and accept a record
 
-Apply all migrations, including `20260922200000_local_research_bundles.sql` and
-`20260922210000_retire_hosted_research.sql`, through the normal migration
-process before deploying the app. The retirement migration stops the old schedule
-and queue delivery while retaining historical research records. Reuse the existing
-researcher authentication,
-`CAPTURE_DATABASE_URL`, `DATABASE_SSL_CA`, `SUPABASE_URL` and private
-`SOURCE_STORAGE_KEY`. No new login or external-service credentials are required.
-The existing `research-sources` bucket remains private. Keep web/proxy upload
-limits above 20 MB plus form overhead. Storage credentials stay on the server.
+The manual and bundle routes use the same private draft and acceptance process.
 
-Local tests use an isolated database and a storage substitute. They do not prove
-hosted sign-in or storage configuration; verify one small real import after
-deployment before uploading larger batches.
+1. Copy a name, object type or description using its actual predicate. Retain the
+   original wording. Choose field evidence, an exact quotation or a whole-record
+   locator when the form permits it; do not invent a quotation.
+2. Select the catalogue namespace and copy the identifier exactly when known,
+   or leave both empty. Names of numbering systems are shared administrative
+   labels, separate from attributed institution names. Add/rename them at
+   `/research/catalogues`; generated namespace codes and existing identifiers
+   do not change when a catalogue is renamed.
+3. Add a holder only when the evidence establishes custody. Select an existing
+   institution deliberately and choose supporting naming evidence, or supply
+   separate evidence for a new institution/different wording. Custody evidence
+   must not manufacture an institution's name. Unknown speakers remain unknown;
+   a catalogue publisher is not automatically the holder.
+4. Save the draft and review its current revision. The app offers exact catalogue
+   matches and source-linked candidates. Confirm an existing item, create a
+   distinct item when permitted, or defer identity. A shared source URL alone
+   does not establish identity. Unresolved work can remain a draft.
+5. Confirm permission for the selected wording to enter the research reader and
+   accept the reviewed revision. The shared validator/importer writes canonical
+   records transactionally; the accepted dossier opens in the explorer.
 
-### Upload fails with HTTP 503
+Editing invalidates review. A stale tab cannot accept a changed revision. Retry
+returns the original acceptance. Rejection, deferral and removal do not write
+canonical claims; removal hides the draft while retaining private revision history.
+Acceptance covers the bounded proposal, not a general multi-claim review queue.
 
-Successful sign-in does not establish that Storage is configured. In the research
-application's Coolify environment, set `SOURCE_STORAGE_KEY` as a runtime-only
-secret, then redeploy the application. Use a backend secret key from the same
-Supabase project's **Settings → API Keys**; the publishable key used for sign-in
-does not grant private storage access. Keep the key out of chat, Git and build
-arguments. Modern secret keys use the `apikey` header only; legacy `service_role`
-keys are also supported. See [Supabase's key migration guide](https://supabase.com/docs/guides/getting-started/migrating-to-new-api-keys).
+Private draft labels, notes and interpretations do not silently enter canonical
+claims or the public snapshot. Accepted wording and evidence use the existing
+reader visibility; private files stay private. Do not confuse the unauthenticated
+reader surface with the owner-private preparation workspace.
 
-Application logs identify missing configuration or the Storage response status
-without recording credentials or source contents. Retry the same bundle after
-fixing configuration; existing drafts and edits are preserved.
+## Publication and corrections
+
+Research acceptance does not authorise publication. The current public pilot
+requires an evidenced name, holder, catalogue identifier and identified speakers;
+a classification-only or otherwise incomplete research record can be valid while
+remaining ineligible for a public card. See the [publication runbook](collection-publication.md)
+for accepted-draft preparation, approval, individual withdrawal and recovery.
+
+Accepted drafts are immutable. Changing a packet and reimporting bound keys does
+not correct accepted claims. Correction/supersession needs the explicit future
+operation in [the roadmap](roadmap.md#open-delivery-work), not handcrafted SQL or
+an interface that falsely reports an update.
+
+## Verification and known limitations
+
+Use `just research-bundle check <bundle-file>` before upload. A successful check
+verifies the bundle contract, not object identity or permission to publish.
+Review exact saved bytes and source scope before accepting a proposal.
+
+> `just test-db` resets the local database. Preserve local research and use a
+> disposable stack before running it; do not run reset suites concurrently.
+
+The database verification includes importer, capture, source and built HTTP
+regressions. Auth/Storage substitutes cover ownership, retries, interrupted imports,
+review revisions and synthetic acceptance. They do not verify production services.
+`RESEARCH_BUNDLE_TEST_FILE` can select a private packed bundle for the HTTP harness;
+ordinary CI uses synthetic inputs and never depends on private files or live museums.
+
+Source limitations observed in the local pilot:
+
+- A saved HTML response can omit details visible in a rendered page. Propose
+  only wording present in the saved copy; do not reconstruct an original response.
+- HTTP 403/404 responses and access challenges are failed captures, not evidence
+  that an object does not exist. Search snippets can remain leads, not preserved evidence.
+- Generic seed rows and several possible catalogue matches remain unresolved.
+  Repeated labels such as `Ua` and `Ua (2)` do not establish one identity.
+- A source can support a useful title while holder, identifier and seed-to-record
+  identity still need review. The PDF compilation and its CSV are one lineage.

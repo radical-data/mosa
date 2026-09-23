@@ -66,3 +66,7 @@ The possible 1825 event remains explicitly uncertain and is qualified by the sam
 - inferring unrecorded intermediate transfers;
 - legal or ethical assessment of the removal;
 - publication or restitution workflows.
+
+## Executable coverage
+
+- [Fixture](../../supabase/fixtures/phase-2-te-papa-moai-kavakava.sql) and [SQL assertions](../../supabase/tests/database/phase-2-te-papa-moai-kavakava.test.sql).

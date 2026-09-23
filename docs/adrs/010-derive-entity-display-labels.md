@@ -1,4 +1,4 @@
-# Do not store generic descriptive prose on entities
+# 010: Do not store generic descriptive prose on entities
 
 ## Status
 
@@ -6,13 +6,9 @@ Accepted
 
 ## Context
 
-The base entity table originally included `working_label` as a non-authoritative operational convenience.
-
-In practice, it became responsible for search, headings, links, sorting, fixture lookup, and event descriptions. `entities.entity.notes` developed a similar role: fixture and event prose appeared in the explorer and was sometimes queried by tests to determine whether historical meaning had been modeled.
-
-Both fields created a parallel, unsourced description layer. They allowed incomplete structured claims to be concealed by convenient prose, particularly for provenance events.
-
-This decision applies to any proposed replacement such as `operational_label`, `display_name`, `title`, `summary`, or a general-purpose entity-description field.
+`entities.entity.working_label` and `notes` began as operational conveniences but
+came to drive search, headings, sorting, fixture lookup and event descriptions.
+They became an unsourced description layer that concealed missing structured claims.
 
 ## Decision
 
@@ -34,23 +30,10 @@ Display labels and summaries are presentation projections. They are not entity i
 
 ## Consequences
 
-### Benefits
-
-- Modeling gaps remain visible.
-- Unsourced prose cannot become canonical accidentally.
-- User-facing descriptions remain reproducible from structured data.
-- Competency cases test the actual claim model.
-- Names retain attribution, evidence, language, and status.
-
-### Costs
-
-- Search and read projections become more complex.
-- Unnamed entities require generic fallbacks.
-- Choosing among multiple name claims requires deterministic presentation rules.
-- Generated event titles may change when their claims change.
-- Fixtures must reference entities by stable identifiers rather than labels.
-
-These costs are accepted because retaining generic prose fields would allow more schema, UI, and fixture behavior to depend on an unsourced escape hatch.
+Missing structure remains visible and display values remain reproducible, at the
+cost of more complex read projections and deterministic selection among name claims.
+Unnamed entities need generic fallbacks; event titles change with their claims.
+Fixtures must use stable IDs rather than labels.
 
 ## Alternatives considered
 
@@ -62,7 +45,3 @@ These costs are accepted because retaining generic prose fields would allow more
 | Store generated event titles                                         | Turns a disposable projection into canonical entity data.                             |
 | Use notes, `described_as`, or evidence excerpts as display fallbacks | Allows unsourced or context-specific prose to silently define entity meaning.         |
 | Automatically convert existing prose into claims                     | Would create assertions without establishing attribution or evidence.                 |
-
-## Principle
-
-> Entity rows store identity and subtype structure. Domain meaning is represented through attributed claims. User-facing descriptions are derived projections. Generic prose must not compensate for missing structure.
