@@ -20,38 +20,54 @@ export interface SourceIdentity {
   id: string;
 }
 
-// Sources are part of the bundle once, while each object is a small reviewable
-// dossier. The packet's source keys are exactly the bundle source keys.
+// A bundle may hold many sources for many objects. Keep only the sources this
+// dossier actually cites, so its reviewer sees the relevant evidence.
 export function proposalPacket(
   bundle: ResearchBundle,
   dossier: BundleDossier,
   identities: Map<string, SourceIdentity>,
   actor: string,
 ): DossierPacket {
-  const sources: PacketSource[] = bundle.sources.map((source) => {
-    const identity = identities.get(source.key);
-    if (!identity) throw new CaptureError(`Missing preserved source ${source.key}.`);
-    return {
-      key: source.key,
-      kind: source.contentType.startsWith("application/pdf") ? "document" : "institutional_record",
-      reference: `urn:mosa:source:${identity.source_id}`,
-      version: identity.id,
-      retrievedAt: source.retrievedAt,
-      citation: source.citation,
-      ...(source.url ? { publicUrl: source.url } : {}),
-      about: dossier.objects
-        .filter((object) =>
-          dossier.claims.some(
-            (claim) =>
-              claim.subject === object.key &&
-              (Array.isArray(claim.evidence) ? claim.evidence : [claim.evidence]).some(
-                (evidence) => evidence.source === source.key,
-              ),
-          ),
-        )
-        .map((object) => object.key),
-    };
-  });
+  const citedSources = new Set<string>();
+  for (const object of dossier.objects)
+    for (const identifier of object.externalIdentifiers ?? [])
+      if (identifier.source) citedSources.add(identifier.source);
+  for (const claim of dossier.claims) {
+    citedSources.add(claim.subject);
+    if (claim.object) citedSources.add(claim.object);
+    for (const evidence of Array.isArray(claim.evidence) ? claim.evidence : [claim.evidence])
+      citedSources.add(evidence.source);
+  }
+  for (const caseRecord of dossier.restitutionCases)
+    for (const document of caseRecord.documents) citedSources.add(document.source);
+  const sources: PacketSource[] = bundle.sources
+    .filter((source) => citedSources.has(source.key))
+    .map((source) => {
+      const identity = identities.get(source.key);
+      if (!identity) throw new CaptureError(`Missing preserved source ${source.key}.`);
+      return {
+        key: source.key,
+        kind: source.contentType.startsWith("application/pdf")
+          ? "document"
+          : "institutional_record",
+        reference: `urn:mosa:source:${identity.source_id}`,
+        version: identity.id,
+        retrievedAt: source.retrievedAt,
+        citation: source.citation,
+        ...(source.url ? { publicUrl: source.url } : {}),
+        about: dossier.objects
+          .filter((object) =>
+            dossier.claims.some(
+              (claim) =>
+                claim.subject === object.key &&
+                (Array.isArray(claim.evidence) ? claim.evidence : [claim.evidence]).some(
+                  (evidence) => evidence.source === source.key,
+                ),
+            ),
+          )
+          .map((object) => object.key),
+      };
+    });
   const packet: DossierPacket = {
     schemaVersion: 4,
     dataset: {

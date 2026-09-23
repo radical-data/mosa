@@ -59,11 +59,18 @@ content. Give a changed batch a new UUID. Captured source entries include their
 filename, citation, URL, retrieval date, content type and checksum. Improve the
 citation and author/date metadata without changing the preserved file.
 
-For complete ontology preparation, add one entry per object to `dossiers`. A
-dossier can contain multiple claims, related agents and places, provenance events
-and restitution case administration. Each dossier has exactly one object and all
+For complete ontology preparation, add an entry to `dossiers` for each object
+and source account you want reviewed together. A dossier can contain multiple
+claims, related agents and places, provenance events and restitution case
+administration. Each dossier has exactly one object and all
 six arrays: `objects`, `agents`, `places`, `events`, `claims` and
 `restitutionCases`. The importer fills in the preserved sources and dataset key.
+Prepare one source per dossier by default, even when a batch contains many
+sources. The importer shows a reviewer only sources cited by that dossier.
+Combine sources in one dossier only when its claims need to be reviewed together;
+the review page identifies each source and Publish covers the complete dossier.
+Separate reviewed dossiers can add evidence to the same object when identity is
+established.
 
 ```json
 {
