@@ -2,5 +2,15 @@
   "name": "@mosa/public-collection",
   "version": "0.1.0",
   "private": true,
-  "exports": "./index.ts"
+  "exports": {
+    ".": "./index.ts",
+    "./candidate": "./candidate.ts",
+    "./dossier": "./dossier.ts"
+  },
+  "dependencies": {
+    "@mosa/object-dossier": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/pg": "catalog:"
+  }
 }

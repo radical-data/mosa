@@ -32,8 +32,10 @@ const drafts = await researchTransaction(
   Astro.locals.researcher,
   async (c) =>
     (
-      await c.query<Draft>(
-        "select * from capture.draft where owner_id=$1 and status<>'deleted' order by updated_at desc limit 100",
+      await c.query<Draft & { public_visible: boolean | null }>(
+        `select d.*,p.visible public_visible from capture.draft d
+         left join publication.published_record p on p.item_id=d.item_id
+         where d.owner_id=$1 and d.status<>'deleted' order by d.updated_at desc limit 100`,
         [Astro.locals.researcher],
       )
     ).rows,
@@ -45,7 +47,7 @@ const drafts = await researchTransaction(
   <p><a href="/research/bundles">Import or review research bundles</a> · <a href="/research/sources">Save or inspect a private document</a></p>
   <p class="lede">
     Start with a catalogue page. Record what it says, confirm the object, then
-    review your evidence. A maintainer decides what can appear on the public
+    review your evidence. Publishing a reviewed draft puts it on the public
     website.
   </p>
   <form method="post" class="panel">
@@ -78,7 +80,7 @@ const drafts = await researchTransaction(
           <a href={"kind" in d.content && d.content.kind === "dossier" ? `/research/dossiers/${d.id}` : `/research/${d.id}`}>
             {d.content.label || d.content.name || d.content.url}
           </a>{" "}
-          <span class="badge">{d.status}</span>
+          <span class="badge">{d.status === "accepted" ? d.public_visible === true ? "Published" : d.public_visible === false ? "Hidden" : "Accepted research" : d.status === "review" ? "Ready to publish" : d.status}</span>
         </li>
       ))
     }

@@ -154,15 +154,17 @@ export async function verifyBundleHttp(
     (await upload({ ...bundle, notes: "Changed content under the same ID" })).status,
     400,
   );
-  for (let i = 0; i < 2; i++)
-    assert.equal(
-      (await request(location, "allowed", { action: "accept", revision: "2", identity: "new" }))
-        .status,
-      303,
-    );
+  const incomplete = await request(location, "allowed", {
+    action: "accept",
+    revision: "2",
+    identity: "new",
+    publishConsent: "yes",
+  });
+  assert.equal(incomplete.status, 200);
+  assert((await incomplete.text()).includes("Add the missing public wording and evidence"));
   assert.equal(
     (await db.query("select 1 from capture.acceptance where draft_id=$1", [draft.id])).rowCount,
-    1,
+    0,
   );
   assert.equal((await upload(bundle)).status, 303);
   // A different authorised researcher owns an independent import of the same bundle.
@@ -308,7 +310,7 @@ export async function verifyBundleHttp(
   ).rows[0];
   const fullPage = await request(`/research/dossiers/${fullDraftId}`);
   assert.equal(fullPage.status, 200);
-  assert.match(await fullPage.text(), /Accept and next/);
+  assert.match(await fullPage.text(), /Publish and next/);
   assert.equal(
     (
       await request(`/research/dossiers/${fullDraftId}`, "allowed", {
@@ -328,6 +330,14 @@ export async function verifyBundleHttp(
     )
   ).rows[0];
   assert(acceptedFull?.item_id);
+  assert.equal(
+    (
+      await db.query("select 1 from publication.published_record where item_id=$1", [
+        acceptedFull.item_id,
+      ])
+    ).rowCount,
+    1,
+  );
   assert.equal(
     (
       await db.query("select count(*) from restitution.case_item where item_id=$1", [

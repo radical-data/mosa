@@ -27,6 +27,8 @@ if (Astro.request.method === "POST") {
   try {
     const requestedAction = String(form.get("action"));
     const action = requestedAction === "catalogues" ? "save" : requestedAction;
+    if (action === "accept" && form.get("publishConsent") !== "yes")
+      throw new CaptureError("Confirm that the reviewed card may appear on the public website.");
     await researchTransaction(actor, async (client) => {
       const previous = await getDraft(client, actor, id);
       if (["save", "review", "defer"].includes(action) && form.has("url")) {
@@ -66,12 +68,18 @@ if (Astro.request.method === "POST") {
         : "The change could not be saved. Please try again. No partial import was committed.";
   }
 }
-const { draft, matches, agents, catalogues } = await researchTransaction(
+const { draft, matches, agents, catalogues, publicationVisible } = await researchTransaction(
   actor,
   async (client) => {
     const draft = await getDraft(client, actor, id);
     return {
       draft,
+      publicationVisible: draft.item_id
+        ? (await client.query<{ visible: boolean }>(
+            "select visible from publication.published_record where item_id=$1",
+            [draft.item_id],
+          )).rows[0]?.visible ?? null
+        : null,
       matches:
         draft.status === "review"
           ? await identityMatches(client, draft.content)
@@ -116,8 +124,8 @@ const selectedCitations = {
     Copy the source’s wording, identify what it describes, and leave unresolved
     research open. Saving a draft does not publish anything.
   </p>
-  {c.preparationId && <p>Prepared with {c.preparationModel}. Review every quotation and interpretation before acceptance. Human edits are retained in the draft history.</p>}
-  {c.bundleId && <p>Imported from a <a href={`/research/bundles/${c.bundleId}`}>local research bundle</a>. Review its preparation details, source and unresolved questions before accepting this record.</p>}
+  {c.preparationId && <p>Prepared with {c.preparationModel}. Review every quotation and interpretation before publishing. Human edits are retained in the draft history.</p>}
+  {c.bundleId && <p>Imported from a <a href={`/research/bundles/${c.bundleId}`}>local research bundle</a>. Review its preparation details, source and unresolved questions before publishing this record.</p>}
   {error && (
     <div class="notice" role="alert">
       {errorField ? <a href={`#${errorField}`}>{error}</a> : error}
@@ -125,13 +133,11 @@ const selectedCitations = {
   )}
   {draft.status === "accepted" ? (
     <section class="panel">
-      <h2>Saved to the research collection</h2>
+      <h2>{publicationVisible === true ? "Published in the collection" : publicationVisible === false ? "Hidden from the public collection" : "Accepted research"}</h2>
       <p>
         <a href={`/entities/${draft.item_id}`}>Open the research record</a>
       </p>
-      <p>
-        A maintainer separately reviews what can appear on the public website.
-      </p>
+      <p>{publicationVisible === true ? "The reviewed public wording is on the website." : publicationVisible === false ? "A maintainer has hidden this object from the public website." : "This older accepted record has no public projection. Ask a maintainer to check it."}</p>
       {gaps.length > 0 && (
         <>
           <h3>Before a public card can be prepared</h3>
@@ -234,8 +240,7 @@ const selectedCitations = {
           {gaps.length > 0 && (
             <div class="notice">
               <p>
-                This can be accepted into research, but the current public card
-                requires more information:
+                Publishing requires more information:
               </p>
               <ul>
                 {gaps.map((gap) => (
@@ -274,9 +279,10 @@ const selectedCitations = {
                 </span>
               </label>
             )}
+            <label><input type="checkbox" name="publishConsent" value="yes" /> I approve this wording and citation for public display</label>
             <div class="actions">
               <button type="submit" name="action" value="accept">
-                Accept into research collection
+                Publish to public collection
               </button>
               <button type="submit" name="action" value="defer" formnovalidate>
                 Leave identity unresolved
@@ -299,7 +305,7 @@ const selectedCitations = {
             <label for="sourceRegions">Source regions, one per line</label>
             <textarea id="sourceRegions" name="sourceRegions" placeholder={c.sourceMediaType === "application/pdf" ? "Page 12: table, row 3, object column" : "Catalogue: object description"}>{c.sourceRegions}</textarea>
             <p>Include every region used, including a continuation on another page. Keep copied wording separate from inherited or interpreted information.</p>
-            <label for="researchConsent"><input id="researchConsent" type="checkbox" name="researchConsent" value="yes" checked={c.researchConsent === "yes"} /> I confirm that the selected wording and citation may enter the research collection.</label>
+            <label for="researchConsent"><input id="researchConsent" type="checkbox" name="researchConsent" value="yes" checked={c.researchConsent === "yes"} /> I confirm that the selected wording and citation may appear on the public website when I publish.</label>
           </> : <>
             <label for="url">Catalogue URL</label>
             <input id="url" type="url" name="url" required value={c.url} />

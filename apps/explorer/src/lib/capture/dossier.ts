@@ -4,6 +4,7 @@ import type { DossierPacket } from "@mosa/object-dossier/packet";
 import { validatePacket } from "@mosa/object-dossier/validate";
 import type { ClientBase } from "pg";
 import { CaptureError, uuid } from "./model.js";
+import { publishAcceptedDraft } from "./publish.js";
 
 export interface DossierContent {
   kind: "dossier";
@@ -184,5 +185,6 @@ export async function changeDossierDraft(
     "insert into capture.revision(draft_id,revision,actor_id,status,content) values($1,$2,$3,$4,$5)",
     [id, updated.revision, actor, updated.status, updated.content],
   );
+  if (action === "accept" && itemId) await publishAcceptedDraft(client, id, itemId);
   return updated;
 }

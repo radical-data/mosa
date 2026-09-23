@@ -260,18 +260,30 @@ async function verify() {
     const review = await request(location);
     assert((await review.text()).includes("Confirm the object identity"));
     assert.equal(
-      (await request(location, "allowed", { revision: "3", action: "accept", identity: "new" }))
-        .status,
+      (
+        await request(location, "allowed", {
+          revision: "3",
+          action: "accept",
+          identity: "new",
+          publishConsent: "yes",
+        })
+      ).status,
       303,
     );
     assert.equal(
-      (await request(location, "allowed", { revision: "3", action: "accept", identity: "new" }))
-        .status,
+      (
+        await request(location, "allowed", {
+          revision: "3",
+          action: "accept",
+          identity: "new",
+          publishConsent: "yes",
+        })
+      ).status,
       303,
     );
     const accepted = await request(location);
     const acceptedPage = await accepted.text();
-    assert(acceptedPage.includes("Saved to the research collection"));
+    assert(acceptedPage.includes("Published in the collection"));
     assert(!acceptedPage.includes("PRIVATE-HTTP-NOTE"));
     const result = await db.query("select item_id from capture.draft where owner_id=$1", [actor]);
     assert.equal(result.rowCount, 1);
@@ -323,8 +335,14 @@ async function verify() {
     assert(citationReview.includes("SECOND-CITATION-WORDING"));
     assert(citationReview.includes(`value="${citation}"`));
     assert.equal(
-      (await request(nextLocation, "allowed", { revision: "2", action: "accept", identity: "new" }))
-        .status,
+      (
+        await request(nextLocation, "allowed", {
+          revision: "2",
+          action: "accept",
+          identity: "new",
+          publishConsent: "yes",
+        })
+      ).status,
       303,
     );
     const acceptance = (
@@ -366,26 +384,21 @@ async function verify() {
         .status,
       303,
     );
-    for (let i = 0; i < 2; i++)
-      assert.equal(
-        (
-          await request(documentLocation, "allowed", {
-            action: "accept",
-            revision: "2",
-            identity: "new",
-          })
-        ).status,
-        303,
-      );
-    const documentEvidence = await db.query(
-      `select e.locator from knowledge.claim_evidence e join knowledge.claim c on c.id=e.claim_id
-      where e.source_version_id=$1 and c.predicate='described_as'`,
-      [uploadId],
-    );
-    assert.equal(documentEvidence.rowCount, 1);
-    assert.match(documentEvidence.rows[0].locator, /Page 17: last row\nPage 18: first row/);
-    assert(
-      (await (await request(documentLocation)).text()).includes("Saved to the research collection"),
+    const incomplete = await request(documentLocation, "allowed", {
+      action: "accept",
+      revision: "2",
+      identity: "new",
+      publishConsent: "yes",
+    });
+    assert.equal(incomplete.status, 200);
+    assert((await incomplete.text()).includes("Add the missing public wording and evidence"));
+    assert.equal(
+      (
+        await db.query("select status from capture.draft where id=$1", [
+          documentLocation.split("/").at(-1),
+        ])
+      ).rows[0].status,
+      "review",
     );
 
     await verifyBundleHttp(db, origin, actor, outsider, (count) => {
