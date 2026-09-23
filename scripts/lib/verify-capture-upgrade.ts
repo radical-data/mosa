@@ -105,9 +105,11 @@ export async function verifyCaptureUpgrade(client: Client) {
     selections[0].itemId,
   );
   assert.equal(retained.records.length, 1);
+  assert("identifier" in retained.records[0]);
   assert.equal(retained.records[0].identifier.label, undefined);
   await validateRelease(client, retained.releaseId);
   const newlyPrepared = await prepare(client, selections[1]);
+  assert("identifier" in newlyPrepared.records[0]);
   assert(newlyPrepared.records[0].identifier.label?.endsWith(" updated"));
   assert.equal(
     (

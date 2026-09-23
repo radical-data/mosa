@@ -163,6 +163,7 @@ async function verify() {
     ).rows[0].selection;
     const publication = await prepare(client, selected);
     assert.equal(publication.records[0].id, accepted.item_id);
+    assert("identifier" in publication.records[0]);
     assert.equal(publication.records[0].identifier.label, "Renamed test catalogue");
     assert.equal(selected.catalogue, catalogue.namespace);
     assert(!JSON.stringify(publication).includes("PRIVATE-DRAFT-NOTE"));

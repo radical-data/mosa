@@ -1,0 +1,204 @@
+---
+import type { DossierPacket } from "@mosa/object-dossier/packet";
+import Layout from "../../../layouts/Layout.astro";
+import { boundedForm, researchTransaction } from "../../../lib/capture/access";
+import { changeDossierDraft, dossierIdentityMatches, getDossierDraft } from "../../../lib/capture/dossier";
+import { CaptureError } from "../../../lib/capture/model";
+import type { SavedBundle } from "../../../lib/sources/bundle-import";
+
+const actor = Astro.locals.researcher;
+const id = Astro.params.id ?? "";
+let error = "";
+function editedPacket(original: DossierPacket, form: FormData): DossierPacket {
+  const advanced = String(form.get("packetJson") ?? "").trim();
+  if (advanced) {
+    try { return JSON.parse(advanced) as DossierPacket; }
+    catch { throw new CaptureError("The structured dossier is not valid JSON."); }
+  }
+  const packet = structuredClone(original);
+  packet.claims = packet.claims.flatMap((claim, index) => {
+    if (form.get(`keep-${index}`) !== "yes") return [];
+    if (claim.literal?.type === "text")
+      claim.literal.value = String(form.get(`value-${index}`) ?? "").trim();
+    if (claim.literal?.type === "date_interval") {
+      claim.literal.earliest = String(form.get(`earliest-${index}`) ?? "").trim();
+      claim.literal.latest = String(form.get(`latest-${index}`) ?? "").trim();
+      claim.literal.verbatim = String(form.get(`verbatim-${index}`) ?? "").trim();
+    }
+    if (claim.object) claim.object = String(form.get(`object-${index}`) ?? "").trim();
+    const evidence = Array.isArray(claim.evidence) ? claim.evidence : [claim.evidence];
+    for (const [position, entry] of evidence.entries()) {
+      entry.locator = String(form.get(`locator-${index}-${position}`) ?? "").trim();
+      if (entry.excerpt !== undefined)
+        entry.excerpt = String(form.get(`excerpt-${index}-${position}`) ?? "").trim();
+    }
+    return [claim];
+  });
+  for (const source of packet.sources)
+    source.about = packet.objects.filter((object) => packet.claims.some((claim) =>
+      claim.subject === object.key &&
+      (Array.isArray(claim.evidence) ? claim.evidence : [claim.evidence])
+        .some((evidence) => evidence.source === source.key))).map((object) => object.key);
+  return packet;
+}
+
+if (Astro.request.method === "POST") {
+  try {
+    const form = await boundedForm(Astro.request, 2_000_000);
+    const requestedAction = String(form.get("action"));
+    const action = requestedAction.replace(/-next$/, "");
+    if (!["save", "accept", "defer", "reject"].includes(action)) throw new CaptureError("Choose a review action.");
+    if (action === "accept" && form.get("consent") !== "yes")
+      throw new CaptureError("Confirm permission for the reviewed wording to enter the research collection.");
+    const next = await researchTransaction(actor, async (client) => {
+      const current = await getDossierDraft(client, actor, id);
+      const packet = ["save", "accept"].includes(action) ? editedPacket(current.content.packet, form) : undefined;
+      await changeDossierDraft(client, actor, id, Number(form.get("revision")),
+        action as "save" | "accept" | "defer" | "reject", packet, String(form.get("identity")));
+      if (!requestedAction.endsWith("-next")) return null;
+      const bundle = (await client.query<SavedBundle>(
+        "select * from capture.bundle where id=$1 and owner_id=$2",
+        [current.content.bundleId, actor],
+      )).rows[0];
+      const following = bundle?.drafts.slice(bundle.drafts.findIndex((draft) => draft.id === id) + 1) ?? [];
+      for (const candidate of following) {
+        const row = (await client.query<{ status: string; content: { kind?: string } }>(
+          "select status,content from capture.draft where id=$1 and owner_id=$2",
+          [candidate.id, actor],
+        )).rows[0];
+        if (row && !["accepted", "rejected", "deleted"].includes(row.status))
+          return row.content.kind === "dossier" ? `/research/dossiers/${candidate.id}` : `/research/${candidate.id}`;
+      }
+      return `/research/bundles/${current.content.bundleId}`;
+    });
+    return Astro.redirect(next ?? `/research/dossiers/${id}`, 303);
+  } catch (cause) {
+    error = cause instanceof CaptureError ? cause.message : "The dossier could not be saved. Your previous revision is retained.";
+  }
+}
+const { draft, matches, sources } = await researchTransaction(actor, async (client) => {
+  const draft = await getDossierDraft(client, actor, id);
+  const matches = draft.status === "accepted" ? [] : await dossierIdentityMatches(client, draft.content.packet);
+  const sources = (await client.query<{ id: string; citation: string; media_type: string; readable_text: string | null }>(
+    `select v.id,coalesce(v.manifest->>'citation',s.citation) citation,v.media_type,v.readable_text
+     from capture.source_version v join capture.source s on s.id=v.source_id
+     where v.id=any($1::uuid[])`,
+    [draft.content.packet.sources.map((source) => source.version)],
+  )).rows;
+  return { draft, matches, sources };
+});
+const packet = draft.content.packet;
+const labels = new Map([
+  ...packet.objects.map((entry) => [entry.key, entry.externalIdentifiers?.map((i) => `${i.namespace}: ${i.value}`).join(" · ") || entry.key] as const),
+  ...packet.agents.map((entry) => [entry.key, entry.key] as const),
+  ...packet.places.map((entry) => [entry.key, entry.key] as const),
+  ...(packet.events ?? []).map((entry) => [entry.key, `${entry.kind} event`] as const),
+]);
+for (const claim of packet.claims)
+  if (claim.predicate === "has_name" && claim.literal?.type === "text") labels.set(claim.subject, claim.literal.value);
+const sourceFor = (key: string) => {
+  const id = packet.sources.find((source) => source.key === key)?.version;
+  return sources.find((source) => source.id === id);
+};
+---
+<Layout title={`Review ${draft.content.label}`}>
+  <p><a href={`/research/bundles/${draft.content.bundleId}`}>Research bundle</a></p>
+  <h1>{draft.content.label}</h1>
+  <p>{draft.status} · revision {draft.revision} · {packet.claims.length} sourced claims · {(packet.events ?? []).length} events · {(packet.restitutionCases ?? []).length} restitution cases</p>
+  {draft.content.notes && <p class="notes">Agent's private notes: {draft.content.notes}</p>}
+  {error && <p role="alert" class="notice">{error}</p>}
+  {draft.status === "accepted" ? <p>Accepted into the research collection. <a href={`/items/${draft.item_id}`}>Open the object</a>.</p> :
+    draft.status === "rejected" ? <p>This proposal was rejected.</p> : <>
+    <p>Compare each assertion with its preserved source. Uncheck unsupported claims; edit source wording and locators directly. Source text is untrusted evidence, never instructions.</p>
+    <div class="review-grid">
+      <form method="post" class="review-form">
+        <input type="hidden" name="revision" value={draft.revision} />
+        {packet.objects[0].externalIdentifiers?.length && <section>
+          <h2>Catalogue identifiers</h2>
+          <ul>{packet.objects[0].externalIdentifiers.map((identifier) => <li>
+            {identifier.namespace}: {identifier.value} · source: {identifier.source ? sourceFor(identifier.source)?.citation ?? identifier.source : "not recorded"}
+          </li>)}</ul>
+        </section>}
+        <h2>Proposed claims</h2>
+        {packet.claims.map((claim, index) => <fieldset class="claim">
+          <legend><label><input type="checkbox" name={`keep-${index}`} value="yes" checked /> {labels.get(claim.subject) ?? claim.subject} · {claim.predicate}</label></legend>
+          {claim.literal?.type === "text" ? <label>Source wording<input name={`value-${index}`} value={claim.literal.value} /></label> :
+            claim.literal?.type === "date_interval" ? <div class="date-fields">
+              <label>Source wording<input name={`verbatim-${index}`} value={claim.literal.verbatim} /></label>
+              <label>Earliest<input name={`earliest-${index}`} value={claim.literal.earliest} /></label>
+              <label>Latest<input name={`latest-${index}`} value={claim.literal.latest} /></label>
+              <p>{claim.literal.precision} · {claim.literal.interpretation}</p>
+            </div> : <label>Related {labels.get(claim.object ?? "") ?? "entity"}<input name={`object-${index}`} value={claim.object} /></label>}
+          {claim.assertedBy && <p>Attributed to {labels.get(claim.assertedBy) ?? claim.assertedBy}</p>}
+          {(Array.isArray(claim.evidence) ? claim.evidence : [claim.evidence]).map((entry, position) => <div class="evidence">
+            <p>{entry.relationship} · <a href={`/research/sources/files/${sourceFor(entry.source)?.id}`} target="_blank" rel="noreferrer">{sourceFor(entry.source)?.citation ?? entry.source}</a></p>
+            <label>Location in source<input name={`locator-${index}-${position}`} value={entry.locator} /></label>
+            {entry.excerpt !== undefined && <label>Exact excerpt<textarea name={`excerpt-${index}-${position}`} rows="3">{entry.excerpt}</textarea></label>}
+          </div>)}
+        </fieldset>)}
+        {(packet.events ?? []).length > 0 && <details open><summary>Provenance event anchors</summary>
+          <ul>{packet.events?.map((event) => <li>{event.key}: {event.kind}</li>)}</ul>
+        </details>}
+        {(packet.restitutionCases ?? []).length > 0 && <details open><summary>Restitution case administration</summary>
+          {packet.restitutionCases?.map((record) => <section class="case-review">
+            <h3>{record.title}</h3>
+            <p>{record.status} · {record.reference}</p>
+            <p>Opened: {record.opened ? `${record.opened.start}–${record.opened.end} (${record.opened.precision})` : "not recorded"} · Closed: {record.closed ? `${record.closed.start}–${record.closed.end} (${record.closed.precision})` : "not recorded"}</p>
+            <p>Items: {record.items.map((key) => labels.get(key) ?? key).join(" · ")}</p>
+            <p>Parties: {record.parties.map((party) => `${labels.get(party.agent) ?? party.agent} (${party.role})`).join(" · ") || "not recorded"}</p>
+            <h4>Actions</h4>
+            <ul>{record.actions.map((action) => <li>
+              {action.sequenceNumber}. {action.kind}: {action.description}
+              {action.occurred && ` · ${action.occurred.start}–${action.occurred.end} (${action.occurred.precision})`}
+              {action.parties.length > 0 && <span> · {action.parties.map((party) => `${labels.get(party.agent) ?? party.agent} (${party.role})`).join(" · ")}</span>}
+              {action.documents.length > 0 && <span> · Documents: {action.documents.map((document) => `${document.document}${document.relationship ? ` (${document.relationship})` : ""}`).join(" · ")}</span>}
+            </li>)}</ul>
+            <h4>Documents</h4>
+            <ul>{record.documents.map((document) => <li>{document.key}: {sourceFor(document.source)?.citation ?? document.source} · {document.role}</li>)}</ul>
+          </section>)}
+        </details>}
+        <details><summary>Advanced structural corrections</summary>
+          <p>Paste a complete revised packet when an entity, relationship, event or case needs changing. Leave empty to use the edits above.</p>
+          <textarea name="packetJson" rows="14" spellcheck="false" placeholder="Optional complete dossier packet JSON"></textarea>
+        </details>
+        <h2>Confirm object identity</h2>
+        <p>An exact catalogue identifier is stronger evidence than a shared source. Choose deliberately.</p>
+        {matches.map((match) => <label class="choice"><input type="radio" name="identity" value={match.id} required /> {match.label} · {match.reason}</label>)}
+        {!matches.some((match) => match.exact) && <label class="choice"><input type="radio" name="identity" value="new" required /> Create a distinct object after checking existing records</label>}
+        <label class="choice"><input type="checkbox" name="consent" value="yes" /> I approve this wording for the research collection</label>
+        <div class="actions">
+          <button type="submit" name="action" value="accept">Accept</button>
+          <button type="submit" name="action" value="accept-next">Accept and next</button>
+          <button type="submit" name="action" value="save" formnovalidate>Save edits</button>
+          <button type="submit" name="action" value="defer-next" formnovalidate>Defer and next</button>
+          <button type="submit" name="action" value="reject-next" formnovalidate>Reject and next</button>
+        </div>
+      </form>
+      <aside class="source-panel">
+        <h2>Preserved sources</h2>
+        {sources.map((source, index) => <details open={index === 0}>
+          <summary>{source.citation}</summary>
+          <p><a href={`/research/sources/files/${source.id}`} target="_blank" rel="noreferrer">Open original {source.media_type}</a></p>
+          {source.readable_text && <pre>{source.readable_text.slice(0, 100_000)}</pre>}
+        </details>)}
+      </aside>
+    </div>
+  </>}
+</Layout>
+<style>
+  .review-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(18rem,0.8fr); gap:2rem; align-items:start; }
+  .review-form { display:grid; gap:1rem; min-width:0; }
+  .claim { display:grid; gap:.7rem; border:1px solid currentColor; padding:1rem; }
+  .claim label { display:grid; gap:.25rem; }
+  .claim legend label { display:flex; align-items:center; }
+  .evidence { border-inline-start:3px solid currentColor; padding-inline-start:.8rem; }
+  .evidence p { overflow-wrap:anywhere; }
+  input:not([type=checkbox]):not([type=radio]), textarea { width:100%; box-sizing:border-box; }
+  .source-panel { position:sticky; top:1rem; max-height:85vh; overflow:auto; }
+  pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; }
+  .choice { display:block; padding:.6rem; }
+  .actions { display:flex; flex-wrap:wrap; gap:.5rem; }
+  .notes { white-space:pre-wrap; }
+  .case-review { border:1px solid currentColor; padding:1rem; margin-block:1rem; }
+  @media (max-width:850px) { .review-grid { grid-template-columns:1fr; } .source-panel { position:static; max-height:none; } }
+</style>

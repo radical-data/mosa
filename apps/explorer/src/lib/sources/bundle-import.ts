@@ -1,7 +1,9 @@
 import type { PoolClient } from "pg";
+import { createDossierDraft } from "../capture/dossier.js";
 import { CaptureError, type Content, normaliseContent } from "../capture/model.js";
 import { createDraft } from "../capture/store.js";
 import { bundleRecordId, type CheckedBundle } from "./bundle.js";
+import { proposalPacket } from "./dossier-proposal.js";
 import type { SourceStorage } from "./storage.js";
 import type { SourceVersion } from "./store.js";
 
@@ -137,6 +139,27 @@ export async function importBundle(
         } as Content),
       );
       drafts.push({ key: candidate.key, id: draft.id });
+    }
+    const identities = new Map(
+      reserved.versions.map((version, index) => [
+        bundle.sources[index].key,
+        { source_id: version.source_id, id: version.id },
+      ]),
+    );
+    for (const dossier of bundle.dossiers ?? []) {
+      const draft = await createDossierDraft(
+        c,
+        actor,
+        bundleRecordId(actor, bundle.id, `dossier:${dossier.key}`),
+        {
+          kind: "dossier",
+          bundleId: bundle.id,
+          label: dossier.label,
+          notes: dossier.notes,
+          packet: proposalPacket(bundle, dossier, identities, actor),
+        },
+      );
+      drafts.push({ key: dossier.key, id: draft.id });
     }
     return (
       await c.query<SavedBundle>(

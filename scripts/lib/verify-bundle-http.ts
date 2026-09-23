@@ -180,6 +180,172 @@ export async function verifyBundleHttp(
   assert.notEqual(otherDraft, draft.id);
   await db.query("update capture.researcher set enabled=false where user_id=$1", [outsider]);
   assert.equal((await request(`/research/bundles/${bundle.id}`, "outsider")).status, 403);
+  const fullBytes = Buffer.from(
+    "<h1>Synthetic wooden figure</h1><p>Synthetic museum. Moved to Rapa Nui in 1900. A return request was recorded.</p>",
+  );
+  const fullSource = {
+    ...source,
+    key: "full-source",
+    filename: "full.html",
+    url: `https://example.org/full-${randomUUID()}`,
+    sha256: createHash("sha256").update(fullBytes).digest("hex"),
+    data: fullBytes.toString("base64"),
+  };
+  const excerpt = (key: string, locator: string, quote: string) => ({
+    key: `evidence:${key}`,
+    source: "full-source",
+    relationship: "supports",
+    locator,
+    excerpt: quote,
+  });
+  const fullBundle = {
+    schemaVersion: 2,
+    id: randomUUID(),
+    title: "Full synthetic research",
+    preparedBy: "Test agent",
+    method: "agent",
+    tool: "Synthetic test",
+    notes: "",
+    sources: [fullSource],
+    candidates: [],
+    leads: [],
+    dossiers: [
+      {
+        key: "full-figure",
+        label: "Synthetic wooden figure",
+        notes: "Check all sources",
+        objects: [{ key: "item:figure" }],
+        agents: [{ key: "agent:museum" }],
+        places: [{ key: "place:rapa" }],
+        events: [{ key: "event:move", kind: "relocation" }],
+        claims: [
+          {
+            key: "claim:name",
+            subject: "item:figure",
+            predicate: "has_name",
+            literal: { type: "text", value: "Synthetic wooden figure" },
+            evidence: excerpt("name", "Title", "Synthetic wooden figure"),
+          },
+          {
+            key: "claim:agent",
+            subject: "agent:museum",
+            predicate: "has_name",
+            literal: { type: "text", value: "Synthetic museum" },
+            evidence: excerpt("agent", "Institution", "Synthetic museum"),
+          },
+          {
+            key: "claim:place",
+            subject: "place:rapa",
+            predicate: "has_name",
+            literal: { type: "text", value: "Rapa Nui" },
+            evidence: excerpt("place", "History", "Rapa Nui"),
+          },
+          {
+            key: "claim:moved",
+            subject: "event:move",
+            predicate: "moved_item",
+            object: "item:figure",
+            evidence: excerpt("moved", "History", "Moved to Rapa Nui in 1900."),
+          },
+          {
+            key: "claim:destination",
+            subject: "event:move",
+            predicate: "moved_to",
+            object: "place:rapa",
+            evidence: excerpt("destination", "History", "Moved to Rapa Nui in 1900."),
+          },
+          {
+            key: "claim:date",
+            subject: "event:move",
+            predicate: "occurred_during",
+            literal: {
+              type: "date_interval",
+              earliest: "1900",
+              latest: "1900",
+              precision: "year",
+              interpretation: "exact",
+              verbatim: "1900",
+            },
+            evidence: excerpt("date", "History", "1900"),
+          },
+        ],
+        restitutionCases: [
+          {
+            key: "case:return",
+            reference: `synthetic-${randomUUID()}`,
+            title: "Synthetic return request",
+            status: "open",
+            items: ["item:figure"],
+            parties: [{ agent: "agent:museum", role: "recipient" }],
+            documents: [{ key: "document:one", source: "full-source", role: "case record" }],
+            actions: [
+              {
+                key: "action:request",
+                sequenceNumber: 1,
+                kind: "request",
+                description: "A return request was recorded",
+                parties: [{ agent: "agent:museum", role: "recipient" }],
+                documents: [{ document: "document:one" }],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+  assert.equal((await upload(fullBundle)).status, 303);
+  const fullDraftId = (
+    await db.query<{ drafts: { id: string }[] }>(
+      "select drafts from capture.bundle where id=$1 and owner_id=$2",
+      [fullBundle.id, actor],
+    )
+  ).rows[0].drafts[0].id;
+  const fullDraft = (
+    await db.query<{ content: { packet: unknown } }>(
+      "select content from capture.draft where id=$1",
+      [fullDraftId],
+    )
+  ).rows[0];
+  const fullPage = await request(`/research/dossiers/${fullDraftId}`);
+  assert.equal(fullPage.status, 200);
+  assert.match(await fullPage.text(), /Accept and next/);
+  assert.equal(
+    (
+      await request(`/research/dossiers/${fullDraftId}`, "allowed", {
+        action: "accept",
+        revision: "1",
+        identity: "new",
+        consent: "yes",
+        packetJson: JSON.stringify(fullDraft.content.packet),
+      })
+    ).status,
+    303,
+  );
+  const acceptedFull = (
+    await db.query<{ item_id: string }>(
+      "select item_id from capture.draft where id=$1 and status='accepted'",
+      [fullDraftId],
+    )
+  ).rows[0];
+  assert(acceptedFull?.item_id);
+  assert.equal(
+    (
+      await db.query("select count(*) from restitution.case_item where item_id=$1", [
+        acceptedFull.item_id,
+      ])
+    ).rows[0].count,
+    "1",
+  );
+  assert.equal((await upload(fullBundle)).status, 303);
+  assert.equal(
+    (
+      await db.query(
+        "select count(*) from capture.draft where owner_id=$1 and content->>'bundleId'=$2",
+        [actor, fullBundle.id],
+      )
+    ).rows[0].count,
+    "1",
+  );
   if (process.env.RESEARCH_BUNDLE_TEST_FILE) {
     const real = JSON.parse(await readFile(process.env.RESEARCH_BUNDLE_TEST_FILE, "utf8"));
     assert.equal((await upload(real)).status, 303);
@@ -189,7 +355,7 @@ export async function verifyBundleHttp(
         actor,
       ])
     ).rows[0];
-    assert.equal(result.drafts.length, real.candidates.length);
+    assert.equal(result.drafts.length, real.candidates.length + (real.dossiers?.length ?? 0));
     assert((await (await request(`/research/bundles/${real.id}`)).text()).includes(real.title));
     console.log(
       `Verified real local bundle: ${real.sources.length} preserved sources, ${result.drafts.length} private drafts, ${real.leads.length} research outcomes. No real records accepted.`,

@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { CaptureError, uuid } from "../capture/model.js";
+import { type BundleDossier, placeholderIdentities, proposalPacket } from "./dossier-proposal.js";
 import { publicUrl, readable } from "./fetch.js";
 import { sha256 } from "./storage.js";
 import { validatePdf } from "./store.js";
@@ -28,7 +29,7 @@ export interface BundleCandidate {
   notes: string;
 }
 export interface ResearchBundle {
-  schemaVersion: 1;
+  schemaVersion: 1 | 2;
   id: string;
   title: string;
   preparedBy: string;
@@ -37,6 +38,7 @@ export interface ResearchBundle {
   notes: string;
   sources: BundleSource[];
   candidates: BundleCandidate[];
+  dossiers?: BundleDossier[];
   leads: {
     key: string;
     description: string;
@@ -98,12 +100,15 @@ export function validateBundle(raw: unknown) {
       "notes",
       "sources",
       "candidates",
+      "dossiers",
       "leads",
     ],
     "bundle",
   );
-  if (b.schemaVersion !== 1 || typeof b.id !== "string" || !uuid.test(b.id))
-    throw new CaptureError("Use bundle schemaVersion 1 and a UUID id.");
+  if (![1, 2].includes(Number(b.schemaVersion)) || typeof b.id !== "string" || !uuid.test(b.id))
+    throw new CaptureError("Use bundle schemaVersion 1 or 2 and a UUID id.");
+  if (b.schemaVersion === 1 && b.dossiers !== undefined)
+    throw new CaptureError("Dossiers require bundle schemaVersion 2.");
   if (!["human", "agent", "mixed"].includes(String(b.method)))
     throw new CaptureError("Choose a preparation method: human, agent or mixed.");
   const sources: CheckedSource[] = list(b.sources, 25, "sources").map((rawSource) => {
@@ -202,6 +207,46 @@ export function validateBundle(raw: unknown) {
       };
     }),
   );
+  const dossiers: BundleDossier[] =
+    b.schemaVersion === 2
+      ? unique(
+          list(b.dossiers, 20, "dossiers").map((rawDossier) => {
+            const d = record(
+              rawDossier,
+              [
+                "key",
+                "label",
+                "notes",
+                "objects",
+                "agents",
+                "places",
+                "events",
+                "claims",
+                "restitutionCases",
+              ],
+              "dossier",
+            );
+            const dossier: BundleDossier = {
+              key: key(d.key),
+              label: text(d.label, "dossier label", 200),
+              notes: text(d.notes, "dossier notes", 4000, false),
+              objects: list(d.objects, 1, "dossier objects") as BundleDossier["objects"],
+              agents: list(d.agents, 30, "dossier agents") as BundleDossier["agents"],
+              places: list(d.places, 30, "dossier places") as BundleDossier["places"],
+              events: list(d.events, 30, "dossier events") as BundleDossier["events"],
+              claims: list(d.claims, 150, "dossier claims") as BundleDossier["claims"],
+              restitutionCases: list(
+                d.restitutionCases,
+                10,
+                "restitution cases",
+              ) as BundleDossier["restitutionCases"],
+            };
+            if (dossier.objects.length !== 1)
+              throw new CaptureError("Each dossier must describe one object.");
+            return dossier;
+          }),
+        )
+      : [];
   const leads = unique(
     list(b.leads, 100, "leads").map((rawLead) => {
       const l = record(rawLead, ["key", "description", "seedLocator", "outcome", "notes"], "lead");
@@ -219,7 +264,7 @@ export function validateBundle(raw: unknown) {
   if (!sources.length && !leads.length)
     throw new CaptureError("Include a preserved source or a researched lead.");
   const bundle: ResearchBundle = {
-    schemaVersion: 1,
+    schemaVersion: b.schemaVersion as ResearchBundle["schemaVersion"],
     id: b.id.toLowerCase(),
     title: text(b.title, "bundle title", 200),
     preparedBy: text(b.preparedBy, "preparer", 200),
@@ -228,8 +273,25 @@ export function validateBundle(raw: unknown) {
     notes: text(b.notes, "bundle notes", 4000, false),
     sources: sources.map((s) => s.input),
     candidates,
+    ...(b.schemaVersion === 2 ? { dossiers } : {}),
     leads,
   };
+  for (const dossier of dossiers) {
+    const packet = proposalPacket(bundle, dossier, placeholderIdentities(bundle), "proposal");
+    for (const claim of packet.claims) {
+      for (const evidence of Array.isArray(claim.evidence) ? claim.evidence : [claim.evidence]) {
+        const source = sources.find((item) => item.input.key === evidence.source);
+        if (source?.text !== null && evidence.excerpt && !source?.text?.includes(evidence.excerpt))
+          throw new CaptureError(
+            `Dossier ${dossier.key}: evidence ${evidence.key} is absent from the preserved source.`,
+          );
+        if (source?.mediaType === "application/pdf" && !/^page [1-9]\d*:/i.test(evidence.locator))
+          throw new CaptureError(
+            `Dossier ${dossier.key}: identify each PDF evidence region by page.`,
+          );
+      }
+    }
+  }
   if (Buffer.byteLength(JSON.stringify(bundle)) > MAX_BUNDLE_BYTES)
     throw new CaptureError("Bundle exceeds 20 MB. Split it into smaller batches.");
   const manifest = { ...bundle, sources: bundle.sources.map(({ data: _data, ...s }) => s) };
