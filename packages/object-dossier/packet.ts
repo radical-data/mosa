@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
-export const PACKET_SCHEMA_VERSION = 3;
+export const PACKET_SCHEMA_VERSION = 4;
 
 export const SUPPORTED_PREDICATES = [
   "has_name",
@@ -11,6 +11,27 @@ export const SUPPORTED_PREDICATES = [
   "held_by",
   "classified_as",
   "described_as",
+  "made_of",
+  "made_during",
+  "refers_to",
+  "depicts",
+  "authored_by",
+  "published_by",
+  "possibly_same_as",
+  "physical_remains_of",
+  "moved_item",
+  "moved_from",
+  "moved_to",
+  "moved_via",
+  "carried_out_by",
+  "commanded_by",
+  "transferred_item",
+  "transferred_to",
+  "held_item",
+  "holding_agent",
+  "transferred_from",
+  "occurred_at",
+  "occurred_during",
 ] as const;
 
 export type SupportedPredicate = (typeof SUPPORTED_PREDICATES)[number];
@@ -53,6 +74,54 @@ export interface PacketPlace {
   kind?: string;
 }
 
+export interface PacketEvent {
+  key: string;
+  kind: "transfer" | "relocation" | "unknown";
+}
+
+export interface PacketDateLiteral {
+  type: "date_interval";
+  earliest: string;
+  latest: string;
+  precision: "day" | "month" | "year" | "century";
+  interpretation:
+    | "exact"
+    | "approximate"
+    | "approximate_range"
+    | "range"
+    | "alternatives"
+    | "hypothesis";
+  verbatim: string;
+  alternatives?: string[];
+}
+
+export interface PacketCaseDate {
+  start: string;
+  end: string;
+  precision: "day" | "month" | "year";
+}
+
+export interface PacketRestitutionCase {
+  key: string;
+  reference: string;
+  title: string;
+  status: "open" | "closed";
+  opened?: PacketCaseDate;
+  closed?: PacketCaseDate;
+  items: string[];
+  parties: { agent: string; role: string }[];
+  documents: { key: string; source: string; role: string }[];
+  actions: {
+    key: string;
+    sequenceNumber: number;
+    kind: "outreach" | "request" | "engagement" | "recommendation" | "decision" | "handover";
+    description: string;
+    occurred?: PacketCaseDate;
+    parties: { agent: string; role: string }[];
+    documents: { document: string; relationship?: string }[];
+  }[];
+}
+
 export interface PacketSource {
   key: string;
   kind: string;
@@ -62,6 +131,8 @@ export interface PacketSource {
   retrievedAt: string;
   about?: string[];
   assertedBy?: string;
+  citation?: string;
+  publicUrl?: string;
 }
 
 export interface PacketTextLiteral {
@@ -85,17 +156,19 @@ export interface PacketClaim {
   subject: string;
   predicate: SupportedPredicate;
   object?: string;
-  literal?: PacketTextLiteral;
+  literal?: PacketTextLiteral | PacketDateLiteral;
   assertedBy?: string;
   evidence: PacketEvidence | PacketEvidence[];
 }
 
 export interface DossierPacket {
-  schemaVersion: 1 | 2 | typeof PACKET_SCHEMA_VERSION;
+  schemaVersion: 1 | 2 | 3 | typeof PACKET_SCHEMA_VERSION;
   dataset: PacketDataset;
   objects: PacketObject[];
   agents: PacketAgent[];
   places: PacketPlace[];
+  events?: PacketEvent[];
+  restitutionCases?: PacketRestitutionCase[];
   sources: PacketSource[];
   claims: PacketClaim[];
 }

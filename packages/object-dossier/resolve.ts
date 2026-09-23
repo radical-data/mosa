@@ -1,7 +1,7 @@
 import type { ClientBase } from "pg";
 import { claimEvidenceList, type DossierPacket, sourceReference } from "./packet";
 
-export type PacketEntityKind = "object" | "agent" | "place" | "source";
+export type PacketEntityKind = "object" | "agent" | "place" | "source" | "event";
 
 export type ResolutionAction = "bound" | "matched" | "create";
 
@@ -160,10 +160,11 @@ async function collectNameMatchWarnings(
     agent: "agent",
     place: "place",
     source: "source",
+    event: "event",
   };
 
   for (const claim of packet.claims) {
-    if (claim.predicate !== "has_name" || !claim.literal) {
+    if (claim.predicate !== "has_name" || claim.literal?.type !== "text") {
       continue;
     }
 
@@ -207,6 +208,7 @@ export async function resolveEntities(
     ...packet.agents.map((record) => ({ key: record.key, kind: "agent" as const })),
     ...packet.places.map((record) => ({ key: record.key, kind: "place" as const })),
     ...packet.sources.map((record) => ({ key: record.key, kind: "source" as const })),
+    ...(packet.events ?? []).map((record) => ({ key: record.key, kind: "event" as const })),
   ];
 
   for (const record of records) {

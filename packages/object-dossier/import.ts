@@ -5,6 +5,7 @@ import {
   derivedRefersToClaimKey,
   derivedRefersToEvidenceKey,
   evidenceMode,
+  type PacketDateLiteral,
   type PacketTextLiteral,
   packetSha256,
   sourceReference,
@@ -15,6 +16,7 @@ import {
   type ResolutionPlan,
   resolveEntities,
 } from "./resolve";
+import { importRestitution } from "./restitution";
 
 export const IMPORTER_VERSION = "1.1.0";
 
@@ -34,7 +36,7 @@ export interface ClaimWork {
   subjectKey: string;
   predicate: string;
   objectKey?: string;
-  literal?: PacketTextLiteral;
+  literal?: PacketTextLiteral | PacketDateLiteral;
   assertedByKey?: string;
   derived: boolean;
 }
@@ -237,6 +239,7 @@ async function applyCanonicalWrites(
     ...packet.agents.map((record) => record.key),
     ...packet.places.map((record) => record.key),
     ...packet.objects.map((record) => record.key),
+    ...(packet.events ?? []).map((record) => record.key),
     ...packet.sources.map((record) => record.key),
   ];
 
@@ -265,6 +268,21 @@ async function applyCanonicalWrites(
             [source.kind, sourceReference(source), source.retrievedAt],
           );
           return result.rows[0].id;
+        }
+
+        if (entry.kind === "event") {
+          const event = packet.events?.find((record) => record.key === localKey);
+          if (!event) throw new Error("packet event record disappeared");
+          const id = (
+            await client.query<{ id: string }>(
+              "insert into entities.entity(entity_type) values('event') returning id",
+            )
+          ).rows[0].id;
+          await client.query("insert into provenance.event(id,event_kind) values($1,$2)", [
+            id,
+            event.kind,
+          ]);
+          return id;
         }
 
         const result = await client.query<{ id: string }>(
@@ -412,6 +430,8 @@ async function applyCanonicalWrites(
     });
   }
 
+  await importRestitution(client, packet, datasetId, entityIds);
+
   await runPostImportAssertions(client, packet, datasetId);
 
   return created;
@@ -447,6 +467,7 @@ async function runPostImportAssertions(
     ...packet.agents.map((record) => record.key),
     ...packet.places.map((record) => record.key),
     ...packet.sources.map((record) => record.key),
+    ...(packet.events ?? []).map((record) => record.key),
   ];
 
   const boundEntities = await client.query<{ count: string }>(
