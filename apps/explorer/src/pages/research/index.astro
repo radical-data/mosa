@@ -75,7 +75,7 @@ const drafts = await researchTransaction(
     {
       drafts.map((d) => (
         <li class="result-card">
-          <a href={`/research/${d.id}`}>
+          <a href={"kind" in d.content && d.content.kind === "dossier" ? `/research/dossiers/${d.id}` : `/research/${d.id}`}>
             {d.content.label || d.content.name || d.content.url}
           </a>{" "}
           <span class="badge">{d.status}</span>

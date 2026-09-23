@@ -18,8 +18,12 @@ const attribute = (tag: string, name: string) =>
   new RegExp(`\\b${name}="([^"]*)"`).exec(tag)?.[1]?.replaceAll("&amp;", "&");
 const readPage = (path: string) => readFileSync(resolve(output, `.${path}`, "index.html"), "utf8");
 let checked = 0;
+const collection = parseCollection(
+  JSON.parse(readFileSync(resolve(output, "collection-snapshot.json"), "utf8")),
+);
+const dossiers = collection.records.filter((record) => "kind" in record);
 const sitemap = readFileSync(resolve(output, "sitemap-0.xml"), "utf8");
-assert.equal((sitemap.match(/<loc>/g) ?? []).length, pageIds.length * 2);
+assert.equal((sitemap.match(/<loc>/g) ?? []).length, pageIds.length * 2 + dossiers.length * 2);
 for (const page of pageIds)
   for (const locale of localeIds) {
     const path = pagePath(page, locale);
@@ -102,9 +106,6 @@ console.log(
   `Verified ${checked} static pages: native links, fragments, languages, canonicals, sitemap and funding.`,
 );
 
-const collection = parseCollection(
-  JSON.parse(readFileSync(resolve(output, "collection-snapshot.json"), "utf8")),
-);
 for (const locale of localeIds) {
   const html = readPage(pagePath("collection", locale));
   assert.ok(html.includes(`data-release-id="${collection.releaseId}"`));
@@ -117,6 +118,13 @@ for (const locale of localeIds) {
   assert.ok(!readPage(pagePath("home", locale)).includes("?concept="));
   for (const record of collection.records)
     assert.ok(html.includes(`data-record-id="${record.id}"`));
+  for (const record of dossiers) {
+    const detailPath = `${pagePath("collection", locale)}${record.id}/`;
+    const detail = readPage(detailPath);
+    assert.ok(detail.includes(`data-record-id="${record.id}"`));
+    assert.ok(detail.includes(`data-release-id="${collection.releaseId}"`));
+    assert.ok(sitemap.includes(`${record.id}/`));
+  }
 }
 console.log(
   `Verified public collection release ${collection.releaseId}: ${collection.records.length} records.`,

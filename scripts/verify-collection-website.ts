@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { existsSync } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { runCommand } from "./lib/run-command";
@@ -36,6 +37,51 @@ async function verify() {
       name: { ...statement, text: "SECOND-OBJECT-SENTINEL" },
       identifier: { ...snapshot.records[0].identifier, value: "SECOND-ID-SENTINEL" },
     });
+    const dossier = {
+      kind: "dossier" as const,
+      id: "55555555-5555-4555-8555-555555555555",
+      label: "FULL-DOSSIER-SENTINEL",
+      identifiers: [],
+      claims: [
+        {
+          predicate: "described_as",
+          subject: { key: "item:one", kind: "item", label: "FULL-DOSSIER-SENTINEL" },
+          value: { kind: "text", text: "PUBLIC-DESCRIPTION-SENTINEL" },
+          attributedTo: null,
+          evidence: [
+            {
+              relationship: "supports",
+              citation: "Original PDF, page 12",
+              locator: "Page 12: row 3",
+              excerpt: "PUBLIC-DESCRIPTION-SENTINEL",
+            },
+          ],
+        },
+        {
+          predicate: "moved_item",
+          subject: { key: "event:one", kind: "event", label: "Recorded event" },
+          value: { kind: "entity", text: "FULL-DOSSIER-SENTINEL" },
+          attributedTo: null,
+          evidence: [
+            {
+              relationship: "mentions",
+              citation: "Original PDF, page 13",
+              locator: "Page 13: history",
+            },
+          ],
+        },
+      ],
+      events: [{ key: "event:one", kind: "relocation" }],
+      cases: [
+        {
+          reference: "case-1",
+          title: "PUBLIC-CASE-SENTINEL",
+          status: "open" as const,
+          actions: [{ kind: "request", description: "PUBLIC-REQUEST-SENTINEL" }],
+          documents: [{ citation: "Original PDF, page 14", role: "case record" }],
+        },
+      ],
+    };
     const build = () =>
       runCommand("pnpm", ["--filter", "@mosa/website", "build"], { cwd: workspace, signal });
     await writeFile(file, `${JSON.stringify(snapshot)}\n`);
@@ -55,6 +101,41 @@ async function verify() {
       ])
         assert(html.includes(value));
       assert(!html.includes("collection-mamari"));
+    }
+    const expanded = { ...snapshot, schemaVersion: 2, records: [...snapshot.records, dossier] };
+    await writeFile(file, `${JSON.stringify(expanded)}\n`);
+    await build();
+    for (const page of ["es/coleccion", "en/collection"]) {
+      const list = await readFile(
+        path.join(workspace, `apps/website/dist/${page}/index.html`),
+        "utf8",
+      );
+      const detail = await readFile(
+        path.join(workspace, `apps/website/dist/${page}/${dossier.id}/index.html`),
+        "utf8",
+      );
+      assert(list.includes(dossier.label));
+      for (const value of [
+        dossier.label,
+        "PUBLIC-DESCRIPTION-SENTINEL",
+        "PUBLIC-CASE-SENTINEL",
+        "PUBLIC-REQUEST-SENTINEL",
+        "Original PDF, page 12",
+      ])
+        assert(detail.includes(value));
+      assert(!detail.includes("PRIVATE"));
+    }
+    await writeFile(file, JSON.stringify({ ...expanded, records: snapshot.records }));
+    await build();
+    for (const page of ["es/coleccion", "en/collection"]) {
+      const list = await readFile(
+        path.join(workspace, `apps/website/dist/${page}/index.html`),
+        "utf8",
+      );
+      assert(!list.includes(dossier.label));
+      assert(
+        !existsSync(path.join(workspace, `apps/website/dist/${page}/${dossier.id}/index.html`)),
+      );
     }
     await writeFile(file, JSON.stringify({ ...snapshot, records: [snapshot.records[0]] }));
     await build();

@@ -21,7 +21,7 @@ async function main() {
   if (command === "check") {
     const { bundle } = validateBundle(JSON.parse((await boundedRead(target)).toString("utf8")));
     console.log(
-      `Valid bundle: ${bundle.sources.length} sources, ${bundle.candidates.length} proposals, ${bundle.leads.length} lead outcomes. Nothing uploaded or accepted.`,
+      `Valid bundle: ${bundle.sources.length} sources, ${bundle.candidates.length} simple proposals, ${bundle.dossiers?.length ?? 0} dossiers, ${bundle.leads.length} lead outcomes. Nothing uploaded or accepted.`,
     );
     return;
   }
@@ -33,7 +33,7 @@ async function main() {
       manifestPath,
       `${JSON.stringify(
         {
-          schemaVersion: 1,
+          schemaVersion: 2,
           id: randomUUID(),
           title: "Local research",
           preparedBy: "",
@@ -42,6 +42,7 @@ async function main() {
           notes: "",
           sources: [],
           candidates: [],
+          dossiers: [],
           leads: [],
         },
         null,

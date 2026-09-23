@@ -434,6 +434,172 @@ async function verifyObjectDossierImport(): Promise<void> {
     assert((row.holders ?? []).includes("British Museum"), "holder includes the British Museum");
     assert((row.sources ?? []).length > 0, "related sources are retrievable");
 
+    step("a full dossier imports provenance and restitution atomically");
+    const full: DossierPacket = {
+      schemaVersion: 4,
+      dataset: { key: "verify-full-dossier", version: "1" },
+      objects: [
+        {
+          key: "item:one",
+          kind: "artefact",
+          externalIdentifiers: [{ namespace: "verify-full", value: "1", source: "source:one" }],
+        },
+      ],
+      agents: [{ key: "agent:holder", kind: "organisation" }],
+      places: [{ key: "place:one", kind: "city" }],
+      events: [{ key: "event:move", kind: "relocation" }],
+      sources: [
+        {
+          key: "source:one",
+          kind: "institutional_record",
+          url: "https://example.org/verify-full-dossier",
+          publicUrl: "https://example.org/verify-full-dossier",
+          citation: "Synthetic catalogue",
+          retrievedAt: "2026-09-23T00:00:00Z",
+          about: ["item:one"],
+        },
+      ],
+      claims: [
+        {
+          key: "claim:name",
+          subject: "item:one",
+          predicate: "has_name",
+          literal: { type: "text", value: "Synthetic carved figure" },
+          evidence: {
+            key: "evidence:name",
+            source: "source:one",
+            relationship: "supports",
+            locator: "Name",
+            excerpt: "Synthetic carved figure",
+          },
+        },
+        {
+          key: "claim:agent",
+          subject: "agent:holder",
+          predicate: "has_name",
+          literal: { type: "text", value: "Synthetic museum" },
+          evidence: {
+            key: "evidence:agent",
+            source: "source:one",
+            relationship: "supports",
+            locator: "Publisher",
+            excerpt: "Synthetic museum",
+          },
+        },
+        {
+          key: "claim:place",
+          subject: "place:one",
+          predicate: "has_name",
+          literal: { type: "text", value: "Synthetic city" },
+          evidence: {
+            key: "evidence:place",
+            source: "source:one",
+            relationship: "supports",
+            locator: "Location",
+            excerpt: "Synthetic city",
+          },
+        },
+        {
+          key: "claim:material",
+          subject: "item:one",
+          predicate: "made_of",
+          literal: { type: "text", value: "wood" },
+          evidence: {
+            key: "evidence:material",
+            source: "source:one",
+            relationship: "supports",
+            locator: "Material",
+            excerpt: "wood",
+          },
+        },
+        {
+          key: "claim:moved",
+          subject: "event:move",
+          predicate: "moved_item",
+          object: "item:one",
+          evidence: {
+            key: "evidence:moved",
+            source: "source:one",
+            relationship: "supports",
+            locator: "History",
+            excerpt: "figure moved",
+          },
+        },
+        {
+          key: "claim:destination",
+          subject: "event:move",
+          predicate: "moved_to",
+          object: "place:one",
+          evidence: {
+            key: "evidence:destination",
+            source: "source:one",
+            relationship: "supports",
+            locator: "History destination",
+            excerpt: "moved to Synthetic city",
+          },
+        },
+        {
+          key: "claim:date",
+          subject: "event:move",
+          predicate: "occurred_during",
+          literal: {
+            type: "date_interval",
+            earliest: "1900",
+            latest: "1900",
+            precision: "year",
+            interpretation: "exact",
+            verbatim: "1900",
+          },
+          evidence: {
+            key: "evidence:date",
+            source: "source:one",
+            relationship: "supports",
+            locator: "History date",
+            excerpt: "1900",
+          },
+        },
+      ],
+      restitutionCases: [
+        {
+          key: "case:one",
+          reference: "verify-full-case",
+          title: "Synthetic return request",
+          status: "open",
+          items: ["item:one"],
+          parties: [{ agent: "agent:holder", role: "current_holder" }],
+          documents: [{ key: "document:one", source: "source:one", role: "case record" }],
+          actions: [
+            {
+              key: "action:one",
+              sequenceNumber: 1,
+              kind: "request",
+              description: "A synthetic request was recorded",
+              parties: [{ agent: "agent:holder", role: "recipient" }],
+              documents: [{ document: "document:one" }],
+            },
+          ],
+        },
+      ],
+    };
+    const validatedFull = validatePacket(full);
+    assert(validatedFull.packet, `full dossier validates: ${validatedFull.errors.join("; ")}`);
+    const fullResult = await runImport(full, { databaseUrl, apply: true });
+    assert(fullResult.applied, "full dossier applied");
+    const eventCount = await scalar<string>(
+      client,
+      `select count(*) from provenance.event p join ingestion.entity_binding b on b.entity_id=p.id
+       join ingestion.dataset d on d.id=b.dataset_id where d.key='verify-full-dossier'`,
+    );
+    assert(Number(eventCount) === 1, "provenance event received a canonical binding");
+    const caseCount = await scalar<string>(
+      client,
+      `select count(*) from ingestion.record_binding b join ingestion.dataset d on d.id=b.dataset_id
+       where d.key='verify-full-dossier'`,
+    );
+    assert(Number(caseCount) === 3, "case, action and document were bound");
+    const fullRerun = await runImport(full, { databaseUrl, apply: true });
+    assert(fullRerun.noop, "full dossier replay is a no-op");
+
     process.stdout.write("Object dossier import verification passed.\n");
   } finally {
     await client.end();

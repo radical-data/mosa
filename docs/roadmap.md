@@ -27,11 +27,11 @@ successful hosted sign-in/Storage. Recheck the actual services before claiming t
 | Shared research campaign | Existing private preparation/import | Explicit membership/submission, retained contribution history, revision checks and revocation; unrelated private work stays private |
 | Selected batch review | Shared campaign | Inspect evidence, select candidates explicitly, accept each transactionally; item-level errors and resumable retries without duplicate acceptance |
 | Correct accepted research | Existing acceptance | Separate correction from disagreement, preserve earlier evidence/history, reject stale/unauthorised changes and invalidate affected publication candidates |
-| Expanded public finding catalogue | Correction and current publication gate | Versioned contract for more than two records and useful incomplete records; individual withdrawal across every public surface |
+| Extend public finding catalogue | Reviewed dossier publication and current deployment gate | Public search and downloads, per-excerpt authority, and editorial language review across every public surface |
 | Expand within one catalogue | Local discovery and demonstrated review capacity | One permitted API/catalogue adapter, exact upstream IDs, finite budgets, checkpoint/resume and no duplicate counting |
 | Review a changed source | Preserved versions and correction | Refresh creates a new immutable version when changed; review a diff without overwriting accepted claims or human edits |
 
-Correction and expanded publication can proceed before campaigns or batch review.
+Correction and further publication work can proceed before campaigns or shared batch review.
 Keep manual preparation usable without model credentials.
 
 ### Inventory reconciliation requirements
@@ -97,22 +97,23 @@ Correction supersedes a selected assertion with history; disagreement preserves
 both accounts. Acceptance and supersession must be atomic and idempotent. The
 served snapshot remains unchanged until a separate authorised deployment succeeds.
 
-An expanded contract should permit a reviewed classification or description as a
-display label without turning it into `has_name`. Retain the label basis and
-attribution. Holder, identifier, image or translation can be absent without
-preventing a useful record. Distinguish source-check date from custody date.
+The version 2 contract permits a reviewed classification or description as a
+display label without turning it into `has_name`. It retains the label basis and
+attribution; holder, identifier, image or translation can be absent. Future
+editorial work should distinguish source-check date from custody date in public
+presentation when both are available.
 
-Support approved document citations without revealing private storage URLs or
-unapproved excerpts. Authorise claims, citations, excerpts, files and translations
-at their own scope. A private file does not become public because a claim cites it.
+Document citations and reviewed excerpts publish without private storage URLs.
+Future permission controls should authorise claims, citations, excerpts, files
+and translations at their own scope. A private file does not become public because a claim cites it.
 Original-language material must remain identifiable; future research translations
 need source-revision links and their own publication authority.
 
-Extend exporter, ledger compatibility, parser, website and tests together. A
-three-record synthetic release must include a document-backed description with
-no holder/identifier and a legacy-style card. Preserve existing approvals without
-silently approving changed dependencies. Verify single-item withdrawal across
-pages, search and any future downloads, with no restoration through stale exports.
+The exporter, ledger, parser, website and synthetic three-record release now
+cover a document-backed description without a holder/identifier and a legacy
+card. Preserve existing approvals without silently approving changed
+dependencies. Extend single-item withdrawal checks to search and any future
+downloads, with no restoration through stale exports.
 Unresolved groups may later have a separately labelled leads view, not object counts.
 
 ### Discovery and source refresh
@@ -155,9 +156,9 @@ superseded CMS comparison. Current vendor recommendations need fresh research.
 
 ## Follow-ups triggered by demonstrated need
 
-- Public dossier routes, authorised downloads and images with credit/access/withdrawal.
+- Authorised downloads and images with credit, access controls and withdrawal.
 - OCR, browser-only catalogues, reference-only archival entry and additional source formats.
-- Provenance authoring, richer packet predicates and dedicated restitution authoring.
+- General interactive provenance and restitution authoring beyond local dossier packets.
 - Opt-in scheduled refresh, multi-party correction/governance and foregrounding history.
 - Research coverage states distinct from visibility: not researched, in progress,
   documented and researched-but-not-established; no exposure of private activity.

@@ -6,10 +6,10 @@
 | --- | --- | --- |
 | `apps/explorer/` | Reader routes plus invited sign-in, private sources, drafts, catalogue administration and acceptance | Separate server-side reader and writer connections |
 | `packages/object-dossier/` | Validate packets, resolve identities and import dossiers transactionally | Shared by CLI and accepted research drafts |
-| Local research bundle tooling | Preserve PDF/HTML/JSON sources and prepare proposals | Import creates owner-private drafts, not accepted records |
+| Local research bundle tooling | Preserve PDF/HTML/JSON sources and prepare complete dossier proposals | Discovery stays local; import creates owner-private drafts, not accepted records |
 | `scripts/publish-collection.ts` | Prepare, approve, export, withdraw and deploy public snapshots | Restricted maintainer connection to the private publication ledger |
-| `packages/public-collection/` | Validate the public snapshot | Current pilot permits zero, one or two records |
-| `apps/website/` | Static bilingual presentation of the approved export | No database connection or private source access |
+| `packages/public-collection/` | Validate versioned public snapshots | Version 2 permits up to 1,000 selected records; older approvals retain the version 1 contract |
+| `apps/website/` | Static bilingual presentation of approved cards and dossier pages | No database connection or private source access |
 
 The flow is source → private proposal → identity review → accepted research →
 separate publication decision → static export → verified deployment. Manual URL
@@ -54,7 +54,8 @@ approximate, ranged and alternative dates; presentation order does not assert a
 complete chronology. Do not restore explicit event-chain ordering or infer
 missing participants and endpoints.
 
-Provenance exploration is read-only; authoring/import remains future work.
+The local dossier bundle and human review can import sourced event anchors and
+claims. A general interactive provenance editor remains future work.
 
 ### Restitution
 
@@ -79,7 +80,8 @@ No direct case/action-to-provenance-event relationship is implemented.
 Item pages link to cases. Case pages show minimal metadata, parties, actions and
 their documents, followed by remaining case-level documents. There are no generic
 case summary/notes fields. No recorded decision or handover means unrecorded,
-not refusal. Authoring, deadlines, task assignment, eligibility rules and
+not refusal. Reviewed local dossiers can import case administration; general
+interactive case authoring, deadlines, task assignment, eligibility rules and
 multi-stage approvals remain outside the current interface.
 
 ### Presentation
@@ -113,11 +115,12 @@ shared source URL is not an exact object match. The reviewer confirms identity.
 | 1 | Original summary predicates and URL sources; preserve existing replay semantics |
 | 2 | Adds `classified_as` and `described_as`; URL-only drafts use this version |
 | 3 | Adds immutable source/evidence-version references; preserved-source drafts use this version |
+| 4 | Adds the implemented claim predicates, structured dates, event anchors and restitution case administration for reviewed local dossiers |
 
-The supported summary claims are narrower than the database ontology. Packet v3
-does not add general provenance, restitution, materials or dimensions authoring.
-Retain unsupported observations rather than coercing them into an allowed
-predicate. Source `refers_to` links are derived by the importer.
+Packet v4 covers the implemented ontology while preserving the narrower v1–v3
+contracts and their replay. Retain observations that cannot be represented rather
+than coercing them into another predicate. Source `refers_to` links are derived by
+the importer.
 
 The importer skips already bound claims/evidence. Editing a packet and importing
 it again does not correct those records. Accepted drafts are immutable; controlled
@@ -143,10 +146,12 @@ together. Authentication alone grants no general canonical write permission.
 Contributor/preparer metadata is distinct from source authorship and the actual
 signed-in reviewer. Bundle-supplied attribution is not verified authorship.
 
-Acceptance, foregrounding and publication are independent operations. The public
-pilot requires an evidenced name, holder, identifier and attribution. Partial
-research records can be accepted without meeting public-card requirements.
-The export excludes private documents, images and full dossiers.
+Acceptance, foregrounding and publication are independent operations. Legacy
+cards still require an evidenced name, holder, identifier and attribution. A
+complete dossier can be published with a sourced name, classification,
+description or identifier while retaining unknowns. Publication includes the
+reviewed claims, citations, provenance and restitution facts selected in the
+approved snapshot. Original private files and images remain excluded.
 
 The website build/container has no database access. Its trusted deployment job
 does: it checks the publication ledger, pinned commit, hosting job and served

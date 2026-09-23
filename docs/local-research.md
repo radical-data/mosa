@@ -58,7 +58,50 @@ content. Give a changed batch a new UUID. Captured source entries include their
 filename, citation, URL, retrieval date, content type and checksum. Improve the
 citation and author/date metadata without changing the preserved file.
 
-For each proposed object, add one entry to `candidates`:
+For complete ontology preparation, add one entry per object to `dossiers`. A
+dossier can contain multiple claims, related agents and places, provenance events
+and restitution case administration. Each dossier has exactly one object and all
+six arrays: `objects`, `agents`, `places`, `events`, `claims` and
+`restitutionCases`. The importer fills in the preserved sources and dataset key.
+
+```json
+{
+  "key": "figure-one",
+  "label": "Carved wooden figure",
+  "notes": "Catalogue identity needs review.",
+  "objects": [{ "key": "item:figure-one" }],
+  "agents": [],
+  "places": [],
+  "events": [],
+  "claims": [{
+    "key": "claim:name",
+    "subject": "item:figure-one",
+    "predicate": "has_name",
+    "literal": { "type": "text", "value": "Carved wooden figure" },
+    "evidence": {
+      "key": "evidence:name",
+      "source": "record-one",
+      "relationship": "supports",
+      "locator": "Record title",
+      "excerpt": "Carved wooden figure"
+    }
+  }],
+  "restitutionCases": []
+}
+```
+
+Use the [packet schema](../schemas/object-dossier-packet.schema.json) for the
+inner entity, claim, date, event and restitution shapes. Bundle dossiers omit
+`dataset` and `sources`; each evidence `source` is a key from the bundle's
+`sources` array. Keep an identifier's source key explicit. The source text,
+quotation and locator must support the exact assertion. HTML/JSON excerpts must
+occur in saved readable text. For PDFs, each evidence locator starts with
+`Page N:` and the researcher checks the original. Do not add `refers_to` solely
+to connect a source to the object: import derives it. Use the narrow
+[predicate meanings](predicates.md), retaining unmappable observations in private
+notes or leads.
+
+The older `candidates` format remains for one-claim proposals:
 
 ```json
 {
@@ -75,9 +118,9 @@ For each proposed object, add one entry to `candidates`:
 
 Use `classified_as` for a source's object type and `described_as` for a description.
 Copy the original wording; put translations, possible identifiers, institution
-matches and interpretations in notes for the reviewer. This first import supports
-one evidenced name, classification or description per object. The existing review
-form supplies custody, attribution and catalogue identity separately.
+matches and interpretations in notes for the reviewer. An older candidate supports
+one evidenced name, classification or description per object. Use `dossiers` for
+the complete workflow.
 
 For PDF evidence use a locator for every region involved, for example
 `Page 16: Museo Britanico block, Rapa row, object column`. Separate multiple regions
@@ -110,13 +153,18 @@ just research-bundle check research-local/my-batch/bundle.mosa.json
 ```
 
 Packing embeds the original bytes in one JSON file. Maximum: 25 sources,
-100 candidates, 100 lead outcomes and 20 MB packed. Source files must sit directly
+100 older candidates, 20 dossiers, 100 lead outcomes and 20 MB packed; each dossier
+can contain up to 150 claims. Source files must sit directly
 inside the folder; external paths and symlinks to outside files are rejected.
 
 1. Sign in to the research website and open **Research bundles**.
 2. Choose `bundle.mosa.json`, confirm permission to preserve the sources privately
    and select **Import for review**.
-3. [Review and accept](#review-and-accept-a-record) each proposed record.
+3. For dossiers, compare the saved source with each claim on the dossier review
+   page. Correct wording and locators inline, or uncheck unsupported claims.
+   The advanced editor handles structural changes. Confirm identity and use
+   **Accept and next** to move through the batch.
+4. Older candidates use [the existing review form](#review-and-accept-a-record).
 
 The import records the signed-in owner separately from the preparer named in the
 bundle. Preparation details are supplied assertions, not verified authorship.
@@ -147,7 +195,9 @@ accepted records nor publication decisions.
 
 ## Review and accept a record
 
-The manual and bundle routes use the same private draft and acceptance process.
+Manual drafts and older single-claim bundle candidates use this form. Complete
+dossiers use the source-and-claim review page above. Both remain private until
+human acceptance and require identity confirmation.
 
 1. Copy a name, object type or description using its actual predicate. Retain the
    original wording. Choose field evidence, an exact quotation or a whole-record
@@ -170,7 +220,8 @@ The manual and bundle routes use the same private draft and acceptance process.
    accept the reviewed revision. The shared validator/importer writes canonical
    records transactionally; the accepted dossier opens in the explorer.
 
-Editing invalidates review. A stale tab cannot accept a changed revision. Retry
+Editing a manual draft invalidates its review. A stale tab cannot accept a changed
+revision in either flow. Retry
 returns the original acceptance. Rejection, deferral and removal do not write
 canonical claims; removal hides the draft while retaining private revision history.
 Acceptance covers the bounded proposal, not a general multi-claim review queue.
@@ -182,10 +233,10 @@ reader surface with the owner-private preparation workspace.
 
 ## Publication and corrections
 
-Research acceptance does not authorise publication. The current public pilot
-requires an evidenced name, holder, catalogue identifier and identified speakers;
-a classification-only or otherwise incomplete research record can be valid while
-remaining ineligible for a public card. See the [publication runbook](collection-publication.md)
+Research acceptance does not authorise publication. Older public cards require an
+evidenced name, holder, catalogue identifier and identified speakers. Complete
+dossiers can be published with an evidenced name, classification, description or
+identifier, even when other fields remain unknown. See the [publication runbook](collection-publication.md)
 for accepted-draft preparation, approval, individual withdrawal and recovery.
 
 Accepted drafts are immutable. Changing a packet and reimporting bound keys does
