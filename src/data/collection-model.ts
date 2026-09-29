@@ -41,6 +41,7 @@ export interface Source {
   author: string | null;
   reference: string;
   language: string;
+  notes?: { text: string; language: string };
   claims: Claim[];
   images: CollectionImage[];
 }
@@ -63,7 +64,7 @@ const claimReference = /^[a-z0-9]+(?:-[a-z0-9]+)*\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const language = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
 const imagePath = /^(?!\/)(?!.*(?:^|\/)\.\.(?:\/|$)).+\.(?:avif|jpe?g|png|webp)$/i;
 const objectKeys = ["foregroundedClaims", "name"];
-const sourceKeys = ["author", "claims", "images", "language", "reference"];
+const sourceKeys = ["author", "claims", "images", "language", "notes", "reference"];
 const claimKeys = ["id", "objectId", "predicate", "value"];
 const imageKeys = ["alt", "caption", "credit", "file", "objectId", "originalUrl", "rights"];
 
@@ -129,6 +130,22 @@ export function parseSource(value: unknown, file: string): Source {
   );
   add(errors, Array.isArray(value.claims), `${file}: claims must be an array`);
   add(errors, Array.isArray(value.images), `${file}: images must be an array`);
+  if ("notes" in value) {
+    add(errors, isObject(value.notes), `${file}: notes must be an object`);
+    if (isObject(value.notes)) {
+      add(
+        errors,
+        sameKeys(value.notes, ["text", "language"]),
+        `${file}: notes contains an unsupported field`,
+      );
+      add(errors, text(value.notes.text), `${file}: notes.text is required`);
+      add(
+        errors,
+        typeof value.notes.language === "string" && language.test(value.notes.language),
+        `${file}: notes.language is invalid`,
+      );
+    }
+  }
   if (Array.isArray(value.claims))
     value.claims.forEach((claim, index) => {
       const at = `${file}: claims[${index}]`;

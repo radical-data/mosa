@@ -61,6 +61,60 @@ objects, and add a useful distinction when a predicate occurs more than once.
 Outside the source, refer to a claim as `<source-id>/<claim-id>`. Reordering an
 array must not change its claim IDs.
 
+Use optional source `notes` for MoSA's research and transcription decisions:
+
+```json
+"notes": {
+  "text": "Blank holder cells repeat the preceding holder within the same institution block.",
+  "language": "en-GB"
+}
+```
+
+The non-empty `text` and its BCP 47 `language` remain versioned with the source.
+The website does not render these notes or include them in collection search.
+They describe MoSA's method, not claims attributed to the source author.
+Tracked JSON remains publishable repository content; keep confidential research
+in `research-local/`.
+
+### Extract a source table
+
+Transcribe and visually review the complete table before assigning claims. Keep
+the raw cells, page and row references, interpretation decisions and deferred
+entries in `research-local/`. Record a concise explanation of decisions such as
+blank-cell inheritance in the source's `notes`. The public source reference
+should identify the table and its page range; do not infer an author or date.
+
+For museum inventories, use `held_by` for the reported museum or collection and
+`located_at` for the associated stated location. These claims reproduce the
+source's account, not independently verified present custody. Preserve apparent
+errors and historical names as source wording rather than silently correcting
+them.
+
+Blank museum and location cells can mean “same as above” within an institution
+block, including across page breaks. Verify that convention against the layout.
+Do not inherit a previous institution's location when a new institution starts,
+or treat section headings as locations. Never fill down the object column.
+Join wrapped cell text and descriptions continued over page breaks; distinguish
+these from separate rows with identical wording.
+
+Interpret the object cell rather than assigning one predicate to the whole
+column. Use `has_name` for an individual designation and `classified_as` for an
+explicit object type. A cell can supply both. When a type includes descriptive
+qualifications, extract the type and preserve the complete cell as `described_as`.
+Keep uncertainty, dimensions and unusual wording intact; use only `described_as`
+when no narrower interpretation is secure. Parenthetical common type names are
+not automatically individual names. Normalise layout whitespace only.
+
+For the *Arte en la cultura rapanui* table extraction, import individually
+described entries and defer plural, counted, collective and ambiguously grouped
+entries in the private audit. Its final museum/research section is audit-only.
+Do not invent individual objects from counts or assign research notes as
+locations. Similar names, types or institutions alone do not establish identity
+with an existing catalogue record. Keep separate repeated rows distinct and
+retain established handles when the prior extraction identifies the same entry.
+
+### Add images
+
 Download only images MoSA is authorised to publish. Put each binary at
 `collection/images/<file>`; the repository's Git LFS rules track supported
 image formats. A normal checkout restores the image before Astro and Docker

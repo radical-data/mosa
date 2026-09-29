@@ -1,67 +1,1295 @@
 {
   "author": null,
-  "reference": "Arte en la cultura rapanui — supplied original PDF, arte-escultura-museos.pdf, pages 15–18; compiler attribution unverified",
+  "reference": "Arte en la cultura rapanui — PDF, pages 12–19, “MUSEOS DEL MUNDO EN DONDE HAY PIEZAS DE RAPA NUI”",
   "language": "es",
+  "notes": {
+    "text": "In extracting this table, MoSA interprets blank museum/collection and location cells as repeating the preceding values within the same institution block, including where the block continues onto another page. For example, the entries ‘Figura humana curva’ and ‘Figura femenina’ beneath ‘Moko’ inherit ‘Sammlung Raft, Nash’ and ‘Hamburg, Alemania’. Inheritance stops when a new institution or section begins; object cells are never filled down. Wrapped text within a cell and descriptions split across pages are joined, while separate repeated rows remain distinct. These are MoSA’s transcription decisions; the reported holders and locations have not been independently verified as current.",
+    "language": "en-GB"
+  },
   "claims": [
     {
-      "id": "kava-kava-doble-cabeza-type",
-      "objectId": "kava-kava-doble-cabeza",
-      "predicate": "classified_as",
-      "value": "Kava kava de doble cabeza"
+      "id": "tahonga-figura-humana-berlin-holder",
+      "objectId": "tahonga-figura-humana-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
     },
     {
-      "id": "moai-piedra-sombrero-type",
-      "objectId": "moai-piedra-sombrero",
-      "predicate": "classified_as",
-      "value": "Moai de piedra con sombrero"
+      "id": "tahonga-figura-humana-berlin-location",
+      "objectId": "tahonga-figura-humana-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
     },
     {
-      "id": "figura-boca-circular-type",
-      "objectId": "figura-boca-circular",
+      "id": "tahonga-figura-humana-berlin-type",
+      "objectId": "tahonga-figura-humana-berlin",
       "predicate": "classified_as",
-      "value": "Figura humana con boca circular"
+      "value": "Tahonga"
     },
     {
-      "id": "ao-pintado-type",
-      "objectId": "ao-pintado",
-      "predicate": "classified_as",
-      "value": "Ao pintado"
+      "id": "tahonga-figura-humana-berlin-description",
+      "objectId": "tahonga-figura-humana-berlin",
+      "predicate": "described_as",
+      "value": "Tahonga con figura humana colgada"
     },
     {
-      "id": "rei-miro-gallo-type",
-      "objectId": "rei-miro-gallo",
-      "predicate": "classified_as",
-      "value": "Rei miro de gallo"
+      "id": "ao-berlin-holder",
+      "objectId": "ao-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
     },
     {
-      "id": "rei-miro-caras-humanas-type",
-      "objectId": "rei-miro-caras-humanas",
-      "predicate": "classified_as",
-      "value": "Rei miro con caras humanas y figura incise al centro"
+      "id": "ao-berlin-location",
+      "objectId": "ao-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
     },
     {
-      "id": "tangata-manu-rongorongo-type",
-      "objectId": "tangata-manu-rongorongo",
+      "id": "ao-berlin-type",
+      "objectId": "ao-berlin",
       "predicate": "classified_as",
-      "value": "Tangata Manu con signos rongo rongo"
+      "value": "Ao"
     },
     {
-      "id": "ngaru-a-type",
-      "objectId": "ngaru-a",
-      "predicate": "classified_as",
-      "value": "Piedra almohada con petroglifos (ngaru’a)"
+      "id": "moai-piedra-40-cm-berlin-holder",
+      "objectId": "moai-piedra-40-cm-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
     },
     {
-      "id": "rei-miro-concha-type",
-      "objectId": "rei-miro-concha",
-      "predicate": "classified_as",
-      "value": "Rei miro de concha"
+      "id": "moai-piedra-40-cm-berlin-location",
+      "objectId": "moai-piedra-40-cm-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
     },
     {
-      "id": "tahonga-incrustaciones-type",
-      "objectId": "tahonga-incrustaciones",
+      "id": "moai-piedra-40-cm-berlin-type",
+      "objectId": "moai-piedra-40-cm-berlin",
       "predicate": "classified_as",
-      "value": "Tahonga simple con incrustaciones"
+      "value": "Moai de piedra"
+    },
+    {
+      "id": "moai-piedra-40-cm-berlin-description",
+      "objectId": "moai-piedra-40-cm-berlin",
+      "predicate": "described_as",
+      "value": "Moai de piedra 40 cm."
+    },
+    {
+      "id": "ovillo-cuerda-berlin-holder",
+      "objectId": "ovillo-cuerda-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
+    },
+    {
+      "id": "ovillo-cuerda-berlin-location",
+      "objectId": "ovillo-cuerda-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
+    },
+    {
+      "id": "ovillo-cuerda-berlin-type",
+      "objectId": "ovillo-cuerda-berlin",
+      "predicate": "classified_as",
+      "value": "Ovillo de cuerda trenzada"
+    },
+    {
+      "id": "madeja-hilo-berlin-holder",
+      "objectId": "madeja-hilo-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
+    },
+    {
+      "id": "madeja-hilo-berlin-location",
+      "objectId": "madeja-hilo-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
+    },
+    {
+      "id": "madeja-hilo-berlin-type",
+      "objectId": "madeja-hilo-berlin",
+      "predicate": "classified_as",
+      "value": "Madeja de hilo"
+    },
+    {
+      "id": "palo-mahute-berlin-holder",
+      "objectId": "palo-mahute-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
+    },
+    {
+      "id": "palo-mahute-berlin-location",
+      "objectId": "palo-mahute-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
+    },
+    {
+      "id": "palo-mahute-berlin-type",
+      "objectId": "palo-mahute-berlin",
+      "predicate": "classified_as",
+      "value": "Palo para golpear el mahute"
+    },
+    {
+      "id": "mazo-pararaha-berlin-holder",
+      "objectId": "mazo-pararaha-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
+    },
+    {
+      "id": "mazo-pararaha-berlin-location",
+      "objectId": "mazo-pararaha-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
+    },
+    {
+      "id": "mazo-pararaha-berlin-type",
+      "objectId": "mazo-pararaha-berlin",
+      "predicate": "classified_as",
+      "value": "Mazo de madera"
+    },
+    {
+      "id": "mazo-pararaha-berlin-type-2",
+      "objectId": "mazo-pararaha-berlin",
+      "predicate": "classified_as",
+      "value": "pararaha"
+    },
+    {
+      "id": "mazo-pararaha-berlin-description",
+      "objectId": "mazo-pararaha-berlin",
+      "predicate": "described_as",
+      "value": "Mazo de madera (pararaha)"
+    },
+    {
+      "id": "punta-lanza-berlin-holder",
+      "objectId": "punta-lanza-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
+    },
+    {
+      "id": "punta-lanza-berlin-location",
+      "objectId": "punta-lanza-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
+    },
+    {
+      "id": "punta-lanza-berlin-type",
+      "objectId": "punta-lanza-berlin",
+      "predicate": "classified_as",
+      "value": "Punta de lanza de obsidiana"
+    },
+    {
+      "id": "rei-miro-parroco-berlin-holder",
+      "objectId": "rei-miro-parroco-berlin",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde SMPK"
+    },
+    {
+      "id": "rei-miro-parroco-berlin-location",
+      "objectId": "rei-miro-parroco-berlin",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
+    },
+    {
+      "id": "rei-miro-parroco-berlin-type",
+      "objectId": "rei-miro-parroco-berlin",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-parroco-berlin-description",
+      "objectId": "rei-miro-parroco-berlin",
+      "predicate": "described_as",
+      "value": "Rei miro (párroco)"
+    },
+    {
+      "id": "moai-paa-paa-ulster-holder",
+      "objectId": "moai-paa-paa-ulster",
+      "predicate": "held_by",
+      "value": "Ulster Museum"
+    },
+    {
+      "id": "moai-paa-paa-ulster-location",
+      "objectId": "moai-paa-paa-ulster",
+      "predicate": "located_at",
+      "value": "Berlin, Alemania"
+    },
+    {
+      "id": "moai-paa-paa-ulster-type",
+      "objectId": "moai-paa-paa-ulster",
+      "predicate": "classified_as",
+      "value": "Moai Pa’a Pa’a"
+    },
+    {
+      "id": "hombre-pajaro-braunschweig-holder",
+      "objectId": "hombre-pajaro-braunschweig",
+      "predicate": "held_by",
+      "value": "Staaliches Museum Braunsschweig"
+    },
+    {
+      "id": "hombre-pajaro-braunschweig-location",
+      "objectId": "hombre-pajaro-braunschweig",
+      "predicate": "located_at",
+      "value": "Braunschweig, Alemania"
+    },
+    {
+      "id": "hombre-pajaro-braunschweig-type",
+      "objectId": "hombre-pajaro-braunschweig",
+      "predicate": "classified_as",
+      "value": "Hombre pajaro"
+    },
+    {
+      "id": "rei-miro-caras-humanas-colonia-holder",
+      "objectId": "rei-miro-caras-humanas-colonia",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest Museum"
+    },
+    {
+      "id": "rei-miro-caras-humanas-colonia-location",
+      "objectId": "rei-miro-caras-humanas-colonia",
+      "predicate": "located_at",
+      "value": "Colonia, Alemania (Koln)"
+    },
+    {
+      "id": "rei-miro-caras-humanas-colonia-type",
+      "objectId": "rei-miro-caras-humanas-colonia",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-caras-humanas-colonia-description",
+      "objectId": "rei-miro-caras-humanas-colonia",
+      "predicate": "described_as",
+      "value": "Rei miro, caras humanas"
+    },
+    {
+      "id": "moai-tangata-colonia-holder",
+      "objectId": "moai-tangata-colonia",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest Museum"
+    },
+    {
+      "id": "moai-tangata-colonia-location",
+      "objectId": "moai-tangata-colonia",
+      "predicate": "located_at",
+      "value": "Colonia, Alemania (Koln)"
+    },
+    {
+      "id": "moai-tangata-colonia-type",
+      "objectId": "moai-tangata-colonia",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "figura-hombre-acostada-colonia-holder",
+      "objectId": "figura-hombre-acostada-colonia",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest Museum"
+    },
+    {
+      "id": "figura-hombre-acostada-colonia-location",
+      "objectId": "figura-hombre-acostada-colonia",
+      "predicate": "located_at",
+      "value": "Colonia, Alemania (Koln)"
+    },
+    {
+      "id": "figura-hombre-acostada-colonia-type",
+      "objectId": "figura-hombre-acostada-colonia",
+      "predicate": "classified_as",
+      "value": "Figura de hombre"
+    },
+    {
+      "id": "figura-hombre-acostada-colonia-description",
+      "objectId": "figura-hombre-acostada-colonia",
+      "predicate": "described_as",
+      "value": "Figura de hombre acostada"
+    },
+    {
+      "id": "figura-zoomorfa-colonia-holder",
+      "objectId": "figura-zoomorfa-colonia",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest Museum"
+    },
+    {
+      "id": "figura-zoomorfa-colonia-location",
+      "objectId": "figura-zoomorfa-colonia",
+      "predicate": "located_at",
+      "value": "Colonia, Alemania (Koln)"
+    },
+    {
+      "id": "figura-zoomorfa-colonia-type",
+      "objectId": "figura-zoomorfa-colonia",
+      "predicate": "classified_as",
+      "value": "Figura zoomorfa"
+    },
+    {
+      "id": "figura-zoomorfa-colonia-description",
+      "objectId": "figura-zoomorfa-colonia",
+      "predicate": "described_as",
+      "value": "Figura zoomorfa de 13 c."
+    },
+    {
+      "id": "corona-plumas-colonia-holder",
+      "objectId": "corona-plumas-colonia",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest Museum"
+    },
+    {
+      "id": "corona-plumas-colonia-location",
+      "objectId": "corona-plumas-colonia",
+      "predicate": "located_at",
+      "value": "Colonia, Alemania (Koln)"
+    },
+    {
+      "id": "corona-plumas-colonia-type",
+      "objectId": "corona-plumas-colonia",
+      "predicate": "classified_as",
+      "value": "Corona de plumas"
+    },
+    {
+      "id": "moko-sammlung-raft-holder",
+      "objectId": "moko-sammlung-raft",
+      "predicate": "held_by",
+      "value": "Sammlung Raft, Nash"
+    },
+    {
+      "id": "moko-sammlung-raft-location",
+      "objectId": "moko-sammlung-raft",
+      "predicate": "located_at",
+      "value": "Hamburg, Alemania"
+    },
+    {
+      "id": "moko-sammlung-raft-type",
+      "objectId": "moko-sammlung-raft",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "figura-humana-curva-sammlung-raft-holder",
+      "objectId": "figura-humana-curva-sammlung-raft",
+      "predicate": "held_by",
+      "value": "Sammlung Raft, Nash"
+    },
+    {
+      "id": "figura-humana-curva-sammlung-raft-location",
+      "objectId": "figura-humana-curva-sammlung-raft",
+      "predicate": "located_at",
+      "value": "Hamburg, Alemania"
+    },
+    {
+      "id": "figura-humana-curva-sammlung-raft-type",
+      "objectId": "figura-humana-curva-sammlung-raft",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "figura-humana-curva-sammlung-raft-description",
+      "objectId": "figura-humana-curva-sammlung-raft",
+      "predicate": "described_as",
+      "value": "Figura humana curva"
+    },
+    {
+      "id": "figura-femenina-sammlung-raft-holder",
+      "objectId": "figura-femenina-sammlung-raft",
+      "predicate": "held_by",
+      "value": "Sammlung Raft, Nash"
+    },
+    {
+      "id": "figura-femenina-sammlung-raft-location",
+      "objectId": "figura-femenina-sammlung-raft",
+      "predicate": "located_at",
+      "value": "Hamburg, Alemania"
+    },
+    {
+      "id": "figura-femenina-sammlung-raft-type",
+      "objectId": "figura-femenina-sammlung-raft",
+      "predicate": "classified_as",
+      "value": "Figura femenina"
+    },
+    {
+      "id": "figura-humana-dresden-holder",
+      "objectId": "figura-humana-dresden",
+      "predicate": "held_by",
+      "value": "Staaliches Museum für Volkerkunde"
+    },
+    {
+      "id": "figura-humana-dresden-location",
+      "objectId": "figura-humana-dresden",
+      "predicate": "located_at",
+      "value": "Dresden, Alemania"
+    },
+    {
+      "id": "figura-humana-dresden-type",
+      "objectId": "figura-humana-dresden",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "hombre-curvo-lubeck-holder",
+      "objectId": "hombre-curvo-lubeck",
+      "predicate": "held_by",
+      "value": "Volkerkunde Sammlung der Hansestadt"
+    },
+    {
+      "id": "hombre-curvo-lubeck-location",
+      "objectId": "hombre-curvo-lubeck",
+      "predicate": "located_at",
+      "value": "Lübeck, Alemania"
+    },
+    {
+      "id": "hombre-curvo-lubeck-description",
+      "objectId": "hombre-curvo-lubeck",
+      "predicate": "described_as",
+      "value": "Hombre curvo con grandes genitales"
+    },
+    {
+      "id": "kava-kava-munchen-holder",
+      "objectId": "kava-kava-munchen",
+      "predicate": "held_by",
+      "value": "Staaliches Museum für Volkerkunde"
+    },
+    {
+      "id": "kava-kava-munchen-location",
+      "objectId": "kava-kava-munchen",
+      "predicate": "located_at",
+      "value": "Munchen, Alemania"
+    },
+    {
+      "id": "kava-kava-munchen-type",
+      "objectId": "kava-kava-munchen",
+      "predicate": "classified_as",
+      "value": "Kava Kava"
+    },
+    {
+      "id": "moai-tangata-hildesheim-holder",
+      "objectId": "moai-tangata-hildesheim",
+      "predicate": "held_by",
+      "value": "Roemer und Pelizaeus Museum"
+    },
+    {
+      "id": "moai-tangata-hildesheim-location",
+      "objectId": "moai-tangata-hildesheim",
+      "predicate": "located_at",
+      "value": "Hildesheim, Alemania"
+    },
+    {
+      "id": "moai-tangata-hildesheim-type",
+      "objectId": "moai-tangata-hildesheim",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "ua-hildesheim-holder",
+      "objectId": "ua-hildesheim",
+      "predicate": "held_by",
+      "value": "Roemer und Pelizaeus Museum"
+    },
+    {
+      "id": "ua-hildesheim-location",
+      "objectId": "ua-hildesheim",
+      "predicate": "located_at",
+      "value": "Hildesheim, Alemania"
+    },
+    {
+      "id": "ua-hildesheim-type",
+      "objectId": "ua-hildesheim",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "figura-grotesca-bremen-holder",
+      "objectId": "figura-grotesca-bremen",
+      "predicate": "held_by",
+      "value": "Ubersee Museum"
+    },
+    {
+      "id": "figura-grotesca-bremen-location",
+      "objectId": "figura-grotesca-bremen",
+      "predicate": "located_at",
+      "value": "Bremen, Alemania"
+    },
+    {
+      "id": "figura-grotesca-bremen-type",
+      "objectId": "figura-grotesca-bremen",
+      "predicate": "classified_as",
+      "value": "Figura"
+    },
+    {
+      "id": "figura-grotesca-bremen-description",
+      "objectId": "figura-grotesca-bremen",
+      "predicate": "described_as",
+      "value": "Figura grotesca"
+    },
+    {
+      "id": "figura-humana-leipzig-holder",
+      "objectId": "figura-humana-leipzig",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde"
+    },
+    {
+      "id": "figura-humana-leipzig-location",
+      "objectId": "figura-humana-leipzig",
+      "predicate": "located_at",
+      "value": "Leipzig, Alemania"
+    },
+    {
+      "id": "figura-humana-leipzig-type",
+      "objectId": "figura-humana-leipzig",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "figura-humana-leipzig-description",
+      "objectId": "figura-humana-leipzig",
+      "predicate": "described_as",
+      "value": "Figura humana con forma animal"
+    },
+    {
+      "id": "moko-brussel-holder",
+      "objectId": "moko-brussel",
+      "predicate": "held_by",
+      "value": "Musées Rojaux d’Art et d’Histoire"
+    },
+    {
+      "id": "moko-brussel-location",
+      "objectId": "moko-brussel",
+      "predicate": "located_at",
+      "value": "Brussel, Belgica"
+    },
+    {
+      "id": "moko-brussel-type",
+      "objectId": "moko-brussel",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "tahonga-pajaro-brussel-holder",
+      "objectId": "tahonga-pajaro-brussel",
+      "predicate": "held_by",
+      "value": "Musées Rojaux d’Art et d’Histoire"
+    },
+    {
+      "id": "tahonga-pajaro-brussel-location",
+      "objectId": "tahonga-pajaro-brussel",
+      "predicate": "located_at",
+      "value": "Brussel, Belgica"
+    },
+    {
+      "id": "tahonga-pajaro-brussel-type",
+      "objectId": "tahonga-pajaro-brussel",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "tahonga-pajaro-brussel-description",
+      "objectId": "tahonga-pajaro-brussel",
+      "predicate": "described_as",
+      "value": "Tahonga pájaro"
+    },
+    {
+      "id": "piedra-petroglifos-21-cm-brussel-holder",
+      "objectId": "piedra-petroglifos-21-cm-brussel",
+      "predicate": "held_by",
+      "value": "Musées Rojaux d’Art et d’Histoire"
+    },
+    {
+      "id": "piedra-petroglifos-21-cm-brussel-location",
+      "objectId": "piedra-petroglifos-21-cm-brussel",
+      "predicate": "located_at",
+      "value": "Brussel, Belgica"
+    },
+    {
+      "id": "piedra-petroglifos-21-cm-brussel-type",
+      "objectId": "piedra-petroglifos-21-cm-brussel",
+      "predicate": "classified_as",
+      "value": "Piedra"
+    },
+    {
+      "id": "piedra-petroglifos-21-cm-brussel-description",
+      "objectId": "piedra-petroglifos-21-cm-brussel",
+      "predicate": "described_as",
+      "value": "Piedra de 21 cm. Con petroglifos"
+    },
+    {
+      "id": "piedra-almohada-brussel-holder",
+      "objectId": "piedra-almohada-brussel",
+      "predicate": "held_by",
+      "value": "Musées Rojaux d’Art et d’Histoire"
+    },
+    {
+      "id": "piedra-almohada-brussel-location",
+      "objectId": "piedra-almohada-brussel",
+      "predicate": "located_at",
+      "value": "Brussel, Belgica"
+    },
+    {
+      "id": "piedra-almohada-brussel-type",
+      "objectId": "piedra-almohada-brussel",
+      "predicate": "classified_as",
+      "value": "Piedra almohada"
+    },
+    {
+      "id": "piedra-almohada-brussel-description",
+      "objectId": "piedra-almohada-brussel",
+      "predicate": "described_as",
+      "value": "Piedra almohada con incisiones"
+    },
+    {
+      "id": "piedra-fundamento-casa-brussel-holder",
+      "objectId": "piedra-fundamento-casa-brussel",
+      "predicate": "held_by",
+      "value": "Musées Rojaux d’Art et d’Histoire"
+    },
+    {
+      "id": "piedra-fundamento-casa-brussel-location",
+      "objectId": "piedra-fundamento-casa-brussel",
+      "predicate": "located_at",
+      "value": "Brussel, Belgica"
+    },
+    {
+      "id": "piedra-fundamento-casa-brussel-type",
+      "objectId": "piedra-fundamento-casa-brussel",
+      "predicate": "classified_as",
+      "value": "Piedra fundamento de casa"
+    },
+    {
+      "id": "moai-piedra-brussel-holder",
+      "objectId": "moai-piedra-brussel",
+      "predicate": "held_by",
+      "value": "Musées Rojaux d’Art et d’Histoire"
+    },
+    {
+      "id": "moai-piedra-brussel-location",
+      "objectId": "moai-piedra-brussel",
+      "predicate": "located_at",
+      "value": "Brussel, Belgica"
+    },
+    {
+      "id": "moai-piedra-brussel-type",
+      "objectId": "moai-piedra-brussel",
+      "predicate": "classified_as",
+      "value": "Moai de piedra"
+    },
+    {
+      "id": "moai-paa-paa-vander-straete-holder",
+      "objectId": "moai-paa-paa-vander-straete",
+      "predicate": "held_by",
+      "value": "Colección Vander Straete"
+    },
+    {
+      "id": "moai-paa-paa-vander-straete-location",
+      "objectId": "moai-paa-paa-vander-straete",
+      "predicate": "located_at",
+      "value": "Belgica"
+    },
+    {
+      "id": "moai-paa-paa-vander-straete-type",
+      "objectId": "moai-paa-paa-vander-straete",
+      "predicate": "classified_as",
+      "value": "Moai Pa’a Pa’a"
+    },
+    {
+      "id": "ao-viena-holder",
+      "objectId": "ao-viena",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde"
+    },
+    {
+      "id": "ao-viena-location",
+      "objectId": "ao-viena",
+      "predicate": "located_at",
+      "value": "Viena, Austria"
+    },
+    {
+      "id": "ao-viena-type",
+      "objectId": "ao-viena",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "cara-piedra-gris-viena-holder",
+      "objectId": "cara-piedra-gris-viena",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde"
+    },
+    {
+      "id": "cara-piedra-gris-viena-location",
+      "objectId": "cara-piedra-gris-viena",
+      "predicate": "located_at",
+      "value": "Viena, Austria"
+    },
+    {
+      "id": "cara-piedra-gris-viena-type",
+      "objectId": "cara-piedra-gris-viena",
+      "predicate": "classified_as",
+      "value": "Cara de piedra"
+    },
+    {
+      "id": "cara-piedra-gris-viena-description",
+      "objectId": "cara-piedra-gris-viena",
+      "predicate": "described_as",
+      "value": "Cara de piedra gris"
+    },
+    {
+      "id": "pulpo-viena-holder",
+      "objectId": "pulpo-viena",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde"
+    },
+    {
+      "id": "pulpo-viena-location",
+      "objectId": "pulpo-viena",
+      "predicate": "located_at",
+      "value": "Viena, Austria"
+    },
+    {
+      "id": "pulpo-viena-type",
+      "objectId": "pulpo-viena",
+      "predicate": "classified_as",
+      "value": "Pulpo"
+    },
+    {
+      "id": "pajaro-viena-holder",
+      "objectId": "pajaro-viena",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde"
+    },
+    {
+      "id": "pajaro-viena-location",
+      "objectId": "pajaro-viena",
+      "predicate": "located_at",
+      "value": "Viena, Austria"
+    },
+    {
+      "id": "pajaro-viena-type",
+      "objectId": "pajaro-viena",
+      "predicate": "classified_as",
+      "value": "Pajaro"
+    },
+    {
+      "id": "falo-viena-holder",
+      "objectId": "falo-viena",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde"
+    },
+    {
+      "id": "falo-viena-location",
+      "objectId": "falo-viena",
+      "predicate": "located_at",
+      "value": "Viena, Austria"
+    },
+    {
+      "id": "falo-viena-type",
+      "objectId": "falo-viena",
+      "predicate": "classified_as",
+      "value": "Falo"
+    },
+    {
+      "id": "falo-viena-description",
+      "objectId": "falo-viena",
+      "predicate": "described_as",
+      "value": "Falo de 14 cm"
+    },
+    {
+      "id": "anzuelo-piedra-viena-holder",
+      "objectId": "anzuelo-piedra-viena",
+      "predicate": "held_by",
+      "value": "Museum für Volkerkunde"
+    },
+    {
+      "id": "anzuelo-piedra-viena-location",
+      "objectId": "anzuelo-piedra-viena",
+      "predicate": "located_at",
+      "value": "Viena, Austria"
+    },
+    {
+      "id": "anzuelo-piedra-viena-type",
+      "objectId": "anzuelo-piedra-viena",
+      "predicate": "classified_as",
+      "value": "Anzuelo de piedra"
+    },
+    {
+      "id": "kava-kava-museo-hombre-holder",
+      "objectId": "kava-kava-museo-hombre",
+      "predicate": "held_by",
+      "value": "Museo del Hombre"
+    },
+    {
+      "id": "kava-kava-museo-hombre-location",
+      "objectId": "kava-kava-museo-hombre",
+      "predicate": "located_at",
+      "value": "Paris"
+    },
+    {
+      "id": "kava-kava-museo-hombre-type",
+      "objectId": "kava-kava-museo-hombre",
+      "predicate": "classified_as",
+      "value": "Kava kava"
+    },
+    {
+      "id": "moai-tangata-museo-hombre-holder",
+      "objectId": "moai-tangata-museo-hombre",
+      "predicate": "held_by",
+      "value": "Museo del Hombre"
+    },
+    {
+      "id": "moai-tangata-museo-hombre-location",
+      "objectId": "moai-tangata-museo-hombre",
+      "predicate": "located_at",
+      "value": "Paris"
+    },
+    {
+      "id": "moai-tangata-museo-hombre-type",
+      "objectId": "moai-tangata-museo-hombre",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "cabeza-piedra-museo-hombre-holder",
+      "objectId": "cabeza-piedra-museo-hombre",
+      "predicate": "held_by",
+      "value": "Museo del Hombre"
+    },
+    {
+      "id": "cabeza-piedra-museo-hombre-location",
+      "objectId": "cabeza-piedra-museo-hombre",
+      "predicate": "located_at",
+      "value": "Paris"
+    },
+    {
+      "id": "cabeza-piedra-museo-hombre-type",
+      "objectId": "cabeza-piedra-museo-hombre",
+      "predicate": "classified_as",
+      "value": "Cabeza de piedra"
+    },
+    {
+      "id": "kava-kava-ladriere-holder",
+      "objectId": "kava-kava-ladriere",
+      "predicate": "held_by",
+      "value": "Sammlung Ladriere"
+    },
+    {
+      "id": "kava-kava-ladriere-location",
+      "objectId": "kava-kava-ladriere",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "kava-kava-ladriere-type",
+      "objectId": "kava-kava-ladriere",
+      "predicate": "classified_as",
+      "value": "Kava Kava"
+    },
+    {
+      "id": "cabeza-piedra-ladriere-holder",
+      "objectId": "cabeza-piedra-ladriere",
+      "predicate": "held_by",
+      "value": "Sammlung Ladriere"
+    },
+    {
+      "id": "cabeza-piedra-ladriere-location",
+      "objectId": "cabeza-piedra-ladriere",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "cabeza-piedra-ladriere-type",
+      "objectId": "cabeza-piedra-ladriere",
+      "predicate": "classified_as",
+      "value": "Cabeza de piedra"
+    },
+    {
+      "id": "moai-tangata-manu-ladriere-holder",
+      "objectId": "moai-tangata-manu-ladriere",
+      "predicate": "held_by",
+      "value": "Sammlung Ladriere"
+    },
+    {
+      "id": "moai-tangata-manu-ladriere-location",
+      "objectId": "moai-tangata-manu-ladriere",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "moai-tangata-manu-ladriere-type",
+      "objectId": "moai-tangata-manu-ladriere",
+      "predicate": "classified_as",
+      "value": "Moai Tangata Manu"
+    },
+    {
+      "id": "rei-miro-pollo-ladriere-holder",
+      "objectId": "rei-miro-pollo-ladriere",
+      "predicate": "held_by",
+      "value": "Sammlung Ladriere"
+    },
+    {
+      "id": "rei-miro-pollo-ladriere-location",
+      "objectId": "rei-miro-pollo-ladriere",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "rei-miro-pollo-ladriere-type",
+      "objectId": "rei-miro-pollo-ladriere",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-pollo-ladriere-description",
+      "objectId": "rei-miro-pollo-ladriere",
+      "predicate": "described_as",
+      "value": "Rei miro de pollo"
+    },
+    {
+      "id": "tahonga-ladriere-holder",
+      "objectId": "tahonga-ladriere",
+      "predicate": "held_by",
+      "value": "Sammlung Ladriere"
+    },
+    {
+      "id": "tahonga-ladriere-location",
+      "objectId": "tahonga-ladriere",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "tahonga-ladriere-type",
+      "objectId": "tahonga-ladriere",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "rapa-ladriere-holder",
+      "objectId": "rapa-ladriere",
+      "predicate": "held_by",
+      "value": "Sammlung Ladriere"
+    },
+    {
+      "id": "rapa-ladriere-location",
+      "objectId": "rapa-ladriere",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "rapa-ladriere-type",
+      "objectId": "rapa-ladriere",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "anzuelo-hueso-ladriere-holder",
+      "objectId": "anzuelo-hueso-ladriere",
+      "predicate": "held_by",
+      "value": "Sammlung Ladriere"
+    },
+    {
+      "id": "anzuelo-hueso-ladriere-location",
+      "objectId": "anzuelo-hueso-ladriere",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "anzuelo-hueso-ladriere-type",
+      "objectId": "anzuelo-hueso-ladriere",
+      "predicate": "classified_as",
+      "value": "Anzuelo de hueso"
+    },
+    {
+      "id": "moai-kava-kava-ratton-holder",
+      "objectId": "moai-kava-kava-ratton",
+      "predicate": "held_by",
+      "value": "Colección privada Ratton"
+    },
+    {
+      "id": "moai-kava-kava-ratton-location",
+      "objectId": "moai-kava-kava-ratton",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "moai-kava-kava-ratton-type",
+      "objectId": "moai-kava-kava-ratton",
+      "predicate": "classified_as",
+      "value": "Moai Kava Kava"
+    },
+    {
+      "id": "rei-miro-caras-pollo-ratton-holder",
+      "objectId": "rei-miro-caras-pollo-ratton",
+      "predicate": "held_by",
+      "value": "Colección privada Ratton"
+    },
+    {
+      "id": "rei-miro-caras-pollo-ratton-location",
+      "objectId": "rei-miro-caras-pollo-ratton",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "rei-miro-caras-pollo-ratton-type",
+      "objectId": "rei-miro-caras-pollo-ratton",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-caras-pollo-ratton-description",
+      "objectId": "rei-miro-caras-pollo-ratton",
+      "predicate": "described_as",
+      "value": "Rei miro con caras de pollo"
+    },
+    {
+      "id": "moko-laurens-holder",
+      "objectId": "moko-laurens",
+      "predicate": "held_by",
+      "value": "Sammlung Laurens"
+    },
+    {
+      "id": "moko-laurens-location",
+      "objectId": "moko-laurens",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "moko-laurens-type",
+      "objectId": "moko-laurens",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "kava-kava-doble-cabeza-la-rochelle-holder",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural La Rochelle"
+    },
+    {
+      "id": "kava-kava-doble-cabeza-la-rochelle-location",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "located_at",
+      "value": "Paris, Francia"
+    },
+    {
+      "id": "kava-kava-doble-cabeza-la-rochelle-type",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "classified_as",
+      "value": "Kava Kava"
+    },
+    {
+      "id": "kava-kava-doble-cabeza-la-rochelle-description",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "described_as",
+      "value": "Kava Kava de doble cabeza"
+    },
+    {
+      "id": "figura-humana-acostada-leiden-holder",
+      "objectId": "figura-humana-acostada-leiden",
+      "predicate": "held_by",
+      "value": "Rijksmuseum voor Volkerkunde"
+    },
+    {
+      "id": "figura-humana-acostada-leiden-location",
+      "objectId": "figura-humana-acostada-leiden",
+      "predicate": "located_at",
+      "value": "Leiden-Holanda"
+    },
+    {
+      "id": "figura-humana-acostada-leiden-type",
+      "objectId": "figura-humana-acostada-leiden",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "figura-humana-acostada-leiden-description",
+      "objectId": "figura-humana-acostada-leiden",
+      "predicate": "described_as",
+      "value": "Figura humana acostada"
+    },
+    {
+      "id": "kava-kava-vaticano-holder",
+      "objectId": "kava-kava-vaticano",
+      "predicate": "held_by",
+      "value": "Museo Misionero Etnologico"
+    },
+    {
+      "id": "kava-kava-vaticano-location",
+      "objectId": "kava-kava-vaticano",
+      "predicate": "located_at",
+      "value": "Vaticano"
+    },
+    {
+      "id": "kava-kava-vaticano-type",
+      "objectId": "kava-kava-vaticano",
+      "predicate": "classified_as",
+      "value": "Kava Kava"
+    },
+    {
+      "id": "rei-miro-caras-humanas-vaticano-holder",
+      "objectId": "rei-miro-caras-humanas-vaticano",
+      "predicate": "held_by",
+      "value": "Museo Misionero Etnologico"
+    },
+    {
+      "id": "rei-miro-caras-humanas-vaticano-location",
+      "objectId": "rei-miro-caras-humanas-vaticano",
+      "predicate": "located_at",
+      "value": "Vaticano"
+    },
+    {
+      "id": "rei-miro-caras-humanas-vaticano-type",
+      "objectId": "rei-miro-caras-humanas-vaticano",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-caras-humanas-vaticano-description",
+      "objectId": "rei-miro-caras-humanas-vaticano",
+      "predicate": "described_as",
+      "value": "Rei miro, caras humanas"
+    },
+    {
+      "id": "kava-kava-pigorini-holder",
+      "objectId": "kava-kava-pigorini",
+      "predicate": "held_by",
+      "value": "Museo Preistorico et Etnografico “Luigi Pigorini”"
+    },
+    {
+      "id": "kava-kava-pigorini-location",
+      "objectId": "kava-kava-pigorini",
+      "predicate": "located_at",
+      "value": "Roma, Italia"
+    },
+    {
+      "id": "kava-kava-pigorini-type",
+      "objectId": "kava-kava-pigorini",
+      "predicate": "classified_as",
+      "value": "Kava kava"
+    },
+    {
+      "id": "moai-mujer-pigorini-holder",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "held_by",
+      "value": "Museo Preistorico et Etnografico “Luigi Pigorini”"
+    },
+    {
+      "id": "moai-mujer-pigorini-location",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "located_at",
+      "value": "Roma, Italia"
+    },
+    {
+      "id": "moai-mujer-pigorini-type",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "classified_as",
+      "value": "Moai"
+    },
+    {
+      "id": "moai-mujer-pigorini-description",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "described_as",
+      "value": "Moai Mujer en cuclillas con vulva larga"
+    },
+    {
+      "id": "tahonga-sencillo-sagrados-corazones-holder",
+      "objectId": "tahonga-sencillo-sagrados-corazones",
+      "predicate": "held_by",
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+    },
+    {
+      "id": "tahonga-sencillo-sagrados-corazones-location",
+      "objectId": "tahonga-sencillo-sagrados-corazones",
+      "predicate": "located_at",
+      "value": "Roma"
+    },
+    {
+      "id": "tahonga-sencillo-sagrados-corazones-type",
+      "objectId": "tahonga-sencillo-sagrados-corazones",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "tahonga-sencillo-sagrados-corazones-description",
+      "objectId": "tahonga-sencillo-sagrados-corazones",
+      "predicate": "described_as",
+      "value": "Tahonga sencillo"
+    },
+    {
+      "id": "tahonga-pajaro-sagrados-corazones-holder",
+      "objectId": "tahonga-pajaro-sagrados-corazones",
+      "predicate": "held_by",
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+    },
+    {
+      "id": "tahonga-pajaro-sagrados-corazones-location",
+      "objectId": "tahonga-pajaro-sagrados-corazones",
+      "predicate": "located_at",
+      "value": "Roma"
+    },
+    {
+      "id": "tahonga-pajaro-sagrados-corazones-type",
+      "objectId": "tahonga-pajaro-sagrados-corazones",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "tahonga-pajaro-sagrados-corazones-description",
+      "objectId": "tahonga-pajaro-sagrados-corazones",
+      "predicate": "described_as",
+      "value": "Tahonga de pájaro"
+    },
+    {
+      "id": "tahonga-caras-humanas-sagrados-corazones-holder",
+      "objectId": "tahonga-caras-humanas-sagrados-corazones",
+      "predicate": "held_by",
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+    },
+    {
+      "id": "tahonga-caras-humanas-sagrados-corazones-location",
+      "objectId": "tahonga-caras-humanas-sagrados-corazones",
+      "predicate": "located_at",
+      "value": "Roma"
+    },
+    {
+      "id": "tahonga-caras-humanas-sagrados-corazones-type",
+      "objectId": "tahonga-caras-humanas-sagrados-corazones",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "tahonga-caras-humanas-sagrados-corazones-description",
+      "objectId": "tahonga-caras-humanas-sagrados-corazones",
+      "predicate": "described_as",
+      "value": "Tahonga con caras humanas"
+    },
+    {
+      "id": "rapa-sagrados-corazones-holder",
+      "objectId": "rapa-sagrados-corazones",
+      "predicate": "held_by",
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+    },
+    {
+      "id": "rapa-sagrados-corazones-location",
+      "objectId": "rapa-sagrados-corazones",
+      "predicate": "located_at",
+      "value": "Roma"
+    },
+    {
+      "id": "rapa-sagrados-corazones-type",
+      "objectId": "rapa-sagrados-corazones",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "aroukou-kurenga-holder",
+      "objectId": "aroukou-kurenga",
+      "predicate": "held_by",
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+    },
+    {
+      "id": "aroukou-kurenga-location",
+      "objectId": "aroukou-kurenga",
+      "predicate": "located_at",
+      "value": "Roma"
+    },
+    {
+      "id": "aroukou-kurenga-type",
+      "objectId": "aroukou-kurenga",
+      "predicate": "classified_as",
+      "value": "Tablilla Rongo Rongo"
     },
     {
       "id": "aroukou-kurenga-name",
@@ -70,10 +1298,1744 @@
       "value": "Aroukou Kurenga"
     },
     {
+      "id": "mamari-holder",
+      "objectId": "mamari",
+      "predicate": "held_by",
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+    },
+    {
+      "id": "mamari-location",
+      "objectId": "mamari",
+      "predicate": "located_at",
+      "value": "Roma"
+    },
+    {
+      "id": "mamari-type",
+      "objectId": "mamari",
+      "predicate": "classified_as",
+      "value": "Tablilla Rongo Rongo"
+    },
+    {
+      "id": "mamari-name",
+      "objectId": "mamari",
+      "predicate": "has_name",
+      "value": "Mamari"
+    },
+    {
+      "id": "cara-hombre-sagrados-corazones-holder",
+      "objectId": "cara-hombre-sagrados-corazones",
+      "predicate": "held_by",
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+    },
+    {
+      "id": "cara-hombre-sagrados-corazones-location",
+      "objectId": "cara-hombre-sagrados-corazones",
+      "predicate": "located_at",
+      "value": "Roma"
+    },
+    {
+      "id": "cara-hombre-sagrados-corazones-type",
+      "objectId": "cara-hombre-sagrados-corazones",
+      "predicate": "classified_as",
+      "value": "Cara de hombre"
+    },
+    {
+      "id": "moai-tangata-leningrado-holder",
+      "objectId": "moai-tangata-leningrado",
+      "predicate": "held_by",
+      "value": "Museo Miklucho-Maklaja"
+    },
+    {
+      "id": "moai-tangata-leningrado-location",
+      "objectId": "moai-tangata-leningrado",
+      "predicate": "located_at",
+      "value": "Leningrado"
+    },
+    {
+      "id": "moai-tangata-leningrado-type",
+      "objectId": "moai-tangata-leningrado",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "moai-tangata-penacho-leningrado-holder",
+      "objectId": "moai-tangata-penacho-leningrado",
+      "predicate": "held_by",
+      "value": "Museo Miklucho-Maklaja"
+    },
+    {
+      "id": "moai-tangata-penacho-leningrado-location",
+      "objectId": "moai-tangata-penacho-leningrado",
+      "predicate": "located_at",
+      "value": "Leningrado"
+    },
+    {
+      "id": "moai-tangata-penacho-leningrado-type",
+      "objectId": "moai-tangata-penacho-leningrado",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "moai-tangata-penacho-leningrado-description",
+      "objectId": "moai-tangata-penacho-leningrado",
+      "predicate": "described_as",
+      "value": "Moai Tangata con penacho"
+    },
+    {
+      "id": "tangata-manu-leningrado-holder",
+      "objectId": "tangata-manu-leningrado",
+      "predicate": "held_by",
+      "value": "Museo Miklucho-Maklaja"
+    },
+    {
+      "id": "tangata-manu-leningrado-location",
+      "objectId": "tangata-manu-leningrado",
+      "predicate": "located_at",
+      "value": "Leningrado"
+    },
+    {
+      "id": "tangata-manu-leningrado-type",
+      "objectId": "tangata-manu-leningrado",
+      "predicate": "classified_as",
+      "value": "Tangata Manu"
+    },
+    {
+      "id": "tablilla-rongo-rongo-leningrado-holder",
+      "objectId": "tablilla-rongo-rongo-leningrado",
+      "predicate": "held_by",
+      "value": "Museo Miklucho-Maklaja"
+    },
+    {
+      "id": "tablilla-rongo-rongo-leningrado-location",
+      "objectId": "tablilla-rongo-rongo-leningrado",
+      "predicate": "located_at",
+      "value": "Leningrado"
+    },
+    {
+      "id": "tablilla-rongo-rongo-leningrado-type",
+      "objectId": "tablilla-rongo-rongo-leningrado",
+      "predicate": "classified_as",
+      "value": "Tablilla Rongo Rongo"
+    },
+    {
+      "id": "figura-curva-sonriente-leningrado-holder",
+      "objectId": "figura-curva-sonriente-leningrado",
+      "predicate": "held_by",
+      "value": "Museo Miklucho-Maklaja"
+    },
+    {
+      "id": "figura-curva-sonriente-leningrado-location",
+      "objectId": "figura-curva-sonriente-leningrado",
+      "predicate": "located_at",
+      "value": "Leningrado"
+    },
+    {
+      "id": "figura-curva-sonriente-leningrado-type",
+      "objectId": "figura-curva-sonriente-leningrado",
+      "predicate": "classified_as",
+      "value": "Figura"
+    },
+    {
+      "id": "figura-curva-sonriente-leningrado-description",
+      "objectId": "figura-curva-sonriente-leningrado",
+      "predicate": "described_as",
+      "value": "Figura curva sonriente"
+    },
+    {
+      "id": "moai-kava-kava-leningrado-holder",
+      "objectId": "moai-kava-kava-leningrado",
+      "predicate": "held_by",
+      "value": "Museo Miklucho-Maklaja"
+    },
+    {
+      "id": "moai-kava-kava-leningrado-location",
+      "objectId": "moai-kava-kava-leningrado",
+      "predicate": "located_at",
+      "value": "Leningrado"
+    },
+    {
+      "id": "moai-kava-kava-leningrado-type",
+      "objectId": "moai-kava-kava-leningrado",
+      "predicate": "classified_as",
+      "value": "Moai kava Kava"
+    },
+    {
+      "id": "figura-tipo-kava-kava-leningrado-holder",
+      "objectId": "figura-tipo-kava-kava-leningrado",
+      "predicate": "held_by",
+      "value": "Museo Miklucho-Maklaja"
+    },
+    {
+      "id": "figura-tipo-kava-kava-leningrado-location",
+      "objectId": "figura-tipo-kava-kava-leningrado",
+      "predicate": "located_at",
+      "value": "Leningrado"
+    },
+    {
+      "id": "figura-tipo-kava-kava-leningrado-type",
+      "objectId": "figura-tipo-kava-kava-leningrado",
+      "predicate": "classified_as",
+      "value": "Figura"
+    },
+    {
+      "id": "figura-tipo-kava-kava-leningrado-description",
+      "objectId": "figura-tipo-kava-kava-leningrado",
+      "predicate": "described_as",
+      "value": "Figura tipo kava kava"
+    },
+    {
+      "id": "tangata-manu-oslo-holder",
+      "objectId": "tangata-manu-oslo",
+      "predicate": "held_by",
+      "value": "Etnografisk Museum"
+    },
+    {
+      "id": "tangata-manu-oslo-location",
+      "objectId": "tangata-manu-oslo",
+      "predicate": "located_at",
+      "value": "Oslo, Noruega"
+    },
+    {
+      "id": "tangata-manu-oslo-type",
+      "objectId": "tangata-manu-oslo",
+      "predicate": "classified_as",
+      "value": "Tangata Manu"
+    },
+    {
+      "id": "rei-miro-concha-holder",
+      "objectId": "rei-miro-concha",
+      "predicate": "held_by",
+      "value": "Etnografisk Museum"
+    },
+    {
+      "id": "rei-miro-concha-location",
+      "objectId": "rei-miro-concha",
+      "predicate": "located_at",
+      "value": "Oslo, Noruega"
+    },
+    {
+      "id": "rei-miro-concha-type",
+      "objectId": "rei-miro-concha",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-concha-description",
+      "objectId": "rei-miro-concha",
+      "predicate": "described_as",
+      "value": "Rei miro de concha"
+    },
+    {
+      "id": "rei-miro-caras-humanas-holder",
+      "objectId": "rei-miro-caras-humanas",
+      "predicate": "held_by",
+      "value": "Etnografisk Museum"
+    },
+    {
+      "id": "rei-miro-caras-humanas-location",
+      "objectId": "rei-miro-caras-humanas",
+      "predicate": "located_at",
+      "value": "Oslo, Noruega"
+    },
+    {
+      "id": "rei-miro-caras-humanas-type",
+      "objectId": "rei-miro-caras-humanas",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-caras-humanas-description",
+      "objectId": "rei-miro-caras-humanas",
+      "predicate": "described_as",
+      "value": "Rei miro con caras humanas y figura incise al centro"
+    },
+    {
+      "id": "tahonga-oslo-1-holder",
+      "objectId": "tahonga-oslo-1",
+      "predicate": "held_by",
+      "value": "Etnografisk Museum"
+    },
+    {
+      "id": "tahonga-oslo-1-location",
+      "objectId": "tahonga-oslo-1",
+      "predicate": "located_at",
+      "value": "Oslo, Noruega"
+    },
+    {
+      "id": "tahonga-oslo-1-type",
+      "objectId": "tahonga-oslo-1",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "tahonga-oslo-2-holder",
+      "objectId": "tahonga-oslo-2",
+      "predicate": "held_by",
+      "value": "Etnografisk Museum"
+    },
+    {
+      "id": "tahonga-oslo-2-location",
+      "objectId": "tahonga-oslo-2",
+      "predicate": "located_at",
+      "value": "Oslo, Noruega"
+    },
+    {
+      "id": "tahonga-oslo-2-type",
+      "objectId": "tahonga-oslo-2",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "ua-oslo-holder",
+      "objectId": "ua-oslo",
+      "predicate": "held_by",
+      "value": "Etnografisk Museum"
+    },
+    {
+      "id": "ua-oslo-location",
+      "objectId": "ua-oslo",
+      "predicate": "located_at",
+      "value": "Oslo, Noruega"
+    },
+    {
+      "id": "ua-oslo-type",
+      "objectId": "ua-oslo",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "rapa-oslo-holder",
+      "objectId": "rapa-oslo",
+      "predicate": "held_by",
+      "value": "Etnografisk Museum"
+    },
+    {
+      "id": "rapa-oslo-location",
+      "objectId": "rapa-oslo",
+      "predicate": "located_at",
+      "value": "Oslo, Noruega"
+    },
+    {
+      "id": "rapa-oslo-type",
+      "objectId": "rapa-oslo",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "lapa-madera-oslo-holder",
+      "objectId": "lapa-madera-oslo",
+      "predicate": "held_by",
+      "value": "Etnografisk Museum"
+    },
+    {
+      "id": "lapa-madera-oslo-location",
+      "objectId": "lapa-madera-oslo",
+      "predicate": "located_at",
+      "value": "Oslo, Noruega"
+    },
+    {
+      "id": "lapa-madera-oslo-type",
+      "objectId": "lapa-madera-oslo",
+      "predicate": "classified_as",
+      "value": "Lapa de Madera"
+    },
+    {
+      "id": "lapa-madera-oslo-description",
+      "objectId": "lapa-madera-oslo",
+      "predicate": "described_as",
+      "value": "Lapa de Madera, colgante"
+    },
+    {
+      "id": "tahonga-incrustaciones-holder",
+      "objectId": "tahonga-incrustaciones",
+      "predicate": "held_by",
+      "value": "Statens Etnografisca Museum"
+    },
+    {
+      "id": "tahonga-incrustaciones-location",
+      "objectId": "tahonga-incrustaciones",
+      "predicate": "located_at",
+      "value": "Stockholm, Suecia"
+    },
+    {
+      "id": "tahonga-incrustaciones-type",
+      "objectId": "tahonga-incrustaciones",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "tahonga-incrustaciones-description",
+      "objectId": "tahonga-incrustaciones",
+      "predicate": "described_as",
+      "value": "Tahonga simple con incrustaciones"
+    },
+    {
+      "id": "moai-tangata-britanico-holder",
+      "objectId": "moai-tangata-britanico",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "moai-tangata-britanico-location",
+      "objectId": "moai-tangata-britanico",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "moai-tangata-britanico-type",
+      "objectId": "moai-tangata-britanico",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "manu-uru-britanico-holder",
+      "objectId": "manu-uru-britanico",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "manu-uru-britanico-location",
+      "objectId": "manu-uru-britanico",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "manu-uru-britanico-type",
+      "objectId": "manu-uru-britanico",
+      "predicate": "classified_as",
+      "value": "Manu Uru"
+    },
+    {
+      "id": "rei-miro-rongo-rongo-britanico-holder",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "rei-miro-rongo-rongo-britanico-location",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "rei-miro-rongo-rongo-britanico-type",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-rongo-rongo-britanico-description",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "described_as",
+      "value": "Rei miro con caras humanas y signos rongo rongo"
+    },
+    {
+      "id": "rei-miro-britanico-holder",
+      "objectId": "rei-miro-britanico",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "rei-miro-britanico-location",
+      "objectId": "rei-miro-britanico",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "rei-miro-britanico-type",
+      "objectId": "rei-miro-britanico",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rapa-britanico-holder",
+      "objectId": "rapa-britanico",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "rapa-britanico-location",
+      "objectId": "rapa-britanico",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "rapa-britanico-type",
+      "objectId": "rapa-britanico",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "tablilla-rongo-rongo-britanico-holder",
+      "objectId": "tablilla-rongo-rongo-britanico",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "tablilla-rongo-rongo-britanico-location",
+      "objectId": "tablilla-rongo-rongo-britanico",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "tablilla-rongo-rongo-britanico-type",
+      "objectId": "tablilla-rongo-rongo-britanico",
+      "predicate": "classified_as",
+      "value": "Tablilla Rongo Rongo"
+    },
+    {
+      "id": "figura-humana-aberrante-britanico-holder",
+      "objectId": "figura-humana-aberrante-britanico",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "figura-humana-aberrante-britanico-location",
+      "objectId": "figura-humana-aberrante-britanico",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "figura-humana-aberrante-britanico-type",
+      "objectId": "figura-humana-aberrante-britanico",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "figura-humana-aberrante-britanico-description",
+      "objectId": "figura-humana-aberrante-britanico",
+      "predicate": "described_as",
+      "value": "Figura humana aberrante"
+    },
+    {
+      "id": "figura-boca-circular-holder",
+      "objectId": "figura-boca-circular",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "figura-boca-circular-location",
+      "objectId": "figura-boca-circular",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "figura-boca-circular-type",
+      "objectId": "figura-boca-circular",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "figura-boca-circular-description",
+      "objectId": "figura-boca-circular",
+      "predicate": "described_as",
+      "value": "Figura humana con boca circular"
+    },
+    {
+      "id": "hoa-haka-nana-ia-holder",
+      "objectId": "hoa-haka-nana-ia",
+      "predicate": "held_by",
+      "value": "Museo Britanico"
+    },
+    {
+      "id": "hoa-haka-nana-ia-location",
+      "objectId": "hoa-haka-nana-ia",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "hoa-haka-nana-ia-type",
+      "objectId": "hoa-haka-nana-ia",
+      "predicate": "classified_as",
+      "value": "Moai de piedra"
+    },
+    {
       "id": "hoa-haka-nana-ia-name",
       "objectId": "hoa-haka-nana-ia",
       "predicate": "has_name",
       "value": "Hoa Haka Nana Ia"
+    },
+    {
+      "id": "rei-miro-pez-hooper-holder",
+      "objectId": "rei-miro-pez-hooper",
+      "predicate": "held_by",
+      "value": "Hooper Collection"
+    },
+    {
+      "id": "rei-miro-pez-hooper-location",
+      "objectId": "rei-miro-pez-hooper",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "rei-miro-pez-hooper-type",
+      "objectId": "rei-miro-pez-hooper",
+      "predicate": "classified_as",
+      "value": "Rei Miro"
+    },
+    {
+      "id": "rei-miro-pez-hooper-description",
+      "objectId": "rei-miro-pez-hooper",
+      "predicate": "described_as",
+      "value": "Rei Miro en forma de pez"
+    },
+    {
+      "id": "figura-zoomorfica-hooper-holder",
+      "objectId": "figura-zoomorfica-hooper",
+      "predicate": "held_by",
+      "value": "Hooper Collection"
+    },
+    {
+      "id": "figura-zoomorfica-hooper-location",
+      "objectId": "figura-zoomorfica-hooper",
+      "predicate": "located_at",
+      "value": "Londres"
+    },
+    {
+      "id": "figura-zoomorfica-hooper-type",
+      "objectId": "figura-zoomorfica-hooper",
+      "predicate": "classified_as",
+      "value": "Figura zoomorfica"
+    },
+    {
+      "id": "moko-pit-rivers-holder",
+      "objectId": "moko-pit-rivers",
+      "predicate": "held_by",
+      "value": "Pit Rivers Museum"
+    },
+    {
+      "id": "moko-pit-rivers-location",
+      "objectId": "moko-pit-rivers",
+      "predicate": "located_at",
+      "value": "Oxford, Inglaterra"
+    },
+    {
+      "id": "moko-pit-rivers-type",
+      "objectId": "moko-pit-rivers",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moai-paa-paa-royal-scottish-holder",
+      "objectId": "moai-paa-paa-royal-scottish",
+      "predicate": "held_by",
+      "value": "The Royal Scottish Museum"
+    },
+    {
+      "id": "moai-paa-paa-royal-scottish-location",
+      "objectId": "moai-paa-paa-royal-scottish",
+      "predicate": "located_at",
+      "value": "Edinburgh,Scotland"
+    },
+    {
+      "id": "moai-paa-paa-royal-scottish-type",
+      "objectId": "moai-paa-paa-royal-scottish",
+      "predicate": "classified_as",
+      "value": "Moai Pa’a Pa’a"
+    },
+    {
+      "id": "moai-tangata-royal-scottish-holder",
+      "objectId": "moai-tangata-royal-scottish",
+      "predicate": "held_by",
+      "value": "The Royal Scottish Museum"
+    },
+    {
+      "id": "moai-tangata-royal-scottish-location",
+      "objectId": "moai-tangata-royal-scottish",
+      "predicate": "located_at",
+      "value": "Edinburgh,Scotland"
+    },
+    {
+      "id": "moai-tangata-royal-scottish-type",
+      "objectId": "moai-tangata-royal-scottish",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "moko-ireland-holder",
+      "objectId": "moko-ireland",
+      "predicate": "held_by",
+      "value": "National Museum of Ireland"
+    },
+    {
+      "id": "moko-ireland-location",
+      "objectId": "moko-ireland",
+      "predicate": "located_at",
+      "value": "Dublin"
+    },
+    {
+      "id": "moko-ireland-type",
+      "objectId": "moko-ireland",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "figura-mahute-belfast-holder",
+      "objectId": "figura-mahute-belfast",
+      "predicate": "held_by",
+      "value": "Museum and Art Gallery"
+    },
+    {
+      "id": "figura-mahute-belfast-location",
+      "objectId": "figura-mahute-belfast",
+      "predicate": "located_at",
+      "value": "Belfast, Irlanda del Norte"
+    },
+    {
+      "id": "figura-mahute-belfast-type",
+      "objectId": "figura-mahute-belfast",
+      "predicate": "classified_as",
+      "value": "Figura"
+    },
+    {
+      "id": "figura-mahute-belfast-description",
+      "objectId": "figura-mahute-belfast",
+      "predicate": "described_as",
+      "value": "Figura de mahute (tapa)"
+    },
+    {
+      "id": "kava-kava-otago-holder",
+      "objectId": "kava-kava-otago",
+      "predicate": "held_by",
+      "value": "Otago Museum"
+    },
+    {
+      "id": "kava-kava-otago-location",
+      "objectId": "kava-kava-otago",
+      "predicate": "located_at",
+      "value": "Dunedin, Nueva Zelandia"
+    },
+    {
+      "id": "kava-kava-otago-type",
+      "objectId": "kava-kava-otago",
+      "predicate": "classified_as",
+      "value": "Kava Kava"
+    },
+    {
+      "id": "mujer-vulva-larga-otago-holder",
+      "objectId": "mujer-vulva-larga-otago",
+      "predicate": "held_by",
+      "value": "Otago Museum"
+    },
+    {
+      "id": "mujer-vulva-larga-otago-location",
+      "objectId": "mujer-vulva-larga-otago",
+      "predicate": "located_at",
+      "value": "Dunedin, Nueva Zelandia"
+    },
+    {
+      "id": "mujer-vulva-larga-otago-description",
+      "objectId": "mujer-vulva-larga-otago",
+      "predicate": "described_as",
+      "value": "Mujer con vulva larga"
+    },
+    {
+      "id": "pajaro-otago-holder",
+      "objectId": "pajaro-otago",
+      "predicate": "held_by",
+      "value": "Otago Museum"
+    },
+    {
+      "id": "pajaro-otago-location",
+      "objectId": "pajaro-otago",
+      "predicate": "located_at",
+      "value": "Dunedin, Nueva Zelandia"
+    },
+    {
+      "id": "pajaro-otago-type",
+      "objectId": "pajaro-otago",
+      "predicate": "classified_as",
+      "value": "Pajaro"
+    },
+    {
+      "id": "moai-piedra-arcaico-otago-holder",
+      "objectId": "moai-piedra-arcaico-otago",
+      "predicate": "held_by",
+      "value": "Otago Museum"
+    },
+    {
+      "id": "moai-piedra-arcaico-otago-location",
+      "objectId": "moai-piedra-arcaico-otago",
+      "predicate": "located_at",
+      "value": "Dunedin, Nueva Zelandia"
+    },
+    {
+      "id": "moai-piedra-arcaico-otago-type",
+      "objectId": "moai-piedra-arcaico-otago",
+      "predicate": "classified_as",
+      "value": "Moai de piedra"
+    },
+    {
+      "id": "moai-piedra-arcaico-otago-description",
+      "objectId": "moai-piedra-arcaico-otago",
+      "predicate": "described_as",
+      "value": "Moai de piedra arcaico"
+    },
+    {
+      "id": "kava-kava-aukland-holder",
+      "objectId": "kava-kava-aukland",
+      "predicate": "held_by",
+      "value": "Aukland Institute and Museum"
+    },
+    {
+      "id": "kava-kava-aukland-location",
+      "objectId": "kava-kava-aukland",
+      "predicate": "located_at",
+      "value": "Aukland, Nueva Zelandia"
+    },
+    {
+      "id": "kava-kava-aukland-type",
+      "objectId": "kava-kava-aukland",
+      "predicate": "classified_as",
+      "value": "Kava kava"
+    },
+    {
+      "id": "figura-hombre-aukland-holder",
+      "objectId": "figura-hombre-aukland",
+      "predicate": "held_by",
+      "value": "Aukland Institute and Museum"
+    },
+    {
+      "id": "figura-hombre-aukland-location",
+      "objectId": "figura-hombre-aukland",
+      "predicate": "located_at",
+      "value": "Aukland, Nueva Zelandia"
+    },
+    {
+      "id": "figura-hombre-aukland-type",
+      "objectId": "figura-hombre-aukland",
+      "predicate": "classified_as",
+      "value": "Figura de hombre"
+    },
+    {
+      "id": "figura-hermafrodita-aukland-holder",
+      "objectId": "figura-hermafrodita-aukland",
+      "predicate": "held_by",
+      "value": "Aukland Institute and Museum"
+    },
+    {
+      "id": "figura-hermafrodita-aukland-location",
+      "objectId": "figura-hermafrodita-aukland",
+      "predicate": "located_at",
+      "value": "Aukland, Nueva Zelandia"
+    },
+    {
+      "id": "figura-hermafrodita-aukland-type",
+      "objectId": "figura-hermafrodita-aukland",
+      "predicate": "classified_as",
+      "value": "Figura"
+    },
+    {
+      "id": "figura-hermafrodita-aukland-description",
+      "objectId": "figura-hermafrodita-aukland",
+      "predicate": "described_as",
+      "value": "Figura hermafrodita"
+    },
+    {
+      "id": "kava-kava-canterbury-holder",
+      "objectId": "kava-kava-canterbury",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "kava-kava-canterbury-location",
+      "objectId": "kava-kava-canterbury",
+      "predicate": "located_at",
+      "value": "Christchurch, New Zealand"
+    },
+    {
+      "id": "kava-kava-canterbury-type",
+      "objectId": "kava-kava-canterbury",
+      "predicate": "classified_as",
+      "value": "Kava kava"
+    },
+    {
+      "id": "figura-humana-canterbury-holder",
+      "objectId": "figura-humana-canterbury",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "figura-humana-canterbury-location",
+      "objectId": "figura-humana-canterbury",
+      "predicate": "located_at",
+      "value": "Christchurch, New Zealand"
+    },
+    {
+      "id": "figura-humana-canterbury-type",
+      "objectId": "figura-humana-canterbury",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "kava-kava-doble-cabeza-holder",
+      "objectId": "kava-kava-doble-cabeza",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "kava-kava-doble-cabeza-location",
+      "objectId": "kava-kava-doble-cabeza",
+      "predicate": "located_at",
+      "value": "Christchurch, New Zealand"
+    },
+    {
+      "id": "kava-kava-doble-cabeza-type",
+      "objectId": "kava-kava-doble-cabeza",
+      "predicate": "classified_as",
+      "value": "Kava kava"
+    },
+    {
+      "id": "kava-kava-doble-cabeza-description",
+      "objectId": "kava-kava-doble-cabeza",
+      "predicate": "described_as",
+      "value": "Kava kava de doble cabeza"
+    },
+    {
+      "id": "ua-national-museum-new-zealand-holder",
+      "objectId": "ua-national-museum-new-zealand",
+      "predicate": "held_by",
+      "value": "National Museum of New Zealand"
+    },
+    {
+      "id": "ua-national-museum-new-zealand-location",
+      "objectId": "ua-national-museum-new-zealand",
+      "predicate": "located_at",
+      "value": "Wellington, Nueva Zelandia"
+    },
+    {
+      "id": "ua-national-museum-new-zealand-type",
+      "objectId": "ua-national-museum-new-zealand",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ao-national-museum-new-zealand-holder",
+      "objectId": "ao-national-museum-new-zealand",
+      "predicate": "held_by",
+      "value": "National Museum of New Zealand"
+    },
+    {
+      "id": "ao-national-museum-new-zealand-location",
+      "objectId": "ao-national-museum-new-zealand",
+      "predicate": "located_at",
+      "value": "Wellington, Nueva Zelandia"
+    },
+    {
+      "id": "ao-national-museum-new-zealand-type",
+      "objectId": "ao-national-museum-new-zealand",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "rei-miro-gallo-holder",
+      "objectId": "rei-miro-gallo",
+      "predicate": "held_by",
+      "value": "Bishop Museum"
+    },
+    {
+      "id": "rei-miro-gallo-location",
+      "objectId": "rei-miro-gallo",
+      "predicate": "located_at",
+      "value": "Honolulu, Hawaii, USA"
+    },
+    {
+      "id": "rei-miro-gallo-type",
+      "objectId": "rei-miro-gallo",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-gallo-description",
+      "objectId": "rei-miro-gallo",
+      "predicate": "described_as",
+      "value": "Rei miro de gallo"
+    },
+    {
+      "id": "rei-miro-deteriorado-bishop-holder",
+      "objectId": "rei-miro-deteriorado-bishop",
+      "predicate": "held_by",
+      "value": "Bishop Museum"
+    },
+    {
+      "id": "rei-miro-deteriorado-bishop-location",
+      "objectId": "rei-miro-deteriorado-bishop",
+      "predicate": "located_at",
+      "value": "Honolulu, Hawaii, USA"
+    },
+    {
+      "id": "rei-miro-deteriorado-bishop-type",
+      "objectId": "rei-miro-deteriorado-bishop",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "rei-miro-deteriorado-bishop-description",
+      "objectId": "rei-miro-deteriorado-bishop",
+      "predicate": "described_as",
+      "value": "Rei miro (Madera muy deteriorada"
+    },
+    {
+      "id": "pie-amuleto-bishop-holder",
+      "objectId": "pie-amuleto-bishop",
+      "predicate": "held_by",
+      "value": "Bishop Museum"
+    },
+    {
+      "id": "pie-amuleto-bishop-location",
+      "objectId": "pie-amuleto-bishop",
+      "predicate": "located_at",
+      "value": "Honolulu, Hawaii, USA"
+    },
+    {
+      "id": "pie-amuleto-bishop-description",
+      "objectId": "pie-amuleto-bishop",
+      "predicate": "described_as",
+      "value": "Especie de pie amuleto"
+    },
+    {
+      "id": "ngaru-a-holder",
+      "objectId": "ngaru-a",
+      "predicate": "held_by",
+      "value": "Bishop Museum"
+    },
+    {
+      "id": "ngaru-a-location",
+      "objectId": "ngaru-a",
+      "predicate": "located_at",
+      "value": "Honolulu, Hawaii, USA"
+    },
+    {
+      "id": "ngaru-a-type",
+      "objectId": "ngaru-a",
+      "predicate": "classified_as",
+      "value": "Piedra almohada"
+    },
+    {
+      "id": "ngaru-a-type-2",
+      "objectId": "ngaru-a",
+      "predicate": "classified_as",
+      "value": "ngaru’a"
+    },
+    {
+      "id": "ngaru-a-description",
+      "objectId": "ngaru-a",
+      "predicate": "described_as",
+      "value": "Piedra almohada con petroglifos (ngaru’a)"
+    },
+    {
+      "id": "palo-platano-bishop-holder",
+      "objectId": "palo-platano-bishop",
+      "predicate": "held_by",
+      "value": "Bishop Museum"
+    },
+    {
+      "id": "palo-platano-bishop-location",
+      "objectId": "palo-platano-bishop",
+      "predicate": "located_at",
+      "value": "Honolulu, Hawaii, USA"
+    },
+    {
+      "id": "palo-platano-bishop-type",
+      "objectId": "palo-platano-bishop",
+      "predicate": "classified_as",
+      "value": "Palo"
+    },
+    {
+      "id": "palo-platano-bishop-description",
+      "objectId": "palo-platano-bishop",
+      "predicate": "described_as",
+      "value": "Palo en forma de platano"
+    },
+    {
+      "id": "tahonga-sin-cabeza-bishop-holder",
+      "objectId": "tahonga-sin-cabeza-bishop",
+      "predicate": "held_by",
+      "value": "Bishop Museum"
+    },
+    {
+      "id": "tahonga-sin-cabeza-bishop-location",
+      "objectId": "tahonga-sin-cabeza-bishop",
+      "predicate": "located_at",
+      "value": "Honolulu, Hawaii, USA"
+    },
+    {
+      "id": "tahonga-sin-cabeza-bishop-type",
+      "objectId": "tahonga-sin-cabeza-bishop",
+      "predicate": "classified_as",
+      "value": "Tahonga"
+    },
+    {
+      "id": "tahonga-sin-cabeza-bishop-description",
+      "objectId": "tahonga-sin-cabeza-bishop",
+      "predicate": "described_as",
+      "value": "Tahonga simple sin cabeza"
+    },
+    {
+      "id": "rei-miro-australian-museum-holder",
+      "objectId": "rei-miro-australian-museum",
+      "predicate": "held_by",
+      "value": "Australian Museum"
+    },
+    {
+      "id": "rei-miro-australian-museum-location",
+      "objectId": "rei-miro-australian-museum",
+      "predicate": "located_at",
+      "value": "Sydney, Australia"
+    },
+    {
+      "id": "rei-miro-australian-museum-type",
+      "objectId": "rei-miro-australian-museum",
+      "predicate": "classified_as",
+      "value": "Rei miro"
+    },
+    {
+      "id": "cara-humana-doble-peabody-salem-holder",
+      "objectId": "cara-humana-doble-peabody-salem",
+      "predicate": "held_by",
+      "value": "Peabody Museum"
+    },
+    {
+      "id": "cara-humana-doble-peabody-salem-location",
+      "objectId": "cara-humana-doble-peabody-salem",
+      "predicate": "located_at",
+      "value": "Salem, USA"
+    },
+    {
+      "id": "cara-humana-doble-peabody-salem-type",
+      "objectId": "cara-humana-doble-peabody-salem",
+      "predicate": "classified_as",
+      "value": "Cara humana"
+    },
+    {
+      "id": "cara-humana-doble-peabody-salem-description",
+      "objectId": "cara-humana-doble-peabody-salem",
+      "predicate": "described_as",
+      "value": "Cara humana doble"
+    },
+    {
+      "id": "figura-humana-peabody-salem-holder",
+      "objectId": "figura-humana-peabody-salem",
+      "predicate": "held_by",
+      "value": "Peabody Museum"
+    },
+    {
+      "id": "figura-humana-peabody-salem-location",
+      "objectId": "figura-humana-peabody-salem",
+      "predicate": "located_at",
+      "value": "Salem, USA"
+    },
+    {
+      "id": "figura-humana-peabody-salem-type",
+      "objectId": "figura-humana-peabody-salem",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "figura-acostada-peabody-salem-holder",
+      "objectId": "figura-acostada-peabody-salem",
+      "predicate": "held_by",
+      "value": "Peabody Museum"
+    },
+    {
+      "id": "figura-acostada-peabody-salem-location",
+      "objectId": "figura-acostada-peabody-salem",
+      "predicate": "located_at",
+      "value": "Salem, USA"
+    },
+    {
+      "id": "figura-acostada-peabody-salem-type",
+      "objectId": "figura-acostada-peabody-salem",
+      "predicate": "classified_as",
+      "value": "Figura"
+    },
+    {
+      "id": "figura-acostada-peabody-salem-description",
+      "objectId": "figura-acostada-peabody-salem",
+      "predicate": "described_as",
+      "value": "Figura acostada"
+    },
+    {
+      "id": "tangata-manu-peabody-cambridge-holder",
+      "objectId": "tangata-manu-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "tangata-manu-peabody-cambridge-location",
+      "objectId": "tangata-manu-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "tangata-manu-peabody-cambridge-type",
+      "objectId": "tangata-manu-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "Tangata Manu"
+    },
+    {
+      "id": "pez-peabody-cambridge-holder",
+      "objectId": "pez-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "pez-peabody-cambridge-location",
+      "objectId": "pez-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "pez-peabody-cambridge-type",
+      "objectId": "pez-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "pez"
+    },
+    {
+      "id": "hombre-cuclillas-peabody-cambridge-holder",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "hombre-cuclillas-peabody-cambridge-location",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "hombre-cuclillas-peabody-cambridge-description",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Hombre en cuclillas"
+    },
+    {
+      "id": "tortuga-peabody-cambridge-holder",
+      "objectId": "tortuga-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "tortuga-peabody-cambridge-location",
+      "objectId": "tortuga-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "tortuga-peabody-cambridge-type",
+      "objectId": "tortuga-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "tortuga"
+    },
+    {
+      "id": "cara-pajaro-peabody-cambridge-holder",
+      "objectId": "cara-pajaro-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "cara-pajaro-peabody-cambridge-location",
+      "objectId": "cara-pajaro-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "cara-pajaro-peabody-cambridge-type",
+      "objectId": "cara-pajaro-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "Cara de pajaro"
+    },
+    {
+      "id": "piedra-59-cm-peabody-cambridge-holder",
+      "objectId": "piedra-59-cm-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "piedra-59-cm-peabody-cambridge-location",
+      "objectId": "piedra-59-cm-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "piedra-59-cm-peabody-cambridge-type",
+      "objectId": "piedra-59-cm-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "Piedra"
+    },
+    {
+      "id": "piedra-59-cm-peabody-cambridge-description",
+      "objectId": "piedra-59-cm-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Piedra de 59 cm., con petroglifos de hombres pajaros"
+    },
+    {
+      "id": "piedra-23-cm-peabody-cambridge-holder",
+      "objectId": "piedra-23-cm-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "piedra-23-cm-peabody-cambridge-location",
+      "objectId": "piedra-23-cm-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "piedra-23-cm-peabody-cambridge-type",
+      "objectId": "piedra-23-cm-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "Piedra"
+    },
+    {
+      "id": "piedra-23-cm-peabody-cambridge-description",
+      "objectId": "piedra-23-cm-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Piedra de 23 cm. Con figura de hombre pajaro"
+    },
+    {
+      "id": "cabeza-mahute-peabody-cambridge-holder",
+      "objectId": "cabeza-mahute-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "cabeza-mahute-peabody-cambridge-location",
+      "objectId": "cabeza-mahute-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "cabeza-mahute-peabody-cambridge-type",
+      "objectId": "cabeza-mahute-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "Cabeza"
+    },
+    {
+      "id": "cabeza-mahute-peabody-cambridge-description",
+      "objectId": "cabeza-mahute-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Cabeza tipo sombrero pintado en tela de mahute"
+    },
+    {
+      "id": "figura-humana-aberrante-peabody-cambridge-holder",
+      "objectId": "figura-humana-aberrante-peabody-cambridge",
+      "predicate": "held_by",
+      "value": "Peabody Museum of Archaeology and Ethnology"
+    },
+    {
+      "id": "figura-humana-aberrante-peabody-cambridge-location",
+      "objectId": "figura-humana-aberrante-peabody-cambridge",
+      "predicate": "located_at",
+      "value": "Boston,Cambridge USA"
+    },
+    {
+      "id": "figura-humana-aberrante-peabody-cambridge-type",
+      "objectId": "figura-humana-aberrante-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "figura-humana-aberrante-peabody-cambridge-description",
+      "objectId": "figura-humana-aberrante-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Figura humana aberrante"
+    },
+    {
+      "id": "tangata-manu-rongorongo-holder",
+      "objectId": "tangata-manu-rongorongo",
+      "predicate": "held_by",
+      "value": "American Museum of Natural History"
+    },
+    {
+      "id": "tangata-manu-rongorongo-location",
+      "objectId": "tangata-manu-rongorongo",
+      "predicate": "located_at",
+      "value": "New York, USA"
+    },
+    {
+      "id": "tangata-manu-rongorongo-type",
+      "objectId": "tangata-manu-rongorongo",
+      "predicate": "classified_as",
+      "value": "Tangata Manu"
+    },
+    {
+      "id": "tangata-manu-rongorongo-description",
+      "objectId": "tangata-manu-rongorongo",
+      "predicate": "described_as",
+      "value": "Tangata Manu con signos rongo rongo"
+    },
+    {
+      "id": "ao-pintado-holder",
+      "objectId": "ao-pintado",
+      "predicate": "held_by",
+      "value": "Smithsonian Institution, United States National Museum"
+    },
+    {
+      "id": "ao-pintado-location",
+      "objectId": "ao-pintado",
+      "predicate": "located_at",
+      "value": "Washington, USA"
+    },
+    {
+      "id": "ao-pintado-type",
+      "objectId": "ao-pintado",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "ao-pintado-description",
+      "objectId": "ao-pintado",
+      "predicate": "described_as",
+      "value": "Ao pintado"
+    },
+    {
+      "id": "tablilla-rongo-rongo-smithsonian-holder",
+      "objectId": "tablilla-rongo-rongo-smithsonian",
+      "predicate": "held_by",
+      "value": "Smithsonian Institution, United States National Museum"
+    },
+    {
+      "id": "tablilla-rongo-rongo-smithsonian-location",
+      "objectId": "tablilla-rongo-rongo-smithsonian",
+      "predicate": "located_at",
+      "value": "Washington, USA"
+    },
+    {
+      "id": "tablilla-rongo-rongo-smithsonian-type",
+      "objectId": "tablilla-rongo-rongo-smithsonian",
+      "predicate": "classified_as",
+      "value": "Tablilla Rongo Rongo"
+    },
+    {
+      "id": "moai-piedra-sombrero-holder",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "held_by",
+      "value": "Smithsonian Institution, United States National Museum"
+    },
+    {
+      "id": "moai-piedra-sombrero-location",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "located_at",
+      "value": "Washington, USA"
+    },
+    {
+      "id": "moai-piedra-sombrero-type",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "classified_as",
+      "value": "Moai de piedra"
+    },
+    {
+      "id": "moai-piedra-sombrero-description",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "described_as",
+      "value": "Moai de piedra con sombrero"
+    },
+    {
+      "id": "figura-zoomorfa-field-holder",
+      "objectId": "figura-zoomorfa-field",
+      "predicate": "held_by",
+      "value": "Field Museum"
+    },
+    {
+      "id": "figura-zoomorfa-field-location",
+      "objectId": "figura-zoomorfa-field",
+      "predicate": "located_at",
+      "value": "Chicago, USA"
+    },
+    {
+      "id": "figura-zoomorfa-field-type",
+      "objectId": "figura-zoomorfa-field",
+      "predicate": "classified_as",
+      "value": "Figura Zoomorfa"
+    },
+    {
+      "id": "cabeza-mahute-new-bruswick-holder",
+      "objectId": "cabeza-mahute-new-bruswick",
+      "predicate": "held_by",
+      "value": "New Bruswick Museum"
+    },
+    {
+      "id": "cabeza-mahute-new-bruswick-location",
+      "objectId": "cabeza-mahute-new-bruswick",
+      "predicate": "located_at",
+      "value": "Canada"
+    },
+    {
+      "id": "cabeza-mahute-new-bruswick-type",
+      "objectId": "cabeza-mahute-new-bruswick",
+      "predicate": "classified_as",
+      "value": "Cabeza"
+    },
+    {
+      "id": "cabeza-mahute-new-bruswick-description",
+      "objectId": "cabeza-mahute-new-bruswick",
+      "predicate": "described_as",
+      "value": "Cabeza pintada de tela de mahute"
+    },
+    {
+      "id": "moai-paa-paa-santiago-holder",
+      "objectId": "moai-paa-paa-santiago",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural"
+    },
+    {
+      "id": "moai-paa-paa-santiago-location",
+      "objectId": "moai-paa-paa-santiago",
+      "predicate": "located_at",
+      "value": "Santiago"
+    },
+    {
+      "id": "moai-paa-paa-santiago-type",
+      "objectId": "moai-paa-paa-santiago",
+      "predicate": "classified_as",
+      "value": "Moai pa’a Pa’a"
+    },
+    {
+      "id": "moai-tangata-santiago-holder",
+      "objectId": "moai-tangata-santiago",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural"
+    },
+    {
+      "id": "moai-tangata-santiago-location",
+      "objectId": "moai-tangata-santiago",
+      "predicate": "located_at",
+      "value": "Santiago"
+    },
+    {
+      "id": "moai-tangata-santiago-type",
+      "objectId": "moai-tangata-santiago",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "cabeza-doble-piedra-santiago-holder",
+      "objectId": "cabeza-doble-piedra-santiago",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural"
+    },
+    {
+      "id": "cabeza-doble-piedra-santiago-location",
+      "objectId": "cabeza-doble-piedra-santiago",
+      "predicate": "located_at",
+      "value": "Santiago"
+    },
+    {
+      "id": "cabeza-doble-piedra-santiago-type",
+      "objectId": "cabeza-doble-piedra-santiago",
+      "predicate": "classified_as",
+      "value": "Cabeza"
+    },
+    {
+      "id": "cabeza-doble-piedra-santiago-description",
+      "objectId": "cabeza-doble-piedra-santiago",
+      "predicate": "described_as",
+      "value": "Cabeza doble de piedra"
+    },
+    {
+      "id": "piedra-35-cm-santiago-holder",
+      "objectId": "piedra-35-cm-santiago",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural"
+    },
+    {
+      "id": "piedra-35-cm-santiago-location",
+      "objectId": "piedra-35-cm-santiago",
+      "predicate": "located_at",
+      "value": "Santiago"
+    },
+    {
+      "id": "piedra-35-cm-santiago-type",
+      "objectId": "piedra-35-cm-santiago",
+      "predicate": "classified_as",
+      "value": "Piedra"
+    },
+    {
+      "id": "piedra-35-cm-santiago-description",
+      "objectId": "piedra-35-cm-santiago",
+      "predicate": "described_as",
+      "value": "Piedra de 35 cm. con petroglifos"
+    },
+    {
+      "id": "piedra-33-cm-santiago-holder",
+      "objectId": "piedra-33-cm-santiago",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural"
+    },
+    {
+      "id": "piedra-33-cm-santiago-location",
+      "objectId": "piedra-33-cm-santiago",
+      "predicate": "located_at",
+      "value": "Santiago"
+    },
+    {
+      "id": "piedra-33-cm-santiago-type",
+      "objectId": "piedra-33-cm-santiago",
+      "predicate": "classified_as",
+      "value": "Piedra"
+    },
+    {
+      "id": "piedra-33-cm-santiago-description",
+      "objectId": "piedra-33-cm-santiago",
+      "predicate": "described_as",
+      "value": "Piedra de 33 cm. Con figura de hombre pajaro"
+    },
+    {
+      "id": "mano-museo-carmen-holder",
+      "objectId": "mano-museo-carmen",
+      "predicate": "held_by",
+      "value": "Museo del Carmen"
+    },
+    {
+      "id": "mano-museo-carmen-location",
+      "objectId": "mano-museo-carmen",
+      "predicate": "located_at",
+      "value": "Maipu, Chile"
+    },
+    {
+      "id": "mano-museo-carmen-type",
+      "objectId": "mano-museo-carmen",
+      "predicate": "classified_as",
+      "value": "Mano"
+    },
+    {
+      "id": "abanico-museo-carmen-holder",
+      "objectId": "abanico-museo-carmen",
+      "predicate": "held_by",
+      "value": "Museo del Carmen"
+    },
+    {
+      "id": "abanico-museo-carmen-location",
+      "objectId": "abanico-museo-carmen",
+      "predicate": "located_at",
+      "value": "Maipu, Chile"
+    },
+    {
+      "id": "abanico-museo-carmen-type",
+      "objectId": "abanico-museo-carmen",
+      "predicate": "classified_as",
+      "value": "Abanico"
+    },
+    {
+      "id": "abanico-museo-carmen-description",
+      "objectId": "abanico-museo-carmen",
+      "predicate": "described_as",
+      "value": "Abanico posiblemente polinesico"
+    },
+    {
+      "id": "cabeza-piedra-valparaiso-holder",
+      "objectId": "cabeza-piedra-valparaiso",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural"
+    },
+    {
+      "id": "cabeza-piedra-valparaiso-location",
+      "objectId": "cabeza-piedra-valparaiso",
+      "predicate": "located_at",
+      "value": "Valparaíso, Chile"
+    },
+    {
+      "id": "cabeza-piedra-valparaiso-type",
+      "objectId": "cabeza-piedra-valparaiso",
+      "predicate": "classified_as",
+      "value": "Cabeza de piedra"
+    },
+    {
+      "id": "figura-doble-cara-concepcion-holder",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "held_by",
+      "value": "Museo de Concepcion"
+    },
+    {
+      "id": "figura-doble-cara-concepcion-location",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "located_at",
+      "value": "Concepcion , Chile"
+    },
+    {
+      "id": "figura-doble-cara-concepcion-type",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "classified_as",
+      "value": "Figura"
+    },
+    {
+      "id": "figura-doble-cara-concepcion-description",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "described_as",
+      "value": "Figura con doble cara"
+    },
+    {
+      "id": "figura-hombre-dos-cabezas-buenos-aires-holder",
+      "objectId": "figura-hombre-dos-cabezas-buenos-aires",
+      "predicate": "held_by",
+      "value": "Museo Etnografico de la Universidad de Buenos Aires"
+    },
+    {
+      "id": "figura-hombre-dos-cabezas-buenos-aires-location",
+      "objectId": "figura-hombre-dos-cabezas-buenos-aires",
+      "predicate": "located_at",
+      "value": "Buenos Aires, Argentina"
+    },
+    {
+      "id": "figura-hombre-dos-cabezas-buenos-aires-type",
+      "objectId": "figura-hombre-dos-cabezas-buenos-aires",
+      "predicate": "classified_as",
+      "value": "Figura de hombre"
+    },
+    {
+      "id": "figura-hombre-dos-cabezas-buenos-aires-description",
+      "objectId": "figura-hombre-dos-cabezas-buenos-aires",
+      "predicate": "described_as",
+      "value": "Figura de hombre con dos cabezas"
+    },
+    {
+      "id": "figura-ancha-hombre-buenos-aires-holder",
+      "objectId": "figura-ancha-hombre-buenos-aires",
+      "predicate": "held_by",
+      "value": "Museo Etnografico de la Universidad de Buenos Aires"
+    },
+    {
+      "id": "figura-ancha-hombre-buenos-aires-location",
+      "objectId": "figura-ancha-hombre-buenos-aires",
+      "predicate": "located_at",
+      "value": "Buenos Aires, Argentina"
+    },
+    {
+      "id": "figura-ancha-hombre-buenos-aires-type",
+      "objectId": "figura-ancha-hombre-buenos-aires",
+      "predicate": "classified_as",
+      "value": "Figura"
+    },
+    {
+      "id": "figura-ancha-hombre-buenos-aires-description",
+      "objectId": "figura-ancha-hombre-buenos-aires",
+      "predicate": "described_as",
+      "value": "Figura ancha de hombre"
+    },
+    {
+      "id": "figura-humana-grotesca-buenos-aires-holder",
+      "objectId": "figura-humana-grotesca-buenos-aires",
+      "predicate": "held_by",
+      "value": "Museo Etnografico de la Universidad de Buenos Aires"
+    },
+    {
+      "id": "figura-humana-grotesca-buenos-aires-location",
+      "objectId": "figura-humana-grotesca-buenos-aires",
+      "predicate": "located_at",
+      "value": "Buenos Aires, Argentina"
+    },
+    {
+      "id": "figura-humana-grotesca-buenos-aires-type",
+      "objectId": "figura-humana-grotesca-buenos-aires",
+      "predicate": "classified_as",
+      "value": "Figura humana"
+    },
+    {
+      "id": "figura-humana-grotesca-buenos-aires-description",
+      "objectId": "figura-humana-grotesca-buenos-aires",
+      "predicate": "described_as",
+      "value": "Figura humana grotesca"
     }
   ],
   "images": []

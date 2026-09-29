@@ -22,6 +22,30 @@ const source = parseSource(
 );
 
 describe("collection model", () => {
+  test("preserves source research notes with their own language without creating claims", () => {
+    const { id: _id, ...record } = source;
+    const notes = { text: "Blank cells repeat the preceding holder.", language: "en-GB" };
+    const parsed = parseSource({ ...record, language: "es", notes }, "source-one.json");
+    expect(parsed.notes).toEqual(notes);
+    expect(parsed.language).toBe("es");
+    expect(parsed.claims).toEqual(source.claims);
+    expect(parseSource(record, "source-one.json").notes).toBeUndefined();
+  });
+
+  test.each([
+    null,
+    "Unstructured note",
+    {},
+    { text: " ", language: "en-GB" },
+    { text: 42, language: "en-GB" },
+    { text: "Note" },
+    { text: "Note", language: "English" },
+    { text: "Note", language: "en-GB", private: true },
+  ])("rejects malformed source notes: %j", (notes) => {
+    const { id: _id, ...record } = source;
+    expect(() => parseSource({ ...record, notes }, "source-one.json")).toThrow(/notes/);
+  });
+
   test("validates linked records and images", () => {
     const data = validateCollection(
       { objects: [object], sources: [source] },
