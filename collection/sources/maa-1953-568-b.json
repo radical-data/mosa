@@ -1,0 +1,80 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510275/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "catalogue_number",
+      "value": "1953.568 B"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "described_as",
+      "value": "Moai kavakava. Male figure, carved from wood, with eyes inlaid with a black stone (possibly obsidian). The figure has a large head, and a thin body, with an exaggerated rib cage and spine. The facial features are exaggerated, with pronounced eyebrows and ridges under the eyes."
+    },
+    {
+      "id": "place",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "period",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "made_during",
+      "value": "19th-20th century"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "made_of",
+      "value": "Wood; Obsidian"
+    },
+    {
+      "id": "local-term",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "classified_as",
+      "value": "Moai kavakava"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "described_as",
+      "value": "Measurements: 70mm x 430mm x 66mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "described_as",
+      "value": "Source: Chapman, D. M. (Mrs) [vendor]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Analysis) Male figure (moai kavakava). Carved from heavy dark coloured wood. Probably late nineteenth - early twentieth century. From notes by Rafal Wieczorek, 4/2/2014 Event Date 4/2/2014 Author: maa"
+    },
+    {
+      "id": "catalogue-event-2",
+      "objectId": "moai-kavakava-cambridge-1953-568-b",
+      "predicate": "described_as",
+      "value": "Catalogue event: Description (Physical description) Moai kava kava. Not carved from local wood and the weight of the wood is too light. Likely to have been created from ship’s or drift wood; From knowledge shared by Rapanui archaeologist Enerike Ngaara Te Manu Carrasco Hotu on a visit to MAA, 13/05/2025 Event Date 13/5/2025 Author: rachel hand"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession 1953.568 B in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-50-16-680z.html",
+      "capturedAt": "2026-09-29T23:50:16.680Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

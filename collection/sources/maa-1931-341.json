@@ -1,0 +1,80 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510269/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "catalogue_number",
+      "value": "1931.341"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "described_as",
+      "value": "Moai kavakava. A roughly carved, potentially unfinished figure of a man or woman. The head is large, and there is an exaggerated chest, with a projection at the centre. The eyes and eyebrows are carved in high relief."
+    },
+    {
+      "id": "place",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "local-term",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "classified_as",
+      "value": "Moai kavakava"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "described_as",
+      "value": "Measurements: 83mm x 416mm x 105mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "described_as",
+      "value": "Source: Darwin, Maud (Lady) [donor]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Analysis) Carved from light coloured wood. A male figure, not female (moai kavakava) Probably late nineteenth - early twentieth century. Condition: good- but with a recess from a knot in the wood. From notes by Rafal Wieczorek during a visit to MAA, 4/2/2014 Event Date 4/2/2014 Author: maa"
+    },
+    {
+      "id": "catalogue-event-2",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Acquisition Details) Given by Lady Martha 'Maud' Darwin (1861- 1947), an American socialite and widow of astronomer Sir George Howard Darwin (1945- 1912), Plumian professor of astronomy and experimental philosophy, Cambridge University. Event Date 13/1/2022 Author: rachel hand"
+    },
+    {
+      "id": "catalogue-event-3",
+      "objectId": "moai-kavakava-cambridge-1931-341",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Amendments / updates) Moai tangata. Female figure carved from mirapūpū wood, lighter weight than the toromiro (Sophora toromiro). The base of the feet are flat suggesting it was not suspend from the house or used in ceremonies when it was hung around the body like a bandolier From knowledge shared by Rapanui archaeologist Enerike Ngaara Te Manu Carrasco Hotu on a visit to MAA, 13/05/2025 Event Date 13/5/2025 Author: Flo Sutton"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession 1931.341 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. The museum preserves competing classifications, including the dated 2025 contribution from Enerike Ngaara Te Manu Carrasco Hotu; these are not collapsed into one assertion. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-50-07-534z.html",
+      "capturedAt": "2026-09-29T23:50:07.534Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

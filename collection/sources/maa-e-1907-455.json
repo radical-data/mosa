@@ -1,0 +1,92 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510261/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "catalogue_number",
+      "value": "E 1907.455"
+    },
+    {
+      "id": "description",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Paddle-shaped club. The indented head is carved with a pair of transverse bands, and the keeled shaft terminates in a mitre-shaped butt."
+    },
+    {
+      "id": "place",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Cook Islands; ?Mangaia"
+    },
+    {
+      "id": "material",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "measurements",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Measurements: 24mm x 52mm x 1463mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Source: Stevens Auction Rooms [vendor]; Bevan, Anthony Ashley (Professor) [monetary donor]"
+    },
+    {
+      "id": "reference-numbers",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Reference Numbers: E 1907.455; MAA: Z 10654; Z 5937; 327 [?Steven's no.]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Acquisition Details) Catalogue card for E 1907.455 notes, 'Purchased Stevens / Professor Bevan's donation'. Event Date Author: maa"
+    },
+    {
+      "id": "catalogue-event-2",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Analysis) Note on catalogue card by MAA Curator, Dr Deborah Swallow: \"Probably from further west. D.A. Swallow.\" [undated] Event Date Author: rachel hand"
+    },
+    {
+      "id": "catalogue-event-3",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Amendments / updates) This is not from Rapa Nui, and Mangaia is more likely. From knowledge shared by Enerike Ngaara Te Manu Carrasco Hotus, an archaelogist from Rapa Nui on a visit to MAA Event Date 13/5/2025 Author: rachel hand"
+    },
+    {
+      "id": "catalogue-event-4",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Catalogue event: Description (Labels & Markings) Printed paper label with '327' adhered to shaft, presumaby the Steven's Sale no Event Date 13/5/2025 Author: rachel hand"
+    },
+    {
+      "id": "revised-object-label",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Catalogue event: Description (Labels & Markings) Old adhered paper label reads: 'E 1907.455/ Club/ Easter Is./ (Bt Stevens sale, Lond, 1907) /* Professor Bevan, 1907.' The Easter Island provenance has been crossed out and replaced by 'MANGAIA' written in blue pencil. The later accession number 'Z 10654' has been added to the label in black ink. Event Date Author: Rachel Hand"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession E 1907.455 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. The exact accession, 1463 × 52 × 24 mm measurements and Stevens/Bevan acquisition support identity, but the museum attributes the club to the Cook Islands, ?Mangaia, rather than Rapa Nui. Both source accounts are retained. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-50-59-036z.html",
+      "capturedAt": "2026-09-29T23:50:59.036Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

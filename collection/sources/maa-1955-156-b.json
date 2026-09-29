@@ -1,0 +1,86 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/561634/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "catalogue_number",
+      "value": "1955.156 B"
+    },
+    {
+      "id": "description",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Rapa. Bifacial anthropomorphic dance-paddle carved of toromiro wood (Mimosa sp.) with a flattened 'head' form at one end with stylized facial features merging into a cylindrical hand-grip section broadening out into a flattened 'torso' form ending with a stylized phallus point."
+    },
+    {
+      "id": "place",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "period",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "made_during",
+      "value": "19th century"
+    },
+    {
+      "id": "material",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "local-term",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "measurements",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Measurements: 19mm x 810mm x 173mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Source: HMS Topaz; Newall, Robert Stirling [donor]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Field collection) Collected on the voyage of H.M.S. Topaz, 1868. Event Date 1868 Author: rachel hand"
+    },
+    {
+      "id": "catalogue-event-2",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Acquisition Details) Donated in 1955 by Robert Newall. Event Date 1955 Author: Lucie Carreau"
+    },
+    {
+      "id": "catalogue-event-3",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Amendments / updates) Lucie Carreau noted that the object was wrongly transcribed as being 'Beasley. H.G. (donor)'. Event Date 3/8/2006 Author: rachel hand"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession 1955.156 B in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-51-17-995z.html",
+      "capturedAt": "2026-09-29T23:51:17.995Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

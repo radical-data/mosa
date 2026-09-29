@@ -1,0 +1,74 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510260/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "catalogue_number",
+      "value": "E 1894.94"
+    },
+    {
+      "id": "description",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Rei miro. A flat, carved crescent-shaped wooden gorget, with shell like ends. Worn mainly by chiefly women at events as insignia of rank."
+    },
+    {
+      "id": "place",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "material",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "local-term",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "classified_as",
+      "value": "Rei miro [necklace of wood]"
+    },
+    {
+      "id": "measurements",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Measurements: 70mm x 490mm x 711mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Source: Froude, James Anthony (prof.) [monetary donor]"
+    },
+    {
+      "id": "reference-numbers",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Reference Numbers: E 1894.94; MAA: Z 6126; AR 1894.413; O.XX.7"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Acquisition Details) Purchased with a donation of £5 to the Museum Accession Fund from James Anthony Froude (1818- 1894), Regius Professor of Modern History in the University of Oxford. Event Date 1894 Author: maa"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession E 1894.94 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-52-02-830z.html",
+      "capturedAt": "2026-09-29T23:52:02.830Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

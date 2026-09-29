@@ -1,0 +1,80 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/561633/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "catalogue_number",
+      "value": "1953.568 A"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Moai pa'apa'a. A carved, wooden, standing figure of a woman, carved very thinly. With the left hand on the stomach and the right hand held at the groin."
+    },
+    {
+      "id": "place",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "period",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "made_during",
+      "value": "19th-20th century"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "made_of",
+      "value": "Wood; Stone; ?Obsidian"
+    },
+    {
+      "id": "local-term",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Measurements: 65mm x 537mm x 115mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Source: Chapman, D. M. (Mrs) [vendor]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Analysis) Female figure (moai pa'apa'a). Carved from heavy dark coloured wood. Probably late nineteenth - early twentieth century. From notes by Rafal Wieczorek on a visit to MAA 4/2/2014 Event Date 4/2/2014 Author: rachel hand"
+    },
+    {
+      "id": "catalogue-event-2",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Catalogue event: Description (Physical description) Moai pa’a pa’a (infertile female spirit) carved from Toromiro wood, a flowering shrub or tree that was endemic to the island but no longer grows there due to impact of sheep farming. From knowledge shared by Rapanui archaeologist Enerike Ngaara Te Manu Carrasco Hotu on a visit to MAA, 13/05/2025 Event Date 13/5/2025 Author: rachel hand"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession 1953.568 A in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-50-25-988z.html",
+      "capturedAt": "2026-09-29T23:50:25.988Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

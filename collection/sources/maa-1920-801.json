@@ -1,0 +1,62 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510264/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "catalogue_number",
+      "value": "1920.801"
+    },
+    {
+      "id": "description",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "described_as",
+      "value": "Rei miro. Ceremonial wooden breastplate. Crescent shaped with a carved head at each end. Worn mainly by chiefly women as insignia of authority, rank and noble birth."
+    },
+    {
+      "id": "place",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "material",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "local-term",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "classified_as",
+      "value": "Rei miro [necklace of wood]"
+    },
+    {
+      "id": "measurements",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "described_as",
+      "value": "Measurements: 10mm x 270mm x 490mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "described_as",
+      "value": "Source: von Hügel, Eliza (Baroness) [donor]"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession 1920.801 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-51-54-215z.html",
+      "capturedAt": "2026-09-29T23:51:54.215Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}
