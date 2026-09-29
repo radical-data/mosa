@@ -14096,6 +14096,2628 @@
       "objectId": "rapa-otago-o50-128",
       "predicate": "described_as",
       "value": "Dimensions: 83,6 x 20 x 1,93 cm"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-classification",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-holder",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-location",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-catalogue-number",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "catalogue_number",
+      "value": "VI 4908"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-material",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-collection-date",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-collector",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-acquisition-date",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "paoa-berlin-vi-4908-dimensions",
+      "objectId": "paoa-berlin-vi-4908",
+      "predicate": "described_as",
+      "value": "Dimensions: 51 x 10,3 x 4,5 cm"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-classification",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-holder",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-location",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-catalogue-number",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "catalogue_number",
+      "value": "VI 4864 - A"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-material",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-collection-date",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-collector",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich A. Schlubach"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-acquisition-date",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "paoa-berlin-vi-4864-a-dimensions",
+      "objectId": "paoa-berlin-vi-4864-a",
+      "predicate": "described_as",
+      "value": "Dimensions: 50,5 x 12,5 x 4 cm"
+    },
+    {
+      "id": "paoa-dresden-18424-classification",
+      "objectId": "paoa-dresden-18424",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-dresden-18424-holder",
+      "objectId": "paoa-dresden-18424",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "paoa-dresden-18424-location",
+      "objectId": "paoa-dresden-18424",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "paoa-dresden-18424-catalogue-number",
+      "objectId": "paoa-dresden-18424",
+      "predicate": "catalogue_number",
+      "value": "18424"
+    },
+    {
+      "id": "paoa-dresden-18424-material",
+      "objectId": "paoa-dresden-18424",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-dresden-18424-collection-date",
+      "objectId": "paoa-dresden-18424",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "paoa-dresden-18424-collector",
+      "objectId": "paoa-dresden-18424",
+      "predicate": "described_as",
+      "value": "Collector: Jacob Weisser, SMS Hyäne expedition"
+    },
+    {
+      "id": "paoa-dresden-18424-acquisition-date",
+      "objectId": "paoa-dresden-18424",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1886"
+    },
+    {
+      "id": "paoa-dresden-26218-classification",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-dresden-26218-holder",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "paoa-dresden-26218-location",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "paoa-dresden-26218-catalogue-number",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "catalogue_number",
+      "value": "26218"
+    },
+    {
+      "id": "paoa-dresden-26218-material",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-dresden-26218-collection-date",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "described_as",
+      "value": "Collection date: 1904"
+    },
+    {
+      "id": "paoa-dresden-26218-collector",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "described_as",
+      "value": "Collector: William D. Webster"
+    },
+    {
+      "id": "paoa-dresden-26218-acquisition-date",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1904, purchased by Arthur Baessler"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-classification",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-holder",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-location",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-catalogue-number",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "catalogue_number",
+      "value": "E 1907.455"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-material",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-collection-date",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-collector",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-acquisition-date",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1907, purchased from Stevens Auction Rooms with a donation from Prof. Anthony Ashley Bevan"
+    },
+    {
+      "id": "paoa-cambridge-e-1907-455-dimensions",
+      "objectId": "paoa-cambridge-e-1907-455",
+      "predicate": "described_as",
+      "value": "Dimensions: 2,4 x 5,2 x 146,3 cm"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-classification",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-holder",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "held_by",
+      "value": "Weltkulturen Museum, Frankfurt am Main"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-location",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "located_at",
+      "value": "Frankfurt am Main"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-catalogue-number",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "catalogue_number",
+      "value": "NS 11126"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-material",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-collection-date",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-collector",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-acquisition-date",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1909, exchange with Königliches Zoologisches und Anthropologisch-Ethnographisches Museum zu Dresden"
+    },
+    {
+      "id": "paoa-frankfurt-am-main-ns-11126-dimensions",
+      "objectId": "paoa-frankfurt-am-main-ns-11126",
+      "predicate": "described_as",
+      "value": "Dimensions: length 40 cm"
+    },
+    {
+      "id": "paoa-stockholm-1909-10-0022-classification",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-stockholm-1909-10-0022-holder",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "paoa-stockholm-1909-10-0022-location",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "paoa-stockholm-1909-10-0022-catalogue-number",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "catalogue_number",
+      "value": "1909.10.0022"
+    },
+    {
+      "id": "paoa-stockholm-1909-10-0022-material",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-stockholm-1909-10-0022-collection-date",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "paoa-stockholm-1909-10-0022-collector",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Collector: Carl Skottsberg"
+    },
+    {
+      "id": "paoa-stockholm-1909-10-0022-acquisition-date",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1909"
+    },
+    {
+      "id": "paoa-zurich-12314-classification",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-zurich-12314-holder",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "held_by",
+      "value": "Völkerkundemuseum der Universität Zürich"
+    },
+    {
+      "id": "paoa-zurich-12314-location",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "paoa-zurich-12314-catalogue-number",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "catalogue_number",
+      "value": "12314"
+    },
+    {
+      "id": "paoa-zurich-12314-material",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-zurich-12314-collection-date",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "paoa-zurich-12314-collector",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche ; Baron v. d. Heydt (1935)"
+    },
+    {
+      "id": "paoa-zurich-12314-acquisition-date",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1959, from Baron v. d. Heydt"
+    },
+    {
+      "id": "paoa-zurich-12314-dimensions",
+      "objectId": "paoa-zurich-12314",
+      "predicate": "described_as",
+      "value": "Dimensions: 66 x 6 x 6 cm"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-classification",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-holder",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-location",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-catalogue-number",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "catalogue_number",
+      "value": "RPO 314"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-material",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-collection-date",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-collector",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-acquisition-date",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, collection Eduard von der Heydt"
+    },
+    {
+      "id": "paoa-zurich-rpo-314-dimensions",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "described_as",
+      "value": "Dimensions: H 42,5 cm"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-classification",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-holder",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-location",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-catalogue-number",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "catalogue_number",
+      "value": "MHNV 1 Registro surdoc 4-1984"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-material",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "made_of",
+      "value": "wood, bone"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-collection-date",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "described_as",
+      "value": "Collection date: 1915"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-collector",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-acquisition-date",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1984, from Demartis"
+    },
+    {
+      "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-dimensions",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "described_as",
+      "value": "Dimensions: 9 cm x 70 cm"
+    },
+    {
+      "id": "paoa-otago-d31-846-classification",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-otago-d31-846-holder",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "paoa-otago-d31-846-location",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "paoa-otago-d31-846-catalogue-number",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "catalogue_number",
+      "value": "D31.846"
+    },
+    {
+      "id": "paoa-otago-d31-846-material",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-otago-d31-846-collection-date",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "paoa-otago-d31-846-collector",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "paoa-otago-d31-846-acquisition-date",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1931"
+    },
+    {
+      "id": "paoa-otago-d31-846-dimensions",
+      "objectId": "paoa-otago-d31-846",
+      "predicate": "described_as",
+      "value": "Dimensions: 53,2 x 10 x 3,73 cm"
+    },
+    {
+      "id": "paoa-otago-d31-847-classification",
+      "objectId": "paoa-otago-d31-847",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-otago-d31-847-holder",
+      "objectId": "paoa-otago-d31-847",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "paoa-otago-d31-847-location",
+      "objectId": "paoa-otago-d31-847",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "paoa-otago-d31-847-catalogue-number",
+      "objectId": "paoa-otago-d31-847",
+      "predicate": "catalogue_number",
+      "value": "D31.847"
+    },
+    {
+      "id": "paoa-otago-d31-847-material",
+      "objectId": "paoa-otago-d31-847",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "paoa-otago-d31-847-collection-date",
+      "objectId": "paoa-otago-d31-847",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "paoa-otago-d31-847-collector",
+      "objectId": "paoa-otago-d31-847",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "paoa-otago-d31-847-acquisition-date",
+      "objectId": "paoa-otago-d31-847",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1931"
+    },
+    {
+      "id": "paoa-bremen-d13432-classification",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "classified_as",
+      "value": "Paoa"
+    },
+    {
+      "id": "paoa-bremen-d13432-holder",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "paoa-bremen-d13432-location",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "paoa-bremen-d13432-catalogue-number",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "catalogue_number",
+      "value": "D13432"
+    },
+    {
+      "id": "paoa-bremen-d13432-material",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "made_of",
+      "value": "wood, leather"
+    },
+    {
+      "id": "paoa-bremen-d13432-collection-date",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "paoa-bremen-d13432-collector",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "paoa-bremen-d13432-acquisition-date",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954"
+    },
+    {
+      "id": "paoa-bremen-d13432-dimensions",
+      "objectId": "paoa-bremen-d13432",
+      "predicate": "described_as",
+      "value": "Dimensions: 90 x 3,5 x 4 cm"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-classification",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-holder",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-location",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-catalogue-number",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "catalogue_number",
+      "value": "E150.1141/ OLDMAN 352"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-material",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-collection-date",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-collector",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-acquisition-date",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "ua-canterbury-e150-1141-oldman-352-dimensions",
+      "objectId": "ua-canterbury-e150-1141-oldman-352",
+      "predicate": "described_as",
+      "value": "Dimensions: 166,37 x 8,25 cm"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-classification",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-holder",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-location",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-catalogue-number",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "catalogue_number",
+      "value": "E150.1142/ OLDMAN 356"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-material",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-collection-date",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-collector",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-acquisition-date",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "ua-canterbury-e150-1142-oldman-356-dimensions",
+      "objectId": "ua-canterbury-e150-1142-oldman-356",
+      "predicate": "described_as",
+      "value": "Dimensions: 143,51 x 6,66 cm"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-classification",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-holder",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-location",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-catalogue-number",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "catalogue_number",
+      "value": "E150.1143/ OLDMAN 107 1117"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-material",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-collection-date",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-collector",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-acquisition-date",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "ua-canterbury-e150-1143-oldman-107-1117-dimensions",
+      "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
+      "predicate": "described_as",
+      "value": "Dimensions: 174 x 9,5 x 5 cm"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-classification",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-holder",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-location",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-catalogue-number",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "catalogue_number",
+      "value": "E150.1144/ OLDMAN 1118"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-material",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-collection-date",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-collector",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-acquisition-date",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "ua-canterbury-e150-1144-oldman-1118-dimensions",
+      "objectId": "ua-canterbury-e150-1144-oldman-1118",
+      "predicate": "described_as",
+      "value": "Dimensions: 166,37 x 8,25 cm"
+    },
+    {
+      "id": "ua-wellington-ol001114-classification",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-wellington-ol001114-holder",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "held_by",
+      "value": "Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "ua-wellington-ol001114-location",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "located_at",
+      "value": "Wellington"
+    },
+    {
+      "id": "ua-wellington-ol001114-catalogue-number",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "catalogue_number",
+      "value": "OL001114"
+    },
+    {
+      "id": "ua-wellington-ol001114-material",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-wellington-ol001114-collection-date",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "ua-wellington-ol001114-collector",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-wellington-ol001114-acquisition-date",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1992; Oldman collection, gift of the New Zealand government"
+    },
+    {
+      "id": "ua-wellington-ol001119-classification",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-wellington-ol001119-holder",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "held_by",
+      "value": "Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "ua-wellington-ol001119-location",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "located_at",
+      "value": "Wellington"
+    },
+    {
+      "id": "ua-wellington-ol001119-catalogue-number",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "catalogue_number",
+      "value": "OL001119"
+    },
+    {
+      "id": "ua-wellington-ol001119-material",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-wellington-ol001119-collection-date",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "ua-wellington-ol001119-collector",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-wellington-ol001119-acquisition-date",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1992; Oldman collection, gift of the New Zealand government"
+    },
+    {
+      "id": "ua-wellington-ol001119-dimensions",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "described_as",
+      "value": "Dimensions: 9 x 6 x 1,8 cm"
+    },
+    {
+      "id": "ua-te-papa-classification",
+      "objectId": "ua-te-papa",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-te-papa-holder",
+      "objectId": "ua-te-papa",
+      "predicate": "held_by",
+      "value": "Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "ua-te-papa-location",
+      "objectId": "ua-te-papa",
+      "predicate": "located_at",
+      "value": "Wellington"
+    },
+    {
+      "id": "ua-te-papa-catalogue-number",
+      "objectId": "ua-te-papa",
+      "predicate": "catalogue_number",
+      "value": "OL000353-2"
+    },
+    {
+      "id": "ua-te-papa-material",
+      "objectId": "ua-te-papa",
+      "predicate": "made_of",
+      "value": "wood, bone, shell, obsidian"
+    },
+    {
+      "id": "ua-te-papa-collection-date",
+      "objectId": "ua-te-papa",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-te-papa-collector",
+      "objectId": "ua-te-papa",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-te-papa-acquisition-date",
+      "objectId": "ua-te-papa",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1992; Oldman collection, gift of the New Zealand government"
+    },
+    {
+      "id": "ua-te-papa-dimensions",
+      "objectId": "ua-te-papa",
+      "predicate": "described_as",
+      "value": "Dimensions: 8,5 x 40 x 16 cm"
+    },
+    {
+      "id": "ua-cambridge-1954-102-classification",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-cambridge-1954-102-holder",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "ua-cambridge-1954-102-location",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "ua-cambridge-1954-102-catalogue-number",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "catalogue_number",
+      "value": "1954.102"
+    },
+    {
+      "id": "ua-cambridge-1954-102-material",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "made_of",
+      "value": "wood, shell, obsidian"
+    },
+    {
+      "id": "ua-cambridge-1954-102-collection-date",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Collection date: 1868"
+    },
+    {
+      "id": "ua-cambridge-1954-102-collector",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Collector: Mitford W. Pye, HMS Topaze. Subsequent collectors: H. W. Page Philipps, Stevens Auction Rooms, S. Fenton, Harry Geoffrey Beasley"
+    },
+    {
+      "id": "ua-cambridge-1954-102-acquisition-date",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954, donated by Irene Marguerite Beasley"
+    },
+    {
+      "id": "ua-cambridge-1954-102-dimensions",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Dimensions: 7 x 7 x 143,5 cm"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-classification",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-holder",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-location",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-catalogue-number",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "catalogue_number",
+      "value": "1927.1452"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-material",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "made_of",
+      "value": "wood, shell, obsidian"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-collection-date",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-collector",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-acquisition-date",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Acquisition date: between late 19th and mid 20th century, purchased from J. F. G. Umlauff with a donation from Baron Anatole A. A. von Hügel"
+    },
+    {
+      "id": "ua-cambridge-1927-1452-dimensions",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Dimensions: 6 x 5,5 x 151,9 cm"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-classification",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-holder",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-location",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-catalogue-number",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "catalogue_number",
+      "value": "A.1880.14.1"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-material",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "made_of",
+      "value": "Toromiro wood"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-collection-date",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-collector",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-acquisition-date",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1880, from Colin M. Dundas"
+    },
+    {
+      "id": "ua-edinburgh-a-1880-14-1-dimensions",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "described_as",
+      "value": "Dimensions: 8 x 147,5 x 4,5 cm"
+    },
+    {
+      "id": "ua-dresden-18370-classification",
+      "objectId": "ua-dresden-18370",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-dresden-18370-holder",
+      "objectId": "ua-dresden-18370",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "ua-dresden-18370-location",
+      "objectId": "ua-dresden-18370",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "ua-dresden-18370-catalogue-number",
+      "objectId": "ua-dresden-18370",
+      "predicate": "catalogue_number",
+      "value": "18370"
+    },
+    {
+      "id": "ua-dresden-18370-material",
+      "objectId": "ua-dresden-18370",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-dresden-18370-collection-date",
+      "objectId": "ua-dresden-18370",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ua-dresden-18370-collector",
+      "objectId": "ua-dresden-18370",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "ua-dresden-18370-acquisition-date",
+      "objectId": "ua-dresden-18370",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ua-hildesheim-v-62-classification",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-hildesheim-v-62-holder",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "held_by",
+      "value": "Roemer- und Pelizaeus-Museum Hildesheim"
+    },
+    {
+      "id": "ua-hildesheim-v-62-location",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "located_at",
+      "value": "Hildesheim"
+    },
+    {
+      "id": "ua-hildesheim-v-62-catalogue-number",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "catalogue_number",
+      "value": "V 62"
+    },
+    {
+      "id": "ua-hildesheim-v-62-material",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bone"
+    },
+    {
+      "id": "ua-hildesheim-v-62-collection-date",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ua-hildesheim-v-62-collector",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-hildesheim-v-62-acquisition-date",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1885, purchased by Hermann Roemer from C. A. Pöhl (Museum Godeffroy, Hamburg)"
+    },
+    {
+      "id": "ua-hildesheim-v-62-dimensions",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "described_as",
+      "value": "Dimensions: 150 x 10 x 5,5 cm"
+    },
+    {
+      "id": "ua-berlin-vi-4896-classification",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-berlin-vi-4896-holder",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "ua-berlin-vi-4896-location",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "ua-berlin-vi-4896-catalogue-number",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "catalogue_number",
+      "value": "VI 4896"
+    },
+    {
+      "id": "ua-berlin-vi-4896-material",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "made_of",
+      "value": "wood , bond, obsidian"
+    },
+    {
+      "id": "ua-berlin-vi-4896-collection-date",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ua-berlin-vi-4896-collector",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "ua-berlin-vi-4896-acquisition-date",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ua-berlin-vi-4896-dimensions",
+      "objectId": "ua-berlin-vi-4896",
+      "predicate": "described_as",
+      "value": "Dimensions: 123 x 5,8 x 5,5 cm"
+    },
+    {
+      "id": "ua-berlin-vi-4905-classification",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-berlin-vi-4905-holder",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "ua-berlin-vi-4905-location",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "ua-berlin-vi-4905-catalogue-number",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "catalogue_number",
+      "value": "VI 4905"
+    },
+    {
+      "id": "ua-berlin-vi-4905-material",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-berlin-vi-4905-collection-date",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ua-berlin-vi-4905-collector",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "ua-berlin-vi-4905-acquisition-date",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ua-berlin-vi-4905-dimensions",
+      "objectId": "ua-berlin-vi-4905",
+      "predicate": "described_as",
+      "value": "Dimensions: 89 x 7,5 x 9 cm"
+    },
+    {
+      "id": "ua-munich-11-170-classification",
+      "objectId": "ua-munich-11-170",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-munich-11-170-holder",
+      "objectId": "ua-munich-11-170",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "ua-munich-11-170-location",
+      "objectId": "ua-munich-11-170",
+      "predicate": "located_at",
+      "value": "Munich"
+    },
+    {
+      "id": "ua-munich-11-170-catalogue-number",
+      "objectId": "ua-munich-11-170",
+      "predicate": "catalogue_number",
+      "value": "11-170"
+    },
+    {
+      "id": "ua-munich-11-170-material",
+      "objectId": "ua-munich-11-170",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "ua-munich-11-170-collection-date",
+      "objectId": "ua-munich-11-170",
+      "predicate": "described_as",
+      "value": "Collection date: 1885 or earlier"
+    },
+    {
+      "id": "ua-munich-11-170-collector",
+      "objectId": "ua-munich-11-170",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-munich-11-170-acquisition-date",
+      "objectId": "ua-munich-11-170",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1911, from Kunst-Museum Bamberg"
+    },
+    {
+      "id": "ua-munich-11-170-dimensions",
+      "objectId": "ua-munich-11-170",
+      "predicate": "described_as",
+      "value": "Dimensions: 182 cm"
+    },
+    {
+      "id": "ua-stockholm-1885-05-0001-classification",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-stockholm-1885-05-0001-holder",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "ua-stockholm-1885-05-0001-location",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "ua-stockholm-1885-05-0001-catalogue-number",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "catalogue_number",
+      "value": "1885.05.0001"
+    },
+    {
+      "id": "ua-stockholm-1885-05-0001-material",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "made_of",
+      "value": "wood (sophora toromiro)"
+    },
+    {
+      "id": "ua-stockholm-1885-05-0001-collection-date",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-stockholm-1885-05-0001-collector",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-stockholm-1885-05-0001-acquisition-date",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1885"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-classification",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-holder",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "held_by",
+      "value": "Wereldmuseum Leiden"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-location",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "located_at",
+      "value": "Leiden"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-catalogue-number",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "catalogue_number",
+      "value": "RV-579-1"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-material",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "made_of",
+      "value": "wood, obsidian, shell"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-collection-date",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Collection date: around 1886"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-collector",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-acquisition-date",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Acquisition date: around 1886, purchased from C. A. Pöhl"
+    },
+    {
+      "id": "ua-leiden-rv-579-1-dimensions",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Dimensions: 136 x 9 x 6 cm"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-classification",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-holder",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-location",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-catalogue-number",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "catalogue_number",
+      "value": "A.1895.371"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-material",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-collection-date",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-collector",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "described_as",
+      "value": "Collector: probably George Darsie"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-acquisition-date",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1895, from George Darsie"
+    },
+    {
+      "id": "ua-edinburgh-a-1895-371-dimensions",
+      "objectId": "ua-edinburgh-a-1895-371",
+      "predicate": "described_as",
+      "value": "Dimensions: 171 x 8,2 x 3,5"
+    },
+    {
+      "id": "ua-stuttgart-4567-classification",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-stuttgart-4567-holder",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "ua-stuttgart-4567-location",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "ua-stuttgart-4567-catalogue-number",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "catalogue_number",
+      "value": "4567"
+    },
+    {
+      "id": "ua-stuttgart-4567-material",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-stuttgart-4567-collection-date",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "described_as",
+      "value": "Collection date: end of 19th century"
+    },
+    {
+      "id": "ua-stuttgart-4567-collector",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-stuttgart-4567-acquisition-date",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1899, donation by Carlos Majer, Reutlingen"
+    },
+    {
+      "id": "ua-stuttgart-4567-dimensions",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "described_as",
+      "value": "Dimensions: 126 x 7,5 x 5 cm"
+    },
+    {
+      "id": "ua-stuttgart-44352-classification",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-stuttgart-44352-holder",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "ua-stuttgart-44352-location",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "ua-stuttgart-44352-catalogue-number",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "catalogue_number",
+      "value": "44352"
+    },
+    {
+      "id": "ua-stuttgart-44352-material",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "ua-stuttgart-44352-collection-date",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "described_as",
+      "value": "Collection date: end of 19th century"
+    },
+    {
+      "id": "ua-stuttgart-44352-collector",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-stuttgart-44352-acquisition-date",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1906, donation by Benger (Geheimrat, Stuttgart)"
+    },
+    {
+      "id": "ua-stuttgart-44352-dimensions",
+      "objectId": "ua-stuttgart-44352",
+      "predicate": "described_as",
+      "value": "Dimensions: 122 x 7 x 7 cm"
+    },
+    {
+      "id": "ua-berlin-vi-24939-classification",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-berlin-vi-24939-holder",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "ua-berlin-vi-24939-location",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "ua-berlin-vi-24939-catalogue-number",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "catalogue_number",
+      "value": "VI 24939"
+    },
+    {
+      "id": "ua-berlin-vi-24939-material",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-berlin-vi-24939-collection-date",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-berlin-vi-24939-collector",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-berlin-vi-24939-acquisition-date",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1906, Arthur Baessler collection"
+    },
+    {
+      "id": "ua-berlin-vi-24939-dimensions",
+      "objectId": "ua-berlin-vi-24939",
+      "predicate": "described_as",
+      "value": "Dimensions: 131 x 4,5 x 6,5 cm"
+    },
+    {
+      "id": "ua-berlin-vi-24940-classification",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-berlin-vi-24940-holder",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "ua-berlin-vi-24940-location",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "ua-berlin-vi-24940-catalogue-number",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "catalogue_number",
+      "value": "VI 24940"
+    },
+    {
+      "id": "ua-berlin-vi-24940-material",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "ua-berlin-vi-24940-collection-date",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-berlin-vi-24940-collector",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-berlin-vi-24940-acquisition-date",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1906, Arthur Baessler collection"
+    },
+    {
+      "id": "ua-berlin-vi-24940-dimensions",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "described_as",
+      "value": "Dimensions: 140,5 x 5 x 7,8 cm"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-classification",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-holder",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "held_by",
+      "value": "Weltkulturen Museum, Frankfurt am Main"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-location",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "located_at",
+      "value": "Frankfurt am Main"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-catalogue-number",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "catalogue_number",
+      "value": "NS 13249"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-material",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-collection-date",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-collector",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-acquisition-date",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, purchased from William O. Oldman"
+    },
+    {
+      "id": "ua-frankfurt-am-main-ns-13249-dimensions",
+      "objectId": "ua-frankfurt-am-main-ns-13249",
+      "predicate": "described_as",
+      "value": "Dimensions: length 104,5 cm"
+    },
+    {
+      "id": "ua-wellington-fe008597-classification",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-wellington-fe008597-holder",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "held_by",
+      "value": "Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "ua-wellington-fe008597-location",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "located_at",
+      "value": "Wellington"
+    },
+    {
+      "id": "ua-wellington-fe008597-catalogue-number",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "catalogue_number",
+      "value": "FE008597"
+    },
+    {
+      "id": "ua-wellington-fe008597-material",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-wellington-fe008597-collection-date",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-wellington-fe008597-collector",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-wellington-fe008597-acquisition-date",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "ua-wellington-fe008597-dimensions",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "described_as",
+      "value": "Dimensions: 7 x 10,6 cm"
+    },
+    {
+      "id": "ua-zurich-rpo-315-classification",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-zurich-rpo-315-holder",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "ua-zurich-rpo-315-location",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "ua-zurich-rpo-315-catalogue-number",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "catalogue_number",
+      "value": "RPO 315"
+    },
+    {
+      "id": "ua-zurich-rpo-315-material",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "ua-zurich-rpo-315-collection-date",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "ua-zurich-rpo-315-collector",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "ua-zurich-rpo-315-acquisition-date",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, collection Eduard von der Heydt"
+    },
+    {
+      "id": "ua-zurich-rpo-315-dimensions",
+      "objectId": "ua-zurich-rpo-315",
+      "predicate": "described_as",
+      "value": "Dimensions: H 87 cm"
+    },
+    {
+      "id": "ua-vina-del-mar-1027-classification",
+      "objectId": "ua-vina-del-mar-1027",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-vina-del-mar-1027-holder",
+      "objectId": "ua-vina-del-mar-1027",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "ua-vina-del-mar-1027-location",
+      "objectId": "ua-vina-del-mar-1027",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "ua-vina-del-mar-1027-catalogue-number",
+      "objectId": "ua-vina-del-mar-1027",
+      "predicate": "catalogue_number",
+      "value": "1027"
+    },
+    {
+      "id": "ua-vina-del-mar-1027-material",
+      "objectId": "ua-vina-del-mar-1027",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-vina-del-mar-1027-collection-date",
+      "objectId": "ua-vina-del-mar-1027",
+      "predicate": "described_as",
+      "value": "Collection date: 1912"
+    },
+    {
+      "id": "ua-vina-del-mar-1027-collector",
+      "objectId": "ua-vina-del-mar-1027",
+      "predicate": "described_as",
+      "value": "Collector: J. A. Rodriguez, midshipman warship Baquedano"
+    },
+    {
+      "id": "ua-vina-del-mar-1027-acquisition-date",
+      "objectId": "ua-vina-del-mar-1027",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, donated by J. A. Rodriguez"
+    },
+    {
+      "id": "ua-dresden-33498-classification",
+      "objectId": "ua-dresden-33498",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-dresden-33498-holder",
+      "objectId": "ua-dresden-33498",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "ua-dresden-33498-location",
+      "objectId": "ua-dresden-33498",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "ua-dresden-33498-catalogue-number",
+      "objectId": "ua-dresden-33498",
+      "predicate": "catalogue_number",
+      "value": "33498"
+    },
+    {
+      "id": "ua-dresden-33498-material",
+      "objectId": "ua-dresden-33498",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-dresden-33498-collection-date",
+      "objectId": "ua-dresden-33498",
+      "predicate": "described_as",
+      "value": "Collection date: 1915"
+    },
+    {
+      "id": "ua-dresden-33498-collector",
+      "objectId": "ua-dresden-33498",
+      "predicate": "described_as",
+      "value": "Collector: Friedrich W. Müller-Aue"
+    },
+    {
+      "id": "ua-dresden-33498-acquisition-date",
+      "objectId": "ua-dresden-33498",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1915"
+    },
+    {
+      "id": "ua-stuttgart-118195-classification",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-stuttgart-118195-holder",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "ua-stuttgart-118195-location",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "ua-stuttgart-118195-catalogue-number",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "catalogue_number",
+      "value": "118195"
+    },
+    {
+      "id": "ua-stuttgart-118195-material",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "made_of",
+      "value": "wood (sophora toromiro), obsidian, shell"
+    },
+    {
+      "id": "ua-stuttgart-118195-collection-date",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-stuttgart-118195-collector",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-stuttgart-118195-acquisition-date",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1943, donation by Albert Beck, Reutlingen"
+    },
+    {
+      "id": "ua-stuttgart-118195-dimensions",
+      "objectId": "ua-stuttgart-118195",
+      "predicate": "described_as",
+      "value": "Dimensions: 103,5 x 8,5 x 7 cm"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-classification",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-holder",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "held_by",
+      "value": "Wereldmuseum Leiden"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-location",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "located_at",
+      "value": "Leiden"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-catalogue-number",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "catalogue_number",
+      "value": "TM-2593-7"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-material",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-collection-date",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-collector",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-acquisition-date",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1957, exchange with Museum für Völkerkunde Hamburg"
+    },
+    {
+      "id": "ua-leiden-tm-2593-7-dimensions",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Dimensions: length 165 cm"
+    },
+    {
+      "id": "ua-goteborg-1927-13-0001-classification",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-goteborg-1927-13-0001-holder",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "held_by",
+      "value": "Världskultur Museet"
+    },
+    {
+      "id": "ua-goteborg-1927-13-0001-location",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "located_at",
+      "value": "Göteborg"
+    },
+    {
+      "id": "ua-goteborg-1927-13-0001-catalogue-number",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "catalogue_number",
+      "value": "1927.13.0001"
+    },
+    {
+      "id": "ua-goteborg-1927-13-0001-material",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-goteborg-1927-13-0001-collection-date",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "Collection date: 1905"
+    },
+    {
+      "id": "ua-goteborg-1927-13-0001-collector",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "Collector: Captain G. Karström. 1927, gift of Olga Karström (Valparaíso, Chile)"
+    },
+    {
+      "id": "ua-goteborg-1927-13-0001-acquisition-date",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "Acquisition date: undefined"
+    },
+    {
+      "id": "ua-goteborg-1921-18-0002-classification",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-goteborg-1921-18-0002-holder",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "held_by",
+      "value": "Världskultur Museet"
+    },
+    {
+      "id": "ua-goteborg-1921-18-0002-location",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "located_at",
+      "value": "Göteborg"
+    },
+    {
+      "id": "ua-goteborg-1921-18-0002-catalogue-number",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "catalogue_number",
+      "value": "1921.18.0002"
+    },
+    {
+      "id": "ua-goteborg-1921-18-0002-material",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-goteborg-1921-18-0002-collection-date",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-goteborg-1921-18-0002-collector",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-goteborg-1921-18-0002-acquisition-date",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1921"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0001-classification",
+      "objectId": "ua-stockholm-1926-09-0001",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0001-holder",
+      "objectId": "ua-stockholm-1926-09-0001",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0001-location",
+      "objectId": "ua-stockholm-1926-09-0001",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0001-catalogue-number",
+      "objectId": "ua-stockholm-1926-09-0001",
+      "predicate": "catalogue_number",
+      "value": "1926.09.0001"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0001-material",
+      "objectId": "ua-stockholm-1926-09-0001",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0001-collection-date",
+      "objectId": "ua-stockholm-1926-09-0001",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0001-collector",
+      "objectId": "ua-stockholm-1926-09-0001",
+      "predicate": "described_as",
+      "value": "Collector: Alexander Ariʻi Paea Vehiaitipare Salmon Jr"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0001-acquisition-date",
+      "objectId": "ua-stockholm-1926-09-0001",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1926, from Carl Edward Ulff"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0002-classification",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0002-holder",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0002-location",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0002-catalogue-number",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "catalogue_number",
+      "value": "1926.09.0002"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0002-material",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0002-collection-date",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0002-collector",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Collector: Alexander Ariʻi Paea Vehiaitipare Salmon Jr"
+    },
+    {
+      "id": "ua-stockholm-1926-09-0002-acquisition-date",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1926, from Carl Edward Ulff"
+    },
+    {
+      "id": "ua-otago-d32-483-classification",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-otago-d32-483-holder",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "ua-otago-d32-483-location",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "ua-otago-d32-483-catalogue-number",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "catalogue_number",
+      "value": "D32.483"
+    },
+    {
+      "id": "ua-otago-d32-483-material",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-otago-d32-483-collection-date",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-otago-d32-483-collector",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-otago-d32-483-acquisition-date",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1932"
+    },
+    {
+      "id": "ua-otago-d32-483-dimensions",
+      "objectId": "ua-otago-d32-483",
+      "predicate": "described_as",
+      "value": "Dimensions: 134,5 x 7,59 x 5,4 cm"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-classification",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-holder",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "held_by",
+      "value": "Ethnologische Sammlung der Universität Göttingen"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-location",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "located_at",
+      "value": "Göttingen"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-catalogue-number",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "catalogue_number",
+      "value": "Oz 1633"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-material",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-collection-date",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-collector",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-acquisition-date",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "described_as",
+      "value": "Acquisition date: 14. October 1937, purchased from the Hans Meyer Estate"
+    },
+    {
+      "id": "ua-gottingen-oz-1633-dimensions",
+      "objectId": "ua-gottingen-oz-1633",
+      "predicate": "described_as",
+      "value": "Dimensions: L 150 cm"
+    },
+    {
+      "id": "ua-bergen-bme-4936-classification",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-bergen-bme-4936-holder",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "held_by",
+      "value": "University Museum of Bergen"
+    },
+    {
+      "id": "ua-bergen-bme-4936-location",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "located_at",
+      "value": "Bergen"
+    },
+    {
+      "id": "ua-bergen-bme-4936-catalogue-number",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "catalogue_number",
+      "value": "Bme 4936"
+    },
+    {
+      "id": "ua-bergen-bme-4936-material",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-bergen-bme-4936-collection-date",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-bergen-bme-4936-collector",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-bergen-bme-4936-acquisition-date",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1952, purchased from Kjell Falck (Paris)"
+    },
+    {
+      "id": "ua-bergen-bme-4936-dimensions",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "described_as",
+      "value": "Dimensions: length 36 cm"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-classification",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-holder",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-location",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "located_at",
+      "value": "Rapa Nui"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-catalogue-number",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "catalogue_number",
+      "value": "17-194"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-material",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-collection-date",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-collector",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-acquisition-date",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2009, from Museo de Historia Natural de Concepción"
+    },
+    {
+      "id": "ua-rapa-nui-17-194-dimensions",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "described_as",
+      "value": "Dimensions: 8,1 x 103 x 3,6 cm"
     }
   ],
   "images": [],
@@ -14112,56 +16734,6 @@
     }
   ],
   "objectIds": [
-    "paoa-berlin-vi-4908",
-    "paoa-berlin-vi-4864-a",
-    "paoa-dresden-18424",
-    "paoa-dresden-26218",
-    "paoa-cambridge-e-1907-455",
-    "paoa-frankfurt-am-main-ns-11126",
-    "paoa-stockholm-1909-10-0022",
-    "paoa-zurich-12314",
-    "paoa-zurich-rpo-314",
-    "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
-    "paoa-otago-d31-846",
-    "paoa-otago-d31-847",
-    "paoa-bremen-d13432",
-    "ua-canterbury-e150-1141-oldman-352",
-    "ua-canterbury-e150-1142-oldman-356",
-    "ua-canterbury-e150-1143-oldman-107-1117",
-    "ua-canterbury-e150-1144-oldman-1118",
-    "ua-wellington-ol001114",
-    "ua-wellington-ol001119",
-    "ua-te-papa",
-    "ua-cambridge-1954-102",
-    "ua-cambridge-1927-1452",
-    "ua-edinburgh-a-1880-14-1",
-    "ua-dresden-18370",
-    "ua-hildesheim-v-62",
-    "ua-berlin-vi-4896",
-    "ua-berlin-vi-4905",
-    "ua-munich-11-170",
-    "ua-stockholm-1885-05-0001",
-    "ua-leiden-rv-579-1",
-    "ua-edinburgh-a-1895-371",
-    "ua-stuttgart-4567",
-    "ua-stuttgart-44352",
-    "ua-berlin-vi-24939",
-    "ua-berlin-vi-24940",
-    "ua-frankfurt-am-main-ns-13249",
-    "ua-wellington-fe008597",
-    "ua-zurich-rpo-315",
-    "ua-vina-del-mar-1027",
-    "ua-dresden-33498",
-    "ua-stuttgart-118195",
-    "ua-leiden-tm-2593-7",
-    "ua-goteborg-1927-13-0001",
-    "ua-goteborg-1921-18-0002",
-    "ua-stockholm-1926-09-0001",
-    "ua-stockholm-1926-09-0002",
-    "ua-otago-d32-483",
-    "ua-gottingen-oz-1633",
-    "ua-bergen-bme-4936",
-    "ua-rapa-nui-17-194",
     "tangata-manu-bremen-d00319",
     "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
     "tangata-manu-bremen-d13426",
