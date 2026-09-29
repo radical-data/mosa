@@ -331,7 +331,6 @@ export async function registerCapture(
   const directory = path.join(root, "source-files", sourceId);
   await ensureNoSymlinkComponents(root, path.join("source-files", sourceId));
   const dest = path.join(directory, name);
-  const relative = `${sourceId}/${name}`;
   const captures = Array.isArray(sourceObject.captures)
     ? (sourceObject.captures as SourceCapture[])
     : [];
@@ -339,7 +338,7 @@ export async function registerCapture(
   let existingEntry: SourceCapture | undefined;
   for (const capture of captures) {
     if (!capture.file) continue;
-    const old = path.resolve(root, "source-files", capture.file);
+    const old = path.resolve(root, "source-files", sourceId, capture.file);
     if (!old.startsWith(`${path.resolve(root, "source-files")}${path.sep}`)) continue;
     await ensureNoSymlinkComponents(root, path.relative(root, old));
     const oldBytes = await readFile(old).catch(() => undefined);
@@ -349,8 +348,10 @@ export async function registerCapture(
     }
   }
   const entry: SourceCapture = existingEntry ?? {
-    file: relative,
-    ...(options.originalUrl ? { originalUrl: options.originalUrl } : {}),
+    file: name,
+    ...(options.originalUrl && options.originalUrl !== sourceObject.reference
+      ? { originalUrl: options.originalUrl }
+      : {}),
     ...(options.archiveUrl ? { archiveUrl: options.archiveUrl } : {}),
     capturedAt,
     method: options.method,
@@ -367,11 +368,9 @@ export async function registerCapture(
       await mkdir(directory, { recursive: true });
       if (await exists(dest)) {
         await ensureNoSymlinkComponents(root, path.relative(root, dest));
-        if ((await lstat(dest)).isSymbolicLink())
-          throw Error(`Refusing to use symlink capture destination: ${relative}`);
         const existingBytes = await readFile(dest);
         if (hash(existingBytes) !== digest)
-          throw Error(`Refusing to overwrite existing capture: ${relative}`);
+          throw Error(`Refusing to overwrite existing capture: ${sourceId}/${name}`);
       } else {
         await writeFile(dest, bytes, { flag: "wx" });
         created = true;
@@ -435,7 +434,7 @@ export async function checkCaptures(
       if (!capture.file) continue;
       let target: string;
       try {
-        target = await safeContainedFile(root, path.join("source-files", capture.file));
+        target = await safeContainedFile(root, path.join("source-files", source.id, capture.file));
       } catch (error) {
         diagnostics.push(`${filename}: captures[${index}].file ${capture.file}: ${String(error)}`);
         continue;
@@ -444,7 +443,7 @@ export async function checkCaptures(
       const pointer = isLfsPointer(bytes);
       if (pointer) {
         if (!includeContent) continue;
-        const lfs = await expectedLfs(root, capture.file, canRun);
+        const lfs = await expectedLfs(root, `${source.id}/${capture.file}`, canRun);
         if (!lfs) {
           diagnostics.push(
             `${filename}: ${capture.file} is an LFS pointer but no matching pointer is available in the index or HEAD`,
@@ -473,7 +472,7 @@ export async function checkCaptures(
           `${filename}: ${capture.file} content signature does not match its extension or is unsupported`,
         );
       if (includeContent) {
-        const expected = await expectedLfs(root, capture.file, canRun);
+        const expected = await expectedLfs(root, `${source.id}/${capture.file}`, canRun);
         if (expected && (hash(bytes) !== expected.oid || bytes.byteLength !== expected.size))
           diagnostics.push(
             `${filename}: ${capture.file} SHA-256 or size does not match its Git LFS pointer`,

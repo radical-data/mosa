@@ -36,7 +36,7 @@ describe("collection model", () => {
     const { id: _id, ...record } = source;
     const captures = [
       {
-        file: "source-one/catalogue.pdf",
+        file: "catalogue.pdf",
         originalUrl: "https://example.org/catalogue/123",
         archiveUrl:
           "https://web.archive.org/web/20240102123456id_/https://example.org/catalogue/123?record=42#details",
@@ -97,7 +97,7 @@ describe("collection model", () => {
       parseSource(
         {
           ...record,
-          captures: [{ file: "source-one/capture.html", method: "download", ...metadata }],
+          captures: [{ file: "capture.html", method: "download", ...metadata }],
         },
         "source-one.json",
       ),
@@ -118,8 +118,8 @@ describe("collection model", () => {
         {
           ...record,
           captures: [
-            { ...base, file: "source-one/capture.html" },
-            { ...base, file: "source-one/capture.html", note: "second record" },
+            { ...base, file: "capture.html" },
+            { ...base, file: "capture.html", note: "second record" },
           ],
         },
         "source-one.json",
@@ -139,7 +139,7 @@ describe("collection model", () => {
               ...base,
               archiveUrl:
                 "https://web.archive.org/web/20240102123456/https://example.org/page?record=42",
-              file: "source-one/capture.html",
+              file: "capture.html",
             },
           ],
         },

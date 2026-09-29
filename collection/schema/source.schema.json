@@ -43,7 +43,7 @@
         "properties": {
           "file": {
             "type": "string",
-            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9]+(?:-[a-z0-9]+)*\\.(?:html|pdf|jpg|jpeg|png|webp|avif|tif|tiff)$"
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*\\.(?:html|pdf|jpg|jpeg|png|webp|avif|tif|tiff)$"
           },
           "originalUrl": {
             "type": "string",

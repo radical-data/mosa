@@ -231,10 +231,8 @@ export function parseSource(value: unknown, file: string): Source {
         if ("file" in capture) {
           const safeFile =
             typeof capture.file === "string" &&
-            new RegExp(`^${sourceId}/[a-z0-9]+(?:-[a-z0-9]+)*\\.(?:${captureExtensions})$`).test(
-              capture.file,
-            );
-          add(errors, safeFile, `${at}.file must be a safe source-files path for ${sourceId}`);
+            new RegExp(`^[a-z0-9]+(?:-[a-z0-9]+)*\\.(?:${captureExtensions})$`).test(capture.file);
+          add(errors, safeFile, `${at}.file must be a plain capture filename`);
           if (typeof capture.file === "string") {
             add(
               errors,

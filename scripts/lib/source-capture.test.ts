@@ -52,11 +52,12 @@ describe("source capture tooling", () => {
     );
     expect(updated.notes).toEqual(source.notes);
     expect(updated.captures[0]).toMatchObject({
-      file: "example-source/catalogue-copy.html",
+      file: "catalogue-copy.html",
       capturedAt: "2026-09-29T20:30:00Z",
       method: "supplied-file",
     });
     expect(updated.captures[0]).not.toHaveProperty("addedAt");
+    expect(updated.captures[0]).not.toHaveProperty("originalUrl");
     expect(result.reusedIdenticalFile).toBe(false);
     expect(
       await readFile(
@@ -77,10 +78,12 @@ describe("source capture tooling", () => {
       method: "supplied-file" as const,
       capturedAt: null,
       name: "record.pdf",
+      originalUrl: "https://example.org/download/scan.pdf",
     };
     await registerCapture(root, "example-source", options, { now: fixedNow });
     const result = await registerCapture(root, "example-source", options, { now: fixedNow });
     expect(result.alreadyRegistered).toBe(true);
+    expect(result.capture.originalUrl).toBe(options.originalUrl);
     const updated = JSON.parse(
       await readFile(path.join(root, "collection", "sources", "example-source.json"), "utf8"),
     );
@@ -144,7 +147,7 @@ describe("source capture tooling", () => {
     const sourcePath = path.join(root, "collection", "sources", "example-source.json");
     const updated = JSON.parse(await readFile(sourcePath, "utf8"));
     updated.captures.push({
-      file: "example-source/linked.pdf",
+      file: "linked.pdf",
       capturedAt: null,
       method: "supplied-file",
     });
@@ -182,9 +185,7 @@ describe("source capture tooling", () => {
     await mkdir(path.join(root, "source-files", "example-source"), { recursive: true });
     const sourcePath = path.join(root, "collection", "sources", "example-source.json");
     const metadata = JSON.parse(await readFile(sourcePath, "utf8"));
-    metadata.captures = [
-      { file: "example-source/record.pdf", capturedAt: null, method: "supplied-file" },
-    ];
+    metadata.captures = [{ file: "record.pdf", capturedAt: null, method: "supplied-file" }];
     await writeFile(sourcePath, `${JSON.stringify(metadata, null, 2)}\n`);
     const pointerPath = path.join(root, "source-files", "example-source", "record.pdf");
 

@@ -188,10 +188,13 @@ filename. Preserve original bytes. Capture filenames otherwise use UTC timestamp
 Registration reuses identical content within the source and refuses to overwrite
 different bytes. Keep source attribution, claims and object links unchanged.
 
-Capture fields are `file` (relative to `source-files/`), `originalUrl`,
+Capture fields are `file` (the filename within `source-files/<source-id>/`), optional `originalUrl`,
 `archiveUrl` (an exact timestamped Wayback URL), `capturedAt` (UTC or null),
-`method` and optional `note`. Git records when a capture is added. At least `file` or
-`archiveUrl` is required. The method is `singlefile`, `download`, `supplied-file`
+`method` and optional `note`. Git records when a capture is added.
+Omit `originalUrl` when the source `reference` is already that URL; registration
+does this automatically. Retain it when the reference is bibliographic text or
+the captured URL differs. When changing a source URL, retain the previous URL on
+any earlier capture that relied on it. At least `file` or `archiveUrl` is required. The method is `singlefile`, `download`, `supplied-file`
 or `browser-pdf`. A saved webpage PDF is a derivative, not an original download.
 An archive-only entry can be edited into source JSON and checked with
 `just source check`. It is an explicit exception to obtaining a local copy.
