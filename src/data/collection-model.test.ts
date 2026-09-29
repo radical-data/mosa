@@ -41,7 +41,6 @@ describe("collection model", () => {
         archiveUrl:
           "https://web.archive.org/web/20240102123456id_/https://example.org/catalogue/123?record=42#details",
         capturedAt: "2024-01-02T12:34:56Z",
-        addedAt: "2024-01-03T09:00:00.125Z",
         method: "download",
         note: "Downloaded from the catalogue record.",
       },
@@ -49,7 +48,6 @@ describe("collection model", () => {
         archiveUrl:
           "https://web.archive.org/web/20240203102030if_/https://example.org/archived-page",
         capturedAt: null,
-        addedAt: "2024-01-03T09:00:00Z",
         method: "singlefile",
       },
     ];
@@ -79,7 +77,6 @@ describe("collection model", () => {
             {
               ...captureRef,
               capturedAt: null,
-              addedAt: "2024-01-03T09:00:00Z",
               method: "download",
             },
           ],
@@ -90,11 +87,10 @@ describe("collection model", () => {
   });
 
   test.each([
-    { capturedAt: "2024-02-30T12:00:00Z", addedAt: "2024-03-01T00:00:00Z" },
-    { capturedAt: "2024-03-01T12:00:00+00:00", addedAt: "2024-03-01T00:00:00Z" },
-    { capturedAt: null, addedAt: "2024-03-01T00:00:00" },
-    { capturedAt: null, addedAt: "2024-03-01T00:00:00Z", method: "scan" },
-    { capturedAt: null, addedAt: "2024-03-01T00:00:00Z", method: "download", note: " " },
+    { capturedAt: "2024-02-30T12:00:00Z" },
+    { capturedAt: "2024-03-01T12:00:00+00:00" },
+    { capturedAt: null, method: "scan" },
+    { capturedAt: null, method: "download", note: " " },
   ])("rejects invalid capture metadata: %j", (metadata) => {
     const { id: _id, ...record } = source;
     expect(() =>
@@ -112,7 +108,6 @@ describe("collection model", () => {
     const { id: _id, ...record } = source;
     const base = {
       capturedAt: null,
-      addedAt: "2024-03-01T00:00:00Z",
       method: "download",
     };
     expect(() => parseSource({ ...record, captures: [base] }, "source-one.json")).toThrow(

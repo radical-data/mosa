@@ -43,7 +43,6 @@ export interface SourceCapture {
   originalUrl?: string;
   archiveUrl?: string;
   capturedAt: string | null;
-  addedAt: string;
   method: SourceCaptureMethod;
   note?: string;
 }
@@ -96,15 +95,7 @@ const sourceKeys = [
 ];
 const claimKeys = ["id", "objectId", "predicate", "value"];
 const imageKeys = ["alt", "caption", "credit", "file", "objectId", "originalUrl", "rights"];
-const captureKeys = [
-  "addedAt",
-  "archiveUrl",
-  "capturedAt",
-  "file",
-  "method",
-  "note",
-  "originalUrl",
-];
+const captureKeys = ["archiveUrl", "capturedAt", "file", "method", "note", "originalUrl"];
 const captureExtensions = "html|pdf|jpg|jpeg|png|webp|avif|tif|tiff";
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
@@ -295,7 +286,6 @@ export function parseSource(value: unknown, file: string): Source {
           capture.capturedAt === null || validUtcTimestamp(capture.capturedAt),
           `${at}.capturedAt must be a UTC timestamp or null`,
         );
-        add(errors, validUtcTimestamp(capture.addedAt), `${at}.addedAt must be a UTC timestamp`);
         add(
           errors,
           captureMethods.includes(capture.method as SourceCaptureMethod),
