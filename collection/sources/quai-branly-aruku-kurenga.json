@@ -1,0 +1,33 @@
+{
+  "author": null,
+  "reference": "Musée du quai Branly – Jacques Chirac, “Treasures of Rapa Nui (Easter Island)”, Aruku Kureŋa section; accessed 23 September 2026 — https://www.quaibranly.fr/en/collections/living-collections/news/new-display-cases/tresors-de-rapa-nui-lile-de-paques",
+  "language": "en",
+  "objectIds": ["mamari"],
+  "claims": [
+    {
+      "id": "description",
+      "objectId": "aroukou-kurenga",
+      "predicate": "described_as",
+      "value": "asymmetrically shaped and contains almost 1,300 glyphs"
+    },
+    {
+      "id": "name",
+      "objectId": "aroukou-kurenga",
+      "predicate": "has_name",
+      "value": "Aruku Kureŋa"
+    },
+    {
+      "id": "type",
+      "objectId": "aroukou-kurenga",
+      "predicate": "classified_as",
+      "value": "kohau roŋoroŋo"
+    },
+    {
+      "id": "material",
+      "objectId": "aroukou-kurenga",
+      "predicate": "made_of",
+      "value": "mako'i wood (Thespesia populnea)"
+    }
+  ],
+  "images": []
+}

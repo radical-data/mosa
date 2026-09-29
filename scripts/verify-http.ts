@@ -41,6 +41,7 @@ for (const path of [
   "/nl/",
   "/rap/",
   "/es/about/",
+  "/es/coleccion/588adff0-0fe0-4ed5-9fbf-1f95c3211c7a/",
 ]) {
   const response = await fetch(new URL(path, origin), { redirect: "manual" });
   assert.equal(response.status, 404, `${path}: genuine 404`);

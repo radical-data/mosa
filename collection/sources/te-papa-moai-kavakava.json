@@ -1,0 +1,32 @@
+{
+  "author": "Museum of New Zealand Te Papa Tongarewa",
+  "reference": "https://collections.tepapa.govt.nz/object/OL000342",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "catalogue_number",
+      "value": "te-papa-inventory: OL000342"
+    },
+    {
+      "id": "name",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "has_name",
+      "value": "moai kavakava"
+    },
+    {
+      "id": "city",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "located_at",
+      "value": "Wellington"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "held_by",
+      "value": "Museum of New Zealand Te Papa Tongarewa"
+    }
+  ],
+  "images": []
+}

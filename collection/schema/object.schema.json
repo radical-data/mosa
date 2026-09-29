@@ -4,20 +4,19 @@
   "title": "MoSA collection object",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "name", "foregroundedClaims"],
+  "required": ["name", "foregroundedClaims"],
   "properties": {
-    "id": { "$ref": "#/$defs/id" },
     "name": { "type": "string", "minLength": 1 },
     "foregroundedClaims": {
       "type": "array",
-      "items": { "$ref": "#/$defs/id" },
+      "items": { "$ref": "#/$defs/claimReference" },
       "uniqueItems": true
     }
   },
   "$defs": {
-    "id": {
+    "claimReference": {
       "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9-]*$|^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9]+(?:-[a-z0-9]+)*$"
     }
   }
 }

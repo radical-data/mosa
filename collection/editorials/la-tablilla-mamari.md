@@ -1,6 +1,5 @@
 ---
-id: la-tablilla-mamari
-objectId: 588adff0-0fe0-4ed5-9fbf-1f95c3211c7a
+objectId: mamari
 title: La tablilla Mamari
 author: null
 language: es-CL

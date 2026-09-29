@@ -1,0 +1,14 @@
+{
+  "author": null,
+  "reference": "Te Papa Collections Online: Ua (staff or club), object 180647 — https://collections.tepapa.govt.nz/object/180647",
+  "language": "en",
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "ua-te-papa",
+      "predicate": "has_name",
+      "value": "Ua (staff or club)"
+    }
+  ],
+  "images": []
+}

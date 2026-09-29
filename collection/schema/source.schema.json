@@ -4,14 +4,33 @@
   "title": "MoSA collection source",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "author", "reference", "language", "claims", "images"],
+  "required": ["author", "reference", "language", "claims", "images"],
   "properties": {
-    "id": { "$ref": "#/$defs/id" },
     "author": { "type": ["string", "null"], "minLength": 1 },
     "reference": { "type": "string", "minLength": 1 },
     "language": {
       "type": "string",
       "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+    },
+    "objectIds": {
+      "description": "Objects directly documented by this source and not already linked through a claim or image in the same source.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/id" }
+    },
+    "notes": {
+      "description": "MoSA research notes about interpreting or transcribing this source. Retained as metadata, not rendered on the website or attributed to the source author.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "language"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1, "pattern": "\\S" },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
+        }
+      }
     },
     "claims": {
       "type": "array",
@@ -45,9 +64,8 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "objectId", "file", "alt"],
+        "required": ["objectId", "file", "alt"],
         "properties": {
-          "id": { "$ref": "#/$defs/id" },
           "objectId": { "$ref": "#/$defs/id" },
           "file": { "type": "string", "minLength": 1 },
           "alt": { "type": "string" },
@@ -62,7 +80,7 @@
   "$defs": {
     "id": {
       "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9-]*$|^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
     }
   }
 }

@@ -1,0 +1,14 @@
+{
+  "author": null,
+  "reference": "Te Papa Collections Online: Ao (Dance paddle), object 180901 — https://collections.tepapa.govt.nz/object/180901",
+  "language": "en",
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "ao-te-papa",
+      "predicate": "has_name",
+      "value": "Ao (Dance paddle)"
+    }
+  ],
+  "images": []
+}

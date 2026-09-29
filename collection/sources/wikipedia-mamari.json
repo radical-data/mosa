@@ -1,0 +1,20 @@
+{
+  "author": "Wikipedia contributors",
+  "reference": "https://en.wikipedia.org/wiki/Rongorongo_text_C",
+  "language": "en",
+  "claims": [
+    {
+      "id": "name-text-c",
+      "objectId": "mamari",
+      "predicate": "has_name",
+      "value": "Text C"
+    },
+    {
+      "id": "name-mamari",
+      "objectId": "mamari",
+      "predicate": "has_name",
+      "value": "Mamari"
+    }
+  ],
+  "images": []
+}

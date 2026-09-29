@@ -1,0 +1,26 @@
+{
+  "author": "Kunstkamera",
+  "reference": "https://collection.kunstkamera.ru/en/entity/OBJECT/267042",
+  "language": "en",
+  "claims": [
+    {
+      "id": "holder",
+      "objectId": "kunstkamera-736-205",
+      "predicate": "held_by",
+      "value": "Kunstkamera"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "kunstkamera-736-205",
+      "predicate": "catalogue_number",
+      "value": "kunstkamera: МАЭ № 736-205"
+    },
+    {
+      "id": "city",
+      "objectId": "kunstkamera-736-205",
+      "predicate": "located_at",
+      "value": "Saint Petersburg"
+    }
+  ],
+  "images": []
+}
