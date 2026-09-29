@@ -28,17 +28,20 @@ package; it does not declare application packages.
 
 ## Reduced collection model
 
-An **object** has a stable ID, a concise canonical navigation name and a list of
-claim IDs selected for foregrounding. Its ID remains the public URL identity.
+An **object** has a stable, readable file handle, a concise canonical navigation
+name and a list of qualified claim references selected for foregrounding. The
+file handle is also the public URL identity.
 
 A **source** records who authored or asserted it when known, its exact reference,
 its language, and the claims and image records derived from it. Sources and
 objects have different identities. A shared URL does not prove that two objects
 are the same.
 
-A **claim** has an ID, an object ID, a controlled predicate and a textual value.
-Claims stay inside sources so attribution is structural rather than an optional
-afterthought. Conflicting names and classifications can coexist.
+A **claim** has an ID local to its source, an object ID, a controlled predicate
+and a textual value. References outside the source qualify the local ID with the
+source handle, such as `wikipedia-mamari/name-mamari`. Claims stay inside sources
+so attribution is structural rather than an optional afterthought. Conflicting
+names and classifications can coexist.
 
 An **image record** also stays inside a source. It links an object to a local,
 publishable image and records alt text, credit, rights, caption and original URL

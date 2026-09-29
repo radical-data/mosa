@@ -69,7 +69,8 @@ repository tasks and pnpm owns dependencies.
 - Add ontology structure only for a concrete current need. Record deferred
   provenance and restitution requirements in competency cases rather than
   rebuilding the previous database model speculatively.
-- Preserve object UUIDs because they form public URLs.
+- Preserve established object handles because they form public URLs. Rename one
+  only as a coordinated identity and route change.
 - Keep Spanish and English routes structurally paired. Use explicit language
   metadata for prose in another language.
 - Deploy through the root `Dockerfile`. The build must not need database

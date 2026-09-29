@@ -5,33 +5,35 @@ review, authorship and rollback. There is no separate database publishing step.
 
 ## Add or edit an object
 
-Create `collection/objects/<id>.json`:
+Create `collection/objects/<object-id>.json`. The file name without `.json` is
+the object ID and public URL handle:
 
 ```json
 {
-  "id": "example-object",
   "name": "Concise navigation name",
-  "foregroundedClaims": ["example-claim"]
+  "foregroundedClaims": ["example-source/example-claim"]
 }
 ```
 
-The filename must match `id`. Preserve existing UUIDs because they are public
-URLs. The `name` is an editorial navigation label; put names asserted by
-sources in `has_name` claims.
+Use lower-case ASCII letters, digits and single hyphens between words. Choose a
+recognisable handle once and do not automatically derive it again when a name
+changes. Preserve established handles because they form public URLs. The `name`
+is an editorial navigation label; put names asserted by sources in `has_name`
+claims.
 
 ## Add a source, claims and images
 
-Create `collection/sources/<id>.json`:
+Create `collection/sources/<source-id>.json`. The file name without `.json` is
+the source ID:
 
 ```json
 {
-  "id": "example-source",
   "author": "Named person or institution",
   "reference": "https://example.org/catalogue/123",
   "language": "en-GB",
   "claims": [
     {
-      "id": "example-claim",
+      "id": "classification",
       "objectId": "example-object",
       "predicate": "classified_as",
       "value": "Moai / Living Ancestor"
@@ -39,7 +41,6 @@ Create `collection/sources/<id>.json`:
   ],
   "images": [
     {
-      "id": "example-image",
       "objectId": "example-object",
       "file": "example-object/front.jpg",
       "alt": "Front view of the object",
@@ -54,6 +55,12 @@ Create `collection/sources/<id>.json`:
 Use `null` for an unknown author rather than inventing one. Use a BCP 47
 language tag such as `es-CL`, `en-GB`, `rap` or `und`.
 
+Claim IDs are unique only within their source. Use short labels such as `name`,
+`material` or `city`. Add object context when a source describes several
+objects, and add a useful distinction when a predicate occurs more than once.
+Outside the source, refer to a claim as `<source-id>/<claim-id>`. Reordering an
+array must not change its claim IDs.
+
 Download only images MoSA is authorised to publish. Put each binary at
 `collection/images/<file>`; the repository's Git LFS rules track supported
 image formats. A normal checkout restores the image before Astro and Docker
@@ -67,7 +74,6 @@ Create `collection/editorials/<id>.md`:
 
 ```markdown
 ---
-id: example-editorial
 objectId: example-object
 title: Editorial title
 author: Named author
@@ -77,6 +83,8 @@ language: es-CL
 Editorial text in Markdown.
 ```
 
+The Markdown file name without `.md` is the editorial ID.
+
 Use `author: null` only while authorship is genuinely unresolved. An editorial
 can be in one language; the page marks its language rather than pretending it is
 translated. Claims made in the prose do not automatically become structured
@@ -84,10 +92,10 @@ claims.
 
 ## Foreground a perspective
 
-Add the chosen claim ID to the object's `foregroundedClaims` array. The claim
-must refer to that object. Keep the source visible and choose foregrounding
-through editorial discussion: it is MoSA taking a position, not a technical
-calculation.
+Add the chosen qualified claim reference to the object's `foregroundedClaims`
+array. The claim must refer to that object. Keep the source visible and choose
+foregrounding through editorial discussion: it is MoSA taking a position, not
+a technical calculation.
 
 ## Validate and review
 

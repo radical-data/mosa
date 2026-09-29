@@ -11,15 +11,18 @@ publishable.
 - `images/`: local collection images tracked with Git LFS.
 - `schema/`: JSON Schemas for object and source files.
 
-The filename must match the record `id`. Use lower-case letters, numerals and
-hyphens for new identifiers. Existing UUID object identifiers remain valid so
-published URLs do not change.
+Object, source and editorial file names establish their IDs. Use lower-case
+ASCII letters, digits and single hyphens between words. JSON object and source
+records and editorial front matter do not repeat the file ID.
+
+Claim IDs are short labels unique within one source. References outside that
+source use `<source-id>/<claim-id>`. Image records use their source, `objectId`
+and `file` relationship and have no separate ID.
 
 Editorial files use this front matter followed by ordinary Markdown:
 
 ```markdown
 ---
-id: example-editorial
 objectId: example-object
 title: Example title
 author: Example author
