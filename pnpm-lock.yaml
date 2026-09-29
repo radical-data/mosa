@@ -33,6 +33,9 @@ importers:
       mdast-util-from-markdown:
         specifier: ^2.0.3
         version: 2.0.3
+      single-file-cli:
+        specifier: 2.16.0
+        version: 2.16.0
       tsx:
         specifier: ^4.23.1
         version: 4.23.1
@@ -1639,6 +1642,15 @@ packages:
 
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
+
+  simple-cdp@1.10.2:
+    resolution: {integrity: sha512-7+ZtihebRzHqewTN9Y7gsGgsBlopjAlD8mKlaFd2VR/ag9ipSjfJ7G8/UT3aAzgeWAQLFnZNMH/+bm29j6ymMQ==}
+    engines: {bun: '>=1.0', deno: '>=1.4'}
+
+  single-file-cli@2.16.0:
+    resolution: {integrity: sha512-ey0nK4DIeGkSCBDSt5XijEUMX1tXj0jC2lCdppXpdqvlxDihkQskCqx5vJNzuOYYmTnnnO5oQ1QTaPXu7RzKvg==}
+    engines: {bun: '>=1.2', deno: '>=2.2', node: '>=24.0.0'}
+    hasBin: true
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -3696,6 +3708,12 @@ snapshots:
       '@types/hast': 3.0.5
 
   siginfo@2.0.0: {}
+
+  simple-cdp@1.10.2: {}
+
+  single-file-cli@2.16.0:
+    dependencies:
+      simple-cdp: 1.10.2
 
   sisteransi@1.0.5: {}
 

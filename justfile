@@ -51,7 +51,7 @@ test *args:
     pnpm exec vitest run "$@"
 
 # Run every check that does not require Docker.
-verify: check docs-check typecheck test build
+verify: check docs-check typecheck test source-check build
 
 # Build the production image from the repository root.
 image:
@@ -64,3 +64,11 @@ http-test *args:
 # Deploy the website and bundled collection from the current main commit.
 deploy:
     node --import tsx scripts/deploy-website.ts
+
+# Capture, register and inspect preserved evidence; run source doctor first.
+source *args:
+    node --import tsx scripts/source.ts "$@"
+
+# Validate capture references without hydrating archive files.
+source-check:
+    node --import tsx scripts/source.ts check
