@@ -1,0 +1,74 @@
+{
+  "author": "Museum Rietberg",
+  "reference": "https://rietberg.ch/sammlungen/rpo-308",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "catalogue_number",
+      "value": "RPO 308"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "classified_as",
+      "value": "Männliche Figur mit Januskopf, maoi pa'apa'a"
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "made_at",
+      "value": "Chile , Amerika; Rapa Nui , Polynesien"
+    },
+    {
+      "id": "production-date",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "made_during",
+      "value": "Vor 1911"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "made_of",
+      "value": "Holz"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "described_as",
+      "value": "Masse: Gesamtmass: 33 cm"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "described_as",
+      "value": "Creditline: Geschenk Eduard von der Heydt"
+    },
+    {
+      "id": "provenance",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "described_as",
+      "value": "Provenienz: 13.04.1911–25.04.1911: Walter Alfred Knoche (1881–1945), Erwerbsumstände unbekannt in Rapa Nui Knoche hat die Werke in situ erworben, es ist jedoch nicht klar, ob es sich um Käufe, Geschenke oder Tausch handelt. S. Mückler, Hermann: Der vergessene Osterinsel-Forscher Walter Knoche, wissenschaftlicher Leiter der chilenischen Rapa Nui-Expedition 1911, in: Jahrbuch für Europäische Überseegeschichte, Harrasssowitz Verlag 2015, Wiesbaden, Bd. 15, S. 123–146.; vor 1955: Eduard von der Heydt (1882–1964); 06.06.1955: Museum Rietberg, als Geschenk erhalten"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession RPO 308 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. The museum calls the object maoi pa'apa'a whereas IndiGen uses Moai taŋata; the exact accession and 33 cm measurement support the match without resolving that classification disagreement. Selective transcription of catalogue identity, type, making-place/date, materials, dimensions, credit line and the complete provenance list. Creator fields, exhibitions and bibliography are outside this batch. Historical provenance entries remain contextual descriptions, not current custody assertions.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-51-36-662z.html",
+      "capturedAt": "2026-09-29T23:51:36.662Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}
