@@ -17660,6 +17660,4248 @@
       "objectId": "tangata-manu-vina-del-mar-4983",
       "predicate": "described_as",
       "value": "Acquisition date: 2013, donated by Alfredo Nebreda"
+    },
+    {
+      "id": "heke-vienna-vo-22868-classification",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "classified_as",
+      "value": "Heke"
+    },
+    {
+      "id": "heke-vienna-vo-22868-holder",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "held_by",
+      "value": "Weltmuseum Wien"
+    },
+    {
+      "id": "heke-vienna-vo-22868-location",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "located_at",
+      "value": "Vienna"
+    },
+    {
+      "id": "heke-vienna-vo-22868-catalogue-number",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "catalogue_number",
+      "value": "VO_22868"
+    },
+    {
+      "id": "heke-vienna-vo-22868-material",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "heke-vienna-vo-22868-collection-date",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "described_as",
+      "value": "Collection date: around 1885"
+    },
+    {
+      "id": "heke-vienna-vo-22868-collector",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich Freiherr von Westenholz"
+    },
+    {
+      "id": "heke-vienna-vo-22868-acquisition-date",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, purchased by Klee und Kocher (company), Hamburg"
+    },
+    {
+      "id": "heke-vienna-vo-22868-dimensions",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "described_as",
+      "value": "Dimensions: 19 x 5,5 x 3,2 cm"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-classification",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "classified_as",
+      "value": "Honu"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-holder",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-location",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-catalogue-number",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "catalogue_number",
+      "value": "E150.1125/ OLDMAN 104/348"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-material",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-collection-date",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-collector",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-acquisition-date",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "honu-canterbury-e150-1125-oldman-104-348-dimensions",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "described_as",
+      "value": "Dimensions: 10,16 x 5,71 x 6,98 cm"
+    },
+    {
+      "id": "honu-cologne-32600-classification",
+      "objectId": "honu-cologne-32600",
+      "predicate": "classified_as",
+      "value": "Honu"
+    },
+    {
+      "id": "honu-cologne-32600-holder",
+      "objectId": "honu-cologne-32600",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "honu-cologne-32600-location",
+      "objectId": "honu-cologne-32600",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "honu-cologne-32600-catalogue-number",
+      "objectId": "honu-cologne-32600",
+      "predicate": "catalogue_number",
+      "value": "32600"
+    },
+    {
+      "id": "honu-cologne-32600-material",
+      "objectId": "honu-cologne-32600",
+      "predicate": "made_of",
+      "value": "wood, red colour"
+    },
+    {
+      "id": "honu-cologne-32600-collection-date",
+      "objectId": "honu-cologne-32600",
+      "predicate": "described_as",
+      "value": "Collection date: early 19th century"
+    },
+    {
+      "id": "honu-cologne-32600-collector",
+      "objectId": "honu-cologne-32600",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "honu-cologne-32600-acquisition-date",
+      "objectId": "honu-cologne-32600",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1914, purchased by J.E.G. Umlauff (previously collection W. O. Oldman)"
+    },
+    {
+      "id": "honu-cologne-32600-dimensions",
+      "objectId": "honu-cologne-32600",
+      "predicate": "described_as",
+      "value": "Dimensions: 13 x 6,5 x 8 cm"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-classification",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Honu"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-holder",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-location",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-catalogue-number",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1805 / 519 coll. Felbermayer"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-material",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-collection-date",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-collector",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Juan Haoa"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-acquisition-date",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "honu-vina-del-mar-1805-519-coll-felbermayer-dimensions",
+      "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 49 cm"
+    },
+    {
+      "id": "ika-berlin-vi-4913-classification",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-berlin-vi-4913-holder",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "ika-berlin-vi-4913-location",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "ika-berlin-vi-4913-catalogue-number",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "catalogue_number",
+      "value": "VI 4913"
+    },
+    {
+      "id": "ika-berlin-vi-4913-material",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-berlin-vi-4913-collection-date",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ika-berlin-vi-4913-collector",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "ika-berlin-vi-4913-acquisition-date",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ika-berlin-vi-4913-dimensions",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "described_as",
+      "value": "Dimensions: 10 x 70 x 13 cm"
+    },
+    {
+      "id": "ika-dresden-18365-classification",
+      "objectId": "ika-dresden-18365",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-dresden-18365-holder",
+      "objectId": "ika-dresden-18365",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "ika-dresden-18365-location",
+      "objectId": "ika-dresden-18365",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "ika-dresden-18365-catalogue-number",
+      "objectId": "ika-dresden-18365",
+      "predicate": "catalogue_number",
+      "value": "18365"
+    },
+    {
+      "id": "ika-dresden-18365-material",
+      "objectId": "ika-dresden-18365",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-dresden-18365-collection-date",
+      "objectId": "ika-dresden-18365",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ika-dresden-18365-collector",
+      "objectId": "ika-dresden-18365",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "ika-dresden-18365-acquisition-date",
+      "objectId": "ika-dresden-18365",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ika-dresden-18369-classification",
+      "objectId": "ika-dresden-18369",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-dresden-18369-holder",
+      "objectId": "ika-dresden-18369",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "ika-dresden-18369-location",
+      "objectId": "ika-dresden-18369",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "ika-dresden-18369-catalogue-number",
+      "objectId": "ika-dresden-18369",
+      "predicate": "catalogue_number",
+      "value": "18369"
+    },
+    {
+      "id": "ika-dresden-18369-material",
+      "objectId": "ika-dresden-18369",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-dresden-18369-collection-date",
+      "objectId": "ika-dresden-18369",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ika-dresden-18369-collector",
+      "objectId": "ika-dresden-18369",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "ika-dresden-18369-acquisition-date",
+      "objectId": "ika-dresden-18369",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ika-dresden-18414-classification",
+      "objectId": "ika-dresden-18414",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-dresden-18414-holder",
+      "objectId": "ika-dresden-18414",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "ika-dresden-18414-location",
+      "objectId": "ika-dresden-18414",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "ika-dresden-18414-catalogue-number",
+      "objectId": "ika-dresden-18414",
+      "predicate": "catalogue_number",
+      "value": "18414"
+    },
+    {
+      "id": "ika-dresden-18414-material",
+      "objectId": "ika-dresden-18414",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-dresden-18414-collection-date",
+      "objectId": "ika-dresden-18414",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ika-dresden-18414-collector",
+      "objectId": "ika-dresden-18414",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "ika-dresden-18414-acquisition-date",
+      "objectId": "ika-dresden-18414",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ika-dresden-18422-classification",
+      "objectId": "ika-dresden-18422",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-dresden-18422-holder",
+      "objectId": "ika-dresden-18422",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "ika-dresden-18422-location",
+      "objectId": "ika-dresden-18422",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "ika-dresden-18422-catalogue-number",
+      "objectId": "ika-dresden-18422",
+      "predicate": "catalogue_number",
+      "value": "18422"
+    },
+    {
+      "id": "ika-dresden-18422-material",
+      "objectId": "ika-dresden-18422",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-dresden-18422-collection-date",
+      "objectId": "ika-dresden-18422",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ika-dresden-18422-collector",
+      "objectId": "ika-dresden-18422",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "ika-dresden-18422-acquisition-date",
+      "objectId": "ika-dresden-18422",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ika-stockholm-1885-05-0003-classification",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-stockholm-1885-05-0003-holder",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "ika-stockholm-1885-05-0003-location",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "ika-stockholm-1885-05-0003-catalogue-number",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "catalogue_number",
+      "value": "1885.05.0003"
+    },
+    {
+      "id": "ika-stockholm-1885-05-0003-material",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-stockholm-1885-05-0003-collection-date",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-stockholm-1885-05-0003-collector",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ika-stockholm-1885-05-0003-acquisition-date",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1885"
+    },
+    {
+      "id": "ika-berlin-vi-13229-classification",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-berlin-vi-13229-holder",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "ika-berlin-vi-13229-location",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "ika-berlin-vi-13229-catalogue-number",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "catalogue_number",
+      "value": "VI 13229"
+    },
+    {
+      "id": "ika-berlin-vi-13229-material",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-berlin-vi-13229-collection-date",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-berlin-vi-13229-collector",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Collector: P. Otto Zembsch"
+    },
+    {
+      "id": "ika-berlin-vi-13229-acquisition-date",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1896"
+    },
+    {
+      "id": "ika-berlin-vi-13229-dimensions",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Dimensions: 7,5 x 11,5 x 5,6 cm"
+    },
+    {
+      "id": "ika-dresden-24812-classification",
+      "objectId": "ika-dresden-24812",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-dresden-24812-holder",
+      "objectId": "ika-dresden-24812",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "ika-dresden-24812-location",
+      "objectId": "ika-dresden-24812",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "ika-dresden-24812-catalogue-number",
+      "objectId": "ika-dresden-24812",
+      "predicate": "catalogue_number",
+      "value": "24812"
+    },
+    {
+      "id": "ika-dresden-24812-material",
+      "objectId": "ika-dresden-24812",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-dresden-24812-collection-date",
+      "objectId": "ika-dresden-24812",
+      "predicate": "described_as",
+      "value": "Collection date: around 1909"
+    },
+    {
+      "id": "ika-dresden-24812-collector",
+      "objectId": "ika-dresden-24812",
+      "predicate": "described_as",
+      "value": "Collector: Carl Marquardt"
+    },
+    {
+      "id": "ika-dresden-24812-acquisition-date",
+      "objectId": "ika-dresden-24812",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1909"
+    },
+    {
+      "id": "ika-zurich-rpo-318-classification",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-zurich-rpo-318-holder",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "ika-zurich-rpo-318-location",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "ika-zurich-rpo-318-catalogue-number",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "catalogue_number",
+      "value": "RPO 318"
+    },
+    {
+      "id": "ika-zurich-rpo-318-material",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "ika-zurich-rpo-318-collection-date",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "ika-zurich-rpo-318-collector",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "ika-zurich-rpo-318-acquisition-date",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, collection Eduard von der Heydt"
+    },
+    {
+      "id": "ika-zurich-rpo-318-dimensions",
+      "objectId": "ika-zurich-rpo-318",
+      "predicate": "described_as",
+      "value": "Dimensions: H 42,5 cm"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-classification",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-holder",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-location",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-catalogue-number",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "catalogue_number",
+      "value": "A.1924.335"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-material",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-collection-date",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-collector",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-acquisition-date",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1924, from Williamson and Watt"
+    },
+    {
+      "id": "ika-edinburgh-a-1924-335-dimensions",
+      "objectId": "ika-edinburgh-a-1924-335",
+      "predicate": "described_as",
+      "value": "Dimensions: 39 x 22,2 x 2,1"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-classification",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-holder",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "held_by",
+      "value": "Ethnologische Sammlung der Universität Göttingen"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-location",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "located_at",
+      "value": "Göttingen"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-catalogue-number",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "catalogue_number",
+      "value": "Oz 1546"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-material",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-collection-date",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-collector",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-acquisition-date",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "described_as",
+      "value": "Acquisition date: 30 October 1936, purchased from Arthur Speyer, Berlin"
+    },
+    {
+      "id": "ika-gottingen-oz-1546-dimensions",
+      "objectId": "ika-gottingen-oz-1546",
+      "predicate": "described_as",
+      "value": "Dimensions: 44 x 12,5 cm"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-classification",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-holder",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-location",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-catalogue-number",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "catalogue_number",
+      "value": "MHNV 47 Registro surdoc 4-1936"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-material",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-collection-date",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "described_as",
+      "value": "Collection date: 1936"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-collector",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-acquisition-date",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1947, gift from Federico Felbemayer"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-dimensions",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "described_as",
+      "value": "Dimensions: 19.4 cm x 61 cm x 13 cm"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-classification",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-holder",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-location",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-catalogue-number",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "catalogue_number",
+      "value": "MHNV 64 Registro surdoc 4-1947"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-material",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-collection-date",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "described_as",
+      "value": "Collection date: 1947"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-collector",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-acquisition-date",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1959, gift from Maria Arredondo"
+    },
+    {
+      "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-dimensions",
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "predicate": "described_as",
+      "value": "Dimensions: 11 cm x 15 cm x 3 cm"
+    },
+    {
+      "id": "ika-bremen-d13424-classification",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-bremen-d13424-holder",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "ika-bremen-d13424-location",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "ika-bremen-d13424-catalogue-number",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "catalogue_number",
+      "value": "D13424"
+    },
+    {
+      "id": "ika-bremen-d13424-material",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-bremen-d13424-collection-date",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-bremen-d13424-collector",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ika-bremen-d13424-acquisition-date",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954"
+    },
+    {
+      "id": "ika-bremen-d13424-dimensions",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "described_as",
+      "value": "Dimensions: 22 x 23 x 10 cm"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-classification",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-holder",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-location",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-catalogue-number",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1679 / 393 coll. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-material",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-collection-date",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-collector",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, collected from Eugenio Huki"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-acquisition-date",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1679-393-coll-felbermayer-dimensions",
+      "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 37 cm"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-classification",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-holder",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-location",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-catalogue-number",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1684 / 398 coll. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-material",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-collection-date",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: 1947"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-collector",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Tomas Haoa"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-acquisition-date",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1684-398-coll-felbermayer-dimensions",
+      "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 24 cm"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-classification",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-holder",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-location",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-catalogue-number",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1686 / 400 coll. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-material",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-collection-date",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-collector",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Eugenio Huki"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-acquisition-date",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1686-400-coll-felbermayer-dimensions",
+      "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 20 cm"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-classification",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-holder",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-location",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-catalogue-number",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1690 / 404 coll. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-material",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-collection-date",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-collector",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, sold in Plaza Anibal Pinto, Valparaiso"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-acquisition-date",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1690-404-coll-felbermayer-dimensions",
+      "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 17 cm"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-classification",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-holder",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-location",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-catalogue-number",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1719 / 433 coll. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-material",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-collection-date",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-collector",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Eugenio Huki"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-acquisition-date",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1719-433-coll-felbermayer-dimensions",
+      "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 29,5 cm"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-classification",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-holder",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-location",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-catalogue-number",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1734/ 448 coll. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-material",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-collection-date",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-collector",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Alberto Huki"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-acquisition-date",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "ika-vina-del-mar-1734-448-coll-felbermayer-dimensions",
+      "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 24 cm"
+    },
+    {
+      "id": "ika-vina-del-mar-810-classification",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-vina-del-mar-810-holder",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "ika-vina-del-mar-810-location",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "ika-vina-del-mar-810-catalogue-number",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "catalogue_number",
+      "value": "810"
+    },
+    {
+      "id": "ika-vina-del-mar-810-material",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-vina-del-mar-810-collection-date",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-vina-del-mar-810-collector",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ika-vina-del-mar-810-acquisition-date",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "ika-vina-del-mar-810-dimensions",
+      "objectId": "ika-vina-del-mar-810",
+      "predicate": "described_as",
+      "value": "Dimensions: 78 cm"
+    },
+    {
+      "id": "ika-cologne-54531-classification",
+      "objectId": "ika-cologne-54531",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-cologne-54531-holder",
+      "objectId": "ika-cologne-54531",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "ika-cologne-54531-location",
+      "objectId": "ika-cologne-54531",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "ika-cologne-54531-catalogue-number",
+      "objectId": "ika-cologne-54531",
+      "predicate": "catalogue_number",
+      "value": "54531"
+    },
+    {
+      "id": "ika-cologne-54531-material",
+      "objectId": "ika-cologne-54531",
+      "predicate": "made_of",
+      "value": "wood, metal"
+    },
+    {
+      "id": "ika-cologne-54531-collection-date",
+      "objectId": "ika-cologne-54531",
+      "predicate": "described_as",
+      "value": "Collection date: around 1960"
+    },
+    {
+      "id": "ika-cologne-54531-collector",
+      "objectId": "ika-cologne-54531",
+      "predicate": "described_as",
+      "value": "Collector: Wolfgang Wallisfurth"
+    },
+    {
+      "id": "ika-cologne-54531-acquisition-date",
+      "objectId": "ika-cologne-54531",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1993, donation by Theres Weyerich"
+    },
+    {
+      "id": "ika-cologne-54531-dimensions",
+      "objectId": "ika-cologne-54531",
+      "predicate": "described_as",
+      "value": "Dimensions: 52,5 x 9,5 cm"
+    },
+    {
+      "id": "ika-munich-94-317-754-classification",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-munich-94-317-754-holder",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "ika-munich-94-317-754-location",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "located_at",
+      "value": "Munich"
+    },
+    {
+      "id": "ika-munich-94-317-754-catalogue-number",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "catalogue_number",
+      "value": "94-317 754"
+    },
+    {
+      "id": "ika-munich-94-317-754-material",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ika-munich-94-317-754-collection-date",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ika-munich-94-317-754-collector",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ika-munich-94-317-754-acquisition-date",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1994, from Provinz der bayerischen Kapuziner"
+    },
+    {
+      "id": "ika-munich-94-317-754-dimensions",
+      "objectId": "ika-munich-94-317-754",
+      "predicate": "described_as",
+      "value": "Dimensions: 54,5 x 16 x 4 cm"
+    },
+    {
+      "id": "ika-wellington-234567-fe010657-classification",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "ika-wellington-234567-fe010657-holder",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "held_by",
+      "value": "Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "ika-wellington-234567-fe010657-location",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "located_at",
+      "value": "Wellington"
+    },
+    {
+      "id": "ika-wellington-234567-fe010657-catalogue-number",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "catalogue_number",
+      "value": "234567/ FE010657"
+    },
+    {
+      "id": "ika-wellington-234567-fe010657-material",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "made_of",
+      "value": "wood, bones, obsidian"
+    },
+    {
+      "id": "ika-wellington-234567-fe010657-collection-date",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "described_as",
+      "value": "Collection date: 1996"
+    },
+    {
+      "id": "ika-wellington-234567-fe010657-collector",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "described_as",
+      "value": "Collector: Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "ika-wellington-234567-fe010657-acquisition-date",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1996, from the Rapanui artist Bene Tuki Paté"
+    },
+    {
+      "id": "manu-vienna-vo-22866-classification",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vienna-vo-22866-holder",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "held_by",
+      "value": "Weltmuseum Wien"
+    },
+    {
+      "id": "manu-vienna-vo-22866-location",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "located_at",
+      "value": "Vienna"
+    },
+    {
+      "id": "manu-vienna-vo-22866-catalogue-number",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "catalogue_number",
+      "value": "VO_22866"
+    },
+    {
+      "id": "manu-vienna-vo-22866-material",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "manu-vienna-vo-22866-collection-date",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "described_as",
+      "value": "Collection date: before 1880"
+    },
+    {
+      "id": "manu-vienna-vo-22866-collector",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich Freiherr von Westenholz"
+    },
+    {
+      "id": "manu-vienna-vo-22866-acquisition-date",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, purchased by Klee und Kocher (company), Hamburg"
+    },
+    {
+      "id": "manu-vienna-vo-22866-dimensions",
+      "objectId": "manu-vienna-vo-22866",
+      "predicate": "described_as",
+      "value": "Dimensions: 44 x 41 x 15 cm"
+    },
+    {
+      "id": "manu-hamburg-e-614-classification",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-hamburg-e-614-holder",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "held_by",
+      "value": "MARKK Hamburg"
+    },
+    {
+      "id": "manu-hamburg-e-614-location",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "located_at",
+      "value": "Hamburg"
+    },
+    {
+      "id": "manu-hamburg-e-614-catalogue-number",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "catalogue_number",
+      "value": "E 614"
+    },
+    {
+      "id": "manu-hamburg-e-614-material",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-hamburg-e-614-collection-date",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-hamburg-e-614-collector",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "manu-hamburg-e-614-acquisition-date",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, donation by C. Lüders"
+    },
+    {
+      "id": "manu-hamburg-22-42-261-classification",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-hamburg-22-42-261-holder",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "held_by",
+      "value": "MARKK Hamburg"
+    },
+    {
+      "id": "manu-hamburg-22-42-261-location",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "located_at",
+      "value": "Hamburg"
+    },
+    {
+      "id": "manu-hamburg-22-42-261-catalogue-number",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "catalogue_number",
+      "value": "22.42.261"
+    },
+    {
+      "id": "manu-hamburg-22-42-261-material",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-hamburg-22-42-261-collection-date",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-hamburg-22-42-261-collector",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "manu-hamburg-22-42-261-acquisition-date",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "described_as",
+      "value": "Acquisition date: 21 August 1922"
+    },
+    {
+      "id": "manu-bremen-d13423-classification",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-bremen-d13423-holder",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "manu-bremen-d13423-location",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "manu-bremen-d13423-catalogue-number",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "catalogue_number",
+      "value": "D13423"
+    },
+    {
+      "id": "manu-bremen-d13423-material",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "manu-bremen-d13423-collection-date",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-bremen-d13423-collector",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "manu-bremen-d13423-acquisition-date",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954"
+    },
+    {
+      "id": "manu-bremen-d13423-dimensions",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "described_as",
+      "value": "Dimensions: 13 x 26 x 13 cm"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-classification",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-holder",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-location",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-catalogue-number",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1735 / 449 coll. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-material",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-collection-date",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-collector",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Magdalena Haoa"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-acquisition-date",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1735-449-coll-felbermayer-dimensions",
+      "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 23 cm"
+    },
+    {
+      "id": "manu-vina-del-mar-1736-450-coll-felbermayer-classification",
+      "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vina-del-mar-1736-450-coll-felbermayer-holder",
+      "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "manu-vina-del-mar-1736-450-coll-felbermayer-location",
+      "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "manu-vina-del-mar-1736-450-coll-felbermayer-catalogue-number",
+      "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1736 / 450 coll. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1736-450-coll-felbermayer-material",
+      "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "manu-vina-del-mar-1736-450-coll-felbermayer-collection-date",
+      "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1736-450-coll-felbermayer-collector",
+      "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Magdalena Haoa"
+    },
+    {
+      "id": "manu-vina-del-mar-1736-450-coll-felbermayer-acquisition-date",
+      "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1741-455-coll-felbermayer-classification",
+      "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vina-del-mar-1741-455-coll-felbermayer-holder",
+      "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "manu-vina-del-mar-1741-455-coll-felbermayer-location",
+      "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "manu-vina-del-mar-1741-455-coll-felbermayer-catalogue-number",
+      "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1741/ 455 coll. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1741-455-coll-felbermayer-material",
+      "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood. Dimension: 13 cm"
+    },
+    {
+      "id": "manu-vina-del-mar-1741-455-coll-felbermayer-collection-date",
+      "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1741-455-coll-felbermayer-collector",
+      "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from José Pakomio"
+    },
+    {
+      "id": "manu-vina-del-mar-1741-455-coll-felbermayer-acquisition-date",
+      "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1743-457-coll-felbermayer-classification",
+      "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vina-del-mar-1743-457-coll-felbermayer-holder",
+      "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "manu-vina-del-mar-1743-457-coll-felbermayer-location",
+      "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "manu-vina-del-mar-1743-457-coll-felbermayer-catalogue-number",
+      "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1743 / 457 coll. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1743-457-coll-felbermayer-material",
+      "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-vina-del-mar-1743-457-coll-felbermayer-collection-date",
+      "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1743-457-coll-felbermayer-collector",
+      "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Alberto Huki"
+    },
+    {
+      "id": "manu-vina-del-mar-1743-457-coll-felbermayer-acquisition-date",
+      "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-classification",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-holder",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-location",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-catalogue-number",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "catalogue_number",
+      "value": "1004"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-material",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-collection-date",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-collector",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-acquisition-date",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1004-dimensions",
+      "objectId": "manu-vina-del-mar-1004",
+      "predicate": "described_as",
+      "value": "Dimensions: 14,5 cm"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-classification",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-holder",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-location",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-catalogue-number",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "catalogue_number",
+      "value": "1005"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-material",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-collection-date",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-collector",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-acquisition-date",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1005-dimensions",
+      "objectId": "manu-vina-del-mar-1005",
+      "predicate": "described_as",
+      "value": "Dimensions: 15 cm"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-classification",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-holder",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-location",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-catalogue-number",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1715 / 429 coll. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-material",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-collection-date",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-collector",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from José Pakomio"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-acquisition-date",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1715-429-coll-felbermayer-dimensions",
+      "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 32 cm"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-classification",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-holder",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-location",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-catalogue-number",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1716 / 430 coll. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-material",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-collection-date",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-collector",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from José Fati"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-acquisition-date",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "manu-vina-del-mar-1716-430-coll-felbermayer-dimensions",
+      "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 23 cm"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-classification",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-holder",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "held_by",
+      "value": "Ethnologische Sammlung der Universität Göttingen"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-location",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "located_at",
+      "value": "Göttingen"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-catalogue-number",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "catalogue_number",
+      "value": "Oz 3080"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-material",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-collection-date",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-collector",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-acquisition-date",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "described_as",
+      "value": "Acquisition date: 16 April 1957, purchased from Imme Chüden"
+    },
+    {
+      "id": "manu-gottingen-oz-3080-dimensions",
+      "objectId": "manu-gottingen-oz-3080",
+      "predicate": "described_as",
+      "value": "Dimensions: L 14 cm"
+    },
+    {
+      "id": "manu-cologne-54538-classification",
+      "objectId": "manu-cologne-54538",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-cologne-54538-holder",
+      "objectId": "manu-cologne-54538",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "manu-cologne-54538-location",
+      "objectId": "manu-cologne-54538",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "manu-cologne-54538-catalogue-number",
+      "objectId": "manu-cologne-54538",
+      "predicate": "catalogue_number",
+      "value": "54538"
+    },
+    {
+      "id": "manu-cologne-54538-material",
+      "objectId": "manu-cologne-54538",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-cologne-54538-collection-date",
+      "objectId": "manu-cologne-54538",
+      "predicate": "described_as",
+      "value": "Collection date: around 1960"
+    },
+    {
+      "id": "manu-cologne-54538-collector",
+      "objectId": "manu-cologne-54538",
+      "predicate": "described_as",
+      "value": "Collector: Wolfgang Wallisfurth"
+    },
+    {
+      "id": "manu-cologne-54538-acquisition-date",
+      "objectId": "manu-cologne-54538",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1993, donation by Theres Weyerich"
+    },
+    {
+      "id": "manu-cologne-54538-dimensions",
+      "objectId": "manu-cologne-54538",
+      "predicate": "described_as",
+      "value": "Dimensions: 24 x 8,5 x 7,5 cm"
+    },
+    {
+      "id": "manu-cologne-54529-classification",
+      "objectId": "manu-cologne-54529",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-cologne-54529-holder",
+      "objectId": "manu-cologne-54529",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "manu-cologne-54529-location",
+      "objectId": "manu-cologne-54529",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "manu-cologne-54529-catalogue-number",
+      "objectId": "manu-cologne-54529",
+      "predicate": "catalogue_number",
+      "value": "54529"
+    },
+    {
+      "id": "manu-cologne-54529-material",
+      "objectId": "manu-cologne-54529",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "manu-cologne-54529-collection-date",
+      "objectId": "manu-cologne-54529",
+      "predicate": "described_as",
+      "value": "Collection date: after 1965"
+    },
+    {
+      "id": "manu-cologne-54529-collector",
+      "objectId": "manu-cologne-54529",
+      "predicate": "described_as",
+      "value": "Collector: Wolfgang Wallisfurth"
+    },
+    {
+      "id": "manu-cologne-54529-acquisition-date",
+      "objectId": "manu-cologne-54529",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1993, donation by Theres Weyerich"
+    },
+    {
+      "id": "manu-cologne-54529-dimensions",
+      "objectId": "manu-cologne-54529",
+      "predicate": "described_as",
+      "value": "Dimensions: 18 x 7,5 cm"
+    },
+    {
+      "id": "manu-munich-94-317-756-classification",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-munich-94-317-756-holder",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "manu-munich-94-317-756-location",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "located_at",
+      "value": "Munich"
+    },
+    {
+      "id": "manu-munich-94-317-756-catalogue-number",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "catalogue_number",
+      "value": "94-317 756"
+    },
+    {
+      "id": "manu-munich-94-317-756-material",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "made_of",
+      "value": "wood, bone"
+    },
+    {
+      "id": "manu-munich-94-317-756-collection-date",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-munich-94-317-756-collector",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "manu-munich-94-317-756-acquisition-date",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1994, from Provinz der bayerischen Kapuziner"
+    },
+    {
+      "id": "manu-munich-94-317-756-dimensions",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "described_as",
+      "value": "Dimensions: 54,5 x 16 x 4 cm"
+    },
+    {
+      "id": "manu-munich-94-317-757-classification",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "classified_as",
+      "value": "Manu"
+    },
+    {
+      "id": "manu-munich-94-317-757-holder",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "manu-munich-94-317-757-location",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "located_at",
+      "value": "Munich"
+    },
+    {
+      "id": "manu-munich-94-317-757-catalogue-number",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "catalogue_number",
+      "value": "94-317 757"
+    },
+    {
+      "id": "manu-munich-94-317-757-material",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "manu-munich-94-317-757-collection-date",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "manu-munich-94-317-757-collector",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "manu-munich-94-317-757-acquisition-date",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1994, from Provinz der bayerischen Kapuziner"
+    },
+    {
+      "id": "manu-munich-94-317-757-dimensions",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "described_as",
+      "value": "Dimensions: 5 x 3,6 x 11 cm"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-classification",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-holder",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-location",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-catalogue-number",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "catalogue_number",
+      "value": "E150.1126/ OLDMAN 344"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-material",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-collection-date",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-collector",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-acquisition-date",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "moko-canterbury-e150-1126-oldman-344-dimensions",
+      "objectId": "moko-canterbury-e150-1126-oldman-344",
+      "predicate": "described_as",
+      "value": "Dimensions: 49,53 x 5,71 x 3,81 cm"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-classification",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-holder",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-location",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-catalogue-number",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "catalogue_number",
+      "value": "E150.1127/ OLDMAN 357"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-material",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-collection-date",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-collector",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-acquisition-date",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "moko-canterbury-e150-1127-oldman-357-dimensions",
+      "objectId": "moko-canterbury-e150-1127-oldman-357",
+      "predicate": "described_as",
+      "value": "Dimensions: 49,53 x 5,71 x 3,81 cm"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-classification",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-holder",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-location",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-catalogue-number",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "catalogue_number",
+      "value": "E150.1128/ OLDMAN 358"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-material",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-collection-date",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-collector",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-acquisition-date",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "moko-canterbury-e150-1128-oldman-358-dimensions",
+      "objectId": "moko-canterbury-e150-1128-oldman-358",
+      "predicate": "described_as",
+      "value": "Dimensions: 41,91 x 5,71 x 4,44 cm"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-classification",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-holder",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-location",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "located_at",
+      "value": "New York"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-catalogue-number",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "catalogue_number",
+      "value": "1978.412.824"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-material",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bone"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-collection-date",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-collector",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-acquisition-date",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1963, anonymous gift"
+    },
+    {
+      "id": "moko-new-york-1978-412-824-dimensions",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Dimensions: 7,9 x 51,1 cm"
+    },
+    {
+      "id": "moko-new-york-1995-416-classification",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-new-york-1995-416-holder",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "moko-new-york-1995-416-location",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "located_at",
+      "value": "New York"
+    },
+    {
+      "id": "moko-new-york-1995-416-catalogue-number",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "catalogue_number",
+      "value": "1995.416"
+    },
+    {
+      "id": "moko-new-york-1995-416-material",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bone"
+    },
+    {
+      "id": "moko-new-york-1995-416-collection-date",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moko-new-york-1995-416-collector",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-new-york-1995-416-acquisition-date",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1995, from Rogers Fund"
+    },
+    {
+      "id": "moko-new-york-1995-416-dimensions",
+      "objectId": "moko-new-york-1995-416",
+      "predicate": "described_as",
+      "value": "Dimensions: 8,3 × 5,4 × 48,9 cm"
+    },
+    {
+      "id": "moko-berlin-vi-4868-classification",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-berlin-vi-4868-holder",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moko-berlin-vi-4868-location",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moko-berlin-vi-4868-catalogue-number",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "catalogue_number",
+      "value": "VI 4868"
+    },
+    {
+      "id": "moko-berlin-vi-4868-material",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-berlin-vi-4868-collection-date",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-berlin-vi-4868-collector",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich A. Schlubach"
+    },
+    {
+      "id": "moko-berlin-vi-4868-acquisition-date",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moko-berlin-vi-4868-dimensions",
+      "objectId": "moko-berlin-vi-4868",
+      "predicate": "described_as",
+      "value": "Dimensions: 45,5 x 6 x 12 cm"
+    },
+    {
+      "id": "moko-berlin-vi-4901-classification",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-berlin-vi-4901-holder",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moko-berlin-vi-4901-location",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moko-berlin-vi-4901-catalogue-number",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "catalogue_number",
+      "value": "VI 4901"
+    },
+    {
+      "id": "moko-berlin-vi-4901-material",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-berlin-vi-4901-collection-date",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moko-berlin-vi-4901-collector",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "moko-berlin-vi-4901-acquisition-date",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moko-berlin-vi-4901-dimensions",
+      "objectId": "moko-berlin-vi-4901",
+      "predicate": "described_as",
+      "value": "Dimensions: 39 x 5,5 x 6,5 cm"
+    },
+    {
+      "id": "moko-dresden-18362-classification",
+      "objectId": "moko-dresden-18362",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-dresden-18362-holder",
+      "objectId": "moko-dresden-18362",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moko-dresden-18362-location",
+      "objectId": "moko-dresden-18362",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moko-dresden-18362-catalogue-number",
+      "objectId": "moko-dresden-18362",
+      "predicate": "catalogue_number",
+      "value": "18362"
+    },
+    {
+      "id": "moko-dresden-18362-material",
+      "objectId": "moko-dresden-18362",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-dresden-18362-collection-date",
+      "objectId": "moko-dresden-18362",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moko-dresden-18362-collector",
+      "objectId": "moko-dresden-18362",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moko-dresden-18362-acquisition-date",
+      "objectId": "moko-dresden-18362",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moko-dresden-18363-classification",
+      "objectId": "moko-dresden-18363",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-dresden-18363-holder",
+      "objectId": "moko-dresden-18363",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moko-dresden-18363-location",
+      "objectId": "moko-dresden-18363",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moko-dresden-18363-catalogue-number",
+      "objectId": "moko-dresden-18363",
+      "predicate": "catalogue_number",
+      "value": "18363"
+    },
+    {
+      "id": "moko-dresden-18363-material",
+      "objectId": "moko-dresden-18363",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-dresden-18363-collection-date",
+      "objectId": "moko-dresden-18363",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moko-dresden-18363-collector",
+      "objectId": "moko-dresden-18363",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moko-dresden-18363-acquisition-date",
+      "objectId": "moko-dresden-18363",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moko-dresden-18364-classification",
+      "objectId": "moko-dresden-18364",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-dresden-18364-holder",
+      "objectId": "moko-dresden-18364",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moko-dresden-18364-location",
+      "objectId": "moko-dresden-18364",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moko-dresden-18364-catalogue-number",
+      "objectId": "moko-dresden-18364",
+      "predicate": "catalogue_number",
+      "value": "18364"
+    },
+    {
+      "id": "moko-dresden-18364-material",
+      "objectId": "moko-dresden-18364",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-dresden-18364-collection-date",
+      "objectId": "moko-dresden-18364",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moko-dresden-18364-collector",
+      "objectId": "moko-dresden-18364",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moko-dresden-18364-acquisition-date",
+      "objectId": "moko-dresden-18364",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moko-dresden-18421-classification",
+      "objectId": "moko-dresden-18421",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-dresden-18421-holder",
+      "objectId": "moko-dresden-18421",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moko-dresden-18421-location",
+      "objectId": "moko-dresden-18421",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moko-dresden-18421-catalogue-number",
+      "objectId": "moko-dresden-18421",
+      "predicate": "catalogue_number",
+      "value": "18421"
+    },
+    {
+      "id": "moko-dresden-18421-material",
+      "objectId": "moko-dresden-18421",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-dresden-18421-collection-date",
+      "objectId": "moko-dresden-18421",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moko-dresden-18421-collector",
+      "objectId": "moko-dresden-18421",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moko-dresden-18421-acquisition-date",
+      "objectId": "moko-dresden-18421",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-classification",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-holder",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "held_by",
+      "value": "Wereldmuseum Leiden"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-location",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "located_at",
+      "value": "Leiden"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-catalogue-number",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "catalogue_number",
+      "value": "RV-517-4"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-material",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "made_of",
+      "value": "wood, shell"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-collection-date",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Collection date: before 1885"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-collector",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-acquisition-date",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1885, purchased from Jacob Weisser"
+    },
+    {
+      "id": "moko-leiden-rv-517-4-dimensions",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Dimensions: length 49 cm"
+    },
+    {
+      "id": "moko-cambridge-z-6124-classification",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-cambridge-z-6124-holder",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "held_by",
+      "value": "Museum of Archeology and Anthropology"
+    },
+    {
+      "id": "moko-cambridge-z-6124-location",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "moko-cambridge-z-6124-catalogue-number",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "catalogue_number",
+      "value": "Z 6124"
+    },
+    {
+      "id": "moko-cambridge-z-6124-material",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-cambridge-z-6124-collection-date",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Collection date: 1894"
+    },
+    {
+      "id": "moko-cambridge-z-6124-collector",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-cambridge-z-6124-acquisition-date",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, donated by Baron Anatole A. A. von Hügel"
+    },
+    {
+      "id": "moko-cambridge-z-6124-dimensions",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Dimensions: 12 x 7,9 x 67,6 cm"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-classification",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-holder",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-location",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-catalogue-number",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "catalogue_number",
+      "value": "A.1895.374"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-material",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-collection-date",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-collector",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "described_as",
+      "value": "Collector: probably George Darsie"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-acquisition-date",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1895, from George Darsie"
+    },
+    {
+      "id": "moko-edinburgh-a-1895-374-dimensions",
+      "objectId": "moko-edinburgh-a-1895-374",
+      "predicate": "described_as",
+      "value": "Dimensions: 51,6 x 6,7 x 12,9"
+    },
+    {
+      "id": "moko-basel-vc-1517-classification",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-basel-vc-1517-holder",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "held_by",
+      "value": "Museum der Kulturen Basel"
+    },
+    {
+      "id": "moko-basel-vc-1517-location",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "located_at",
+      "value": "Basel"
+    },
+    {
+      "id": "moko-basel-vc-1517-catalogue-number",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "catalogue_number",
+      "value": "Vc 1517"
+    },
+    {
+      "id": "moko-basel-vc-1517-material",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "made_of",
+      "value": "wood, bone"
+    },
+    {
+      "id": "moko-basel-vc-1517-collection-date",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "described_as",
+      "value": "Collection date: around 1870 / 1880 (?)"
+    },
+    {
+      "id": "moko-basel-vc-1517-collector",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-basel-vc-1517-acquisition-date",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, purchased by Mme Pailloux-Haldimann"
+    },
+    {
+      "id": "moko-basel-vc-1517-dimensions",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "described_as",
+      "value": "Dimensions: 97,5 x 6 cm"
+    },
+    {
+      "id": "moko-stuttgart-30549-classification",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-stuttgart-30549-holder",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "moko-stuttgart-30549-location",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "moko-stuttgart-30549-catalogue-number",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "catalogue_number",
+      "value": "30549"
+    },
+    {
+      "id": "moko-stuttgart-30549-material",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moko-stuttgart-30549-collection-date",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "described_as",
+      "value": "Collection date: end of 19th century"
+    },
+    {
+      "id": "moko-stuttgart-30549-collector",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "described_as",
+      "value": "Collector: Dr. J. Müller"
+    },
+    {
+      "id": "moko-stuttgart-30549-acquisition-date",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1903, donation by Ernst W. von Sieglin and Dr. Augustin Krämer"
+    },
+    {
+      "id": "moko-stuttgart-30549-dimensions",
+      "objectId": "moko-stuttgart-30549",
+      "predicate": "described_as",
+      "value": "Dimensions: 43,5 x 5,5 x 5,5 cm"
+    },
+    {
+      "id": "moko-stuttgart-30552-classification",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-stuttgart-30552-holder",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "moko-stuttgart-30552-location",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "moko-stuttgart-30552-catalogue-number",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "catalogue_number",
+      "value": "30552"
+    },
+    {
+      "id": "moko-stuttgart-30552-material",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-stuttgart-30552-collection-date",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "described_as",
+      "value": "Collection date: end of 19th century"
+    },
+    {
+      "id": "moko-stuttgart-30552-collector",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "described_as",
+      "value": "Collector: Dr. J. Müller"
+    },
+    {
+      "id": "moko-stuttgart-30552-acquisition-date",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1903, donation by Ernst W. von Sieglin and Dr. Augustin Krämer"
+    },
+    {
+      "id": "moko-stuttgart-30552-dimensions",
+      "objectId": "moko-stuttgart-30552",
+      "predicate": "described_as",
+      "value": "Dimensions: 7 x 67 x 10 cm"
+    },
+    {
+      "id": "moko-stuttgart-49656-classification",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-stuttgart-49656-holder",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "moko-stuttgart-49656-location",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "moko-stuttgart-49656-catalogue-number",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "catalogue_number",
+      "value": "49656"
+    },
+    {
+      "id": "moko-stuttgart-49656-material",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-stuttgart-49656-collection-date",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "described_as",
+      "value": "Collection date: end of 19th century"
+    },
+    {
+      "id": "moko-stuttgart-49656-collector",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-stuttgart-49656-acquisition-date",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1905, donation by Ernst W. von Sieglin"
+    },
+    {
+      "id": "moko-stuttgart-49656-dimensions",
+      "objectId": "moko-stuttgart-49656",
+      "predicate": "described_as",
+      "value": "Dimensions: 7,5 x 7,5 x 8 cm"
+    },
+    {
+      "id": "moko-otago-d20-570-classification",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-otago-d20-570-holder",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "moko-otago-d20-570-location",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "moko-otago-d20-570-catalogue-number",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "catalogue_number",
+      "value": "D20.570"
+    },
+    {
+      "id": "moko-otago-d20-570-material",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-otago-d20-570-collection-date",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-otago-d20-570-collector",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-otago-d20-570-acquisition-date",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1920, purchasedfrom William Oldman, London"
+    },
+    {
+      "id": "moko-otago-d20-570-dimensions",
+      "objectId": "moko-otago-d20-570",
+      "predicate": "described_as",
+      "value": "Dimensions: 49,9 x 6,35 x 3,91 cm"
+    },
+    {
+      "id": "moko-leipzig-po-00231-classification",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-leipzig-po-00231-holder",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    },
+    {
+      "id": "moko-leipzig-po-00231-location",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "located_at",
+      "value": "Leipzig"
+    },
+    {
+      "id": "moko-leipzig-po-00231-catalogue-number",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "catalogue_number",
+      "value": "Po 00231"
+    },
+    {
+      "id": "moko-leipzig-po-00231-material",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-leipzig-po-00231-collection-date",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "described_as",
+      "value": "Collection date: around 1902"
+    },
+    {
+      "id": "moko-leipzig-po-00231-collector",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "described_as",
+      "value": "Collector: Johann Umlauff"
+    },
+    {
+      "id": "moko-leipzig-po-00231-acquisition-date",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1902, previous owner: J. F. G. Umlauff Naturalienhandlung and Museum (Hamburg)"
+    },
+    {
+      "id": "moko-leipzig-po-00231-dimensions",
+      "objectId": "moko-leipzig-po-00231",
+      "predicate": "described_as",
+      "value": "Dimensions: 63,5 x 10 x 9,5 cm"
+    },
+    {
+      "id": "moko-leipzig-po-00232-classification",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-leipzig-po-00232-holder",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    },
+    {
+      "id": "moko-leipzig-po-00232-location",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "located_at",
+      "value": "Leipzig"
+    },
+    {
+      "id": "moko-leipzig-po-00232-catalogue-number",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "catalogue_number",
+      "value": "Po 00232"
+    },
+    {
+      "id": "moko-leipzig-po-00232-material",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-leipzig-po-00232-collection-date",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "described_as",
+      "value": "Collection date: around 1902"
+    },
+    {
+      "id": "moko-leipzig-po-00232-collector",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "described_as",
+      "value": "Collector: Johann Umlauff"
+    },
+    {
+      "id": "moko-leipzig-po-00232-acquisition-date",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1902, previous owner: J. F. G. Umlauff Naturalienhandlung and Museum (Hamburg)"
+    },
+    {
+      "id": "moko-leipzig-po-00232-dimensions",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "described_as",
+      "value": "Dimensions: 56,5 x 7,5 x 6,5 cm"
+    },
+    {
+      "id": "moko-munich-19-22-1-classification",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-munich-19-22-1-holder",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "moko-munich-19-22-1-location",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "located_at",
+      "value": "Munich"
+    },
+    {
+      "id": "moko-munich-19-22-1-catalogue-number",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "catalogue_number",
+      "value": "19-22-1"
+    },
+    {
+      "id": "moko-munich-19-22-1-material",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moko-munich-19-22-1-collection-date",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "described_as",
+      "value": "Collection date: before 1919"
+    },
+    {
+      "id": "moko-munich-19-22-1-collector",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-munich-19-22-1-acquisition-date",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1919, from Dr. Wild (Heilbronn)"
+    },
+    {
+      "id": "moko-munich-19-22-1-dimensions",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "described_as",
+      "value": "Dimensions: 51,2 x 6,8 x 7 cm"
+    },
+    {
+      "id": "moko-bremen-d07092-classification",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-bremen-d07092-holder",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "moko-bremen-d07092-location",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "moko-bremen-d07092-catalogue-number",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "catalogue_number",
+      "value": "D07092"
+    },
+    {
+      "id": "moko-bremen-d07092-material",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "made_of",
+      "value": "wood, plant fibre (probably not original)"
+    },
+    {
+      "id": "moko-bremen-d07092-collection-date",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-bremen-d07092-collector",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-bremen-d07092-acquisition-date",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1928"
+    },
+    {
+      "id": "moko-bremen-d07092-dimensions",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "described_as",
+      "value": "Dimensions: 5 x 57 x 5 cm"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-classification",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-holder",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "held_by",
+      "value": "Ethnologische Sammlung der Universität Göttingen"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-location",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "located_at",
+      "value": "Göttingen"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-catalogue-number",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "catalogue_number",
+      "value": "Oz 1545"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-material",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-collection-date",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-collector",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-acquisition-date",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "described_as",
+      "value": "Acquisition date: 30 October 1936, purchased from Arthur Speyer, Berlin"
+    },
+    {
+      "id": "moko-gottingen-oz-1545-dimensions",
+      "objectId": "moko-gottingen-oz-1545",
+      "predicate": "described_as",
+      "value": "Dimensions: L 63 cm"
+    },
+    {
+      "id": "moko-stuttgart-119500-classification",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-stuttgart-119500-holder",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "moko-stuttgart-119500-location",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "moko-stuttgart-119500-catalogue-number",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "catalogue_number",
+      "value": "119500"
+    },
+    {
+      "id": "moko-stuttgart-119500-material",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moko-stuttgart-119500-collection-date",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-stuttgart-119500-collector",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-stuttgart-119500-acquisition-date",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1950, donation by Arthur Speyer"
+    },
+    {
+      "id": "moko-stuttgart-119500-dimensions",
+      "objectId": "moko-stuttgart-119500",
+      "predicate": "described_as",
+      "value": "Dimensions: 66 x 8 x 9 cm"
+    },
+    {
+      "id": "moko-vina-del-mar-70-classification",
+      "objectId": "moko-vina-del-mar-70",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-70-holder",
+      "objectId": "moko-vina-del-mar-70",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-70-location",
+      "objectId": "moko-vina-del-mar-70",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-70-catalogue-number",
+      "objectId": "moko-vina-del-mar-70",
+      "predicate": "catalogue_number",
+      "value": "70"
+    },
+    {
+      "id": "moko-vina-del-mar-70-material",
+      "objectId": "moko-vina-del-mar-70",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-vina-del-mar-70-collection-date",
+      "objectId": "moko-vina-del-mar-70",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-70-collector",
+      "objectId": "moko-vina-del-mar-70",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-70-acquisition-date",
+      "objectId": "moko-vina-del-mar-70",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, donated by Gonzalo Wilson"
+    },
+    {
+      "id": "moko-vina-del-mar-1430-144-coll-felbermayer-classification",
+      "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-1430-144-coll-felbermayer-holder",
+      "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-1430-144-coll-felbermayer-location",
+      "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-1430-144-coll-felbermayer-catalogue-number",
+      "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1430 / 144 coll. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1430-144-coll-felbermayer-material",
+      "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Toromiro, Sophora toromiro)"
+    },
+    {
+      "id": "moko-vina-del-mar-1430-144-coll-felbermayer-collection-date",
+      "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-1430-144-coll-felbermayer-collector",
+      "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Samuel Tuki"
+    },
+    {
+      "id": "moko-vina-del-mar-1430-144-coll-felbermayer-acquisition-date",
+      "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1532-246-coll-felbermayer-classification",
+      "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-1532-246-coll-felbermayer-holder",
+      "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-1532-246-coll-felbermayer-location",
+      "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-1532-246-coll-felbermayer-catalogue-number",
+      "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1532 / 246 coll. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1532-246-coll-felbermayer-material",
+      "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-vina-del-mar-1532-246-coll-felbermayer-collection-date",
+      "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-1532-246-coll-felbermayer-collector",
+      "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Benjamin Paoa"
+    },
+    {
+      "id": "moko-vina-del-mar-1532-246-coll-felbermayer-acquisition-date",
+      "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-classification",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-holder",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-location",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-catalogue-number",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1680 / 394 coll. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-material",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-collection-date",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-collector",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Marcial Tuki"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-acquisition-date",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1680-394-coll-felbermayer-dimensions",
+      "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 26 cm"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-classification",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-holder",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-location",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-catalogue-number",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1682 / 396 coll. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-material",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-collection-date",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-collector",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Marcial Tuki"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-acquisition-date",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1682-396-coll-felbermayer-dimensions",
+      "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 24,5 cm"
+    },
+    {
+      "id": "moko-vina-del-mar-1728-442-coll-felbermayer-classification",
+      "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-1728-442-coll-felbermayer-holder",
+      "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-1728-442-coll-felbermayer-location",
+      "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-1728-442-coll-felbermayer-catalogue-number",
+      "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1728 / 442 coll. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1728-442-coll-felbermayer-material",
+      "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Espino, Acacia caven)"
+    },
+    {
+      "id": "moko-vina-del-mar-1728-442-coll-felbermayer-collection-date",
+      "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-1728-442-coll-felbermayer-collector",
+      "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Joquin Rapu"
+    },
+    {
+      "id": "moko-vina-del-mar-1728-442-coll-felbermayer-acquisition-date",
+      "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-classification",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-holder",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-location",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-catalogue-number",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1730 / 444 coll. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-material",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-collection-date",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-collector",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Eugenio Huki"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-acquisition-date",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1730-444-coll-felbermayer-dimensions",
+      "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 33 cm"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-classification",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-holder",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-location",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-catalogue-number",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1733 / 447 coll. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-material",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-collection-date",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-collector",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained in Santiago"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-acquisition-date",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moko-vina-del-mar-1733-447-coll-felbermayer-dimensions",
+      "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 33 cm"
+    },
+    {
+      "id": "moko-cologne-54534-classification",
+      "objectId": "moko-cologne-54534",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-cologne-54534-holder",
+      "objectId": "moko-cologne-54534",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "moko-cologne-54534-location",
+      "objectId": "moko-cologne-54534",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "moko-cologne-54534-catalogue-number",
+      "objectId": "moko-cologne-54534",
+      "predicate": "catalogue_number",
+      "value": "54534"
+    },
+    {
+      "id": "moko-cologne-54534-material",
+      "objectId": "moko-cologne-54534",
+      "predicate": "made_of",
+      "value": "wood. Dimension: 82 x 8 x 7,5 cm"
+    },
+    {
+      "id": "moko-cologne-54534-collection-date",
+      "objectId": "moko-cologne-54534",
+      "predicate": "described_as",
+      "value": "Collection date: around 1960"
+    },
+    {
+      "id": "moko-cologne-54534-collector",
+      "objectId": "moko-cologne-54534",
+      "predicate": "described_as",
+      "value": "Collector: Wolfgang Wallisfurth"
+    },
+    {
+      "id": "moko-cologne-54534-acquisition-date",
+      "objectId": "moko-cologne-54534",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1993, donation by Theres Weyerich"
+    },
+    {
+      "id": "moko-bremen-d15413-classification",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-bremen-d15413-holder",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "moko-bremen-d15413-location",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "moko-bremen-d15413-catalogue-number",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "catalogue_number",
+      "value": "D15413"
+    },
+    {
+      "id": "moko-bremen-d15413-material",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moko-bremen-d15413-collection-date",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-bremen-d15413-collector",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moko-bremen-d15413-acquisition-date",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1991, manufacturer L. H. Chariz"
+    },
+    {
+      "id": "moko-bremen-d15413-dimensions",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Dimensions: 3 x 28 x 5 cm"
+    },
+    {
+      "id": "moko-vina-del-mar-2731-classification",
+      "objectId": "moko-vina-del-mar-2731",
+      "predicate": "classified_as",
+      "value": "Moko"
+    },
+    {
+      "id": "moko-vina-del-mar-2731-holder",
+      "objectId": "moko-vina-del-mar-2731",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moko-vina-del-mar-2731-location",
+      "objectId": "moko-vina-del-mar-2731",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moko-vina-del-mar-2731-catalogue-number",
+      "objectId": "moko-vina-del-mar-2731",
+      "predicate": "catalogue_number",
+      "value": "2731"
+    },
+    {
+      "id": "moko-vina-del-mar-2731-material",
+      "objectId": "moko-vina-del-mar-2731",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moko-vina-del-mar-2731-collection-date",
+      "objectId": "moko-vina-del-mar-2731",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moko-vina-del-mar-2731-collector",
+      "objectId": "moko-vina-del-mar-2731",
+      "predicate": "described_as",
+      "value": "Collector: Otto Klein"
+    },
+    {
+      "id": "moko-vina-del-mar-2731-acquisition-date",
+      "objectId": "moko-vina-del-mar-2731",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1997, donated by Enrique Klein"
     }
   ],
   "images": [],
@@ -17674,88 +21916,5 @@
       "method": "singlefile",
       "note": "Fully expanded capture preserving all eight gallery sections, 417 captions, museum numbers, embedded thumbnails and linked IndiGen notes."
     }
-  ],
-  "objectIds": [
-    "heke-vienna-vo-22868",
-    "honu-canterbury-e150-1125-oldman-104-348",
-    "honu-cologne-32600",
-    "honu-vina-del-mar-1805-519-coll-felbermayer",
-    "ika-berlin-vi-4913",
-    "ika-dresden-18365",
-    "ika-dresden-18369",
-    "ika-dresden-18414",
-    "ika-dresden-18422",
-    "ika-stockholm-1885-05-0003",
-    "ika-berlin-vi-13229",
-    "ika-dresden-24812",
-    "ika-zurich-rpo-318",
-    "ika-edinburgh-a-1924-335",
-    "ika-gottingen-oz-1546",
-    "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
-    "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
-    "ika-bremen-d13424",
-    "ika-vina-del-mar-1679-393-coll-felbermayer",
-    "ika-vina-del-mar-1684-398-coll-felbermayer",
-    "ika-vina-del-mar-1686-400-coll-felbermayer",
-    "ika-vina-del-mar-1690-404-coll-felbermayer",
-    "ika-vina-del-mar-1719-433-coll-felbermayer",
-    "ika-vina-del-mar-1734-448-coll-felbermayer",
-    "ika-vina-del-mar-810",
-    "ika-cologne-54531",
-    "ika-munich-94-317-754",
-    "ika-wellington-234567-fe010657",
-    "manu-vienna-vo-22866",
-    "manu-hamburg-e-614",
-    "manu-hamburg-22-42-261",
-    "manu-bremen-d13423",
-    "manu-vina-del-mar-1735-449-coll-felbermayer",
-    "manu-vina-del-mar-1736-450-coll-felbermayer",
-    "manu-vina-del-mar-1741-455-coll-felbermayer",
-    "manu-vina-del-mar-1743-457-coll-felbermayer",
-    "manu-vina-del-mar-1004",
-    "manu-vina-del-mar-1005",
-    "manu-vina-del-mar-1715-429-coll-felbermayer",
-    "manu-vina-del-mar-1716-430-coll-felbermayer",
-    "manu-gottingen-oz-3080",
-    "manu-cologne-54538",
-    "manu-cologne-54529",
-    "manu-munich-94-317-756",
-    "manu-munich-94-317-757",
-    "moko-canterbury-e150-1126-oldman-344",
-    "moko-canterbury-e150-1127-oldman-357",
-    "moko-canterbury-e150-1128-oldman-358",
-    "moko-new-york-1978-412-824",
-    "moko-new-york-1995-416",
-    "moko-berlin-vi-4868",
-    "moko-berlin-vi-4901",
-    "moko-dresden-18362",
-    "moko-dresden-18363",
-    "moko-dresden-18364",
-    "moko-dresden-18421",
-    "moko-leiden-rv-517-4",
-    "moko-cambridge-z-6124",
-    "moko-edinburgh-a-1895-374",
-    "moko-basel-vc-1517",
-    "moko-stuttgart-30549",
-    "moko-stuttgart-30552",
-    "moko-stuttgart-49656",
-    "moko-otago-d20-570",
-    "moko-leipzig-po-00231",
-    "moko-leipzig-po-00232",
-    "moko-munich-19-22-1",
-    "moko-bremen-d07092",
-    "moko-gottingen-oz-1545",
-    "moko-stuttgart-119500",
-    "moko-vina-del-mar-70",
-    "moko-vina-del-mar-1430-144-coll-felbermayer",
-    "moko-vina-del-mar-1532-246-coll-felbermayer",
-    "moko-vina-del-mar-1680-394-coll-felbermayer",
-    "moko-vina-del-mar-1682-396-coll-felbermayer",
-    "moko-vina-del-mar-1728-442-coll-felbermayer",
-    "moko-vina-del-mar-1730-444-coll-felbermayer",
-    "moko-vina-del-mar-1733-447-coll-felbermayer",
-    "moko-cologne-54534",
-    "moko-bremen-d15413",
-    "moko-vina-del-mar-2731"
   ]
 }
