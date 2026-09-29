@@ -2,11 +2,17 @@
   "author": "Diego Muñoz",
   "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-vina-del-mar",
   "language": "en",
-  "objectIds": ["moai-kavakava-vina-del-mar-1341-55-coll-felbermayer"],
-  "claims": [],
+  "claims": [
+    {
+      "id": "moai-kavakava-vina-del-mar-1341-55-coll-felbermayer-account-1",
+      "objectId": "moai-kavakava-vina-del-mar-1341-55-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "According to Felbermayer's documentation, this piece was found by Eugenio Huki, a Rapanui friend of Felbermayer, in a burial chamber on the islet Motu Nui (about 1200 meters southwest of the Rapa Nui cost). Although this piece was carved for exchange, the invocation of burial chambers or family caves was a narrative used to increase the value of the objects, suggesting that they were ancient pieces."
+    }
+  ],
   "images": [],
   "notes": {
-    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
     "language": "en-GB"
   },
   "captures": [

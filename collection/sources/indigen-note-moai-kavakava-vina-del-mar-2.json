@@ -15,7 +15,7 @@
   "claims": [],
   "images": [],
   "notes": {
-    "text": "Linked from 8 gallery captions. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "text": "This linked article is preserved as evidence, but no claims are extracted: its text is contextual, bibliographic, or does not distinguish which linked object a singular description concerns.",
     "language": "en-GB"
   },
   "captures": [

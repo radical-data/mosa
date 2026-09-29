@@ -2,11 +2,17 @@
   "author": "Diego Muñoz",
   "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=160",
   "language": "en",
-  "objectIds": ["moai-kavakava-te-papa"],
-  "claims": [],
+  "claims": [
+    {
+      "id": "moai-kavakava-te-papa-account-1",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "described_as",
+      "value": "According to the Museum of New Zealand Te Papa Tongarewa “this moai kavakava is one of the earlier documented figures of its type, having reached England in 1828 or 1835. It is thought to have been collected during F. W. Beechey’s expedition in HMS Blossom in 1825.”"
+    }
+  ],
   "images": [],
   "notes": {
-    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
     "language": "en-GB"
   },
   "captures": [

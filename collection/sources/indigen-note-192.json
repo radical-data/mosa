@@ -2,11 +2,23 @@
   "author": "Diego Muñoz",
   "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=192",
   "language": "en",
-  "objectIds": ["paoa-dresden-26218"],
-  "claims": [],
+  "claims": [
+    {
+      "id": "paoa-dresden-26218-account-1",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "described_as",
+      "value": "This paoa was collected by Arthur Baessler probably during his voyage to Tahiti in 1897."
+    },
+    {
+      "id": "paoa-dresden-26218-account-2",
+      "objectId": "paoa-dresden-26218",
+      "predicate": "described_as",
+      "value": "Arthur Baessler (1857–1907) was a German traveller, scientist and anthropologist. Inspired by the works of Adolf Bastian and Rudolf Virchow, he conducted fieldwork and undertook several expeditions, for example, to New Guinea, Aotearoa New Zealand, Tahiti, the Marquesas Islands, and Peru. Between 1896 and 1898 he travelled the Pacific and South America, where he collected ethnographic and anthropometric data. During his stay on Tahiti in 1897 [at that time a French colony], he visited the Rapanui settlement in Pamatai Hill (Faa'a), where he took photographs of Rapanui people but also tried to find rongorongo wooden tablets with references to the Rapanui writing system. Upon his return to Germany, in 1898, Baessler gave most of his collection of Rapanui things to the ethnographic museums in Berlin, Dresden, and Stuttgart."
+    }
+  ],
   "images": [],
   "notes": {
-    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "text": "2 object-specific claims extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
     "language": "en-GB"
   },
   "captures": [

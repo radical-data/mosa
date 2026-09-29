@@ -2,11 +2,17 @@
   "author": "Diego Muñoz",
   "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=146",
   "language": "en",
-  "objectIds": ["moai-kavakava-bremen-d00317"],
-  "claims": [],
+  "claims": [
+    {
+      "id": "moai-kavakava-bremen-d00317-account-1",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "described_as",
+      "value": "The identity of ‘Andree’ is not clarified by the Übersee-Museum Bremen archival sources. We identified two persons with the same surname who were involved in scientific activities linked to ethnographic museums in Germany: Karl Theodor Andree (1808–1875) and his son Richard Andree (1835–1912). Karl Theodor Andree, a geographer, worked at the University of Leipzig, and the University of Technology in Dresden (Karl Andree in Wikipedia, last accessed on 28 July 2021), and was a member of the Geographical Society of Dresden (GSD 1865). He became the Saxon consul in Valparaíso, Chile in 1858 (DMG 1864) which is only shortly after the donation of this item to the Übersee-Museum Bremen. His son, Richard Andree, who studied at Leipzig University, also became a geographer and, in addition, a cartographer. He was involved in the production of ethnographic cartographies (Richard Andree in Wikipedia, last accessed on 28 July 2021)."
+    }
+  ],
   "images": [],
   "notes": {
-    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
     "language": "en-GB"
   },
   "captures": [

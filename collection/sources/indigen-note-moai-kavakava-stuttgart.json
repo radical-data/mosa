@@ -2,11 +2,23 @@
   "author": null,
   "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-stuttgart",
   "language": "en",
-  "objectIds": ["moai-kavakava-stuttgart-s-40629-l"],
-  "claims": [],
+  "claims": [
+    {
+      "id": "moai-kavakava-stuttgart-s-40629-l-account-1",
+      "objectId": "moai-kavakava-stuttgart-s-40629-l",
+      "predicate": "described_as",
+      "value": "This statue is one of the earliest items from Rapa Nui that arrived in an ethnographic museum in Germany. We have identified that this Moai kavakava as well as another similar carving was purchased by the German naturalist Johann Georg Wagler between 1820 and 1823 in London. Upon their arrival in Bavaria around 1915, the carvings received the inventory numbers 192 and 193 (Wagler 1884: iii–iv; Appel 2009: 24). Both were stored and preserved at the Staatliches Museum für Völkerkunde München until 1951, when one of these figures was given to the German art dealer Arthur Speyer. We learned from an archival document that the transaction was realized on 15 October 1951: a ‘wooden figure from Easter Island (inv. no. 193) for 2.000 DM is given to Arthur Speyer in exchange for various objects’ (Museum Fünf Kontinente archive, Munich). However, the Moai kavakava inv. no. 193 is still in Munich. According to that, the figure housed at the Linden-Museum Stuttgart is necessarily no. 192. According to Ulrich Menter, curator of the museum’s Oceania collection, Moai kavakava, inv. no. 192 (Munich), now S-40629-L, was sold to the museum by a private individual in 1976."
+    },
+    {
+      "id": "moai-kavakava-stuttgart-s-40629-l-account-2",
+      "objectId": "moai-kavakava-stuttgart-s-40629-l",
+      "predicate": "described_as",
+      "value": "According to these archival documents as well as historical records, both carvings may be associated with the so-called ‘Cook collection’ – one of the three earliest systematic collections in Bavaria – which includes objects collected during one of James Cook’s circumnavigation expeditions in Oceania. According to Michaela Appel, curator at Museum Fünf Kontinente Munich, there are also other items acquired by Wagler which are dated around the same time, with reference to the voyages of James Cook (Appel 2007: 290). We also know that Cook stopped in Rapa Nui in March 1774. During this visit, a large number of ethnographic objects and natural history specimens were collected by Johann Reinhold Forster and his son Georg Forster, two German naturalists, as well as by the young Raiatean Mahine, a crew member of the expedition. However, no specific description of the two Moai kavakava, inv. no. 192 and 193, is given in the Forsters’s journals (Forster G. 2000; Forster J.R. 1983). Due to this lack of documentation, we cannot yet conclude when the carvings, or Rapanui statues, were collected; however, it is clear that both statues were taken off the island in the course of the earliest European contact in Rapa Nui."
+    }
+  ],
   "images": [],
   "notes": {
-    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "text": "2 object-specific claims extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
     "language": "en-GB"
   },
   "captures": [

@@ -2,11 +2,17 @@
   "author": "Diego Muñoz",
   "reference": "https://www.indigen.eu/indigen-notes/moai-tangata-vina-del-mar-2",
   "language": "en",
-  "objectIds": ["moai-tangata-vina-del-mar-1040"],
-  "claims": [],
+  "claims": [
+    {
+      "id": "moai-tangata-vina-del-mar-1040-account-1",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "described_as",
+      "value": "In 1934, during the Franco-Belgian ethnographic expedition, Alfred Métraux photographed Domingo Pakarati Rangitaki presenting this carving. (FAM.IP.MT.02.39, Archives Alfred Métraux, Laboratoire d’Anthropologie sociale, Collège de France, Paris). It is possible that this carving was collected by Roberto Cabezas, a Chilean politician and agronomist who visited Rapa Nui many times in the 1930s. In 1934 Cabezas was on the island for some days during the inspection visit of the Chilean warship Baquedano (Lavachery, 1935 île de Pâques)."
+    }
+  ],
   "images": [],
   "notes": {
-    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
     "language": "en-GB"
   },
   "captures": [

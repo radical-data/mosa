@@ -2,11 +2,17 @@
   "author": "Diego Muñoz",
   "reference": "https://www.indigen.eu/indigen-notes/tangata-manu-vina-del-mar",
   "language": "en",
-  "objectIds": ["tangata-manu-vina-del-mar-1289-3-coll-felbermayer"],
-  "claims": [],
+  "claims": [
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-account-1",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "The particular style of this Taŋata manu is very close to some pieces collected in 1934 from Juan Tepano, by the Franco-Belgian ethnographic mission. According to Felbermayer's records, he bought it in a public auction in Santiago."
+    }
+  ],
   "images": [],
   "notes": {
-    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
     "language": "en-GB"
   },
   "captures": [
