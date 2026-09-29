@@ -1,0 +1,85 @@
+{
+  "author": "The Metropolitan Museum of Art",
+  "reference": "https://www.metmuseum.org/art/collection/search/314826",
+  "language": "en",
+  "claims": [
+    {
+      "id": "title-as-classification",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "classified_as",
+      "value": "Male Figure (Moai Tangata)"
+    },
+    {
+      "id": "date",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "made_during",
+      "value": "early 19th century"
+    },
+    {
+      "id": "geography",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Geography: Chile, Rapa Nui (Easter Island)"
+    },
+    {
+      "id": "culture",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Culture: Rapa Nui people"
+    },
+    {
+      "id": "medium",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "made_of",
+      "value": "Wood, obsidian, bone"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Dimensions: 40.6 × 9.5 × 5.7 cm"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "classified_as",
+      "value": "Wood-Sculpture"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Credit Line: Gift of Faith-dorian and Martin Wright, in honor of Livio Scamperle, 1984"
+    },
+    {
+      "id": "object-number",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "catalogue_number",
+      "value": "1984.526"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "display-status",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Not on view"
+    }
+  ],
+  "notes": {
+    "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object moai-tangata-new-york-1984-526; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-29t22-50-08-948z.html",
+      "capturedAt": "2026-09-29T22:50:08.948Z",
+      "method": "singlefile"
+    }
+  ]
+}

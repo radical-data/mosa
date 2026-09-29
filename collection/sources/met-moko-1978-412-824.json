@@ -1,0 +1,85 @@
+{
+  "author": "The Metropolitan Museum of Art",
+  "reference": "https://www.metmuseum.org/art/collection/search/311295",
+  "language": "en",
+  "claims": [
+    {
+      "id": "title-as-classification",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "classified_as",
+      "value": "Lizard Man Figure (Moko)"
+    },
+    {
+      "id": "date",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "made_during",
+      "value": "late 19th century"
+    },
+    {
+      "id": "geography",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Geography: Chile, Rapa Nui (Easter Island)"
+    },
+    {
+      "id": "culture",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Culture: Rapa Nui people"
+    },
+    {
+      "id": "medium",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "made_of",
+      "value": "Wood, obsidian, bone"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Dimensions: 7.9 x 51.1 cm"
+    },
+    {
+      "id": "classification",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "classified_as",
+      "value": "Wood-Sculpture"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Credit Line: The Michael C. Rockefeller Memorial Collection, Anonymous Gift, 1963"
+    },
+    {
+      "id": "object-number",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "catalogue_number",
+      "value": "1978.412.824"
+    },
+    {
+      "id": "holder",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "display-status",
+      "objectId": "moko-new-york-1978-412-824",
+      "predicate": "described_as",
+      "value": "Not on view"
+    }
+  ],
+  "notes": {
+    "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object moko-new-york-1978-412-824; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-29t22-51-15-106z.html",
+      "capturedAt": "2026-09-29T22:51:15.106Z",
+      "method": "singlefile"
+    }
+  ]
+}

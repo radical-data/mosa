@@ -1,0 +1,94 @@
+{
+  "author": "The Metropolitan Museum of Art",
+  "reference": "https://www.metmuseum.org/art/collection/search/313680",
+  "language": "en",
+  "claims": [
+    {
+      "id": "title-as-classification",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "classified_as",
+      "value": "Male Figure (Moai Kavakava)"
+    },
+    {
+      "id": "date",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "made_during",
+      "value": "mid to late 19th century"
+    },
+    {
+      "id": "geography",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "described_as",
+      "value": "Geography: Chile, Rapa Nui (Easter Island)"
+    },
+    {
+      "id": "culture",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "described_as",
+      "value": "Culture: Rapa Nui people"
+    },
+    {
+      "id": "medium",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "made_of",
+      "value": "Wood, obsidian, bone"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "described_as",
+      "value": "Dimensions: 45.4 x 9.5 x 10.2 cm"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "classified_as",
+      "value": "Wood-Sculpture"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "described_as",
+      "value": "Credit Line: The Michael C. Rockefeller Memorial Collection, Bequest of Nelson A. Rockefeller, 1979"
+    },
+    {
+      "id": "object-number",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "catalogue_number",
+      "value": "1979.206.1491"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "display-status",
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "predicate": "described_as",
+      "value": "Not on view"
+    }
+  ],
+  "notes": {
+    "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object moai-kavakava-new-york-1979-206-1491; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "moai-kavakava-new-york-1979-206-1491",
+      "file": "moai-kavakava-new-york-1979-206-1491/met.jpg",
+      "alt": "Front view of a carved standing male figure with elongated facial features and prominently carved ribs.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain (The Met Open Access)",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/313680"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-29t22-49-26-930z.html",
+      "capturedAt": "2026-09-29T22:49:26.930Z",
+      "method": "singlefile"
+    }
+  ]
+}

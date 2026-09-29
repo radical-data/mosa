@@ -1,0 +1,85 @@
+{
+  "author": "The Metropolitan Museum of Art",
+  "reference": "https://www.metmuseum.org/art/collection/search/313666",
+  "language": "en",
+  "claims": [
+    {
+      "id": "title-as-classification",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "classified_as",
+      "value": "Moai papa (female figure)"
+    },
+    {
+      "id": "date",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "made_during",
+      "value": "19th century"
+    },
+    {
+      "id": "geography",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "described_as",
+      "value": "Geography: Chile, Rapa Nui (Easter Island)"
+    },
+    {
+      "id": "culture",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "described_as",
+      "value": "Culture: Rapa Nui people"
+    },
+    {
+      "id": "medium",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "made_of",
+      "value": "Wood, obsidian, paint"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "described_as",
+      "value": "Dimensions: 59.7 × 14.6 × 8.9 cm"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "classified_as",
+      "value": "Wood-Sculpture"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "described_as",
+      "value": "Credit Line: The Michael C. Rockefeller Memorial Collection, Bequest of Nelson A. Rockefeller, 1979"
+    },
+    {
+      "id": "object-number",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "catalogue_number",
+      "value": "1979.206.1478"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "display-status",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "located_at",
+      "value": "The Met Fifth Avenue in Gallery 352"
+    }
+  ],
+  "notes": {
+    "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object moai-pa-apa-a-new-york-1979-206-1478; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field. The Met medium (“Wood, obsidian, paint”) differs from the medium recorded by the INDIGEN source (“wood, glass, paint, resin (?)”); both accounts are retained separately.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-29t22-50-19-248z.html",
+      "capturedAt": "2026-09-29T22:50:19.248Z",
+      "method": "singlefile"
+    }
+  ]
+}
