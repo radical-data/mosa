@@ -1,0 +1,20 @@
+{
+  "author": "Betty Haoa Rapahango & Diego Muñoz",
+  "reference": "https://www.indigen.eu/indigen-notes/ika-valparaiso",
+  "language": "en",
+  "objectIds": ["ika-valparaiso-mhnv-47-registro-surdoc-4-1936"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-32-25-220z.html",
+      "capturedAt": "2026-09-29T22:32:25.220Z",
+      "method": "singlefile",
+      "note": "Preserves “Ika, Valparaíso”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

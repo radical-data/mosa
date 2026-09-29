@@ -1,0 +1,20 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=160",
+  "language": "en",
+  "objectIds": ["moai-kavakava-te-papa"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-30-31-381z.html",
+      "capturedAt": "2026-09-29T22:30:31.381Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Wellington”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

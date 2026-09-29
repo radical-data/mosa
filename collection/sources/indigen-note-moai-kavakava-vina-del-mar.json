@@ -1,0 +1,20 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-vina-del-mar",
+  "language": "en",
+  "objectIds": ["moai-kavakava-vina-del-mar-1341-55-coll-felbermayer"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-33-08-086z.html",
+      "capturedAt": "2026-09-29T22:33:08.086Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Viña del Mar”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

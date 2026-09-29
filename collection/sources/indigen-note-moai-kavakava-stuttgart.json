@@ -1,0 +1,20 @@
+{
+  "author": null,
+  "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-stuttgart",
+  "language": "en",
+  "objectIds": ["moai-kavakava-stuttgart-s-40629-l"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-28-31-402z.html",
+      "capturedAt": "2026-09-29T22:28:31.402Z",
+      "method": "singlefile",
+      "note": "Preserves the titled article, named author, object history and bibliography."
+    }
+  ]
+}

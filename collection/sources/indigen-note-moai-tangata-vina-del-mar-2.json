@@ -1,0 +1,20 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-tangata-vina-del-mar-2",
+  "language": "en",
+  "objectIds": ["moai-tangata-vina-del-mar-1040"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-33-58-880z.html",
+      "capturedAt": "2026-09-29T22:33:58.880Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai taŋata, Viña del Mar”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "author": "Museo Antropológico Padre Sebastian Englert (MAPSE)",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-hanga-roa-2",
+  "language": "en",
+  "objectIds": ["moai-kavakava-rapa-nui-17-296"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "Linked from 1 gallery caption. Object-specific claims are extracted only where the article identifies the relevant object; shared contextual text is not assigned to every linked object.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-32-33-922z.html",
+      "capturedAt": "2026-09-29T22:32:33.922Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Rapa Nui”, its named byline, article text and bibliography where present."
+    }
+  ]
+}
