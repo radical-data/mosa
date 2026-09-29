@@ -1,0 +1,19 @@
+{
+  "author": null,
+  "reference": "https://www.indigen.eu/gallery",
+  "language": "en",
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "The gallery is treated as a multi-object source. Its dynamically loaded sections must be expanded before inventorying entries. Gallery captions distinguish collection and acquisition dates from dates of making; those dates are not interchangeable. Individual linked IndiGen notes are separate authored sources when claims are extracted from them.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-19-22-628z.html",
+      "capturedAt": "2026-09-29T22:19:22.628Z",
+      "method": "singlefile",
+      "note": "Fully expanded capture preserving all eight gallery sections, 417 captions, museum numbers, embedded thumbnails and linked IndiGen notes."
+    }
+  ]
+}
