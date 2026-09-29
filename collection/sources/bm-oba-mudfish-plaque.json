@@ -28,5 +28,14 @@
       "value": "British Museum"
     }
   ],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "bm-oba-mudfish-plaque/2026-09-29t20-54-53-923z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/object/E_Af1898-0115-30",
+      "capturedAt": "2026-09-29T20:54:53.923Z",
+      "method": "singlefile",
+      "note": "Catalogue identifier and expanded text reviewed; optional cookies declined before capture. The interactive object-image viewer is unavailable offline."
+    }
+  ]
 }

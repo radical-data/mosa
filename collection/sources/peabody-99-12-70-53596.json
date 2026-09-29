@@ -8,5 +8,14 @@
     "language": "en-GB"
   },
   "claims": [],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "peabody-99-12-70-53596/2026-09-29t20-54-58-814z.html",
+      "originalUrl": "https://collections.peabody.harvard.edu/objects/details/86936",
+      "capturedAt": "2026-09-29T20:54:58.814Z",
+      "method": "singlefile",
+      "note": "Catalogue number, record text and main object image preserved. Several gallery thumbnails display Image Not Available."
+    }
+  ]
 }

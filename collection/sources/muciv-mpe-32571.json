@@ -8,5 +8,14 @@
     "language": "en-GB"
   },
   "claims": [],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "muciv-mpe-32571/2026-09-29t21-05-37-477z.html",
+      "originalUrl": "https://www.museodellecivilta.it/en/oggetti/oceanian-arts-and-cultures/female-figurine-bearing-child-moai-kava-kava/",
+      "capturedAt": "2026-09-29T21:05:37.477Z",
+      "method": "singlefile",
+      "note": "Inventory MPE 32571, record text and main object image preserved; optional cookies declined before capture."
+    }
+  ]
 }

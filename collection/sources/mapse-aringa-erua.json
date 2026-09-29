@@ -8,5 +8,14 @@
     "language": "en-GB"
   },
   "claims": [],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "mapse-aringa-erua/2026-09-29t20-52-48-162z.html",
+      "originalUrl": "https://www.patrimoniocultural.gob.cl/en/regional-museums/easter-island-anthropological-museum/aringa-erua-moai-moai-two-faces",
+      "capturedAt": "2026-09-29T20:52:48.162Z",
+      "method": "singlefile",
+      "note": "Named two-faced figure, transfer account and images preserved. Inventory 17-00-00306 is absent from this page."
+    }
+  ]
 }
