@@ -1,0 +1,73 @@
+{
+  "author": "Museum Fünf Kontinente",
+  "reference": "https://onlinedatenbank-museum-fuenf-kontinente.de/detail/collection/528b2e0d-4bc8-4b3e-9774-af460c0936ed",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "catalogue_number",
+      "value": "94-317 756"
+    },
+    {
+      "id": "classification",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "classified_as",
+      "value": "Schnitzerei: Gesicht mit Vogelkopf | Tahonga"
+    },
+    {
+      "id": "holder",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "material",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "made_of",
+      "value": "Holz; Knochen"
+    },
+    {
+      "id": "dating",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "made_during",
+      "value": "vor 1994"
+    },
+    {
+      "id": "geographic-origin",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "described_as",
+      "value": "Geografische Herkunft: Ozeanien/Polynesien (Region), Südamerika/Chile/Rapa Nui (Osterinsel)"
+    },
+    {
+      "id": "authorship",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "described_as",
+      "value": "Urheberschaft: Nicht dokumentiert"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "described_as",
+      "value": "Maße: Höhe 9 cm | Breite 6,2 cm | Tiefe 1,6 cm"
+    },
+    {
+      "id": "provenance",
+      "objectId": "manu-munich-94-317-756",
+      "predicate": "described_as",
+      "value": "Provenienz: Provinz der bayerischen Kapuziner; Geschenk 1994"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The museum's online record displays inventory number 94-317 756, exactly matching the IndiGen gallery identifier for manu-munich-94-317-756. The classification claim preserves the full German title; the museum's geographic-origin field remains a source account and is not interpreted as a findspot or place of making. The museum title uses “Schnitzerei: Gesicht mit Vogelkopf | Tahonga”; IndiGen identifies accession 94-317 756 as Manu. The accession verifies the identity link, while the differing title terms are retained by source.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-57-33-117z.html",
+      "capturedAt": "2026-09-29T22:57:33.117Z",
+      "method": "singlefile"
+    }
+  ]
+}

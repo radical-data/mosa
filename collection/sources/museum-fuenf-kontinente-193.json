@@ -1,0 +1,73 @@
+{
+  "author": "Museum Fünf Kontinente",
+  "reference": "https://onlinedatenbank-museum-fuenf-kontinente.de/detail/collection/093ed50e-852f-47b1-a4b7-22e81246d246",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "catalogue_number",
+      "value": "193"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "classified_as",
+      "value": "Figur eines männlichen Geistwesens | Moai kavakava"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "made_of",
+      "value": "Holz, Perlmutt"
+    },
+    {
+      "id": "dating",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "made_during",
+      "value": "vor 1825"
+    },
+    {
+      "id": "geographic-origin",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "described_as",
+      "value": "Geografische Herkunft: Südamerika/Chile/Rapa Nui (Osterinsel), Ozeanien/Polynesien (Region)"
+    },
+    {
+      "id": "authorship",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "described_as",
+      "value": "Urheberschaft: Nicht dokumentiert"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "described_as",
+      "value": "Maße: Höhe 45,8 cm | Breite 10 cm | Tiefe 11,7 cm | Gewicht mit Halterung ca. 500 g"
+    },
+    {
+      "id": "provenance",
+      "objectId": "moai-kavakava-munich-193",
+      "predicate": "described_as",
+      "value": "Provenienz: Johann Georg Wagler; Kauf/ Tausch 1827"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The museum's online record displays inventory number 193, exactly matching the IndiGen gallery identifier for moai-kavakava-munich-193. The classification claim preserves the full German title; the museum's geographic-origin field remains a source account and is not interpreted as a findspot or place of making. IndiGen reports acquisition in 1825 from Johann Georg Wagler. This museum record reports Kauf/ Tausch 1827; retain both source accounts.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-56-11-342z.html",
+      "capturedAt": "2026-09-29T22:56:11.342Z",
+      "method": "singlefile"
+    }
+  ]
+}

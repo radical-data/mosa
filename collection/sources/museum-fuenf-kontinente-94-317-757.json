@@ -1,0 +1,73 @@
+{
+  "author": "Museum Fünf Kontinente",
+  "reference": "https://onlinedatenbank-museum-fuenf-kontinente.de/detail/collection/b91bdd25-e828-4430-ba97-d501a0744842",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "catalogue_number",
+      "value": "94-317 757"
+    },
+    {
+      "id": "classification",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "classified_as",
+      "value": "Schnitzerei: Vogel"
+    },
+    {
+      "id": "holder",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "material",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "made_of",
+      "value": "Holz"
+    },
+    {
+      "id": "dating",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "made_during",
+      "value": "vor 1994"
+    },
+    {
+      "id": "geographic-origin",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "described_as",
+      "value": "Geografische Herkunft: Südamerika/Chile/Rapa Nui (Osterinsel), Ozeanien/Polynesien (Region)"
+    },
+    {
+      "id": "authorship",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "described_as",
+      "value": "Urheberschaft: Nicht dokumentiert"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "described_as",
+      "value": "Maße: Höhe 5 cm | Länge 11 cm | Breite 3,6 cm"
+    },
+    {
+      "id": "provenance",
+      "objectId": "manu-munich-94-317-757",
+      "predicate": "described_as",
+      "value": "Provenienz: Provinz der bayerischen Kapuziner; Geschenk 1994"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The museum's online record displays inventory number 94-317 757, exactly matching the IndiGen gallery identifier for manu-munich-94-317-757. The classification claim preserves the full German title; the museum's geographic-origin field remains a source account and is not interpreted as a findspot or place of making. The museum title is “Schnitzerei: Vogel”; IndiGen identifies accession 94-317 757 as Manu. The accession verifies the identity link; the differing source description is retained.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-57-49-828z.html",
+      "capturedAt": "2026-09-29T22:57:49.828Z",
+      "method": "singlefile"
+    }
+  ]
+}

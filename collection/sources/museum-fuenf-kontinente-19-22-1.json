@@ -1,0 +1,73 @@
+{
+  "author": "Museum Fünf Kontinente",
+  "reference": "https://onlinedatenbank-museum-fuenf-kontinente.de/detail/collection/4647417b-ff87-4060-b0af-85fe522b2cfa",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "catalogue_number",
+      "value": "19-22-1"
+    },
+    {
+      "id": "classification",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "classified_as",
+      "value": "Kultfigur | Moko"
+    },
+    {
+      "id": "holder",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "material",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "made_of",
+      "value": "Holz; Knochen; Obsidian"
+    },
+    {
+      "id": "dating",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "made_during",
+      "value": "vor 1919"
+    },
+    {
+      "id": "geographic-origin",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "described_as",
+      "value": "Geografische Herkunft: Ozeanien/Polynesien (Region), Südamerika/Chile/Rapa Nui (Osterinsel)"
+    },
+    {
+      "id": "authorship",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "described_as",
+      "value": "Urheberschaft: Nicht dokumentiert"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "described_as",
+      "value": "Maße: Länge 51,2 cm | Breite 6,8 cm | Tiefe 7 cm"
+    },
+    {
+      "id": "provenance",
+      "objectId": "moko-munich-19-22-1",
+      "predicate": "described_as",
+      "value": "Provenienz: Wild; Geschenk 1919"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The museum's online record displays inventory number 19-22-1, exactly matching the IndiGen gallery identifier for moko-munich-19-22-1. The classification claim preserves the full German title; the museum's geographic-origin field remains a source account and is not interpreted as a findspot or place of making.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-58-00-872z.html",
+      "capturedAt": "2026-09-29T22:58:00.872Z",
+      "method": "singlefile"
+    }
+  ]
+}

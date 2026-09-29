@@ -1,0 +1,73 @@
+{
+  "author": "Museum Fünf Kontinente",
+  "reference": "https://onlinedatenbank-museum-fuenf-kontinente.de/detail/collection/7f28238a-5bb4-4c4b-889e-4f136eae43dd",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "catalogue_number",
+      "value": "94-317 758"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "classified_as",
+      "value": "Figur des Typs Moai kavakava | Moai kavakava"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "made_of",
+      "value": "Holz; Knochen"
+    },
+    {
+      "id": "dating",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "made_during",
+      "value": "vor 1994"
+    },
+    {
+      "id": "geographic-origin",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "described_as",
+      "value": "Geografische Herkunft: Ozeanien/Polynesien (Region), Südamerika/Chile/Rapa Nui (Osterinsel)"
+    },
+    {
+      "id": "authorship",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "described_as",
+      "value": "Urheberschaft: Nicht dokumentiert"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "described_as",
+      "value": "Maße: Höhe 22 cm | Breite 5,2 cm | Tiefe 6,5 cm"
+    },
+    {
+      "id": "provenance",
+      "objectId": "moai-kavakava-munich-94-317-758",
+      "predicate": "described_as",
+      "value": "Provenienz: Provinz der bayerischen Kapuziner; Geschenk 1994"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The museum's online record displays inventory number 94-317 758, exactly matching the IndiGen gallery identifier for moai-kavakava-munich-94-317-758. The classification claim preserves the full German title; the museum's geographic-origin field remains a source account and is not interpreted as a findspot or place of making.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-56-43-711z.html",
+      "capturedAt": "2026-09-29T22:56:43.711Z",
+      "method": "singlefile"
+    }
+  ]
+}
