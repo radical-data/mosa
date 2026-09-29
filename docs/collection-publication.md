@@ -214,6 +214,9 @@ candidate museum match.
 
 ### Add images
 
+Use the [collection images skill](../.agents/skills/collection-images/SKILL.md)
+for the agent workflow.
+
 Download only images MoSA is authorised to publish. Put each binary at
 `collection/images/<file>`; the repository's Git LFS rules track supported
 image formats. A normal checkout restores the image before Astro and Docker

@@ -48,6 +48,7 @@ repository tasks and pnpm owns dependencies.
 `just verify` runs formatting, documentation, type, unit and build checks.
 
 For source preservation, use the repository [source capture skill](.agents/skills/source-capture/SKILL.md).
+For publishable object images, use the [collection images skill](.agents/skills/collection-images/SKILL.md).
 
 ## Implementation rules
 
