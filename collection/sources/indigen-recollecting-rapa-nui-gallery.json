@@ -13028,6 +13028,1074 @@
       "objectId": "reimiro-vina-del-mar-3813",
       "predicate": "described_as",
       "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-classification",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-holder",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-location",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-catalogue-number",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "catalogue_number",
+      "value": "E150.1137/ OLDMAN 355"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-material",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-collection-date",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-collector",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "described_as",
+      "value": "Collector: Admiral Gibson"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-acquisition-date",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "ao-canterbury-e150-1137-oldman-355-dimensions",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "described_as",
+      "value": "Dimensions: 151,13 x 19,05 cm"
+    },
+    {
+      "id": "ao-te-papa-classification",
+      "objectId": "ao-te-papa",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "ao-te-papa-holder",
+      "objectId": "ao-te-papa",
+      "predicate": "held_by",
+      "value": "Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "ao-te-papa-location",
+      "objectId": "ao-te-papa",
+      "predicate": "located_at",
+      "value": "Wellington"
+    },
+    {
+      "id": "ao-te-papa-catalogue-number",
+      "objectId": "ao-te-papa",
+      "predicate": "catalogue_number",
+      "value": "OL001116"
+    },
+    {
+      "id": "ao-te-papa-material",
+      "objectId": "ao-te-papa",
+      "predicate": "made_of",
+      "value": "wood, bones, shell, obsidian"
+    },
+    {
+      "id": "ao-te-papa-collection-date",
+      "objectId": "ao-te-papa",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "ao-te-papa-collector",
+      "objectId": "ao-te-papa",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ao-te-papa-acquisition-date",
+      "objectId": "ao-te-papa",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1992; Oldman collection, gift of the New Zealand government"
+    },
+    {
+      "id": "ao-otago-d47-560-classification",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "ao-otago-d47-560-holder",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "ao-otago-d47-560-location",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "ao-otago-d47-560-catalogue-number",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "catalogue_number",
+      "value": "D47.560"
+    },
+    {
+      "id": "ao-otago-d47-560-material",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ao-otago-d47-560-collection-date",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "ao-otago-d47-560-collector",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ao-otago-d47-560-acquisition-date",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1936, from William Ohly (Berkeley Galleries), London"
+    },
+    {
+      "id": "ao-otago-d47-560-dimensions",
+      "objectId": "ao-otago-d47-560",
+      "predicate": "described_as",
+      "value": "Dimensions: 128 x 17,7 x 1,92 cm"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-classification",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-holder",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-location",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-catalogue-number",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "catalogue_number",
+      "value": "VI 4950 - A"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-material",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "made_of",
+      "value": "wood, red and white pigments"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-collection-date",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-collector",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-acquisition-date",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "ao-berlin-vi-4950-a-dimensions",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "described_as",
+      "value": "Dimensions: 195 x 29 x 7 cm"
+    },
+    {
+      "id": "ao-vienna-vo-22845-classification",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "ao-vienna-vo-22845-holder",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "held_by",
+      "value": "Weltmuseum Wien"
+    },
+    {
+      "id": "ao-vienna-vo-22845-location",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "located_at",
+      "value": "Vienna"
+    },
+    {
+      "id": "ao-vienna-vo-22845-catalogue-number",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "catalogue_number",
+      "value": "VO_22845"
+    },
+    {
+      "id": "ao-vienna-vo-22845-material",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "ao-vienna-vo-22845-collection-date",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Collection date: around 1885"
+    },
+    {
+      "id": "ao-vienna-vo-22845-collector",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich Freiherr von Westenholz"
+    },
+    {
+      "id": "ao-vienna-vo-22845-acquisition-date",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, purchased by Klee und Kocher (company), Hamburg"
+    },
+    {
+      "id": "ao-vienna-vo-22845-dimensions",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Dimensions: 216 x 23 x 7 cm"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-classification",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-holder",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-location",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-catalogue-number",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "catalogue_number",
+      "value": "MHNV 76 Registro surdoc 4-1956"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-material",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-collection-date",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "described_as",
+      "value": "Collection date: 1927"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-collector",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-acquisition-date",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1956"
+    },
+    {
+      "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-dimensions",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "described_as",
+      "value": "Dimensions: 2.5 cm x 160 cm x 20 cm"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-classification",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-holder",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-location",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-catalogue-number",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "catalogue_number",
+      "value": "E150.1138/ OLDMAN 354"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-material",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-collection-date",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-collector",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-acquisition-date",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "rapa-canterbury-e150-1138-oldman-354-dimensions",
+      "objectId": "rapa-canterbury-e150-1138-oldman-354",
+      "predicate": "described_as",
+      "value": "Dimensions: 69,21 x 12,38 cm"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-classification",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-holder",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-location",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-catalogue-number",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "catalogue_number",
+      "value": "E150.1139/ OLDMAN 108 /360"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-material",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-collection-date",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-collector",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-acquisition-date",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "rapa-canterbury-e150-1139-oldman-108-360-dimensions",
+      "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
+      "predicate": "described_as",
+      "value": "Dimensions: 87,94 x 18 x 8,57 cm"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-classification",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-holder",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-location",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-catalogue-number",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "catalogue_number",
+      "value": "E150.1140/ OLDMAN S360"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-material",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-collection-date",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-collector",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-acquisition-date",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-oldman-s360-dimensions",
+      "objectId": "rapa-canterbury-e150-1140-oldman-s360",
+      "predicate": "described_as",
+      "value": "Dimensions: 86,99 x 17,46 x 6,66 cm"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-classification",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-holder",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-location",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "located_at",
+      "value": "New York"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-catalogue-number",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "catalogue_number",
+      "value": "1978.412.1571"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-material",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-collection-date",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-collector",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-acquisition-date",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1972, Gift of Mrs. Gertrud A. Mellon"
+    },
+    {
+      "id": "rapa-new-york-1978-412-1571-dimensions",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "described_as",
+      "value": "Dimensions: 71,8 × 15,9 × 1,6 cm"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-classification",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-holder",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-location",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "located_at",
+      "value": "New York"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-catalogue-number",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "catalogue_number",
+      "value": "1979.206.1452"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-material",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-collection-date",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-collector",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-acquisition-date",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1979, from the Michael C. Rockefeller Memorial Collection, bequest of Nelson A. Rockefeller"
+    },
+    {
+      "id": "rapa-new-york-1979-206-1452-dimensions",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Dimensions: 90 x 15,2 cm"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-classification",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-holder",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-location",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-catalogue-number",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "catalogue_number",
+      "value": "1955.156 A"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-material",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-collection-date",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "described_as",
+      "value": "Collection date: 1868"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-collector",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "described_as",
+      "value": "Collector: HMS Topaze"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-acquisition-date",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, donated by Robert Stirling"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-a-dimensions",
+      "objectId": "rapa-cambridge-1955-156-a",
+      "predicate": "described_as",
+      "value": "Dimensions: 15 x 55,2 x 10,5 cm"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-classification",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-holder",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-location",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-catalogue-number",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "catalogue_number",
+      "value": "1955.156 B"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-material",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-collection-date",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Collection date: 1868"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-collector",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Collector: HMS Topaze"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-acquisition-date",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, donated by Robert Stirling"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-b-dimensions",
+      "objectId": "rapa-cambridge-1955-156-b",
+      "predicate": "described_as",
+      "value": "Dimensions: 1,9 x 81 x 17,3 cm"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-classification",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-holder",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-location",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-catalogue-number",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "catalogue_number",
+      "value": "1955.156 C"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-material",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-collection-date",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "described_as",
+      "value": "Collection date: 1868"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-collector",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "described_as",
+      "value": "Collector: HMS Topaze"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-acquisition-date",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, donated by Robert Stirling"
+    },
+    {
+      "id": "rapa-cambridge-1955-156-c-dimensions",
+      "objectId": "rapa-cambridge-1955-156-c",
+      "predicate": "described_as",
+      "value": "Dimensions: 2,4 x 97 x 18,9 cm"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-classification",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-holder",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-location",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-catalogue-number",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "catalogue_number",
+      "value": "VI 2129 - B"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-material",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-collection-date",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-collector",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-acquisition-date",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1878, acquired from Museum Godeffroy, Hamburg"
+    },
+    {
+      "id": "rapa-berlin-vi-2129-b-dimensions",
+      "objectId": "rapa-berlin-vi-2129-b",
+      "predicate": "described_as",
+      "value": "Dimensions: 80,5 x 17,5 x 2 cm"
+    },
+    {
+      "id": "rapa-cologne-32602-classification",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-cologne-32602-holder",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "rapa-cologne-32602-location",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "rapa-cologne-32602-catalogue-number",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "catalogue_number",
+      "value": "32602"
+    },
+    {
+      "id": "rapa-cologne-32602-material",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "made_of",
+      "value": "wood (toromiro)"
+    },
+    {
+      "id": "rapa-cologne-32602-collection-date",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "described_as",
+      "value": "Collection date: early 19th century"
+    },
+    {
+      "id": "rapa-cologne-32602-collector",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-cologne-32602-acquisition-date",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1914, purchased by J.E.G. Umlauff (previously collection W. O. Oldman)"
+    },
+    {
+      "id": "rapa-cologne-32602-dimensions",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "described_as",
+      "value": "Dimensions: 87 x 17,4 cm"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-awf1885-classification",
+      "objectId": "rapa-canterbury-e150-1140-awf1885",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-awf1885-holder",
+      "objectId": "rapa-canterbury-e150-1140-awf1885",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-awf1885-location",
+      "objectId": "rapa-canterbury-e150-1140-awf1885",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-awf1885-catalogue-number",
+      "objectId": "rapa-canterbury-e150-1140-awf1885",
+      "predicate": "catalogue_number",
+      "value": "E150.1140/ AWF1885"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-awf1885-material",
+      "objectId": "rapa-canterbury-e150-1140-awf1885",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-awf1885-collection-date",
+      "objectId": "rapa-canterbury-e150-1140-awf1885",
+      "predicate": "described_as",
+      "value": "Collection date: 1885"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-awf1885-collector",
+      "objectId": "rapa-canterbury-e150-1140-awf1885",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-canterbury-e150-1140-awf1885-acquisition-date",
+      "objectId": "rapa-canterbury-e150-1140-awf1885",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-classification",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-holder",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "held_by",
+      "value": "Wereldmuseum Leiden"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-location",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "located_at",
+      "value": "Leiden"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-catalogue-number",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "catalogue_number",
+      "value": "RV-945-21"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-material",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-collection-date",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Collection date: around 1893"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-collector",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-acquisition-date",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1893, purchased from J. F. G. Umlauff"
+    },
+    {
+      "id": "rapa-leiden-rv-945-21-dimensions",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Dimensions: 82 x 18 x 1,8 cm"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-classification",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-holder",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-location",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-catalogue-number",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "catalogue_number",
+      "value": "E 1894.95"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-material",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-collection-date",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-collector",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-acquisition-date",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1894, purchased with a donation from James Anthony Froude"
+    },
+    {
+      "id": "rapa-cambridge-e-1894-95-dimensions",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Dimensions: 23 x 87,3 x 18,5 cm"
+    },
+    {
+      "id": "rapa-otago-o50-128-classification",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "rapa-otago-o50-128-holder",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "rapa-otago-o50-128-location",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "rapa-otago-o50-128-catalogue-number",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "catalogue_number",
+      "value": "O50.128"
+    },
+    {
+      "id": "rapa-otago-o50-128-material",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "rapa-otago-o50-128-collection-date",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "rapa-otago-o50-128-collector",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "rapa-otago-o50-128-acquisition-date",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1950, from the Oldman Collection"
+    },
+    {
+      "id": "rapa-otago-o50-128-dimensions",
+      "objectId": "rapa-otago-o50-128",
+      "predicate": "described_as",
+      "value": "Dimensions: 83,6 x 20 x 1,93 cm"
     }
   ],
   "images": [],
@@ -13044,26 +14112,6 @@
     }
   ],
   "objectIds": [
-    "ao-canterbury-e150-1137-oldman-355",
-    "ao-te-papa",
-    "ao-otago-d47-560",
-    "ao-berlin-vi-4950-a",
-    "ao-vienna-vo-22845",
-    "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
-    "rapa-canterbury-e150-1138-oldman-354",
-    "rapa-canterbury-e150-1139-oldman-108-360",
-    "rapa-canterbury-e150-1140-oldman-s360",
-    "rapa-new-york-1978-412-1571",
-    "rapa-new-york-1979-206-1452",
-    "rapa-cambridge-1955-156-a",
-    "rapa-cambridge-1955-156-b",
-    "rapa-cambridge-1955-156-c",
-    "rapa-berlin-vi-2129-b",
-    "rapa-cologne-32602",
-    "rapa-canterbury-e150-1140-awf1885",
-    "rapa-leiden-rv-945-21",
-    "rapa-cambridge-e-1894-95",
-    "rapa-otago-o50-128",
     "paoa-berlin-vi-4908",
     "paoa-berlin-vi-4864-a",
     "paoa-dresden-18424",
