@@ -50,6 +50,24 @@ original bundle proposals remain under the ignored `research-local/` directory.
 | Ua (staff or club) | Unaccepted draft | `f3914957-34ed-41e9-8ee2-57f4d0dddd64` |
 | Hoa Haka Nana Ia | Draft under review | `41a6aec8-37e1-4853-aae9-cb2b8bafdfaf` |
 
+## Subsequent identity reconciliation
+
+On 29 September 2026, later source review established that two records kept
+separate at migration represented existing objects:
+
+- `hoa-haka-nana-ia` was merged into `hoa-hakananai-a`. The distinctive name,
+  British Museum holder and exact catalogue record `Oc1869,1005.1` establish a
+  single identity. The table's spelling remains an attributed `has_name` claim.
+- `ao-national-museum-new-zealand` was merged into `ao-te-papa`. The historical
+  cross-reference and Te Papa record `180901` establish a single ao. The table's
+  holder, location and classification claims now describe that object.
+
+The historical UUID and readable-handle mappings below record the migration as
+performed; they are not current aliases. No compatibility routes were retained.
+The possible relationship between `ua-national-museum-new-zealand` and
+`ua-te-papa` remains unresolved because the table and Te Papa catalogue each
+document more than one ua.
+
 ## Readable identifier migration
 
 On 29 September 2026, the collection replaced its internal UUIDs with readable

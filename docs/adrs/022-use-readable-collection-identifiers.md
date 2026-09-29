@@ -183,6 +183,20 @@ schemas, tests and authoring guides. The audit mapping is appended to the
 [collection migration report](../../collection/migration-report.md#readable-identifier-migration).
 No compatibility aliases or UUID routes remain.
 
+## Subsequent identity reconciliation
+
+Later source review established that `hoa-haka-nana-ia` duplicated
+`hoa-hakananai-a`, and that `ao-national-museum-new-zealand` duplicated
+`ao-te-papa`. Their attributed claims were moved to the established identities
+and the duplicate object files were removed. The earlier mappings remain below
+as an audit of the migration rather than as supported aliases or routes.
+
+This does not change the migration rule against merging on name similarity
+alone. Both reconciliations use an exact museum record plus object-specific
+evidence. The possible `ua-national-museum-new-zealand` and `ua-te-papa`
+relationship remains unresolved because the available records do not identify
+which of several ua the table row describes.
+
 ## Migration boundary
 
 Implement this as one reviewed migration of the file contract, collection and

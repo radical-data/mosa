@@ -79,7 +79,8 @@ Git review is the publication workflow. Everything committed under
 and auditable, but it also means private notes, unlicensed media and uncertain
 drafts must stay outside that directory until the team chooses to publish them.
 
-The initial migration intentionally includes 17 canonical records and three
-previously unaccepted drafts at the owner's direction. The
-[migration report](../collection/migration-report.md) identifies those records
-for later review.
+The initial migration intentionally included 17 canonical records and three
+previously unaccepted drafts at the owner's direction. Later evidence reconciled
+two duplicate drafts with established objects; the Ua draft remains unresolved.
+The [migration report](../collection/migration-report.md) preserves both the
+historical migration and the subsequent identity decisions.

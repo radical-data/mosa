@@ -1833,25 +1833,25 @@
     },
     {
       "id": "hoa-haka-nana-ia-holder",
-      "objectId": "hoa-haka-nana-ia",
+      "objectId": "hoa-hakananai-a",
       "predicate": "held_by",
       "value": "Museo Britanico"
     },
     {
       "id": "hoa-haka-nana-ia-location",
-      "objectId": "hoa-haka-nana-ia",
+      "objectId": "hoa-hakananai-a",
       "predicate": "located_at",
       "value": "Londres"
     },
     {
       "id": "hoa-haka-nana-ia-type",
-      "objectId": "hoa-haka-nana-ia",
+      "objectId": "hoa-hakananai-a",
       "predicate": "classified_as",
       "value": "Moai de piedra"
     },
     {
       "id": "hoa-haka-nana-ia-name",
-      "objectId": "hoa-haka-nana-ia",
+      "objectId": "hoa-hakananai-a",
       "predicate": "has_name",
       "value": "Hoa Haka Nana Ia"
     },
@@ -2211,19 +2211,19 @@
     },
     {
       "id": "ao-national-museum-new-zealand-holder",
-      "objectId": "ao-national-museum-new-zealand",
+      "objectId": "ao-te-papa",
       "predicate": "held_by",
       "value": "National Museum of New Zealand"
     },
     {
       "id": "ao-national-museum-new-zealand-location",
-      "objectId": "ao-national-museum-new-zealand",
+      "objectId": "ao-te-papa",
       "predicate": "located_at",
       "value": "Wellington, Nueva Zelandia"
     },
     {
       "id": "ao-national-museum-new-zealand-type",
-      "objectId": "ao-national-museum-new-zealand",
+      "objectId": "ao-te-papa",
       "predicate": "classified_as",
       "value": "Ao"
     },
