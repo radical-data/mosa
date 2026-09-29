@@ -8,6 +8,48 @@
       "objectId": "ao-te-papa",
       "predicate": "has_name",
       "value": "Ao (Dance paddle)"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "ao-te-papa",
+      "predicate": "catalogue_number",
+      "value": "OL001116"
+    },
+    {
+      "id": "type",
+      "objectId": "ao-te-papa",
+      "predicate": "classified_as",
+      "value": "paddles"
+    },
+    {
+      "id": "production-date",
+      "objectId": "ao-te-papa",
+      "predicate": "made_during",
+      "value": "1800s"
+    },
+    {
+      "id": "production-place",
+      "objectId": "ao-te-papa",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    },
+    {
+      "id": "material",
+      "objectId": "ao-te-papa",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ao-te-papa",
+      "predicate": "described_as",
+      "value": "Overall: 170mm (width), 1650mm (length)"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "ao-te-papa",
+      "predicate": "described_as",
+      "value": "Oldman Collection. Gift of the New Zealand Government, 1992"
     }
   ],
   "images": [
@@ -34,5 +76,9 @@
       "capturedAt": "2026-09-29T20:52:04.411Z",
       "method": "singlefile"
     }
-  ]
+  ],
+  "notes": {
+    "text": "Extracted the individual catalogue fields from the 29 September 2026 capture, using the explicit Made in relation for production place. Unknown in the Production field refers to the maker, not the date. Claims describe catalogue OL001116 on the established ao-te-papa object; no new inventory-row match is asserted by extraction. Museum opening hours and visitor addresses are excluded.",
+    "language": "en-GB"
+  }
 }

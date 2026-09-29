@@ -2,12 +2,42 @@
   "author": "Servicio Nacional del Patrimonio Cultural",
   "reference": "https://www.patrimoniocultural.gob.cl/en/regional-museums/easter-island-anthropological-museum/aringa-erua-moai-moai-two-faces",
   "language": "en",
-  "objectIds": ["figura-doble-cara-concepcion"],
   "notes": {
-    "text": "The official successor-institution record documents the double-faced figure formerly held at Concepción and transferred to the Rapa Nui museum in 2009. Its inventory is 17-00-00306.",
+    "text": "The official successor-institution record documents the double-faced figure formerly held at Concepción and transferred to the Rapa Nui museum in 2009. Pilot claims transcribe the main heading, Material or technique field and selected narrative sentences in the preserved 29 September 2026 page. Layout whitespace is normalised. The probable collection and dated transfer accounts remain descriptions, preserving uncertainty and temporal context; they do not supply a production date, findspot or independently verified current location. The page does not give inventory 17-00-00306, so no catalogue-number claim is extracted. The remaining interpretative prose was outside this small batch.",
     "language": "en-GB"
   },
-  "claims": [],
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "has_name",
+      "value": "Aringa Erua Moai (Moai of the Two Faces)"
+    },
+    {
+      "id": "material",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "made_of",
+      "value": "Wood, fish bones and obsidian"
+    },
+    {
+      "id": "collection-account",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "described_as",
+      "value": "This wooden carving of a moai was probably collected in 1875 by Chilean sailor Policarpo Toro during his first visit to Easter Island, prior to its annexation by Chile in 1888."
+    },
+    {
+      "id": "transfer-account",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "described_as",
+      "value": "It was held by the Natural History Museum of Concepción until 2009 when it was definitively transferred to the Rapa Nui Museum collection to which it had been on loan for ten years."
+    },
+    {
+      "id": "two-faces",
+      "objectId": "figura-doble-cara-concepcion",
+      "predicate": "described_as",
+      "value": "The key feature of this figure is its two faces."
+    }
+  ],
   "images": [],
   "captures": [
     {

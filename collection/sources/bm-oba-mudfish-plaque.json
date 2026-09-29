@@ -26,6 +26,84 @@
       "objectId": "oba-mudfish-plaque",
       "predicate": "held_by",
       "value": "British Museum"
+    },
+    {
+      "id": "type",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "classified_as",
+      "value": "plaque"
+    },
+    {
+      "id": "production-date",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "made_during",
+      "value": "16thC-17thC"
+    },
+    {
+      "id": "material",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "made_of",
+      "value": "brass"
+    },
+    {
+      "id": "description",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "described_as",
+      "value": "Relief plaque, lost-wax cast in brass. Wide plaque, rectangular in form with side flanges. Background surface decorated with river leaf patterns and stippling. Two nail holes at top."
+    },
+    {
+      "id": "depiction",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "described_as",
+      "value": "Depicts Oba with mudfish legs, facing front, holding a leopard by tail in each hand. Oba wears cylindrical beaded crown with oro protrusion, deep beaded collar, protective king's bead on chest, beaded tunic, patterned skirt and waist pendants in form of crocodile heads."
+    },
+    {
+      "id": "height",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "described_as",
+      "value": "Height: 38.50 centimetres"
+    },
+    {
+      "id": "width",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "described_as",
+      "value": "Width: 32 centimetres"
+    },
+    {
+      "id": "depth",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "described_as",
+      "value": "Depth: 5 centimetres"
+    },
+    {
+      "id": "weight",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "described_as",
+      "value": "Weight: 4.98 kilograms"
+    },
+    {
+      "id": "condition",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "described_as",
+      "value": "Fair; missing sections from top right and left corners. Flange sections missing at top and bottom on left and right sides. Sections along entire bottom edge missing."
+    },
+    {
+      "id": "foreign-office-number",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "catalogue_number",
+      "value": "205 (Foreign Office number)"
+    },
+    {
+      "id": "dark-number",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "catalogue_number",
+      "value": "3/55 (Dark: Benin catalogue number)"
+    },
+    {
+      "id": "looting-account",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "described_as",
+      "value": "Following the British occupation of Benin City (Edo) in 1897 objects made of brass, ivory and wood were looted by British forces from the royal palace, its storerooms and compounds. Some of these objects were sold or exchanged on the coast. However, many were brought to the UK where they were sold through private auction, donated to museums, or retained by soldiers of the expedition."
     }
   ],
   "images": [],
@@ -36,5 +114,9 @@
       "method": "singlefile",
       "note": "Catalogue identifier and expanded text reviewed; optional cookies declined before capture. The interactive object-image viewer is unavailable offline."
     }
-  ]
+  ],
+  "notes": {
+    "text": "Extracted individual catalogue fields, physical descriptions and the opening acquisition account. The latter retains the museum’s collective wording and does not reconstruct an individual custody chain. Found/Acquired is not narrowed to found_at; Not on display is not a place. General essays about the whole plaque corpus, nested historical quotations and exhibition lists are deferred. Additional catalogue numbers retain their identifying contexts.",
+    "language": "en-GB"
+  }
 }

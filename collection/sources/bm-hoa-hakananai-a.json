@@ -12,8 +12,8 @@
     {
       "id": "found-at",
       "objectId": "hoa-hakananai-a",
-      "predicate": "found_at",
-      "value": "Orongo"
+      "predicate": "described_as",
+      "value": "Found/Acquired: Orongo, ceremonial centre"
     },
     {
       "id": "catalogue-number",
@@ -31,7 +31,7 @@
       "id": "made-at",
       "objectId": "hoa-hakananai-a",
       "predicate": "made_at",
-      "value": "Rano Kao"
+      "value": "Rano Kao (likely)"
     },
     {
       "id": "city",
@@ -50,6 +50,84 @@
       "objectId": "hoa-hakananai-a",
       "predicate": "has_name",
       "value": "Hoa Hakananaiʻa"
+    },
+    {
+      "id": "type",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "classified_as",
+      "value": "figure"
+    },
+    {
+      "id": "ancestor-type",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "classified_as",
+      "value": "Moai (ancestor figure)"
+    },
+    {
+      "id": "translated-name",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "has_name",
+      "value": "Hoa Hakananaiʻa ('lost, hidden or stolen friend')"
+    },
+    {
+      "id": "production-date",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "made_during",
+      "value": "1000 -1200 (approx)"
+    },
+    {
+      "id": "material",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "made_of",
+      "value": "basalt (ma'ea pupura)"
+    },
+    {
+      "id": "missing-coral",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "made_of",
+      "value": "coral (missing (eyes sockets))"
+    },
+    {
+      "id": "missing-stone",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "made_of",
+      "value": "stone (missing (eyes sockets))"
+    },
+    {
+      "id": "description",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Ancestor figure 'moai', called Hoa Hakananaiʻa (lost, hidden or stolen friend) made of basalt. The back of the figure features intricate petroglyphs associated with the bird man religion (tangata manu): birds, vulvas, dance paddles in the form of stylised human figures, a ring and a girdle design."
+    },
+    {
+      "id": "height",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Height: 2.42 metres"
+    },
+    {
+      "id": "width",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Width: 96 centimetres"
+    },
+    {
+      "id": "diameter",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Diameter: 47 centimetres"
+    },
+    {
+      "id": "removal-account",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Removed from original location during the HMS Topaze expedition to Rapa Nui (captained by Powell) in 1868 and presented to Queen Victoria by the Lords of the Admiralty. She then gifted it to the British Museum in 1869."
+    },
+    {
+      "id": "narrative-date",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "It is understood that large stone sculptures or moai were made on Rapa Nui between AD 1100 and 1600. The size and complexity of the moai increased over time, and it is believed that Hoa Hakananai'a dates to around AD 1200."
     }
   ],
   "images": [
@@ -285,5 +363,9 @@
       "method": "singlefile",
       "note": "Catalogue identifier and expanded text reviewed; optional cookies declined before capture. The interactive object-image viewer is unavailable offline."
     }
-  ]
+  ],
+  "notes": {
+    "text": "Extracted catalogue fields, description, dimensions and the removal account from the preserved page. The combined Found/Acquired field is restored as a description on the existing found-at claim ID rather than treated as a definite findspot. The production-place qualifier “(likely)” is restored on the existing made-at claim. Missing inlay and approximate dating remain qualified. The production-date field and the different narrative dating are retained separately, without reconciliation. Longer general interpretations of Rapa Nui history, bibliographic entries and exhibition lists are not converted into object facts. The legacy AOA number is not present in this capture and has not been independently reverified.",
+    "language": "en-GB"
+  }
 }

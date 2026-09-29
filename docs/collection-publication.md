@@ -82,6 +82,15 @@ They describe MoSA's method, not claims attributed to the source author.
 Tracked JSON remains publishable repository content; keep confidential research
 in `research-local/`.
 
+### Extract claims from an existing source
+
+Use the [claim extraction skill](../.agents/skills/extract-claims/SKILL.md) for
+repeatable extraction batches. Read the source itself and keep passage locators,
+proposed mappings and deferred entries in `research-local/claim-extraction/`.
+Public source notes record concise methodological decisions; caveats needed to
+understand a claim belong in its value because notes are not rendered on the site.
+Validate each batch and review the affected object pages in both language routes.
+
 ### Extract a source table
 
 Transcribe and visually review the complete table before assigning claims. Keep
