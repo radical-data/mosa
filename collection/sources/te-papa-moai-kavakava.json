@@ -1,19 +1,19 @@
 {
   "author": "Museum of New Zealand Te Papa Tongarewa",
-  "reference": "https://collections.tepapa.govt.nz/object/OL000342",
+  "reference": "https://collections.tepapa.govt.nz/object/154946",
   "language": "en",
   "claims": [
     {
       "id": "catalogue-number",
       "objectId": "moai-kavakava-te-papa",
       "predicate": "catalogue_number",
-      "value": "te-papa-inventory: OL000342"
+      "value": "OL000342"
     },
     {
       "id": "name",
       "objectId": "moai-kavakava-te-papa",
       "predicate": "has_name",
-      "value": "moai kavakava"
+      "value": "Moai kavakava (human figure)"
     },
     {
       "id": "city",
@@ -26,7 +26,55 @@
       "objectId": "moai-kavakava-te-papa",
       "predicate": "held_by",
       "value": "Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "type",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "classified_as",
+      "value": "ceremonial objects, carvings, figurines"
+    },
+    {
+      "id": "production-date",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "made_during",
+      "value": "1800s"
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "made_of",
+      "value": "wood, bone, shell (animal material), obsidian"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "described_as",
+      "value": "Overall: 80mm (width), 405mm (height), 100mm (depth), 100mm (diameter)"
+    },
+    {
+      "id": "production-account",
+      "objectId": "moai-kavakava-te-papa",
+      "predicate": "described_as",
+      "value": "It was probably made in the early nineteenth century on Rapanui (Easter Island)."
     }
   ],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-29t21-29-58-841z.html",
+      "capturedAt": "2026-09-29T21:29:58.841Z",
+      "method": "singlefile",
+      "note": "Registration OL000342, catalogue fields and narrative text preserved from the numeric record URL; the old accession-based URL did not resolve."
+    }
+  ],
+  "notes": {
+    "text": "The numeric record URL identifies registration OL000342, matching the existing object. The old accession-based reference did not resolve and is replaced by the reviewed numeric URL. The existing name and catalogue-number claims are updated in place to the displayed wording. Broad production dating and the more specific qualified narrative dating remain separate. The historical usage quotation and long collection narrative are deferred; no collector, ownership or consent claim is inferred.",
+    "language": "en-GB"
+  }
 }

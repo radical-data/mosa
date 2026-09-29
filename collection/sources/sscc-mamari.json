@@ -10,5 +10,9 @@
       "value": "sscc-catalogue: P 003"
     }
   ],
-  "images": []
+  "images": [],
+  "notes": {
+    "text": "Extraction review on 29 September 2026 was blocked: the referenced BeWeb institutional page returns HTTP 404 and the Wayback availability service returned no snapshot. No additional claims were extracted. The existing P 003 catalogue claim is retained as a legacy claim and was not reverified in this review.",
+    "language": "en-GB"
+  }
 }

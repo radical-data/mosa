@@ -2,12 +2,42 @@
   "author": "Muséum d’histoire naturelle de La Rochelle",
   "reference": "https://museum.larochelle.fr/un-avant-gout/les-incontournables/moai-kavakava-de-lile-de-paques",
   "language": "fr",
-  "objectIds": ["kava-kava-doble-cabeza-la-rochelle"],
   "notes": {
-    "text": "The official page identifies and illustrates the museum's distinctive two-headed Rapa Nui statuette. The museum's education dossier identifies it as inventory H.1529.",
+    "text": "The official page identifies and illustrates the museum's distinctive two-headed Rapa Nui statuette. Earlier research notes attribute inventory H.1529 to the museum's education dossier; that separate document was not re-examined in this batch. Pilot claims transcribe the heading and selected Caractéristiques cells in the preserved 29 September 2026 page, in French. “Inconnue” preserves the explicitly unknown production date. “P : 645 cm” is transcribed as published, without correction. Inventory H.1529 is absent, so no catalogue-number claim is extracted. The historical Toulouse loan notice (return expected at the end of 2019) and Salle 25 field are not used to assert a current location. “Propriétaire actuel” is not recast as held_by. Narrative interpretation and the other table fields were outside this small batch.",
     "language": "en-GB"
   },
-  "claims": [],
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "has_name",
+      "value": "Moaï kavakava de l'île de Pâques"
+    },
+    {
+      "id": "type",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "classified_as",
+      "value": "Statuette"
+    },
+    {
+      "id": "production-date",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "made_during",
+      "value": "Inconnue"
+    },
+    {
+      "id": "material",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "made_of",
+      "value": "Bois, ivoire, obsidienne"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "kava-kava-doble-cabeza-la-rochelle",
+      "predicate": "described_as",
+      "value": "H : 39,5 cm ; L : 8,9 cm ; P : 645 cm"
+    }
+  ],
   "images": [],
   "captures": [
     {

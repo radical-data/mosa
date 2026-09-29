@@ -1,8 +1,7 @@
 {
   "author": null,
-  "reference": "Musée du quai Branly – Jacques Chirac, “Treasures of Rapa Nui (Easter Island)”, Aruku Kureŋa section; accessed 23 September 2026 — https://www.quaibranly.fr/en/collections/living-collections/news/new-display-cases/tresors-de-rapa-nui-lile-de-paques",
+  "reference": "Musée du quai Branly – Jacques Chirac, “Treasures of Rapa Nui (Easter Island)”, Aruku Kureŋa and Mamari sections; accessed 23 September 2026 — https://www.quaibranly.fr/en/collections/living-collections/news/new-display-cases/tresors-de-rapa-nui-lile-de-paques",
   "language": "en",
-  "objectIds": ["mamari"],
   "claims": [
     {
       "id": "description",
@@ -27,6 +26,48 @@
       "objectId": "aroukou-kurenga",
       "predicate": "made_of",
       "value": "mako'i wood (Thespesia populnea)"
+    },
+    {
+      "id": "aruku-surface",
+      "objectId": "aroukou-kurenga",
+      "predicate": "described_as",
+      "value": "Its convex side is glossy and features meticulous inscriptions. On the reverse, the slightly concave surface is uneven. It appears scraped and burned as if to erase an ancient text, later replaced by new glyphs."
+    },
+    {
+      "id": "aruku-lines",
+      "objectId": "aroukou-kurenga",
+      "predicate": "described_as",
+      "value": "The convex side features 12 lines of pictograms, carefully delineated by the scribe before he inscribed them. The reverse counts 10 lines, which are less regular."
+    },
+    {
+      "id": "mamari-name",
+      "objectId": "mamari",
+      "predicate": "has_name",
+      "value": "Mamari"
+    },
+    {
+      "id": "mamari-material",
+      "objectId": "mamari",
+      "predicate": "made_of",
+      "value": "mako'i wood (Thespesia populnea)"
+    },
+    {
+      "id": "mamari-glyphs",
+      "objectId": "mamari",
+      "predicate": "described_as",
+      "value": "It contains around 800 glyphs, spread over 14 lines on each side."
+    },
+    {
+      "id": "mamari-use",
+      "objectId": "mamari",
+      "predicate": "described_as",
+      "value": "It is distinguished by its patina and lustrous appearance, suggesting long lasting ceremonial use (Orliac and Orliac 2008, p. 255-256)."
+    },
+    {
+      "id": "mamari-calendar",
+      "objectId": "mamari",
+      "predicate": "described_as",
+      "value": "According to Paul Horley (2021), it is the only known tablet to feature a lunar calendar."
     }
   ],
   "images": [],
@@ -38,5 +79,9 @@
       "method": "download",
       "note": "Historical downloaded HTML containing the Aruku Kureŋa section. It describes a loan until June 2025 and must not be treated as evidence of current custody."
     }
-  ]
+  ],
+  "notes": {
+    "text": "Extracted only the existing Aruku Kureŋa and Mamari object links from the preserved English page. Mamari’s material, condition, glyph count and interpretation remain separate from Aruku Kureŋa and other tablets. The calendar interpretation retains its named scholar and date. The display text describes a loan until June 2025, so no current-location claim is inferred. General roŋoroŋo history and accounts of other objects are excluded. The source reference now identifies both reviewed sections.",
+    "language": "en-GB"
+  }
 }

@@ -20,6 +20,48 @@
       "objectId": "moai-kavakava-british-museum",
       "predicate": "has_name",
       "value": "figure ('moai kavakava')"
+    },
+    {
+      "id": "type",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "classified_as",
+      "value": "figure ('moai kavakava')"
+    },
+    {
+      "id": "production-date",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "made_during",
+      "value": "18thC(late)-19thC(mid)"
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "made_at",
+      "value": "Easter Island"
+    },
+    {
+      "id": "material-wood",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "material-bone",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "made_of",
+      "value": "bone"
+    },
+    {
+      "id": "material-ochre",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "made_of",
+      "value": "ochre (red)"
+    },
+    {
+      "id": "inlay-description",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "described_as",
+      "value": "Standing male figure 'moai kavakava' of wood, with eye sockets inlaid with bone and formerly inlaid with obsidian."
     }
   ],
   "images": [],
@@ -30,5 +72,9 @@
       "method": "singlefile",
       "note": "Catalogue identifier and expanded text reviewed; optional cookies declined before capture. The interactive object-image viewer is unavailable offline."
     }
-  ]
+  ],
+  "notes": {
+    "text": "Pilot extraction from the preserved 29 September 2026 catalogue page: Object Type, Production date, Production place, Materials and the first Description sentence. The three material claims follow separate catalogue entries; the description retains the former obsidian inlay rather than asserting obsidian as a present material. “Found/Acquired” is not treated as a definite findspot. “Not on display” is not a geographical location. Curator quotations and acquisition history were outside this small batch.",
+    "language": "en-GB"
+  }
 }

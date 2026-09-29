@@ -1,12 +1,84 @@
 {
   "author": "Smithsonian National Museum of Natural History",
-  "reference": "https://www.si.edu/object/stone-figure%3Anmnhanthropology_8334979",
+  "reference": "https://collections.si.edu/search/detail/edanmdm:nmnhanthropology_8334979",
   "language": "en",
-  "objectIds": ["moai-piedra-sombrero"],
   "notes": {
-    "text": "Matched because the official record documents the stone figure's former display with pukao E128369 as a hat or topknot. The same record says the pukao was probably not originally made for this statue; this link does not assert an original sculptural unit.",
+    "text": "Matched because the official record documents the stone figure's former display with pukao E128369 as a hat or topknot. The same record says the pukao was probably not originally made for this statue; this link does not assert an original sculptural unit. Extracted from the Smithsonian Collections Search rendering of the same nmnhanthropology_8334979 record on 29 September 2026; it identifies USNM E128368-0 and reports a last modification of 3 November 2020. Notes explicitly support interpreting Place as a findspot. Quarry origin of the material is not recast as a place of manufacture. The pukao caveat and dated display accounts remain descriptions, not an assertion of an original sculptural unit or present location. Collection and accession dates are not creation dates. The previous si.edu object reference did not resolve during this review and is replaced by the Collections Search URL for the same record. Two browser capture attempts saved verification screens and were rejected; Wayback returned no snapshot for this endpoint, so no usable local capture is registered.",
     "language": "en-GB"
   },
-  "claims": [],
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "has_name",
+      "value": "Stone Figure"
+    },
+    {
+      "id": "type",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "classified_as",
+      "value": "Figure"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "catalogue_number",
+      "value": "E128368-0"
+    },
+    {
+      "id": "accession-number",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "catalogue_number",
+      "value": "019025"
+    },
+    {
+      "id": "height",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "described_as",
+      "value": "Height - Object: 2 m"
+    },
+    {
+      "id": "width",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "described_as",
+      "value": "Width - Object: 1 m"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "made_of",
+      "value": "consolidated volcanic ash or volcanic tuff [lapilli tuff]"
+    },
+    {
+      "id": "findspot",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "found_at",
+      "value": "Ahu O'Pepe, Easter Island (Rapa Nui), Chile, Polynesia"
+    },
+    {
+      "id": "pukao-account",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "described_as",
+      "value": "See also Catalogue No. E128369, which was used as the topknot or pukao for this figure/moai when it was formerly on exhibit in NHB exhibit Hall 8 (even though pukao was probably not actually made for this statue.)"
+    },
+    {
+      "id": "display-2005",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "described_as",
+      "value": "In 2005, this statue or moai was on exhibit in the NMNH Constitution Avenue lobby (but pukao E128369 is no longer included in the exhibit)."
+    },
+    {
+      "id": "movement-2018",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "described_as",
+      "value": "In 2018, statue/moai was moved further into the museum on the ground floor not far from the NMNH Constitution Avenue lobby/entrance."
+    },
+    {
+      "id": "eisp-number",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "catalogue_number",
+      "value": "SI-WDC-001"
+    }
+  ],
   "images": []
 }

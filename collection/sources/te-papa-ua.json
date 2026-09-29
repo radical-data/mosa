@@ -8,6 +8,42 @@
       "objectId": "ua-te-papa",
       "predicate": "has_name",
       "value": "Ua (staff or club)"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-te-papa",
+      "predicate": "catalogue_number",
+      "value": "OL000353/2"
+    },
+    {
+      "id": "type",
+      "objectId": "ua-te-papa",
+      "predicate": "classified_as",
+      "value": "staffs"
+    },
+    {
+      "id": "production-place",
+      "objectId": "ua-te-papa",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-te-papa",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bone"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-te-papa",
+      "predicate": "described_as",
+      "value": "Overall: 85mm (width), 40mm (height), 1600mm (length), 962g (weight)"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "ua-te-papa",
+      "predicate": "described_as",
+      "value": "Oldman Collection. Gift of the New Zealand Government, 1992"
     }
   ],
   "images": [],
@@ -26,5 +62,9 @@
       "method": "singlefile",
       "note": "Catalogue OL000353/2 (formerly OL000353/B) preserved. This capture does not resolve the existing table-to-record identity question."
     }
-  ]
+  ],
+  "notes": {
+    "text": "These claims describe catalogue OL000353/2 on the established ua-te-papa object. They do not identify it with the separate ua-national-museum-new-zealand inventory row, whose match remains unresolved. The record gives a production place but no production date. The explicit Made in relation is used; Depicts is not another location assertion. The formerly used catalogue number mentioned in capture notes is not added because it is not visible in the reviewed fields.",
+    "language": "en-GB"
+  }
 }
