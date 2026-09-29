@@ -221,6 +221,21 @@ optimise it. Do not use remote museum image URLs as the only production asset:
 they can change, block hotlinking or disappear. Keep the original URL in the
 image record for provenance.
 
+Stage downloads in `research-local/` and inspect the actual image before adding
+it. Confirm the depicted object, view, resolution and image-specific reuse
+terms; a webpage's text licence does not necessarily cover its photographs.
+Prefer the original downloadable file over a thumbnail, and preserve its bytes.
+Record credit, the licence name and URL, and any changes in the image metadata.
+The `originalUrl` can identify the image's description page when that page supplies
+its attribution and licence. Retain the direct download URL and checksums in the
+private batch audit. Leave uncertain rights or object matches in staging.
+Write image prose in the source record's declared language; the gallery marks
+that language explicitly while translating its interface labels for each route.
+
+Astro optimises website copies with the direct `sharp` dependency. Run a full
+build after adding images so decoding and optimisation are checked as well as
+the metadata. Review the gallery on both language routes.
+
 ## Add an editorial
 
 Create `collection/editorials/<id>.md`:

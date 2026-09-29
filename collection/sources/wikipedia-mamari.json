@@ -16,12 +16,35 @@
       "value": "Mamari"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "objectId": "mamari",
+      "file": "mamari/recto.jpg",
+      "alt": "Black-and-white photograph of the recto of the Mamari tablet, covered with rows of carved rongorongo glyphs.",
+      "caption": "Mamari, recto (side a).",
+      "credit": "Photographer unknown; Stéphen-Charles Chauvet, L’île de Pâques et ses mystères (1935), online translation by Ann M. Altman (2004), via Wikimedia Commons.",
+      "rights": "CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/. Original file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Rongorongo_C-a_Mamari.jpg"
+    },
+    {
+      "objectId": "mamari",
+      "file": "mamari/verso.jpg",
+      "alt": "Black-and-white photograph of the verso of the Mamari tablet, covered with rows of carved rongorongo glyphs.",
+      "caption": "Mamari, verso (side b).",
+      "credit": "Photographer unknown; Stéphen-Charles Chauvet, L’île de Pâques et ses mystères (1935), online translation by Ann M. Altman (2004), via Wikimedia Commons.",
+      "rights": "CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/. Original file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Rongorongo_C-b_Mamari.jpg"
+    }
+  ],
   "captures": [
     {
       "file": "2026-09-29t20-52-30-949z.html",
       "capturedAt": "2026-09-29T20:52:30.949Z",
       "method": "singlefile"
     }
-  ]
+  ],
+  "notes": {
+    "text": "The photographs are linked from this article. Image credits and CC BY-SA 3.0 licensing were checked against the respective Wikimedia Commons file pages on 29 September 2026. Both file pages list the author as unknown; the recto description separately attributes the photograph to Widow Hoare. No photographer identity or capture date has been inferred. Downloaded originals match the SHA-1 checksums published by Commons.",
+    "language": "en-GB"
+  }
 }
