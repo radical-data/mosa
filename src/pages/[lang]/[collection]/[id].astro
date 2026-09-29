@@ -106,13 +106,14 @@ const referenceURL = (value: string) => {
                 <Image
                   src={asset}
                   alt={image.alt}
+                  lang={source.language}
                   widths={[480, 960, 1440]}
                   sizes="(max-width: 60rem) 100vw, 50vw"
                 />
                 <figcaption class="small">
-                  {image.caption && <span>{image.caption}</span>}
-                  {image.credit && <span>{t.credit}: {image.credit}</span>}
-                  {image.rights && <span>{t.rights}: {image.rights}</span>}
+                  {image.caption && <span lang={source.language}>{image.caption}</span>}
+                  {image.credit && <span>{t.credit}: <span lang={source.language}>{image.credit}</span></span>}
+                  {image.rights && <span>{t.rights}: <span lang={source.language}>{image.rights}</span></span>}
                   {image.originalUrl && <a href={image.originalUrl} rel="noreferrer">{t.original}</a>}
                   <span>{t.recorded}: {source.reference}</span>
                 </figcaption>

@@ -52,7 +52,16 @@
       "value": "Oldman Collection. Gift of the New Zealand Government, 1992"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "objectId": "ao-te-papa",
+      "file": "te-papa-ao/front.jpg",
+      "alt": "Front view of an ao (dance paddle), showing the carved face at the top and broad blade at the foot.",
+      "credit": "Ao (Dance paddle), 1800s, Easter Island, maker unknown. Oldman Collection. Gift of the New Zealand Government, 1992. CC BY-NC-ND 4.0. Te Papa (OL001116)",
+      "rights": "CC BY-NC-ND 4.0 — https://creativecommons.org/licenses/by-nc-nd/4.0/. Original bytes are preserved; website copies are resized and re-encoded by Astro.",
+      "originalUrl": "https://collections.tepapa.govt.nz/object/180901"
+    }
+  ],
   "captures": [
     {
       "file": "2026-09-22t19-29-16-817z.html",
