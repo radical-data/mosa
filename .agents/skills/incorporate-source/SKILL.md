@@ -20,14 +20,20 @@ in this order:
 1. **Source:** inventory the page's scope, sections, individual entries, linked
    object notes and image references. Preserve usable evidence with
    [source-capture](../source-capture/SKILL.md); inspect the capture before
-   registration. Add a source record with only established attribution and
-   language. Do not treat entry counts as object counts.
+   registration. Exhaust tabs, load-more controls, pagination and lazy-loaded
+   sections before calling the inventory complete. Record section and entry
+   totals, and reconcile them between the inspected page, private inventory and
+   capture. Add a source record with only established attribution and language.
+   Do not treat entry counts as object counts.
 2. **Objects:** use [identify-objects](../identify-objects/SKILL.md) to reconcile
    entries with existing handles and identify justified new objects. Track each
    entry's disposition and evidence; defer uncertain matches explicitly.
 3. **Claims:** use [extract-claims](../extract-claims/SKILL.md) on the captured
    evidence in named, section-sized batches. Review directly linked articles as
    separate sources, preserving their own authorship, language and attribution.
+   Discover canonical paths and legacy or query-string link forms. Resolve
+   aliases and redirects by article identity, then verify that every distinct
+   linked article has one source record rather than counting URL spellings.
    Keep shared context distinct from object-specific claims and leave
    foregrounding decisions unchanged.
 4. **Images:** use [collection-images](../collection-images/SKILL.md) for
