@@ -17,6 +17,10 @@ recreating SingleFile invocation or metadata in ad hoc scripts.
    and essential images. A successful process can still save an error page.
    For an adjusted attempt, use `--wait` or a reviewed `--script` with bounded
    interactions to dismiss optional cookies or expand relevant sections.
+   Distinguish local browser-launch or permission failures from website
+   failures. If the execution environment requires approval to launch the
+   isolated browser, use its normal permission mechanism before concluding that
+   the museum page is inaccessible.
 4. Register usable evidence with concise limitation notes. Use the session's PDF
    skill when visual PDF inspection is needed. Keep claims and object links intact.
 5. Run `just source check --content`.
