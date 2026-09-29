@@ -10784,6 +10784,1218 @@
       "objectId": "moai-tangata-rapa-nui-17-416",
       "predicate": "described_as",
       "value": "Dimensions: 32 x 9 x 9 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-classification",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-holder",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-location",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-catalogue-number",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "catalogue_number",
+      "value": "E150.1136/ OLDMAN 100/341"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-material",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-collection-date",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-collector",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-acquisition-date",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-dimensions",
+      "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
+      "predicate": "described_as",
+      "value": "Dimensions: 55,24 x 13,97 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-classification",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-holder",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-location",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-catalogue-number",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "catalogue_number",
+      "value": "O51.1 / Oldman Collection number 347"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-material",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "made_of",
+      "value": "wood, bone or shell, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-collection-date",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-collector",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-acquisition-date",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1951"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-dimensions",
+      "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
+      "predicate": "described_as",
+      "value": "Dimensions: 64 x 16,9 x 9,5 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-classification",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-holder",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-location",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "located_at",
+      "value": "New York"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-catalogue-number",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "catalogue_number",
+      "value": "1979.206.1478"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-material",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "made_of",
+      "value": "wood, glass, paint, resin (?)"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-collection-date",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-collector",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-acquisition-date",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1979, from the Michael C. Rockefeller Memorial Collection, bequest of Nelson A. Rockefeller"
+    },
+    {
+      "id": "moai-pa-apa-a-new-york-1979-206-1478-dimensions",
+      "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
+      "predicate": "described_as",
+      "value": "Dimensions: 59,7 × 14,6 × 8,9 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-classification",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-holder",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-location",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-catalogue-number",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "catalogue_number",
+      "value": "VI 4912"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-material",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-collection-date",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-collector",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-acquisition-date",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-4912-dimensions",
+      "objectId": "moai-pa-apa-a-berlin-vi-4912",
+      "predicate": "described_as",
+      "value": "Dimensions: 48,5 x 8,5 x 6,5 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-classification",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "classified_as",
+      "value": "Moai pa’apa’a"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-holder",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-location",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-catalogue-number",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "catalogue_number",
+      "value": "A.1895.373"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-material",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "made_of",
+      "value": "Toromiro wood, obsidian, bird bone"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-collection-date",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-collector",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "described_as",
+      "value": "Collector: probably George Darsie"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-acquisition-date",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1895, from George Darsie"
+    },
+    {
+      "id": "moai-pa-apa-a-edinburgh-a-1895-373-dimensions",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "described_as",
+      "value": "Dimensions: 13,5 x 64,3 x 10,2"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-classification",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-holder",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-location",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-catalogue-number",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "catalogue_number",
+      "value": "D20.569"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-material",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "made_of",
+      "value": "wood, bone or shell, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-collection-date",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-collector",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-acquisition-date",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1920, purchased from William Oldman, London"
+    },
+    {
+      "id": "moai-pa-apa-a-otago-d20-569-dimensions",
+      "objectId": "moai-pa-apa-a-otago-d20-569",
+      "predicate": "described_as",
+      "value": "Dimensions: 32 x 7,01 x 5,5 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-lubeck-7100a-classification",
+      "objectId": "moai-pa-apa-a-lubeck-7100a",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-lubeck-7100a-holder",
+      "objectId": "moai-pa-apa-a-lubeck-7100a",
+      "predicate": "held_by",
+      "value": "Völkerkundesammlung Lübeck"
+    },
+    {
+      "id": "moai-pa-apa-a-lubeck-7100a-location",
+      "objectId": "moai-pa-apa-a-lubeck-7100a",
+      "predicate": "located_at",
+      "value": "Lübeck"
+    },
+    {
+      "id": "moai-pa-apa-a-lubeck-7100a-catalogue-number",
+      "objectId": "moai-pa-apa-a-lubeck-7100a",
+      "predicate": "catalogue_number",
+      "value": "7100a"
+    },
+    {
+      "id": "moai-pa-apa-a-lubeck-7100a-material",
+      "objectId": "moai-pa-apa-a-lubeck-7100a",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-lubeck-7100a-collection-date",
+      "objectId": "moai-pa-apa-a-lubeck-7100a",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-lubeck-7100a-collector",
+      "objectId": "moai-pa-apa-a-lubeck-7100a",
+      "predicate": "described_as",
+      "value": "Collector: G. Meuel (Papeete, Tahiti)"
+    },
+    {
+      "id": "moai-pa-apa-a-lubeck-7100a-acquisition-date",
+      "objectId": "moai-pa-apa-a-lubeck-7100a",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1912"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-classification",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-holder",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "held_by",
+      "value": "Völkerkundemuseum der Universität Zürich"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-location",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-catalogue-number",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "catalogue_number",
+      "value": "04964"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-material",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-collection-date",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-collector",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-acquisition-date",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1919, Museum für Völkerkunde Hamburg"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-04964-dimensions",
+      "objectId": "moai-pa-apa-a-zurich-04964",
+      "predicate": "described_as",
+      "value": "Dimensions: H 70 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-classification",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-holder",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "held_by",
+      "value": "Museum of Archeology and Anthropology"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-location",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-catalogue-number",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "catalogue_number",
+      "value": "1953.568 A"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-material",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "made_of",
+      "value": "wood, stone, obsidian (?)"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-collection-date",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-collector",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-acquisition-date",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1953, from Mrs. D. M. Chapman"
+    },
+    {
+      "id": "moai-pa-apa-a-cambridge-1953-568-a-dimensions",
+      "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
+      "predicate": "described_as",
+      "value": "Dimensions: 6,5 x 53,7 x 11,5 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-classification",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-holder",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-location",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-catalogue-number",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "catalogue_number",
+      "value": "VI 42601 - B"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-material",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-collection-date",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-collector",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-acquisition-date",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1933, acquired from Völkerkundliches Museum Johann Friedrich Gustav Umlauff"
+    },
+    {
+      "id": "moai-pa-apa-a-berlin-vi-42601-b-dimensions",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Dimensions: 64 x 14,5 x 8,5 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-classification",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-holder",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-location",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "located_at",
+      "value": "Leipzig"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-catalogue-number",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "catalogue_number",
+      "value": "Po 00437"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-material",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-collection-date",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "described_as",
+      "value": "Collection date: 1885"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-collector",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-acquisition-date",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, previous owner: Johan Cesar Godeffroy, Museum Godeffroy Hamburg"
+    },
+    {
+      "id": "moai-pa-apa-a-leipzig-po-00437-dimensions",
+      "objectId": "moai-pa-apa-a-leipzig-po-00437",
+      "predicate": "described_as",
+      "value": "Dimensions: 58,5 x 13 x 8 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-e-617-classification",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-e-617-holder",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "held_by",
+      "value": "MARKK Hamburg"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-e-617-location",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "located_at",
+      "value": "Hamburg"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-e-617-catalogue-number",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "catalogue_number",
+      "value": "E 617"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-e-617-material",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-e-617-collection-date",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-e-617-collector",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "described_as",
+      "value": "Collector: Captain Mekring (?)"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-e-617-acquisition-date",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "described_as",
+      "value": "Acquisition date: 21 August 1922"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-22-42-259-classification",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-22-42-259-holder",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "held_by",
+      "value": "MARKK Hamburg"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-22-42-259-location",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "located_at",
+      "value": "Hamburg"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-22-42-259-catalogue-number",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "catalogue_number",
+      "value": "22.42.259"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-22-42-259-material",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-22-42-259-collection-date",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-22-42-259-collector",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-hamburg-22-42-259-acquisition-date",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "described_as",
+      "value": "Acquisition date: 21 August 1922"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-classification",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-holder",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "held_by",
+      "value": "Völkerkundemuseum der Universität Zürich"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-location",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-catalogue-number",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "catalogue_number",
+      "value": "D0705, original no. D172"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-material",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-collection-date",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-collector",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "described_as",
+      "value": "Collector: Hagnauer"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-acquisition-date",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1936"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-dimensions",
+      "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
+      "predicate": "described_as",
+      "value": "Dimensions: 46,5 x 11 x 7 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-classification",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-holder",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-location",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-catalogue-number",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1329 / 43 2 coll. Felbermayer"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-material",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-collection-date",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-collector",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-acquisition-date",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-classification",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-holder",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-location",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-catalogue-number",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "catalogue_number",
+      "value": "46890"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-material",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "made_of",
+      "value": "wood (robinia), bone, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-collection-date",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-collector",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-acquisition-date",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1949 (previously collection Baron von der Heydt)"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-46890-dimensions",
+      "objectId": "moai-pa-apa-a-cologne-46890",
+      "predicate": "described_as",
+      "value": "Dimensions: 47,5 x 9,5 x 7 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-classification",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-holder",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-location",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-catalogue-number",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "catalogue_number",
+      "value": "RPO 306"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-material",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-collection-date",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-collector",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-acquisition-date",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, from Museum für Völkerkunde Basel, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-306-dimensions",
+      "objectId": "moai-pa-apa-a-zurich-rpo-306",
+      "predicate": "described_as",
+      "value": "Dimensions: H 34 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-classification",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-holder",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-location",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-catalogue-number",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "catalogue_number",
+      "value": "RPO 309"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-material",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-collection-date",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-collector",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-acquisition-date",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, from Museum für Völkerkunde Basel, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-rpo-309-dimensions",
+      "objectId": "moai-pa-apa-a-zurich-rpo-309",
+      "predicate": "described_as",
+      "value": "Dimensions: 33,5 x 8,5 x 10,5 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-classification",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-holder",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "held_by",
+      "value": "Völkerkundemuseum der Universität Zürich"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-location",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-catalogue-number",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "catalogue_number",
+      "value": "12312"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-material",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-collection-date",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-collector",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche; Baron v. d. Heydt (1935)"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-acquisition-date",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1959, from Baron v. d. Heydt"
+    },
+    {
+      "id": "moai-pa-apa-a-zurich-12312-dimensions",
+      "objectId": "moai-pa-apa-a-zurich-12312",
+      "predicate": "described_as",
+      "value": "Dimensions: 30 x 10 x 9 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-classification",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-holder",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-location",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-catalogue-number",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "catalogue_number",
+      "value": "48526"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-material",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "made_of",
+      "value": "wood (robinia), bone, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-collection-date",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-collector",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "described_as",
+      "value": "Collector: Klaus Clausmeyer"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-acquisition-date",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1966"
+    },
+    {
+      "id": "moai-pa-apa-a-cologne-48526-dimensions",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "described_as",
+      "value": "Dimensions: 65 x 18,5 x 11,5 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-classification",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-holder",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-location",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-catalogue-number",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1335 / 49 2 coll. Felbermayer"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-material",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Toromiro, Sophora toromiro). Dimension: 30 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-collection-date",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-collector",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer"
+    },
+    {
+      "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-acquisition-date",
+      "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-classification",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-holder",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-location",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "located_at",
+      "value": "Rapa Nui"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-catalogue-number",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "catalogue_number",
+      "value": "17-9"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-material",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "made_of",
+      "value": "wood (Toromiro, Sophora toromiro), bones, obsidian"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-collection-date",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-collector",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "described_as",
+      "value": "Collector: Max Puelma Bunster"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-acquisition-date",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1976"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-9-dimensions",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "described_as",
+      "value": "Dimensions: 32 x 7 x 5 cm"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-classification",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "classified_as",
+      "value": "Moai pa'apa'a"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-holder",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-location",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "located_at",
+      "value": "Rapa Nui"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-catalogue-number",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "catalogue_number",
+      "value": "17-259"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-material",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-collection-date",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "described_as",
+      "value": "Collection date: 2017"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-collector",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "described_as",
+      "value": "Collector: MAPSE"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-acquisition-date",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2017, from the artist Andrés Pakarati"
+    },
+    {
+      "id": "moai-pa-apa-a-rapa-nui-17-259-dimensions",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "described_as",
+      "value": "Dimensions: 43,5 x 9,5 x 2,5 cm"
     }
   ],
   "images": [],
@@ -10800,29 +12012,6 @@
     }
   ],
   "objectIds": [
-    "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
-    "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
-    "moai-pa-apa-a-new-york-1979-206-1478",
-    "moai-pa-apa-a-berlin-vi-4912",
-    "moai-pa-apa-a-edinburgh-a-1895-373",
-    "moai-pa-apa-a-otago-d20-569",
-    "moai-pa-apa-a-lubeck-7100a",
-    "moai-pa-apa-a-zurich-04964",
-    "moai-pa-apa-a-cambridge-1953-568-a",
-    "moai-pa-apa-a-berlin-vi-42601-b",
-    "moai-pa-apa-a-leipzig-po-00437",
-    "moai-pa-apa-a-hamburg-e-617",
-    "moai-pa-apa-a-hamburg-22-42-259",
-    "moai-pa-apa-a-zurich-d0705-original-no-d172",
-    "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
-    "moai-pa-apa-a-cologne-46890",
-    "moai-pa-apa-a-zurich-rpo-306",
-    "moai-pa-apa-a-zurich-rpo-309",
-    "moai-pa-apa-a-zurich-12312",
-    "moai-pa-apa-a-cologne-48526",
-    "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
-    "moai-pa-apa-a-rapa-nui-17-9",
-    "moai-pa-apa-a-rapa-nui-17-259",
     "reimiro-canterbury-e150-1124-oldman-359-105",
     "reimiro-canterbury-e149-175-20-49",
     "reimiro-new-york-1979-206-1527",
