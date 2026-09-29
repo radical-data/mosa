@@ -2,11 +2,101 @@
   "author": "Smithsonian National Museum of Natural History",
   "reference": "https://www.si.edu/object/stone-figure%3Anmnhanthropology_8334979",
   "language": "en",
-  "objectIds": ["moai-piedra-sombrero"],
   "notes": {
-    "text": "Matched because the official record documents the stone figure's former display with pukao E128369 as a hat or topknot. The same record says the pukao was probably not originally made for this statue; this link does not assert an original sculptural unit.",
+    "text": "Matched because the official record documents the stone figure's former display with pukao E128369 as a hat or topknot. The same record says the pukao was probably not originally made for this statue; this link does not assert an original sculptural unit. Images were retrieved from the same numbered record in the NMNH catalogue (https://collections.nmnh.si.edu/search/anth/?nb=E128368). Its image files link to Smithsonian usage terms; the Anthropology rights page permits non-commercial educational reuse with the catalogue number and institutional credit. No CC0 status, photographer identity or photograph date is inferred.",
     "language": "en-GB"
   },
   "claims": [],
-  "images": []
+  "images": [
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-15023937.jpg",
+      "alt": "The stone moai seen from the front in a museum display, with landscape panels behind it.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=15023937"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-8471580.jpg",
+      "alt": "Front view of the stone moai behind a low barrier, with two museum labels.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=8471580"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-8471581.jpg",
+      "alt": "Close front view of the moai’s head and torso, showing its long nose and hands across the lower body.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=8471581"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-8471582.jpg",
+      "alt": "Close oblique view of the moai’s face from below, with its nose pointing to the left of the photograph.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=8471582"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-8471583.jpg",
+      "alt": "Close oblique view of the moai’s face from below, with its nose pointing to the right of the photograph.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=8471583"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-8471584.jpg",
+      "alt": "Profile of the moai’s head and upper body in the museum gallery.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=8471584"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-11121188.jpg",
+      "alt": "Front view of the moai displayed beneath a separate dark stone pukao against a red museum panel.",
+      "caption": "E128368-0. Former display with pukao E128369; the catalogue says the pukao was probably not originally made for this statue.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=11121188"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-11121196.jpg",
+      "alt": "Side view of the moai displayed beneath a separate dark stone pukao against a red museum panel.",
+      "caption": "E128368-0. Former display with pukao E128369; the catalogue says the pukao was probably not originally made for this statue.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=11121196"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-11121201.jpg",
+      "alt": "Oblique view of the moai without a pukao in front of a red museum panel.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=11121201"
+    },
+    {
+      "objectId": "moai-piedra-sombrero",
+      "file": "moai-piedra-sombrero/smithsonian-14190483.jpg",
+      "alt": "Black-and-white photograph of the moai with ropes around its head and body, three people alongside and a smaller stone figure to its right.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=14190483"
+    }
+  ]
 }

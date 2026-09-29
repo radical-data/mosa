@@ -28,5 +28,14 @@
       "value": "Museum of New Zealand Te Papa Tongarewa"
     }
   ],
-  "images": []
+  "images": [
+    {
+      "objectId": "moai-kavakava-te-papa",
+      "file": "te-papa-moai-kavakava/front.jpg",
+      "alt": "Front view of a standing moai kavakava figure, with a ribbed torso and carved figure on the crown.",
+      "credit": "Moai kavakava (human figure), 1800s, Easter Island, maker unknown. Oldman Collection. Gift of the New Zealand Government, 1992. CC BY-NC-ND 4.0. Te Papa (OL000342)",
+      "rights": "CC BY-NC-ND 4.0 — https://creativecommons.org/licenses/by-nc-nd/4.0/. Original bytes are preserved; website copies are resized and re-encoded by Astro.",
+      "originalUrl": "https://collections.tepapa.govt.nz/object/154946"
+    }
+  ]
 }
