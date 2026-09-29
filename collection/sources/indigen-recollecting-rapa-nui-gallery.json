@@ -16718,6 +16718,948 @@
       "objectId": "ua-rapa-nui-17-194",
       "predicate": "described_as",
       "value": "Dimensions: 8,1 x 103 x 3,6 cm"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-classification",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-holder",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-location",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-catalogue-number",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "catalogue_number",
+      "value": "D00319"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-material",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "made_of",
+      "value": "wood (toromiro)"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-collection-date",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-collector",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "described_as",
+      "value": "Collector: Andree"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-acquisition-date",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1854"
+    },
+    {
+      "id": "tangata-manu-bremen-d00319-dimensions",
+      "objectId": "tangata-manu-bremen-d00319",
+      "predicate": "described_as",
+      "value": "Dimensions: 15 x 5 x 10 cm"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-classification",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-holder",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "held_by",
+      "value": "Städtisches Museum Braunschweig"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-location",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "located_at",
+      "value": "Braunschweig"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-catalogue-number",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "catalogue_number",
+      "value": "1708-1149-00 / Gö IV 763"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-material",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-collection-date",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "described_as",
+      "value": "Collection date: 1876"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-collector",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "described_as",
+      "value": "Collector: Richard Andree (Götting collection)"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-acquisition-date",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1899, donated by Carl Julius Berthold Götting"
+    },
+    {
+      "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-dimensions",
+      "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
+      "predicate": "described_as",
+      "value": "Dimensions: 18 x 5 x 10 cm"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-classification",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-holder",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-location",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-catalogue-number",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "catalogue_number",
+      "value": "D13426"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-material",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-collection-date",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-collector",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-acquisition-date",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954"
+    },
+    {
+      "id": "tangata-manu-bremen-d13426-dimensions",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "described_as",
+      "value": "Dimensions: 12 x 11,5 x 1,5 cm"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-classification",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-holder",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-location",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-catalogue-number",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "catalogue_number",
+      "value": "MHNV 40 Registro surdoc 4-1931"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-material",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-collection-date",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "described_as",
+      "value": "Collection date: 1931"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-collector",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-acquisition-date",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1947, from José Flores (Lieutenant in the Chilean Navy)"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-dimensions",
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "predicate": "described_as",
+      "value": "Dimensions: 2.3 cm x 17.8 cm x 8.5 cm"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-classification",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-holder",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-location",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-catalogue-number",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "catalogue_number",
+      "value": "MHNV 54 Registro surdoc 4-358"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-material",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "made_of",
+      "value": "wood, bone"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-collection-date",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-collector",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-acquisition-date",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1953"
+    },
+    {
+      "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-dimensions",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "described_as",
+      "value": "Dimensions: 36.5 cm x 6.9 cm x 14.7 cm"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-classification",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-holder",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-location",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-catalogue-number",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1289 / 3 coll. Felbermayer"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-material",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-collection-date",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: 1945, in Santiago"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-collector",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-acquisition-date",
+      "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-classification",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-holder",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-location",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-catalogue-number",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1731/ 445 coll. Felbermayer"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-material",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-collection-date",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: 1947"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-collector",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-acquisition-date",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-dimensions",
+      "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 23 cm"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-classification",
+      "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-holder",
+      "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-location",
+      "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-catalogue-number",
+      "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1732 / 446 coll. Felbermayer"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-material",
+      "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-collection-date",
+      "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-collector",
+      "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Eugenio Huki"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-acquisition-date",
+      "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-classification",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-holder",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-location",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-catalogue-number",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "catalogue_number",
+      "value": "54536"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-material",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-collection-date",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "described_as",
+      "value": "Collection date: around 1960"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-collector",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "described_as",
+      "value": "Collector: Wolfgang Wallisfurth"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-acquisition-date",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1993, donation by Theres Weyerich"
+    },
+    {
+      "id": "tangata-manu-cologne-54536-dimensions",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "described_as",
+      "value": "Dimensions: 74,8 x 14 x 32cm"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-classification",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-holder",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-location",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-catalogue-number",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "catalogue_number",
+      "value": "54537"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-material",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-collection-date",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "described_as",
+      "value": "Collection date: around 1960"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-collector",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "described_as",
+      "value": "Collector: Wolfgang Wallisfurth"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-acquisition-date",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1993, donation by Theres Weyerich"
+    },
+    {
+      "id": "tangata-manu-cologne-54537-dimensions",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "described_as",
+      "value": "Dimensions: 42 x 11 x 26 cm"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-classification",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-holder",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-location",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "located_at",
+      "value": "Leipzig"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-catalogue-number",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "catalogue_number",
+      "value": "Po 01921"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-material",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-collection-date",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-collector",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-acquisition-date",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1966, purchased by Centrum Warenhaus, Leipzig"
+    },
+    {
+      "id": "tangata-manu-leipzig-po-01921-dimensions",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "described_as",
+      "value": "Dimensions: 79,4 x 10 x 15,8 cm"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-classification",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-holder",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-location",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "located_at",
+      "value": "Munich"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-catalogue-number",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "catalogue_number",
+      "value": "94-317 755"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-material",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "made_of",
+      "value": "wood , bone, obsidian"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-collection-date",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-collector",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-acquisition-date",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1994, from Provinz der bayerischen Kapuziner"
+    },
+    {
+      "id": "tangata-manu-munich-94-317-755-dimensions",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "described_as",
+      "value": "Dimensions: 9 x 6,2 x 1,6 cm"
+    },
+    {
+      "id": "tangata-manu-lubeck-94-1-31-classification",
+      "objectId": "tangata-manu-lubeck-94-1-31",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-lubeck-94-1-31-holder",
+      "objectId": "tangata-manu-lubeck-94-1-31",
+      "predicate": "held_by",
+      "value": "Völkerkundesammlung Lübeck"
+    },
+    {
+      "id": "tangata-manu-lubeck-94-1-31-location",
+      "objectId": "tangata-manu-lubeck-94-1-31",
+      "predicate": "located_at",
+      "value": "Lübeck"
+    },
+    {
+      "id": "tangata-manu-lubeck-94-1-31-catalogue-number",
+      "objectId": "tangata-manu-lubeck-94-1-31",
+      "predicate": "catalogue_number",
+      "value": "94.1.31"
+    },
+    {
+      "id": "tangata-manu-lubeck-94-1-31-material",
+      "objectId": "tangata-manu-lubeck-94-1-31",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-lubeck-94-1-31-collection-date",
+      "objectId": "tangata-manu-lubeck-94-1-31",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-lubeck-94-1-31-collector",
+      "objectId": "tangata-manu-lubeck-94-1-31",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-lubeck-94-1-31-acquisition-date",
+      "objectId": "tangata-manu-lubeck-94-1-31",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1994, donated by Wilhelm Haberlah"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-classification",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-holder",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-location",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-catalogue-number",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "catalogue_number",
+      "value": "5049"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-material",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-collection-date",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-collector",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-acquisition-date",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2001, donated by Oswald Weinreich"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-5049-dimensions",
+      "objectId": "tangata-manu-vina-del-mar-5049",
+      "predicate": "described_as",
+      "value": "Dimensions: 38,8 x 7,5 x 25,2 cm"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-classification",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-holder",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-location",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-catalogue-number",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "catalogue_number",
+      "value": "983"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-material",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-collection-date",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-collector",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-acquisition-date",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-983-dimensions",
+      "objectId": "tangata-manu-vina-del-mar-983",
+      "predicate": "described_as",
+      "value": "Dimensions: 34 cm"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-classification",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-holder",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-location",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-catalogue-number",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "catalogue_number",
+      "value": "987"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-material",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-collection-date",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-collector",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-acquisition-date",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-987-dimensions",
+      "objectId": "tangata-manu-vina-del-mar-987",
+      "predicate": "described_as",
+      "value": "Dimensions: 60 cm"
+    },
+    {
+      "id": "tangata-manu-lubeck-2009-7-133-classification",
+      "objectId": "tangata-manu-lubeck-2009-7-133",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-lubeck-2009-7-133-holder",
+      "objectId": "tangata-manu-lubeck-2009-7-133",
+      "predicate": "held_by",
+      "value": "Völkerkundesammlung Lübeck"
+    },
+    {
+      "id": "tangata-manu-lubeck-2009-7-133-location",
+      "objectId": "tangata-manu-lubeck-2009-7-133",
+      "predicate": "located_at",
+      "value": "Lübeck"
+    },
+    {
+      "id": "tangata-manu-lubeck-2009-7-133-catalogue-number",
+      "objectId": "tangata-manu-lubeck-2009-7-133",
+      "predicate": "catalogue_number",
+      "value": "2009-7-133"
+    },
+    {
+      "id": "tangata-manu-lubeck-2009-7-133-material",
+      "objectId": "tangata-manu-lubeck-2009-7-133",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-lubeck-2009-7-133-collection-date",
+      "objectId": "tangata-manu-lubeck-2009-7-133",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-lubeck-2009-7-133-collector",
+      "objectId": "tangata-manu-lubeck-2009-7-133",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-lubeck-2009-7-133-acquisition-date",
+      "objectId": "tangata-manu-lubeck-2009-7-133",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2009, donated by Anneliese Rambow (High Wycombe, Buckinghamshire, UK)"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-4983-classification",
+      "objectId": "tangata-manu-vina-del-mar-4983",
+      "predicate": "classified_as",
+      "value": "Taŋata manu"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-4983-holder",
+      "objectId": "tangata-manu-vina-del-mar-4983",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-4983-location",
+      "objectId": "tangata-manu-vina-del-mar-4983",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-4983-catalogue-number",
+      "objectId": "tangata-manu-vina-del-mar-4983",
+      "predicate": "catalogue_number",
+      "value": "4983"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-4983-material",
+      "objectId": "tangata-manu-vina-del-mar-4983",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-4983-collection-date",
+      "objectId": "tangata-manu-vina-del-mar-4983",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-4983-collector",
+      "objectId": "tangata-manu-vina-del-mar-4983",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "tangata-manu-vina-del-mar-4983-acquisition-date",
+      "objectId": "tangata-manu-vina-del-mar-4983",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2013, donated by Alfredo Nebreda"
     }
   ],
   "images": [],
@@ -16734,24 +17676,6 @@
     }
   ],
   "objectIds": [
-    "tangata-manu-bremen-d00319",
-    "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
-    "tangata-manu-bremen-d13426",
-    "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
-    "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
-    "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
-    "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
-    "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
-    "tangata-manu-cologne-54536",
-    "tangata-manu-cologne-54537",
-    "tangata-manu-leipzig-po-01921",
-    "tangata-manu-munich-94-317-755",
-    "tangata-manu-lubeck-94-1-31",
-    "tangata-manu-vina-del-mar-5049",
-    "tangata-manu-vina-del-mar-983",
-    "tangata-manu-vina-del-mar-987",
-    "tangata-manu-lubeck-2009-7-133",
-    "tangata-manu-vina-del-mar-4983",
     "heke-vienna-vo-22868",
     "honu-canterbury-e150-1125-oldman-104-348",
     "honu-cologne-32600",
