@@ -1,5 +1,17 @@
 import { createHash } from "node:crypto";
-import { lstat, mkdir, mkdtemp, readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { constants } from "node:fs";
+import {
+  access,
+  lstat,
+  mkdir,
+  mkdtemp,
+  readdir,
+  readFile,
+  rename,
+  rm,
+  stat,
+  writeFile,
+} from "node:fs/promises";
 import path from "node:path";
 import { parseSource, type SourceCapture } from "../../src/data/collection-model";
 import { runCommand } from "./run-command";
@@ -61,7 +73,20 @@ const signatureExtension = (bytes: Buffer): string | undefined => {
   return undefined;
 };
 
-async function findBrowser(platform = process.platform, env = process.env, hasBrowser = exists) {
+const executableFile = async (file: string) => {
+  try {
+    await access(file, constants.X_OK);
+    return (await stat(file)).isFile();
+  } catch {
+    return false;
+  }
+};
+
+async function findBrowser(
+  platform = process.platform,
+  env = process.env,
+  hasBrowser = executableFile,
+) {
   const override = env.MOSA_CAPTURE_BROWSER;
   if (override) return (await hasBrowser(override)) ? override : "";
   const candidates =
@@ -88,7 +113,7 @@ export async function doctor(root: string, dependencies: CaptureDependencies = {
   const browser = await findBrowser(
     dependencies.platform,
     process.env,
-    dependencies.exists ?? exists,
+    dependencies.exists ?? executableFile,
   );
   const checks = {
     singleFile: false,
@@ -115,8 +140,8 @@ export async function doctor(root: string, dependencies: CaptureDependencies = {
     notes.push("Install Git LFS to store and hydrate preserved capture files.");
   }
   const staging = path.join(root, "research-local", "source-captures");
-  await mkdir(staging, { recursive: true });
   try {
+    await mkdir(staging, { recursive: true });
     const probe = await mkdtemp(path.join(staging, ".doctor-"));
     await rm(probe, { recursive: true, force: true });
     checks.researchLocal = true;
@@ -152,7 +177,7 @@ export async function captureSource(
   const browser = await findBrowser(
     dependencies.platform,
     process.env,
-    dependencies.exists ?? exists,
+    dependencies.exists ?? executableFile,
   );
   if (!browser)
     throw Error("No Chromium browser found. Set MOSA_CAPTURE_BROWSER to its executable path.");
@@ -161,10 +186,10 @@ export async function captureSource(
   const work = await mkdtemp(path.join(staging, `${sourceId}-`));
   const output = path.join(work, `${sourceId}.html`);
   const profile = path.join(work, "profile");
-  await mkdir(profile, { recursive: true });
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 120_000);
   try {
+    await mkdir(profile, { recursive: true });
     const args = [
       "exec",
       "single-file",
@@ -410,8 +435,7 @@ export async function checkCaptures(
       if (!capture.file) continue;
       let target: string;
       try {
-        await ensureNoSymlinkComponents(root, path.join("source-files", capture.file));
-        target = await safeContainedFile(path.join(root, "source-files"), capture.file);
+        target = await safeContainedFile(root, path.join("source-files", capture.file));
       } catch (error) {
         diagnostics.push(`${filename}: captures[${index}].file ${capture.file}: ${String(error)}`);
         continue;

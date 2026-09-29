@@ -1,4 +1,4 @@
-import { lstat } from "node:fs/promises";
+import { lstat, realpath } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import {
@@ -65,7 +65,7 @@ export async function runSourceCli(argv = process.argv.slice(2)) {
     let browserScript: string | undefined;
     if (flags.has("script")) {
       const requested = path.resolve(root, required(flags, "script"));
-      if (!requested.startsWith(`${root}${path.sep}`))
+      if (!(await realpath(requested)).startsWith(`${await realpath(root)}${path.sep}`))
         throw Error("--script must be inside the repository root");
       const info = await lstat(requested);
       if (!info.isFile() || info.isSymbolicLink())
