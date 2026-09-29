@@ -21906,7 +21906,7 @@
   ],
   "images": [],
   "notes": {
-    "text": "The gallery is treated as a multi-object source. Its dynamically loaded sections must be expanded before inventorying entries. Gallery captions distinguish collection and acquisition dates from dates of making; those dates are not interchangeable. Individual linked IndiGen notes are separate authored sources when claims are extracted from them.",
+    "text": "The gallery is treated as a multi-object source. Its dynamically loaded sections must be expanded before inventorying entries. Gallery captions distinguish collection and acquisition dates from dates of making; those dates are not interchangeable. Individual linked IndiGen notes are separate authored sources when claims are extracted from them. All 417 gallery image references were reviewed: every caption carries a photo credit, 367 carry an explicit copyright mark, and none establishes reuse permission. No gallery images are published by MoSA from this source.",
     "language": "en-GB"
   },
   "captures": [
