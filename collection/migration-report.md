@@ -89,15 +89,15 @@ assigned during the Supabase migration.
 | --- | --- |
 | `04ec617f-94a9-4c7a-b4da-c6e004ebe6f1` | `bm-hoa-hakananai-a` |
 | `2399cd84-07f7-450e-b97d-407096e5b5a6` | `kunstkamera-736-205` |
-| `3b795721-162d-53d7-a237-f20d05a0ba26` | `arte-rapanui-hoa-haka-nana-ia` |
+| `3b795721-162d-53d7-a237-f20d05a0ba26` | `arte-en-la-cultura-rapanui` |
 | `545a3ac6-439d-4172-aa9d-bb437af0dbd9` | `sscc-mamari` |
-| `619934a3-b259-40fc-a7ef-9fb746503a05` | `arte-rapanui-object-table` |
+| `619934a3-b259-40fc-a7ef-9fb746503a05` | `arte-en-la-cultura-rapanui` |
 | `61f7f90c-2957-4bcc-8fb6-8163db1ed0dc` | `bm-oba-mudfish-plaque` |
 | `68c6e53b-292c-4320-bbb0-76cbdb2db846` | `bm-moai-kavakava` |
 | `7160b42c-6e58-5c45-a226-73c86907a5b2` | `te-papa-ao` |
 | `a1b8f204-3e6f-5945-a743-43e82c33e595` | `te-papa-ua` |
 | `bc3cde94-bdd0-406b-bfe0-8b19a0e74aa4` | `te-papa-moai-kavakava` |
-| `beb63880-5ad6-49ec-8d1d-37ce0da1bb43` | `arte-rapanui-aroukou-kurenga` |
+| `beb63880-5ad6-49ec-8d1d-37ce0da1bb43` | `arte-en-la-cultura-rapanui` |
 | `e9a5a8ed-0ae0-432a-938f-daf2f08bd84a` | `quai-branly-aruku-kurenga` |
 | `f6d18f15-bacc-4ee9-ad2a-1bfc60829322` | `wikipedia-mamari` |
 
@@ -116,18 +116,18 @@ assigned during the Supabase migration.
 | `6d565776-6eac-4e9c-9757-2d77a0d9bb12` | `kunstkamera-736-205/holder` |
 | `d7829885-2d48-42b9-9f2b-52d46a904d51` | `kunstkamera-736-205/catalogue-number` |
 | `dc5208a4-9101-461b-b07e-33ff55cb54dd` | `kunstkamera-736-205/city` |
-| `41a6aec8-37e1-4853-aae9-cb2b8bafdfaf-name` | `arte-rapanui-hoa-haka-nana-ia/name` |
+| `41a6aec8-37e1-4853-aae9-cb2b8bafdfaf-name` | `arte-en-la-cultura-rapanui/hoa-haka-nana-ia-name` |
 | `f6e5b69b-f23e-49c8-977f-3cef7eab05af` | `sscc-mamari/catalogue-number` |
-| `b2452727-0168-4626-9a64-5765d0be6c8f` | `arte-rapanui-object-table/kava-kava-doble-cabeza-type` |
-| `8a2452df-ef75-4772-98f3-830b97fdc0ef` | `arte-rapanui-object-table/moai-piedra-sombrero-type` |
-| `a4f36683-bef9-4336-a6f4-0f1e97c0e1c1` | `arte-rapanui-object-table/figura-boca-circular-type` |
-| `8113ead4-e50b-4838-845f-59bafa5169c4` | `arte-rapanui-object-table/ao-pintado-type` |
-| `35840dbf-bddf-4208-b6fb-ba22783d8e4a` | `arte-rapanui-object-table/rei-miro-gallo-type` |
-| `b0420b9a-c7f5-4cf2-a533-9937db513b9c` | `arte-rapanui-object-table/rei-miro-caras-humanas-type` |
-| `33bd8a81-4844-4c96-8c43-d342e98fdc69` | `arte-rapanui-object-table/tangata-manu-rongorongo-type` |
-| `98a83dd1-e1c4-4eb3-ab00-a1f84df515f3` | `arte-rapanui-object-table/ngaru-a-type` |
-| `ba4ac2fe-59ab-450b-9c3b-41330ce13ea1` | `arte-rapanui-object-table/rei-miro-concha-type` |
-| `71dcd615-cf80-4564-9e4f-6367f287d424` | `arte-rapanui-object-table/tahonga-incrustaciones-type` |
+| `b2452727-0168-4626-9a64-5765d0be6c8f` | `arte-en-la-cultura-rapanui/kava-kava-doble-cabeza-type` |
+| `8a2452df-ef75-4772-98f3-830b97fdc0ef` | `arte-en-la-cultura-rapanui/moai-piedra-sombrero-type` |
+| `a4f36683-bef9-4336-a6f4-0f1e97c0e1c1` | `arte-en-la-cultura-rapanui/figura-boca-circular-type` |
+| `8113ead4-e50b-4838-845f-59bafa5169c4` | `arte-en-la-cultura-rapanui/ao-pintado-type` |
+| `35840dbf-bddf-4208-b6fb-ba22783d8e4a` | `arte-en-la-cultura-rapanui/rei-miro-gallo-type` |
+| `b0420b9a-c7f5-4cf2-a533-9937db513b9c` | `arte-en-la-cultura-rapanui/rei-miro-caras-humanas-type` |
+| `33bd8a81-4844-4c96-8c43-d342e98fdc69` | `arte-en-la-cultura-rapanui/tangata-manu-rongorongo-type` |
+| `98a83dd1-e1c4-4eb3-ab00-a1f84df515f3` | `arte-en-la-cultura-rapanui/ngaru-a-type` |
+| `ba4ac2fe-59ab-450b-9c3b-41330ce13ea1` | `arte-en-la-cultura-rapanui/rei-miro-concha-type` |
+| `71dcd615-cf80-4564-9e4f-6367f287d424` | `arte-en-la-cultura-rapanui/tahonga-incrustaciones-type` |
 | `7acb632e-3a3b-4b20-8a73-d918950bf33c` | `bm-oba-mudfish-plaque/name` |
 | `8723a9d2-3f2e-4c34-90f1-909303c57602` | `bm-oba-mudfish-plaque/catalogue-number` |
 | `e2bd8339-a84d-41b2-a31e-7fe8e58e3b0f` | `bm-oba-mudfish-plaque/made-at` |
@@ -141,7 +141,7 @@ assigned during the Supabase migration.
 | `26abc563-3aff-4253-9e31-4c5eefc42b2e` | `te-papa-moai-kavakava/name` |
 | `8744f71d-e22b-4dae-a249-6309fe2b19ce` | `te-papa-moai-kavakava/city` |
 | `9414ac1a-8f9a-473b-8f67-41d1addc779e` | `te-papa-moai-kavakava/holder` |
-| `6a2fe440-abd5-4518-9c6d-96e49eb66597` | `arte-rapanui-aroukou-kurenga/name` |
+| `6a2fe440-abd5-4518-9c6d-96e49eb66597` | `arte-en-la-cultura-rapanui/aroukou-kurenga-name` |
 | `0848f31f-6074-4814-a4a5-304ae2a1fe18` | `quai-branly-aruku-kurenga/description` |
 | `42c46593-e25e-45a6-a163-3031c163c783` | `quai-branly-aruku-kurenga/name` |
 | `464c962a-7b1f-4432-bdac-68b6edcfc0c1` | `quai-branly-aruku-kurenga/type` |
@@ -152,6 +152,11 @@ assigned during the Supabase migration.
 The editorial IDs `hoa-haka-nana-ia` and `la-tablilla-mamari` were already
 readable and did not change. Their redundant front-matter IDs were removed. The
 collection had no image records to migrate.
+
+The three Supabase source records mapped above were later reconciled as one
+source after confirming that all 12 claims came from the same supplied PDF,
+*Arte en la cultura rapanui*. The consolidation did not merge claims or alter
+their predicates or wording.
 
 ## Deliberately retained outside the collection
 

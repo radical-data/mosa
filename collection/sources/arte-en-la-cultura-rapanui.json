@@ -1,6 +1,6 @@
 {
   "author": null,
-  "reference": "Arte en la cultura rapanui, supplied original PDF; museum-object table, pages 15-18; compiler attribution unverified",
+  "reference": "Arte en la cultura rapanui — supplied original PDF, arte-escultura-museos.pdf, pages 15–18; compiler attribution unverified",
   "language": "es",
   "claims": [
     {
@@ -62,6 +62,18 @@
       "objectId": "tahonga-incrustaciones",
       "predicate": "classified_as",
       "value": "Tahonga simple con incrustaciones"
+    },
+    {
+      "id": "aroukou-kurenga-name",
+      "objectId": "aroukou-kurenga",
+      "predicate": "has_name",
+      "value": "Aroukou Kurenga"
+    },
+    {
+      "id": "hoa-haka-nana-ia-name",
+      "objectId": "hoa-haka-nana-ia",
+      "predicate": "has_name",
+      "value": "Hoa Haka Nana Ia"
     }
   ],
   "images": []
