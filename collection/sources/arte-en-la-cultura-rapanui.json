@@ -3038,5 +3038,13 @@
       "value": "Figura humana grotesca"
     }
   ],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "original.pdf",
+      "capturedAt": null,
+      "method": "supplied-file",
+      "note": "Supplied original, 19 pages, including the museum table on pages 12–19. Identical SHA-256 across three historical research bundles; original retrieval time is unknown. The earliest local manifest records its inclusion on 22 September 2026."
+    }
+  ]
 }

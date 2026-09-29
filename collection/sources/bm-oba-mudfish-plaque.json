@@ -28,5 +28,13 @@
       "value": "British Museum"
     }
   ],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-29t20-54-53-923z.html",
+      "capturedAt": "2026-09-29T20:54:53.923Z",
+      "method": "singlefile",
+      "note": "Catalogue identifier and expanded text reviewed; optional cookies declined before capture. The interactive object-image viewer is unavailable offline."
+    }
+  ]
 }

@@ -8,5 +8,13 @@
     "language": "en-GB"
   },
   "claims": [],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-29t20-52-48-162z.html",
+      "capturedAt": "2026-09-29T20:52:48.162Z",
+      "method": "singlefile",
+      "note": "Named two-faced figure, transfer account and images preserved. Inventory 17-00-00306 is absent from this page."
+    }
+  ]
 }

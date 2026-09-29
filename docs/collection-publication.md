@@ -149,6 +149,69 @@ identity evidence in source `notes`, preserve any material caveat, and remove
 the promoted candidate from the active follow-up queue while retaining the
 research history.
 
+### Preserve source files
+
+Keep capture metadata in the source's optional `captures` array and the files in
+`source-files/<source-id>/`. These files are repository reference material, not
+website assets. Repository access exposes them; confidential or unauthorised
+material stays in `research-local/`. A source without captures remains valid.
+
+Use the [source capture skill](../.agents/skills/source-capture/SKILL.md) for the
+agent workflow. Install dependencies with `just install`, then check prerequisites:
+
+```sh
+just source doctor
+just source capture mapse-aringa-erua --url https://www.patrimoniocultural.gob.cl/en/regional-museums/easter-island-anthropological-museum/aringa-erua-moai-moai-two-faces
+```
+
+The command prints JSON with a staging path and capture time. It does not modify
+the source. Open the saved HTML and check the catalogue number, relevant passages
+and essential images. Expand relevant sections before capture; use `--wait 3000`
+for a bounded delayed retry (maximum 30000 ms). For page interactions, add
+`--script research-local/source-captures/prepare.js` to run a reviewed script
+that clicks the relevant controls, then captures their rendered state. Use a
+bounded timer so controls have time to load; do not paste untrusted page code.
+Reject error pages, cookie walls and empty records.
+
+Register only a reviewed file (substitute the actual staging path and timestamp):
+
+```sh
+just source register mapse-aringa-erua --file research-local/source-captures/reviewed.html --method singlefile --captured-at 2026-09-29T20:00:00.000Z --original-url https://www.patrimoniocultural.gob.cl/en/regional-museums/easter-island-anthropological-museum/aringa-erua-moai-moai-two-faces
+just source check --content
+just format
+```
+
+Place supplied files in ignored `research-local/` staging first.
+For a supplied PDF or image, use `--method supplied-file --captured-at null` if
+its original retrieval date is unknown; `--name original.pdf` selects a readable
+filename. Preserve original bytes. Capture filenames otherwise use UTC timestamps.
+Registration reuses identical content within the source and refuses to overwrite
+different bytes. Keep source attribution, claims and object links unchanged.
+
+Capture fields are `file` (the filename within `source-files/<source-id>/`), optional `originalUrl`,
+`archiveUrl` (an exact timestamped Wayback URL), `capturedAt` (UTC or null),
+`method` and optional `note`. Git records when a capture is added.
+Omit `originalUrl` when the source `reference` is already that URL; registration
+does this automatically. Retain it when the reference is bibliographic text or
+the captured URL differs. When changing a source URL, retain the previous URL on
+any earlier capture that relied on it. At least `file` or `archiveUrl` is required. The method is `singlefile`, `download`, `supplied-file`
+or `browser-pdf`. A saved webpage PDF is a derivative, not an original download.
+An archive-only entry can be edited into source JSON and checked with
+`just source check`. It is an explicit exception to obtaining a local copy.
+
+Use one ordinary capture and one adjusted attempt before checking Wayback. Prefer
+a local SingleFile capture of a usable archive page; retain both URLs and describe
+its historical timestamp in `note`. Do not invent dates for imported captures or
+claim that today's copy establishes yesterday's content. Record unresolved blockers
+in the task handover and commit message. Do not submit pages to external archives automatically.
+
+Capture checks accept valid LFS pointers for builds. `just source check --content`
+requires hydrated files and checks their signatures and available Git LFS hashes.
+Use `git lfs pull --include="source-files/**" --exclude=""` before that check on a
+checkout without archive content. Capture metadata is not rendered or indexed by
+the public website. Archiving a file does not prove its claims or promote a
+candidate museum match.
+
 ### Add images
 
 Download only images MoSA is authorised to publish. Put each binary at

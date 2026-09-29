@@ -26,6 +26,7 @@
 | `collection/sources/` | Source metadata, attributed claims and image records |
 | `collection/editorials/` | Authored Markdown publications linked to objects |
 | `collection/images/` | Publishable image assets tracked with Git LFS |
+| `source-files/` | Preserved source captures in Git LFS, excluded from the website |
 | `scripts/` | Documentation and deployment verification |
 | `docs/adrs/`, `docs/test-cases/` | Decisions and retained domain requirements |
 
@@ -45,6 +46,8 @@ repository tasks and pnpm owns dependencies.
 | Website HTTP behaviour | Website image plus `pnpm test:http http://127.0.0.1:8080` |
 
 `just verify` runs formatting, documentation, type, unit and build checks.
+
+For source preservation, use the repository [source capture skill](.agents/skills/source-capture/SKILL.md).
 
 ## Implementation rules
 

@@ -49,7 +49,9 @@ jobs:
       - name: Checkout with collection images
         uses: actions/checkout@v5
         with:
-          lfs: true
+          lfs: false
+      - name: Restore published collection images only
+        run: git lfs pull --include="collection/images/**" --exclude=""
       - uses: jdx/mise-action@v3
         with:
           cache: true
@@ -83,7 +85,9 @@ jobs:
       - name: Checkout with collection images
         uses: actions/checkout@v5
         with:
-          lfs: true
+          lfs: false
+      - name: Restore published collection images only
+        run: git lfs pull --include="collection/images/**" --exclude=""
       - uses: jdx/mise-action@v3
         with:
           cache: true

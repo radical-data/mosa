@@ -10,7 +10,7 @@ The site needs no database, object storage account or collection API.
 
 ## Docker
 
-`just image` builds the root `Dockerfile`. Git LFS must be hydrated
+`just image` builds the root `Dockerfile`. Published image Git LFS files must be hydrated
 before the Docker build because `.git` is not in the build context. Astro
 generates the whole site in the build stage; the runtime image serves the files
 with unprivileged Nginx on port 8080.
@@ -55,3 +55,21 @@ Git state will be less clear.
 
 Keep the Coolify API token and webhook out of Git. Do not put private research
 or unauthorised media in `collection/`.
+
+## Source capture tooling and backups
+
+`just source doctor` checks SingleFile, Git LFS, staging and a local browser.
+SingleFile is pinned through pnpm and runs on the repository's Node version.
+Install Chrome or Chromium separately; set `MOSA_CAPTURE_BROWSER` to its executable
+if discovery cannot find it. Browser profiles and capture output stay in ignored
+research staging. No browser or live museum connection is needed to build the site.
+
+GitHub checkouts pull only `collection/images/**`. Capture files and local research
+are excluded from Docker. Coolify's Git LFS setting remains enabled; its checkout
+may still download archive bytes even though Docker excludes them.
+
+A Git-only backup does not contain LFS file contents. In a separate backup clone,
+run `git lfs fetch --all`, then back up the complete clone (including its Git and
+LFS directories) to independent storage. Restore that backup, hydrate the captures
+and run `just source check --content` to verify it. Keep private local research in
+its own authorised backup; it is not included in the repository archive.

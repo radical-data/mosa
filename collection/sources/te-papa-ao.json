@@ -10,5 +10,20 @@
       "value": "Ao (Dance paddle)"
     }
   ],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-22t19-29-16-817z.html",
+      "originalUrl": "https://collections.tepapa.govt.nz/object/180901",
+      "capturedAt": "2026-09-22T19:29:16.817Z",
+      "method": "download",
+      "note": "Historical downloaded HTML. Page title and embedded record identify Ao, object 180901 / OL001116; this capture does not independently establish the inventory-row match."
+    },
+    {
+      "file": "2026-09-29t20-52-04-411z.html",
+      "originalUrl": "https://collections.tepapa.govt.nz/object/180901",
+      "capturedAt": "2026-09-29T20:52:04.411Z",
+      "method": "singlefile"
+    }
+  ]
 }

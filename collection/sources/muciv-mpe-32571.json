@@ -8,5 +8,13 @@
     "language": "en-GB"
   },
   "claims": [],
-  "images": []
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-29t21-05-37-477z.html",
+      "capturedAt": "2026-09-29T21:05:37.477Z",
+      "method": "singlefile",
+      "note": "Inventory MPE 32571, record text and main object image preserved; optional cookies declined before capture."
+    }
+  ]
 }

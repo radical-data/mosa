@@ -32,6 +32,122 @@ describe("collection model", () => {
     expect(parseSource(record, "source-one.json").notes).toBeUndefined();
   });
 
+  test("parses source capture provenance records", () => {
+    const { id: _id, ...record } = source;
+    const captures = [
+      {
+        file: "catalogue.pdf",
+        originalUrl: "https://example.org/catalogue/123",
+        archiveUrl:
+          "https://web.archive.org/web/20240102123456id_/https://example.org/catalogue/123?record=42#details",
+        capturedAt: "2024-01-02T12:34:56Z",
+        method: "download",
+        note: "Downloaded from the catalogue record.",
+      },
+      {
+        archiveUrl:
+          "https://web.archive.org/web/20240203102030if_/https://example.org/archived-page",
+        capturedAt: null,
+        method: "singlefile",
+      },
+    ];
+    expect(parseSource({ ...record, captures }, "source-one.json").captures).toEqual(captures);
+    expect(parseSource(record, "source-one.json").captures).toBeUndefined();
+  });
+
+  test.each([
+    { file: "../source-one/catalogue.pdf" },
+    { file: "/source-one/catalogue.pdf" },
+    { file: "source-one\\catalogue.pdf" },
+    { file: "another-source/catalogue.pdf" },
+    { file: "source-one/subdir/catalogue.pdf" },
+    { file: "source-one/catalogue.exe" },
+    { archiveUrl: "https://web.archive.org/web/20240102123456js_/https://example.org/page" },
+    { archiveUrl: "http://web.archive.org/web/20240102123456/https://example.org/page" },
+    { archiveUrl: "https://web.archive.org/web/20240230123456/https://example.org/page" },
+    { archiveUrl: "https://example.org/page" },
+    { archiveUrl: "https://web.archive.org/web/20240102123456/https://" },
+  ])("rejects unsafe or unsupported capture references: %j", (captureRef) => {
+    const { id: _id, ...record } = source;
+    expect(() =>
+      parseSource(
+        {
+          ...record,
+          captures: [
+            {
+              ...captureRef,
+              capturedAt: null,
+              method: "download",
+            },
+          ],
+        },
+        "source-one.json",
+      ),
+    ).toThrow(/captures\[0\]\.(?:file|archiveUrl)/);
+  });
+
+  test.each([
+    { capturedAt: "2024-02-30T12:00:00Z" },
+    { capturedAt: "2024-03-01T12:00:00+00:00" },
+    { capturedAt: null, method: "scan" },
+    { capturedAt: null, method: "download", note: " " },
+  ])("rejects invalid capture metadata: %j", (metadata) => {
+    const { id: _id, ...record } = source;
+    expect(() =>
+      parseSource(
+        {
+          ...record,
+          captures: [{ file: "capture.html", method: "download", ...metadata }],
+        },
+        "source-one.json",
+      ),
+    ).toThrow(/captures\[0\]/);
+  });
+
+  test("requires a capture file or archive URL and rejects duplicate capture references", () => {
+    const { id: _id, ...record } = source;
+    const base = {
+      capturedAt: null,
+      method: "download",
+    };
+    expect(() => parseSource({ ...record, captures: [base] }, "source-one.json")).toThrow(
+      "captures[0] requires file or archiveUrl",
+    );
+    expect(() =>
+      parseSource(
+        {
+          ...record,
+          captures: [
+            { ...base, file: "capture.html" },
+            { ...base, file: "capture.html", note: "second record" },
+          ],
+        },
+        "source-one.json",
+      ),
+    ).toThrow("duplicates capture file");
+    expect(() =>
+      parseSource(
+        {
+          ...record,
+          captures: [
+            {
+              ...base,
+              archiveUrl:
+                "https://web.archive.org/web/20240102123456/https://example.org/page?record=42",
+            },
+            {
+              ...base,
+              archiveUrl:
+                "https://web.archive.org/web/20240102123456/https://example.org/page?record=42",
+              file: "capture.html",
+            },
+          ],
+        },
+        "source-one.json",
+      ),
+    ).toThrow("duplicates capture archive URL");
+  });
+
   test.each([
     null,
     "Unstructured note",
