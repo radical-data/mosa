@@ -5438,6 +5438,5352 @@
       "objectId": "moai-kavakava-rapa-nui-17-326",
       "predicate": "described_as",
       "value": "Dimensions: 31,5 x 9,5 cm"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-classification",
+      "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-holder",
+      "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-location",
+      "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-catalogue-number",
+      "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
+      "predicate": "catalogue_number",
+      "value": "E150.1129/ OLDMAN 102/345"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-material",
+      "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-collection-date",
+      "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-collector",
+      "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-acquisition-date",
+      "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-classification",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-holder",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-location",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-catalogue-number",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "catalogue_number",
+      "value": "E150.1130/ OLDMAN 340/103"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-material",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-collection-date",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-collector",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-acquisition-date",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-dimensions",
+      "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
+      "predicate": "described_as",
+      "value": "Dimensions: 11,1 x 4,1 cm"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-classification",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-holder",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-location",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-catalogue-number",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "catalogue_number",
+      "value": "E150.1131/ OLDMAN 351"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-material",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-collection-date",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-collector",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "described_as",
+      "value": "Collector: Captain J Toppin"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-acquisition-date",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "moai-tangata-canterbury-e150-1131-oldman-351-dimensions",
+      "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
+      "predicate": "described_as",
+      "value": "Dimensions: 21,9 x 6,35 cm"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-classification",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-holder",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-location",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "located_at",
+      "value": "New York"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-catalogue-number",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "catalogue_number",
+      "value": "1984.526"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-material",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bone"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-collection-date",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-collector",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-acquisition-date",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1984, gift of Faith-Dorian and Martin Wright, in honor of Livio Scamperle"
+    },
+    {
+      "id": "moai-tangata-new-york-1984-526-dimensions",
+      "objectId": "moai-tangata-new-york-1984-526",
+      "predicate": "described_as",
+      "value": "Dimensions: 40,6 × 9,5 × 5,7 cm"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-classification",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-holder",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-location",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-catalogue-number",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "catalogue_number",
+      "value": "VI 815"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-material",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-collection-date",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "described_as",
+      "value": "Collection date: 1872"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-collector",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "described_as",
+      "value": "Collector: (?), Christy collection"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-acquisition-date",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-815-dimensions",
+      "objectId": "moai-tangata-berlin-vi-815",
+      "predicate": "described_as",
+      "value": "Dimensions: 34 x 8,3 x 5 cm"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-classification",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-holder",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-location",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-catalogue-number",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "catalogue_number",
+      "value": "A.1954.100"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-material",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bird bone"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-collection-date",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-collector",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "described_as",
+      "value": "Collector: probably Harry Geoffrey Beasley"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-acquisition-date",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954, from Irene Marguerite Beasley"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-100-dimensions",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "described_as",
+      "value": "Dimensions: approx. 44,5"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-260-classification",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-260-holder",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "held_by",
+      "value": "MARKK Hamburg"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-260-location",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "located_at",
+      "value": "Hamburg"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-260-catalogue-number",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "catalogue_number",
+      "value": "22.42.260"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-260-material",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-260-collection-date",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-260-collector",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-260-acquisition-date",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "described_as",
+      "value": "Acquisition date: 21 August 1922"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-classification",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-holder",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-location",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "located_at",
+      "value": "Leipzig"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-catalogue-number",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "catalogue_number",
+      "value": "Po 00436"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-material",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-collection-date",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "described_as",
+      "value": "Collection date: 1877"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-collector",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-acquisition-date",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, previous owner: Johan Cesar Godeffroy; Museum Godeffroy Hamburg"
+    },
+    {
+      "id": "moai-tangata-leipzig-po-00436-dimensions",
+      "objectId": "moai-tangata-leipzig-po-00436",
+      "predicate": "described_as",
+      "value": "Dimensions: 21 x 11,5 x 6,7 cm"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-classification",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-holder",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-location",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-catalogue-number",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "catalogue_number",
+      "value": "VI 4897"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-material",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-collection-date",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-collector",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-acquisition-date",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4897-dimensions",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "described_as",
+      "value": "Dimensions: 66 x 12,5 x 14 cm"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-classification",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-holder",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-location",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-catalogue-number",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "catalogue_number",
+      "value": "VI 4909"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-material",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-collection-date",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-collector",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-acquisition-date",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4909-dimensions",
+      "objectId": "moai-tangata-berlin-vi-4909",
+      "predicate": "described_as",
+      "value": "Dimensions: 63 x 13,5 x 13 cm"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-classification",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-holder",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-location",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-catalogue-number",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "catalogue_number",
+      "value": "VI 4900"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-material",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-collection-date",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-collector",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "described_as",
+      "value": "Collector: Captain Wilhelm Geissler, SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-acquisition-date",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-4900-dimensions",
+      "objectId": "moai-tangata-berlin-vi-4900",
+      "predicate": "described_as",
+      "value": "Dimensions: 104 x 75 x 30 cm"
+    },
+    {
+      "id": "moai-tangata-dresden-48736-classification",
+      "objectId": "moai-tangata-dresden-48736",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-dresden-48736-holder",
+      "objectId": "moai-tangata-dresden-48736",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-48736-location",
+      "objectId": "moai-tangata-dresden-48736",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-48736-catalogue-number",
+      "objectId": "moai-tangata-dresden-48736",
+      "predicate": "catalogue_number",
+      "value": "48736"
+    },
+    {
+      "id": "moai-tangata-dresden-48736-material",
+      "objectId": "moai-tangata-dresden-48736",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-dresden-48736-collection-date",
+      "objectId": "moai-tangata-dresden-48736",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-dresden-48736-collector",
+      "objectId": "moai-tangata-dresden-48736",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-tangata-dresden-48736-acquisition-date",
+      "objectId": "moai-tangata-dresden-48736",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-tangata-dresden-18356-classification",
+      "objectId": "moai-tangata-dresden-18356",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-dresden-18356-holder",
+      "objectId": "moai-tangata-dresden-18356",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-18356-location",
+      "objectId": "moai-tangata-dresden-18356",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-18356-catalogue-number",
+      "objectId": "moai-tangata-dresden-18356",
+      "predicate": "catalogue_number",
+      "value": "18356"
+    },
+    {
+      "id": "moai-tangata-dresden-18356-material",
+      "objectId": "moai-tangata-dresden-18356",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-dresden-18356-collection-date",
+      "objectId": "moai-tangata-dresden-18356",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-dresden-18356-collector",
+      "objectId": "moai-tangata-dresden-18356",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-tangata-dresden-18356-acquisition-date",
+      "objectId": "moai-tangata-dresden-18356",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-tangata-dresden-18357-classification",
+      "objectId": "moai-tangata-dresden-18357",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-dresden-18357-holder",
+      "objectId": "moai-tangata-dresden-18357",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-18357-location",
+      "objectId": "moai-tangata-dresden-18357",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-18357-catalogue-number",
+      "objectId": "moai-tangata-dresden-18357",
+      "predicate": "catalogue_number",
+      "value": "18357"
+    },
+    {
+      "id": "moai-tangata-dresden-18357-material",
+      "objectId": "moai-tangata-dresden-18357",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-dresden-18357-collection-date",
+      "objectId": "moai-tangata-dresden-18357",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-dresden-18357-collector",
+      "objectId": "moai-tangata-dresden-18357",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-tangata-dresden-18357-acquisition-date",
+      "objectId": "moai-tangata-dresden-18357",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-tangata-dresden-18358-classification",
+      "objectId": "moai-tangata-dresden-18358",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-dresden-18358-holder",
+      "objectId": "moai-tangata-dresden-18358",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-18358-location",
+      "objectId": "moai-tangata-dresden-18358",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-18358-catalogue-number",
+      "objectId": "moai-tangata-dresden-18358",
+      "predicate": "catalogue_number",
+      "value": "18358"
+    },
+    {
+      "id": "moai-tangata-dresden-18358-material",
+      "objectId": "moai-tangata-dresden-18358",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-dresden-18358-collection-date",
+      "objectId": "moai-tangata-dresden-18358",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-dresden-18358-collector",
+      "objectId": "moai-tangata-dresden-18358",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-tangata-dresden-18358-acquisition-date",
+      "objectId": "moai-tangata-dresden-18358",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-tangata-dresden-54420-classification",
+      "objectId": "moai-tangata-dresden-54420",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-dresden-54420-holder",
+      "objectId": "moai-tangata-dresden-54420",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-54420-location",
+      "objectId": "moai-tangata-dresden-54420",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-54420-catalogue-number",
+      "objectId": "moai-tangata-dresden-54420",
+      "predicate": "catalogue_number",
+      "value": "54420"
+    },
+    {
+      "id": "moai-tangata-dresden-54420-material",
+      "objectId": "moai-tangata-dresden-54420",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-dresden-54420-collection-date",
+      "objectId": "moai-tangata-dresden-54420",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-dresden-54420-collector",
+      "objectId": "moai-tangata-dresden-54420",
+      "predicate": "described_as",
+      "value": "Collector: SMS Hyäne expedition"
+    },
+    {
+      "id": "moai-tangata-dresden-54420-acquisition-date",
+      "objectId": "moai-tangata-dresden-54420",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-classification",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-holder",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "held_by",
+      "value": "Roemer- und Pelizaeus-Museum Hildesheim"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-location",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "located_at",
+      "value": "Hildesheim"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-catalogue-number",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "catalogue_number",
+      "value": "V 64"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-material",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bone"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-collection-date",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "described_as",
+      "value": "Collection date: 1882"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-collector",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-acquisition-date",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1885, purchased by Hermann Roemer from C. A. Pöhl (Museum Godeffroy, Hamburg)"
+    },
+    {
+      "id": "moai-tangata-hildesheim-v-64-dimensions",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "described_as",
+      "value": "Dimensions: 57 x 13 x 7 cm"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-classification",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-holder",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "held_by",
+      "value": "Wereldmuseum Leiden"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-location",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "located_at",
+      "value": "Leiden"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-catalogue-number",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "catalogue_number",
+      "value": "RV-517-2"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-material",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-collection-date",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "described_as",
+      "value": "Collection date: before 1885"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-collector",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-acquisition-date",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1885, purchased from Jacob Weisser"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-517-2-dimensions",
+      "objectId": "moai-tangata-leiden-rv-517-2",
+      "predicate": "described_as",
+      "value": "Dimensions: 65 x 12,5 x 10 cm"
+    },
+    {
+      "id": "moai-tangata-stockholm-1885-05-0002-classification",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-stockholm-1885-05-0002-holder",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "moai-tangata-stockholm-1885-05-0002-location",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "moai-tangata-stockholm-1885-05-0002-catalogue-number",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "catalogue_number",
+      "value": "1885.05.0002"
+    },
+    {
+      "id": "moai-tangata-stockholm-1885-05-0002-material",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "made_of",
+      "value": "wood (sophora toromiro)"
+    },
+    {
+      "id": "moai-tangata-stockholm-1885-05-0002-collection-date",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-stockholm-1885-05-0002-collector",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-stockholm-1885-05-0002-acquisition-date",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1885"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-classification",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-holder",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "held_by",
+      "value": "Museum of Archeology and Anthropology"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-location",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-catalogue-number",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "catalogue_number",
+      "value": "Z 6123"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-material",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "made_of",
+      "value": "wood, shell"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-collection-date",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Collection date: 1887"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-collector",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-acquisition-date",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, donated by Baron Anatole A. A. von Hügel"
+    },
+    {
+      "id": "moai-tangata-cambridge-z-6123-dimensions",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Dimensions: 15,5 x 60,5 x 10,5 cm"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-classification",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-holder",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "held_by",
+      "value": "Wereldmuseum Leiden"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-location",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "located_at",
+      "value": "Leiden"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-catalogue-number",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "catalogue_number",
+      "value": "RV-702-1"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-material",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "made_of",
+      "value": "wood, obsidian, shell"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-collection-date",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "described_as",
+      "value": "Collection date: around 1889"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-collector",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-acquisition-date",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1889, purchased from C. A. Pöhl"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-702-1-dimensions",
+      "objectId": "moai-tangata-leiden-rv-702-1",
+      "predicate": "described_as",
+      "value": "Dimensions: length 76 cm"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-classification",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-holder",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "held_by",
+      "value": "Wereldmuseum Leiden"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-location",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "located_at",
+      "value": "Leiden"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-catalogue-number",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "catalogue_number",
+      "value": "RV-547-3"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-material",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-collection-date",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "described_as",
+      "value": "Collection date: around 1886"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-collector",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-acquisition-date",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1886, purchased from L. Yvan"
+    },
+    {
+      "id": "moai-tangata-leiden-rv-547-3-dimensions",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "described_as",
+      "value": "Dimensions: 10,5 x 16,5 x 30,5 cm"
+    },
+    {
+      "id": "moai-tangata-lubeck-3778b-classification",
+      "objectId": "moai-tangata-lubeck-3778b",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-lubeck-3778b-holder",
+      "objectId": "moai-tangata-lubeck-3778b",
+      "predicate": "held_by",
+      "value": "Völkerkundesammlung Lübeck"
+    },
+    {
+      "id": "moai-tangata-lubeck-3778b-location",
+      "objectId": "moai-tangata-lubeck-3778b",
+      "predicate": "located_at",
+      "value": "Lübeck"
+    },
+    {
+      "id": "moai-tangata-lubeck-3778b-catalogue-number",
+      "objectId": "moai-tangata-lubeck-3778b",
+      "predicate": "catalogue_number",
+      "value": "3778b"
+    },
+    {
+      "id": "moai-tangata-lubeck-3778b-material",
+      "objectId": "moai-tangata-lubeck-3778b",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moai-tangata-lubeck-3778b-collection-date",
+      "objectId": "moai-tangata-lubeck-3778b",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-lubeck-3778b-collector",
+      "objectId": "moai-tangata-lubeck-3778b",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-lubeck-3778b-acquisition-date",
+      "objectId": "moai-tangata-lubeck-3778b",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1893"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-classification",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-holder",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "held_by",
+      "value": "Museum of New Zealand Te Papa Tongarewa"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-location",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "located_at",
+      "value": "Wellington"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-catalogue-number",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "catalogue_number",
+      "value": "FE010507"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-material",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "made_of",
+      "value": "wood, bone, shell, obsidian"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-collection-date",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-collector",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-acquisition-date",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-wellington-fe010507-dimensions",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "described_as",
+      "value": "Dimensions: 1,2 x 5 x 9"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-classification",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-holder",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "held_by",
+      "value": "University Museum of Bergen"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-location",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "located_at",
+      "value": "Bergen"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-catalogue-number",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "catalogue_number",
+      "value": "Bme 1193"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-material",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "made_of",
+      "value": "wood, eye with inlaid bone and stone"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-collection-date",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-collector",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-acquisition-date",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1894, purchased from J. F. G. Umlauff, Naturalienhandlung und Museum"
+    },
+    {
+      "id": "moai-tangata-bergen-bme-1193-dimensions",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "described_as",
+      "value": "Dimensions: height 75 cm"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-classification",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-holder",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-location",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-catalogue-number",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "catalogue_number",
+      "value": "A.1895.301"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-material",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "made_of",
+      "value": "wood, wax"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-collection-date",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-collector",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-acquisition-date",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1895, from William Downing Webster"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1895-301-dimensions",
+      "objectId": "moai-tangata-edinburgh-a-1895-301",
+      "predicate": "described_as",
+      "value": "Dimensions: 10,2 x 36"
+    },
+    {
+      "id": "moai-tangata-dresden-18360-classification",
+      "objectId": "moai-tangata-dresden-18360",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-dresden-18360-holder",
+      "objectId": "moai-tangata-dresden-18360",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-18360-location",
+      "objectId": "moai-tangata-dresden-18360",
+      "predicate": "located_at",
+      "value": "Dresden"
+    },
+    {
+      "id": "moai-tangata-dresden-18360-catalogue-number",
+      "objectId": "moai-tangata-dresden-18360",
+      "predicate": "catalogue_number",
+      "value": "18360"
+    },
+    {
+      "id": "moai-tangata-dresden-18360-material",
+      "objectId": "moai-tangata-dresden-18360",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-dresden-18360-collection-date",
+      "objectId": "moai-tangata-dresden-18360",
+      "predicate": "described_as",
+      "value": "Collection date: 1896"
+    },
+    {
+      "id": "moai-tangata-dresden-18360-collector",
+      "objectId": "moai-tangata-dresden-18360",
+      "predicate": "described_as",
+      "value": "Collector: William D. Webster"
+    },
+    {
+      "id": "moai-tangata-dresden-18360-acquisition-date",
+      "objectId": "moai-tangata-dresden-18360",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1896"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-classification",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-holder",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-location",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-catalogue-number",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "catalogue_number",
+      "value": "5700"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-material",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-collection-date",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "described_as",
+      "value": "Collection date: end of 19th century"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-collector",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-acquisition-date",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1899, donation by Arthuer Baessler"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5700-dimensions",
+      "objectId": "moai-tangata-stuttgart-5700",
+      "predicate": "described_as",
+      "value": "Dimensions: 12 x 53 x 9 cm"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-classification",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-holder",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-location",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-catalogue-number",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "catalogue_number",
+      "value": "5701"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-material",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-collection-date",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "described_as",
+      "value": "Collection date: end of 19th century"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-collector",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-acquisition-date",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1899, donation by Arthur Baessler"
+    },
+    {
+      "id": "moai-tangata-stuttgart-5701-dimensions",
+      "objectId": "moai-tangata-stuttgart-5701",
+      "predicate": "described_as",
+      "value": "Dimensions: 8,8 x 34,5 x 5,5 cm"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-classification",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-holder",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-location",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-catalogue-number",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "catalogue_number",
+      "value": "30550"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-material",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian, bark bast"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-collection-date",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "described_as",
+      "value": "Collection date: end of 19th century"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-collector",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "described_as",
+      "value": "Collector: Dr. J. Müller"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-acquisition-date",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1903, donation by Ernst W. von Sieglin and Dr. Augustin Krämer"
+    },
+    {
+      "id": "moai-tangata-stuttgart-30550-dimensions",
+      "objectId": "moai-tangata-stuttgart-30550",
+      "predicate": "described_as",
+      "value": "Dimensions: 11,5 x 54 x 8,5 cm"
+    },
+    {
+      "id": "moai-tangata-stockholm-1908-03-0057-classification",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-stockholm-1908-03-0057-holder",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "moai-tangata-stockholm-1908-03-0057-location",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "moai-tangata-stockholm-1908-03-0057-catalogue-number",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "catalogue_number",
+      "value": "1908.03.0057"
+    },
+    {
+      "id": "moai-tangata-stockholm-1908-03-0057-material",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-stockholm-1908-03-0057-collection-date",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-stockholm-1908-03-0057-collector",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-stockholm-1908-03-0057-acquisition-date",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1908"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-classification",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-holder",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "held_by",
+      "value": "Weltkulturen Museum, Frankfurt am Main"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-location",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "located_at",
+      "value": "Frankfurt am Main"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-catalogue-number",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "catalogue_number",
+      "value": "NS 11788"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-material",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-collection-date",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-collector",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-acquisition-date",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1910, purchased from William O. Oldman"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-11788-dimensions",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
+      "predicate": "described_as",
+      "value": "Dimensions: length 53 cm"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-classification",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-holder",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-location",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-catalogue-number",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "catalogue_number",
+      "value": "D59.248"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-material",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "made_of",
+      "value": "wood, obsidian or glass, shell or bone"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-collection-date",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-collector",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-acquisition-date",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-otago-d59-248-dimensions",
+      "objectId": "moai-tangata-otago-d59-248",
+      "predicate": "described_as",
+      "value": "Dimensions: 50,3 x 10 x 6,14 cm"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-classification",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-holder",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-location",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-catalogue-number",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "catalogue_number",
+      "value": "A.1936.99"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-material",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "made_of",
+      "value": "wood, shell, obsidian, barkcloth"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-collection-date",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-collector",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-acquisition-date",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1936, from Hume Trustees"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1936-99-dimensions",
+      "objectId": "moai-tangata-edinburgh-a-1936-99",
+      "predicate": "described_as",
+      "value": "Dimensions: 10,1 x 47,2 x 9,5"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-4102-classification",
+      "objectId": "moai-tangata-vina-del-mar-4102",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-4102-holder",
+      "objectId": "moai-tangata-vina-del-mar-4102",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-4102-location",
+      "objectId": "moai-tangata-vina-del-mar-4102",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-4102-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-4102",
+      "predicate": "catalogue_number",
+      "value": "4102"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-4102-material",
+      "objectId": "moai-tangata-vina-del-mar-4102",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-4102-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-4102",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-4102-collector",
+      "objectId": "moai-tangata-vina-del-mar-4102",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-4102-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-4102",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2011, donated by Edgard Schirmer Bowers"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-classification",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-holder",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-location",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "catalogue_number",
+      "value": "5033"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-material",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-collector",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5033-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-5033",
+      "predicate": "described_as",
+      "value": "Dimensions: 42,5 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-classification",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-holder",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-location",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "catalogue_number",
+      "value": "975"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-material",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-collector",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-975-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-975",
+      "predicate": "described_as",
+      "value": "Dimensions: 21 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-classification",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-holder",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-location",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "catalogue_number",
+      "value": "982"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-material",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-collector",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-982-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-982",
+      "predicate": "described_as",
+      "value": "Dimensions: 40 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "catalogue_number",
+      "value": "1830 / 547 coll. Felmermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from C. Schaible"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felmermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 30,5 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1832 / 546 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from C. Schaible"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1840/ 554 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1824/ 538 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from C. Schaible"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1288 / 2 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1291 / 5 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Toromiro, Sophora toromiro)"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1331 / 45 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Toromiro, Sophora toromiro)"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1333 / 47 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (miro pupu)"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 30,5 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1827 / 541 2 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: early 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from C. Schaible"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1829 / 543 2 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: beginning of the 20th century"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from C. Schaible"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 50 cm"
+    },
+    {
+      "id": "moai-tangata-lubeck-7100b-classification",
+      "objectId": "moai-tangata-lubeck-7100b",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-lubeck-7100b-holder",
+      "objectId": "moai-tangata-lubeck-7100b",
+      "predicate": "held_by",
+      "value": "Völkerkundesammlung Lübeck"
+    },
+    {
+      "id": "moai-tangata-lubeck-7100b-location",
+      "objectId": "moai-tangata-lubeck-7100b",
+      "predicate": "located_at",
+      "value": "Lübeck"
+    },
+    {
+      "id": "moai-tangata-lubeck-7100b-catalogue-number",
+      "objectId": "moai-tangata-lubeck-7100b",
+      "predicate": "catalogue_number",
+      "value": "7100b"
+    },
+    {
+      "id": "moai-tangata-lubeck-7100b-material",
+      "objectId": "moai-tangata-lubeck-7100b",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "moai-tangata-lubeck-7100b-collection-date",
+      "objectId": "moai-tangata-lubeck-7100b",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-lubeck-7100b-collector",
+      "objectId": "moai-tangata-lubeck-7100b",
+      "predicate": "described_as",
+      "value": "Collector: G. Meuel (Papeete, Tahiti)"
+    },
+    {
+      "id": "moai-tangata-lubeck-7100b-acquisition-date",
+      "objectId": "moai-tangata-lubeck-7100b",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1912"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-classification",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-holder",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-location",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-catalogue-number",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "catalogue_number",
+      "value": "46889"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-material",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "made_of",
+      "value": "wood (robinia), bone, obsidian"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-collection-date",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-collector",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-acquisition-date",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1949 (previously collection Baron von der Heydt)"
+    },
+    {
+      "id": "moai-tangata-cologne-46889-dimensions",
+      "objectId": "moai-tangata-cologne-46889",
+      "predicate": "described_as",
+      "value": "Dimensions: 36,5 x 7 x 7,5 cm"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-classification",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-holder",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "held_by",
+      "value": "Weltkulturen Museum, Frankfurt am Main"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-location",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "located_at",
+      "value": "Frankfurt am Main"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-catalogue-number",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "catalogue_number",
+      "value": "NS 20327"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-material",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-collection-date",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-collector",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-acquisition-date",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1913, purchased from Carl Marquardt, previous holder: Handelshaus Godeffroy (trading company)"
+    },
+    {
+      "id": "moai-tangata-frankfurt-am-main-ns-20327-dimensions",
+      "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
+      "predicate": "described_as",
+      "value": "Dimensions: length 68 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-classification",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-holder",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "held_by",
+      "value": "Völkerkundemuseum der Universität Zürich"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-location",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-catalogue-number",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "catalogue_number",
+      "value": "12311"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-material",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "made_of",
+      "value": "wood ,obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-collection-date",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-collector",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche; Baron v. d. Heydt (1935)"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-acquisition-date",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1959, from Baron v. d. Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-12311-dimensions",
+      "objectId": "moai-tangata-zurich-12311",
+      "predicate": "described_as",
+      "value": "Dimensions: H 44 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-classification",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-holder",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-location",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "catalogue_number",
+      "value": "RPO 301"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-material",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-collector",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1952, from K. J. Museum Copenhagen, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-301-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-301",
+      "predicate": "described_as",
+      "value": "Dimensions: H 48 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-09977-classification",
+      "objectId": "moai-tangata-zurich-09977",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-09977-holder",
+      "objectId": "moai-tangata-zurich-09977",
+      "predicate": "held_by",
+      "value": "Völkerkundemuseum der Universität Zürich"
+    },
+    {
+      "id": "moai-tangata-zurich-09977-location",
+      "objectId": "moai-tangata-zurich-09977",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-09977-catalogue-number",
+      "objectId": "moai-tangata-zurich-09977",
+      "predicate": "catalogue_number",
+      "value": "09977"
+    },
+    {
+      "id": "moai-tangata-zurich-09977-material",
+      "objectId": "moai-tangata-zurich-09977",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-zurich-09977-collection-date",
+      "objectId": "moai-tangata-zurich-09977",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-zurich-09977-collector",
+      "objectId": "moai-tangata-zurich-09977",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-zurich-09977-acquisition-date",
+      "objectId": "moai-tangata-zurich-09977",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1941, from Hagnauer"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-classification",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-holder",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-location",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "catalogue_number",
+      "value": "RPO 302"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-material",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-collector",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, from Bernisches Historisches Museum, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-302-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-302",
+      "predicate": "described_as",
+      "value": "Dimensions: H 20 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-classification",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-holder",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-location",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "catalogue_number",
+      "value": "RPO 307"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-material",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-collector",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, from Museum für Völkerkunde Basel, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-307-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-307",
+      "predicate": "described_as",
+      "value": "Dimensions: H 46 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-classification",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-holder",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-location",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "catalogue_number",
+      "value": "RPO 308"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-material",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-collector",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-308-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-308",
+      "predicate": "described_as",
+      "value": "Dimensions: H 33 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-classification",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-holder",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-location",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "catalogue_number",
+      "value": "RPO 310"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-material",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-collector",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, from Museum für Völkerkunde Basel, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-310-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-310",
+      "predicate": "described_as",
+      "value": "Dimensions: H 48,5 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-classification",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-holder",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-location",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "catalogue_number",
+      "value": "RPO 311"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-material",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-collector",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, from Museum für Völkerkunde Basel, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-311-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-311",
+      "predicate": "described_as",
+      "value": "Dimensions: H 38 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-classification",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-holder",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-location",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "catalogue_number",
+      "value": "RPO 312"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-material",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-collector",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, from Museum für Völkerkunde Basel, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-312-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-312",
+      "predicate": "described_as",
+      "value": "Dimensions: H 29 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-classification",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-holder",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-location",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "catalogue_number",
+      "value": "RPO 313"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-material",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-collector",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1955, from Museum für Völkerkunde Basel, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-313-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-313",
+      "predicate": "described_as",
+      "value": "Dimensions: H 18 cm"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-classification",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-holder",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "held_by",
+      "value": "Museum Rietberg"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-location",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "located_at",
+      "value": "Zurich"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-catalogue-number",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "catalogue_number",
+      "value": "RPO 317"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-material",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-collection-date",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "described_as",
+      "value": "Collection date: 1911"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-collector",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "described_as",
+      "value": "Collector: Walter Knoche"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-acquisition-date",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1958, from Museum für Völkerkunde Basel, collection Eduard von der Heydt"
+    },
+    {
+      "id": "moai-tangata-zurich-rpo-317-dimensions",
+      "objectId": "moai-tangata-zurich-rpo-317",
+      "predicate": "described_as",
+      "value": "Dimensions: H 31 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "catalogue_number",
+      "value": "MHNV 3 Registro surdoc 4-1914"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "made_of",
+      "value": "wood, bone, stone"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "described_as",
+      "value": "Collection date: 1915"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "described_as",
+      "value": "Dimensions: 6.7 cm x 43.5 cm x 8.4 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "catalogue_number",
+      "value": "MHNV 11 Registro surdoc 4-1916"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "made_of",
+      "value": "wood, bone, stone"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "described_as",
+      "value": "Collection date: 1916"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1921"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "predicate": "described_as",
+      "value": "Dimensions: 8 cm x 38 cm x 7.8 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "catalogue_number",
+      "value": "MHNV 4 Registro surdoc 4-1986"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "made_of",
+      "value": "wood, bone, stone"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "described_as",
+      "value": "Collection date: 1917"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1986"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "predicate": "described_as",
+      "value": "Dimensions: 7 cm x 50 cm x 15 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "catalogue_number",
+      "value": "MHNV 6 Registro surdoc 4-1988"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "made_of",
+      "value": "wood, bone, stone"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Collection date: 1919"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1988, from Natalio Wiengand"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Dimensions: 12.3 cm x 36 cm x 13 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "catalogue_number",
+      "value": "MHNV 7 Registro surdoc 4-1989"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "made_of",
+      "value": "wood, bone, stone"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "described_as",
+      "value": "Collection date: 1919"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1989, form Julio Bañados"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "predicate": "described_as",
+      "value": "Dimensions: 12 cm x 50 cm x 15 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "catalogue_number",
+      "value": "MHNV 8 Registro surdoc 4-1990"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "made_of",
+      "value": "wood, stone"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "described_as",
+      "value": "Collection date: 1920"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1990, gift of Juana Toro Méndez"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "predicate": "described_as",
+      "value": "Dimensions: 10 cm x 57 cm x16 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "catalogue_number",
+      "value": "MHNV 22 Registro surdoc 4-1920"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "described_as",
+      "value": "Collection date: 1920"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2011, gift of Gómez Carreño"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "predicate": "described_as",
+      "value": "Dimensions: 4.4 cm x 52.6 cm x 11 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "catalogue_number",
+      "value": "MHNV 10 Registro surdoc 4-1991"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "made_of",
+      "value": "wood, bones"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "described_as",
+      "value": "Collection date: 1922"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1991"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "predicate": "described_as",
+      "value": "Dimensions: 5 cm x 60 cm x 13 cm"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-635-114-38-classification",
+      "objectId": "moai-tangata-canterbury-e138-635-114-38",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-635-114-38-holder",
+      "objectId": "moai-tangata-canterbury-e138-635-114-38",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-635-114-38-location",
+      "objectId": "moai-tangata-canterbury-e138-635-114-38",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-635-114-38-catalogue-number",
+      "objectId": "moai-tangata-canterbury-e138-635-114-38",
+      "predicate": "catalogue_number",
+      "value": "E138.635 /114/38"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-635-114-38-material",
+      "objectId": "moai-tangata-canterbury-e138-635-114-38",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-635-114-38-collection-date",
+      "objectId": "moai-tangata-canterbury-e138-635-114-38",
+      "predicate": "described_as",
+      "value": "Collection date: 1924"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-635-114-38-collector",
+      "objectId": "moai-tangata-canterbury-e138-635-114-38",
+      "predicate": "described_as",
+      "value": "Collector: John Macmillan Brown"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-635-114-38-acquisition-date",
+      "objectId": "moai-tangata-canterbury-e138-635-114-38",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1938, from University of Canterbury"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-926-classification",
+      "objectId": "moai-tangata-canterbury-e138-926",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-926-holder",
+      "objectId": "moai-tangata-canterbury-e138-926",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-926-location",
+      "objectId": "moai-tangata-canterbury-e138-926",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-926-catalogue-number",
+      "objectId": "moai-tangata-canterbury-e138-926",
+      "predicate": "catalogue_number",
+      "value": "E138.926"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-926-material",
+      "objectId": "moai-tangata-canterbury-e138-926",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-926-collection-date",
+      "objectId": "moai-tangata-canterbury-e138-926",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-926-collector",
+      "objectId": "moai-tangata-canterbury-e138-926",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-canterbury-e138-926-acquisition-date",
+      "objectId": "moai-tangata-canterbury-e138-926",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-258-classification",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-258-holder",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "held_by",
+      "value": "MARKK Hamburg"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-258-location",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "located_at",
+      "value": "Hamburg"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-258-catalogue-number",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "catalogue_number",
+      "value": "22.42.258"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-258-material",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-258-collection-date",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-258-collector",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-hamburg-22-42-258-acquisition-date",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "described_as",
+      "value": "Acquisition date: 21 August 1922"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-classification",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-holder",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-location",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-catalogue-number",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "catalogue_number",
+      "value": "A.1924.333"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-material",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-collection-date",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-collector",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-acquisition-date",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1924, from Williamson and Watt"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1924-333-dimensions",
+      "objectId": "moai-tangata-edinburgh-a-1924-333",
+      "predicate": "described_as",
+      "value": "Dimensions: 10,9 x 653,4 x 11,1"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "catalogue_number",
+      "value": "MHNV 34 Registro surdoc 4-1926"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "described_as",
+      "value": "Collection date: 1926"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2011, gift from Gómez Carreño"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "described_as",
+      "value": "Dimensions: 10.8 cm x 57 cm x 12.5 cm"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-classification",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-holder",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "held_by",
+      "value": "Ethnologische Sammlung der Universität Göttingen"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-location",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "located_at",
+      "value": "Göttingen"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-catalogue-number",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "catalogue_number",
+      "value": "Oz 454"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-material",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-collection-date",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-collector",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-acquisition-date",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "described_as",
+      "value": "Acquisition date: before 1928"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-454-dimensions",
+      "objectId": "moai-tangata-gottingen-oz-454",
+      "predicate": "described_as",
+      "value": "Dimensions: H 41,5 cm"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-classification",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-holder",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-location",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-catalogue-number",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "catalogue_number",
+      "value": "D00320"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-material",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "made_of",
+      "value": "wood (sophora toromiro?), bone, obsidian"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-collection-date",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-collector",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-acquisition-date",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d00320-dimensions",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "described_as",
+      "value": "Dimensions: 33 x 8 x 6,5 cm"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-classification",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-holder",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-location",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-catalogue-number",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "catalogue_number",
+      "value": "D06472"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-material",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "made_of",
+      "value": "wood, bone"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-collection-date",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-collector",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-acquisition-date",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1934"
+    },
+    {
+      "id": "moai-tangata-bremen-d06472-dimensions",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "described_as",
+      "value": "Dimensions: 53 x 10 x 13 cm"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-classification",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-holder",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "held_by",
+      "value": "Ethnologische Sammlung der Universität Göttingen"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-location",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "located_at",
+      "value": "Göttingen"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-catalogue-number",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "catalogue_number",
+      "value": "Oz 455"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-material",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-collection-date",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-collector",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-acquisition-date",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "described_as",
+      "value": "Acquisition date: 4 February 1936, purchased from Arthur Speyer, Berlin"
+    },
+    {
+      "id": "moai-tangata-gottingen-oz-455-dimensions",
+      "objectId": "moai-tangata-gottingen-oz-455",
+      "predicate": "described_as",
+      "value": "Dimensions: H 52 cm"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-classification",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-holder",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-location",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-catalogue-number",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "catalogue_number",
+      "value": "D36.985"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-material",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-collection-date",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-collector",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-acquisition-date",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1936"
+    },
+    {
+      "id": "moai-tangata-otago-d36-985-dimensions",
+      "objectId": "moai-tangata-otago-d36-985",
+      "predicate": "described_as",
+      "value": "Dimensions: 18,4 x 3,4 x 11,5 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-classification",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-holder",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-location",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "catalogue_number",
+      "value": "5030"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-material",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "described_as",
+      "value": "Collection date: 1930s"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-collector",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2018, donated by Gondolini"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-5030-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-5030",
+      "predicate": "described_as",
+      "value": "Dimensions: 58 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-classification",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-holder",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-location",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "catalogue_number",
+      "value": "1036"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-material",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "described_as",
+      "value": "Collection date: 1930s"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-collector",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1036-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-1036",
+      "predicate": "described_as",
+      "value": "Dimensions: 56 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-classification",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-holder",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-location",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "catalogue_number",
+      "value": "1037"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-material",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "described_as",
+      "value": "Collection date: 1930s"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-collector",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1037-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-1037",
+      "predicate": "described_as",
+      "value": "Dimensions: 70 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1039-classification",
+      "objectId": "moai-tangata-vina-del-mar-1039",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1039-holder",
+      "objectId": "moai-tangata-vina-del-mar-1039",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1039-location",
+      "objectId": "moai-tangata-vina-del-mar-1039",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1039-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1039",
+      "predicate": "catalogue_number",
+      "value": "1039"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1039-material",
+      "objectId": "moai-tangata-vina-del-mar-1039",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1039-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1039",
+      "predicate": "described_as",
+      "value": "Collection date: 1930s"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1039-collector",
+      "objectId": "moai-tangata-vina-del-mar-1039",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1039-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1039",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-classification",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-holder",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-location",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "catalogue_number",
+      "value": "1040"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-material",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "described_as",
+      "value": "Collection date: 1930s"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-collector",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1040-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-1040",
+      "predicate": "described_as",
+      "value": "Dimensions: 57 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1352 / 66 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (miro pupu)"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Daniel Teave"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-dimensions",
+      "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Dimensions: 16,5 cm"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "catalogue_number",
+      "value": "MHNV 50 Registro surdoc 4-1938"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "described_as",
+      "value": "Collection date: 1938"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "predicate": "described_as",
+      "value": "Dimensions: 4.6 cm x 31 cm x 6.3 cm"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-classification",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-holder",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-location",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "located_at",
+      "value": "Stuttgart"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-catalogue-number",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "catalogue_number",
+      "value": "118194"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-material",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-collection-date",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-collector",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-acquisition-date",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1943, donation by Albert Beck"
+    },
+    {
+      "id": "moai-tangata-stuttgart-118194-dimensions",
+      "objectId": "moai-tangata-stuttgart-118194",
+      "predicate": "described_as",
+      "value": "Dimensions: 70,5 x 15 x 9,5 cm"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-classification",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-holder",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-location",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-catalogue-number",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1396 / 110 coll. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-material",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-collection-date",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: 1946"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-collector",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-acquisition-date",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "moai-tangata-stockholm-1950-01-0001-classification",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-stockholm-1950-01-0001-holder",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "moai-tangata-stockholm-1950-01-0001-location",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "moai-tangata-stockholm-1950-01-0001-catalogue-number",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "catalogue_number",
+      "value": "1950.01.0001"
+    },
+    {
+      "id": "moai-tangata-stockholm-1950-01-0001-material",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-stockholm-1950-01-0001-collection-date",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-stockholm-1950-01-0001-collector",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-stockholm-1950-01-0001-acquisition-date",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1950"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-classification",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-holder",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-location",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-catalogue-number",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "catalogue_number",
+      "value": "D13418"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-material",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-collection-date",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-collector",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-acquisition-date",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954"
+    },
+    {
+      "id": "moai-tangata-bremen-d13418-dimensions",
+      "objectId": "moai-tangata-bremen-d13418",
+      "predicate": "described_as",
+      "value": "Dimensions: 35 x 7,5 x 7 cm"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-classification",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-holder",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "held_by",
+      "value": "National Museums Scotland"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-location",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "located_at",
+      "value": "Edinburgh"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-catalogue-number",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "catalogue_number",
+      "value": "A.1954.101"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-material",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "made_of",
+      "value": "wood, bird bone, obsidian"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-collection-date",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-collector",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "described_as",
+      "value": "Collector: probably Harry Geoffrey Beasley"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-acquisition-date",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954, from Irene Marguerite Beasley"
+    },
+    {
+      "id": "moai-tangata-edinburgh-a-1954-101-dimensions",
+      "objectId": "moai-tangata-edinburgh-a-1954-101",
+      "predicate": "described_as",
+      "value": "Dimensions: approx. 27,9"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-location",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "catalogue_number",
+      "value": "MHNV 67 Registro surdoc 4-1998"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-collection-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "described_as",
+      "value": "Collection date: 1960"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-collector",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-acquisition-date",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1998, gift from the Gonzalez family from Playa Ancha"
+    },
+    {
+      "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "predicate": "described_as",
+      "value": "Dimensions: 13 cm x 54 cm x 16 cm"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-classification",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-holder",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-location",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-catalogue-number",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "catalogue_number",
+      "value": "D14890"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-material",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-collection-date",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-collector",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-acquisition-date",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1962"
+    },
+    {
+      "id": "moai-tangata-bremen-d14890-dimensions",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "described_as",
+      "value": "Dimensions: 18 x 6 x 8 cm"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-classification",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-holder",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "held_by",
+      "value": "Rautenstrauch-Joest-Museum"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-location",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "located_at",
+      "value": "Cologne"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-catalogue-number",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "catalogue_number",
+      "value": "54553"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-material",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-collection-date",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "described_as",
+      "value": "Collection date: around 1960"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-collector",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "described_as",
+      "value": "Collector: Wolfgang Wallisfurth"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-acquisition-date",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1993, donation by Theres Weyerich"
+    },
+    {
+      "id": "moai-tangata-cologne-54553-dimensions",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "described_as",
+      "value": "Dimensions: 57 x 6,8 x 6,5 cm"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-classification",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-holder",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-location",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-catalogue-number",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "catalogue_number",
+      "value": "VI 1000"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-material",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-collection-date",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-collector",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-acquisition-date",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "moai-tangata-berlin-vi-1000-dimensions",
+      "objectId": "moai-tangata-berlin-vi-1000",
+      "predicate": "described_as",
+      "value": "Dimensions: 25,3 x 6 x 8 cm"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-classification",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-holder",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-location",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-catalogue-number",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "catalogue_number",
+      "value": "D13412"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-material",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-collection-date",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-collector",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-acquisition-date",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954"
+    },
+    {
+      "id": "moai-tangata-bremen-d13412-dimensions",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "described_as",
+      "value": "Dimensions: 64 x 22,5 x 10 cm"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-classification",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-holder",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-location",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "located_at",
+      "value": "Bremen"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-catalogue-number",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "catalogue_number",
+      "value": "D13419"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-material",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-collection-date",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-collector",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-acquisition-date",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1954"
+    },
+    {
+      "id": "moai-tangata-bremen-d13419-dimensions",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "described_as",
+      "value": "Dimensions: 24 x 6,5 x 9,5 cm"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-classification",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-holder",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-location",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "located_at",
+      "value": "Rapa Nui"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-catalogue-number",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "catalogue_number",
+      "value": "17-295"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-material",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "made_of",
+      "value": "wood (Mako‘i), obsidian, and fish bones (shark)"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-collection-date",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-collector",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "Collector: Luis Tomás Pate Riroroko"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-acquisition-date",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2015, purchased from the author"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-295-dimensions",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "Dimensions: 67 cm x 13 cm"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-classification",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-holder",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-location",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "located_at",
+      "value": "Rapa Nui"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-catalogue-number",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "catalogue_number",
+      "value": "17-332"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-material",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-collection-date",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "described_as",
+      "value": "Collection date: 2017"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-collector",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "described_as",
+      "value": "Collector: Andrés Pakarati"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-acquisition-date",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2017, from the artist Cesar Manutomatomo"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-332-dimensions",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "described_as",
+      "value": "Dimensions: 33 x 12 x 6,5 cm"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-classification",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-holder",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-location",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "located_at",
+      "value": "Rapa Nui"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-catalogue-number",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "catalogue_number",
+      "value": "17-335"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-material",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea), bones, obsidian"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-collection-date",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-collector",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "described_as",
+      "value": "Collector: Andrés Pakarati"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-acquisition-date",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2017, from Andrés Pakarati"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-335-dimensions",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "described_as",
+      "value": "Dimensions: 41,5 x 10,5 x 6 cm"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-classification",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "classified_as",
+      "value": "Moai taŋata"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-holder",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-location",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "located_at",
+      "value": "Rapa Nui"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-catalogue-number",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "catalogue_number",
+      "value": "17-416"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-material",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-collection-date",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-collector",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "described_as",
+      "value": "Collector: Francisco Barrena"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-acquisition-date",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "described_as",
+      "value": "Acquisition date: 2019"
+    },
+    {
+      "id": "moai-tangata-rapa-nui-17-416-dimensions",
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "predicate": "described_as",
+      "value": "Dimensions: 32 x 9 x 9 cm"
     }
   ],
   "images": [],
@@ -5454,108 +10800,6 @@
     }
   ],
   "objectIds": [
-    "moai-tangata-canterbury-e150-1129-oldman-102-345",
-    "moai-tangata-canterbury-e150-1130-oldman-340-103",
-    "moai-tangata-canterbury-e150-1131-oldman-351",
-    "moai-tangata-new-york-1984-526",
-    "moai-tangata-berlin-vi-815",
-    "moai-tangata-edinburgh-a-1954-100",
-    "moai-tangata-hamburg-22-42-260",
-    "moai-tangata-leipzig-po-00436",
-    "moai-tangata-berlin-vi-4897",
-    "moai-tangata-berlin-vi-4909",
-    "moai-tangata-berlin-vi-4900",
-    "moai-tangata-dresden-48736",
-    "moai-tangata-dresden-18356",
-    "moai-tangata-dresden-18357",
-    "moai-tangata-dresden-18358",
-    "moai-tangata-dresden-54420",
-    "moai-tangata-hildesheim-v-64",
-    "moai-tangata-leiden-rv-517-2",
-    "moai-tangata-stockholm-1885-05-0002",
-    "moai-tangata-cambridge-z-6123",
-    "moai-tangata-leiden-rv-702-1",
-    "moai-tangata-leiden-rv-547-3",
-    "moai-tangata-lubeck-3778b",
-    "moai-tangata-wellington-fe010507",
-    "moai-tangata-bergen-bme-1193",
-    "moai-tangata-edinburgh-a-1895-301",
-    "moai-tangata-dresden-18360",
-    "moai-tangata-stuttgart-5700",
-    "moai-tangata-stuttgart-5701",
-    "moai-tangata-stuttgart-30550",
-    "moai-tangata-stockholm-1908-03-0057",
-    "moai-tangata-frankfurt-am-main-ns-11788",
-    "moai-tangata-otago-d59-248",
-    "moai-tangata-edinburgh-a-1936-99",
-    "moai-tangata-vina-del-mar-4102",
-    "moai-tangata-vina-del-mar-5033",
-    "moai-tangata-vina-del-mar-975",
-    "moai-tangata-vina-del-mar-982",
-    "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
-    "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
-    "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
-    "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
-    "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
-    "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
-    "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
-    "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
-    "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
-    "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
-    "moai-tangata-lubeck-7100b",
-    "moai-tangata-cologne-46889",
-    "moai-tangata-frankfurt-am-main-ns-20327",
-    "moai-tangata-zurich-12311",
-    "moai-tangata-zurich-rpo-301",
-    "moai-tangata-zurich-09977",
-    "moai-tangata-zurich-rpo-302",
-    "moai-tangata-zurich-rpo-307",
-    "moai-tangata-zurich-rpo-308",
-    "moai-tangata-zurich-rpo-310",
-    "moai-tangata-zurich-rpo-311",
-    "moai-tangata-zurich-rpo-312",
-    "moai-tangata-zurich-rpo-313",
-    "moai-tangata-zurich-rpo-317",
-    "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
-    "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
-    "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
-    "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
-    "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
-    "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
-    "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
-    "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
-    "moai-tangata-canterbury-e138-635-114-38",
-    "moai-tangata-canterbury-e138-926",
-    "moai-tangata-hamburg-22-42-258",
-    "moai-tangata-edinburgh-a-1924-333",
-    "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
-    "moai-tangata-gottingen-oz-454",
-    "moai-tangata-bremen-d00320",
-    "moai-tangata-bremen-d06472",
-    "moai-tangata-gottingen-oz-455",
-    "moai-tangata-otago-d36-985",
-    "moai-tangata-vina-del-mar-5030",
-    "moai-tangata-vina-del-mar-1036",
-    "moai-tangata-vina-del-mar-1037",
-    "moai-tangata-vina-del-mar-1039",
-    "moai-tangata-vina-del-mar-1040",
-    "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
-    "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
-    "moai-tangata-stuttgart-118194",
-    "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
-    "moai-tangata-stockholm-1950-01-0001",
-    "moai-tangata-bremen-d13418",
-    "moai-tangata-edinburgh-a-1954-101",
-    "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
-    "moai-tangata-bremen-d14890",
-    "moai-tangata-cologne-54553",
-    "moai-tangata-berlin-vi-1000",
-    "moai-tangata-bremen-d13412",
-    "moai-tangata-bremen-d13419",
-    "moai-tangata-rapa-nui-17-295",
-    "moai-tangata-rapa-nui-17-332",
-    "moai-tangata-rapa-nui-17-335",
-    "moai-tangata-rapa-nui-17-416",
     "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
     "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
     "moai-pa-apa-a-new-york-1979-206-1478",
