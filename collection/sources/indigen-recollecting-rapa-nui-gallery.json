@@ -11996,6 +11996,1038 @@
       "objectId": "moai-pa-apa-a-rapa-nui-17-259",
       "predicate": "described_as",
       "value": "Dimensions: 43,5 x 9,5 x 2,5 cm"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-classification",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-holder",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-location",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-catalogue-number",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "catalogue_number",
+      "value": "E150.1124/ OLDMAN 359/105"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-material",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-collection-date",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-collector",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-acquisition-date",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1948, by New Zealand Government from William Oldman"
+    },
+    {
+      "id": "reimiro-canterbury-e150-1124-oldman-359-105-dimensions",
+      "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
+      "predicate": "described_as",
+      "value": "Dimensions: 41,91 x 20,32 cm/ 41 x 18 cm"
+    },
+    {
+      "id": "reimiro-canterbury-e149-175-20-49-classification",
+      "objectId": "reimiro-canterbury-e149-175-20-49",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-canterbury-e149-175-20-49-holder",
+      "objectId": "reimiro-canterbury-e149-175-20-49",
+      "predicate": "held_by",
+      "value": "Canterbury Museum"
+    },
+    {
+      "id": "reimiro-canterbury-e149-175-20-49-location",
+      "objectId": "reimiro-canterbury-e149-175-20-49",
+      "predicate": "located_at",
+      "value": "Canterbury"
+    },
+    {
+      "id": "reimiro-canterbury-e149-175-20-49-catalogue-number",
+      "objectId": "reimiro-canterbury-e149-175-20-49",
+      "predicate": "catalogue_number",
+      "value": "E149.175/20/49"
+    },
+    {
+      "id": "reimiro-canterbury-e149-175-20-49-material",
+      "objectId": "reimiro-canterbury-e149-175-20-49",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-canterbury-e149-175-20-49-collection-date",
+      "objectId": "reimiro-canterbury-e149-175-20-49",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-canterbury-e149-175-20-49-collector",
+      "objectId": "reimiro-canterbury-e149-175-20-49",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-canterbury-e149-175-20-49-acquisition-date",
+      "objectId": "reimiro-canterbury-e149-175-20-49",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1949, purchased by Roger Duff from Mr. Kenneth A Webster, London"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-classification",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-holder",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-location",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "located_at",
+      "value": "New York"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-catalogue-number",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "catalogue_number",
+      "value": "1979.206.1527"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-material",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-collection-date",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "described_as",
+      "value": "Collection date: 19th century"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-collector",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-acquisition-date",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1979, from the Michael C. Rockefeller Memorial Collection, bequest of Nelson A. Rockefeller"
+    },
+    {
+      "id": "reimiro-new-york-1979-206-1527-dimensions",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "described_as",
+      "value": "Dimensions: 26,7 × 44,1 × 2,2 cm"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-classification",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-holder",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-location",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-catalogue-number",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "catalogue_number",
+      "value": "VI 4870"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-material",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-collection-date",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-collector",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich A. Schlubach"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-acquisition-date",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1883"
+    },
+    {
+      "id": "reimiro-berlin-vi-4870-dimensions",
+      "objectId": "reimiro-berlin-vi-4870",
+      "predicate": "described_as",
+      "value": "Dimensions: 21,5 x 46 x 0,7 cm"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-classification",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-holder",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-location",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "located_at",
+      "value": "Leipzig"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-catalogue-number",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "catalogue_number",
+      "value": "Po 00440"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-material",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-collection-date",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "described_as",
+      "value": "Collection date: around 1885"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-collector",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-acquisition-date",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, previous owner: Johan Cesar Godeffroy; Museum Godeffroy Hamburg"
+    },
+    {
+      "id": "reimiro-leipzig-po-00440-dimensions",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "described_as",
+      "value": "Dimensions: 55,6 x 13,8 x 2,5 cm"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-classification",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-holder",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-location",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "located_at",
+      "value": "Leipzig"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-catalogue-number",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "catalogue_number",
+      "value": "Po 00441"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-material",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-collection-date",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "described_as",
+      "value": "Collection date: around 1885"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-collector",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-acquisition-date",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, previous owner: Johan Cesar Godeffroy; Museum Godeffroy Hamburg"
+    },
+    {
+      "id": "reimiro-leipzig-po-00441-dimensions",
+      "objectId": "reimiro-leipzig-po-00441",
+      "predicate": "described_as",
+      "value": "Dimensions: 36,5 x 7 x 2 cm"
+    },
+    {
+      "id": "reimiro-cambridge-e-1894-94-classification",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-cambridge-e-1894-94-holder",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "reimiro-cambridge-e-1894-94-location",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "reimiro-cambridge-e-1894-94-catalogue-number",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "catalogue_number",
+      "value": "E 1894.94"
+    },
+    {
+      "id": "reimiro-cambridge-e-1894-94-material",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-cambridge-e-1894-94-collection-date",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Collection date: 1894"
+    },
+    {
+      "id": "reimiro-cambridge-e-1894-94-collector",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-cambridge-e-1894-94-acquisition-date",
+      "objectId": "reimiro-cambridge-e-1894-94",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, purchased with a donation from James Anthony Froude"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-classification",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-holder",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-location",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "located_at",
+      "value": "Berlin"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-catalogue-number",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "catalogue_number",
+      "value": "VI 12648"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-material",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-collection-date",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-collector",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "described_as",
+      "value": "Collector: Schneider"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-acquisition-date",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1895"
+    },
+    {
+      "id": "reimiro-berlin-vi-12648-dimensions",
+      "objectId": "reimiro-berlin-vi-12648",
+      "predicate": "described_as",
+      "value": "Dimensions: 15,5 x 43,5 x 4 cm"
+    },
+    {
+      "id": "reimiro-stockholm-1909-10-0021-classification",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-stockholm-1909-10-0021-holder",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "held_by",
+      "value": "Etnografiska Museet"
+    },
+    {
+      "id": "reimiro-stockholm-1909-10-0021-location",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "located_at",
+      "value": "Stockholm"
+    },
+    {
+      "id": "reimiro-stockholm-1909-10-0021-catalogue-number",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "catalogue_number",
+      "value": "1909.10.0021"
+    },
+    {
+      "id": "reimiro-stockholm-1909-10-0021-material",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-stockholm-1909-10-0021-collection-date",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-stockholm-1909-10-0021-collector",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Collector: Carl Skottsberg"
+    },
+    {
+      "id": "reimiro-stockholm-1909-10-0021-acquisition-date",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1909"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-classification",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-holder",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "held_by",
+      "value": "Museum of Archaeology and Anthropology"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-location",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "located_at",
+      "value": "Cambridge"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-catalogue-number",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "catalogue_number",
+      "value": "1920.801"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-material",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-collection-date",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-collector",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-acquisition-date",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1920, donated by Eliza von Hügel"
+    },
+    {
+      "id": "reimiro-cambridge-1920-801-dimensions",
+      "objectId": "reimiro-cambridge-1920-801",
+      "predicate": "described_as",
+      "value": "Dimensions: 1 x 27 x 49 cm"
+    },
+    {
+      "id": "reimiro-otago-d34-600-classification",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-otago-d34-600-holder",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "held_by",
+      "value": "Tūhura Otago Museum"
+    },
+    {
+      "id": "reimiro-otago-d34-600-location",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "located_at",
+      "value": "Otago"
+    },
+    {
+      "id": "reimiro-otago-d34-600-catalogue-number",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "catalogue_number",
+      "value": "D34.600"
+    },
+    {
+      "id": "reimiro-otago-d34-600-material",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-otago-d34-600-collection-date",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-otago-d34-600-collector",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-otago-d34-600-acquisition-date",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1934"
+    },
+    {
+      "id": "reimiro-otago-d34-600-dimensions",
+      "objectId": "reimiro-otago-d34-600",
+      "predicate": "described_as",
+      "value": "Dimensions: 18,5 cm x 93,4 x 3,6 cm"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-classification",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-holder",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-location",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-catalogue-number",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "catalogue_number",
+      "value": "MHNV 28 Registro surdoc 4-1994"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-material",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-collection-date",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "described_as",
+      "value": "Collection date: 1938"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-collector",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-acquisition-date",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1994, from Domingo Fuenzalida"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-dimensions",
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "predicate": "described_as",
+      "value": "Dimensions: 5 cm x 38 cm x 15 cm"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-classification",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-holder",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-location",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "located_at",
+      "value": "Valparaíso"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-catalogue-number",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "catalogue_number",
+      "value": "MHNV 38 Registro surdoc 4-1995"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-material",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-collection-date",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Collection date: 1947"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-collector",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-acquisition-date",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1995, from Tute Flores"
+    },
+    {
+      "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-dimensions",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Dimensions: 4 cm x 23 cm x 17 cm"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-classification",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-holder",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-location",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "located_at",
+      "value": "Rapa Nui"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-catalogue-number",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "catalogue_number",
+      "value": "17-30"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-material",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-collection-date",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-collector",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-acquisition-date",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "reimiro-rapa-nui-17-30-dimensions",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "described_as",
+      "value": "Dimensions: 28 x 13 x 4 cm"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-classification",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-holder",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-location",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-catalogue-number",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "catalogue_number",
+      "value": "69"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-material",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "made_of",
+      "value": "wood (Miro Tahiti, Thespesia populnea)"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-collection-date",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-collector",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "described_as",
+      "value": "Collector: unknown"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-acquisition-date",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown, donated by Rigoberto Cruz"
+    },
+    {
+      "id": "reimiro-vina-del-mar-69-dimensions",
+      "objectId": "reimiro-vina-del-mar-69",
+      "predicate": "described_as",
+      "value": "Dimensions: 43 x 14,5 cm"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-classification",
+      "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-holder",
+      "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-location",
+      "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-catalogue-number",
+      "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1639/ 353 coll. Felbermayer"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-material",
+      "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-collection-date",
+      "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-collector",
+      "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Andres Pate"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-acquisition-date",
+      "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-classification",
+      "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-holder",
+      "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-location",
+      "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-catalogue-number",
+      "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1651/ 365 coll. Felbermayer"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-material",
+      "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Makoi, Thespesia populnea)"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-collection-date",
+      "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-collector",
+      "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Jose Pakomio"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-acquisition-date",
+      "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-classification",
+      "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-holder",
+      "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-location",
+      "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-catalogue-number",
+      "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1809/ 523 coll. Felbermayer"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-material",
+      "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-collection-date",
+      "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-collector",
+      "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from Juan Atan"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-acquisition-date",
+      "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: 1980, donated by F. Felbermayer"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-classification",
+      "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-holder",
+      "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-location",
+      "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-catalogue-number",
+      "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
+      "predicate": "catalogue_number",
+      "value": "1856/ 570 coll. Felbermayer"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-material",
+      "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
+      "predicate": "made_of",
+      "value": "wood (Miro Tahiti, Thespesia populnea)"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-collection-date",
+      "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-collector",
+      "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Collector: F. Felbermayer, obtained from C. Schaible"
+    },
+    {
+      "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-acquisition-date",
+      "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
+    },
+    {
+      "id": "reimiro-vina-del-mar-3813-classification",
+      "objectId": "reimiro-vina-del-mar-3813",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "reimiro-vina-del-mar-3813-holder",
+      "objectId": "reimiro-vina-del-mar-3813",
+      "predicate": "held_by",
+      "value": "Museo de Arqueología e Historia Francisco Fonck"
+    },
+    {
+      "id": "reimiro-vina-del-mar-3813-location",
+      "objectId": "reimiro-vina-del-mar-3813",
+      "predicate": "located_at",
+      "value": "Viña del Mar"
+    },
+    {
+      "id": "reimiro-vina-del-mar-3813-catalogue-number",
+      "objectId": "reimiro-vina-del-mar-3813",
+      "predicate": "catalogue_number",
+      "value": "3813"
+    },
+    {
+      "id": "reimiro-vina-del-mar-3813-material",
+      "objectId": "reimiro-vina-del-mar-3813",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "reimiro-vina-del-mar-3813-collection-date",
+      "objectId": "reimiro-vina-del-mar-3813",
+      "predicate": "described_as",
+      "value": "Collection date: unknown"
+    },
+    {
+      "id": "reimiro-vina-del-mar-3813-collector",
+      "objectId": "reimiro-vina-del-mar-3813",
+      "predicate": "described_as",
+      "value": "Collector: Roberto Gajardo Tobar"
+    },
+    {
+      "id": "reimiro-vina-del-mar-3813-acquisition-date",
+      "objectId": "reimiro-vina-del-mar-3813",
+      "predicate": "described_as",
+      "value": "Acquisition date: unknown"
     }
   ],
   "images": [],
@@ -12012,26 +13044,6 @@
     }
   ],
   "objectIds": [
-    "reimiro-canterbury-e150-1124-oldman-359-105",
-    "reimiro-canterbury-e149-175-20-49",
-    "reimiro-new-york-1979-206-1527",
-    "reimiro-berlin-vi-4870",
-    "reimiro-leipzig-po-00440",
-    "reimiro-leipzig-po-00441",
-    "reimiro-cambridge-e-1894-94",
-    "reimiro-berlin-vi-12648",
-    "reimiro-stockholm-1909-10-0021",
-    "reimiro-cambridge-1920-801",
-    "reimiro-otago-d34-600",
-    "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
-    "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
-    "reimiro-rapa-nui-17-30",
-    "reimiro-vina-del-mar-69",
-    "reimiro-vina-del-mar-1639-353-coll-felbermayer",
-    "reimiro-vina-del-mar-1651-365-coll-felbermayer",
-    "reimiro-vina-del-mar-1809-523-coll-felbermayer",
-    "reimiro-vina-del-mar-1856-570-coll-felbermayer",
-    "reimiro-vina-del-mar-3813",
     "ao-canterbury-e150-1137-oldman-355",
     "ao-te-papa",
     "ao-otago-d47-560",
