@@ -1,0 +1,56 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc1869-1005-1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "00372e1c-e0e1-46a8-a585-5a53f37289f0",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "located_at",
+      "value": "British Museum, Room 24"
+    },
+    {
+      "id": "2352d5b7-89f3-4d79-8f24-f0fdc777f0ed",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "found_at",
+      "value": "Orongo"
+    },
+    {
+      "id": "526a21c3-7272-4ce7-8703-4a4c18df64b5",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc1869,1005.1"
+    },
+    {
+      "id": "961ecabd-ccab-46d8-bf70-e16c765cd21c",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "held_by",
+      "value": "British Museum"
+    },
+    {
+      "id": "a3440928-134a-4639-89d3-2788502b23fe",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "made_at",
+      "value": "Rano Kao"
+    },
+    {
+      "id": "b320b554-93cc-4f70-8fa5-febd282e155a",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "located_at",
+      "value": "London"
+    },
+    {
+      "id": "c72ce908-12f2-4005-90fc-74943d248636",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "catalogue_number",
+      "value": "british-museum-aoa: 1869,10-5.1"
+    },
+    {
+      "id": "facf257e-d059-4605-a846-413f60beb70c",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "has_name",
+      "value": "Hoa Hakananaiʻa"
+    }
+  ],
+  "images": []
+}

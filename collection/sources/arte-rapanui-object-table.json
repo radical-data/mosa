@@ -1,0 +1,68 @@
+{
+  "author": null,
+  "reference": "Arte en la cultura rapanui, supplied original PDF; museum-object table, pages 15-18; compiler attribution unverified",
+  "language": "es",
+  "claims": [
+    {
+      "id": "kava-kava-doble-cabeza-type",
+      "objectId": "kava-kava-doble-cabeza",
+      "predicate": "classified_as",
+      "value": "Kava kava de doble cabeza"
+    },
+    {
+      "id": "moai-piedra-sombrero-type",
+      "objectId": "moai-piedra-sombrero",
+      "predicate": "classified_as",
+      "value": "Moai de piedra con sombrero"
+    },
+    {
+      "id": "figura-boca-circular-type",
+      "objectId": "figura-boca-circular",
+      "predicate": "classified_as",
+      "value": "Figura humana con boca circular"
+    },
+    {
+      "id": "ao-pintado-type",
+      "objectId": "ao-pintado",
+      "predicate": "classified_as",
+      "value": "Ao pintado"
+    },
+    {
+      "id": "rei-miro-gallo-type",
+      "objectId": "rei-miro-gallo",
+      "predicate": "classified_as",
+      "value": "Rei miro de gallo"
+    },
+    {
+      "id": "rei-miro-caras-humanas-type",
+      "objectId": "rei-miro-caras-humanas",
+      "predicate": "classified_as",
+      "value": "Rei miro con caras humanas y figura incise al centro"
+    },
+    {
+      "id": "tangata-manu-rongorongo-type",
+      "objectId": "tangata-manu-rongorongo",
+      "predicate": "classified_as",
+      "value": "Tangata Manu con signos rongo rongo"
+    },
+    {
+      "id": "ngaru-a-type",
+      "objectId": "ngaru-a",
+      "predicate": "classified_as",
+      "value": "Piedra almohada con petroglifos (ngaru’a)"
+    },
+    {
+      "id": "rei-miro-concha-type",
+      "objectId": "rei-miro-concha",
+      "predicate": "classified_as",
+      "value": "Rei miro de concha"
+    },
+    {
+      "id": "tahonga-incrustaciones-type",
+      "objectId": "tahonga-incrustaciones",
+      "predicate": "classified_as",
+      "value": "Tahonga simple con incrustaciones"
+    }
+  ],
+  "images": []
+}

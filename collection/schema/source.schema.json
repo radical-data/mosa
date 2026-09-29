@@ -4,9 +4,8 @@
   "title": "MoSA collection source",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "author", "reference", "language", "claims", "images"],
+  "required": ["author", "reference", "language", "claims", "images"],
   "properties": {
-    "id": { "$ref": "#/$defs/id" },
     "author": { "type": ["string", "null"], "minLength": 1 },
     "reference": { "type": "string", "minLength": 1 },
     "language": {
@@ -45,9 +44,8 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "objectId", "file", "alt"],
+        "required": ["objectId", "file", "alt"],
         "properties": {
-          "id": { "$ref": "#/$defs/id" },
           "objectId": { "$ref": "#/$defs/id" },
           "file": { "type": "string", "minLength": 1 },
           "alt": { "type": "string" },
@@ -62,7 +60,7 @@
   "$defs": {
     "id": {
       "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9-]*$|^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
     }
   }
 }

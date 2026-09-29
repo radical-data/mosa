@@ -1,0 +1,26 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-2595",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc,+.2595"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "held_by",
+      "value": "British Museum"
+    },
+    {
+      "id": "name",
+      "objectId": "moai-kavakava-british-museum",
+      "predicate": "has_name",
+      "value": "figure ('moai kavakava')"
+    }
+  ],
+  "images": []
+}

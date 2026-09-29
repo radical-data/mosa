@@ -1,0 +1,14 @@
+{
+  "author": null,
+  "reference": "https://www.beweb.chiesacattolica.it/istituticulturali/istituto/3557",
+  "language": "it",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "mamari",
+      "predicate": "catalogue_number",
+      "value": "sscc-catalogue: P 003"
+    }
+  ],
+  "images": []
+}

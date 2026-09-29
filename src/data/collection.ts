@@ -7,6 +7,7 @@ import {
   parseEditorialFrontmatter,
   parseObject,
   parseSource,
+  qualifyClaim,
   type Source,
   validateCollection,
 } from "./collection-model";
@@ -39,8 +40,6 @@ const sources = Object.entries(sourceModules).map(([file, value]) =>
 const checked = validateCollection(
   { objects, sources },
   {
-    objectFiles: new Map(objects.map((object) => [object.id, `${object.id}.json`])),
-    sourceFiles: new Map(sources.map((source) => [source.id, `${source.id}.json`])),
     imageFiles: new Set(Object.keys(imageModules).map(imageName)),
   },
 );
@@ -100,7 +99,9 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
   const claims = objectSources.flatMap((source) =>
     source.claims.map((claim) => ({ claim, source })),
   );
-  const claimById = new Map(claims.map((entry) => [entry.claim.id, entry]));
+  const claimById = new Map(
+    claims.map((entry) => [qualifyClaim(entry.source.id, entry.claim.id), entry]),
+  );
   const recordEditorials = editorials
     .filter((entry) => entry.objectId === objectId)
     .sort((a, b) => a.id.localeCompare(b.id));
@@ -126,6 +127,7 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
     images: recordImages,
     editorials: recordEditorials,
     searchExact: [
+      object.id,
       object.name,
       ...claims.map(({ claim, source }) => `${claim.predicate} ${claim.value} ${source.reference}`),
     ].join(" "),

@@ -49,8 +49,6 @@ for (const image of imageFiles) {
 const checked = validateCollection(
   { objects, sources },
   {
-    objectFiles: new Map(objects.map((object, index) => [object.id, objectNames[index]])),
-    sourceFiles: new Map(sources.map((source, index) => [source.id, sourceNames[index]])),
     imageFiles,
   },
 );
@@ -60,10 +58,7 @@ for (const name of await files("editorials", ".md")) {
     await readFile(path.join(root, "editorials", name), "utf8"),
     name,
   );
-  if (editorialIds.has(metadata.id)) throw Error(`duplicate editorial id: ${metadata.id}`);
   editorialIds.add(metadata.id);
-  if (name !== `${metadata.id}.md`)
-    throw Error(`${name}: filename must match editorial id ${metadata.id}`);
   if (!checked.objects.some((object) => object.id === metadata.objectId))
     throw Error(`${name}: refers to missing object ${metadata.objectId}`);
 }

@@ -1,0 +1,14 @@
+{
+  "author": null,
+  "reference": "Arte en la cultura rapanui, supplied original PDF, page 15; compiler attribution unverified",
+  "language": "es",
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "aroukou-kurenga",
+      "predicate": "has_name",
+      "value": "Aroukou Kurenga"
+    }
+  ],
+  "images": []
+}

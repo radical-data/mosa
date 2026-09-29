@@ -27,7 +27,6 @@ export interface Claim {
 }
 
 export interface CollectionImage {
-  id: string;
   objectId: string;
   file: string;
   alt: string;
@@ -59,14 +58,14 @@ export interface CollectionData {
   sources: Source[];
 }
 
-const identifier =
-  /^(?:[a-z0-9][a-z0-9-]*|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$/;
+const identifier = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const claimReference = /^[a-z0-9]+(?:-[a-z0-9]+)*\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const language = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
 const imagePath = /^(?!\/)(?!.*(?:^|\/)\.\.(?:\/|$)).+\.(?:avif|jpe?g|png|webp)$/i;
-const objectKeys = ["foregroundedClaims", "id", "name"];
-const sourceKeys = ["author", "claims", "id", "images", "language", "reference"];
+const objectKeys = ["foregroundedClaims", "name"];
+const sourceKeys = ["author", "claims", "images", "language", "reference"];
 const claimKeys = ["id", "objectId", "predicate", "value"];
-const imageKeys = ["alt", "caption", "credit", "file", "id", "objectId", "originalUrl", "rights"];
+const imageKeys = ["alt", "caption", "credit", "file", "objectId", "originalUrl", "rights"];
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
   !!value && typeof value === "object" && !Array.isArray(value);
@@ -74,16 +73,25 @@ const sameKeys = (value: Record<string, unknown>, allowed: string[]) =>
   Object.keys(value).every((key) => allowed.includes(key));
 const text = (value: unknown) => typeof value === "string" && value.trim().length > 0;
 const id = (value: unknown) => typeof value === "string" && identifier.test(value);
+const reference = (value: unknown) => typeof value === "string" && claimReference.test(value);
 const add = (errors: string[], condition: boolean, message: string) => {
   if (!condition) errors.push(message);
 };
 
+const fileId = (file: string, extension: string) => {
+  const match = new RegExp(`^([a-z0-9]+(?:-[a-z0-9]+)*)\\.${extension}$`).exec(file);
+  if (!match) throw Error(`${file}: filename is not a valid identifier`);
+  return match[1];
+};
+
+export const qualifyClaim = (sourceId: string, claimId: string) => `${sourceId}/${claimId}`;
+
 export function parseObject(value: unknown, file: string): CollectionObject {
   const errors: string[] = [];
+  const objectId = fileId(file, "json");
   add(errors, isObject(value), `${file}: expected an object`);
   if (!isObject(value)) throw Error(errors.join("\n"));
   add(errors, sameKeys(value, objectKeys), `${file}: contains an unsupported field`);
-  add(errors, id(value.id), `${file}: id is invalid`);
   add(errors, text(value.name), `${file}: name is required`);
   add(
     errors,
@@ -93,8 +101,8 @@ export function parseObject(value: unknown, file: string): CollectionObject {
   if (Array.isArray(value.foregroundedClaims)) {
     add(
       errors,
-      value.foregroundedClaims.every(id),
-      `${file}: foregroundedClaims contains an invalid id`,
+      value.foregroundedClaims.every(reference),
+      `${file}: foregroundedClaims contains an invalid claim reference`,
     );
     add(
       errors,
@@ -103,15 +111,15 @@ export function parseObject(value: unknown, file: string): CollectionObject {
     );
   }
   if (errors.length) throw Error(errors.join("\n"));
-  return value as unknown as CollectionObject;
+  return { ...(value as Omit<CollectionObject, "id">), id: objectId };
 }
 
 export function parseSource(value: unknown, file: string): Source {
   const errors: string[] = [];
+  const sourceId = fileId(file, "json");
   add(errors, isObject(value), `${file}: expected an object`);
   if (!isObject(value)) throw Error(errors.join("\n"));
   add(errors, sameKeys(value, sourceKeys), `${file}: contains an unsupported field`);
-  add(errors, id(value.id), `${file}: id is invalid`);
   add(errors, value.author === null || text(value.author), `${file}: author must be text or null`);
   add(errors, text(value.reference), `${file}: reference is required`);
   add(
@@ -142,7 +150,6 @@ export function parseSource(value: unknown, file: string): Source {
       add(errors, isObject(entry), `${at} must be an object`);
       if (!isObject(entry)) return;
       add(errors, sameKeys(entry, imageKeys), `${at} contains an unsupported field`);
-      add(errors, id(entry.id), `${at}.id is invalid`);
       add(errors, id(entry.objectId), `${at}.objectId is invalid`);
       add(
         errors,
@@ -166,48 +173,46 @@ export function parseSource(value: unknown, file: string): Source {
       }
     });
   if (errors.length) throw Error(errors.join("\n"));
-  return value as unknown as Source;
+  return { ...(value as unknown as Omit<Source, "id">), id: sourceId };
 }
 
 export function validateCollection(
   data: CollectionData,
   options: {
-    objectFiles?: Map<string, string>;
-    sourceFiles?: Map<string, string>;
     imageFiles?: Set<string>;
   } = {},
 ) {
   const errors: string[] = [];
   const objects = new Map<string, CollectionObject>();
   const claims = new Map<string, Claim>();
-  const images = new Set<string>();
   const sources = new Set<string>();
   for (const object of data.objects) {
     if (objects.has(object.id)) errors.push(`duplicate object id: ${object.id}`);
     objects.set(object.id, object);
-    const filename = options.objectFiles?.get(object.id);
-    if (filename && filename !== `${object.id}.json`)
-      errors.push(`${filename}: filename must match object id ${object.id}`);
   }
   for (const source of data.sources) {
     if (sources.has(source.id)) errors.push(`duplicate source id: ${source.id}`);
     sources.add(source.id);
-    const filename = options.sourceFiles?.get(source.id);
-    if (filename && filename !== `${source.id}.json`)
-      errors.push(`${filename}: filename must match source id ${source.id}`);
+    const sourceClaims = new Set<string>();
+    const sourceImages = new Set<string>();
     for (const claim of source.claims) {
-      if (claims.has(claim.id)) errors.push(`duplicate claim id: ${claim.id}`);
-      claims.set(claim.id, claim);
+      const claimId = qualifyClaim(source.id, claim.id);
+      if (sourceClaims.has(claim.id))
+        errors.push(`${source.id}.json: duplicate claim id: ${claim.id}`);
+      sourceClaims.add(claim.id);
+      claims.set(claimId, claim);
       if (!objects.has(claim.objectId))
-        errors.push(`claim ${claim.id} refers to missing object ${claim.objectId}`);
+        errors.push(`claim ${claimId} refers to missing object ${claim.objectId}`);
     }
     for (const image of source.images) {
-      if (images.has(image.id)) errors.push(`duplicate image id: ${image.id}`);
-      images.add(image.id);
+      const imageId = `${image.objectId}/${image.file}`;
+      if (sourceImages.has(imageId))
+        errors.push(`${source.id}.json: duplicate image for ${image.objectId}: ${image.file}`);
+      sourceImages.add(imageId);
       if (!objects.has(image.objectId))
-        errors.push(`image ${image.id} refers to missing object ${image.objectId}`);
+        errors.push(`image ${source.id}/${image.file} refers to missing object ${image.objectId}`);
       if (options.imageFiles && !options.imageFiles.has(image.file))
-        errors.push(`image ${image.id} refers to missing file ${image.file}`);
+        errors.push(`image ${source.id}/${image.file} refers to missing file ${image.file}`);
     }
   }
   for (const object of data.objects)
@@ -226,6 +231,7 @@ export function validateCollection(
 }
 
 export function parseEditorialFrontmatter(value: string, file: string): EditorialMetadata {
+  const editorialId = fileId(file, "md");
   const match = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/.exec(value);
   if (!match) throw Error(`${file}: editorial requires YAML front matter`);
   const fields = new Map<string, string | null>();
@@ -241,17 +247,16 @@ export function parseEditorialFrontmatter(value: string, file: string): Editoria
         : raw.replace(/^(?:"(.*)"|'(.*)')$/, "$1$2"),
     );
   }
-  const allowed = new Set(["id", "objectId", "title", "author", "language"]);
+  const allowed = new Set(["objectId", "title", "author", "language"]);
   if ([...fields.keys()].some((key) => !allowed.has(key)))
     throw Error(`${file}: editorial contains an unsupported field`);
   const metadata = Object.fromEntries(fields) as unknown as EditorialMetadata;
   if (
-    !id(metadata.id) ||
     !id(metadata.objectId) ||
     !text(metadata.title) ||
     !(metadata.author === null || text(metadata.author)) ||
     !language.test(metadata.language)
   )
     throw Error(`${file}: editorial front matter is incomplete or invalid`);
-  return metadata;
+  return { ...metadata, id: editorialId };
 }

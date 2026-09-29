@@ -7,21 +7,16 @@ import {
 } from "./collection-model";
 
 const object = parseObject(
-  { id: "object-one", name: "Object one", foregroundedClaims: ["claim-one"] },
+  { name: "Object one", foregroundedClaims: ["source-one/name"] },
   "object-one.json",
 );
 const source = parseSource(
   {
-    id: "source-one",
     author: null,
     reference: "Example catalogue",
     language: "en-GB",
-    claims: [
-      { id: "claim-one", objectId: "object-one", predicate: "has_name", value: "Object one" },
-    ],
-    images: [
-      { id: "image-one", objectId: "object-one", file: "object-one/front.jpg", alt: "Front view" },
-    ],
+    claims: [{ id: "name", objectId: "object-one", predicate: "has_name", value: "Object one" }],
+    images: [{ objectId: "object-one", file: "object-one/front.jpg", alt: "Front view" }],
   },
   "source-one.json",
 );
@@ -32,7 +27,9 @@ describe("collection model", () => {
       { objects: [object], sources: [source] },
       { imageFiles: new Set(["object-one/front.jpg"]) },
     );
-    expect(data.claims.get("claim-one")?.value).toBe("Object one");
+    expect(data.claims.get("source-one/name")?.value).toBe("Object one");
+    expect(object.id).toBe("object-one");
+    expect(source.id).toBe("source-one");
   });
 
   test("rejects foregrounding a missing claim", () => {
@@ -50,10 +47,68 @@ describe("collection model", () => {
     ).toThrow("safe collection image path");
   });
 
+  test("rejects stored record ids and invalid filenames", () => {
+    expect(() => parseObject({ ...object, id: "other" }, "object-one.json")).toThrow(
+      "unsupported field",
+    );
+    expect(() => parseSource(source, "Source one.json")).toThrow(
+      "filename is not a valid identifier",
+    );
+  });
+
+  test("allows the same local claim id in separate sources", () => {
+    const otherSource = parseSource(
+      {
+        author: null,
+        reference: "Another catalogue",
+        language: "en-GB",
+        claims: [
+          { id: "name", objectId: "object-one", predicate: "has_name", value: "Other name" },
+        ],
+        images: [],
+      },
+      "source-two.json",
+    );
+    const data = validateCollection({ objects: [object], sources: [source, otherSource] });
+    expect(data.claims.get("source-two/name")?.value).toBe("Other name");
+  });
+
+  test("rejects duplicate local claim ids within one source", () => {
+    expect(() =>
+      validateCollection({
+        objects: [object],
+        sources: [{ ...source, claims: [source.claims[0], source.claims[0]] }],
+      }),
+    ).toThrow("source-one.json: duplicate claim id: name");
+  });
+
+  test("rejects malformed and cross-object foregrounding references", () => {
+    expect(() =>
+      parseObject({ name: "Object one", foregroundedClaims: ["name"] }, "object-one.json"),
+    ).toThrow("invalid claim reference");
+
+    const otherObject = parseObject(
+      { name: "Object two", foregroundedClaims: ["source-one/name"] },
+      "object-two.json",
+    );
+    expect(() => validateCollection({ objects: [object, otherObject], sources: [source] })).toThrow(
+      "object object-two foregrounds claim source-one/name about object-one",
+    );
+  });
+
+  test("rejects duplicate images within one source", () => {
+    expect(() =>
+      validateCollection({
+        objects: [object],
+        sources: [{ ...source, images: [source.images[0], source.images[0]] }],
+      }),
+    ).toThrow("source-one.json: duplicate image for object-one: object-one/front.jpg");
+  });
+
   test("parses prose-only editorial metadata", () => {
     expect(
       parseEditorialFrontmatter(
-        "---\nid: essay-one\nobjectId: object-one\ntitle: A title\nauthor: null\nlanguage: rap\n---\n\nText.",
+        "---\nobjectId: object-one\ntitle: A title\nauthor: null\nlanguage: rap\n---\n\nText.",
         "essay-one.md",
       ),
     ).toEqual({

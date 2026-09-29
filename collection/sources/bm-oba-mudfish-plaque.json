@@ -1,0 +1,32 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Af1898-0115-30",
+  "language": "en",
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "has_name",
+      "value": "Plaque depicting an Oba with mudfish legs and two leopards"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Af1898,0115.30"
+    },
+    {
+      "id": "made-at",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "made_at",
+      "value": "Benin City"
+    },
+    {
+      "id": "holder",
+      "objectId": "oba-mudfish-plaque",
+      "predicate": "held_by",
+      "value": "British Museum"
+    }
+  ],
+  "images": []
+}
