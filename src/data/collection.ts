@@ -95,7 +95,12 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
       claims: source.claims.filter((claim) => claim.objectId === objectId),
       images: source.images.filter((image) => image.objectId === objectId),
     }))
-    .filter((source) => source.claims.length > 0 || source.images.length > 0);
+    .filter(
+      (source) =>
+        source.objectIds?.includes(objectId) ||
+        source.claims.length > 0 ||
+        source.images.length > 0,
+    );
   const claims = objectSources.flatMap((source) =>
     source.claims.map((claim) => ({ claim, source })),
   );
@@ -129,6 +134,7 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
     searchExact: [
       object.id,
       object.name,
+      ...objectSources.map((source) => source.reference),
       ...claims.map(({ claim, source }) => `${claim.predicate} ${claim.value} ${source.reference}`),
     ].join(" "),
     searchFoldable: object.name,

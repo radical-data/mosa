@@ -12,6 +12,13 @@
       "type": "string",
       "pattern": "^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"
     },
+    "objectIds": {
+      "description": "Objects directly documented by this source and not already linked through a claim or image in the same source.",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/id" }
+    },
     "notes": {
       "description": "MoSA research notes about interpreting or transcribing this source. Retained as metadata, not rendered on the website or attributed to the source author.",
       "type": "object",

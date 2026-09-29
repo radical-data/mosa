@@ -56,9 +56,10 @@ const { locale, objectId } = Astro.props;
 const record = getObjectRecord(objectId);
 if (!record) throw new Error(`Missing collection object ${objectId}`);
 const t = copy[locale];
-const exactURL = (value: string) => {
+const referenceURL = (value: string) => {
+  const candidate = value.match(/https?:\/\/\S+$/u)?.[0] ?? value;
   try {
-    const url = new URL(value);
+    const url = new URL(candidate);
     return ["http:", "https:"].includes(url.protocol) ? url.href : null;
   } catch {
     return null;
@@ -134,18 +135,20 @@ const exactURL = (value: string) => {
         <h2>{t.sources}</h2>
         <div class="source-accounts">
           {record.sources.map((source) => {
-            const url = exactURL(source.reference);
+            const url = referenceURL(source.reference);
             return (
               <article class="source-account">
                 <h3>{url ? <a href={url} rel="noreferrer">{source.reference}</a> : source.reference}</h3>
                 {source.author && <p class="small muted">{t.author}: {source.author}</p>}
-                <ul>
-                  {source.claims.map((claim) => (
-                    <li lang={source.language === "und" ? undefined : source.language}>
-                      <strong>{predicateLabel(claim.predicate, locale)}:</strong> {claim.value}
-                    </li>
-                  ))}
-                </ul>
+                {source.claims.length > 0 && (
+                  <ul>
+                    {source.claims.map((claim) => (
+                      <li lang={source.language === "und" ? undefined : source.language}>
+                        <strong>{predicateLabel(claim.predicate, locale)}:</strong> {claim.value}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </article>
             );
           })}

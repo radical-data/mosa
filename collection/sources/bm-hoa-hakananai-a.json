@@ -2,6 +2,7 @@
   "author": "British Museum",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc1869-1005-1",
   "language": "en",
+  "objectIds": ["hoa-haka-nana-ia"],
   "claims": [
     {
       "id": "room",

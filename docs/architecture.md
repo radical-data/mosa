@@ -5,7 +5,8 @@
 MoSA has one deployed application and one versioned public collection.
 
 ```text
-source JSON ──► attributed claims ──► object page
+source JSON ──► direct object links ─────┐
+      ├──► attributed claims ──► object page
       │                                  ▲
       └──► image metadata ─► LFS image ──┤
 object JSON ─► name + foreground choices ┤
@@ -33,9 +34,11 @@ name and a list of qualified claim references selected for foregrounding. The
 file handle is also the public URL identity.
 
 A **source** records who authored or asserted it when known, its exact reference,
-its language, and the claims and image records derived from it. Sources and
-objects have different identities. A shared URL does not prove that two objects
-are the same.
+its language, and the claims and image records derived from it. It can link
+directly to an object before claims or images are extracted. Claims and images
+already provide their own object links, so direct links are used only where that
+association would otherwise be absent. Sources and objects have different
+identities. A shared URL does not prove that two objects are the same.
 
 A **claim** has an ID local to its source, an object ID, a controlled predicate
 and a textual value. References outside the source qualify the local ID with the

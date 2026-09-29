@@ -31,6 +31,7 @@ the source ID:
   "author": "Named person or institution",
   "reference": "https://example.org/catalogue/123",
   "language": "en-GB",
+  "objectIds": ["example-object"],
   "claims": [
     {
       "id": "classification",
@@ -51,6 +52,11 @@ the source ID:
   ]
 }
 ```
+
+Use `objectIds` to publish a source that documents an object before any claims
+or images are extracted. Do not repeat an object ID when a claim or image in the
+same source already links that object. A source can still use `objectIds` for one
+object while its claims or images link different objects.
 
 Use `null` for an unknown author rather than inventing one. Use a BCP 47
 language tag such as `es-CL`, `en-GB`, `rap` or `und`.
@@ -112,6 +118,36 @@ Do not invent individual objects from counts or assign research notes as
 locations. Similar names, types or institutions alone do not establish identity
 with an existing catalogue record. Keep separate repeated rows distinct and
 retain established handles when the prior extraction identifies the same entry.
+
+### Research museum records
+
+Keep candidate URLs and unsuccessful searches in a dated register under
+`research-local/`, not in `collection/`. Record the historical holder and
+description, candidate URL and accession number when available, supporting and
+contradictory evidence, the date checked and the evidence still needed. Use
+explicit statuses such as `verified`, `ambiguous`, `blocked` and `not found`;
+`not found` means only that the recorded searches did not locate a match.
+
+A candidate is not a collection source. Promote it only when evidence identifies
+the specific object, for example through the same accession or former catalogue
+number, a documented transfer, a unique name or inscription, or a photograph
+and multiple distinctive physical or provenance details. Object type and
+institution alone are insufficient. Prefer the museum's own record or an
+authoritative successor-institution record over aggregators and search-result
+snippets.
+
+Prioritise candidates that already have a stable identifier, transfer evidence
+or distinctive measurements. When public records cannot resolve a strong
+candidate, ask the institution a precise identity question and retain the
+correspondence in `research-local/`. Do not publish private correspondence or
+convert a probable identification into a certain claim without permission and
+appropriate attribution.
+
+When a candidate becomes verified, create or update its source and add the
+object through a claim, image or `objectIds` as appropriate. Record the decisive
+identity evidence in source `notes`, preserve any material caveat, and remove
+the promoted candidate from the active follow-up queue while retaining the
+research history.
 
 ### Add images
 

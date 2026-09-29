@@ -2,6 +2,7 @@
   "author": null,
   "reference": "Musée du quai Branly – Jacques Chirac, “Treasures of Rapa Nui (Easter Island)”, Aruku Kureŋa section; accessed 23 September 2026 — https://www.quaibranly.fr/en/collections/living-collections/news/new-display-cases/tresors-de-rapa-nui-lile-de-paques",
   "language": "en",
+  "objectIds": ["mamari"],
   "claims": [
     {
       "id": "description",

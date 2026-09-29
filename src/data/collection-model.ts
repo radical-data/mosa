@@ -41,6 +41,7 @@ export interface Source {
   author: string | null;
   reference: string;
   language: string;
+  objectIds?: string[];
   notes?: { text: string; language: string };
   claims: Claim[];
   images: CollectionImage[];
@@ -64,7 +65,7 @@ const claimReference = /^[a-z0-9]+(?:-[a-z0-9]+)*\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const language = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
 const imagePath = /^(?!\/)(?!.*(?:^|\/)\.\.(?:\/|$)).+\.(?:avif|jpe?g|png|webp)$/i;
 const objectKeys = ["foregroundedClaims", "name"];
-const sourceKeys = ["author", "claims", "images", "language", "notes", "reference"];
+const sourceKeys = ["author", "claims", "images", "language", "notes", "objectIds", "reference"];
 const claimKeys = ["id", "objectId", "predicate", "value"];
 const imageKeys = ["alt", "caption", "credit", "file", "objectId", "originalUrl", "rights"];
 
@@ -130,6 +131,18 @@ export function parseSource(value: unknown, file: string): Source {
   );
   add(errors, Array.isArray(value.claims), `${file}: claims must be an array`);
   add(errors, Array.isArray(value.images), `${file}: images must be an array`);
+  if ("objectIds" in value) {
+    add(errors, Array.isArray(value.objectIds), `${file}: objectIds must be an array`);
+    if (Array.isArray(value.objectIds)) {
+      add(errors, value.objectIds.length > 0, `${file}: objectIds cannot be empty`);
+      add(errors, value.objectIds.every(id), `${file}: objectIds contains an invalid object ID`);
+      add(
+        errors,
+        new Set(value.objectIds).size === value.objectIds.length,
+        `${file}: objectIds contains duplicates`,
+      );
+    }
+  }
   if ("notes" in value) {
     add(errors, isObject(value.notes), `${file}: notes must be an object`);
     if (isObject(value.notes)) {
@@ -210,6 +223,16 @@ export function validateCollection(
   for (const source of data.sources) {
     if (sources.has(source.id)) errors.push(`duplicate source id: ${source.id}`);
     sources.add(source.id);
+    const claimedObjects = new Set(source.claims.map((claim) => claim.objectId));
+    const imagedObjects = new Set(source.images.map((image) => image.objectId));
+    for (const objectId of source.objectIds ?? []) {
+      if (!objects.has(objectId))
+        errors.push(`${source.id}.json: objectIds refers to missing object ${objectId}`);
+      if (claimedObjects.has(objectId) || imagedObjects.has(objectId))
+        errors.push(
+          `${source.id}.json: redundant objectId ${objectId} is already linked by a claim or image`,
+        );
+    }
     const sourceClaims = new Set<string>();
     const sourceImages = new Set<string>();
     for (const claim of source.claims) {

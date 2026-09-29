@@ -56,6 +56,48 @@ describe("collection model", () => {
     expect(source.id).toBe("source-one");
   });
 
+  test("validates a source link without deriving a claim", () => {
+    const unforegroundedObject = parseObject(
+      { name: "Object one", foregroundedClaims: [] },
+      "object-one.json",
+    );
+    const linkedSource = parseSource(
+      {
+        author: "Example Museum",
+        reference: "https://example.org/collection/123",
+        language: "en-GB",
+        objectIds: ["object-one"],
+        claims: [],
+        images: [],
+      },
+      "museum-record.json",
+    );
+    expect(linkedSource.objectIds).toEqual(["object-one"]);
+    expect(() =>
+      validateCollection({ objects: [unforegroundedObject], sources: [linkedSource] }),
+    ).not.toThrow();
+  });
+
+  test("rejects invalid and redundant direct object links", () => {
+    const { id: _id, ...record } = source;
+    expect(() => parseSource({ ...record, objectIds: [] }, "source-one.json")).toThrow(
+      "objectIds cannot be empty",
+    );
+    expect(() =>
+      parseSource({ ...record, objectIds: ["object-one", "object-one"] }, "source-one.json"),
+    ).toThrow("objectIds contains duplicates");
+
+    const missing = parseSource({ ...record, objectIds: ["missing-object"] }, "source-one.json");
+    expect(() => validateCollection({ objects: [object], sources: [missing] })).toThrow(
+      "objectIds refers to missing object missing-object",
+    );
+
+    const redundant = parseSource({ ...record, objectIds: ["object-one"] }, "source-one.json");
+    expect(() => validateCollection({ objects: [object], sources: [redundant] })).toThrow(
+      "redundant objectId object-one",
+    );
+  });
+
   test("rejects foregrounding a missing claim", () => {
     expect(() => validateCollection({ objects: [object], sources: [] })).toThrow(
       "foregrounds missing claim",
