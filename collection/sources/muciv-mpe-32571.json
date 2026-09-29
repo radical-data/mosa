@@ -2,12 +2,60 @@
   "author": "Museo delle Civiltà",
   "reference": "https://www.museodellecivilta.it/en/oggetti/oceanian-arts-and-cultures/female-figurine-bearing-child-moai-kava-kava/",
   "language": "en",
-  "objectIds": ["moai-mujer-pigorini"],
   "notes": {
-    "text": "Matched to MPE 32571 from the official photograph: the crouching pose and exceptionally elongated vulva correspond to the table description. The museum's interpretation, ‘Female figurine bearing child’, is not transcribed as a claim here.",
+    "text": "Matched to MPE 32571 from the official photograph: the crouching pose and exceptionally elongated vulva correspond to the table description. The heading, Dating, Material / Technique, Collection / Inventory, Provenance and Location fields were extracted from the preserved page. Its Location label does not distinguish origin from present location, so it remains a description. Provenance is not recast as a findspot, creation place or custody transition. The museum cautions that its captions derive from historical documentation and may not reflect complete or current knowledge; its interpretation is retained as its own account.",
     "language": "en-GB"
   },
-  "claims": [],
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "has_name",
+      "value": "Female figurine bearing child (moai kava kava)"
+    },
+    {
+      "id": "type",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "classified_as",
+      "value": "moai kava kava"
+    },
+    {
+      "id": "production-date",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "made_during",
+      "value": "19th century"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "catalogue_number",
+      "value": "MPE 32571"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "held_by",
+      "value": "Museum of Civilizations, Rome."
+    },
+    {
+      "id": "provenance-account",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "described_as",
+      "value": "Provenance: Rapa Nui (Easter Island, Chile). T. Moscatelli and G. Petella Collection."
+    },
+    {
+      "id": "geographical-label",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "described_as",
+      "value": "Location: Rapa Nui (Easter Island, Chile)"
+    }
+  ],
   "images": [],
   "captures": [
     {

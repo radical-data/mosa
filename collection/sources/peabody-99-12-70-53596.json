@@ -2,12 +2,78 @@
   "author": "Peabody Museum of Archaeology and Ethnology, Harvard University",
   "reference": "https://collections.peabody.harvard.edu/objects/details/86936",
   "language": "en",
-  "objectIds": ["hombre-cuclillas-peabody-cambridge"],
   "notes": {
-    "text": "The official record describes a kneeling male Rapa Nui wooden figure, object 99-12-70/53596, matching the table's crouching-man description.",
+    "text": "The official record describes a kneeling male Rapa Nui wooden figure, object 99-12-70/53596, matching the table's crouching-man description. Extracted the individual record fields through Credit Line, retaining the different moai tangata and moai kavakava terms and the uncertain date. Dimensions quote only the metric portion of the field. Geography/Provenience/Site Name does not distinguish creation from finding, and the provenance and donor fields do not establish current custody; those mappings are deferred. The Discover More carousel describes other objects and is excluded.",
     "language": "en-GB"
   },
-  "claims": [],
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "catalogue_number",
+      "value": "99-12-70/53596"
+    },
+    {
+      "id": "name",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "has_name",
+      "value": "Kneeling male figure in wood (moai tangata)"
+    },
+    {
+      "id": "indigenous-type",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "moai kavakava"
+    },
+    {
+      "id": "object-description",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Kneeling male figure in wood (moai kavakava)"
+    },
+    {
+      "id": "inventory-description",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Sculpture, kneeling male, protruding stomach, inlay shell and stone eye, broken"
+    },
+    {
+      "id": "type",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "classified_as",
+      "value": "Sculpture"
+    },
+    {
+      "id": "production-date",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "made_during",
+      "value": "1842 or earlier, 1800-1838?"
+    },
+    {
+      "id": "material",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "made_of",
+      "value": "Wood, Shell, Obsidian"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Overall: 21.5 x 6 x 7 cm"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "described_as",
+      "value": "Gift of the Heirs of David Kimball, 1899"
+    },
+    {
+      "id": "inscribed-number",
+      "objectId": "hombre-cuclillas-peabody-cambridge",
+      "predicate": "catalogue_number",
+      "value": "53596"
+    }
+  ],
   "images": [],
   "captures": [
     {
