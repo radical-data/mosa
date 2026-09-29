@@ -17,7 +17,7 @@ function parseArgs(argv: string[]) {
   const command = argv[0] as Command | undefined;
   if (!command || !commands.includes(command))
     throw Error(
-      "Usage: node --import tsx scripts/source.ts doctor|capture <source-id> --url <url> [--wait <ms>]|register <source-id> --file <path> --method <method> --captured-at <ISO|null> [--original-url URL] [--archive-url URL] [--note text] [--name original.pdf]|check [--content]",
+      "Usage: node --import tsx scripts/source.ts doctor|capture <source-id> --url <url> [--wait <ms>] [--script <path>]|register <source-id> --file <path> --method <method> --captured-at <ISO|null> [--original-url URL] [--archive-url URL] [--note text] [--name original.pdf]|check [--content]",
     );
   const positional: string[] = [];
   const flags = new Map<string, string>();
@@ -54,13 +54,6 @@ export async function runSourceCli(argv = process.argv.slice(2)) {
   const { command, positional, flags, booleans } = parseArgs(argv);
   let result: unknown;
   if (booleans.size && command !== "check") throw Error("--content is only valid with check");
-  if (
-    command !== "check" &&
-    positional.length > 1 &&
-    command !== "capture" &&
-    command !== "register"
-  )
-    throw Error("Unexpected positional argument");
   if (command === "doctor") {
     if (positional.length) throw Error("doctor takes no positional arguments");
     only(flags, []);
@@ -87,8 +80,6 @@ export async function runSourceCli(argv = process.argv.slice(2)) {
     if (positional.length !== 1) throw Error("register requires exactly one source ID");
     const method = required(flags, "method") as CaptureMethod;
     const capturedValue = required(flags, "captured-at");
-    if (capturedValue !== "null" && !/^\d{4}-\d\d-\d\dT/.test(capturedValue))
-      throw Error("--captured-at must be a full ISO UTC timestamp or null");
     result = await registerCapture(root, positional[0], {
       file: required(flags, "file"),
       method,

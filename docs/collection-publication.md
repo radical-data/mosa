@@ -178,6 +178,7 @@ Register only a reviewed file (substitute the actual staging path and timestamp)
 ```sh
 just source register mapse-aringa-erua --file research-local/source-captures/reviewed.html --method singlefile --captured-at 2026-09-29T20:00:00.000Z --original-url https://www.patrimoniocultural.gob.cl/en/regional-museums/easter-island-anthropological-museum/aringa-erua-moai-moai-two-faces
 just source check --content
+just format
 ```
 
 Place supplied files in ignored `research-local/` staging first.
@@ -199,7 +200,7 @@ Use one ordinary capture and one adjusted attempt before checking Wayback. Prefe
 a local SingleFile capture of a usable archive page; retain both URLs and describe
 its historical timestamp in `note`. Do not invent dates for imported captures or
 claim that today's copy establishes yesterday's content. Record unresolved blockers
-in the backfill report. Do not submit pages to external archives automatically.
+in the task handover and commit message. Do not submit pages to external archives automatically.
 
 Capture checks accept valid LFS pointers for builds. `just source check --content`
 requires hydrated files and checks their signatures and available Git LFS hashes.

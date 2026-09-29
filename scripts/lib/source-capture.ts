@@ -7,15 +7,7 @@ import { runCommand } from "./run-command";
 const sourceIdPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const lfsPointer =
   /^version https:\/\/git-lfs\.github\.com\/spec\/v1\noid sha256:([a-f0-9]{64})\nsize (\d+)\n?$/;
-const methods = ["singlefile", "download", "supplied-file", "browser-pdf"] as const;
-
-export type CaptureMethod = (typeof methods)[number];
-export interface CaptureDiagnostic {
-  ok: boolean;
-  command: string;
-  message: string;
-  [key: string]: unknown;
-}
+export type CaptureMethod = SourceCapture["method"];
 export interface CaptureDependencies {
   run?: typeof runCommand;
   now?: () => Date;
@@ -68,24 +60,8 @@ const signatureExtension = (bytes: Buffer): string | undefined => {
   if (/^(?:<!doctype\s+html|<html\b|<head\b|<body\b)/i.test(start)) return ".html";
   return undefined;
 };
-const isoTimestamp = (value: string | null): string | null => {
-  if (value === null) return null;
-  const date = new Date(value);
-  if (
-    !Number.isFinite(date.getTime()) ||
-    !/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d{1,3})?Z$/.test(value)
-  )
-    throw Error("--captured-at must be a full ISO UTC timestamp or null");
-  return value;
-};
-const fileBytes = async (file: string) => readFile(file);
 
-export async function findBrowser(
-  _root: string,
-  platform = process.platform,
-  env = process.env,
-  hasBrowser = exists,
-) {
+async function findBrowser(platform = process.platform, env = process.env, hasBrowser = exists) {
   const override = env.MOSA_CAPTURE_BROWSER;
   if (override) return (await hasBrowser(override)) ? override : "";
   const candidates =
@@ -110,7 +86,6 @@ export async function findBrowser(
 export async function doctor(root: string, dependencies: CaptureDependencies = {}) {
   const canRun = dependencies.run ?? runCommand;
   const browser = await findBrowser(
-    root,
     dependencies.platform,
     process.env,
     dependencies.exists ?? exists,
@@ -175,7 +150,6 @@ export async function captureSource(
     throw Error("--wait must be an integer from 0 to 30000 milliseconds");
   const canRun = dependencies.run ?? runCommand;
   const browser = await findBrowser(
-    root,
     dependencies.platform,
     process.env,
     dependencies.exists ?? exists,
@@ -212,7 +186,7 @@ export async function captureSource(
     if (waitMs) args.push("--browser-wait-delay", String(waitMs));
     if (dependencies.browserScript) args.push("--browser-script", dependencies.browserScript);
     await canRun("pnpm", args, { cwd: root, captureOutput: true, signal: controller.signal });
-    const bytes = await fileBytes(output);
+    const bytes = await readFile(output);
     if (signatureExtension(bytes) !== ".html")
       throw Error("SingleFile did not produce a recognisable HTML capture");
     const capturedAt = (dependencies.now?.() ?? new Date()).toISOString();
@@ -269,14 +243,7 @@ const safeContainedFile = async (root: string, target: string) => {
   const resolved = path.resolve(root, target);
   if (!resolved.startsWith(`${path.resolve(root)}${path.sep}`))
     throw Error("Capture path escapes the repository root");
-  const relative = path.relative(root, resolved).split(path.sep);
-  let current = path.resolve(root);
-  for (const part of relative) {
-    current = path.join(current, part);
-    const info = await lstat(current);
-    if (info.isSymbolicLink())
-      throw Error(`Symlink capture paths are not allowed: ${path.relative(root, current)}`);
-  }
+  await ensureNoSymlinkComponents(root, resolved);
   const info = await lstat(resolved);
   if (!info.isFile()) throw Error("Capture input must be a regular file");
   return resolved;
@@ -309,17 +276,13 @@ export async function registerCapture(
   dependencies: CaptureDependencies = {},
 ) {
   safeId(sourceId);
-  if (!methods.includes(options.method)) throw Error("Unsupported capture method");
-  const capturedAt = isoTimestamp(options.capturedAt);
-  validUrl(options.originalUrl, "--original-url");
-  validUrl(options.archiveUrl, "--archive-url");
-  if (options.note !== undefined && !options.note.trim()) throw Error("--note cannot be empty");
+  const capturedAt = options.capturedAt;
   const sourcePath = path.join(root, "collection", "sources", `${sourceId}.json`);
   const sourceObject = JSON.parse(await readFile(sourcePath, "utf8")) as Record<string, unknown>;
   parseSource(sourceObject, `${sourceId}.json`);
   const inputPath = path.isAbsolute(options.file) ? options.file : path.resolve(root, options.file);
   const input = await safeContainedFile(root, inputPath);
-  const bytes = await fileBytes(input);
+  const bytes = await readFile(input);
   if (isLfsPointer(bytes))
     throw Error("Capture file is a Git LFS pointer; hydrate it before registering");
   const extension = signatureExtension(bytes);
@@ -348,7 +311,6 @@ export async function registerCapture(
     ? (sourceObject.captures as SourceCapture[])
     : [];
   const digest = hash(bytes);
-  let existing: string | undefined;
   let existingEntry: SourceCapture | undefined;
   for (const capture of captures) {
     if (!capture.file) continue;
@@ -357,7 +319,6 @@ export async function registerCapture(
     await ensureNoSymlinkComponents(root, path.relative(root, old));
     const oldBytes = await readFile(old).catch(() => undefined);
     if (oldBytes && !isLfsPointer(oldBytes) && hash(oldBytes) === digest) {
-      existing = capture.file;
       existingEntry = capture;
       break;
     }
@@ -403,7 +364,7 @@ export async function registerCapture(
     command: "register",
     sourceId: parsed.id,
     capture: entry,
-    reusedIdenticalFile: !!existing || (!created && (await exists(dest))),
+    reusedIdenticalFile: !created,
     alreadyRegistered: !!existingEntry,
     bytes: bytes.byteLength,
     sha256: digest,
@@ -455,7 +416,7 @@ export async function checkCaptures(
         diagnostics.push(`${filename}: captures[${index}].file ${capture.file}: ${String(error)}`);
         continue;
       }
-      const bytes = await fileBytes(target);
+      const bytes = await readFile(target);
       const pointer = isLfsPointer(bytes);
       if (pointer) {
         if (!includeContent) continue;

@@ -110,27 +110,7 @@ const validUtcTimestamp = (value: unknown) => {
     return false;
   const date = new Date(value);
   if (!Number.isFinite(date.getTime())) return false;
-  const parts = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/.exec(value);
-  if (!parts) return false;
-  const [, year, month, day, hour, minute, second] = parts;
-  const utc = new Date(
-    Date.UTC(
-      Number(year),
-      Number(month) - 1,
-      Number(day),
-      Number(hour),
-      Number(minute),
-      Number(second),
-    ),
-  );
-  return (
-    utc.getUTCFullYear() === Number(year) &&
-    utc.getUTCMonth() + 1 === Number(month) &&
-    utc.getUTCDate() === Number(day) &&
-    Number(hour) <= 23 &&
-    Number(minute) <= 59 &&
-    Number(second) <= 59
-  );
+  return date.toISOString().slice(0, 19) === value.slice(0, 19);
 };
 const validHttpUrl = (value: unknown) => {
   if (typeof value !== "string" || !/^https?:\/\//i.test(value)) return false;
