@@ -23,6 +23,12 @@ claims.
 
 ## Add a source, claims and images
 
+For a complete import from a supplied museum, archive or collection page, use
+the [incorporate source skill](../.agents/skills/incorporate-source/SKILL.md).
+It coordinates source capture, object identification, claim extraction and
+image review. For object reconciliation on its own, use the
+[identify objects skill](../.agents/skills/identify-objects/SKILL.md).
+
 Create `collection/sources/<source-id>.json`. The file name without `.json` is
 the source ID:
 

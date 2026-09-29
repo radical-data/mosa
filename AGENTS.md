@@ -13,6 +13,7 @@
 | Change system boundaries or the collection model | [Architecture](docs/architecture.md), relevant [ADRs](docs/adrs/) |
 | Change claims, sources or foregrounding | [Predicates](docs/predicates.md), [collection authoring](docs/collection-publication.md) |
 | Add objects, images or editorials | [Collection authoring](docs/collection-publication.md) |
+| Bring a source page into the collection | [Incorporate source skill](.agents/skills/incorporate-source/SKILL.md) |
 | Configure or troubleshoot hosting | [Operations](docs/operations.md) |
 | Edit copy, events, language routes or metadata | [Website content](docs/website-content.md) |
 
@@ -49,6 +50,7 @@ repository tasks and pnpm owns dependencies.
 
 For source preservation, use the repository [source capture skill](.agents/skills/source-capture/SKILL.md).
 For publishable object images, use the [collection images skill](.agents/skills/collection-images/SKILL.md).
+For object identity reconciliation, use the [identify objects skill](.agents/skills/identify-objects/SKILL.md).
 
 ## Implementation rules
 
