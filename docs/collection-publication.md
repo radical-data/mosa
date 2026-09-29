@@ -143,6 +143,13 @@ contradictory evidence, the date checked and the evidence still needed. Use
 explicit statuses such as `verified`, `ambiguous`, `blocked` and `not found`;
 `not found` means only that the recorded searches did not locate a match.
 
+Reuse successful holder lookups across objects and imports. The identification
+skill maintains [holder lookup recipes](../.agents/skills/identify-objects/references/holder-lookups.md)
+for observed accession URL templates, search parameters, identifier formatting
+and fallbacks. A substituted URL supplies a candidate, not a verified match;
+check its displayed accession and supporting object details. Record a new
+successful method there and each actual attempt in the private register below.
+
 For repeatable follow-up work on existing source-linked objects, use the private
 progress register at `research-local/progress/<source-id>.json`. It is seeded
 from objects linked by that source's claims, images or `objectIds`; it does not
