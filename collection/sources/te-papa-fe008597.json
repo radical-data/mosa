@@ -1,0 +1,62 @@
+{
+  "author": "Museum of New Zealand Te Papa Tongarewa",
+  "reference": "https://collections.tepapa.govt.nz/object/83717",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "catalogue_number",
+      "value": "FE008597"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "classified_as",
+      "value": "Ua (club or staff)"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "classified_as",
+      "value": "clubs"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "made_of",
+      "value": "wood, obsidian"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "described_as",
+      "value": "Overall: 70mm (width), 1056mm (length)"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "described_as",
+      "value": "Exchange from Otago Museum, 1932"
+    },
+    {
+      "id": "production-place",
+      "objectId": "ua-wellington-fe008597",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched by institution and registration number FE008597. Catalogue fields and the explicit Made in relation are transcribed from the reviewed capture; collection and acquisition dates are not used as production dates. Image rights: © The copyright holder. We are actively seeking the copyright holder. Contact copyright@tepapa.govt.nz if you can help. All Rights Reserved. No new image is registered in this source.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-48-35-318z.html",
+      "capturedAt": "2026-09-29T22:48:35.318Z",
+      "method": "singlefile",
+      "note": "Reviewed title, registration FE008597, item details, explicit relationships and image-rights statement."
+    }
+  ]
+}

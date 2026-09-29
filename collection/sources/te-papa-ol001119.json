@@ -1,0 +1,68 @@
+{
+  "author": "Museum of New Zealand Te Papa Tongarewa",
+  "reference": "https://collections.tepapa.govt.nz/object/180958",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "catalogue_number",
+      "value": "OL001119"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "classified_as",
+      "value": "Ua (club or staff)"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "classified_as",
+      "value": "clubs"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "described_as",
+      "value": "Overall: 90mm (width), 60mm (height), 1785mm (length), 1274g (weight)"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "described_as",
+      "value": "Oldman Collection. Gift of the New Zealand Government, 1992"
+    },
+    {
+      "id": "production-place",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    },
+    {
+      "id": "production-date",
+      "objectId": "ua-wellington-ol001119",
+      "predicate": "made_during",
+      "value": "1800s"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched by institution and registration number OL001119. Catalogue fields and the explicit Made in relation are transcribed from the reviewed capture; collection and acquisition dates are not used as production dates. Image rights: CC BY-NC-ND 4.0. No new image is registered in this source.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-48-25-921z.html",
+      "capturedAt": "2026-09-29T22:48:25.921Z",
+      "method": "singlefile",
+      "note": "Reviewed title, registration OL001119, item details, explicit relationships and image-rights statement."
+    }
+  ]
+}

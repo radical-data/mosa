@@ -1,0 +1,74 @@
+{
+  "author": "Museum of New Zealand Te Papa Tongarewa",
+  "reference": "https://collections.tepapa.govt.nz/object/268151",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "catalogue_number",
+      "value": "FE010655"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "classified_as",
+      "value": "Moai kavakava (ancestor figure)"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "classified_as",
+      "value": "figures, ceremonial objects"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "made_of",
+      "value": "driftwood, wood"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "described_as",
+      "value": "Overall: 93mm (width), 598mm (height), 87mm (depth)"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "described_as",
+      "value": "Purchased 1996"
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    },
+    {
+      "id": "production-date",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "made_during",
+      "value": "1996"
+    },
+    {
+      "id": "production",
+      "objectId": "moai-kavakava-wellington-234568-fe010655",
+      "predicate": "described_as",
+      "value": "Production: Bene Aukara Tuki Pate; artist; 1996; Easter Island"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched by institution and registration number FE010655. Catalogue fields and the explicit Made in relation are transcribed from the reviewed capture; collection and acquisition dates are not used as production dates. Image rights: All Rights Reserved. No new image is registered in this source.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-47-45-144z.html",
+      "capturedAt": "2026-09-29T22:47:45.144Z",
+      "method": "singlefile",
+      "note": "Reviewed title, registration FE010655, item details, explicit relationships and image-rights statement."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "author": "Museum of New Zealand Te Papa Tongarewa",
+  "reference": "https://collections.tepapa.govt.nz/object/180880",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "catalogue_number",
+      "value": "OL001114"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "classified_as",
+      "value": "Ua (staff or club)"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "classified_as",
+      "value": "staffs, clubs"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "described_as",
+      "value": "Overall: 60mm (width), 213mm (length)"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "described_as",
+      "value": "Oldman Collection. Gift of the New Zealand Government, 1992"
+    },
+    {
+      "id": "production-place",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    },
+    {
+      "id": "production-date",
+      "objectId": "ua-wellington-ol001114",
+      "predicate": "made_during",
+      "value": "1800s"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched by institution and registration number OL001114. Catalogue fields and the explicit Made in relation are transcribed from the reviewed capture; collection and acquisition dates are not used as production dates. The museum's displayed length of 213mm is transcribed without correction. Image rights: CC BY-NC-ND 4.0. No new image is registered in this source.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-48-12-100z.html",
+      "capturedAt": "2026-09-29T22:48:12.100Z",
+      "method": "singlefile",
+      "note": "Reviewed title, registration OL001114, item details, explicit relationships and image-rights statement."
+    }
+  ]
+}
