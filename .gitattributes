@@ -3,3 +3,12 @@ collection/images/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
 collection/images/**/*.png filter=lfs diff=lfs merge=lfs -text
 collection/images/**/*.webp filter=lfs diff=lfs merge=lfs -text
 collection/images/**/*.avif filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.html filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.png filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.webp filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.avif filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.tif filter=lfs diff=lfs merge=lfs -text
+source-files/**/*.tiff filter=lfs diff=lfs merge=lfs -text

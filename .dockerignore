@@ -31,3 +31,8 @@ justfile
 mise.toml
 vitest.config.ts
 tsconfig.scripts.json
+
+# Preserved evidence and local research never enter website images.
+source-files
+research-local
+.agents

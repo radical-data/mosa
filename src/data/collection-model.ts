@@ -36,6 +36,18 @@ export interface CollectionImage {
   rights?: string;
 }
 
+export type SourceCaptureMethod = "singlefile" | "download" | "supplied-file" | "browser-pdf";
+
+export interface SourceCapture {
+  file?: string;
+  originalUrl?: string;
+  archiveUrl?: string;
+  capturedAt: string | null;
+  addedAt: string;
+  method: SourceCaptureMethod;
+  note?: string;
+}
+
 export interface Source {
   id: string;
   author: string | null;
@@ -43,6 +55,7 @@ export interface Source {
   language: string;
   objectIds?: string[];
   notes?: { text: string; language: string };
+  captures?: SourceCapture[];
   claims: Claim[];
   images: CollectionImage[];
 }
@@ -64,10 +77,35 @@ const identifier = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const claimReference = /^[a-z0-9]+(?:-[a-z0-9]+)*\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const language = /^[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$/;
 const imagePath = /^(?!\/)(?!.*(?:^|\/)\.\.(?:\/|$)).+\.(?:avif|jpe?g|png|webp)$/i;
+const captureMethods: SourceCaptureMethod[] = [
+  "singlefile",
+  "download",
+  "supplied-file",
+  "browser-pdf",
+];
 const objectKeys = ["foregroundedClaims", "name"];
-const sourceKeys = ["author", "claims", "images", "language", "notes", "objectIds", "reference"];
+const sourceKeys = [
+  "author",
+  "captures",
+  "claims",
+  "images",
+  "language",
+  "notes",
+  "objectIds",
+  "reference",
+];
 const claimKeys = ["id", "objectId", "predicate", "value"];
 const imageKeys = ["alt", "caption", "credit", "file", "objectId", "originalUrl", "rights"];
+const captureKeys = [
+  "addedAt",
+  "archiveUrl",
+  "capturedAt",
+  "file",
+  "method",
+  "note",
+  "originalUrl",
+];
+const captureExtensions = "html|pdf|jpg|jpeg|png|webp|avif|tif|tiff";
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
   !!value && typeof value === "object" && !Array.isArray(value);
@@ -76,6 +114,51 @@ const sameKeys = (value: Record<string, unknown>, allowed: string[]) =>
 const text = (value: unknown) => typeof value === "string" && value.trim().length > 0;
 const id = (value: unknown) => typeof value === "string" && identifier.test(value);
 const reference = (value: unknown) => typeof value === "string" && claimReference.test(value);
+const validUtcTimestamp = (value: unknown) => {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?Z$/.test(value))
+    return false;
+  const date = new Date(value);
+  if (!Number.isFinite(date.getTime())) return false;
+  const parts = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})/.exec(value);
+  if (!parts) return false;
+  const [, year, month, day, hour, minute, second] = parts;
+  const utc = new Date(
+    Date.UTC(
+      Number(year),
+      Number(month) - 1,
+      Number(day),
+      Number(hour),
+      Number(minute),
+      Number(second),
+    ),
+  );
+  return (
+    utc.getUTCFullYear() === Number(year) &&
+    utc.getUTCMonth() + 1 === Number(month) &&
+    utc.getUTCDate() === Number(day) &&
+    Number(hour) <= 23 &&
+    Number(minute) <= 59 &&
+    Number(second) <= 59
+  );
+};
+const validHttpUrl = (value: unknown) => {
+  if (typeof value !== "string" || !/^https?:\/\//i.test(value)) return false;
+  try {
+    return ["http:", "https:"].includes(new URL(value).protocol);
+  } catch {
+    return false;
+  }
+};
+const validArchiveUrl = (value: unknown) => {
+  if (typeof value !== "string") return false;
+  const match = /^https:\/\/web\.archive\.org\/web\/(\d{14})(?:id_|if_)?\/(https?:\/\/.+)$/.exec(
+    value,
+  );
+  if (!match) return false;
+  const [, timestamp, originalUrl] = match;
+  const capturedAt = `${timestamp.slice(0, 4)}-${timestamp.slice(4, 6)}-${timestamp.slice(6, 8)}T${timestamp.slice(8, 10)}:${timestamp.slice(10, 12)}:${timestamp.slice(12, 14)}Z`;
+  return validUtcTimestamp(capturedAt) && validHttpUrl(originalUrl);
+};
 const add = (errors: string[], condition: boolean, message: string) => {
   if (!condition) errors.push(message);
 };
@@ -157,6 +240,69 @@ export function parseSource(value: unknown, file: string): Source {
         typeof value.notes.language === "string" && language.test(value.notes.language),
         `${file}: notes.language is invalid`,
       );
+    }
+  }
+  if ("captures" in value) {
+    add(errors, Array.isArray(value.captures), `${file}: captures must be an array`);
+    if (Array.isArray(value.captures)) {
+      const captureFiles = new Set<string>();
+      const archiveUrls = new Set<string>();
+      value.captures.forEach((capture, index) => {
+        const at = `${file}: captures[${index}]`;
+        add(errors, isObject(capture), `${at} must be an object`);
+        if (!isObject(capture)) return;
+        add(errors, sameKeys(capture, captureKeys), `${at} contains an unsupported field`);
+        add(
+          errors,
+          "file" in capture || "archiveUrl" in capture,
+          `${at} requires file or archiveUrl`,
+        );
+        if ("file" in capture) {
+          const safeFile =
+            typeof capture.file === "string" &&
+            new RegExp(`^${sourceId}/[a-z0-9]+(?:-[a-z0-9]+)*\\.(?:${captureExtensions})$`).test(
+              capture.file,
+            );
+          add(errors, safeFile, `${at}.file must be a safe source-files path for ${sourceId}`);
+          if (typeof capture.file === "string") {
+            add(
+              errors,
+              !captureFiles.has(capture.file),
+              `${at}.file duplicates capture file ${capture.file}`,
+            );
+            captureFiles.add(capture.file);
+          }
+        }
+        if ("originalUrl" in capture)
+          add(errors, validHttpUrl(capture.originalUrl), `${at}.originalUrl must use http(s)`);
+        if ("archiveUrl" in capture) {
+          add(
+            errors,
+            validArchiveUrl(capture.archiveUrl),
+            `${at}.archiveUrl must be an exact timestamped web.archive.org snapshot URL`,
+          );
+          if (typeof capture.archiveUrl === "string") {
+            add(
+              errors,
+              !archiveUrls.has(capture.archiveUrl),
+              `${at}.archiveUrl duplicates capture archive URL`,
+            );
+            archiveUrls.add(capture.archiveUrl);
+          }
+        }
+        add(
+          errors,
+          capture.capturedAt === null || validUtcTimestamp(capture.capturedAt),
+          `${at}.capturedAt must be a UTC timestamp or null`,
+        );
+        add(errors, validUtcTimestamp(capture.addedAt), `${at}.addedAt must be a UTC timestamp`);
+        add(
+          errors,
+          captureMethods.includes(capture.method as SourceCaptureMethod),
+          `${at}.method is unsupported`,
+        );
+        if ("note" in capture) add(errors, text(capture.note), `${at}.note cannot be empty`);
+      });
     }
   }
   if (Array.isArray(value.claims))

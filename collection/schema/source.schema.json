@@ -32,6 +32,49 @@
         }
       }
     },
+    "captures": {
+      "description": "Local or archived captures documenting the source. Local files are stored under source-files/<source-id>/.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["capturedAt", "addedAt", "method"],
+        "anyOf": [{ "required": ["file"] }, { "required": ["archiveUrl"] }],
+        "properties": {
+          "file": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*/[a-z0-9]+(?:-[a-z0-9]+)*\\.(?:html|pdf|jpg|jpeg|png|webp|avif|tif|tiff)$"
+          },
+          "originalUrl": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://"
+          },
+          "archiveUrl": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://web\\.archive\\.org/web/[0-9]{14}(?:id_|if_)?/https?://.+$"
+          },
+          "capturedAt": {
+            "oneOf": [
+              { "type": "null" },
+              {
+                "type": "string",
+                "format": "date-time",
+                "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?Z$"
+              }
+            ]
+          },
+          "addedAt": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?Z$"
+          },
+          "method": { "enum": ["singlefile", "download", "supplied-file", "browser-pdf"] },
+          "note": { "type": "string", "minLength": 1, "pattern": "\\S" }
+        }
+      }
+    },
     "claims": {
       "type": "array",
       "items": {

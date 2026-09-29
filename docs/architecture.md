@@ -40,6 +40,12 @@ already provide their own object links, so direct links are used only where that
 association would otherwise be absent. Sources and objects have different
 identities. A shared URL does not prove that two objects are the same.
 
+A source can also record `captures`: preservation metadata pointing to original
+files in the repository-only `source-files/` tree or an exact archive URL. Capture
+bytes use Git LFS. Neither captures nor their metadata are rendered by the site;
+website builds do not require those bytes. [ADR 024](adrs/024-preserve-source-captures.md)
+records this boundary.
+
 A **claim** has an ID local to its source, an object ID, a controlled predicate
 and a textual value. References outside the source qualify the local ID with the
 source handle, such as `wikipedia-mamari/name-mamari`. Claims stay inside sources
