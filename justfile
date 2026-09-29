@@ -72,3 +72,7 @@ source *args:
 # Validate capture references without hydrating archive files.
 source-check:
     node --import tsx scripts/source.ts check
+
+# Keep private, resumable museum research progress for source-linked objects.
+research *args:
+    node --import tsx scripts/research.ts "$@"

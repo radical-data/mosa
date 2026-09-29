@@ -143,6 +143,127 @@ contradictory evidence, the date checked and the evidence still needed. Use
 explicit statuses such as `verified`, `ambiguous`, `blocked` and `not found`;
 `not found` means only that the recorded searches did not locate a match.
 
+For repeatable follow-up work on existing source-linked objects, use the private
+progress register at `research-local/progress/<source-id>.json`. It is seeded
+from objects linked by that source's claims, images or `objectIds`; it does not
+replace a raw page or gallery inventory. Initialise or reconcile it with:
+
+```sh
+just research init <source-id>
+just research sync <source-id>
+just research status <source-id>
+just research check <source-id>
+```
+
+`init` is safe to repeat. `sync` snapshots changes to the seed source and adds
+or removes its current entries while retaining recorded history. A changed
+institution, catalogue identifier or object type resets the displayed progress
+for that entry to pending; earlier batches remain as history. A later change to
+promoted source metadata is shown as stale until a new reviewed batch records
+the current state. `status` reports drift and a limited actionable queue;
+`check` fails on drift, broken current collection references, missing evidence
+files or commits from any batch, or failed checks in batches supplying current
+outcomes. Superseded collection references remain historical: deleting a claim
+after a newer reviewed batch replaces it does not invalidate that earlier batch.
+Neither command fetches live pages or changes collection records. Filter the status queue with
+`--institution`, `--stage`, `--status`, `--object` or `--limit` (default 30).
+Institution matching is a case-insensitive substring search over the source's
+holder wording; spellings are not silently merged. Counts describe the whole
+register and `matching` describes the filtered queue. Use `--object` to include
+that object's previous batches, searches and evidence, even after it leaves the
+active inventory. Local metadata hashes detect repository changes, not changes
+to a live museum webpage. Continue to use source capture checks for file content.
+The `completed` count means all four stages are resolved within their recorded
+scope. `unavailable` counts as resolved; pending, partial, blocked and deferred
+work does not. It does not imply that every possible claim or image was reviewed.
+
+The register keeps four independent outcomes for each object: identity,
+preservation/capture, claims and images. Identity uses `pending`, `verified`,
+`ambiguous`, `not-found`, `blocked` or `deferred`; the other stages use
+`pending`, `complete`, `partial`, `blocked` or `deferred`, with `unavailable`
+also available for claims and images after that scope has been reviewed. Each
+outcome has a status, short note, evidence references and, when follow-up is
+needed, a next action. Verified/complete/partial outcomes require evidence;
+ambiguous, not-found, blocked, deferred and partial outcomes require a next
+action. `unavailable` requires a reason and means the reviewed scope yielded no
+usable claims or publishable images, never that the stage was skipped.
+
+Displayed stage state derives from append-only dated batches; do not rewrite
+earlier outcomes to make the latest state look current. Record reviewed work in
+dated batches that preserve attempted searches, their queries and results,
+evidence locations, check results and commit IDs. For example, prepare a
+private JSON batch and record it against the displayed revision:
+
+```sh
+just research record <source-id> --file research-local/batch.json --revision 3
+```
+
+For example, a failed catalogue search can be recorded without changing the
+capture, claims or image stages. Replace these illustrative identifiers, date,
+URL and query with the actual attempt:
+
+```json
+{
+  "id": "example-catalogue-search-2026-09-30",
+  "checkedAt": "2026-09-30",
+  "scope": "Search the museum catalogue for the source accession.",
+  "searches": [
+    {
+      "url": "https://example.org/catalogue",
+      "query": "AB 123",
+      "result": "No result for the exact accession or its documented variant."
+    }
+  ],
+  "evidence": ["research-local/example-search.md"],
+  "checks": [],
+  "commits": [],
+  "updates": [
+    {
+      "objectId": "example-object",
+      "identity": {
+        "status": "not-found",
+        "note": "The recorded searches found no match; this does not establish absence.",
+        "refs": [],
+        "nextAction": "Check the museum's digitised inventory for the former accession."
+      }
+    }
+  ]
+}
+```
+
+All top-level fields above are required; unknown fields are rejected. `checks`
+contains `{ "command": "just collection-check", "result": "passed", "note":
+"Reviewed batch validates." }` entries when checks have actually run. Results
+can be `passed` or `failed`; the register records them and does not execute
+commands. `commits` holds existing Git commit hashes and may be empty before a
+commit. Append another dated batch to record later checks or commits, repeating
+only the stage outcomes that the new review supports. `checkedAt` is the date
+the evidence was checked; the tool separately records when it was entered.
+
+Omitted stages retain their earlier history. Reusing a batch ID with the same
+content is idempotent; reusing it with
+different content is an error. The command validates object-specific evidence
+references and the existence of local capture/image files. Use source/claim references for
+claims, source/image-file references for images, source IDs for captures, and
+HTTP(S) URLs for identity evidence. The register revision prevents a stale
+batch from overwriting another update; inspect current status and retry against
+the new revision when it conflicts. When delegating research, assign disjoint
+object lists and have subagents return batch JSON. One coordinator reviews and
+records those batches sequentially; the lock prevents lost writes but does not
+reserve objects or prevent two researchers from doing the same search.
+
+Keep raw extraction inventories as separate private working material when
+needed. The progress register is a resumable audit of follow-up work on the
+existing source-linked objects, not a replacement for entry-level identity
+reconciliation or specialist capture, claims and image review. It does not
+establish claim truth, rights, consent or current custody, and does not promote
+a candidate into the public collection by itself. Writes are local and
+concurrency-safe; if a stale lock remains, first confirm that no register
+command is still running before removing it.
+Back up `research-local/progress/` together with its referenced private audits;
+Git clones do not restore ignored research history. A fresh `init` inventories
+the collection but does not infer which work has been reviewed.
+
 A candidate is not a collection source. Promote it only when evidence identifies
 the specific object, for example through the same accession or former catalogue
 number, a documented transfer, a unique name or inscription, or a photograph
