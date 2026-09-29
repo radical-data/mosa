@@ -41,6 +41,20 @@ invalidate an otherwise secure match: preserve each source's wording and state
 the disagreement in the audit. A historical row without an identifier may
 remain ambiguous even when a modern museum record is verified.
 
+Resume institutional follow-up with the source's private progress register:
+run `just research sync <source-id>` and `just research status <source-id>`
+before selecting the next batch. Use this command to save reviewed search
+attempts and separate identity, capture, claims and image outcomes:
+
+```sh
+just research record <source-id> --file <batch.json> --revision <N>
+```
+
+Check the register after recording. It tracks work on existing source-linked
+objects; keep page-entry inventories and unresolved entry-to-object matches
+separately in `research-local/`. See the [collection authoring guide](../../../docs/collection-publication.md#research-museum-records)
+for statuses, evidence-reference rules and source-drift handling.
+
 Promote verified museum pages as separate sources, then use
 [source-capture](../source-capture/SKILL.md) and
 [extract-claims](../extract-claims/SKILL.md). Review image-specific rights with

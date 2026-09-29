@@ -41,14 +41,16 @@ in this order:
    object; public access or a gallery credit alone is not permission. Keep
    unresolved assets private and report the missing evidence.
 
-Use the smallest meaningful batches that can be reviewed independently. Keep a
-private, resumable manifest under ignored `research-local/` with source version,
-inventory and entry-to-object decisions, completed batches, evidence locations,
-image outcomes, checks and commit IDs. Do not put private research or
-unauthorised captures in tracked `collection/`. On resume, reconcile the
-manifest with repository state and retain reviewed work without duplication.
-If one item is blocked, continue independent in-scope work and state its exact
-effect on coverage.
+Use the smallest meaningful batches that can be reviewed independently. Keep
+raw entry inventories and entry-to-object reconciliation in private
+`research-local/` files. For resumable follow-up on the source-linked objects,
+use the per-source progress register described in the [collection authoring guide](../../../docs/collection-publication.md#research-museum-records): run
+`just research init <source-id>`, then `sync` and `status` when resuming, and
+record each reviewed batch with its searches, evidence, checks and commit IDs.
+The progress register supplements the raw inventory; it does not replace
+entry-level dispositions. Do not put private research or unauthorised captures
+in tracked `collection/`. If one item is blocked, continue independent
+in-scope work and state its exact effect on coverage.
 
 Keep each commit valid and reviewable. Commit the source and reviewed capture
 first, then object batches, then claim batches and linked article sources, then
