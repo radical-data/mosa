@@ -1,0 +1,62 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-303",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-rapa-nui-17-303",
+      "predicate": "classified_as",
+      "value": "Moai Kava Kava"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-rapa-nui-17-303",
+      "predicate": "described_as",
+      "value": "Figura antropomorfa de madera. Posee pómulos y cejas tallados en relieve, ojos engastados de vértebra de pescado y obsidiana, costillas y vértebras conspicuas y extremidades esquemáticas."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-rapa-nui-17-303",
+      "predicate": "catalogue_number",
+      "value": "17-303"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-rapa-nui-17-303",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "technique",
+      "objectId": "moai-kavakava-rapa-nui-17-303",
+      "predicate": "described_as",
+      "value": "Técnica: Hueso (material animal orgánico)-Tallado, Madera-Tallado, Obsidiana-Tallado"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-rapa-nui-17-303",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 66 cm - Ancho 11.5 cm - Profundidad 13 cm"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-kavakava-rapa-nui-17-303",
+      "predicate": "described_as",
+      "value": "Creador/a: Anónimo/desconocido"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t01-45-43-404z.html",
+      "capturedAt": "2026-09-30T01:45:43.404Z",
+      "method": "singlefile",
+      "note": "Official fiche and photograph preserved; image reuse rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "The Chile Patrimonios DOI (02SDC-17-303) is distinct from the linked SURDOC registration (17-303), retained as the catalogue number. Selective ficha fields are transcribed in Spanish. No image is published because no item-specific reuse permission was established.",
+    "language": "en-GB"
+  }
+}
