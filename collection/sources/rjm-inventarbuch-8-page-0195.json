@@ -1,0 +1,39 @@
+{
+  "author": "Rautenstrauch-Joest-Museum",
+  "reference": "https://doi.org/10.11588/diglit.78032#0195",
+  "language": "de",
+  "claims": [
+    {
+      "id": "inventory-48526",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "catalogue_number",
+      "value": "48526"
+    },
+    {
+      "id": "designation-48526",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "described_as",
+      "value": "Holzfigur"
+    },
+    {
+      "id": "origin-48526",
+      "objectId": "moai-pa-apa-a-cologne-48526",
+      "predicate": "described_as",
+      "value": "Herkunft: Polynesien, Osterinsel"
+    }
+  ],
+  "notes": {
+    "text": "Rautenstrauch-Joest-Museum, Inventarbuch 8, page 195 (stable citation https://doi.org/10.11588/diglit.78032#0195). The printed headings are Nr., Gegenstand, Herkunft, Erwerbung and Bemerkungen. The entry is numbered 48526; its Gegenstand cell uses a ditto mark repeating 'Holzfigur' from 48525, and its Herkunft cell repeats 'Polynesien, Osterinsel'. The register wording is historic and does not establish present location. The HAI page states CC BY-NC-ND 4.0; the scan is preserved for source evidence only.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "rjm-inventarbuch-08-0195.jpg",
+      "originalUrl": "https://digi.ub.uni-heidelberg.de/diglitData/image/rjm_inv_buch_08/3/195_RJM_Inventarbuch_08.jpg",
+      "capturedAt": null,
+      "method": "download",
+      "note": "Official full-page JPEG linked from the HAI viewer Download page > JPEG; downloaded 2026-09-30 (exact retrieval time not recorded) and visually inspected at 4348 x 3643 px. CC BY-NC-ND 4.0; preservation for source evidence only."
+    }
+  ]
+}

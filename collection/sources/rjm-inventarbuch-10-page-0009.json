@@ -1,0 +1,40 @@
+{
+  "author": "Rautenstrauch-Joest-Museum",
+  "reference": "https://doi.org/10.11588/diglit.78034#0009",
+  "language": "de",
+  "claims": [
+    {
+      "id": "inventory-54553",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "catalogue_number",
+      "value": "54 553"
+    },
+    {
+      "id": "designation-54553",
+      "objectId": "moai-tangata-cologne-54553",
+      "predicate": "classified_as",
+      "value": "janusköpfige Holzfigur"
+    }
+  ],
+  "notes": {
+    "text": "Rautenstrauch-Joest-Museum, Inventarbuch 10, page 9 (stable citation https://doi.org/10.11588/diglit.78034#0009). The handwritten numeral is spaced as 54 553; the digits match assigned accession 54553. The Gegenstand field reads 'janusköpfige Holzfigur'; the Herkunft and Erwerbung columns use ditto marks referring back to preceding entries. This historical provenance field is not treated as a contemporary location statement. The museum warns that historic documentation may contain discriminatory terms or erroneous regional, ethnic or linguistic attributions. The HAI page states CC BY-NC-ND 4.0; no scan image is reused for the collection.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "rjm-inventarbuch-10-0009.html",
+      "originalUrl": "https://digi.ub.uni-heidelberg.de/diglit/rjm_inv_buch_10/0009/image,info",
+      "capturedAt": "2026-09-30T01:35:41.986Z",
+      "method": "singlefile",
+      "note": "HAI SingleFile HTML preserves the page DOI and catalogue metadata, but its embedded facsimile is only a cropped viewport. Do not use it alone to review object rows; the complete original page JPEG is preserved in the second capture."
+    },
+    {
+      "file": "rjm-inventarbuch-10-0009.jpg",
+      "originalUrl": "https://digi.ub.uni-heidelberg.de/diglitData/image/rjm_inv_buch_10/3/009_RJM_Inventarbuch_10.jpg",
+      "capturedAt": "2026-09-30T01:42:00.000Z",
+      "method": "download",
+      "note": "Complete original HAI page JPEG downloaded from the viewer JPEG link and visually reviewed; 4320 x 3370 px with full table. CC BY-NC-ND 4.0; preservation only."
+    }
+  ]
+}
