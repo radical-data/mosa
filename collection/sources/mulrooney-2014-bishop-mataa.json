@@ -1,0 +1,11 @@
+{
+  "author": "Mara A. Mulrooney, Andrew McAlister, Christopher M. Stevenson, Alex E. Morrison and Lissa Gendreau",
+  "reference": "Sourcing Rapa Nui Mata‘a from the Collections of Bishop Museum Using Non-Destructive pXRF. Journal of the Polynesian Society 123(3), 301–338 (2014). https://doi.org/10.15286/jps.123.3.301-338",
+  "language": "en",
+  "notes": {
+    "language": "en-GB",
+    "text": "Reviewed a privately supplied PDF on 2026-09-30 after direct publisher downloads returned 404. The supplied copy's SHA-256 is 31157ea92bccf67883170f34abd6ca2d31de3c5665051816ff1b5ae63512ef8c; its original retrieval date is unknown. Permission to share the PDF has not been granted, so no capture is registered. PDF, page renders and raw OCR remain private.\n\nThe paper reports 332 analysed mata‘a (302 complete and 30 broken) on printed p. 303. The appendix, printed pp. 324–334, has 332 distinct Sample No. labels, transcribed visually with OCR used only to locate rows. Page row counts are 29, 32, 29, 32, 30, 32, 29, 32, 29, 32 and 26. Repeated B3481 letter suffixes, including lowercase ell, were visually distinguished. These analytical specimen labels do not by themselves establish current catalogue identities. The acquisition counts on printed p. 304 sum to 333 (232 + 81 + 20); the difference from the analysed sample and appendix is unexplained.\n\nThree individually discussed labels are useful starting points for reconciliation: C8353 (appendix p. 334; discussion pp. 314–315) is explicitly called an accession number in the text; its SVM assignment is Motu Iti and DFA assignment Orito. B3481c and B3481bbbb (appendix p. 325; discussion p. 315) have Rano Kau I assignments by both methods. All three are described as complete mata‘a.\n\nOn 2026-09-30, a literal identifier comparison with current collection JSON found no matching appendix label. Existing Bishop-linked source-table entries lacked recorded accessions and described other artefact types. This comparison was not a catalogue-wide search and does not resolve identities where numbers are missing. No object links or structured claims are asserted by this source record pending reconciliation."
+  },
+  "claims": [],
+  "images": []
+}

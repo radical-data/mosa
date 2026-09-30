@@ -1,3 +1,252 @@
+# IndiGen register migration history
+
+This is frozen supporting history for the existing IndiGen register, retained
+from the first shared-workspace migration. It is not a template, source record,
+current research dashboard or document to update after imports. Current work
+belongs in the [campaign](../campaigns/indigen-follow-up.md) and optional
+[register](indigen-recollecting-rapa-nui-gallery.json). The former research
+archive directory has been removed; original source captures stay in
+`source-files/` with metadata in their collection sources.
+
+## What this preserves
+
+On 2026-09-30, the existing local register was copied into
+[shared progress](indigen-recollecting-rapa-nui-gallery.json).
+Its version, revision 45, one inventory, 44 batches, original dates, searches,
+checks, commits, object outcomes, stage references and source hashes are
+unchanged. Only batch evidence locations and optional limitation notes changed.
+This preserves historical reports; it does not repeat or independently verify
+the museum research.
+
+The original register remains unchanged in ignored local storage. Its SHA-256
+is `0274f1a8d52a9fa35c5f148b4fe7870bc9b3e80a49b2792e6241220e9c019988`.
+The shared register is now the authoritative copy; do not update the local one.
+
+## Evidence selection
+
+The register referenced 182 distinct local evidence files. This bounded review
+examined those references, not every file in local research:
+
+- 30 local files were byte-identical to tracked material: 21 HTML captures,
+  one PDF capture and eight published images. References now reuse those files.
+- [Historical notes](#historical-search-notes) condense 14 useful authored audits.
+  They preserve search scope, findings and obstacles, with explicit dates.
+- The [Chile candidate searches](#recorded-chile-candidate-searches) retain attempted
+  URLs and identifiers, omitting scraped record bodies. The originating batch
+  treated these as unreviewed candidates.
+- The other 137 local files remain local: raw extracts, screenshots, downloads,
+  detailed intermediate audits, headers and build logs. The relevant batches
+  state their evidence limitations. No new binary evidence was shared.
+
+Existing tracked evidence and public URLs remain referenced. Where a batch otherwise had only local evidence, its shared evidence list now
+points to collection sources already named in its original source hashes.
+Those batches explicitly record this substitution and the absent original
+audits. Successful-retrieval logs, import summaries and duplicated catalogue
+fields were not copied merely to create another account of published work.
+No source, claim, object, image, hash or historical outcome was changed to make
+this migration pass.
+
+The retained notes are historical documents, not an additional maintained
+status system. Their original filenames identify local audit provenance;
+those labels do not promise access to the local files. Use the register's
+latest outcomes and next actions to resume work. When private supporting
+material is needed, supply it separately or repeat the specific check and
+record a new batch. Missing shared evidence is still an error; an acknowledged
+local evidence limitation is reported separately from completion totals.
+
+## Verification
+
+The original and shared registers were compared field by field, allowing only
+batch evidence and limitation changes. Status parity passed for all stage counts, institutions, active and inactive
+entries, batches and completed totals. A clean clone of the migration commit
+passed the same checks with no `research-local/` directory and with Git LFS
+pointers instead of evidence payloads.
+At migration, there were 417 active entries, 90 complete within their recorded
+four-stage scope, and no source drift. These figures are a dated snapshot,
+not a maintained programme dashboard.
+
+Use `just research-check` when reviewing this register. It validates its
+structure and references. Changes since review are advisory; historical Git
+commits are retained as context, not required dependencies. Source captures
+have their own content check when hydrated.
+
+## Historical search notes
+
+These are dated observations, not current catalogue coverage. Keep unresolved
+searches unresolved: an access block, index miss or partial public database does
+not establish absence. Accession matches do not establish ownership, consent,
+cultural authority or present location. The notes below retain reasoning and
+follow-up that are not a second record of completed imports. Later register
+batches may resolve these historical obstacles; read current status before
+acting on them. This is frozen migration evidence, not a log to maintain.
+Exact queries, accession lists and object outcomes remain in the
+[register](indigen-recollecting-rapa-nui-gallery.json); the named
+batches below identify the relevant history.
+
+### Te Papa image rights
+
+Source: `image-reviews/2026-09-30/te-papa/audit.md`.
+
+For Ua OL000353/2, the [official item page](https://collections.tepapa.govt.nz/object/180647)
+showed the image but explicitly said “All Rights Reserved” while the copyright
+holder was being sought. Public display and the object's credit do not grant
+image reuse. Keep the image unavailable unless item-specific reusable terms or
+permission are documented. The caption's “unknown” is the maker field, not a
+photographer credit.
+
+### Met pilot
+
+Source: `museum-pilot/met/2026-09-30.md`.
+
+The accession match was the identity test, not independent verification of
+museum statements. The attributed medium accounts already live in the
+[Met source](../../collection/sources/met-moai-papa-1979-206-1478.json) and
+[IndiGen source](../../collection/sources/indigen-recollecting-rapa-nui-gallery.json);
+consult those records rather than maintaining another transcription here.
+
+### Museum Fünf Kontinente, Munich
+
+Source: `museum-pilot/munich/2026-09-30-audit.md`.
+
+The legacy MoSA entry `kava-kava-munchen` has no museum inventory number or
+distinctive details. The museum search surfaced three plausible records—193,
+94-317 747 and 94-317 758—so the older entry cannot be assigned among them. Keep
+it separate and ambiguous until evidence distinguishes it. For exact lookup,
+use the museum's [Sammlung Online](https://onlinedatenbank-museum-fuenf-kontinente.de/)
+“Inventar-Nr.” field and verify the number on the detail page. No image-specific
+reuse grant was established in this pass.
+
+### Museum der Kulturen Basel
+
+Source: `museum-rollout/europe-other/basel-audit.md`.
+
+The old Vc 1686 detail URL mistakenly queried Vc 1514. Do not reuse it when
+resuming from the local audit. The distinction between accession and entry
+numbers and the current search recipe belong in the
+[holder lookup guide](../../.agents/skills/identify-objects/references/holder-lookups.md).
+Use batch `basel-reviewed-records-2026-09-30` and source capture metadata for
+reviewed records and preservation results; early capture failures in the local
+audit are not current stage outcomes.
+
+### Canterbury, Tūhura Otago and National Museums Scotland
+
+Source: `museum-rollout/nz-scotland/research-audit.md`.
+
+Batch `nz-scotland-museum-follow-up-2026-09-30` records the exact search scope
+and per-object results. Canterbury, Otago and NMS presented human-verification
+challenges during parts of the work. Records not reached were unreviewed,
+not absent. The NMS publication includes bibliography-only accession mentions;
+those must not be treated as descriptions of the corresponding objects.
+Institution-wide publication counts also do not measure the assigned batch.
+
+### Völkerkundemuseum Zürich
+
+Source: `museum-rollout/resume/europe-other/zurich-audit.json`.
+
+The [availability statement](https://www.musethno.uzh.ch/de/Ueber_uns/aktuell/box-by-box.html)
+said on 30 September 2026 that a collection database was planned by 2028 and
+individual artefacts were not yet visible. [Box by Box](https://musethno-collections.ch/)
+was schematic, not an item catalogue. This explains the access limitation in
+batch `europe-resume-zurich-2026-09-30`; retry when individual records become
+available.
+
+### Museo Fonck catalogue discovery
+
+Source: `museum-rollout/resume/fonck/research-audit.md`.
+
+This was institution-level discovery, not an exhaustive accession search.
+Only one exact-string portal search completed; batch
+`fonck-catalogue-discovery-2026-09-30` preserves that attempt and its scope.
+The unresolved assignments remained deferred rather than "not found".
+
+The actionable library lead is the 1986 *Catálogo de la colección pascuense,
+Museo Sociedad Fonck* (Viña del Mar). The museum's 7 November 2023 article about
+José Miguel Ramírez and a public procurement record identify the title; no
+readable authorised digital copy was found. Its contents and relation to the
+assigned accessions remain unverified. A 2017 procurement line received no
+offers and does not establish a holding at Biblioteca William Mulloy. No
+enquiry or purchase was made.
+
+### Final four Lower Saxony records
+
+Source: `museum-rollout/resume/germany/final-four-search-audit.json`.
+
+Batch `germany-lower-saxony-final-four-2026-09-30` records the searches and
+matched sources. The positive control returned an unrelated shelfmark: it
+showed that the search could return results, not that the museum objects were
+fully indexed. The portals are partial inventories, so negative results do
+not establish absence.
+
+### Lübeck and Frankfurt exact-search follow-up
+
+Source: `museum-rollout/resume/lubeck-frankfurt/parent-review.json`.
+
+Exact and numeric-variant searches were checked against saved result text,
+with positive controls checked separately. Batch
+`lubeck-frankfurt-10-first-pass-2026-09-30` retains the query ledger; the later
+`lubeck-frankfurt-dependent-stages-2026-09-30` batch defers work that depends
+on a verified identity. Neither public catalogue was established as a complete
+inventory, so the negative results do not establish absence.
+
+### Museo de Historia Natural de Valparaíso — final two
+
+Source: `museum-rollout/resume/mhnv/final-two/audit.json`.
+
+Batch `mhnv-final-two-bounded-outcomes-2026-09-30` distinguishes a supported
+record match without an original capture from an unresolved identity after
+access failures. A preservation failure must not undo a supported identity;
+an inaccessible candidate must not become a "not found" conclusion.
+
+### MHNV publication comparison
+
+Source: `museum-rollout/resume/mhnv/review.json`.
+
+The [publication source notes](../../collection/sources/ramirez-2017-coleccion-mhnv.json)
+already explain the numbered-caption scope, unresolved date and measurement
+differences, unmapped testimony and image-rights limits. Those notes are the
+maintained account of that review.
+
+### Source-addition audit and 17-192 capture limitation
+
+Source: `museum-rollout/resume/source-audit/a574f74-to-head.md`.
+
+The [source notes and capture metadata](../../collection/sources/chile-patrimonios-02sdc-17-192.json)
+identify which evidence supplied the catalogue number and which fields the PDF
+preserves. The register records the capture follow-up; this audit adds no
+separate collection correction or status requirement.
+
+### Linden-Museum Stuttgart search
+
+Source: `museum-rollout/resume/stuttgart/search-audit.json`.
+
+An early UI locator did not apply its search filter. Those attempts were
+discarded and repeated with visible active-filter checks and a known positive
+control. Batch `stuttgart-remaining-search-2026-09-30` preserves the actual
+queries and outcomes. Check that the filter took effect before interpreting a
+future negative result.
+
+### Germany discovery access findings
+
+Source: `museum-rollout/germany/lookup-audit.json`.
+
+The original access audit predates later successful follow-up, especially for
+MARKK and Bremen. It must not be used as their current status. The shared
+[holder recipes](../../.agents/skills/identify-objects/references/holder-lookups.md)
+retain useful search methods; the register holds the later object outcomes.
+
+Göttingen's official portal presented an Anubis browser-verification challenge.
+That remains an access lead for an ordinary-browser retry or a privately
+supplied record, not an absence conclusion. The old audit named Köln, Lübeck
+and Frankfurt without documenting findings for them; do not infer that merely
+being listed meant their catalogues had been searched.
+
+## Recorded Chile candidate searches
+
+Historical search metadata only; these were unreviewed candidates in the
+originating batch. Later register batches may resolve them. This retained
+attachment is not another collection source.
+
+```json
 {
   "migrationNote": "Selected search metadata from the historical local audit. Scraped record bodies omitted. Candidates were not verified in this batch; later register batches may resolve them.",
   "checkedAt": "2026-09-30",
@@ -684,3 +933,4 @@
     }
   ]
 }
+```

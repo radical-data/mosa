@@ -19,16 +19,17 @@ in this order:
 
 1. **Source:** inventory the page's scope, sections, individual entries, linked
    object notes and image references. Preserve usable evidence with
-   [source-capture](../source-capture/SKILL.md); inspect the capture before
-   registration. Exhaust tabs, load-more controls, pagination and lazy-loaded
-   sections before calling the inventory complete. Record section and entry
-   totals, and reconcile them between the inspected page, private inventory and
-   capture. Add a source record with only established attribution and language.
+   [source-capture](../source-capture/SKILL.md) when useful and sharing is permitted;
+   inspect the capture before registration. Exhaust tabs, load-more controls, pagination and lazy-loaded
+   sections within the agreed scope before calling it complete. Use a working
+   entry list only when needed for reconciliation; no separate inventory report
+   is required. Add or reuse one source record with established attribution and
+   language. It may have no object links or claims until identities are resolved.
    Do not treat entry counts as object counts.
 2. **Objects:** use [identify-objects](../identify-objects/SKILL.md) to reconcile
    entries with existing handles and identify justified new objects. Track each
    entry's disposition and evidence; defer uncertain matches explicitly.
-3. **Claims:** use [extract-claims](../extract-claims/SKILL.md) on the captured
+3. **Claims:** use [extract-claims](../extract-claims/SKILL.md) on the inspected
    evidence in named, section-sized batches. Review directly linked articles as
    separate sources, preserving their own authorship, language and attribution.
    Discover canonical paths and legacy or query-string link forms. Resolve
@@ -41,21 +42,22 @@ in this order:
    object; public access or a gallery credit alone is not permission. Keep
    unresolved assets private and report the missing evidence.
 
-Use the smallest meaningful batches that can be reviewed independently.
-Read the relevant [campaign](../../../research/README.md) before repeating research.
-Keep useful findings and unresolved entry-to-object matches in that campaign
-and reviewed evidence; raw downloads and private working files stay in
-`research-local/`. For resumable follow-up on the source-linked objects,
-use the shared per-source progress register described in the [collection authoring guide](../../../docs/collection-publication.md#research-museum-records): run
-`just research init <source-id>`, then `sync` and `status` when resuming, and
-record each reviewed batch with its searches, evidence, checks and commit IDs.
-The progress register supplements the raw inventory; it does not replace
-entry-level dispositions. Shared research is visible to repository readers;
-do not put private research or unauthorised captures in any tracked directory.
-If one item is blocked, continue independent
-in-scope work and state its exact effect on coverage.
+Use the smallest meaningful batches that can be reviewed independently. Check
+existing source notes and relevant prior work before repeating research. Put
+source-specific findings and limitations in source `notes`, with locators on
+claims where known. For an ordinary import, do not create a campaign, evidence
+note, progress register or a second account of successful work.
 
-Keep each commit valid and reviewable. Commit the source and reviewed capture
+Use a [campaign](../../../research/README.md) only when a wider investigation
+needs a shared question or next action. Continue an existing progress register
+when it helps a substantial follow-up; the [research guide](../../../docs/research.md#optional-progress-registers)
+owns its commands and reference rules. Record only work actually reviewed, not extra
+stages, test logs or commit logs to fill out a workflow. Keep restricted originals
+and scratch files local; a useful factual transcription can be shared separately
+from an original that cannot be redistributed. If one item is blocked, continue
+independent in-scope work and record its effect where the research already lives.
+
+Keep each commit valid and reviewable. Commit the source and any reviewed shareable capture
 first, then object batches, then claim batches and linked article sources, then
 cleared image batches, and finally any workflow guidance changes. Group images
 by institution and applicable reuse terms; keep binaries with their metadata.
@@ -66,5 +68,5 @@ work and branch state. Do not commit a batch that fails its relevant checks.
 Run the checks required by `AGENTS.md` and the specialist skills for each stage.
 Also validate local skill/document links when changing guidance, and review
 affected object pages on both language routes. Finish with stage coverage,
-verification results, commit IDs and a concise unresolved-items register; state
-whether any stage is incomplete and why.
+verification results and any material unresolved work. Link existing source
+notes or the campaign rather than producing another report.

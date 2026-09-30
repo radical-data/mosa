@@ -60,6 +60,12 @@ the source ID:
 }
 ```
 
+A publication or catalogue we have examined can be registered with its known
+attribution, reference and language, empty `claims` and `images`, and no
+`objectIds` or `captures`. Use `notes` for source-specific review decisions.
+This records the source without inventing object identities or requiring a
+shareable copy of the original.
+
 Use `objectIds` to publish a source that documents an object before any claims
 or images are extracted. Do not repeat an object ID when a claim or image in the
 same source already links that object. A source can still use `objectIds` for one
@@ -77,8 +83,8 @@ array must not change its claim IDs.
 Use optional `locator` text to identify a checked passage, for example
 `"locator": "Página 14, tabla 2, fila 6"`. Write it in the source's language;
 it appears beside the claim. Omit it when unknown and keep uncertainty in
-`value`. Existing claims do not need backfilling. Exact capture/version details
-can stay in the extraction audit.
+`value`. Existing claims do not need backfilling. Keep capture/version details in
+capture metadata or source `notes` when needed.
 
 Use optional source `notes` for MoSA's research and transcription decisions:
 
@@ -98,18 +104,21 @@ in `research-local/`.
 ### Extract claims from an existing source
 
 Use the [claim extraction skill](../.agents/skills/extract-claims/SKILL.md) for
-repeatable extraction batches. Read the source itself and keep passage locators,
-proposed mappings and deferred entries in `research-local/claim-extraction/`.
+repeatable extraction batches. Read the source itself and put passage locators
+on claims where known.
+Use a working extraction list only when it helps a complex batch; keep useful
+unresolved work with the source or campaign, and private scratch files local.
 Public source notes record concise methodological decisions; caveats needed to
 understand a claim belong in its value because notes are not rendered on the site.
 Validate each batch and review the affected object pages in both language routes.
 
 ### Extract a source table
 
-Transcribe and visually review the complete table before assigning claims. Keep
-the raw cells, page and row references, interpretation decisions and deferred
-entries in `research-local/`. Record a concise explanation of decisions such as
-blank-cell inheritance in the source's `notes`. The public source reference
+Choose and state the table scope; visually review the rows and layout before
+assigning claims. Use a working transcription when it prevents omissions or
+repeated work, and keep restricted extracts local. A selective batch need not
+transcribe the entire publication. Record a concise explanation of decisions
+such as blank-cell inheritance in the source's `notes`. The public source reference
 should identify the table and its page range; do not infer an author or date.
 
 For museum inventories, use `held_by` for the reported museum or collection and
@@ -143,178 +152,26 @@ retain established handles when the prior extraction identifies the same entry.
 
 ### Research museum records
 
-Keep candidate URLs and unsuccessful searches in the relevant shared
-[campaign](research.md#files-and-responsibilities), not in `collection/`.
-Use `research-local/` for downloads, private evidence and working drafts.
-Record the historical holder and description, candidate URL and accession number when available, supporting and
-contradictory evidence, the date checked and the evidence still needed. Use
-explicit statuses such as `verified`, `ambiguous`, `blocked` and `not found`;
-`not found` means only that the recorded searches did not locate a match.
+Use existing sources and the relevant
+[holder lookup recipe](../.agents/skills/identify-objects/references/holder-lookups.md)
+before repeating a search. URLs and internal record IDs generate candidates;
+verify the displayed accession and supporting details. Match conservatively:
+institution-scoped identifiers, documented transfers and distinctive physical
+or provenance evidence can establish identity; type and institution alone
+cannot. Keep established handles and unresolved matches separate.
 
-Reuse successful holder lookups across objects and imports. The identification
-skill maintains [holder lookup recipes](../.agents/skills/identify-objects/references/holder-lookups.md)
-for observed accession URL templates, search parameters, identifier formatting
-and fallbacks. A substituted URL supplies a candidate, not a verified match;
-check its displayed accession and supporting object details. Record a new
-successful method there and each actual attempt in the campaign or register below.
+An examined publication or catalogue can have a source record before individual
+objects are reconciled. A search hit or speculative URL is only a lead. Adding
+a source does not assert a match, current custody or permission to share its
+files. Create object links and attributed claims only when supported.
 
-For repeatable follow-up work on existing source-linked objects, use the shared
-progress register at `research/progress/<source-id>.json`. It is seeded
-from objects linked by that source's claims, images or `objectIds`; it does not
-replace a raw page or gallery inventory. Initialise or reconcile it with:
-
-```sh
-just research init <source-id>
-just research sync <source-id>
-just research status <source-id>
-just research check <source-id>
-```
-
-`just research check` (without a source ID), also available as `just research-check`,
-checks every shared register. `just verify` includes this check. It does not
-inspect local-only registers. Clone the full Git history to resolve historical
-commit references; LFS pointer files suffice for this metadata check.
-
-`init` is safe to repeat for shared registers. `sync` snapshots changes to the
-seed source and adds or removes its current entries while retaining recorded history. A changed
-institution, catalogue identifier or object type resets the displayed progress
-for that entry to pending; earlier batches remain as history. A later change to
-promoted source metadata is shown as stale until a new reviewed batch records
-the current state. `status` reports drift and a limited actionable queue;
-`check` fails on drift, broken current collection references, missing evidence
-files or commits from any batch, or failed checks in batches supplying current
-outcomes. Superseded collection references remain historical: deleting a claim
-after a newer reviewed batch replaces it does not invalidate that earlier batch.
-Neither command fetches live pages or changes collection records. Filter the status queue with
-`--institution`, `--stage`, `--status`, `--object` or `--limit` (default 30).
-Institution matching is a case-insensitive substring search over the source's
-holder wording; spellings are not silently merged. Counts describe the whole
-register and `matching` describes the filtered queue. Use `--object` to include
-that object's previous batches, searches and evidence, even after it leaves the
-active inventory. Local metadata hashes detect repository changes, not changes
-to a live museum webpage. Continue to use source capture checks for file content.
-The `completed` count means all four stages are resolved within their recorded
-scope. `unavailable` counts as resolved; pending, partial, blocked and deferred
-work does not. It does not imply that every possible claim or image was reviewed.
-
-The register keeps four independent outcomes for each object: identity,
-preservation/capture, claims and images. Identity uses `pending`, `verified`,
-`ambiguous`, `not-found`, `blocked` or `deferred`; the other stages use
-`pending`, `complete`, `partial`, `blocked` or `deferred`, with `unavailable`
-also available for claims and images after that scope has been reviewed. Each
-outcome has a status, short note, evidence references and, when follow-up is
-needed, a next action. Verified/complete/partial outcomes require evidence;
-ambiguous, not-found, blocked, deferred and partial outcomes require a next
-action. `unavailable` requires a reason and means the reviewed scope yielded no
-usable claims or publishable images, never that the stage was skipped.
-
-Displayed stage state derives from append-only dated batches; do not rewrite
-earlier outcomes to make the latest state look current. Record reviewed work in
-dated batches that preserve attempted searches, their queries and results,
-evidence locations, check results and commit IDs. For example, prepare a
-private JSON batch and record it against the displayed revision:
-
-```sh
-just research record <source-id> --file research-local/batch.json --revision 3
-```
-
-For example, a failed catalogue search can be recorded without changing the
-capture, claims or image stages. Replace these illustrative identifiers, date,
-URL and query with the actual attempt:
-
-```json
-{
-  "id": "example-catalogue-search-2026-09-30",
-  "checkedAt": "2026-09-30",
-  "scope": "Search the museum catalogue for the source accession.",
-  "searches": [
-    {
-      "url": "https://example.org/catalogue",
-      "query": "AB 123",
-      "result": "No result for the exact accession or its documented variant."
-    }
-  ],
-  "evidence": ["research/evidence/example-search.md"],
-  "checks": [],
-  "commits": [],
-  "updates": [
-    {
-      "objectId": "example-object",
-      "identity": {
-        "status": "not-found",
-        "note": "The recorded searches found no match; this does not establish absence.",
-        "refs": [],
-        "nextAction": "Check the museum's digitised inventory for the former accession."
-      }
-    }
-  ]
-}
-```
-
-All top-level fields above are required; unknown fields are rejected.
-An optional `evidenceLimitations` array of non-empty notes records evidence that
-cannot be shared or reproduced. It is reported separately from stage totals and
-does not waive missing files or count as evidence. Batch evidence can reference
-HTTP(S) URLs or files under `collection/`, `source-files/` and `research/`.
-Review files before sharing them; keep private material in `research-local/`.
-
-`checks` contains `{ "command": "just collection-check", "result": "passed", "note":
-"Reviewed batch validates." }` entries when checks have actually run. Results
-can be `passed` or `failed`; the register records them and does not execute
-commands. `commits` holds existing Git commit hashes and may be empty before a
-commit. Append another dated batch to record later checks or commits, repeating
-only the stage outcomes that the new review supports. `checkedAt` is the date
-the evidence was checked; the tool separately records when it was entered.
-
-Omitted stages retain their earlier history. Reusing a batch ID with the same
-content is idempotent; reusing it with
-different content is an error. The command validates object-specific evidence
-references and the existence of local capture/image files. Use source/claim references for
-claims, source/image-file references for images, source IDs for captures, and
-HTTP(S) URLs for identity evidence. The register revision prevents a stale
-batch from overwriting another update; inspect current status and retry against
-the new revision when it conflicts. When delegating research, assign disjoint
-object lists and have subagents return batch JSON. One coordinator reviews and
-records those batches sequentially; the lock prevents lost writes but does not
-reserve objects or prevent two researchers from doing the same search.
-
-Keep raw extraction inventories as separate private working material when
-needed. The progress register is a resumable audit of follow-up work on the
-existing source-linked objects, not a replacement for entry-level identity
-reconciliation or specialist capture, claims and image review. It does not
-establish claim truth, rights, consent or current custody, and does not promote
-a candidate into the public collection by itself. Writes are local and
-concurrency-safe; if a stale lock remains, first confirm that no register
-command is still running before removing it.
-The shared register is authoritative when present. An older register under
-`research-local/progress/` can be inspected with a warning, but cannot be
-initialised, synced or written until its reviewed evidence and register have
-been migrated. Keep that local original as a backup; never update both copies.
-Git restores shared history, while private staging still needs its own backup.
-A fresh `init` inventories the collection but does not infer reviewed work.
-For Git conflicts, reconcile both batches, re-read status and record subsequent
-work against the resulting revision; do not choose a side silently.
-
-A candidate is not a collection source. Promote it only when evidence identifies
-the specific object, for example through the same accession or former catalogue
-number, a documented transfer, a unique name or inscription, or a photograph
-and multiple distinctive physical or provenance details. Object type and
-institution alone are insufficient. Prefer the museum's own record or an
-authoritative successor-institution record over aggregators and search-result
-snippets.
-
-Prioritise candidates that already have a stable identifier, transfer evidence
-or distinctive measurements. When public records cannot resolve a strong
-candidate, ask the institution a precise identity question and retain the
-correspondence in `research-local/`. Do not publish private correspondence or
-convert a probable identification into a certain claim without permission and
-appropriate attribution.
-
-When a candidate becomes verified, create or update its source and add the
-object through a claim, image or `objectIds` as appropriate. Record the decisive
-identity evidence in source `notes`, preserve any material caveat, and remove
-the promoted candidate from the active follow-up queue while retaining the
-research history.
+Record decisive source-specific reasoning and caveats in source `notes`.
+Unresolved work can stay in an existing campaign when it helps continuation.
+The [research guide](research.md) owns campaign and optional-register guidance;
+an ordinary import requires neither. Do not maintain a second account of facts,
+checks or successful imports already recorded in the collection and Git.
+Contact institutions only when the user authorises it; private correspondence
+stays in local staging.
 
 ### Preserve source files
 
@@ -397,8 +254,9 @@ terms; a webpage's text licence does not necessarily cover its photographs.
 Prefer the original downloadable file over a thumbnail, and preserve its bytes.
 Record credit, the licence name and URL, and any changes in the image metadata.
 The `originalUrl` can identify the image's description page when that page supplies
-its attribution and licence. Retain the direct download URL and checksums in the
-private batch audit. Leave uncertain rights or object matches in staging.
+its attribution and licence. When the download URL differs, keep it in source
+`notes` with any useful rights review context. Git LFS records the file checksum; do not duplicate routine
+metadata in a separate audit. Leave uncertain rights or object matches in staging.
 Write image prose in the source record's declared language; the gallery and
 collection previews mark that language explicitly. Gallery interface labels
 are translated for each route.

@@ -12,19 +12,15 @@
 
 ## Shared research programme
 
-The [research guide](research.md), [programme overview](../research/README.md)
-and [ADR 026](adrs/026-share-research-plans-and-evidence.md) define the minimal
-shared workflow.
+The [programme index](../research/README.md) owns research priorities.
+[Collection authoring](collection-publication.md) is the default workflow;
+[research guidance](research.md) covers optional campaigns and registers.
 
-- [x] Simplify the proposal to campaign documents and existing registers.
-- [x] Adapt the research commands for shared storage and evidence limitations.
-- [x] Share IndiGen progress and selected evidence; check historical parity and
-  resumption from a clean checkout.
-- [x] Run the bounded Bishop mata‘a publication pilot.
-- [x] Update contributor instructions to the tested workflow.
-
-Migrate other useful history and run wider institutional campaigns incrementally.
-Leave legacy scratch files alone; extend tooling only for problems found in use.
+The shared IndiGen history is portable. The Bishop paper has one collection
+source and a shared identifier transcription, with its PDF kept private.
+Next work is a bounded identity-reconciliation batch, not another research
+infrastructure phase. Extend tooling only when an actual task demonstrates the
+need; do not migrate or classify every legacy scratch file.
 
 ## Deliberately deferred model work
 

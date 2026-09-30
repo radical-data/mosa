@@ -29,7 +29,7 @@
 | `collection/editorials/` | Authored Markdown publications linked to objects |
 | `collection/images/` | Publishable image assets tracked with Git LFS |
 | `source-files/` | Preserved source captures in Git LFS, excluded from the website |
-| `research/` | Shared campaigns, object-stage progress and reviewed evidence, excluded from the website |
+| `research/` | Optional campaigns and retained research progress, excluded from the website |
 | `scripts/` | Documentation and deployment verification |
 | `docs/adrs/`, `docs/test-cases/` | Decisions and retained domain requirements |
 
@@ -43,7 +43,7 @@ repository tasks and pnpm owns dependencies.
 
 | Change | Verification |
 | --- | --- |
-| Shared research records | `just research-check`, `just docs-check` and `git diff --check` |
+| Research registers | `just research-check`, `just docs-check` and `git diff --check` |
 | Documentation only | `just docs-check` and `git diff --check` |
 | Collection records or images | `just collection-check`, relevant tests and `just build` |
 | Website or shared TypeScript | Relevant tests, then `just verify` |

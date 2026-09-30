@@ -38,4 +38,5 @@ pointers; explicit content checks require hydrated files. Full backups must incl
 LFS objects. Neither live websites nor a browser are dependencies of the build.
 
 Candidate discovery, object identification and publication remain governed by the
-collection authoring guide. Capturing a candidate does not promote it to a source.
+collection authoring guide. An examined publication can have a source record
+before object reconciliation; a capture alone does not verify an object match.

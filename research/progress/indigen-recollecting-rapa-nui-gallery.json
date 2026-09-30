@@ -2887,7 +2887,7 @@
         "te-papa-moai-kavakava": "eab02297840a7905a07a31a646fc4268b185212dea84a206227aa0af89d31bf4"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Shared evidence points to the collection sources already referenced by this batch’s original sourceHashes; the original local audit files remain unavailable in Git."
       ]
     },
@@ -2896,7 +2896,7 @@
       "checkedAt": "2026-09-30",
       "scope": "Selective extraction of catalogue fields from eight IndiGen entries attributed to The Metropolitan Museum of Art; not an exhaustive transcription of the Met interpretive essays. The official object pages and accession-based identity checks are documented, but the original per-object search queries were not retained.",
       "searches": [],
-      "evidence": ["research/evidence/indigen/historical-notes.md"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [
         {
           "command": "just collection-check",
@@ -3241,7 +3241,7 @@
         "met-moko-1995-416": "9c952b95027728563a0da79df99d816bf906e13d27a66dd38846c7186c4080d1"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -3296,7 +3296,7 @@
           "result": "Museum record displaying the same inventory number was identified and captured."
         }
       ],
-      "evidence": ["research/evidence/indigen/historical-notes.md"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [
         {
           "command": "just collection-check",
@@ -3680,7 +3680,7 @@
         "museum-fuenf-kontinente-94-317-758": "a178e34fa7f5e23b422f80ee70ac77689dba0a483baad71c8d9fe249f3df7121"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -4315,7 +4315,7 @@
         "maa-1954-102": "f2247e1f1b21af4d8c5e94cbbf787f465d9efcd68a8ce53c1e804a8b088ff7d2"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 4 original local evidence file(s) remain outside Git (json-record-or-audit, raw-capture). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 4 original local evidence file(s) remain outside Git (json-record-or-audit, raw-capture). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Shared evidence points to the collection sources already referenced by this batch’s original sourceHashes; the original local audit files remain unavailable in Git."
       ]
     },
@@ -5064,7 +5064,7 @@
         "rietberg-rpo-315": "99aa64980242196c66fcf2b05fb3c0563615b9a91a44adcfa1f0b6f67a096437"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 4 original local evidence file(s) remain outside Git (json-record-or-audit, raw-capture). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 4 original local evidence file(s) remain outside Git (json-record-or-audit, raw-capture). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Shared evidence points to the collection sources already referenced by this batch’s original sourceHashes; the original local audit files remain unavailable in Git."
       ]
     },
@@ -6305,7 +6305,7 @@
         "smb-berlin-vi-4905": "e58266a5000ecac1289bd3e6c3ac5647d34049eb96f4249cb1691a9ee5b3531a"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 8 original local evidence file(s) remain outside Git (image, json-record-or-audit, text-note-or-log). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 8 original local evidence file(s) remain outside Git (image, json-record-or-audit, text-note-or-log). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Shared evidence points to the collection sources already referenced by this batch’s original sourceHashes; the original local audit files remain unavailable in Git."
       ]
     },
@@ -6336,7 +6336,7 @@
         }
       ],
       "evidence": [
-        "research/evidence/indigen/historical-notes.md",
+        "research/progress/indigen-history.md",
         "https://onlinecollection.mkb.ch/?q=Vc%201513#/query/78f1b590-98f4-4175-8481-63106bf17d52",
         "https://onlinecollection.mkb.ch/?q=Vc%201514#/query/cf7e8f28-8054-46d9-b132-e09d09f58de4",
         "https://onlinecollection.mkb.ch/?q=Vc%201514#/query/ed434f14-2350-4fb1-ba19-e3d0331a5c1f",
@@ -6516,7 +6516,7 @@
         "museum-der-kulturen-vc-1517": "df46545e8bb0f9fa43fc03254792293c5ac32469bb3063f8ef4b78ad4f50e70f"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 5 original local evidence file(s) remain outside Git (json-record-or-audit, text-note-or-log). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 5 original local evidence file(s) remain outside Git (json-record-or-audit, text-note-or-log). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -6542,7 +6542,7 @@
         "collection/sources/skd-leipzig-po-00447.json",
         "collection/sources/skd-leipzig-po-01606.json",
         "collection/sources/skd-leipzig-po-01921.json",
-        "research/evidence/indigen/historical-notes.md"
+        "research/progress/indigen-history.md"
       ],
       "checks": [
         {
@@ -6896,7 +6896,7 @@
         "skd-leipzig-po-01921": "823b4604c39227de4d01607fe3e1dd6072298ef4cf0cbcf484764a002e1c6095"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 2 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 2 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -6913,7 +6913,7 @@
       ],
       "evidence": [
         "collection/sources/linden-museum-stuttgart-4567.json",
-        "research/evidence/indigen/historical-notes.md",
+        "research/progress/indigen-history.md",
         "collection/images/ua-stuttgart-4567/linden-staff.jpg"
       ],
       "checks": [
@@ -7194,7 +7194,7 @@
           "result": "Downloaded original 576,993-byte PDF. It names A.1880.14.1, A.1894.381, A.1954.100 and A.1895.373 in object-specific passages; registered as nms-pacific-collection-2014 and six selective claims added."
         }
       ],
-      "evidence": ["research/evidence/indigen/historical-notes.md"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [
         {
           "command": "just collection-check",
@@ -8612,7 +8612,7 @@
         "nms-pacific-collection-2014": "5299261dd000de3554c7f0e1c6dff5ab5a3b5d1817d656a5f552bde6e2e981d0"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (text-note-or-log). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (text-note-or-log). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -9064,7 +9064,7 @@
         "weltmuseum-wien-vo-22868": "6467fcf9375a1c3f15859ca885cf5a117e7552210e1ba1dbae52a475dfda8c9f"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 2 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 2 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -9088,7 +9088,7 @@
           "result": "Museum project overview reviewed; no exact-accession record verified."
         }
       ],
-      "evidence": ["research/evidence/indigen/historical-notes.md"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [],
       "commits": [],
       "updates": [
@@ -9835,7 +9835,7 @@
           "result": "{\"reason\":\"Retrieval error\",\"error\":\"TimeoutError: The operation was aborted due to timeout\"}"
         }
       ],
-      "evidence": ["research/evidence/indigen/chile-candidate-searches.json"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [],
       "commits": [],
       "updates": [
@@ -10431,7 +10431,7 @@
           "result": "Sorry, there is no result for this."
         }
       ],
-      "evidence": ["research/evidence/indigen/historical-notes.md"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [],
       "commits": [],
       "updates": [
@@ -10853,7 +10853,7 @@
           "result": "Applied query shown in heading and URL; result footer Mostrando: 0 de 0, no categories. Header animated count was inconsistent and was not used. This one exact string is not an exhaustive accession-variant search."
         }
       ],
-      "evidence": ["research/evidence/indigen/historical-notes.md"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [
         {
           "command": "Reviewed official Museo Fonck institutional and Sala Rapanui pages; official CDBP/SURDOC overview; Chile Patrimonios Fonck institution profile result; attempted public catalogue routes and exact web-index queries.",
@@ -13190,7 +13190,7 @@
       "inventory": 0,
       "sourceHashes": {},
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -13408,7 +13408,7 @@
         "carlotta-vkm-1927-13-0001": "821048fff59079d0dc65aa7e1561382ee147f5f4b2e2ab31bc2252d4e05f7f4e"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -13588,7 +13588,7 @@
         "carlotta-em-1926-09-0002": "6b495060f9f4a46834b421e19ce924f7b589a85ca71480c4d7f4e7c583e7e2db"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -13706,7 +13706,7 @@
         "bergen-register-4936": "660d998b755c0430e15c62cfc6515793dc0e14f001f31fe3b6f35f9c60624325"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -14849,7 +14849,7 @@
         "wereldmuseum-leiden-tm-2593-7": "622627850c48f163893deee341ba2557e61052cdcd6e9329ffd83b60bb88f71e"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -14864,7 +14864,7 @@
         }
       ],
       "evidence": [
-        "research/evidence/indigen/historical-notes.md",
+        "research/progress/indigen-history.md",
         "source-files/ramirez-2017-coleccion-mhnv/2026-09-30t01-08-27-664z.pdf"
       ],
       "checks": [
@@ -15122,7 +15122,7 @@
         "https://www.musethno.uzh.ch/de/Ueber_uns/aktuell/box-by-box.html",
         "https://musethno-collections.ch/",
         "https://www.musethno.uzh.ch/de/search.html?q=04964",
-        "research/evidence/indigen/historical-notes.md"
+        "research/progress/indigen-history.md"
       ],
       "checks": [],
       "commits": [],
@@ -16192,7 +16192,7 @@
         "bremen-d13426": "65092d398982c6a1bdd17013f9ee67a39b2eb80b8fab03dac4a10d49dc04cb94"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -16496,7 +16496,7 @@
         "markk-hamburg-oceania-post1921": "6c3d2cda66905a12a2771bad9d8a1594ee220bedac63585489793d71468e3d7e"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (image). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (image). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -16621,7 +16621,7 @@
         "chile-patrimonios-02sdc-17-192": "0a6dc13b6a30e533b94508a1f42b55b2dda2b5601dcc25157f6ce07b70adb1a2"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -16951,7 +16951,7 @@
         "chile-patrimonios-02sdc-17-332": "5212d570de6c8e01c34f7deb963d2af0c818a0ce58dbcaaa3277d0780511fd5f"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 5 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 5 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -17120,7 +17120,7 @@
           "result": "Your search yielded no results."
         }
       ],
-      "evidence": ["research/evidence/indigen/historical-notes.md"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [
         {
           "command": "Manual comparison of each exact accession query and related official institution coverage pages against the assignment entries",
@@ -17339,7 +17339,7 @@
       "inventory": 0,
       "sourceHashes": {},
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 37 original local evidence file(s) remain outside Git (raw-capture). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 37 original local evidence file(s) remain outside Git (raw-capture). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -17469,7 +17469,7 @@
         "chile-patrimonios-02sdc-17-303": "ba0f056b66a5ff1ae853e86465edf582e2ce84ba6fcc8cc1a3de96e9437800fc"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 4 original local evidence file(s) remain outside Git (image, json-record-or-audit, raw-capture). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 4 original local evidence file(s) remain outside Git (image, json-record-or-audit, raw-capture). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -17746,7 +17746,7 @@
         "chile-patrimonios-05sdc-4-1927": "b89457188f75f9fdbf52bca7de4f70343b297e6313066e43871ed82a1b46ed09"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 2 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 2 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -17754,7 +17754,7 @@
       "checkedAt": "2026-09-30",
       "scope": "Explicitly defer capture, claims and images for the ten unresolved Lübeck/Frankfurt identities; no object-level source was verified in the reviewed discovery pass.",
       "searches": [],
-      "evidence": ["research/evidence/indigen/historical-notes.md"],
+      "evidence": ["research/progress/indigen-history.md"],
       "checks": [
         {
           "command": "Manual comparison of each exact accession query and related official institution coverage pages against the assignment entries",
@@ -17984,7 +17984,7 @@
       "inventory": 0,
       "sourceHashes": {},
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 37 original local evidence file(s) remain outside Git (raw-capture). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 37 original local evidence file(s) remain outside Git (raw-capture). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -18512,7 +18512,7 @@
         "rjm-inventarbuch-10-page-0009": "b1b2b0e8d92da9689ad050b8b0133640ee2f1c4441288d2925e7e94551416196"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -19102,7 +19102,7 @@
         "chile-patrimonios-05sdc-4-1938": "f1ed36c34f92e78891aa70b9dc3d0e073d7f6c944dc44f2ed7ac389f9c8ea262"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -19309,7 +19309,7 @@
         "chile-patrimonios-02sdc-17-194": "6fe5591b78d6b84382a3e89b49351556713a1f8b97068201061a6c8e8475442d"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 14 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 14 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -19340,7 +19340,7 @@
       "inventory": 0,
       "sourceHashes": {},
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 3 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -19420,7 +19420,7 @@
         }
       ],
       "evidence": [
-        "research/evidence/indigen/historical-notes.md",
+        "research/progress/indigen-history.md",
         "https://www.postcolonial-provenance-research.com/en/database/",
         "https://landesmuseum-hannover.de/sammlung/ethnologie/",
         "https://www.braunschweig.de/kultur/museen/staedtisches-museum/artikelpool-dauerhaft/c-aussereuropaeische-ethnologie.php"
@@ -19580,7 +19580,7 @@
         "pae-se-hildesheim-v-64": "6af5021b85da83bff35717a1f74dff92fdb5130205622fcbd80b18901d077938"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -19853,7 +19853,7 @@
         "chile-patrimonios-05sdc-4-1998": "3d7cd4e812b039999cdf76f12e248ec3cb5127b4f7e659267f0d2eefbd4f9b3b"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 1 original local evidence file(s) remain outside Git (json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -20086,7 +20086,7 @@
         "chile-patrimonios-02sdc-17-416": "c572adbe14ec0757c5a29e8276b4285de5d9c56886c891455f915f9fc2bdba19"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 12 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 12 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -20384,7 +20384,7 @@
         "chile-patrimonios-05sdc-4-1997": "ebec5533ec2cc0bcb02b091b00f86b4e0a112a4cc06998c1279b56cce0da02d5"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 6 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 6 original local evidence file(s) remain outside Git (image, json-record-or-audit). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -20395,7 +20395,7 @@
       "evidence": [
         "collection/sources/chile-patrimonios-02sdc-17-192.json",
         "source-files/chile-patrimonios-02sdc-17-192/17-192-ficha.pdf",
-        "research/evidence/indigen/historical-notes.md"
+        "research/progress/indigen-history.md"
       ],
       "checks": [
         {
@@ -20446,10 +20446,7 @@
           "result": "No readable record established. Capture load timeouts and inaccessible web retrieval leave identity blocked; this is not a not-found catalogue conclusion."
         }
       ],
-      "evidence": [
-        "research/evidence/indigen/historical-notes.md",
-        "https://www.surdoc.cl/registro/4-358"
-      ],
+      "evidence": ["research/progress/indigen-history.md", "https://www.surdoc.cl/registro/4-358"],
       "checks": [
         {
           "command": "Parent independent official-page and linked SURDOC field review",
@@ -20537,7 +20534,7 @@
         "chile-patrimonios-05sdc-4-358": "e95e76ea40226fd991bfac90d3604268043f78602e70a289b2c5e241f33af4b9"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 2 original local evidence file(s) remain outside Git (json-record-or-audit, other). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 2 original local evidence file(s) remain outside Git (json-record-or-audit, other). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     },
@@ -20846,7 +20843,7 @@
         "met-rei-miro-1979-206-1527": "08b5eb93f26a12d971b9ad831e099ae92a2571ffda5f98d688d7694f15dda43a"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 11 original local evidence file(s) remain outside Git (json-record-or-audit, text-note-or-log). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged."
+        "Shared migration (2026-09-30): 11 original local evidence file(s) remain outside Git (json-record-or-audit, text-note-or-log). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged."
       ]
     },
     {
@@ -20855,7 +20852,7 @@
       "scope": "Review existing Te Papa image assets and item-specific reuse statements for ao-te-papa, moai-kavakava-te-papa and ua-te-papa. No claims or collection files changed.",
       "searches": [],
       "evidence": [
-        "research/evidence/indigen/historical-notes.md",
+        "research/progress/indigen-history.md",
         "source-files/te-papa-ao/2026-09-29t20-52-04-411z.html",
         "source-files/te-papa-moai-kavakava/2026-09-29t21-29-58-841z.html",
         "source-files/te-papa-ua/2026-09-29t20-52-22-716z.html",
@@ -20934,7 +20931,7 @@
         "te-papa-moai-kavakava": "eab02297840a7905a07a31a646fc4268b185212dea84a206227aa0af89d31bf4"
       },
       "evidenceLimitations": [
-        "Shared migration (2026-09-30): 4 original local evidence file(s) remain outside Git (json-record-or-audit, text-note-or-log). The migration did not re-verify their findings. See research/evidence/indigen/README.md; historical outcomes and dates are unchanged.",
+        "Shared migration (2026-09-30): 4 original local evidence file(s) remain outside Git (json-record-or-audit, text-note-or-log). The migration did not re-verify their findings. See research/progress/indigen-history.md; historical outcomes and dates are unchanged.",
         "Historical authored notes are condensed in the shared synthesis; full local audits were not copied. This is a record of earlier findings, not a new review of the museum evidence."
       ]
     }

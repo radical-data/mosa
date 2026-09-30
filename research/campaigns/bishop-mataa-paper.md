@@ -1,43 +1,30 @@
-# Bishop Museum mata‘a paper pilot
+# Bishop Museum mata‘a paper
 
 ## Question and scope
 
-Can the 2014 paper *Sourcing Rapa Nui Mata‘a from the Collections of Bishop
-Museum Using Non-Destructive pXRF* identify specimens missing from MoSA?
+Which specimens described by the [Mulrooney et al. paper](../../collection/sources/mulrooney-2014-bishop-mataa.json)
+can be identified as objects missing from MoSA? The first pass transcribed the
+appendix labels and compared them with existing collection identifiers.
+The paper's citation, review findings and limitations belong in its source
+record. No museum-wide census or automatic object creation is implied.
 
-This pilot inventories the paper's appendix and checks its identifiers against
-current collection records. Completion means the appendix inventory and this
-bounded comparison are recorded, with uncertain matches left unresolved.
-A wider museum catalogue search and creation of collection records are separate
-follow-up work.
+## Current position and unresolved work
 
-## Current position
+The [working identifier list](bishop-mataa-paper/sample-identifiers.txt) is shared
+so another contributor can continue without repeating transcription. It contains
+labels and page locators, not a second source record or catalogue. Its entries
+still need identity reconciliation; a missing literal identifier is not proof
+that the object is absent from MoSA. The source notes also record an unresolved
+count discrepancy in the paper.
 
-The paper inventory is complete. A human supplied the PDF after the agent's
-publisher download attempts failed. The identifiers have been transcribed and
-compared with current collection JSON; no literal match was found. That result
-does not establish new object identities where existing records lack catalogue
-numbers.
-
-The [evidence note](../evidence/bishop-mataa-paper/evidence.md) owns the citation,
-review method, counts, specimen locators and comparison limits. The PDF,
-transcription, OCR and page renders remain private in ignored local staging.
-The user explicitly withheld permission to share the PDF in Git or the website.
-A contributor needing the full inventory must obtain it privately; ordinary
-repository access does not provide that file.
-
-## Unresolved leads
-
-The paper's acquisition narrative and analysed sample differ in total; the
-[evidence note](../evidence/bishop-mataa-paper/evidence.md#reviewed-findings)
-records the discrepancy. Specimen labels have not yet been reconciled with
-museum catalogue records or existing unnumbered MoSA entries. No public
-collection records were created by this pilot.
+The supplied PDF, page images and raw OCR remain private. No PDF copy is included
+in Git or the website. The factual working transcription is available separately.
 
 ## Next action
 
-A human or agent can take a bounded catalogue-search batch, starting with the
-three individually discussed labels in the evidence note. Check the displayed
-catalogue identifiers and supporting object details before proposing new
-objects or matches. Reuse the private inventory if further entries are needed;
-do not turn the paper's specimen count into object records automatically.
+Take a small catalogue-matching batch, starting with the three labels discussed
+individually in the source notes. Check displayed identifiers and supporting
+object details before proposing a new object or match. Record verified facts
+and source-specific reasoning in the collection. Keep unresolved entries in
+this working list only while they help continuation; do not create a second
+report or register for each successful import.

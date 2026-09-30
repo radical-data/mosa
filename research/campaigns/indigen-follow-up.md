@@ -33,8 +33,8 @@ corrected earlier photograph comparisons and reviewed image rights separately.
 Read an object's history before repeating a search or treating an earlier note
 as the latest conclusion.
 
-The [migration note](../evidence/indigen/README.md) explains what was shared and
-what remains local. Existing source captures and published records remain the
+The [frozen migration history](../progress/indigen-history.md) explains what was
+shared and what remains local. Existing source captures and published records remain the
 primary evidence. Retained notes describe historical work; the migration did
 not repeat the museum searches or certify every earlier interpretation.
 
@@ -54,10 +54,11 @@ before trying catalogue access again.
 
 ## Next action
 
-Choose one bounded group from the filtered queue and read its latest next
-actions. For a useful first access test, inspect the Göttingen blocked identities
+Choose one bounded group from the relevant stage queue and read its latest next
+actions. The all-four-stage completion total is not the goal of a narrower pass.
+For a useful first access test, inspect the Göttingen blocked identities
 and the existing catalogue recipe. If access still fails, record that result and
 continue another accessible group; request a privately supplied page only when
-it would resolve a specific question. Record the resulting batch against the
-current shared revision and update this campaign only when its direction or
-findings change.
+it would resolve a specific question. Use the existing register when continuing
+a tracked batch; record only the stages actually reviewed. Source-specific findings belong in collection source
+notes. Update this campaign only when its direction or next action changes.

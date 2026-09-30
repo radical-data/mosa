@@ -1,23 +1,25 @@
 # Research programme
 
-Start with a focused campaign, read its findings and next action, and continue
-from the evidence already available. See the [research guide](../docs/research.md)
-for the workflow. Use the [campaign template](campaigns/template.md) for a new
-question; a campaign does not require collection objects or a progress register.
+Use the [collection workflow](../docs/collection-publication.md) for ordinary
+imports. Use a campaign when a question spans several sessions or needs a
+shared next action; the [research guide](../docs/research.md) explains the small
+set of responsibilities. The [template](campaigns/template.md) is optional.
 
 ## Priorities
 
-1. Resume the [IndiGen follow-up](campaigns/indigen-follow-up.md) from its shared
-   register and selected evidence.
-2. Continue the [Bishop mata‘a paper campaign](campaigns/bishop-mataa-paper.md)
-   with a small catalogue-matching batch after the completed paper inventory.
-3. Queue wider Bishop and Australian Museum censuses and unresolved PDF groups
-   after the first two campaigns have exercised the workflow.
+1. Continue the [Bishop mata‘a paper](campaigns/bishop-mataa-paper.md) with a
+   small catalogue-matching batch using the shared identifier transcription.
+2. Resume a bounded group from the [IndiGen follow-up](campaigns/indigen-follow-up.md).
+   Its existing register preserves useful history; it is not a required workflow
+   for other imports.
+3. Consider a wider Bishop or Australian Museum census and unresolved PDF groups
+   after those bounded investigations. The
+   [Australian Museum overview](https://australian.museum/learn/cultures/pasifika-collections/rapa-nui-collections/),
+   [Pacific-Studies directory](https://www.pacific-studies.net/geodetail.php?id=317)
+   and [Splendid Isolation](https://www.metmuseum.org/met-publications/splendid-isolation-art-of-easter-island)
+   are leads, not completed collection reviews.
 
-Campaigns hold scope, findings and next actions. Progress registers hold detailed
-object-stage outcomes; use `just research status <source-id>` for current totals.
-Do not maintain a second table of those totals here.
-
-Shared files are visible to repository readers. Downloads and private evidence
-stay in ignored `research-local/` until inspected for sharing. Existing captures
-stay in `source-files/`. Research files do not form part of the website.
+Campaigns contain scope, unresolved questions and next actions. Published facts
+and source-specific findings stay in collection sources; shareable captures stay
+in `source-files/`. Private material and scratch files stay in `research-local/`.
+Research files do not enter the website.
