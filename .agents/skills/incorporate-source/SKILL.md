@@ -57,13 +57,15 @@ and scratch files local; a useful factual transcription can be shared separately
 from an original that cannot be redistributed. If one item is blocked, continue
 independent in-scope work and record its effect where the research already lives.
 
-Keep each commit valid and reviewable. Commit the source and any reviewed shareable capture
-first, then object batches, then claim batches and linked article sources, then
-cleared image batches, and finally any workflow guidance changes. Group images
-by institution and applicable reuse terms; keep binaries with their metadata.
-Skip empty batches. Use repository commit conventions, stage explicit paths or
-hunks, and exclude `research-local/` and unrelated changes. Preserve existing
-work and branch state. Do not commit a batch that fails its relevant checks.
+Keep each commit valid and reviewable, with its scope proportional to the import.
+A small import can use one coherent commit containing its source, objects,
+claims and cleared images. Split larger imports into independently reviewed
+batches when that improves review or recovery; source, object, claim and image
+batches are useful boundaries when their dependencies allow. Keep image binaries
+with their metadata and group them by institution and applicable reuse terms.
+Use repository commit conventions, stage explicit paths or hunks, and exclude
+`research-local/` and unrelated changes. Preserve existing work and branch state.
+Do not commit a batch that fails its relevant checks.
 
 Run the checks required by `AGENTS.md` and the specialist skills for each stage.
 Also validate local skill/document links when changing guidance, and review

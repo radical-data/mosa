@@ -2,6 +2,12 @@
 
 ## Default workflow
 
+Research is primarily carried out by agents. Optimise for reliable execution
+and low maintenance. Additional steps and structured tracking are worthwhile
+when they prevent repeated research, lost decisions or conflicting updates.
+Keep each fact in one authoritative place and each tool's responsibility clear,
+so another agent or human can resume without reconstructing the conversation.
+
 Use [collection authoring](collection-publication.md) directly for ordinary
 source imports. Record a source once in `collection/sources/`; keep its
 attribution, claims and source-specific research decisions there. A publication
