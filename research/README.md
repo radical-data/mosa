@@ -7,7 +7,8 @@ question; a campaign does not require collection objects or a progress register.
 
 ## Priorities
 
-1. Make the existing IndiGen follow-up portable, preserving its recorded history.
+1. Resume the [IndiGen follow-up](campaigns/indigen-follow-up.md) from its shared
+   register and selected evidence.
 2. Inventory the Bishop Museum mata‘a paper as a bounded discovery pilot.
 3. Queue wider Bishop and Australian Museum censuses and unresolved PDF groups
    after the first two campaigns have exercised the workflow.

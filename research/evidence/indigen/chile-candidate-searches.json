@@ -1,0 +1,686 @@
+{
+  "migrationNote": "Selected search metadata from the historical local audit. Scraped record bodies omitted. Candidates were not verified in this batch; later register batches may resolve them.",
+  "checkedAt": "2026-09-30",
+  "recipe": "Candidate template only: official Chile Patrimonios /ficha?doi=05SDC-{series}-{accession}, grounded in verified fiches 05SDC-17-299 (MAPSE) and 05SDC-4-1915 (MHNV). The resulting page is checked for institution, linked SURDOC number, type, description and dimensions. For a missing or mismatching page, fallback to the official exact-identifier search /resultados?Recursos=on&s={accession}; follow its returned fiche and compare details. Template is a candidate, never proof of identity.",
+  "results": [
+    {
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 76 Registro surdoc 4-1956",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1956",
+          "reason": "Observed accession template candidate",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 47 Registro surdoc 4-1936",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1936",
+          "reason": "Observed accession template candidate",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-rapa-nui-17-303",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-303",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-303",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-303",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-296",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-296",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-296",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-rapa-nui-17-309",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-309",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-309",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-309",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-rapa-nui-17-192",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-192",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-192",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-192",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-rapa-nui-17-10",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-10",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-10",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-10",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-15-registro-surdoc-4-1993",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 15 Registro surdoc 4-1993",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1993",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-rapa-nui-17-326",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-326",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-326",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-326",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 64 Registro surdoc 4-1947",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1947",
+          "reason": "Observed accession template candidate",
+          "status": 200
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1947",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-19-registro-surdoc-4-2213",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 19 Registro surdoc 4-2213",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-2213",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-2-registro-surdoc-4-1985",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV-2 Registro surdoc 4-1985",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1985",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 21 Registro surdoc 4-2214",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-2214",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV-26 Registro surdoc 4-1922",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1922",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-27-registro-surdoc-4-1924",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 27 Registro surdoc 4-1924",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1924",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-35-registro-surdoc-4-1927",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 35 Registro surdoc 4-1927",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1927",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-49-registro-surdoc-4-1937",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 49 Registro surdoc 4-1937",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1937",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-5-registro-surdoc-4-1987",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV-5 Registro surdoc 4-1987",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1987",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-52-registro-surdoc-4-1939",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 52 Registro surdoc 4-1939",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1939",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-53-registro-surdoc-4-1997",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 53 Registro surdoc 4-1997",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1997",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-55-registro-surdoc-4-1940",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 55 Registro surdoc 4-1940",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1940",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-56-registro-surdoc-4-1941",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 56 Registro surdoc 4-1941",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1941",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-57-registro-surdoc-4-1942",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 57 Registro surdoc 4-1942",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1942",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-58-registro-surdoc-4-1943",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 58 Registro surdoc 4-1943",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1943",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-60-registro-surdoc-4-1944",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 60 Registro surdoc 4-1944",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1944",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-62-registro-surdoc-4-1945",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 62 Registro surdoc 4-1945",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1945",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-63-registro-surdoc-4-1946",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 63 Registro surdoc 4-1946",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1946",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-kavakava-valparaiso-mhnv-9-registro-surdoc-4-1915",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV-9 Registro surdoc 4-1915",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1915",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-259",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-259",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-9",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-9",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-332",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-332",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-335",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-335",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-335",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-295",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-295",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-295",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 10 Registro surdoc 4-1991",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1991",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 11 Registro surdoc 4-1916",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1916",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 22 Registro surdoc 4-1920",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1920",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 3 Registro surdoc 4-1914",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1914",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-rapa-nui-17-416",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-416",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-416",
+          "reason": "Observed accession template candidate",
+          "status": 404
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-416",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 4 Registro surdoc 4-1986",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1986",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 50 Registro surdoc 4-1938",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1938",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 6 Registro surdoc 4-1988",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1988",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 67 Registro surdoc 4-1998",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1998",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 7 Registro surdoc 4-1989",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1989",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 8 Registro surdoc 4-1990",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1990",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 1 Registro surdoc 4-1984",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1984",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 34 Registro surdoc 4-1926",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1926",
+          "reason": "Observed accession template candidate",
+          "status": 200
+        },
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1926",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "reimiro-rapa-nui-17-30",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-30",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-30",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 28 Registro surdoc 4-1994",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1994",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 38 Registro surdoc 4-1995",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1995",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 40 Registro surdoc 4-1931",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1931",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "holder": "Museo de Historia Natural de Valparaíso",
+      "accession": "MHNV 54 Registro surdoc 4-358",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-358",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    },
+    {
+      "objectId": "ua-rapa-nui-17-194",
+      "holder": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "accession": "17-194",
+      "attempted": [
+        {
+          "url": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-194",
+          "reason": "Retrieval error",
+          "error": "TimeoutError: The operation was aborted due to timeout"
+        }
+      ]
+    }
+  ]
+}
