@@ -1,0 +1,98 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc1957-01-1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc1957,01.1",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bone, acrylic (?)",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "described_as",
+      "value": "Wood male figure with obsidian eyes. One of the eyes is set in a bone (?) ring and the other in plasticene. The inside of the mouth is coloured red. Prominent belly.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "described_as",
+      "value": "Height: 27 centimetres Width: 7 centimetres Depth: 7.50 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "described_as",
+      "value": "Given in 1957 by Miss Mary Chambers of Rothwell, Northamptonshire, through the Kettering Public Library, Museum and Art Gallery. It is not recorded how she obtained it.",
+      "locator": "Acquisition notes"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "described_as",
+      "value": "Register 1957 Wood male figure; eyes of obsidian, one set in a bone(?) ring, the other in plasticene; inside of mouth coloured red. EASTER I. Heyerdahl 1977:277: 'The carving ... is probably of fairly recent manufacture.'",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "file": "british-museum-figure-oc1957-01-1/british-museum-1613863088.jpg",
+      "alt": "Wood male figure with obsidian eyes.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613863088"
+    }
+  ],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 1613863088 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-02-01-357z.html",
+      "capturedAt": "2026-09-30T18:02:01.357Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-43-59-043z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613863088",
+      "capturedAt": "2026-09-30T19:43:59.043Z",
+      "method": "singlefile",
+      "note": "Image 1613863088 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

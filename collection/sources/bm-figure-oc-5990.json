@@ -1,0 +1,105 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-5990",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc,+.5990",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-date",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "made_during",
+      "value": "19thC (before 1893)",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "made_of",
+      "value": "wood, bone",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "described_as",
+      "value": "Male figure, cut from a block of reddish brown wood. Eyes formed of rings of bone, once containing pupils of obsidian. Spine is in relief and the vertebrae are indicated by transverse lines.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "described_as",
+      "value": "Height: 70 centimetres Width: 12.50 centimetres Depth: 13 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "described_as",
+      "value": "Presented by A.W. Franks Esq. 3 April 1893, who had purchased it from Miss Cutter.",
+      "locator": "Acquisition notes"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "described_as",
+      "value": "Register slip comment: \"Easter Island. cf. Report of US Nat. Mus. 1889. Thomson. pl.L.\"",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-figure-oc-5990",
+      "file": "british-museum-figure-oc-5990/british-museum-1613863009.jpg",
+      "alt": "Male figure, cut from a block of reddish brown wood.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613863009"
+    }
+  ],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 1613863009 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged. The image-page description names Oc,EP.24, but its object backlink identifies Oc,+.5990 and the photograph agrees with this catalogue record's standing figure; the museum's conflicting description is retained in the rights-page capture."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-06-40-322z.html",
+      "capturedAt": "2026-09-30T18:06:40.322Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-38-39-992z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613863009",
+      "capturedAt": "2026-09-30T19:38:39.992Z",
+      "method": "singlefile",
+      "note": "Image 1613863009 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

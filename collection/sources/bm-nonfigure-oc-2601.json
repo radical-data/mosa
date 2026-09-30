@@ -1,0 +1,18 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-2601",
+  "language": "en",
+  "claims": [],
+  "captures": [
+    {
+      "file": "2026-09-30t18-06-31-463z.html",
+      "capturedAt": "2026-09-30T18:06:31.463Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The collection has a generic BM `rei-miro-britanico` record, but its supporting source gives no distinguishing description or accession. Several BM rei miro records in this batch could fit it. The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.\n\n30 September 2026 identity review: ambiguous crosswalk to `rei-miro-britanico`; keep this catalogue source unlinked. The British Museum identifies Registration number Oc,+.2601 and old CDMS number Oc1885C2.2601 (https://www.britishmuseum.org/collection/object/E_Oc-2601). It describes a dark-brown wooden crescent gorget with bearded heads, two horizontal holes and a crescent-shaped back depression, 30.5 × 75.7 × 3 cm, produced on Easter Island before 1885. Its registration history says A.W. Franks presented it on 18 September 1885 and that a sailor brought it from Easter Island; Oc,+.2595–2601 were acquired as one group, while remaining distinct accessions. The details distinguish this from Oc.7834 and Oc.6330 but cannot match the generic Arte row, which supplies only type and holder. Resolution needs a diagnostic description or image tied to that row, or a historical accession crosswalk.",
+    "language": "en-GB"
+  },
+  "images": []
+}

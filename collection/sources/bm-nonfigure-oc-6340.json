@@ -1,0 +1,98 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-6340_1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc.6340",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "classified_as",
+      "value": "flake",
+      "locator": "Object Type"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "described_as",
+      "value": "Flake made of obsidian.",
+      "locator": "Description"
+    },
+    {
+      "id": "production-place-1",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "found-acquired-1",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "described_as",
+      "value": "Found/Acquired: Easter Island",
+      "locator": "Findspot"
+    },
+    {
+      "id": "material-1",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "Materials"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "described_as",
+      "value": "Height: 6.30 centimetres Weight: 60 grammes Width: 6.70 centimetres Depth: 1.80 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-name",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "described_as",
+      "value": "Donated by: John Linton Palmer",
+      "locator": "Acquisition name"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-flake-oc-6340",
+      "predicate": "described_as",
+      "value": "Oc.6335 to 6341 were given by J L Palmer, a Royal Navy medical doctor. See his biography.",
+      "locator": "Acquisition notes"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-30t18-04-16-584z.html",
+      "capturedAt": "2026-09-30T18:04:16.584Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "british-museum-flake-oc-6340",
+      "file": "british-museum-flake-oc-6340/british-museum-1614138864.jpg",
+      "alt": "Dark obsidian flake with a worked edge.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1614138864"
+    }
+  ]
+}

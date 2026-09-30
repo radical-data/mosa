@@ -1,0 +1,105 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-17",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc,EP.17",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "classified_as",
+      "value": "tool/implement",
+      "locator": "Object Type"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "described_as",
+      "value": "Cutting implement (mata'a) made of obsidian, mounted on a stout cylindrical wooden handle, tied with twisted fibre cord and wedged with two wooden pegs. Barkcloth over the tang.",
+      "locator": "Description"
+    },
+    {
+      "id": "production-place-1",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "production-date-1",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "described_as",
+      "value": "Production date: 1827-8 (collected)",
+      "locator": "Production date"
+    },
+    {
+      "id": "found-acquired-1",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "described_as",
+      "value": "Found/Acquired: Easter Island",
+      "locator": "Findspot"
+    },
+    {
+      "id": "material-1",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "made_of",
+      "value": "obsidian wood fibre bark",
+      "locator": "Materials"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "described_as",
+      "value": "Length: 24.70 centimetres Width: 18 centimetres Depth: 5 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "field-collector",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "described_as",
+      "value": "Field Collection by: Hugh Cuming",
+      "locator": "Excavator/field collector"
+    },
+    {
+      "id": "acquisition-name",
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "predicate": "described_as",
+      "value": "Donated by: Hugh Cuming",
+      "locator": "Acquisition name"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-30t18-02-18-519z.html",
+      "capturedAt": "2026-09-30T18:02:18.519Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "british-museum-tool-implement-oc-ep-17",
+      "file": "british-museum-tool-implement-oc-ep-17/british-museum-1613200520.jpg",
+      "alt": "Obsidian cutting blade bound to a wooden handle with fibre cord and barkcloth.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613200520"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_2017-2018-2",
+  "language": "en-GB",
+  "claims": [
+    {
+      "id": "curator-description",
+      "objectId": "pukao-puna-pau-4-137-001",
+      "predicate": "described_as",
+      "value": "Red scoria pukao, Puna Pau. Note petroglyphs of canoes (vaka), one with outrigger.",
+      "locator": "Curator's comments, quoting Van Tilburg (2006:30)"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "pukao-puna-pau-4-137-001",
+      "file": "pukao-puna-pau-4-137-001/bm-harrison-1613289336.jpg",
+      "alt": "Grey wash drawing of a rounded pukao marked with canoe forms and other incised motifs.",
+      "caption": "Mathew James Harrison's 1868 drawing of pukao 4-137-001 at Puna Pau.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289336"
+    }
+  ],
+  "notes": {
+    "text": "Modern catalogue entry for drawing 2017,2018.2. The catalogue attributes the drawing to Mathew James Harrison, Lieutenant, and dates the drawing to 1868. The curator's comment quotes Van Tilburg (2006:30) describing a red-scoria pukao at Puna Pau with canoe petroglyphs. Van Tilburg's Image 44 identifies the depicted object as Easter Island Statue Project 4-137-001, supporting this source's link to that object. The page's generic comment that a statue is in the British Museum does not identify the pukao as Hoa Hakananai'a. Image 1613289336 was downloaded from the museum's image page after that page identified this drawing and stated image-specific CC BY-NC-SA 4.0 terms.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t15-29-03-831z.html",
+      "capturedAt": "2026-09-30T15:29:03.831Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t18-04-29-483z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289336",
+      "capturedAt": "2026-09-30T18:04:29.483Z",
+      "method": "singlefile",
+      "note": "Image 1613289336 page identifies the drawing, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

@@ -64,17 +64,20 @@ somewhere to live.
 
 ## Focused campaigns
 
-Start from the [programme index](../research/README.md). A campaign needs a
-question, rationale, bounded scope, a dated search plan and the next useful
-action. Record coverage by institution or catalogue department, search terms
-and spelling variants, pagination or other result boundaries, and the date
-checked. Summarise candidate dispositions and link their source or object
-records; list any remaining integration work. The
+Start from the [programme index](../research/README.md), which owns sequencing
+and current priorities. A campaign needs a question, rationale, scope, search
+plan and next useful action. Record coverage by institution or catalogue
+department, search terms and spelling variants, pagination or other result
+boundaries, and the date checked. Summarise candidate dispositions and link
+their source or object records; list any remaining integration work. The
 [template](../research/campaigns/template.md) supports this without requiring a
 copied inventory or a fixed report format. Account for every candidate within
-the bounded pass: new object, existing object, unresolved identity, or excluded
+the stated pass: new object, existing object, unresolved identity, or excluded
 with a reason. A concise grouped outcome is enough when all entries share the
 same disposition. Link the authoritative records instead of repeating their facts.
+Record geographic provenance, cultural or maker attribution and representation
+or documentary role separately from identity disposition. These dimensions and
+their evidence thresholds are defined below; “from” and “about” can overlap.
 Distinguish identity outcomes from integration: preserved source, reviewed
 claims and image rights, and any blocked, deferred or unavailable material.
 “Unavailable” means the relevant scope was examined; “blocked” means it could
@@ -97,17 +100,69 @@ either the campaign or an existing register for coordination, not both.
 
 ## Discovery strategy
 
-Investigate Rapa Nui cultural material outside Rapa Nui, including mainland
-Chile. Set out why the target institution, department or catalogue is in scope
-and define the material and record types being sought. Search systematically
-across relevant departments and catalogue routes, with language, place-name,
-historical spelling and identifier variants. Follow pagination and load-more
-controls to the agreed boundary, and record what was covered and when. Inspect
-candidate records and preserve usable evidence before reconciliation. Distinguish
-historical displacement from present location, return and unknown whereabouts.
-Include archaeological and everyday material alongside carvings and
-contemporary Rapanui work. Counts, groups, fragments, replicas and depictions
-need interpretation before they become individual object records.
+Investigate Rapa Nui cultural material held outside Rapa Nui, including
+mainland Chile. The default discovery strategy is catalogue-first: establish
+the relevant digital catalogue scope at an institution, then systematically
+cover its relevant departments, record types and search routes before starting
+thematic deep dives. This broad baseline reduces repeated partial searches and
+shows where object-level evidence is concentrated. The [programme index](../research/README.md)
+owns which catalogue is next; this guide does not maintain a second priority
+queue.
+
+Define why an institution and its catalogue are in scope. Reuse documented
+APIs, exports, catalogue recipes and known query routes where available, and
+inspect how filters and record relationships behave before choosing a method.
+Search relevant language, place-name, historical spelling, maker, collector,
+identifier and material variants. Follow all result pages, load-more controls,
+and relevant record variants within the defined catalogue scope. Record the
+queries, filters, departments, page or result boundaries, access limits and
+date checked so coverage can be resumed without repeating failed work. A
+failed route should be tried again only when a specific change in access,
+method or evidence makes success more likely.
+
+Keep two kinds of work distinct. Exact-object follow-up resolves a known
+candidate or identifier and may be narrower than the catalogue baseline;
+record its exact query and what identity, claims, source preservation or image
+review remains. Exploratory coverage seeks candidates across the agreed
+catalogue scope; do not present a small sample as coverage of that scope.
+Pagination and relevant variants are part of the scope, not optional extras.
+Work in manageable batches so candidates can be reconciled and integrated as
+they are found, while keeping the ambition at the full agreed catalogue scope.
+Choose batch order by expected supported new objects, source and evidence
+enrichment, and information gain per unit of effort, accounting for existing
+MoSA records and prior search outcomes. Source enrichment can improve identity,
+attribution or context without adding an object record. Search-hit volume alone
+is not a measure of progress.
+
+Assess three independent dimensions for each candidate, alongside whether its
+identity is new to MoSA:
+
+- **Geographic origin or provenance:** supported Rapa Nui origin, supported
+  origin elsewhere, or unresolved. Base island origin on evidence for
+  manufacture, findspot or collection provenance; a Rapanui cultural or maker
+  attribution alone does not establish geographic origin.
+- **Cultural or maker attribution:** record the source's explicit attribution
+  and uncertainty separately from geographic origin. This matters especially
+  for contemporary Rapanui work and replicas. Modernity does not exclude work
+  from discovery, and authorship does not determine where it was made.
+- **Evidence role:** artefact, representation or documentary source, or both.
+  A photograph made on Rapa Nui can be both geographically from Rapa Nui and
+  about it. A representation or document about Rapa Nui can be a valuable,
+  attributable collection source linked to one or more objects. Preserve its
+  authorship, perspective and uncertainty; do not count it as another physical
+  artefact from Rapa Nui merely because it documents one.
+
+“From Rapa Nui” and “about Rapa Nui” are useful descriptions of these
+dimensions, not mutually exclusive classes. An item's aboutness does not make
+it irrelevant or exclude it from collection research. Keep uncertain
+geographic origin unresolved. Use existing attributed claims and campaign
+decision prose to preserve these distinctions; no ontology change is needed.
+
+Inspect candidate records and preserve usable evidence before reconciliation.
+Distinguish historical displacement from present location, return and unknown
+whereabouts. Include archaeological and everyday material alongside carvings
+and contemporary Rapanui work. Counts, groups, fragments, replicas and
+depictions need interpretation before they become individual object records.
 
 Useful routes beyond the original PDF table and IndiGen gallery include:
 
@@ -120,9 +175,8 @@ Useful routes beyond the original PDF table and IndiGen gallery include:
 - Publication tables, appendices and illustrations, retaining locators and
   uncertainty. Revisit unresolved entries when new evidence appears.
 
-Campaign rationale, priorities, dated coverage, candidate dispositions and
-remaining integration belong in the programme index and campaigns, rather than
-a second queue in this guide.
+Campaign rationale, dated coverage, candidate dispositions and remaining
+integration belong in campaigns. Programme priorities belong in the index.
 
 ## Retaining research evidence
 

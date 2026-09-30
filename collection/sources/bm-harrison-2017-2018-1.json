@@ -1,0 +1,43 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_2017-2018-1",
+  "language": "en-GB",
+  "claims": [
+    {
+      "id": "drawing-description",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Drawing, of the hut on Rapa Nui, where the stone statue, Hoa Hakananai'a, was found by Europeans.",
+      "locator": "Description"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "hoa-hakananai-a",
+      "file": "hoa-hakananai-a/bm-harrison-1613289345.jpg",
+      "alt": "Grey wash drawing of Hoa Hakananaiʻa inside a stone structure, with a standing figure on each side.",
+      "caption": "Mathew James Harrison's 1868 drawing of Hoa Hakananaiʻa in the stone structure at ʻOrongo.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289345"
+    }
+  ],
+  "notes": {
+    "text": "Modern catalogue entry for drawing 2017,2018.1. The catalogue attributes the drawing to Mathew James Harrison, Lieutenant, and dates the drawing to 1868; this does not date the sculpture. The description concerns the drawing, and its depicted details are not independent evidence of the sculpture's dimensions, material or physical appearance. The wording about the statue being found by Europeans is retained as the museum's attributed description, not adopted as MoSA's unqualified account. Image 1613289345 was downloaded from the museum's image page after that page identified this drawing and stated image-specific CC BY-NC-SA 4.0 terms.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t15-28-52-135z.html",
+      "capturedAt": "2026-09-30T15:28:52.135Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t18-04-01-991z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289345",
+      "capturedAt": "2026-09-30T18:04:01.991Z",
+      "method": "singlefile",
+      "note": "Image 1613289345 page identifies the drawing, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc1953-14-2",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc1953,14.2",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "predicate": "made_of",
+      "value": "wood",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "predicate": "described_as",
+      "value": "Register 1953 Wooden carving of a bird with a hooked beak. The wings are represented by incised lines.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "predicate": "described_as",
+      "value": "Height: 5.25 centimetres Width: 18 centimetres Depth: 5 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "predicate": "described_as",
+      "value": "Register 1953 1-2 Modern carvings. Easter Island.",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-figure-oc1953-14-2",
+      "file": "british-museum-figure-oc1953-14-2/british-museum-1613788135.jpg",
+      "alt": "Wooden carving of a bird with a hooked beak.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788135"
+    }
+  ],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 1613788135 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-07-44-180z.html",
+      "capturedAt": "2026-09-30T18:07:44.180Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-43-45-792z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788135",
+      "capturedAt": "2026-09-30T19:43:45.792Z",
+      "method": "singlefile",
+      "note": "Image 1613788135 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

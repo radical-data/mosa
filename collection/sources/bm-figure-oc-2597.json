@@ -1,0 +1,105 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-2597",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc,+.2597",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-date",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "made_during",
+      "value": "19thC (before 1885)",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "described_as",
+      "value": "Standing female figure, carved of hard brown wood, very flat: eyes of obsidian surrounded by bone.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "described_as",
+      "value": "Height: 54.50 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "described_as",
+      "value": "'Presented by A.W. Franks Esq. 18 Sept. 1885. Brought by a sailor from Easter Island.' See comment on Oc,+.2595.",
+      "locator": "Acquisition notes"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "described_as",
+      "value": "Wood from this figure was tested in 2007 to determine the species but no identification was able to be reached. See Catherine Orliac (2007) 'Botanical Identification of 200 Easter Island Wood Carvings'. Leonardo Pakarati, visit to BM, June 2014: Leo described these figures as being related to fertility – the hand across the belly indicates pregnancy, the hand on the vagina relates to impregnation and birth; sometimes a hand to the breast relates to sustenance of the baby.",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-figure-oc-2597",
+      "file": "british-museum-figure-oc-2597/british-museum-1613753770.jpg",
+      "alt": "Standing female figure, carved of hard brown wood, very flat: eyes of obsidian surrounded by bone.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613753770"
+    }
+  ],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 1613753770 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-00-51-097z.html",
+      "capturedAt": "2026-09-30T18:00:51.097Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-38-17-352z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613753770",
+      "capturedAt": "2026-09-30T19:38:17.352Z",
+      "method": "singlefile",
+      "note": "Image 1613753770 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1536",
+  "language": "en",
+  "claims": [
+    {
+      "id": "description-rano-raraku-quarry-view",
+      "objectId": "rano-raraku-site",
+      "predicate": "described_as",
+      "value": "Lantern Slide (black and white) of a sliced image in three; view of the quarry of Rano Raraku; a fallen moai (figure carving) is lying on its face in the centre of the image, with a man and a horse standing beside it; Easter Island.",
+      "locator": "Description"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "rano-raraku-site",
+      "file": "documentary/british-museum-506711001.jpg",
+      "alt": "Three-part black-and-white panorama of Rano Raraku quarry, with a fallen moai, a man and a horse in the middle panel.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/506711001"
+    }
+  ],
+  "notes": {
+    "text": "This British Museum catalogue record describes a lantern slide attributed to Katherine Maria Routledge, photographed in 1914–1915. It is registered as a documentary source, not as a physical Rapa Nui artefact. The museum's image page identifies this documentary representation, states image-specific CC BY-NC-SA 4.0 terms and supplies the required credit. The original JPEG was downloaded, visually reviewed against the catalogue description and preserved unchanged. The catalogue's complete Description identifies the quarry as Rano Raraku and describes the view; the longer curator's overview is not extracted.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-47-19-857z.html",
+      "capturedAt": "2026-09-30T18:47:19.857Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t20-00-03-771z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/506711001",
+      "capturedAt": "2026-09-30T20:00:03.771Z",
+      "method": "singlefile",
+      "note": "Image 506711001 page identifies the depicted place, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-32",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc,EP.32",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "classified_as",
+      "value": "figure religious/ritual equipment (?)",
+      "locator": "Object Type"
+    },
+    {
+      "id": "name",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "has_name",
+      "value": "figure; religious/ritual equipment (?)",
+      "locator": "Record heading"
+    },
+    {
+      "id": "production-date",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "made_during",
+      "value": "1774 (before)",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "made_of",
+      "value": "wood",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "described_as",
+      "value": "Carved representation of human left hand, possibly for use by a priest or priestess; made of sophora (toromiro) wood.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-ep-32",
+      "predicate": "described_as",
+      "value": "Length: 31 centimetres Width: 10 centimetres Depth: 3.50 centimetres",
+      "locator": "Dimensions"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-figure-oc-ep-32",
+      "file": "british-museum-figure-oc-ep-32/british-museum-34003001.jpg",
+      "alt": "Carved representation of human left hand, possibly for use by a priest or priestess; made of sophora (toromiro) wood.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/34003001"
+    }
+  ],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 34003001 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-08-20-465z.html",
+      "capturedAt": "2026-09-30T18:08:20.465Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-40-54-788z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/34003001",
+      "capturedAt": "2026-09-30T19:40:54.788Z",
+      "method": "singlefile",
+      "note": "Image 34003001 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

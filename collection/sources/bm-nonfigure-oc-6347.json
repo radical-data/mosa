@@ -1,0 +1,98 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-6347_1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc.6347",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "classified_as",
+      "value": "girdle",
+      "locator": "Object Type"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "described_as",
+      "value": "Man's girdle made of human hair cord, with a barkcloth fastening cord.at each end.",
+      "locator": "Description"
+    },
+    {
+      "id": "production-place-1",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "found-acquired-1",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "described_as",
+      "value": "Found/Acquired: Easter Island",
+      "locator": "Findspot"
+    },
+    {
+      "id": "material-1",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "made_of",
+      "value": "human hair bark",
+      "locator": "Materials"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "described_as",
+      "value": "Length: 553 centimetres (approx.) Width: 34 centimetres (approx) Depth: 7 centimetres (approx.)",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-name",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "described_as",
+      "value": "Donated by: John Linton Palmer",
+      "locator": "Acquisition name"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-girdle-oc-6347",
+      "predicate": "described_as",
+      "value": "Registration slip information: 'Presd by J.L Palmer Esq. M.D., R.N., April 18 1870. Obtained by the donor at Easter Id. during the cruise of HMS Topaze, 1868.'",
+      "locator": "Acquisition notes"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-30t18-02-55-865z.html",
+      "capturedAt": "2026-09-30T18:02:55.865Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "british-museum-girdle-oc-6347",
+      "file": "british-museum-girdle-oc-6347/british-museum-1613790861.jpg",
+      "alt": "Long human-hair cord girdle with barkcloth fastenings at the ends.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613790861"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-203",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc.203",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "classified_as",
+      "value": "club",
+      "locator": "Object Type"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "described_as",
+      "value": "Long club with carved faces on both sides, the eyes are inlaid with obsidian.",
+      "locator": "Description"
+    },
+    {
+      "id": "production-place-1",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "production-date-1",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "made_during",
+      "value": "1865 (before)",
+      "locator": "Production date"
+    },
+    {
+      "id": "material-1",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "made_of",
+      "value": "wood obsidian",
+      "locator": "Materials"
+    },
+    {
+      "id": "technique-1",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "described_as",
+      "value": "Technique: carved",
+      "locator": "Technique"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "described_as",
+      "value": "Length: 152 centimetres Width: 7.60 centimetres Depth: 6 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-name",
+      "objectId": "british-museum-club-oc-203",
+      "predicate": "described_as",
+      "value": "Bequeathed by: Henry Christy",
+      "locator": "Acquisition name"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-30t18-03-35-800z.html",
+      "capturedAt": "2026-09-30T18:03:35.800Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "british-museum-club-oc-203",
+      "file": "british-museum-club-oc-203/british-museum-1613790740.jpg",
+      "alt": "Long wooden club with a carved face at the end.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613790740"
+    }
+  ]
+}

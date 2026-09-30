@@ -1,0 +1,18 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-5848",
+  "language": "en",
+  "claims": [],
+  "captures": [
+    {
+      "file": "2026-09-30t18-02-37-166z.html",
+      "capturedAt": "2026-09-30T18:02:37.166Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The collection already has the nonspecific handle `rapa-britanico` (“Rapa — Londres”), but its source gives no accession or distinguishing description. This catalogue entry cannot be matched to that handle, and several selected BM dance-paddles could fit it. The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.\n\n30 September 2026 identity review: ambiguous crosswalk to `rapa-britanico`; keep this catalogue source unlinked. The British Museum identifies Museum number Oc.5848 (https://www.britishmuseum.org/collection/object/E_Oc-5848), a carved dance-paddle (rapa), 93.50 × 19.80 × 2.10 cm, associated with Lt M J Harrison and HMS Topaze; the 1869 Christy slip describes a distinctive double-bladed form. The same museum number and evidence are in the preserved capture; the BM authorities for Lt M J Harrison (https://www.britishmuseum.org/collection/term/BIOG124174) and HMS Topaze (https://www.britishmuseum.org/collection/term/BIOG244775) also list this accession. The generic Arte row says only Rapa and Museo Britanico/Londres. Oc.5849 is explicitly described as very similar, and Oc,+.2598, Oc,+.2599 and Oc,+.2600 are further BM Rapa candidates, so type and holder do not select this one. The Arte source has no accession or diagnostic description. Resolution needs an image or primary description tied to that specific Arte row, or a historical accession crosswalk.",
+    "language": "en-GB"
+  },
+  "images": []
+}

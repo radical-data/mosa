@@ -1,0 +1,33 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-30",
+  "language": "en",
+  "claims": [
+    {
+      "id": "description-orongo-birdman-petroglyph-rock",
+      "objectId": "orongo-site",
+      "predicate": "described_as",
+      "value": "Photograph (colour); view of petroglyphs of the bird-man on a rock; Orongo, Easter Island.",
+      "locator": "Description"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "This British Museum catalogue record describes a photograph by Katesa Schlosser, made in September 1980. It is registered as a documentary source, not as a physical Rapa Nui artefact. The 30 September 2026 image-rights review found that the museum's image page explicitly says the image is unavailable for download and supplies no reusable image licence or credit, so no image is published. Only the complete Description field is extracted; the museum's acquisition information is retained in the capture, not interpreted as a claim about the depicted rock carving.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-43-33-356z.html",
+      "capturedAt": "2026-09-30T18:43:33.356Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-58-54-476z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/512396001",
+      "capturedAt": "2026-09-30T19:58:54.476Z",
+      "method": "singlefile",
+      "note": "Image 512396001 page identifies the depicted place but reports that the image is unavailable for download and supplies no reusable image licence or credit."
+    }
+  ]
+}

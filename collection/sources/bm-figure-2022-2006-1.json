@@ -1,0 +1,82 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_2022-2006-1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "catalogue_number",
+      "value": "British Museum: 2022,2006.1",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "classified_as",
+      "value": "figure (nari nari)",
+      "locator": "Object Type"
+    },
+    {
+      "id": "name",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "has_name",
+      "value": "figure (nari nari)",
+      "locator": "Record heading"
+    },
+    {
+      "id": "production-date",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "made_during",
+      "value": "2016",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "made_of",
+      "value": "bark, fibre",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "described_as",
+      "value": "Nari nari (figure) made of fibre plants wrapped in mahute (barkcloth) and patterns with pigments and paint.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-2022-2006-1",
+      "predicate": "described_as",
+      "value": "Diameter: 20 centimetres Height: 36 centimetres Width: 16 centimetres",
+      "locator": "Dimensions"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. The 30 September 2026 image-rights review found no image-detail link in the preserved catalogue record, so no object photograph or image-specific reuse terms were available to publish."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-09-14-558z.html",
+      "capturedAt": "2026-09-30T18:09:14.558Z",
+      "method": "singlefile"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc1899-170",
+  "language": "en",
+  "claims": [],
+  "captures": [
+    {
+      "file": "2026-09-30t18-04-53-916z.html",
+      "capturedAt": "2026-09-30T18:04:53.916Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The BM production-place field qualifies Easter Island as “in style of”, while its combined findspot/acquisition field is uncertain between the Society Islands and Easter Island. This does not establish production on Rapa Nui. The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": []
+}

@@ -1,0 +1,33 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-53",
+  "language": "en",
+  "claims": [
+    {
+      "id": "view-ahu-vai-uri",
+      "objectId": "ahu-vai-uri-site",
+      "predicate": "described_as",
+      "value": "Photograph (colour); view of Ahu Vai Uri (ceremonial platform) with five moai (figure carving); the sea on the right of the image, and the fishing village of Hanga Roa in the background; Tahai, Easter Island.",
+      "locator": "Description"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "This British Museum catalogue record describes a September 1980 photograph by Katesa Schlosser. It is registered as a documentary source, not as a physical Rapa Nui artefact. The 30 September 2026 image-rights review found that the museum's image page explicitly says the image is unavailable for download and supplies no reusable image licence or credit, so no image is published. The complete Description field identifies Ahu Vai Uri and the photographed view; the curator's contextual comment is collapsed in the live record and was not extracted.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-38-05-711z.html",
+      "capturedAt": "2026-09-30T18:38:05.711Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-59-40-840z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/515029001",
+      "capturedAt": "2026-09-30T19:59:40.840Z",
+      "method": "singlefile",
+      "note": "Image 515029001 page identifies the depicted place but reports that the image is unavailable for download and supplies no reusable image licence or credit."
+    }
+  ]
+}

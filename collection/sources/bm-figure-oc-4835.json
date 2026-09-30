@@ -1,0 +1,91 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-4835",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-4835",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc.4835",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-4835",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-4835",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-4835",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-4835",
+      "predicate": "made_of",
+      "value": "wood",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-4835",
+      "predicate": "described_as",
+      "value": "Carved male figure, moai kavakava, of wood. Figure is elongated and has large stops in it's ears. Body is carved into a representation of the bony framework. Two human faces are carved on the crown of the head and it also has a chin tuft.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-4835",
+      "predicate": "described_as",
+      "value": "Height: 46.50 centimetres Width: 7.50 centimetres Depth: 12.50 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-figure-oc-4835",
+      "predicate": "described_as",
+      "value": "Purchased from the London dealer William Wareham in March 1868, using the Christy Fund.",
+      "locator": "Acquisition notes"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-figure-oc-4835",
+      "file": "british-museum-figure-oc-4835/british-museum-1613788002.jpg",
+      "alt": "Carved male figure, moai kavakava, of wood.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788002"
+    }
+  ],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 1613788002 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-05-17-845z.html",
+      "capturedAt": "2026-09-30T18:05:17.845Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-41-17-632z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788002",
+      "capturedAt": "2026-09-30T19:41:17.632Z",
+      "method": "singlefile",
+      "note": "Image 1613788002 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

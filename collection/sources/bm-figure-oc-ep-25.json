@@ -1,0 +1,84 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-25",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-ep-25",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc,EP.25",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-ep-25",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-ep-25",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-ep-25",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-ep-25",
+      "predicate": "made_of",
+      "value": "wood, bone",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-ep-25",
+      "predicate": "described_as",
+      "value": "Standing male figure (moai tangata) carved in wood, with rings of bone in the eyes.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-ep-25",
+      "predicate": "described_as",
+      "value": "Height: 38.50 centimetres Width: 10 centimetres Depth: 7 centimetres",
+      "locator": "Dimensions"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-figure-oc-ep-25",
+      "file": "british-museum-figure-oc-ep-25/british-museum-1613863027.jpg",
+      "alt": "Standing male figure (moai tangata) carved in wood, with rings of bone in the eyes.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613863027"
+    }
+  ],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 1613863027 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-04-03-759z.html",
+      "capturedAt": "2026-09-30T18:04:03.759Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-40-01-585z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613863027",
+      "capturedAt": "2026-09-30T19:40:01.585Z",
+      "method": "singlefile",
+      "note": "Image 1613863027 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

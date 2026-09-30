@@ -1,0 +1,98 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-1979_1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc.1979",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "made_of",
+      "value": "wood",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "described_as",
+      "value": "Curved figure with a tail and a human head, carved from wood.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "described_as",
+      "value": "Height: 21.50 centimetres Width: 17 centimetres Depth: 9.50 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "described_as",
+      "value": "Purchased from William Wareham 26/7/1866, presumably using the Christy Fund.",
+      "locator": "Acquisition notes"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc-1979",
+      "predicate": "described_as",
+      "value": "Christy collection registration slip: Easter Island Curved piece of wood, carved to represent a human figure. See Forsters Voyage",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-figure-oc-1979",
+      "file": "british-museum-figure-oc-1979/british-museum-1613788001.jpg",
+      "alt": "Curved figure with a tail and a human head, carved from wood.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788001"
+    }
+  ],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 1613788001 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-02-11-988z.html",
+      "capturedAt": "2026-09-30T18:02:11.988Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-41-06-185z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788001",
+      "capturedAt": "2026-09-30T19:41:06.185Z",
+      "method": "singlefile",
+      "note": "Image 1613788001 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}
