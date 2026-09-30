@@ -74,7 +74,16 @@
     "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object rapa-new-york-1978-412-1571; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
     "language": "en-GB"
   },
-  "images": [],
+  "images": [
+    {
+      "objectId": "rapa-new-york-1978-412-1571",
+      "file": "rapa-new-york-1978-412-1571/met.jpg",
+      "alt": "Front view of a wooden dance paddle with a carved face above its broad blade.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/312002"
+    }
+  ],
   "captures": [
     {
       "file": "2026-09-29t22-50-41-490z.html",
