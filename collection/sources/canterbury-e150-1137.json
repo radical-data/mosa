@@ -1,0 +1,67 @@
+{
+  "author": "Canterbury Museum",
+  "reference": "https://collection.canterburymuseum.com/objects/60929/dance-paddle-ao",
+  "language": "en",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "classified_as",
+      "value": "Ao"
+    },
+    {
+      "id": "description",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "described_as",
+      "value": "Carved wood double dance paddle."
+    },
+    {
+      "id": "material",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "made_of",
+      "value": "wood"
+    },
+    {
+      "id": "production-place",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "made_at",
+      "value": "Easter Island/Pacific"
+    },
+    {
+      "id": "provenance-details",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "described_as",
+      "value": "Puchased by: New Zealand Government: 1948; Purchased by: William O Oldman"
+    },
+    {
+      "id": "measurements",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "described_as",
+      "value": "Dimensions L x W: whole: 1511.3 x 190.5mm"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "catalogue_number",
+      "value": "E150.1137"
+    },
+    {
+      "id": "former-catalogue-number",
+      "objectId": "ao-canterbury-e150-1137-oldman-355",
+      "predicate": "catalogue_number",
+      "value": "OLDMAN 355"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The museum record displays catalogue number E150.1137 and Oldman number 355, matching the IndiGen entry; its Ao title, double dance paddle description and measurements support the identity link. The Production place field is preserved as made_at. The Classification date is cataloguing metadata, not a date of manufacture. No image is included because the record identifies its image rights as All Rights Reserved.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-34-30-027z.html",
+      "capturedAt": "2026-09-29T23:34:30.027Z",
+      "method": "singlefile"
+    }
+  ]
+}

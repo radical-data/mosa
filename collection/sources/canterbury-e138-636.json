@@ -1,0 +1,61 @@
+{
+  "author": "Canterbury Museum",
+  "reference": "https://collection.canterburymuseum.com/objects/63973/carving-moai-tangata",
+  "language": "en",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-canterbury-e138-636-114-38",
+      "predicate": "classified_as",
+      "value": "Carving: Moai Tangata"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-canterbury-e138-636-114-38",
+      "predicate": "described_as",
+      "value": "Carved wooden male figure with inlaid eyes of bone and obsidian."
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-kavakava-canterbury-e138-636-114-38",
+      "predicate": "made_at",
+      "value": "Easter Island/Pacific"
+    },
+    {
+      "id": "provenance",
+      "objectId": "moai-kavakava-canterbury-e138-636-114-38",
+      "predicate": "described_as",
+      "value": "Bequeathed by John Macmillan Brown to: University of Canterbury: Christchurch/Canterbury/South Island/New Zealand: 1935"
+    },
+    {
+      "id": "collector",
+      "objectId": "moai-kavakava-canterbury-e138-636-114-38",
+      "predicate": "described_as",
+      "value": "Collected by: John Macmillan Brown: Easter Island/Pacific"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-canterbury-e138-636-114-38",
+      "predicate": "catalogue_number",
+      "value": "E138.636"
+    },
+    {
+      "id": "former-catalogue-number",
+      "objectId": "moai-kavakava-canterbury-e138-636-114-38",
+      "predicate": "catalogue_number",
+      "value": "114/38"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The catalogue number E138.636 and former identifier 114/38 match the IndiGen entry. The museum classifies the figure as “Carving: Moai Tangata”; IndiGen classifies it as Moai kavakava. Museum provenance reports a 1935 bequest from John Macmillan Brown to the University of Canterbury; IndiGen records acquisition in 1938 from the university. The museum provides no measurements on this record. Its image rights are All Rights Reserved, so no image is included.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-03-04-107z.html",
+      "capturedAt": "2026-09-30T00:03:04.107Z",
+      "method": "singlefile"
+    }
+  ]
+}

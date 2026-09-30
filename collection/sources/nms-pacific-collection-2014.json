@@ -1,0 +1,79 @@
+{
+  "author": "Chantal Knowles",
+  "reference": "https://files.nms.ac.uk/production/Documents/Our-Impact/Collections-reviews/Pacific-collections/Pacific%20Region/National%20Museums%20Scotland%20Pacific%20Collection/national-museums-scotland-easter-island-collection.pdf?dm=1736177617",
+  "language": "en",
+  "claims": [
+    {
+      "id": "ua-a-1880-14-1-classification",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "classified_as",
+      "value": "club staff"
+    },
+    {
+      "id": "ua-a-1880-14-1-association",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "described_as",
+      "value": "Important for its association with Lieutenant Colin M Dundas who visited Rapa Nui for a week in 1868 as part of the crew of HMS Topaze."
+    },
+    {
+      "id": "moai-kavakava-a-1894-381-classification",
+      "objectId": "moai-kavakava-edinburgh-a-1894-381",
+      "predicate": "classified_as",
+      "value": "male emaciated figure moai kavakava"
+    },
+    {
+      "id": "moai-pa-apa-a-1895-373-classification",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "classified_as",
+      "value": "female figure moai paapaa"
+    },
+    {
+      "id": "moai-pa-apa-a-1895-373-interpretation",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "described_as",
+      "value": "The latter figure is less fine than comparable pieces and may demonstrate a late example, even one of the last examples made (perhaps to order). It is nonetheless important in the understanding of figurative wood carving on the island."
+    },
+    {
+      "id": "moai-tangata-a-1954-100-classification",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "classified_as",
+      "value": "naturalistic male figure moai tangata"
+    },
+    {
+      "id": "a-1880-14-1-catalogue-number",
+      "objectId": "ua-edinburgh-a-1880-14-1",
+      "predicate": "catalogue_number",
+      "value": "A.1880.14.1"
+    },
+    {
+      "id": "a-1894-381-catalogue-number",
+      "objectId": "moai-kavakava-edinburgh-a-1894-381",
+      "predicate": "catalogue_number",
+      "value": "A.1894.381"
+    },
+    {
+      "id": "a-1895-373-catalogue-number",
+      "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
+      "predicate": "catalogue_number",
+      "value": "A.1895.373"
+    },
+    {
+      "id": "a-1954-100-catalogue-number",
+      "objectId": "moai-tangata-edinburgh-a-1954-100",
+      "predicate": "catalogue_number",
+      "value": "A.1954.100"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The document is a collection-level description completed 21 January 2014. It names four individual accessions relevant to this source batch. Claims preserve this historical account and its uncertainty; the report’s aggregate count is not an object count for this batch.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-07-14-545z.pdf",
+      "capturedAt": null,
+      "method": "download"
+    }
+  ]
+}

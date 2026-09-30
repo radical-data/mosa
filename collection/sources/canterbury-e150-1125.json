@@ -1,0 +1,61 @@
+{
+  "author": "Canterbury Museum",
+  "reference": "https://collection.canterburymuseum.com/objects/73892/carving-head",
+  "language": "en",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "classified_as",
+      "value": "Carving: Head"
+    },
+    {
+      "id": "description",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "described_as",
+      "value": "Carved wood head with inlaid eyes of bone and obsidian."
+    },
+    {
+      "id": "production-place",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "made_at",
+      "value": "Easter Island/Pacific"
+    },
+    {
+      "id": "provenance",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "described_as",
+      "value": "Puchased by: New Zealand Government: 1948; Purchased by: William O Oldman"
+    },
+    {
+      "id": "measurements",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "described_as",
+      "value": "Dimensions (LxWxH): whole: 101.6 x 57.15 x 69.85mm"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "catalogue_number",
+      "value": "E150.1125"
+    },
+    {
+      "id": "former-catalogue-number",
+      "objectId": "honu-canterbury-e150-1125-oldman-104-348",
+      "predicate": "catalogue_number",
+      "value": "OLDMAN 104 345"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The catalogue number E150.1125 and measurements match the IndiGen entry. The museum classifies it as “Carving: Head” and lists the former number OLDMAN 104 345; IndiGen classifies it as Honu and records OLDMAN 104/348. Preserve these source differences. The Classification date is catalogue metadata, not a date of manufacture. The museum image is marked All Rights Reserved, so no image is included.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-08-31-035z.html",
+      "capturedAt": "2026-09-30T00:08:31.035Z",
+      "method": "singlefile"
+    }
+  ]
+}
