@@ -1,0 +1,68 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1995",
+  "language": "es",
+  "images": [],
+  "claims": [
+    {
+      "id": "surdoc-number",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "catalogue_number",
+      "value": "4-1995"
+    },
+    {
+      "id": "classification",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "description",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Objeto de forma semicircular con dos cabezas antropomorfas talladas en cada costado y un diseño curvo a bisel en un lados del cuerpo. De color marrón rojizo."
+    },
+    {
+      "id": "cultural-area",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Área cultural: Chile-Polinesia (Rapa Nui)"
+    },
+    {
+      "id": "category",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Categoría: Utensilios, Herramientas y Equipos"
+    },
+    {
+      "id": "technique-material",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Técnica/material: Madera-"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 4 cm - Largo 23 cm - Ancho 17 cm"
+    },
+    {
+      "id": "institution",
+      "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
+      "predicate": "held_by",
+      "value": "Museo Historia Natural de Valparaíso"
+    }
+  ],
+  "notes": {
+    "text": "Transcribed from the expanded official Chile Patrimonios ficha, which credits SURDOC. The SURDOC number is documented by the ficha’s linked registration URL. Field labels, incomplete technique wording and measurement axes are retained. The portal terms grant no image reuse licence; no photograph is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-56-22-397z.html",
+      "capturedAt": "2026-09-30T01:56:22.397Z",
+      "method": "singlefile",
+      "note": "Reviewed expanded official ficha: page query 05SDC-4-1995, linked SURDOC 4-1995, MHNV institution, exact title, full description, material and dimensions."
+    }
+  ]
+}
