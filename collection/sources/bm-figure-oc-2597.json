@@ -1,0 +1,89 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-2597",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc,+.2597",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-date",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "made_during",
+      "value": "19thC (before 1885)",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "described_as",
+      "value": "Standing female figure, carved of hard brown wood, very flat: eyes of obsidian surrounded by bone.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "described_as",
+      "value": "Height: 54.50 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "described_as",
+      "value": "'Presented by A.W. Franks Esq. 18 Sept. 1885. Brought by a sailor from Easter Island.' See comment on Oc,+.2595.",
+      "locator": "Acquisition notes"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc-2597",
+      "predicate": "described_as",
+      "value": "Wood from this figure was tested in 2007 to determine the species but no identification was able to be reached. See Catherine Orliac (2007) 'Botanical Identification of 200 Easter Island Wood Carvings'. Leonardo Pakarati, visit to BM, June 2014: Leo described these figures as being related to fertility – the hand across the belly indicates pregnancy, the hand on the vagina relates to impregnation and birth; sometimes a hand to the breast relates to sustenance of the baby.",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image-specific reuse terms were not cleared, so no photograph is published."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-00-51-097z.html",
+      "capturedAt": "2026-09-30T18:00:51.097Z",
+      "method": "singlefile"
+    }
+  ]
+}

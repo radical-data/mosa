@@ -1,0 +1,82 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc1957-01-1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc1957,01.1",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "made_of",
+      "value": "wood, obsidian, bone, acrylic (?)",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "described_as",
+      "value": "Wood male figure with obsidian eyes. One of the eyes is set in a bone (?) ring and the other in plasticene. The inside of the mouth is coloured red. Prominent belly.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "described_as",
+      "value": "Height: 27 centimetres Width: 7 centimetres Depth: 7.50 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "described_as",
+      "value": "Given in 1957 by Miss Mary Chambers of Rothwell, Northamptonshire, through the Kettering Public Library, Museum and Art Gallery. It is not recorded how she obtained it.",
+      "locator": "Acquisition notes"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc1957-01-1",
+      "predicate": "described_as",
+      "value": "Register 1957 Wood male figure; eyes of obsidian, one set in a bone(?) ring, the other in plasticene; inside of mouth coloured red. EASTER I. Heyerdahl 1977:277: 'The carving ... is probably of fairly recent manufacture.'",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image-specific reuse terms were not cleared, so no photograph is published."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-02-01-357z.html",
+      "capturedAt": "2026-09-30T18:02:01.357Z",
+      "method": "singlefile"
+    }
+  ]
+}

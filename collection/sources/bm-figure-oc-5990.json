@@ -1,0 +1,89 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-5990",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc,+.5990",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-date",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "made_during",
+      "value": "19thC (before 1893)",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "made_of",
+      "value": "wood, bone",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "described_as",
+      "value": "Male figure, cut from a block of reddish brown wood. Eyes formed of rings of bone, once containing pupils of obsidian. Spine is in relief and the vertebrae are indicated by transverse lines.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "described_as",
+      "value": "Height: 70 centimetres Width: 12.50 centimetres Depth: 13 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "described_as",
+      "value": "Presented by A.W. Franks Esq. 3 April 1893, who had purchased it from Miss Cutter.",
+      "locator": "Acquisition notes"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc-5990",
+      "predicate": "described_as",
+      "value": "Register slip comment: \"Easter Island. cf. Report of US Nat. Mus. 1889. Thomson. pl.L.\"",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image-specific reuse terms were not cleared, so no photograph is published."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-06-40-322z.html",
+      "capturedAt": "2026-09-30T18:06:40.322Z",
+      "method": "singlefile"
+    }
+  ]
+}

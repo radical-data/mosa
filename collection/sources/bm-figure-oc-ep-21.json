@@ -1,0 +1,82 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-21",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc,EP.21",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "production-date",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "made_during",
+      "value": "1827-8 (collected)",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "made_of",
+      "value": "thespesia populnea wood, bone",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "described_as",
+      "value": "Carved emaciated male figure with pendant ears, moai kavakava, made of hard light brown wood (Thespesia populnea) with eyes of bone; on the head is carved a bird-like beast in low relief.",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "described_as",
+      "value": "Height: 43 centimetres Weight: 500 grammes Width: 9 centimetres Depth: 9.50 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "british-museum-figure-oc-ep-21",
+      "predicate": "described_as",
+      "value": "Identified as Thespesia populnea by Caroline Cartwright (BM Conservation and Scientific Research), March 2010.",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image-specific reuse terms were not cleared, so no photograph is published."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-05-16-398z.html",
+      "capturedAt": "2026-09-30T18:05:16.398Z",
+      "method": "singlefile"
+    }
+  ]
+}

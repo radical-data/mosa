@@ -1,0 +1,96 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc1869-1006-1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "catalogue_number",
+      "value": "British Museum: Oc1869,1006.1",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Institutional catalogue record"
+    },
+    {
+      "id": "type",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "classified_as",
+      "value": "figure",
+      "locator": "Object Type"
+    },
+    {
+      "id": "name",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "has_name",
+      "value": "Moai Hava",
+      "locator": "Description"
+    },
+    {
+      "id": "production-date",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "made_during",
+      "value": "1100-1600",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "materials",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "made_of",
+      "value": "basalt",
+      "locator": "Materials"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "described_as",
+      "value": "Ancestor figure or moai, referred to as Moai Hava, made of basalt, showing arms, torso and head. At the bottom of the statue's torso are carved hands and a loin cloth (hami).",
+      "locator": "Description"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "described_as",
+      "value": "Height: 200 centimetres (including base) Height: 1.56 metres (of figure from top of base) Width: 107 centimetres (of base) Depth: 94 centimetres (of base)",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "described_as",
+      "value": "Removed from original location during the HMS Topaze expedition to Rapa Nui (captained by Powell) in 1868 and gifted to the British Museum in 1869 by the Lords of the Admiralty.",
+      "locator": "Acquisition notes"
+    },
+    {
+      "id": "curator-comment",
+      "objectId": "moai-hava-british-museum",
+      "predicate": "described_as",
+      "value": "The material used to make this moai had previously been described as tuff. During examination with M. Tuki in April 2022, the stone was identified as basalt.",
+      "locator": "Curator's comments"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image-specific reuse terms were not cleared, so no photograph is published."
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-09-49-739z.html",
+      "capturedAt": "2026-09-30T18:09:49.739Z",
+      "method": "singlefile"
+    }
+  ]
+}
