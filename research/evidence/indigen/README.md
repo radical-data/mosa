@@ -49,8 +49,10 @@ local evidence limitation is reported separately from completion totals.
 ## Verification
 
 The original and shared registers were compared field by field, allowing only
-batch evidence and limitation changes. Status parity checks cover all stage
-counts, institutions, active and inactive entries, batches and completed totals.
+batch evidence and limitation changes. Status parity passed for all stage counts, institutions, active and inactive
+entries, batches and completed totals. A clean clone of the migration commit
+passed the same checks with no `research-local/` directory and with Git LFS
+pointers instead of evidence payloads.
 At migration, there were 417 active entries, 90 complete within their recorded
 four-stage scope, and no source drift. These figures are a dated snapshot,
 not a maintained programme dashboard.

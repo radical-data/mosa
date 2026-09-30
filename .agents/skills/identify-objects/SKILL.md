@@ -7,8 +7,10 @@ description: Reconcile objects described by collection sources with MoSA records
 
 Read the [collection authoring guide](../../../docs/collection-publication.md),
 especially [museum research](../../../docs/collection-publication.md#research-museum-records),
-then inspect the source evidence and relevant existing objects and claims. Keep
-candidate research in `research-local/`.
+then inspect the source evidence and relevant existing objects and claims.
+For discovery, start with the [research programme](../../../research/README.md)
+and the relevant campaign. Save useful findings and unresolved candidates there;
+keep private evidence and downloads in `research-local/`.
 
 Inventory the source's individual entries before creating records. Record each
 entry's identifier, wording, evidence and disposition: existing object, new
@@ -30,7 +32,7 @@ types, names, cities or institutions alone cannot. Check punctuation and format
 variants against the actual records and museum evidence. Retain established
 object handles; defer ambiguous matches rather than redirecting or merging them.
 
-For candidates, use the guide's dated register with status (`verified`,
+For candidates, use the campaign with a dated disposition (`verified`,
 `ambiguous`, `blocked` or `not found`), supporting and contradictory evidence,
 candidate URLs, identifiers, date checked and evidence still needed. `Not found`
 means only that the recorded searches found no match. Do not contact institutions
@@ -41,7 +43,7 @@ Before a holder lookup, consult the relevant [holder lookup recipe](references/h
 and existing successful sources. Reuse observed accession URL templates, search
 parameters and identifier formatting to generate candidates, then verify each
 returned record. Add or update a tested recipe when a new method succeeds; keep
-object-specific attempts and failures in the private register.
+object-specific attempts and failures in the campaign or shared register.
 
 For a follow-up museum-source pass, select a bounded institution-based batch
 from the existing objects and retain their source catalogue numbers. Check
@@ -54,7 +56,7 @@ invalidate an otherwise secure match: preserve each source's wording and state
 the disagreement in the audit. A historical row without an identifier may
 remain ambiguous even when a modern museum record is verified.
 
-Resume institutional follow-up with the source's private progress register:
+Resume institutional follow-up with the source's shared progress register:
 run `just research sync <source-id>` and `just research status <source-id>`
 before selecting the next batch. Use this command to save reviewed search
 attempts and separate identity, capture, claims and image outcomes:
@@ -64,9 +66,14 @@ just research record <source-id> --file <batch.json> --revision <N>
 ```
 
 Check the register after recording. It tracks work on existing source-linked
-objects; keep page-entry inventories and unresolved entry-to-object matches
-separately in `research-local/`. See the [collection authoring guide](../../../docs/collection-publication.md#research-museum-records)
-for statuses, evidence-reference rules and source-drift handling.
+objects; keep useful page-entry inventories and unresolved matches in the
+campaign or its reviewed evidence. Private working files stay in `research-local/`.
+See the [collection authoring guide](../../../docs/collection-publication.md#research-museum-records)
+for statuses, evidence-reference rules and source-drift handling. A legacy local
+register is read-only; migrate it before recording more work. If a site is
+blocked, a human can supply HTML or a PDF in local staging; inspect it and
+continue from the same campaign, without a separate handover process.
+A privately supplied file is not automatically cleared for sharing in Git.
 
 Promote verified museum pages as separate sources, then use
 [source-capture](../source-capture/SKILL.md) and

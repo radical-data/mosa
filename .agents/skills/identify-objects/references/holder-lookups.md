@@ -2,7 +2,7 @@
 
 Consult the relevant holder entry before researching another object. These are
 retrieval recipes, not object matches or image permissions. Last checked:
-2026-09-30. Keep attempted object URLs and outcomes in the private progress
+2026-09-30. Keep attempted object URLs and outcomes in the shared progress
 register; maintain successful, non-sensitive methods here across imports.
 
 For each new holder, record its official catalogue, tested method and example,

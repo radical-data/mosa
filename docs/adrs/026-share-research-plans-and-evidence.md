@@ -2,7 +2,7 @@
 
 ## Status
 
-Accepted for implementation. The [research guide](../research.md) defines the
+Accepted and implemented. The [research guide](../research.md) defines the
 minimal delivery and the [roadmap](../roadmap.md#shared-research-programme)
 tracks progress.
 

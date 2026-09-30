@@ -17,11 +17,11 @@ and [ADR 026](adrs/026-share-research-plans-and-evidence.md) define the minimal
 shared workflow.
 
 - [x] Simplify the proposal to campaign documents and existing registers.
-- [ ] Adapt the research commands for shared storage and evidence limitations.
-- [ ] Share IndiGen progress and selected evidence; check historical parity and
+- [x] Adapt the research commands for shared storage and evidence limitations.
+- [x] Share IndiGen progress and selected evidence; check historical parity and
   resumption from a clean checkout.
-- [ ] Run the bounded Bishop mata‘a publication pilot.
-- [ ] Update contributor instructions to the tested workflow.
+- [x] Run the bounded Bishop mata‘a publication pilot.
+- [x] Update contributor instructions to the tested workflow.
 
 Migrate other useful history and run wider institutional campaigns incrementally.
 Leave legacy scratch files alone; extend tooling only for problems found in use.

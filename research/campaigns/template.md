@@ -7,13 +7,15 @@ as finishing this bounded investigation.
 
 ## Current position
 
-Summarise what has been established. Link an existing progress register or source
-when useful; do not copy its continuously changing counts.
+State where the investigation stands. Link the progress register or collection
+sources for completed work; do not reproduce their facts or counts.
 
 ## Findings and evidence
 
-Record useful findings, decisions and supporting URLs or repository-relative
-links. Preserve exact source-entry locators and uncertainty.
+Record only findings and decisions needed to continue that are not already
+explained in collection records or the register. Link supporting evidence;
+retain locators and uncertainty for unresolved leads. Routine imports need no
+additional campaign entry. Omit this section when links above suffice.
 
 ## Unresolved leads and obstacles
 

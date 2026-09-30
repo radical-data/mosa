@@ -60,14 +60,26 @@ unresolved entries in its document until evidence establishes object identities.
 Use [collection authoring](collection-publication.md) for collection changes;
 there is no additional publication approval stage for public museum material.
 
-Do not copy register totals into continuously maintained campaign tables. Use
-`just research status <source-id>` for current counts and filtered queues. Mark
-any retained historical totals with their date and scope.
+Give each fact one maintained home. Published facts and source-specific editorial
+decisions belong in collection records. Reviewed work and remaining object
+stages belong in the progress register. Campaigns hold the research question,
+scope, unresolved leads and next action. Supporting evidence is retained only
+when needed to understand or resume work that those records do not explain.
 
-Reuse collection source IDs, qualified claim IDs, optional claim locators and
-registered captures. Do not duplicate public claims or create a source just to
-satisfy a research format. Agent instructions should point to the campaign and
-existing lookup recipes rather than require the original chat.
+Do not write a campaign report for every collection import or mirror claim,
+image, source or completion counts. Link the relevant source or register instead.
+Use `just research status <source-id>` for current counts and queues. A one-off
+migration check can retain a dated snapshot; it is not a recurring reporting
+requirement. When a candidate enters the collection, replace its duplicated
+factual notes with a link and retain only unresolved questions or decision
+rationale that is not already recorded there.
+
+A short investigation can use an existing campaign. Update it only when its
+question, findings, obstacles or next action change; routine successful imports
+need no additional campaign entry. Reuse source IDs, qualified claim IDs,
+optional claim locators and registered captures. Do not create a source just
+to satisfy a research format. Agent instructions should point to the relevant
+campaign and lookup recipes rather than require the original chat.
 
 ## Evidence and human assistance
 
@@ -77,41 +89,26 @@ correspondence, credentials and uncleared media local. Reuse captures already in
 `source-files/` rather than copying them into campaign folders.
 
 When a website blocks an agent, record its URL and the evidence needed. A human
-can download HTML into ignored local staging and tell the agent its path. The
+can supply HTML or a PDF in ignored local staging and tell the agent its path.
+Permission to inspect a supplied file does not mean permission to share it in
+the repository. Keep restricted files, their page renders and raw extracted
+text local; share our findings and a citation where appropriate. The
 agent inspects the file and uses the existing source capture workflow for a
 suitable registered source. Preserve retrieval information when known; an
 unknown download date stays unknown. No special handover record is required.
 
-The portable register implementation adds optional `evidenceLimitations` notes
+The progress register supports optional `evidenceLimitations` notes
 to batches when supporting evidence cannot be shared. These notes describe the
-limitation, not substitute evidence. Status output must show limitations apart
+limitation, not substitute evidence. Status output shows limitations apart
 from recorded outcomes. Missing shared files remain errors.
 
 ## First migration and validation
 
-The baseline observed on 2026-09-30 at `68a3a2a` contained 565 objects, 254
-sources, 6,094 claims, 109 image records and two editorials. Of those object
-records, 562 linked to the PDF table, IndiGen or both. These are record counts,
-not verified totals of distinct objects currently abroad.
-
-The local IndiGen register had one inventory, revision 45, 44 batches and 417
-active entries. Its recorded outcomes were:
-
-| Stage | Outcomes |
-| --- | --- |
-| Identity | 231 verified; 34 not found within scope; 50 blocked; 102 deferred |
-| Capture | 229 complete; one partial; 50 blocked; 137 deferred |
-| Claims | 228 complete within scope; three partial; 49 blocked; 137 deferred |
-| Images | 69 complete; 97 blocked; 228 deferred; 23 unavailable |
-
-Ninety entries met the existing four-stage completion rule. No pending outcomes
-means every entry has a disposition, not that the research is finished.
-
-Copy this register while preserving its original inventory, batches, dates,
-outcomes, references and source hashes. Review only the local evidence it uses:
-reuse existing captures, share necessary notes, or describe access limitations.
-Retain the original local register unchanged. The shared register becomes
-canonical after parity and clean-checkout checks; never update both copies.
+The [IndiGen migration](../research/evidence/indigen/README.md) preserves the
+original inventory and batch history while making selected evidence portable.
+Its one-off verification note records the parity result. Current collection
+counts belong to collection checks; current progress belongs to the register.
+The original local register remains unchanged; never update both copies.
 
 Verify that another checkout can read the campaign, inspect progress and find
 the next action without local research files. Keep existing drift and revision
@@ -121,9 +118,11 @@ Do not silently choose between conflicting research conclusions.
 
 ## Implementation boundary
 
-The planned tooling changes retain existing commands and register structure,
-use shared storage, allow legacy read-only inspection, check all shared
-registers and report evidence limitations. No campaign schema, lead database,
+The research commands retain the existing register structure, use shared
+storage, allow legacy read-only inspection, check all shared registers and
+report evidence limitations. Run `just research-check` for all shared registers;
+`just verify` includes it. The [collection authoring guide](collection-publication.md#research-museum-records)
+contains the command and batch reference. No campaign schema, lead database,
 activity system, assignment mechanism or handover API is needed.
 
 The implementation is complete when IndiGen is portable, the Bishop pilot has

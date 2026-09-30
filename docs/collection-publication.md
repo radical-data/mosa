@@ -143,9 +143,10 @@ retain established handles when the prior extraction identifies the same entry.
 
 ### Research museum records
 
-Keep candidate URLs and unsuccessful searches in a dated register under
-`research-local/`, not in `collection/`. Record the historical holder and
-description, candidate URL and accession number when available, supporting and
+Keep candidate URLs and unsuccessful searches in the relevant shared
+[campaign](research.md#files-and-responsibilities), not in `collection/`.
+Use `research-local/` for downloads, private evidence and working drafts.
+Record the historical holder and description, candidate URL and accession number when available, supporting and
 contradictory evidence, the date checked and the evidence still needed. Use
 explicit statuses such as `verified`, `ambiguous`, `blocked` and `not found`;
 `not found` means only that the recorded searches did not locate a match.
@@ -155,10 +156,10 @@ skill maintains [holder lookup recipes](../.agents/skills/identify-objects/refer
 for observed accession URL templates, search parameters, identifier formatting
 and fallbacks. A substituted URL supplies a candidate, not a verified match;
 check its displayed accession and supporting object details. Record a new
-successful method there and each actual attempt in the private register below.
+successful method there and each actual attempt in the campaign or register below.
 
-For repeatable follow-up work on existing source-linked objects, use the private
-progress register at `research-local/progress/<source-id>.json`. It is seeded
+For repeatable follow-up work on existing source-linked objects, use the shared
+progress register at `research/progress/<source-id>.json`. It is seeded
 from objects linked by that source's claims, images or `objectIds`; it does not
 replace a raw page or gallery inventory. Initialise or reconcile it with:
 
@@ -169,8 +170,13 @@ just research status <source-id>
 just research check <source-id>
 ```
 
-`init` is safe to repeat. `sync` snapshots changes to the seed source and adds
-or removes its current entries while retaining recorded history. A changed
+`just research check` (without a source ID), also available as `just research-check`,
+checks every shared register. `just verify` includes this check. It does not
+inspect local-only registers. Clone the full Git history to resolve historical
+commit references; LFS pointer files suffice for this metadata check.
+
+`init` is safe to repeat for shared registers. `sync` snapshots changes to the
+seed source and adds or removes its current entries while retaining recorded history. A changed
 institution, catalogue identifier or object type resets the displayed progress
 for that entry to pending; earlier batches remain as history. A later change to
 promoted source metadata is shown as stale until a new reviewed batch records
@@ -228,7 +234,7 @@ URL and query with the actual attempt:
       "result": "No result for the exact accession or its documented variant."
     }
   ],
-  "evidence": ["research-local/example-search.md"],
+  "evidence": ["research/evidence/example-search.md"],
   "checks": [],
   "commits": [],
   "updates": [
@@ -245,8 +251,14 @@ URL and query with the actual attempt:
 }
 ```
 
-All top-level fields above are required; unknown fields are rejected. `checks`
-contains `{ "command": "just collection-check", "result": "passed", "note":
+All top-level fields above are required; unknown fields are rejected.
+An optional `evidenceLimitations` array of non-empty notes records evidence that
+cannot be shared or reproduced. It is reported separately from stage totals and
+does not waive missing files or count as evidence. Batch evidence can reference
+HTTP(S) URLs or files under `collection/`, `source-files/` and `research/`.
+Review files before sharing them; keep private material in `research-local/`.
+
+`checks` contains `{ "command": "just collection-check", "result": "passed", "note":
 "Reviewed batch validates." }` entries when checks have actually run. Results
 can be `passed` or `failed`; the register records them and does not execute
 commands. `commits` holds existing Git commit hashes and may be empty before a
@@ -274,9 +286,14 @@ establish claim truth, rights, consent or current custody, and does not promote
 a candidate into the public collection by itself. Writes are local and
 concurrency-safe; if a stale lock remains, first confirm that no register
 command is still running before removing it.
-Back up `research-local/progress/` together with its referenced private audits;
-Git clones do not restore ignored research history. A fresh `init` inventories
-the collection but does not infer which work has been reviewed.
+The shared register is authoritative when present. An older register under
+`research-local/progress/` can be inspected with a warning, but cannot be
+initialised, synced or written until its reviewed evidence and register have
+been migrated. Keep that local original as a backup; never update both copies.
+Git restores shared history, while private staging still needs its own backup.
+A fresh `init` inventories the collection but does not infer reviewed work.
+For Git conflicts, reconcile both batches, re-read status and record subsequent
+work against the resulting revision; do not choose a side silently.
 
 A candidate is not a collection source. Promote it only when evidence identifies
 the specific object, for example through the same accession or former catalogue
