@@ -1,0 +1,62 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-309",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-rapa-nui-17-309",
+      "predicate": "classified_as",
+      "value": "Moai Kava Kava"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-rapa-nui-17-309",
+      "predicate": "described_as",
+      "value": "Figura antropomorfa de madera. Posee pómulos y cejas tallados en relieve, ojos engastados de vértebra de pescado y obsidiana, costillas y vértebras conspicuas, y extremidades esquemáticas. Posee un dibujo cefálico compuesto por dos aves confrontadas, unidas por la cola."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-rapa-nui-17-309",
+      "predicate": "catalogue_number",
+      "value": "17-309"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-rapa-nui-17-309",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-kavakava-rapa-nui-17-309",
+      "predicate": "described_as",
+      "value": "Creador/a: Anónimo/desconocido"
+    },
+    {
+      "id": "technique",
+      "objectId": "moai-kavakava-rapa-nui-17-309",
+      "predicate": "described_as",
+      "value": "Técnica: Madera-Tallado"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-rapa-nui-17-309",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 99 cm - Ancho 20 cm - Profundidad 21 cm"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t02-20-26-734z.html",
+      "capturedAt": "2026-09-30T02:20:26.734Z",
+      "method": "singlefile",
+      "note": "Official ficha and catalogue photo preserved; photo used for private identification comparison only; image rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "Official Chile Patrimonios fiche for MAPSE catalogue object 17-309. The catalogue statements remain attributed as written. No image is published; portal terms do not grant a general image reuse licence.",
+    "language": "en-GB"
+  }
+}

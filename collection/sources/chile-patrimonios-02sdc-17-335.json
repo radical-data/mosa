@@ -1,0 +1,50 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-335",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "classified_as",
+      "value": "Escultura"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "described_as",
+      "value": "Figura masculina. Tiene representado el pene y por la espalda tiene insinuado el hami o taparrabo y un círculo como decoración, similar al de los moai de toba. Tiene orejas largas que culminan en la base en dos espacios para orejeras. Tiene barba tallada solo en la barbilla y en la cabeza tiene tallado un diseño que representa a tres rostros humanos con lo que parecen seer pelos largos y barbas. Tiene ojos hechos con vértebra de hueso de pez y obsidiana. Las cejas se elevan hacia su centro donde rematan en un borde agudo y están decoradas con un diseño de chevrón cuyo eje central es dicho borde. Los dedos de los pies están apenas insinuados por unas muescas en el borde de los conos truncados que representan los pies mismos. A la altura de los tobillos en ambas piernas los maléolos externo e interno están representados por dos protuberancias. Tiene la clavícula tallada como una cresta que se extiende de hombro a hombro con el centro formando un ángulo abierto y siguiendo una curva hacia los extremos."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "catalogue_number",
+      "value": "17-335"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-tangata-rapa-nui-17-335",
+      "predicate": "described_as",
+      "value": "Creador/a: Victor Mulloy Hey"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t02-21-03-263z.html",
+      "capturedAt": "2026-09-30T02:21:03.263Z",
+      "method": "singlefile",
+      "note": "Official ficha and catalogue photo preserved; photo used for private identification comparison only; image rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "Official Chile Patrimonios fiche for MAPSE catalogue object 17-335. The catalogue statements remain attributed as written. No image is published; portal terms do not grant a general image reuse licence.",
+    "language": "en-GB"
+  }
+}
