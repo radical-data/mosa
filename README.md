@@ -38,11 +38,15 @@ before committing. Run `just` to list all commands.
 | `collection/editorials/` | Optional authored Markdown publications linked to objects |
 | `collection/images/` | Publishable image files stored through Git LFS |
 | `source-files/` | Preserved source captures in Git LFS, excluded from the website |
+| `research/` | Optional campaigns and retained research progress, excluded from the website |
 | `research-local/` | Ignored private research and staging, backed up separately |
 | `src/` | Astro pages, components, content and collection loading |
 | `public/` | Static website assets copied without processing |
 | `scripts/` | Collection, documentation, deployment and HTTP verification |
 | `docs/` | Current guides, decisions and retained competency cases |
+
+Start research from the [programme overview](research/README.md) and
+[research guide](docs/research.md).
 
 Read [collection authoring](docs/collection-publication.md) before adding public
 records. [Architecture](docs/architecture.md) explains the reduced model and its

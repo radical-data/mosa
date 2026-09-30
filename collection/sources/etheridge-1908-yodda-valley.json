@@ -1,0 +1,27 @@
+{
+  "author": "R. Etheridge, Junr.",
+  "reference": "Etheridge, R. (1908). Ancient stone implements from the Yodda Valley goldfield, north-east British New Guinea. Records of the Australian Museum 7(1): 24–28, plates VI–VII. https://doi.org/10.3853/j.0067-1975.7.1908.946",
+  "language": "en",
+  "notes": {
+    "language": "en-GB",
+    "text": "The final paragraph of p. 25 identifies a single Easter Island wooden figure in the author’s museum collection as a comparison with a New Guinea stone object. Etheridge was curator of the Australian Museum. The singular reference and distinctive base description justify a historical object identity; no matching historical wooden figure is established elsewhere in MoSA. No accession, dimensions, making date or present whereabouts are given. The measurements and plates in this paper concern New Guinea objects and must not be applied to the Rapa Nui figure. The 2014 museum blog photograph of a wooden figure’s head remains an unverified possible match, not a second object or confirmed image of this one. The original 1908 publication is public domain: Etheridge died in 1920 (https://australian.museum/about/history/people/robert-etheridge-jr-curator-1895-1919/); see National Library of Australia copyright-duration guidance (https://www.library.gov.au/services/copyright-library-collections/how-long-does-copyright-last). The modern scan adds a bibliographic cover, not a revised article. The complete original download is preserved as documentary evidence; there is no photograph of the Rapa Nui figure to publish."
+  },
+  "claims": [
+    {
+      "id": "historical-figure",
+      "objectId": "wooden-figure-etheridge-1908-australian-museum",
+      "predicate": "described_as",
+      "value": "We have in our collection a semi-human wooden figure from Easter Island terminating below in an undivided pointed and rounded base.",
+      "locator": "p. 25, final paragraph (1908; PDF page 3)"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "original.pdf",
+      "originalUrl": "https://journals.australian.museum/media/Uploads/Journals/17009/946_complete.pdf",
+      "capturedAt": "2026-09-30T14:21:30Z",
+      "method": "download"
+    }
+  ]
+}

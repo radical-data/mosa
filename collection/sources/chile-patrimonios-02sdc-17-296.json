@@ -7,7 +7,8 @@
       "id": "catalogue-title",
       "objectId": "moai-kavakava-rapa-nui-17-296",
       "predicate": "described_as",
-      "value": "Título de la ficha: Moai Mana'u"
+      "value": "Moai Mana'u",
+      "locator": "Encabezado de la ficha"
     },
     {
       "id": "classification",

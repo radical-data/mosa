@@ -73,6 +73,10 @@ source *args:
 source-check:
     node --import tsx scripts/source.ts check
 
-# Keep private, resumable museum research progress for source-linked objects.
+# Keep shared, resumable museum research progress for source-linked objects.
 research *args:
     node --import tsx scripts/research.ts "$@"
+
+# Check every shared research register without private files or network access.
+research-check:
+    node --import tsx scripts/research.ts check

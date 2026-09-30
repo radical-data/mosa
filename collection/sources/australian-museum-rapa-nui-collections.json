@@ -1,0 +1,27 @@
+{
+  "author": "Australian Museum",
+  "reference": "Rapa Nui Collections. https://australian.museum/learn/cultures/pasifika-collections/rapa-nui-collections/",
+  "language": "en",
+  "notes": {
+    "language": "en-GB",
+    "text": "The museum's collection overview documents three highlighted contemporary works and their relationship to its Rapa Nui collection. Image alternative text supports the two material claims; these are descriptions of the replica and bust, not of the original Hoa Hakananai’a or the depicted person. The moai image's ‘originates from’ wording does not distinguish the replica's making place from the original's history, so no place claim is inferred. The image filename is not a verified accession number. Approximate collection totals are institutional context, not individual object evidence. A usable HTML capture was inspected on 30 September 2026, including the expanded transcript. It embeds Indigenous cultural images for which redistribution is not cleared under the museum’s image licensing procedure (https://australian.museum/about/organisation/am-images/). The complete capture remains in ignored local storage; no shareable capture or publishable image is registered."
+  },
+  "claims": [
+    {
+      "id": "moai-material",
+      "objectId": "moai-hoa-haka-nanaia-replica-australian-museum",
+      "predicate": "made_of",
+      "value": "basalt, coral, obsidian and pigment",
+      "locator": "Collection highlights: alternative text of the image linked to Moai Hoa Haka Nana'ia: Stolen Friend"
+    },
+    {
+      "id": "bust-material",
+      "objectId": "bust-nua-maria-angata-australian-museum",
+      "predicate": "made_of",
+      "value": "wood, shell and fibre",
+      "locator": "Collection highlights: alternative text of the image linked to Bust of Nua María Aŋata"
+    }
+  ],
+  "images": [],
+  "objectIds": ["kohau-rongorongo-replica-australian-museum"]
+}

@@ -1,0 +1,47 @@
+{
+  "author": "Australian Museum",
+  "reference": "Kōhau Roŋoroŋo: Talking Tablet. https://australian.museum/learn/cultures/pasifika-collections/rapa-nui-collections/kohau-rongorongo-talking-tablet/",
+  "language": "en",
+  "notes": {
+    "language": "en-GB",
+    "text": "This is Victor Pakomio's contemporary educational replica of an original lost to fire, not one of the historical Roŋoroŋo tablets in other collection records. The material and educational-purpose claims use Victor Pakomio's audio transcript, identified by the surrounding introduction and acknowledgement. General writing-system history and corpus counts describe other tablets; differing totals in the body and transcript are not claims about this replica. No accession number is established. A usable HTML capture was inspected on 30 September 2026, including the expanded transcript. It embeds Indigenous cultural images for which redistribution is not cleared under the museum’s image licensing procedure (https://australian.museum/about/organisation/am-images/). The complete capture remains in ignored local storage; no shareable capture or publishable image is registered."
+  },
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "kohau-rongorongo-replica-australian-museum",
+      "predicate": "has_name",
+      "value": "Kōhau Roŋoroŋo: Talking Tablet",
+      "locator": "Page title"
+    },
+    {
+      "id": "carver",
+      "objectId": "kohau-rongorongo-replica-australian-museum",
+      "predicate": "described_as",
+      "value": "carved by Rapa Nui artist Victor Pakomio",
+      "locator": "Opening paragraph"
+    },
+    {
+      "id": "replica",
+      "objectId": "kohau-rongorongo-replica-australian-museum",
+      "predicate": "described_as",
+      "value": "replicates an original lost to fire",
+      "locator": "Opening paragraph"
+    },
+    {
+      "id": "material",
+      "objectId": "kohau-rongorongo-replica-australian-museum",
+      "predicate": "made_of",
+      "value": "wood",
+      "locator": "Audio Transcript: Victor Pakomio, paragraph beginning “This piece, carved from wood”"
+    },
+    {
+      "id": "educational-purpose",
+      "objectId": "kohau-rongorongo-replica-australian-museum",
+      "predicate": "described_as",
+      "value": "made for educational purposes, a little larger than the originals",
+      "locator": "Audio Transcript: Victor Pakomio, paragraph beginning “This tablet was made for educational purposes”"
+    }
+  ],
+  "images": []
+}

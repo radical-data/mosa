@@ -37,7 +37,9 @@ file handle is also the public URL identity.
 
 A **source** records who authored or asserted it when known, its exact reference,
 its language, and the claims and image records derived from it. It can link
-directly to an object before claims or images are extracted. Claims and images
+directly to an object before claims or images are extracted. An examined
+publication can also have a source record with no object links or claims yet;
+registering it does not assert an object identity. Claims and images
 already provide their own object links, so direct links are used only where that
 association would otherwise be absent. Sources and objects have different
 identities. A shared URL does not prove that two objects are the same.
@@ -47,6 +49,15 @@ files in the repository-only `source-files/` tree or an exact archive URL. Captu
 bytes use Git LFS. Neither captures nor their metadata are rendered by the site;
 website builds do not require those bytes. [ADR 024](adrs/024-preserve-source-captures.md)
 records this boundary.
+
+Systematic research is coordinated in optional Markdown campaigns. Campaigns
+hold rationale, scope, planned and dated search coverage, concise candidate
+outcomes, links and remaining integration; they do not duplicate claims or
+collection inventories. Useful retained research files may live under
+`research/evidence/<campaign-id>/` under the
+[research retention rule](research.md#retaining-research-evidence). Source capture
+staging remains local until reviewed, while a registered source capture is
+durable verification evidence under `source-files/`.
 
 A **claim** has an ID local to its source, an object ID, a controlled predicate
 and a textual value. References outside the source qualify the local ID with the

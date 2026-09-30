@@ -2,8 +2,8 @@
 
 Consult the relevant holder entry before researching another object. These are
 retrieval recipes, not object matches or image permissions. Last checked:
-2026-09-30. Keep attempted object URLs and outcomes in the private progress
-register; maintain successful, non-sensitive methods here across imports.
+2026-09-30. Keep attempted object URLs and outcomes in the existing campaign or optional
+progress register; maintain successful, non-sensitive methods here across imports.
 
 For each new holder, record its official catalogue, tested method and example,
 identifier formatting, fallback search, and access limitations. Distinguish a

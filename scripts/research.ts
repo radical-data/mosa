@@ -4,6 +4,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import {
   initialiseRegister,
   inspectRegister,
+  inspectSharedRegisters,
   recordBatch,
   type Stage,
   type StatusFilter,
@@ -13,8 +14,9 @@ import {
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const usage =
-  "Usage: just research init|sync|check|status <source-id> [--institution text] [--object id] [--stage identity|capture|claims|images] [--status value] [--limit N] | record <source-id> --file path --revision N";
+  "Usage: just research check (all shared registers) | just research init|sync|check|status <source-id> [--institution text] [--object id] [--stage identity|capture|claims|images] [--status value] [--limit N] | record <source-id> --file path --revision N";
 export async function runResearchCli(argv = process.argv.slice(2), repositoryRoot = root) {
+  if (argv.length === 1 && argv[0] === "check") return inspectSharedRegisters(repositoryRoot);
   const [command, sourceId, ...options] = argv;
   if (!["init", "sync", "check", "status", "record"].includes(command) || !sourceId)
     throw Error(usage);

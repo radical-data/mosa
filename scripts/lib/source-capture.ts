@@ -162,14 +162,16 @@ export async function doctor(root: string, dependencies: CaptureDependencies = {
 
 export async function captureSource(
   root: string,
-  sourceId: string,
+  sourceId: string | undefined,
   url: string,
   waitMs = 0,
   dependencies: CaptureDependencies = {},
 ) {
-  safeId(sourceId);
-  const sourcePath = path.join(root, "collection", "sources", `${sourceId}.json`);
-  parseSource(JSON.parse(await readFile(sourcePath, "utf8")), `${sourceId}.json`);
+  if (sourceId !== undefined) {
+    safeId(sourceId);
+    const sourcePath = path.join(root, "collection", "sources", `${sourceId}.json`);
+    parseSource(JSON.parse(await readFile(sourcePath, "utf8")), `${sourceId}.json`);
+  }
   validUrl(url, "--url");
   if (!Number.isInteger(waitMs) || waitMs < 0 || waitMs > 30_000)
     throw Error("--wait must be an integer from 0 to 30000 milliseconds");
@@ -183,8 +185,8 @@ export async function captureSource(
     throw Error("No Chromium browser found. Set MOSA_CAPTURE_BROWSER to its executable path.");
   const staging = path.join(root, "research-local", "source-captures");
   await mkdir(staging, { recursive: true });
-  const work = await mkdtemp(path.join(staging, `${sourceId}-`));
-  const output = path.join(work, `${sourceId}.html`);
+  const work = await mkdtemp(path.join(staging, `${sourceId ?? "anonymous"}-`));
+  const output = path.join(work, `${sourceId ?? "capture"}.html`);
   const profile = path.join(work, "profile");
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 120_000);
@@ -218,7 +220,7 @@ export async function captureSource(
     const diagnostic = {
       ok: true,
       command: "capture",
-      sourceId,
+      ...(sourceId !== undefined ? { sourceId } : {}),
       originalUrl: url,
       capturedAt,
       method: "singlefile" satisfies CaptureMethod,
@@ -233,7 +235,8 @@ export async function captureSource(
       file: path.relative(root, output).split(path.sep).join("/"),
       bytes: bytes.byteLength,
       sha256: hash(bytes),
-      message: "Capture saved to private staging. Review it, then register it explicitly.",
+      message:
+        "Capture saved to private staging. Inspect it before registering a source capture or retaining useful research evidence.",
     };
     await writeFile(path.join(work, "capture.json"), `${JSON.stringify(diagnostic, null, 2)}\n`);
     return diagnostic;

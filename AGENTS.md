@@ -12,6 +12,7 @@
 | --- | --- |
 | Change system boundaries or the collection model | [Architecture](docs/architecture.md), relevant [ADRs](docs/adrs/) |
 | Change claims, sources or foregrounding | [Predicates](docs/predicates.md), [collection authoring](docs/collection-publication.md) |
+| Plan discovery or reorganise research history | [Research programme](docs/research.md), [roadmap](docs/roadmap.md#shared-research-programme) |
 | Add objects, images or editorials | [Collection authoring](docs/collection-publication.md) |
 | Bring a source page into the collection | [Incorporate source skill](.agents/skills/incorporate-source/SKILL.md) |
 | Configure or troubleshoot hosting | [Operations](docs/operations.md) |
@@ -28,6 +29,7 @@
 | `collection/editorials/` | Authored Markdown publications linked to objects |
 | `collection/images/` | Publishable image assets tracked with Git LFS |
 | `source-files/` | Preserved source captures in Git LFS, excluded from the website |
+| `research/` | Optional campaigns and retained research progress, excluded from the website |
 | `scripts/` | Documentation and deployment verification |
 | `docs/adrs/`, `docs/test-cases/` | Decisions and retained domain requirements |
 
@@ -41,6 +43,7 @@ repository tasks and pnpm owns dependencies.
 
 | Change | Verification |
 | --- | --- |
+| Research registers | `just research-check`, `just docs-check` and `git diff --check` |
 | Documentation only | `just docs-check` and `git diff --check` |
 | Collection records or images | `just collection-check`, relevant tests and `just build` |
 | Website or shared TypeScript | Relevant tests, then `just verify` |

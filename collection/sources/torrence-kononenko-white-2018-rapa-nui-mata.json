@@ -1,0 +1,684 @@
+{
+  "author": "Robin Torrence, Nina Kononenko and Peter White",
+  "reference": "Torrence, R., Kononenko, N. and White, P. (2018). Revisiting Rapa Nui Matā. Rapa Nui Journal 31(1–2): 1–20. https://muse.jhu.edu/article/716984",
+  "language": "en",
+  "notes": {
+    "language": "en-GB",
+    "text": "The twelve Australian Museum specimens are individually identified in Table 3. No institution-scoped identifier or matching Australian Museum matā was found in the existing MoSA collection. The source reports study-time holdings, not verified current custody. Extraction covers identification and material, Table 1 acquisition rows with consistent identifiers, Table 2 metrics and form except its disputed E70735 row, and Appendix Part 2 use interpretations with their confidence. Table headings are retained with their cells, separated by semicolons; only layout whitespace and typographic ligatures are normalised. Acquisition dates are not making dates, and the Robins donor statement concerns some items in the collection, not a proven 1860 history for each specimen. Table 1 prints E65164, whereas Tables 2–3, Figure 2 and the appendix use E65154; the Bard acquisition and quoted cave findspot are withheld pending confirmation. Table 2 prints E70735, whereas Table 1’s range, Table 3, Figure 1b and the appendix use E30735; no E70735 alias, thirteenth object or metric claims from that row are asserted. Figure 7’s caption identifies panel b as A18927 and panel c as A18928, but the photographed labels read A18928 on b and A18927 on c, consistent with Table 2’s respective rectangular and triangular blade shapes. No figure-to-object image links are asserted from the reversed caption. Source-specific identity follows the consistent specimen entries without claiming that either discrepancy has been resolved. Table 3 and Appendix Part 2 differ slightly in the proposed contact material for E30737 and E30739; both wordings are retained separately. Appendix Part 1 microscopic observations, remaining Part 2 surface/residue fields, and extended functional or authenticity arguments are outside this selective extraction. Proposed contact materials and wooden handles are interpretations, not the objects’ constituent materials. In particular E30736’s use and contact material remain uncertain. The original is a user-supplied Project MUSE PDF, inspected for this extraction; the issue is dated 2018 and its article copyright is © 2019 University of Hawai‘i Press. No redistribution or figure-reuse licence appears in the supplied file. It remains in ignored local storage, with its download watermark private; no capture or image is registered. Figures 1–7 and the acknowledgments were reviewed: drawings and micrographs are evidence but not cleared publishable assets."
+  },
+  "claims": [
+    {
+      "id": "a18926-number",
+      "objectId": "mata-australian-museum-a18926",
+      "predicate": "catalogue_number",
+      "value": "A18926",
+      "locator": "p. 5, Table 3, row A18926"
+    },
+    {
+      "id": "a18926-classification",
+      "objectId": "mata-australian-museum-a18926",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "a18926-holder",
+      "objectId": "mata-australian-museum-a18926",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "a18926-material",
+      "objectId": "mata-australian-museum-a18926",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "a18926-metrics",
+      "objectId": "mata-australian-museum-a18926",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): n/a; Maximum Width (mm): 76.2; Weight (g): 130.1; Stem Length (mm): 26.9; Stem Thickness (mm): 11.2; Stem Width (mm): 21.6",
+      "locator": "p. 3, Table 2, row A18926"
+    },
+    {
+      "id": "a18926-form",
+      "objectId": "mata-australian-museum-a18926",
+      "predicate": "described_as",
+      "value": "Blank: cortical flake; Stem aligned: Y; Stem Location on Flake: Proximal; Stem Retouch: Bifacial; Blade Shape: Square; Edge Shape Opposite Stem: ?Broken",
+      "locator": "p. 3, Table 2, row A18926"
+    },
+    {
+      "id": "a18926-use-interpretation",
+      "objectId": "mata-australian-museum-a18926",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: not used; Mode of Use Confidence: not used; Proposed Contact Material: not used; Contact Material Confidence: not used; Intensity of Use: not used; Proposed Hafting Material: absent",
+      "locator": "p. 20, Appendix Part 2, row A18926"
+    },
+    {
+      "id": "a18926-acquisition",
+      "objectId": "mata-australian-museum-a18926",
+      "predicate": "described_as",
+      "value": "Date: 1882; Source: J. Weisser; Acquisition Details: Four-day visit to Rapa Nui (Ayres & Ayres 1995)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row A18926-28"
+    },
+    {
+      "id": "a18927-number",
+      "objectId": "mata-australian-museum-a18927",
+      "predicate": "catalogue_number",
+      "value": "A18927",
+      "locator": "p. 5, Table 3, row A18927"
+    },
+    {
+      "id": "a18927-classification",
+      "objectId": "mata-australian-museum-a18927",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "a18927-holder",
+      "objectId": "mata-australian-museum-a18927",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "a18927-material",
+      "objectId": "mata-australian-museum-a18927",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "a18927-metrics",
+      "objectId": "mata-australian-museum-a18927",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 118.7; Maximum Width (mm): 110.6; Weight (g): 155.4; Stem Length (mm): 27.2; Stem Thickness (mm): 9.6; Stem Width (mm): 25.8",
+      "locator": "p. 3, Table 2, row A18927"
+    },
+    {
+      "id": "a18927-form",
+      "objectId": "mata-australian-museum-a18927",
+      "predicate": "described_as",
+      "value": "Blank: flake; Stem aligned: N; Stem Location on Flake: Proximal; Stem Retouch: Unifacial; Blade Shape: Triangle; Edge Shape Opposite Stem: Point",
+      "locator": "p. 3, Table 2, row A18927"
+    },
+    {
+      "id": "a18927-use-interpretation",
+      "objectId": "mata-australian-museum-a18927",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: not used; Mode of Use Confidence: not used; Proposed Contact Material: not used; Contact Material Confidence: not used; Intensity of Use: not used; Proposed Hafting Material: absent",
+      "locator": "p. 20, Appendix Part 2, row A18927"
+    },
+    {
+      "id": "a18927-acquisition",
+      "objectId": "mata-australian-museum-a18927",
+      "predicate": "described_as",
+      "value": "Date: 1882; Source: J. Weisser; Acquisition Details: Four-day visit to Rapa Nui (Ayres & Ayres 1995)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row A18926-28"
+    },
+    {
+      "id": "a18928-number",
+      "objectId": "mata-australian-museum-a18928",
+      "predicate": "catalogue_number",
+      "value": "A18928",
+      "locator": "p. 5, Table 3, row A18928"
+    },
+    {
+      "id": "a18928-classification",
+      "objectId": "mata-australian-museum-a18928",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "a18928-holder",
+      "objectId": "mata-australian-museum-a18928",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "a18928-material",
+      "objectId": "mata-australian-museum-a18928",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "a18928-metrics",
+      "objectId": "mata-australian-museum-a18928",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 90.0; Maximum Width (mm): 84.0; Weight (g): 129.5; Stem Length (mm): 19.8; Stem Thickness (mm): 14.8; Stem Width (mm): 23.6",
+      "locator": "p. 3, Table 2, row A18928"
+    },
+    {
+      "id": "a18928-form",
+      "objectId": "mata-australian-museum-a18928",
+      "predicate": "described_as",
+      "value": "Blank: flake; Stem aligned: Y; Stem Location on Flake: Proximal; Stem Retouch: Bifacial; Blade Shape: Horizontal rectangle; Edge Shape Opposite Stem: Straight",
+      "locator": "p. 3, Table 2, row A18928"
+    },
+    {
+      "id": "a18928-use-interpretation",
+      "objectId": "mata-australian-museum-a18928",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: not used; Mode of Use Confidence: not used; Proposed Contact Material: not used; Contact Material Confidence: not used; Intensity of Use: not used; Proposed Hafting Material: absent",
+      "locator": "p. 20, Appendix Part 2, row A18928"
+    },
+    {
+      "id": "a18928-acquisition",
+      "objectId": "mata-australian-museum-a18928",
+      "predicate": "described_as",
+      "value": "Date: 1882; Source: J. Weisser; Acquisition Details: Four-day visit to Rapa Nui (Ayres & Ayres 1995)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row A18926-28"
+    },
+    {
+      "id": "e30734-number",
+      "objectId": "mata-australian-museum-e30734",
+      "predicate": "catalogue_number",
+      "value": "E30734",
+      "locator": "p. 5, Table 3, row E30734"
+    },
+    {
+      "id": "e30734-classification",
+      "objectId": "mata-australian-museum-e30734",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e30734-holder",
+      "objectId": "mata-australian-museum-e30734",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e30734-material",
+      "objectId": "mata-australian-museum-e30734",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e30734-metrics",
+      "objectId": "mata-australian-museum-e30734",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 76.9; Maximum Width (mm): 120.5; Weight (g): 86.6; Stem Length (mm): 29.6; Stem Thickness (mm): 7.7; Stem Width (mm): 19.5",
+      "locator": "p. 3, Table 2, row E30734"
+    },
+    {
+      "id": "e30734-form",
+      "objectId": "mata-australian-museum-e30734",
+      "predicate": "described_as",
+      "value": "Blank: cortical flake; Stem aligned: Y; Stem Location on Flake: Lateral; Stem Retouch: Bifacial; Blade Shape: Horizontal rectangle; Edge Shape Opposite Stem: Straight",
+      "locator": "p. 3, Table 2, row E30734"
+    },
+    {
+      "id": "e30734-use-interpretation",
+      "objectId": "mata-australian-museum-e30734",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: cutting; Mode of Use Confidence: definite; Proposed Contact Material: soft, elastic material, (possible fish); Contact Material Confidence: probable; Intensity of Use: moderate; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 19, Appendix Part 2, row E30734"
+    },
+    {
+      "id": "e30734-acquisition",
+      "objectId": "mata-australian-museum-e30734",
+      "predicate": "described_as",
+      "value": "Date: 1920; Source: Capt. J. F. Robins (RAN); Acquisition Details: Unknown; donor states that some Rapa Nui artifacts in this collection are said to have been obtained in 1860 (AM collection records)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row E30734-41"
+    },
+    {
+      "id": "e30735-number",
+      "objectId": "mata-australian-museum-e30735",
+      "predicate": "catalogue_number",
+      "value": "E30735",
+      "locator": "p. 5, Table 3, row E30735"
+    },
+    {
+      "id": "e30735-classification",
+      "objectId": "mata-australian-museum-e30735",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e30735-holder",
+      "objectId": "mata-australian-museum-e30735",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e30735-material",
+      "objectId": "mata-australian-museum-e30735",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e30735-use-interpretation",
+      "objectId": "mata-australian-museum-e30735",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: cutting; Mode of Use Confidence: definite; Proposed Contact Material: soft, elastic material (meat, flesh, skin); Contact Material Confidence: probable; Intensity of Use: probably intensive; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 19, Appendix Part 2, row E30735"
+    },
+    {
+      "id": "e30735-acquisition",
+      "objectId": "mata-australian-museum-e30735",
+      "predicate": "described_as",
+      "value": "Date: 1920; Source: Capt. J. F. Robins (RAN); Acquisition Details: Unknown; donor states that some Rapa Nui artifacts in this collection are said to have been obtained in 1860 (AM collection records)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row E30734-41"
+    },
+    {
+      "id": "e30736-number",
+      "objectId": "mata-australian-museum-e30736",
+      "predicate": "catalogue_number",
+      "value": "E30736",
+      "locator": "p. 5, Table 3, row E30736"
+    },
+    {
+      "id": "e30736-classification",
+      "objectId": "mata-australian-museum-e30736",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e30736-holder",
+      "objectId": "mata-australian-museum-e30736",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e30736-material",
+      "objectId": "mata-australian-museum-e30736",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e30736-metrics",
+      "objectId": "mata-australian-museum-e30736",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 114; Maximum Width (mm): 111; Weight (g): 176.4; Stem Length (mm): 32; Stem Thickness (mm): 6; Stem Width (mm): 21",
+      "locator": "p. 3, Table 2, row E30736"
+    },
+    {
+      "id": "e30736-form",
+      "objectId": "mata-australian-museum-e30736",
+      "predicate": "described_as",
+      "value": "Blank: kombewa flake; Stem aligned: N; Stem Location on Flake: Proximal; Stem Retouch: Bifacial; Blade Shape: Oval; Edge Shape Opposite Stem: Convex",
+      "locator": "p. 3, Table 2, row E30736"
+    },
+    {
+      "id": "e30736-use-interpretation",
+      "objectId": "mata-australian-museum-e30736",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: possible scraping; Mode of Use Confidence: uncertain; Proposed Contact Material: shell or bone; Contact Material Confidence: uncertain; Intensity of Use: uncertain; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 20, Appendix Part 2, row E30736"
+    },
+    {
+      "id": "e30736-acquisition",
+      "objectId": "mata-australian-museum-e30736",
+      "predicate": "described_as",
+      "value": "Date: 1920; Source: Capt. J. F. Robins (RAN); Acquisition Details: Unknown; donor states that some Rapa Nui artifacts in this collection are said to have been obtained in 1860 (AM collection records)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row E30734-41"
+    },
+    {
+      "id": "e30737-number",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "catalogue_number",
+      "value": "E30737",
+      "locator": "p. 5, Table 3, row E30737"
+    },
+    {
+      "id": "e30737-classification",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e30737-holder",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e30737-material",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e30737-metrics",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 122; Maximum Width (mm): 79; Weight (g): 115.3; Stem Length (mm): 27; Stem Thickness (mm): 14; Stem Width (mm): 22",
+      "locator": "p. 3, Table 2, row E30737"
+    },
+    {
+      "id": "e30737-form",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "described_as",
+      "value": "Blank: flake; Stem aligned: Y; Stem Location on Flake: Lateral; Stem Retouch: Bifacial; Blade Shape: Triangle; Edge Shape Opposite Stem: Point",
+      "locator": "p. 3, Table 2, row E30737"
+    },
+    {
+      "id": "e30737-use-interpretation",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: cutting, both edges; Mode of Use Confidence: definite; Proposed Contact Material: soft, elastic material (meat, skin); Contact Material Confidence: definite; Intensity of Use: intensive; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 19, Appendix Part 2, row E30737"
+    },
+    {
+      "id": "e30737-acquisition",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "described_as",
+      "value": "Date: 1920; Source: Capt. J. F. Robins (RAN); Acquisition Details: Unknown; donor states that some Rapa Nui artifacts in this collection are said to have been obtained in 1860 (AM collection records)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row E30734-41"
+    },
+    {
+      "id": "e30738-number",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "catalogue_number",
+      "value": "E30738",
+      "locator": "p. 5, Table 3, row E30738"
+    },
+    {
+      "id": "e30738-classification",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e30738-holder",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e30738-material",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e30738-metrics",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 93; Maximum Width (mm): 121; Weight (g): 100.3; Stem Length (mm): 31; Stem Thickness (mm): 12; Stem Width (mm): 23",
+      "locator": "p. 3, Table 2, row E30738"
+    },
+    {
+      "id": "e30738-form",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "described_as",
+      "value": "Blank: flake; Stem aligned: N; Stem Location on Flake: Lateral; Stem Retouch: Bifacial; Blade Shape: Horizontal rectangle; Edge Shape Opposite Stem: Point",
+      "locator": "p. 3, Table 2, row E30738"
+    },
+    {
+      "id": "e30738-use-interpretation",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: not used; Mode of Use Confidence: not used; Proposed Contact Material: not used; Contact Material Confidence: not used; Intensity of Use: not used; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 20, Appendix Part 2, row E30738"
+    },
+    {
+      "id": "e30738-acquisition",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "described_as",
+      "value": "Date: 1920; Source: Capt. J. F. Robins (RAN); Acquisition Details: Unknown; donor states that some Rapa Nui artifacts in this collection are said to have been obtained in 1860 (AM collection records)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row E30734-41"
+    },
+    {
+      "id": "e30739-number",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "catalogue_number",
+      "value": "E30739",
+      "locator": "p. 5, Table 3, row E30739"
+    },
+    {
+      "id": "e30739-classification",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e30739-holder",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e30739-material",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e30739-metrics",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 116; Maximum Width (mm): 85; Weight (g): 145.4; Stem Length (mm): 26; Stem Thickness (mm): 9; Stem Width (mm): 21",
+      "locator": "p. 3, Table 2, row E30739"
+    },
+    {
+      "id": "e30739-form",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "described_as",
+      "value": "Blank: kombewa flake; Stem aligned: Y; Stem Location on Flake: Lateral; Stem Retouch: Unifacial; Blade Shape: Triangle; Edge Shape Opposite Stem: Point",
+      "locator": "p. 3, Table 2, row E30739"
+    },
+    {
+      "id": "e30739-use-interpretation",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: scraping; Mode of Use Confidence: definite; Proposed Contact Material: siliceous and resinous soft plant and grasses; Contact Material Confidence: definite; Intensity of Use: intensive; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 20, Appendix Part 2, row E30739"
+    },
+    {
+      "id": "e30739-acquisition",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "described_as",
+      "value": "Date: 1920; Source: Capt. J. F. Robins (RAN); Acquisition Details: Unknown; donor states that some Rapa Nui artifacts in this collection are said to have been obtained in 1860 (AM collection records)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row E30734-41"
+    },
+    {
+      "id": "e30740-number",
+      "objectId": "mata-australian-museum-e30740",
+      "predicate": "catalogue_number",
+      "value": "E30740",
+      "locator": "p. 5, Table 3, row E30740"
+    },
+    {
+      "id": "e30740-classification",
+      "objectId": "mata-australian-museum-e30740",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e30740-holder",
+      "objectId": "mata-australian-museum-e30740",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e30740-material",
+      "objectId": "mata-australian-museum-e30740",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e30740-metrics",
+      "objectId": "mata-australian-museum-e30740",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 123; Maximum Width (mm): 106; Weight (g): 200.4; Stem Length (mm): 27; Stem Thickness (mm): 11; Stem Width (mm): 23",
+      "locator": "p. 3, Table 2, row E30740"
+    },
+    {
+      "id": "e30740-form",
+      "objectId": "mata-australian-museum-e30740",
+      "predicate": "described_as",
+      "value": "Blank: cortical flake; Stem aligned: Y; Stem Location on Flake: Lateral; Stem Retouch: Bifacial; Blade Shape: Triangle; Edge Shape Opposite Stem: Point",
+      "locator": "p. 3, Table 2, row E30740"
+    },
+    {
+      "id": "e30740-use-interpretation",
+      "objectId": "mata-australian-museum-e30740",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: cutting; Mode of Use Confidence: probable; Proposed Contact Material: soft, elastic material (meat, flesh, skin); Contact Material Confidence: probable; Intensity of Use: probably moderate; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 19, Appendix Part 2, row E30740"
+    },
+    {
+      "id": "e30740-acquisition",
+      "objectId": "mata-australian-museum-e30740",
+      "predicate": "described_as",
+      "value": "Date: 1920; Source: Capt. J. F. Robins (RAN); Acquisition Details: Unknown; donor states that some Rapa Nui artifacts in this collection are said to have been obtained in 1860 (AM collection records)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row E30734-41"
+    },
+    {
+      "id": "e30741-number",
+      "objectId": "mata-australian-museum-e30741",
+      "predicate": "catalogue_number",
+      "value": "E30741",
+      "locator": "p. 5, Table 3, row E30741"
+    },
+    {
+      "id": "e30741-classification",
+      "objectId": "mata-australian-museum-e30741",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e30741-holder",
+      "objectId": "mata-australian-museum-e30741",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e30741-material",
+      "objectId": "mata-australian-museum-e30741",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e30741-metrics",
+      "objectId": "mata-australian-museum-e30741",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 139; Maximum Width (mm): 104; Weight (g): 292.2; Stem Length (mm): 37; Stem Thickness (mm): 17; Stem Width (mm): 24",
+      "locator": "p. 3, Table 2, row E30741"
+    },
+    {
+      "id": "e30741-form",
+      "objectId": "mata-australian-museum-e30741",
+      "predicate": "described_as",
+      "value": "Blank: flake; Stem aligned: N; Stem Location on Flake: Lateral; Stem Retouch: Bifacial; Blade Shape: Horizontal rectangle; Edge Shape Opposite Stem: Straight",
+      "locator": "p. 3, Table 2, row E30741"
+    },
+    {
+      "id": "e30741-use-interpretation",
+      "objectId": "mata-australian-museum-e30741",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: chopping; Mode of Use Confidence: definite; Proposed Contact Material: soft woody plant; Contact Material Confidence: probable; Intensity of Use: intensive; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 19, Appendix Part 2, row E30741"
+    },
+    {
+      "id": "e30741-acquisition",
+      "objectId": "mata-australian-museum-e30741",
+      "predicate": "described_as",
+      "value": "Date: 1920; Source: Capt. J. F. Robins (RAN); Acquisition Details: Unknown; donor states that some Rapa Nui artifacts in this collection are said to have been obtained in 1860 (AM collection records)",
+      "locator": "p. 2, Table 1, Acquisition of Australian Museum matā, row E30734-41"
+    },
+    {
+      "id": "e65154-number",
+      "objectId": "mata-australian-museum-e65154",
+      "predicate": "catalogue_number",
+      "value": "E65154",
+      "locator": "p. 5, Table 3, row E65154"
+    },
+    {
+      "id": "e65154-classification",
+      "objectId": "mata-australian-museum-e65154",
+      "predicate": "classified_as",
+      "value": "matā",
+      "locator": "p. 2, Introduction, Australian Museum study sample; p. 5, Table 3"
+    },
+    {
+      "id": "e65154-holder",
+      "objectId": "mata-australian-museum-e65154",
+      "predicate": "held_by",
+      "value": "Australian Museum ethnographic collection",
+      "locator": "p. 2, Introduction, Australian Museum study sample"
+    },
+    {
+      "id": "e65154-material",
+      "objectId": "mata-australian-museum-e65154",
+      "predicate": "made_of",
+      "value": "obsidian",
+      "locator": "p. 1, Introduction; pp. 2–3, Methods and Materials and Table 2"
+    },
+    {
+      "id": "e65154-metrics",
+      "objectId": "mata-australian-museum-e65154",
+      "predicate": "described_as",
+      "value": "Maximum Length (mm): 73; Maximum Width (mm): 45; Weight (g): 35.3; Stem Length (mm): 30; Stem Thickness (mm): 7; Stem Width (mm): 18",
+      "locator": "p. 3, Table 2, row E65154"
+    },
+    {
+      "id": "e65154-form",
+      "objectId": "mata-australian-museum-e65154",
+      "predicate": "described_as",
+      "value": "Blank: flake; Stem aligned: Y; Stem Location on Flake: Lateral; Stem Retouch: Unifacial; Blade Shape: Triangle; Edge Shape Opposite Stem: Point",
+      "locator": "p. 3, Table 2, row E65154"
+    },
+    {
+      "id": "e65154-use-interpretation",
+      "objectId": "mata-australian-museum-e65154",
+      "predicate": "described_as",
+      "value": "Proposed Mode of Use: whittling, both edges; Mode of Use Confidence: definite; Proposed Contact Material: soft, siliceous woody plant; Contact Material Confidence: definite; Intensity of Use: intensive; Proposed Hafting Material: probable wooden handle",
+      "locator": "p. 19, Appendix Part 2, row E65154"
+    },
+    {
+      "id": "e30738-former-handle",
+      "objectId": "mata-australian-museum-e30738",
+      "predicate": "described_as",
+      "value": "was hafted in the past, but the handle has not been preserved.",
+      "locator": "p. 13, Postscript: Biases in Museum Collections"
+    },
+    {
+      "id": "e30737-summary-contact-material",
+      "objectId": "mata-australian-museum-e30737",
+      "predicate": "described_as",
+      "value": "Proposed Contact Material: soft, elastic material (meat, flesh, skin)",
+      "locator": "p. 5, Table 3, row E30737; compare Appendix Part 2"
+    },
+    {
+      "id": "e30739-summary-contact-material",
+      "objectId": "mata-australian-museum-e30739",
+      "predicate": "described_as",
+      "value": "Proposed Contact Material: soft, siliceous, and resinous plant or grasses",
+      "locator": "p. 5, Table 3, row E30739; compare Appendix Part 2"
+    }
+  ],
+  "images": []
+}

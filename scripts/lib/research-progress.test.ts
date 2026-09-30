@@ -104,8 +104,8 @@ async function fixture() {
   });
   await mkdir(path.join(root, "collection/images/item-a"), { recursive: true });
   await writeFile(path.join(root, "collection/images/item-a/front.jpg"), "image fixture");
-  await mkdir(path.join(root, "research-local"), { recursive: true });
-  await writeFile(path.join(root, "research-local/evidence.md"), "Reviewed source evidence.\n");
+  await mkdir(path.join(root, "research/campaigns"), { recursive: true });
+  await writeFile(path.join(root, "research/campaigns/test.md"), "Reviewed source evidence.\n");
   return root;
 }
 
@@ -137,7 +137,7 @@ function batch(
         result: "One catalogue record found.",
       },
     ],
-    evidence: ["research-local/evidence.md"],
+    evidence: ["research/campaigns/test.md"],
     checks: [{ command: "just collection-check", result: "passed" as const, note: "Passed." }],
     commits: [],
     updates,
@@ -292,7 +292,12 @@ describe("museum research progress register", () => {
     });
     await writeJson(root, "collection/sources/seed-source.json", seed);
 
-    expect((await inspectRegister(root, "seed-source")).ok).toBe(false);
+    const drifted = await inspectRegister(root, "seed-source");
+    expect(drifted.ok).toBe(true);
+    expect(drifted.needsReview).toBe(1);
+    expect(drifted.queue[0].warnings.join(" ")).toContain("Seed source changed");
+    expect(drifted.issues).toEqual([]);
+    expect((await runResearchCli(["check"], root)).ok).toBe(true);
     const synced = await initialiseRegister(root, "seed-source", true, deps);
     expect(synced.revision).toBe(3);
     expect(synced.batches).toHaveLength(1);
@@ -318,7 +323,7 @@ describe("museum research progress register", () => {
     expect("history" in history ? history.history?.[0].id : undefined).toBe("initial-match");
   });
 
-  it("flags promoted source drift and rejects missing or wrong-object claim references", async () => {
+  it("advises on promoted source drift and rejects missing or wrong-object claim references", async () => {
     const root = await fixture();
     await initialiseRegister(root, "seed-source", false, deps);
     const complete = batch("claim-review", [
@@ -343,8 +348,13 @@ describe("museum research progress register", () => {
     museum.claims[0].value = "A-100 revised";
     await writeJson(root, "collection/sources/museum-record.json", museum);
     const status = await inspectRegister(root, "seed-source");
-    expect(status.ok).toBe(false);
-    expect(status.issues.join(" ")).toContain("source museum-record changed since review");
+    expect(status.ok).toBe(true);
+    expect(status.needsReview).toBe(1);
+    expect(status.queue[0].warnings.join(" ")).toContain(
+      "source museum-record changed since review",
+    );
+    expect(status.issues).toEqual([]);
+    expect((await runResearchCli(["check"], root)).ok).toBe(true);
 
     museum.claims[0].objectId = "item-b";
     await writeJson(root, "collection/sources/museum-record.json", museum);
@@ -459,9 +469,9 @@ describe("museum research progress register", () => {
   it("rejects symlinked evidence paths and releases the writer lock after validation fails", async () => {
     const root = await fixture();
     await initialiseRegister(root, "seed-source", false, deps);
-    const linked = path.join(root, "research-local/evidence-link.md");
-    await symlink(path.join(root, "research-local/evidence.md"), linked);
-    const unsafe = { ...batch("unsafe-evidence"), evidence: ["research-local/evidence-link.md"] };
+    const linked = path.join(root, "research/campaigns/link.md");
+    await symlink(path.join(root, "research/campaigns/test.md"), linked);
+    const unsafe = { ...batch("unsafe-evidence"), evidence: ["research/campaigns/link.md"] };
 
     await expect(recordBatch(root, "seed-source", unsafe, 1, deps)).rejects.toThrow(
       "Symlink paths are not allowed",
@@ -472,7 +482,7 @@ describe("museum research progress register", () => {
     expect((await readRegister(root, "seed-source")).revision).toBe(2);
   });
 
-  it("keeps failed checks visible until a later passing batch reviews the outcomes", async () => {
+  it("keeps historical failed checks visible as advisory review signals", async () => {
     const root = await fixture();
     await initialiseRegister(root, "seed-source", false, deps);
     const completedUpdates: Batch["updates"] = [
@@ -506,9 +516,14 @@ describe("museum research progress register", () => {
     };
     await recordBatch(root, "seed-source", failed, 1, deps);
     let report = await inspectRegister(root, "seed-source", { object: "item-a" });
-    expect(report.ok).toBe(false);
-    expect(report.queue[0].complete).toBe(false);
-    expect(report.queue[0].issues.join(" ")).toContain("failed");
+    expect(report.ok).toBe(true);
+    expect(report.queue[0].complete).toBe(true);
+    expect(report.queue[0].warnings.join(" ")).toContain("failed");
+    expect(report.needsReview).toBe(1);
+    const allRegisters = await runResearchCli(["check"], root);
+    expect(allRegisters.ok).toBe(true);
+    if (!("registers" in allRegisters)) throw new Error("Expected a shared-register report");
+    expect(allRegisters.registers[0]?.warnings?.join(" ")).toContain("failed");
 
     await recordBatch(
       root,
@@ -523,7 +538,51 @@ describe("museum research progress register", () => {
     report = await inspectRegister(root, "seed-source", { object: "item-a" });
     expect(report.ok).toBe(true);
     expect(report.queue[0].complete).toBe(true);
-    expect(report.queue[0].issues).toEqual([]);
+    expect(report.queue[0].warnings).toEqual([]);
+  });
+
+  it("queues completed work for source drift without undoing its completion count", async () => {
+    const root = await fixture();
+    await initialiseRegister(root, "seed-source", false, deps);
+    const completedUpdates: Batch["updates"] = [
+      {
+        objectId: "item-a",
+        identity: {
+          status: "verified",
+          note: "The catalogue number matches.",
+          refs: ["https://museum.example/item-a"],
+        },
+        capture: {
+          status: "complete",
+          note: "The reviewed page capture is present.",
+          refs: ["seed-source"],
+        },
+        claims: {
+          status: "unavailable",
+          note: "The reviewed record contains no additional object-specific claims.",
+          refs: [],
+        },
+        images: {
+          status: "unavailable",
+          note: "No publishable image was available in the reviewed record.",
+          refs: [],
+        },
+      },
+    ];
+    await recordBatch(root, "seed-source", batch("finished-campaign", completedUpdates), 1, deps);
+
+    const seedPath = path.join(root, "collection/sources/seed-source.json");
+    const seed = JSON.parse(await readFile(seedPath, "utf8"));
+    seed.claims[0].value = "Example Museum Collection";
+    await writeJson(root, "collection/sources/seed-source.json", seed);
+
+    const report = await inspectRegister(root, "seed-source");
+    expect(report.ok).toBe(true);
+    expect(report.completed).toBe(1);
+    expect(report.needsReview).toBe(1);
+    expect(report.queue).toHaveLength(1);
+    expect(report.queue[0].complete).toBe(true);
+    expect(report.queue[0].warnings.join(" ")).toContain("Seed source changed");
   });
 
   it("checks evidence files from superseded batches and clears drift when restored", async () => {
@@ -555,20 +614,21 @@ describe("museum research progress register", () => {
       },
     ];
     await recordBatch(root, "seed-source", batch("earlier-batch", updates), 1, deps);
-    await writeFile(path.join(root, "research-local/evidence-later.md"), "Later review.\n");
+    await writeFile(path.join(root, "research/campaigns/later.md"), "Later review.\n");
     await recordBatch(
       root,
       "seed-source",
-      { ...batch("latest-batch", updates), evidence: ["research-local/evidence-later.md"] },
+      { ...batch("latest-batch", updates), evidence: ["research/campaigns/later.md"] },
       2,
       deps,
     );
 
-    await rm(path.join(root, "research-local/evidence.md"));
+    await rm(path.join(root, "research/campaigns/test.md"));
     let report = await inspectRegister(root, "seed-source");
     expect(report.ok).toBe(false);
     expect(report.issues.join(" ")).toContain("Batch earlier-batch");
-    await writeFile(path.join(root, "research-local/evidence.md"), "Restored evidence.\n");
+    expect((await runResearchCli(["check"], root)).ok).toBe(false);
+    await writeFile(path.join(root, "research/campaigns/test.md"), "Restored evidence.\n");
     report = await inspectRegister(root, "seed-source", { object: "item-a" });
     expect(report.ok).toBe(true);
     expect(report.queue[0].complete).toBe(true);

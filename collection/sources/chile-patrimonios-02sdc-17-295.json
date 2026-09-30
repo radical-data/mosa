@@ -7,7 +7,8 @@
       "id": "catalogue-title",
       "objectId": "moai-tangata-rapa-nui-17-295",
       "predicate": "described_as",
-      "value": "Título de la ficha: Moai Moe Tangata"
+      "value": "Moai Moe Tangata",
+      "locator": "Encabezado de la ficha"
     },
     {
       "id": "classification",

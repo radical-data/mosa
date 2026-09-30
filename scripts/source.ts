@@ -17,7 +17,7 @@ function parseArgs(argv: string[]) {
   const command = argv[0] as Command | undefined;
   if (!command || !commands.includes(command))
     throw Error(
-      "Usage: node --import tsx scripts/source.ts doctor|capture <source-id> --url <url> [--wait <ms>] [--script <path>]|register <source-id> --file <path> --method <method> --captured-at <ISO|null> [--original-url URL] [--archive-url URL] [--note text] [--name original.pdf]|check [--content]",
+      "Usage: node --import tsx scripts/source.ts doctor|capture [<source-id>] --url <url> [--wait <ms>] [--script <path>]|register <source-id> --file <path> --method <method> --captured-at <ISO|null> [--original-url URL] [--archive-url URL] [--note text] [--name original.pdf]|check [--content]",
     );
   const positional: string[] = [];
   const flags = new Map<string, string>();
@@ -60,7 +60,7 @@ export async function runSourceCli(argv = process.argv.slice(2)) {
     result = await doctor(root);
   } else if (command === "capture") {
     only(flags, ["url", "wait", "script"]);
-    if (positional.length !== 1) throw Error("capture requires exactly one source ID");
+    if (positional.length > 1) throw Error("capture accepts at most one source ID");
     const wait = flags.has("wait") ? Number(required(flags, "wait")) : 0;
     let browserScript: string | undefined;
     if (flags.has("script")) {
