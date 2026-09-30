@@ -2,7 +2,71 @@
   "author": "British Museum",
   "reference": "https://www.britishmuseum.org/collection/object/E_2020-2005-1-a-c",
   "language": "en",
-  "claims": [],
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "catalogue_number",
+      "value": "British Museum: 2020,2005.1.a-c",
+      "locator": "Registration number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "classified_as",
+      "value": "dance-costume",
+      "locator": "Object Type"
+    },
+    {
+      "id": "group-description",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "described_as",
+      "value": "Three piece dance costume: decorative head-piece (a); bodice (b) and vegetable fibre skirt (c).",
+      "locator": "Description"
+    },
+    {
+      "id": "production-date",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "made_during",
+      "value": "2019",
+      "locator": "Production date"
+    },
+    {
+      "id": "production-place",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "material",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "made_of",
+      "value": "fibre (banana leaf)",
+      "locator": "Materials"
+    },
+    {
+      "id": "component-dimensions",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "described_as",
+      "value": "Height: 49 centimetres (a); 45 centimetres (b); 80 centimetres (c). Width: 52 centimetres (a); 38 centimetres (b); 60 centimetres (c). Depth: 3.50 centimetres (a); 15.50 centimetres (b); 9.50 centimetres (c).",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-history",
+      "objectId": "british-museum-dance-costume-2020-2005-1",
+      "predicate": "described_as",
+      "value": "Purchased from designer during a British Museum visit to Rapa Nui 2019.",
+      "locator": "Acquisition notes"
+    }
+  ],
   "captures": [
     {
       "file": "2026-09-30t18-06-21-130z.html",
@@ -11,7 +75,7 @@
     }
   ],
   "notes": {
-    "text": "This BM record is one accession for a three-part dance costume (head-piece, bodice and skirt). Preserve the group as catalogued; do not create part-level object records without supported separate identities. The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "text": "30 September 2026 identity review: the British Museum catalogue identifies 2020,2005.1.a-c as one three-piece dance costume, comprising head-piece (a), bodice (b) and skirt (c). Keep the accession-level group as one MoSA object; the reviewed record gives component measurements but no independent part records or histories. Claims transcribe the catalogue description, object type, production date/place, material, component dimensions and acquisition note. The page attributes design to Celine Bour Manutomatoma and making to Rapanui, but MoSA has no supported creator or maker predicate; the designer’s name also appears in the supported acquisition wording. No image is available in the catalogue capture.",
     "language": "en-GB"
   },
   "images": []

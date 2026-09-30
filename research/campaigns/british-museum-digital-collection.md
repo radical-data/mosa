@@ -90,19 +90,34 @@ to [Oc1920,0506.48](../../collection/sources/bm-oc1920-0506-48.json).
 ### Non-figure artefacts
 
 A coherent review covered 27 catalogue entries: **16 new objects**, **one
-distinctive match** to the existing rei miro object, **nine unresolved
-identities**, and **one exclusion**. The exclusion, Oc1899,-.170, is described
-by the museum as “in style of” Easter Island, while its combined findspot and
-acquisition wording is uncertain; this does not establish Rapa Nui manufacture
-or provenance.
+distinctive match** to the existing rei miro object, **nine previously
+unresolved identities**, and **one exclusion**. The exclusion, Oc1899,-.170,
+is described by the museum as “in style of” Easter Island, while its combined
+findspot and acquisition wording is uncertain; this does not establish Rapa Nui
+manufacture or provenance.
 
 Seventeen object photographs were checked on their image-detail pages and
 registered with CC BY-NC-SA 4.0 metadata across the 16 new objects and the
 existing rei miro match. The integrated records include
 [Oc.203](../../collection/sources/bm-nonfigure-oc-203.json) and the matched
-[Oc.9295 rei miro](../../collection/sources/bm-nonfigure-oc-9295.json). The nine
-unresolved catalogue records remain unlinked sources; no unsupported object
-identity was created.
+[Oc.9295 rei miro](../../collection/sources/bm-nonfigure-oc-9295.json).
+
+A 30 September 2026 identity review resolved one further entry as a single
+group: the three-part costume [2020,2005.1.a-c](../../collection/sources/bm-nonfigure-2020-2005-1-a-c.json)
+links to [one MoSA object](../../collection/objects/british-museum-dance-costume-2020-2005-1.json);
+its head-piece, bodice and skirt remain grouped. Eight accession-level BM
+sources remain unlinked because the Arte-derived records do not identify an
+accession or provide distinguishing evidence: five dance-paddles
+[Oc.5848](../../collection/sources/bm-nonfigure-oc-5848.json),
+[Oc.5849](../../collection/sources/bm-nonfigure-oc-5849.json),
+[Oc,+.2598](../../collection/sources/bm-nonfigure-oc-2598.json),
+[Oc,+.2599](../../collection/sources/bm-nonfigure-oc-2599.json) and
+[Oc,+.2600](../../collection/sources/bm-nonfigure-oc-2600.json), plus three
+rei miro [Oc.7834](../../collection/sources/bm-nonfigure-oc-7834.json),
+[Oc.6330](../../collection/sources/bm-nonfigure-oc-6330.json) and
+[Oc,+.2601](../../collection/sources/bm-nonfigure-oc-2601.json). Each note records
+the accession history and diagnostic catalogue details, comparison limits and
+evidence needed. No speculative duplicate objects were created.
 
 ### Figure artefacts
 
@@ -185,8 +200,10 @@ interpretation of the same combined catalogue field.
 The catalogue baseline is now strong enough to shift effort from bulk search to
 high-information gaps. In priority order:
 
-1. Resolve the nine ambiguous non-figure identities through accession history,
-   visual comparison or independent catalogues; do not repeat the 203-page
+1. Resolve the eight remaining ambiguous non-figure crosswalks with a primary
+   description, image or historical accession link tied to each Arte-derived
+   record. The BM accession identities and their histories are documented, but
+   the generic Arte rows lack matching details; do not repeat the 203-page
    combined-provenance review without new evidence.
 2. Review image rights for the 33 figure records and the eight selected
    documentary sources when the resulting images would materially improve the
