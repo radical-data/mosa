@@ -1,3 +1,7 @@
+---
+started: "2026-09-30"
+---
+
 # IndiGen museum follow-up
 
 ## Question and scope

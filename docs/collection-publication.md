@@ -62,7 +62,8 @@ the source ID:
 
 A publication or catalogue we have examined can be registered with its known
 attribution, reference and language, empty `claims` and `images`, and no
-`objectIds` or `captures`. Use `notes` for source-specific review decisions.
+`objectIds` or `captures`. For an unlinked source, use `notes` to explain its
+relevance to the investigation and why no object relationship is established.
 This records the source without inventing object identities or requiring a
 shareable copy of the original.
 
@@ -144,7 +145,9 @@ not automatically individual names. Normalise layout whitespace only.
 
 For the *Arte en la cultura rapanui* table extraction, import individually
 described entries and defer plural, counted, collective and ambiguously grouped
-entries in the private audit. Its final museum/research section is audit-only.
+entries. Its final museum/research section supplies research leads, not object
+claims. The [campaign](../research/campaigns/arte-en-la-cultura-rapanui.md) links
+the useful unresolved work; the original local audit remains historical context.
 Do not invent individual objects from counts or assign research notes as
 locations. Similar names, types or institutions alone do not establish identity
 with an existing catalogue record. Keep separate repeated rows distinct and

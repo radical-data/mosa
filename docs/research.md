@@ -12,7 +12,10 @@ Use [collection authoring](collection-publication.md) directly for ordinary
 source imports. Record a source once in `collection/sources/`; keep its
 attribution, claims and source-specific research decisions there. A publication
 we have examined can have a source record before any objects are reconciled.
-Source capture is optional and separate from permission to share the original.
+Preserve usable, shareable evidence through the existing
+[source capture workflow](collection-publication.md#preserve-source-files).
+A source record without a capture is valid when the original is restricted or
+unavailable; record that limitation instead of silently omitting preservation.
 
 Add a research artefact only when it saves work that the existing records do
 not support. A campaign, inventory, evidence note and progress register are not
@@ -51,6 +54,10 @@ question, a bounded scope and the next useful action. The
 [template](../research/campaigns/template.md) is optional; omit sections that
 add nothing. Completion depends on that scope: an identity investigation does
 not need an image-acquisition phase.
+
+Add YAML frontmatter with `started: "YYYY-MM-DD"` using the earliest documented
+campaign work. Date substantive research outcomes where they are recorded;
+no separate activity log is needed.
 
 Link collection records for completed imports. Update a campaign when its
 question, direction, obstacle or next action changes, not after every object.

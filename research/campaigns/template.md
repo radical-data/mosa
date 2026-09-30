@@ -1,3 +1,7 @@
+---
+started: "YYYY-MM-DD"
+---
+
 # Campaign title
 
 ## Question and scope

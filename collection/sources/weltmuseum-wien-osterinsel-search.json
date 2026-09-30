@@ -1,0 +1,19 @@
+{
+  "author": "Weltmuseum Wien",
+  "reference": "https://www.weltmuseumwien.at/objekte/suche?page=2&q=Osterinsel&query=Osterinsel&cHash=f32a9ed2e7ae006f62600c750cb3ff18",
+  "language": "de",
+  "notes": {
+    "text": "Checked 30 September 2026. MoSA examined the Weltmuseum Wien online collection search for ‘Osterinsel’ solely to reconcile the four Vienna rows in arte-en-la-cultura-rapanui. The completed search showed 32 of 32 results. One result row displays the text ‘Ao’, ‘Heinrich Freiherr von Westenholz’ and ‘um 1885’; the row does not label the person's role or the date's meaning. It is a candidate for the table entry ao-viena, but has no accession number or individual detail page. No titled stone fish hook, grey stone face or 14 cm phallus appeared in the completed result set. This limited online search is not a complete inventory guarantee and does not establish absence from the museum’s holdings or current custody. No object link is supported by this search, so this source has no objectIds, claims or images. The initial results page is https://www.weltmuseumwien.at/objekte/suche?q=Osterinsel&query=Osterinsel&cHash=7058826bc13a26261ab0fa5e27a097e4; the completed page-2 result is https://www.weltmuseumwien.at/objekte/suche?page=2&q=Osterinsel&query=Osterinsel&cHash=f32a9ed2e7ae006f62600c750cb3ff18.",
+    "language": "en-GB"
+  },
+  "claims": [],
+  "images": [],
+  "captures": [
+    {
+      "file": "weltmuseum-wien-osterinsel-results.html",
+      "capturedAt": "2026-09-30T12:49:45.668Z",
+      "method": "singlefile",
+      "note": "Completed search state after loading page 2; the interface showed 32 of 32 results."
+    }
+  ]
+}
