@@ -11,9 +11,18 @@
       "locator": "Description"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "objectId": "orongo-site",
+      "file": "documentary/british-museum-392937001.jpg",
+      "alt": "Black-and-white photograph of an in-situ birdman carving on a stone at Orongo.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/392937001"
+    }
+  ],
   "notes": {
-    "text": "This British Museum catalogue record describes a photograph attributed to Katherine Maria Routledge, dated circa 1919. It is registered as a documentary source, not as a physical Rapa Nui artefact, and no image is published. The complete Description and the photograph's inscription identify an in-situ bird-man carving at Orongo; the record does not identify the individual carving as a separate MoSA object.",
+    "text": "This British Museum catalogue record describes a photograph attributed to Katherine Maria Routledge, dated circa 1919. It is registered as a documentary source, not as a physical Rapa Nui artefact. The museum's image page identifies this documentary representation, states image-specific CC BY-NC-SA 4.0 terms and supplies the required credit. The original JPEG was downloaded, visually reviewed against the catalogue description and preserved unchanged. The complete Description and the photograph's inscription identify an in-situ bird-man carving at Orongo; the record does not identify the individual carving as a separate MoSA object.",
     "language": "en-GB"
   },
   "captures": [
@@ -21,6 +30,13 @@
       "file": "2026-09-30t18-46-45-454z.html",
       "capturedAt": "2026-09-30T18:46:45.454Z",
       "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-59-52-400z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/392937001",
+      "capturedAt": "2026-09-30T19:59:52.400Z",
+      "method": "singlefile",
+      "note": "Image 392937001 page identifies the depicted place, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
     }
   ]
 }

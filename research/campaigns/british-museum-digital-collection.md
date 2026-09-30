@@ -155,8 +155,16 @@ five named site identities: [Ahu Ko Te Riku](../../collection/objects/ahu-ko-te-
 The museum records describe photographs by Katesa Schlosser and Katherine
 Routledge. They are documentary representations, not newly identified physical
 artefacts. Their descriptions add attributable evidence about sites, moai and
-bird-man carvings. No photograph image asset was published because exact image
-rights were not established.
+bird-man carvings.
+
+The image-rights review covered all eight selected records. The image pages for
+the three Routledge photographs identify the depicted catalogue records, state
+CC BY-NC-SA 4.0 terms and require credit to the Trustees of the British Museum.
+Their original downloadable JPEGs were visually checked and registered: one
+Orongo bird-man carving and two views of Rano Raraku. The five Schlosser image
+pages explicitly report that the images are unavailable for download and supply
+no reusable image licence or credit, so those sources remain without published
+images. All eight rights-page outcomes are preserved with their sources.
 
 ### Harrison drawings
 
@@ -212,14 +220,12 @@ high-information gaps. In priority order:
    record. The BM accession identities and their histories are documented, but
    the generic Arte rows lack matching details; do not repeat the 203-page
    combined-provenance review without new evidence.
-2. Review image rights for the eight selected documentary sources when the
-   resulting images would materially improve the collection.
-3. Investigate the Routledge authority's 40-record discrepancy and exhaust only
+2. Investigate the Routledge authority's 40-record discrepancy and exhaust only
    locality-filtered or otherwise Rapa Nui-specific parts of the Schlosser
    route. Broad person-route paging has poor expected yield.
-4. Revisit the 67 deferred representations in coherent subject clusters when a
+3. Revisit the 67 deferred representations in coherent subject clusters when a
    named site, object or community account provides an identity anchor.
-5. Use the five retained thematic briefs for the next cross-institution
+4. Use the five retained thematic briefs for the next cross-institution
    campaigns; they remain future work rather than unfinished British Museum
    catalogue integration.
 
