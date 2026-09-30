@@ -1,0 +1,61 @@
+{
+  "author": "Australian Museum Trust",
+  "reference": "Australian Museum Annual Report 2024–25 (2025), pp. 72–73, “Case study: Rapa Nui partnership”. https://media.australian.museum/media/dd/documents/Australian_Museum_Annual_Report_24-25.2601b86.pdf",
+  "language": "en",
+  "notes": {
+    "language": "en-GB",
+    "text": "Selective extraction of the Rapa Nui partnership case study. The report explicitly distinguishes three petroglyphs and three depicted figures within six acquired works. The three new object labels interpret these as one work per figure; they are editorial descriptions, not formal titles. Each petroglyph claim retains the collective wording because no individual catalogue entries are supplied. The preceding commissioning passage identifies contemporary works; these records do not represent carvings removed from Oroŋo. Makers, materials, dimensions and gallery location supplied for the moai are not transferred to the petroglyphs. The report’s moai and bust match the museum highlights by their named subject and partnership context, with matching carvers for the moai. The tablet is matched by its category within the same six-work contemporary acquisition, rather than an individual title or accession. No accession numbers or formal catalogue crosswalk are supplied for these works. Only the moai is individually located in Wansolmoana by a photograph caption. The complete original PDF was inspected, including its imprint and relevant spread. It is © Australian Museum Trust 2025 and contains cultural images. The availability statement describes online use and distribution but supplies no explicit reuse licence; the original remains in ignored local storage pending redistribution clearance. No shareable capture or object image is registered. Photo credits identify Louise Reily for the moai and Maria Jose for the artists on p. 73; those credits alone do not authorise reuse."
+  },
+  "claims": [
+    {
+      "id": "tahia-makemake-acquisition-group",
+      "objectId": "petroglyph-tahia-makemake-australian-museum",
+      "predicate": "described_as",
+      "value": "Six Rapa Nui works were acquired for the AM, including three petroglyphs depicting the significant figures Tahia Makemake, Manu Tara and Tangata Manu which appear at the ceremonial village of Oroŋo in Rapa Nui",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
+    },
+    {
+      "id": "manu-tara-acquisition-group",
+      "objectId": "petroglyph-manu-tara-australian-museum",
+      "predicate": "described_as",
+      "value": "Six Rapa Nui works were acquired for the AM, including three petroglyphs depicting the significant figures Tahia Makemake, Manu Tara and Tangata Manu which appear at the ceremonial village of Oroŋo in Rapa Nui",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
+    },
+    {
+      "id": "tangata-manu-acquisition-group",
+      "objectId": "petroglyph-tangata-manu-australian-museum",
+      "predicate": "described_as",
+      "value": "Six Rapa Nui works were acquired for the AM, including three petroglyphs depicting the significant figures Tahia Makemake, Manu Tara and Tangata Manu which appear at the ceremonial village of Oroŋo in Rapa Nui",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
+    },
+    {
+      "id": "moai-carvers-and-construction",
+      "objectId": "moai-hoa-haka-nanaia-replica-australian-museum",
+      "predicate": "described_as",
+      "value": "Master carver Pau Hereveri Teao and his apprentice Victor Pakomio created the approximately 1.2-meter replica moai using traditional tools and porous basalt from Rapa Nui.",
+      "locator": "p. 72, Case study: Rapa Nui partnership, third paragraph"
+    },
+    {
+      "id": "moai-gallery",
+      "objectId": "moai-hoa-haka-nanaia-replica-australian-museum",
+      "predicate": "located_at",
+      "value": "Wansolmoana gallery",
+      "locator": "p. 72, photograph caption"
+    },
+    {
+      "id": "bust-description",
+      "objectId": "bust-nua-maria-angata-australian-museum",
+      "predicate": "described_as",
+      "value": "a bust of revolutionary leader Maria ‘Aŋata",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
+    },
+    {
+      "id": "tablet-description",
+      "objectId": "kohau-rongorongo-replica-australian-museum",
+      "predicate": "described_as",
+      "value": "a Rongorongo tablet preserving one of the world’s few independently developed writing systems",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
+    }
+  ],
+  "images": []
+}
