@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { mkdir, mkdtemp, readFile, rm, symlink, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readdir, readFile, rm, symlink, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
@@ -30,9 +30,28 @@ afterEach(async () => {
 });
 
 describe("source capture tooling", () => {
+  it("keeps source ID, URL and wait validation when a source ID is supplied", async () => {
+    const root = await fixture();
+    const options = { exists: async () => true };
+    await expect(captureSource(root, "", "https://example.org/item", 0, options)).rejects.toThrow(
+      "Invalid source ID",
+    );
+    await expect(
+      captureSource(root, "../unsafe", "https://example.org/item", 0, options),
+    ).rejects.toThrow("Invalid source ID");
+    await expect(
+      captureSource(root, "example-source", "file:///etc/passwd", 0, options),
+    ).rejects.toThrow("valid http(s) URL");
+    await expect(
+      captureSource(root, "example-source", "https://example.org/item", 30_001, options),
+    ).rejects.toThrow("integer from 0 to 30000 milliseconds");
+  });
+
   it("registers verified bytes atomically and preserves unrelated source fields", async () => {
     const root = await fixture();
-    const input = path.join(root, "supplied.html");
+    const evidence = path.join(root, "research", "evidence");
+    await mkdir(evidence, { recursive: true });
+    const input = path.join(evidence, "supplied.html");
     await writeFile(input, "<!doctype html><html><body>Capture</body></html>");
     const result = await registerCapture(
       root,
@@ -65,6 +84,7 @@ describe("source capture tooling", () => {
         "utf8",
       ),
     ).toContain("Capture");
+    expect(await readFile(input, "utf8")).toContain("Capture");
     expect((await checkCaptures(root, true)).captures).toBe(1);
   });
 
@@ -238,5 +258,46 @@ describe("source capture tooling", () => {
         exists: async () => true,
       }),
     ).rejects.toThrow("single-file failed");
+  });
+
+  it("captures an unlinked URL to private staging without a source record", async () => {
+    const root = await mkdtemp(path.join(os.tmpdir(), "mosa-anonymous-capture-"));
+    roots.push(root);
+    await mkdir(path.join(root, "collection", "sources"), { recursive: true });
+    const originalSources = await readdir(path.join(root, "collection", "sources"));
+    const run = async (
+      _executable: string,
+      args: readonly string[],
+      _options?: { cwd?: string },
+    ) => {
+      await writeFile(args[3], "<!doctype html><html><body>Unlinked evidence</body></html>");
+      return "";
+    };
+
+    const result = await captureSource(root, undefined, "https://example.org/unlinked", 0, {
+      run: run as never,
+      exists: async () => true,
+      now: fixedNow,
+    });
+
+    expect(result).not.toHaveProperty("sourceId");
+    expect(String(result.file)).toMatch(
+      /research-local\/source-captures\/anonymous-[^/]+\/capture\.html$/,
+    );
+    expect(await readFile(path.resolve(root, String(result.file)), "utf8")).toContain(
+      "Unlinked evidence",
+    );
+    expect(await readdir(path.join(root, "collection", "sources"))).toEqual(originalSources);
+    expect(await readdir(path.join(root, "research-local", "source-captures"))).toHaveLength(1);
+
+    await expect(
+      captureSource(root, undefined, "https://example.org/unlinked", 0, {
+        run: async () => {
+          throw Error("single-file failed");
+        },
+        exists: async () => true,
+      }),
+    ).rejects.toThrow("single-file failed");
+    expect(await readdir(path.join(root, "research-local", "source-captures"))).toHaveLength(1);
   });
 });
