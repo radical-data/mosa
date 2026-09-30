@@ -1,0 +1,33 @@
+{
+  "author": "Australian Museum",
+  "reference": "Moai Hoa Haka Nana'ia: Stolen Friend. https://australian.museum/learn/cultures/pasifika-collections/rapa-nui-collections/moai-hoa-haka-nanaia-stolen-friend/",
+  "language": "en",
+  "notes": {
+    "language": "en-GB",
+    "text": "The opening paragraph identifies a contemporary replica by Pau Hereveri and Victor Pakomio, distinct from MoSA object hoa-hakananai-a. Much of the article concerns the original in the British Museum or moai generally; those passages do not describe this replica. No accession number is established. The audio transcript records Victor Jaramillo Pakomio's account; statements about the original's removal do not establish the replica's provenance. A usable HTML capture was inspected on 30 September 2026, including the expanded transcript. It embeds Indigenous cultural images for which redistribution is not cleared under the museum’s image licensing procedure (https://australian.museum/about/organisation/am-images/). The complete capture remains in ignored local storage; no shareable capture or publishable image is registered."
+  },
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-hoa-haka-nanaia-replica-australian-museum",
+      "predicate": "classified_as",
+      "value": "replica",
+      "locator": "Opening paragraph"
+    },
+    {
+      "id": "carvers",
+      "objectId": "moai-hoa-haka-nanaia-replica-australian-museum",
+      "predicate": "described_as",
+      "value": "carved by Rapa Nui master carver Pau Hereveri and his student Victor Pakomio",
+      "locator": "Opening paragraph"
+    },
+    {
+      "id": "partnership",
+      "objectId": "moai-hoa-haka-nanaia-replica-australian-museum",
+      "predicate": "described_as",
+      "value": "forms part of an ongoing cultural engagement and partnership between the Australian Museum and the Rapa Nui community",
+      "locator": "Opening paragraph"
+    }
+  ],
+  "images": []
+}
