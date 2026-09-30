@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1233",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "catalogue_number",
+      "value": "D13419"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "made_during",
+      "value": "1800-1953 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "described_as",
+      "value": "Owned — Who: Hornke"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "described_as",
+      "value": "Eine den moai maea-Figuren nachempfundene Souvenirfigur. Der längliche Oberkörper bildet den Abschluss. An ihn sind die Arme ohne ausgearbeitete Finger angelegt. Der große längliche Kopf hat ein kantiges Gesicht mit großen Augen ohne Pupillen. Der Mund besteht aus einem Schlitz , und die Nase dominiert das Gesicht ."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "described_as",
+      "value": "Material/Technique: Holz | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "described_as",
+      "value": "Allgemein: 24 x 6,5 x 9,5 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moai-tangata-bremen-d13419",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-bremen-d13419",
+      "file": "moai-tangata-bremen-d13419/museum-digital.jpg",
+      "alt": "Kurze Holzfigur mit breitem Gesicht und abgeschnittenem Unterkörper.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1233/d13419-figur-1233-3668.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-08-47-111z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1233?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:08:47.111Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-13-35-337z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=1479",
+      "capturedAt": "2026-09-30T01:13:35.337Z",
+      "method": "singlefile"
+    }
+  ]
+}

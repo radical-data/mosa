@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1245",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "catalogue_number",
+      "value": "D13424"
+    },
+    {
+      "id": "classification",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "made-during",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "made_during",
+      "value": "1800-1953 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "described_as",
+      "value": "Owned — Who: Hornke"
+    },
+    {
+      "id": "description",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "described_as",
+      "value": "Als Souvenir angelegte Figur eines Fisches, die auf einem Ständer steht. Die rechte Flosse , die eigentlich eingesteckt wird, fehlt. Der Fisch hat eine große Rückenflosse sowie die linke Seitenflosse und einen erhobenen Fischschwanz. Auf dem Körper sind mehrere Vögelumrisse eingeritzt. Der Mund ist leicht geöffnet und zeigt kleine Zähne."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "described_as",
+      "value": "Material/Technique: Holz | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "described_as",
+      "value": "Allgemein: 22 x 23 x 10 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "ika-bremen-d13424",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "ika-bremen-d13424",
+      "file": "ika-bremen-d13424/museum-digital.jpg",
+      "alt": "Geschnitzte Fischfigur auf einem runden Sockel, Seitenansicht.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1245-d13424/d13424_figur/d13424-figur-1245-468985.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-06-22-387z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1245?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:06:22.387Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-11-44-757z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=5839",
+      "capturedAt": "2026-09-30T01:11:44.757Z",
+      "method": "singlefile"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1292",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "catalogue_number",
+      "value": "D00320"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "classified_as",
+      "value": "moai tangata"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "made_during",
+      "value": "1800-1900 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "described_as",
+      "value": "Owned — Who: Verein Vorwärts"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "described_as",
+      "value": "Männliche Holzfigur mit vorgewölbtem Bauch . Der Kopf ist im Vergleich zum Körper groß. Die Augenbrauen treten hervor, und die Augen bestehen aus eingelegten Knochenringen mit darin eingelegten Obsidianscheibchen für die Pupillen. Auf dem Kopf sind Einkerbungen (Kopfglyphe). Von den Schultern hängen lange, im Ellbogen leicht gebeugte Arme an den Seiten herunter. Die Hände sind nicht vollplastisch ausgearbeitet. Die Brustwarzen sind ausgearbeitet. Auf dem gewölbten Bauch ist der Nabel markiert. Der Penis ist ohne Hodensäcke. Die Beine sind im Verhältnis zum Körper und zu den Armen kurz und stämmig. Im Knie leicht angewinkelt enden die Beine in kleinen Füßen, die nicht vollplastisch ausgearbeitet wurden. Die Rückseite wist einen großen Längsspalt auf."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "described_as",
+      "value": "Material/Technique: Wahrsch. toromiro (Sophora tetraptera) [OB: Holz]; Knochen; Obsidian | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "described_as",
+      "value": "Allgemein: 33 x 8 x 6,5 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moai-tangata-bremen-d00320",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-bremen-d00320",
+      "file": "moai-tangata-bremen-d00320/museum-digital.jpg",
+      "alt": "Stehende Holzfigur mit eingesetzten Augen und glattem Oberkörper.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1292/d00320-figur-moai-tangata-1292-8580.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-07-54-507z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1292?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:07:54.507Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-12-49-467z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=1502",
+      "capturedAt": "2026-09-30T01:12:49.467Z",
+      "method": "singlefile"
+    }
+  ]
+}

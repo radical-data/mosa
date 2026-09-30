@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1350",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "catalogue_number",
+      "value": "D06472"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "classified_as",
+      "value": "moai tangata"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "made_during",
+      "value": "1800-1900 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "described_as",
+      "value": "Owned — Who: Kurt Stege"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "described_as",
+      "value": "Männliche aufrecht stehende Figur, deren deren Arme links und rechts herabhängend am Körper anliegen. Die Füße sind im Verhältnis zum Körper sehr klein und nicht vollplastisch ausgearbeitet. Die Vorderseite der Figure weist einen vom Genitalbereich bis zur Schädeldecke reichenden Spalt auf. Der Kopf hat eine längliche Form mit sehr großen Ohren. Dabei sind die Lippen dick und die Augenbrauen wulstig gestaltet. Die Augen bestehen aus Knochenringen, die eingelegt sind. Auf der Rückseite sieht man eine deutlich herausgearbeitete Wirbelsäule , Schulterblätter und das Gesäß."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "described_as",
+      "value": "Material/Technique: Holz; Knochen | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "described_as",
+      "value": "Allgemein: 53 x 10 x 13 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moai-tangata-bremen-d06472",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-bremen-d06472",
+      "file": "moai-tangata-bremen-d06472/museum-digital.jpg",
+      "alt": "Stehende Holzfigur mit einem langen Riss durch Kopf und Körper.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1350-d06472/d06472_figur__moai_tangat/d06472-figur-moai-tangata-1350-524183.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-08-04-781z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1350?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:08:04.781Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-12-59-283z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=5700",
+      "capturedAt": "2026-09-30T01:12:59.283Z",
+      "method": "singlefile"
+    }
+  ]
+}

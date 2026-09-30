@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1257",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "catalogue_number",
+      "value": "D13426"
+    },
+    {
+      "id": "classification",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "classified_as",
+      "value": "moai tangata manu"
+    },
+    {
+      "id": "made-during",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "made_during",
+      "value": "1800-1953 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "described_as",
+      "value": "Owned — Who: Hornke"
+    },
+    {
+      "id": "description",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "described_as",
+      "value": "Flache Holzfigur in Form eines Vogelmannes mit Sockel . Die Augen sind aus Knochenringen mit eingelegter Obsidianscheibe gefertigt. Die Holzschnitzerei zeigt einen menschlichen Körper mit einem Vogelkopf - in Anlehnung an die traditionellen Vogelmann-Schnitzereien und Vogelmann-Pertroglyphen der Osterinsel ."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "described_as",
+      "value": "Material/Technique: Holz; Knochen; Obsidian | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "described_as",
+      "value": "Allgemein: 12 x 11,5 x 1,5 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "tangata-manu-bremen-d13426",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "tangata-manu-bremen-d13426",
+      "file": "tangata-manu-bremen-d13426/museum-digital.jpg",
+      "alt": "Vogelmenschliche Holzfigur mit angezogenen Beinen und Händen am Schnabel.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1257/d13426-figur-moai-tangata-manu-1257-3204.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-09-53-715z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1257?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:09:53.715Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-16-53-440z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=1486",
+      "capturedAt": "2026-09-30T01:16:53.440Z",
+      "method": "singlefile"
+    }
+  ]
+}
