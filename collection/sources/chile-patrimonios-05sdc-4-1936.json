@@ -1,0 +1,67 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1936",
+  "language": "es",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "catalogue_number",
+      "value": "4-1936"
+    },
+    {
+      "id": "classification",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "classified_as",
+      "value": "Ika"
+    },
+    {
+      "id": "description",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "described_as",
+      "value": "Escultura de bulto. Objeto de forma alargada y curva. Figura zoomorfa que representa un pez de altamar de tipo vela o pez espada. Posee una base paralelepípeda ligeramente irregular, el cuerpo está conformado por un hocico cilíndrico prominente y abierto con detalle en dientes realizados en talla incisa a bisel oblicuo. Ojos tallados circulares, agallas pronunciadas semicirculares, tiene aletas latelares separadas del cuerpo y curvadas hacia abajo, y aleta superior en forma de cresta que se presenta más alta en su parte media para decaer en ambos extremos, El cuerpo tiene tallas (4) de aves estilizadas. La cola se encuentra curvada hacia arriba con detalles realizados en talla incisa a bisel. De color marrón rojizo, superficie pulida y acabado brillante."
+    },
+    {
+      "id": "cultural-area",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "described_as",
+      "value": "Área cultural: Chile-Polinesia (Rapa Nui)"
+    },
+    {
+      "id": "category",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "classified_as",
+      "value": "Utensilios, Herramientas y Equipos"
+    },
+    {
+      "id": "technique-material",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "described_as",
+      "value": "Técnica/Material: Madera-Barnizado"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 19.4 cm - Largo 61 cm - Ancho 13 cm"
+    },
+    {
+      "id": "holder",
+      "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
+      "predicate": "held_by",
+      "value": "Museo Historia Natural de Valparaíso"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Transcribed from the expanded official Chile Patrimonios fiche, which credits SURDOC. The SURDOC number is documented by the fiche’s linked registration URL. Field labels, incomplete technique wording and source measurement axes are retained. The portal terms grant no image reuse licence; no photograph is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-22-35-209z.html",
+      "capturedAt": "2026-09-30T01:22:35.209Z",
+      "method": "singlefile"
+    }
+  ]
+}

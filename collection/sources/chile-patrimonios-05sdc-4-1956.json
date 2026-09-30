@@ -1,0 +1,67 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1956",
+  "language": "es",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "catalogue_number",
+      "value": "4-1956"
+    },
+    {
+      "id": "classification",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "classified_as",
+      "value": "Remo"
+    },
+    {
+      "id": "description",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "described_as",
+      "value": "Objeto de forma alargada, de cuerpo estrecho y ambos extremos anchos y planos; uno de forma rectangular con cinco detalles rectangulares sobresalientes de madera, pintados alternativamente de anaranjado y blanco, presenta un tallado en sobrerrelieve con cejas y nariz continua recta, ojos ovalados con pupilas pintadas de blanco y boca ovalada con dientes a bisel cuadrados, en cada costado posee una protuberancia cilíndrica pintada de color blanco. El sector distal se encuentra tallado de forma oval y presenta dos franjas horizontales de color blanco, y un detalle rectangular sobresaliente también blanco. Color marrón claro, superficie lisa."
+    },
+    {
+      "id": "cultural-area",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "described_as",
+      "value": "Área cultural: Chile-Polinesia (Rapa Nui)"
+    },
+    {
+      "id": "category",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "classified_as",
+      "value": "Utensilios, Herramientas y Equipos"
+    },
+    {
+      "id": "technique-material",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "described_as",
+      "value": "Técnica/Material: Madera-"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 2.5 cm - Largo 160 cm - Ancho 20 cm"
+    },
+    {
+      "id": "holder",
+      "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
+      "predicate": "held_by",
+      "value": "Museo Historia Natural de Valparaíso"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Transcribed from the expanded official Chile Patrimonios fiche, which credits SURDOC. The SURDOC number is documented by the fiche’s linked registration URL. Field labels, incomplete technique wording and source measurement axes are retained. The portal terms grant no image reuse licence; no photograph is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-24-27-077z.html",
+      "capturedAt": "2026-09-30T01:24:27.077Z",
+      "method": "singlefile"
+    }
+  ]
+}
