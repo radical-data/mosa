@@ -81,16 +81,32 @@
       "locator": "Curator's comments"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "objectId": "moai-hava-british-museum",
+      "file": "moai-hava-british-museum/british-museum-84146001.jpg",
+      "alt": "Ancestor figure or moai, referred to as Moai Hava, made of basalt, showing arms, torso and head.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/84146001"
+    }
+  ],
   "notes": {
     "language": "en-GB",
-    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image-specific reuse terms were not cleared, so no photograph is published."
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 84146001 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
   },
   "captures": [
     {
       "file": "2026-09-30t18-09-49-739z.html",
       "capturedAt": "2026-09-30T18:09:49.739Z",
       "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t19-41-40-675z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/84146001",
+      "capturedAt": "2026-09-30T19:41:40.675Z",
+      "method": "singlefile",
+      "note": "Image 84146001 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
     }
   ]
 }

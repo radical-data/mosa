@@ -70,7 +70,7 @@
   "images": [],
   "notes": {
     "language": "en-GB",
-    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image-specific reuse terms were not cleared, so no photograph is published."
+    "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. The 30 September 2026 image-rights review found no image-detail link in the preserved catalogue record, so no object photograph or image-specific reuse terms were available to publish."
   },
   "captures": [
     {

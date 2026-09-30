@@ -127,9 +127,16 @@ existing British Museum moai kavakava by exact accession. The 34 records were
 also compared with the nine Arte-derived British Museum or London identities;
 shared type or institution did not justify any further merge.
 
-No figure photographs were added because image-specific rights and credit were
-not reviewed. These are figure artefacts and catalogue sources, distinct from
-the photographic and drawn representations below. See
+The image-rights pass reviewed all 33 figure records. **Thirty exact image pages**
+identify the depicted catalogue object, state CC BY-NC-SA 4.0 terms and require
+credit to the Trustees of the British Museum. Their original downloadable JPEGs
+were visually checked and registered. Three records—2022,2006.1, Oc,EP.26 and
+Oc,EP.27—expose no image-detail link, so their sources record that no photograph
+or image-specific terms were available. The page for Oc,+.5990 links back to the
+correct object and its photograph agrees with the catalogue record, but its
+image description incorrectly names Oc,EP.24; both the conflict and the original
+page are preserved. These are figure artefacts and catalogue sources, distinct
+from the photographic and drawn representations below. See
 [Oc,+.2597](../../collection/sources/bm-figure-oc-2597.json), the existing
 [moai kavakava source](../../collection/sources/bm-moai-kavakava.json), and
 [Moai Hava](../../collection/sources/bm-moai-hava.json).
@@ -205,9 +212,8 @@ high-information gaps. In priority order:
    record. The BM accession identities and their histories are documented, but
    the generic Arte rows lack matching details; do not repeat the 203-page
    combined-provenance review without new evidence.
-2. Review image rights for the 33 figure records and the eight selected
-   documentary sources when the resulting images would materially improve the
-   collection.
+2. Review image rights for the eight selected documentary sources when the
+   resulting images would materially improve the collection.
 3. Investigate the Routledge authority's 40-record discrepancy and exhaust only
    locality-filtered or otherwise Rapa Nui-specific parts of the Schlosser
    route. Broad person-route paging has poor expected yield.
