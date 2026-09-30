@@ -1,0 +1,68 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1922",
+  "language": "es",
+  "images": [],
+  "claims": [
+    {
+      "id": "surdoc-number",
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "predicate": "catalogue_number",
+      "value": "4-1922"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "predicate": "classified_as",
+      "value": "Moai Kava Kava"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "predicate": "described_as",
+      "value": "Escultura de bulto. Objeto de forma alargada semi curva sin base. Figura antropomorfa de cabeza calva, orejas largas, ojos perforados con material blanco y negro, posee un contorno de los mismos sobresaliente y decorado con lineal inciso vertical. Nariz prominente, de arco quebrado, Boca abierta con comisuras que suben hacia la mejilla y dientes visibles en forma de zig-zag. Posee una perilla conformada por un promontorio. Espalda curva con vértebras marcadas en inciso lineal horizontal, costillas prominentes y talladas en forma lineal. Posee brazos en línea con el cuerpo, manos pegadas a caderas con dedos extendidos incisas verticales para conformar los dedos. Piernas gruesas extendidas y pies pequeños y planos sin detalles. Superficie lisa de color marrón oscuro ligeramente rojizo. Posee un nudo natural de la madera en la espalda, pero no se trata de un proceso de deterioro."
+    },
+    {
+      "id": "cultural-area",
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "predicate": "described_as",
+      "value": "Área cultural: Chile-Polinesia (Rapa Nui)"
+    },
+    {
+      "id": "category",
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "predicate": "described_as",
+      "value": "Categoría: Utensilios, Herramientas y Equipos"
+    },
+    {
+      "id": "technique-material",
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "predicate": "described_as",
+      "value": "Técnica/material: Madera-, Hueso (material animal orgánico)-, Piedra-Tallado, Piedra-Pulido"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 8.9 cm - Largo 52.3 cm - Ancho 9 cm"
+    },
+    {
+      "id": "institution",
+      "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
+      "predicate": "held_by",
+      "value": "Museo Historia Natural de Valparaíso"
+    }
+  ],
+  "notes": {
+    "text": "Transcribed from the expanded official Chile Patrimonios ficha, which credits SURDOC. The SURDOC number is documented by the ficha’s linked registration URL. Field labels, incomplete technique wording and measurement axes are retained. The portal terms grant no image reuse licence; no photograph is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-44-31-862z.html",
+      "capturedAt": "2026-09-30T01:44:31.862Z",
+      "method": "singlefile",
+      "note": "Reviewed expanded official ficha: page query 05SDC-4-1922, linked SURDOC 4-1922, MHNV institution, exact title, full description, material and dimensions."
+    }
+  ]
+}
