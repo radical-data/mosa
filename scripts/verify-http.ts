@@ -1,14 +1,15 @@
 import assert from "node:assert/strict";
 import { readdir } from "node:fs/promises";
 import { localeIds, pageIds, pagePath } from "../src/i18n/routes";
+import { verifyWebsiteHttp } from "./lib/website-http";
 
 const origin = process.argv[2] ?? "http://127.0.0.1:8080";
-const query = "?q=Rapa%20Nui&concept=taoa&type=individual&view=list";
-const rootResponse = await fetch(new URL(`/${query}`, origin), { redirect: "manual" });
-assert.equal(rootResponse.status, 301, "/: permanent HTTP redirect");
-const rootTarget = new URL(rootResponse.headers.get("location") ?? "", origin);
-assert.equal(rootTarget.pathname + rootTarget.search, `/es/${query}`, "/: preserve query string");
-assert.equal((await fetch(rootTarget, { redirect: "manual" })).status, 200, "/: no redirect loop");
+await verifyWebsiteHttp(origin, {
+  // Model HTTPS termination at the proxy while the container receives HTTP.
+  "X-Forwarded-Host": "museumofstolenartefacts.org",
+  "X-Forwarded-Proto": "https",
+  "X-Forwarded-Port": "443",
+});
 for (const page of pageIds)
   for (const locale of localeIds) {
     assert.equal(
@@ -26,8 +27,12 @@ for (const objectId of objectIds)
     assert.equal(response.status, 200, `${locale}/${collection}/${objectId}: object page`);
     assert.match(await response.text(), /data-record-id=/, `${objectId}: rendered object record`);
   }
-const collectionResponse = await fetch(new URL("/es/coleccion/", origin));
-assert.equal(collectionResponse.headers.get("cache-control"), "no-store");
+const assets = await readdir(new URL("../dist/_astro/", import.meta.url));
+assert.ok(assets.length, "built fingerprinted assets exist");
+const asset = await fetch(new URL(`/_astro/${assets[0]}`, origin), { redirect: "manual" });
+assert.equal(asset.status, 200, "fingerprinted asset is served");
+assert.equal(asset.headers.get("cache-control"), "public, max-age=31536000, immutable");
+await asset.body?.cancel();
 for (const path of [
   "/about/",
   "/collection/",
@@ -35,9 +40,6 @@ for (const path of [
   "/events/",
   "/resources/",
   "/contact/",
-  "/missing-page/",
-  "/es/missing-page/",
-  "/en/missing-page/",
   "/nl/",
   "/rap/",
   "/es/about/",

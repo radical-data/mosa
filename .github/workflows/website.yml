@@ -3,29 +3,7 @@ name: Website
 on:
   push:
     branches: [main]
-    paths: &website-paths
-      - "src/**"
-      - "public/**"
-      - "collection/**"
-      - ".gitattributes"
-      - ".dockerignore"
-      - "Dockerfile"
-      - "nginx.conf"
-      - "astro.config.mjs"
-      - "scripts/deploy-website.ts"
-      - "scripts/lib/website-deploy*"
-      - "scripts/validate-collection.ts"
-      - "scripts/validate-localisation.ts"
-      - "scripts/verify-http.ts"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - "tsconfig.json"
-      - "vitest.config.ts"
-      - "justfile"
-      - ".github/workflows/website.yml"
   pull_request:
-    paths: *website-paths
   workflow_dispatch:
     inputs:
       deploy:
@@ -43,10 +21,10 @@ concurrency:
 
 jobs:
   build:
-    name: Verify website and build image
+    name: Verify collection and website
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout with collection images
+      - name: Checkout
         uses: actions/checkout@v5
         with:
           lfs: false
@@ -82,12 +60,10 @@ jobs:
       group: website-production-deploy
       cancel-in-progress: false
     steps:
-      - name: Checkout with collection images
+      - name: Checkout
         uses: actions/checkout@v5
         with:
           lfs: false
-      - name: Restore published collection images only
-        run: git lfs pull --include="collection/images/**" --exclude=""
       - uses: jdx/mise-action@v3
         with:
           cache: true

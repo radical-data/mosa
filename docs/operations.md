@@ -17,6 +17,17 @@ before the Docker build because `.git` is not in the build context. Astro
 generates the whole site in the build stage; the runtime image serves the files
 with unprivileged Nginx on port 8080.
 
+HTTPS terminates at the reverse proxy. Keep `absolute_redirect off` in
+`nginx.conf` so the root and trailing-slash redirects return relative locations
+and preserve the browser's public HTTPS origin. Otherwise Nginx exposes its
+internal HTTP scheme and port 8080 in redirect URLs. Disabling only
+`port_in_redirect` would still downgrade redirects to HTTP.
+
+All ordinary responses, including HTML, redirects and errors, use `no-cache`:
+caches may store them but must revalidate before reuse. Fingerprinted `/_astro/`
+assets use a one-year immutable cache policy. There are no language-specific
+server rules apart from the root redirect to Spanish.
+
 Build it directly with:
 
 ```sh
@@ -26,7 +37,10 @@ docker build --file Dockerfile --tag mosa-website:local .
 `just preview` is useful for inspecting generated pages, but it does
 not apply the production Nginx root redirect, cache headers or custom 404
 response. Use the Docker image and `pnpm test:http http://127.0.0.1:8080` for
-those.
+those. The container tests and post-deployment verification share the same
+smoke checks for relative redirects, query strings, both homepages and collection
+listings, cache headers and genuine 404s. Container tests additionally check every
+object page and a built fingerprinted asset.
 
 ## Coolify
 
@@ -41,7 +55,7 @@ The website application must use:
 - Git LFS enabled.
 
 The deployment script checks the application settings, triggers one deployment,
-verifies Coolify's job commit and checks both collection routes. Coolify's
+verifies Coolify's job commit and runs the shared public HTTP smoke checks. Coolify's
 deployment history remains the record of which commit is currently live.
 
 ## GitHub environment
@@ -63,9 +77,11 @@ are needed. GitHub supplies `GITHUB_SHA`.
 ## Release the website and collection
 
 Merge into `main`, then run **Actions → Website → Run workflow** on `main` with
-`deploy` enabled. Pushes and pull requests run checks without deploying.
+`deploy` enabled. This is the single CI and release workflow: all pushes to
+`main` and all pull requests run repository and container checks without deploying.
+The verification job retains the check name **Verify collection and website**.
 The workflow verifies the build and current commit, serialises deployments,
-and checks Coolify's reported commit and both language collection pages.
+and checks Coolify's reported commit and the public HTTP behaviour.
 If verification fails, inspect Actions and Coolify before retrying.
 
 ## Recovery
