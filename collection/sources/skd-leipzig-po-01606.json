@@ -1,0 +1,62 @@
+{
+  "author": "Staatliche Kunstsammlungen Dresden",
+  "reference": "https://skd-online-collection.skd.museum/Details/Index/1590700",
+  "language": "de",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-leipzig-po-01606",
+      "predicate": "classified_as",
+      "value": "Ahnenfigur 'moai kavakava'"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-leipzig-po-01606",
+      "predicate": "catalogue_number",
+      "value": "Po 01606"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-leipzig-po-01606",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt, Rest von weißem Muschelring in der Augenhöhle"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-leipzig-po-01606",
+      "predicate": "described_as",
+      "value": "Abmessungen: 55 x 10,5 x 16 cm"
+    },
+    {
+      "id": "catalogue-roles",
+      "objectId": "moai-kavakava-leipzig-po-01606",
+      "predicate": "described_as",
+      "value": "uns nicht bekannt - Hersteller unbekannt - Sammler"
+    },
+    {
+      "id": "place-and-dating",
+      "objectId": "moai-kavakava-leipzig-po-01606",
+      "predicate": "described_as",
+      "value": "Oceania, Polynesia, Easter Island, vor 1930 // Herstellung: Pascuesen"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-leipzig-po-01606",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-03-12-663z.html",
+      "capturedAt": "2026-09-30T00:03:12.663Z",
+      "method": "singlefile",
+      "note": "Reviewed capture preserves the exact museum name, accession number, object title, and catalogue fields including material and dimensions; the page marks object images Freier Zugang – Rechte vorbehalten, so no image was imported."
+    }
+  ],
+  "notes": {
+    "text": "Transcribed the displayed catalogue fields and descriptive passage, retaining role labels, uncertainty and historical terminology. The combined place/dating field is preserved as a description without inferring a specific making-place relationship.",
+    "language": "en-GB"
+  }
+}
