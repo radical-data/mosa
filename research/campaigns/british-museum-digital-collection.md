@@ -30,17 +30,17 @@ from an unattributed museum label.
 Completion requires all relevant query routes and pages to be accounted for,
 conservative reconciliation against the whole collection, faithful attributed
 claims, preserved usable evidence and an image-rights disposition. Discovery,
-identity and integration are separate stages. The current work is in progress;
-neither search totals nor captured result cards are verified object counts.
+identity and integration are separate stages. Search totals and candidate cards
+are not verified object counts.
 
-## Search plan and coverage
+## Search coverage
 
 Search the museum's place and person authorities and ordinary catalogue search.
 Use `Easter Island`, `Rapa Nui` and `Rapanui`, then encountered historical names,
 localities, makers and collecting networks. Compare route membership before
-repeating detail work. Do not restrict to the Africa, Oceania and Americas
-department: the island authority also exposes relevant records in other
-departments and a distinct photographic archive.
+repeating detail work. Do not restrict discovery to the Africa, Oceania and the
+Americas department: the island authority also exposes relevant records in
+other departments and a distinct photographic archive.
 
 On **30 September 2026**:
 
@@ -49,80 +49,157 @@ On **30 September 2026**:
 | [Easter Island place authority, x69553](https://www.britishmuseum.org/collection/term/x69553) | 463 related records; five pages | All five result pages captured for deduplication and triage. Includes artefacts, photographs and representations. Related-place membership is not proof of island manufacture. |
 | [Rapa Nui keywords](https://www.britishmuseum.org/collection/search?keyword=Rapa&keyword=Nui) | 68 records; one page | Full result page captured for comparison. The interface splits the input into two keyword filters. |
 | [Rapanui keyword](https://www.britishmuseum.org/collection/search?keyword=Rapanui) | 332 records; four pages | All pages captured: 100, 100, 100 and 32 cards. Includes records labelled with other origins, including Hawai‘i; a full-text match alone does not establish origin or relevance. |
-| [Easter Island keywords](https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island) | 1,021 records; eleven pages | All pages captured: ten pages of 100 and a final page of 21. Explicit page/sort parameters give the same first-page URL set as the initial default query. Contains incidental matches requiring triage. |
+| [Easter Island keywords](https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island) | 1,021 records; eleven pages | All pages captured: ten pages of 100 and a final page of 21. Explicit page and sort parameters give the same first-page URL set as the initial default query. Contains incidental matches requiring triage. |
 | [Quoted Easter Island phrase](https://www.britishmuseum.org/collection/search?keyword=%22Easter%20Island%22) | 1,015 records; eleven pages | Result count and first page inspected; not assumed equivalent to the unquoted route. |
-| [Orongo place authority, x66696](https://www.britishmuseum.org/collection/term/x66696) | 41 related records; one page | Full page captured. Includes Hoa Hakananai'a, which is absent from the parent island authority's 463 records. |
+| [Orongo place authority, x66696](https://www.britishmuseum.org/collection/term/x66696) | 41 related records; one page | Full page captured. Includes Hoa Hakananaiʻa, which is absent from the parent island authority's 463 records. |
+| 40 narrower non-Orongo place authorities | 40 pages; 273 card appearances; 248 distinct URLs | Every route and page inspected. Seventeen URLs were absent from the earlier union. An attempted authority-page capture failed when Chromium exited, so no route-page capture was registered. |
 
-The island authority lists narrower localities including Orongo, Rano Raraku,
-Rano Kao and Hanga Roa. The Orongo comparison demonstrates that the parent
-authority is insufficient: a positive control, Hoa Hakananai'a, is missing.
-Compare the remaining narrower-locality sets with the keyword union before
-claiming place coverage. Person, maker, subject and historical-name routes
-also remain part of the campaign.
-
-The five fully captured sets contain **1,339 distinct catalogue record URLs**
-after URL-based deduplication. The broad Easter Island query contains all 463
-parent-place records, but misses two Rapa Nui keyword records, 308 Rapanui
-keyword records and eight Orongo records. These are search-set differences,
-not counts of new artefacts or independently reviewed relevance. In particular,
-many of the Rapanui keyword additions concern other Pacific places.
+The five fully captured keyword and authority sets contain **1,339 distinct
+catalogue record URLs**. The narrower-authority pass added **17**, producing a
+retained inventory of **1,356 unique catalogue URLs**. Route appearances,
+catalogue URLs, relevant objects and integrated records are different counts.
+The broad Easter Island query contains all 463 parent-place records, but misses
+two Rapa Nui keyword records, 308 Rapanui keyword records and eight Orongo
+records. Many Rapanui keyword additions concern other Pacific places.
 
 The [candidate working list](../evidence/british-museum-digital-collection/catalogue-candidates.json)
-retains observed record URLs, museum numbers, card types and query/page
-membership from these public catalogue results on 30 September 2026. It is
-retained to avoid repeating a substantial discovery and deduplication pass and
-to support unresolved candidate assessment. Card signals are automated triage,
-not identity decisions or source claims. The underlying anonymous search-page
-captures and extraction code remain private scratch; substantive imported
-sources have their own registered captures. A search is not a collection source.
+retains observed record URLs, museum numbers, card types and query or authority
+membership from the public catalogue on 30 September 2026. It prevents a repeat
+of the discovery and deduplication pass. Card signals are automated triage, not
+identity decisions or source claims. Search-page captures and extraction code
+remain private scratch; substantive imported sources have their own registered
+captures. A search result is not a collection source.
+
+Two person routes remain bounded follow-ups. The Katherine Maria Routledge
+authority reported 439 records across five pages, but exposed only 399 object
+URLs, leaving a 40-record discrepancy. The Katesa Schlosser authority reported
+1,621 records across 17 pages; only its first page was sampled because it spans
+broad unrelated holdings. Neither route is claimed as complete coverage.
 
 ## Candidate outcomes and integration
 
-Cards are discovery evidence only. Reconcile museum identifiers, stable record
-URLs and substantive descriptions before creating objects. Preserve distinct
-catalogue records sharing an accession until their relationship is understood.
-Grouped and multipart entries require individual judgement.
+### Routledge adzes
 
-The eight observed Routledge adze accessions Oc1920,0506.41–48 have been
-individually reconciled and added as eight new objects with catalogue sources,
-faithful attributed claims, registered detail captures and eight photographs
-cleared for non-commercial reuse under CC BY-NC-SA 4.0. Each source preserves
-the corresponding image-rights page. The sources run from
-[Oc1920,0506.41](../../collection/sources/bm-oc1920-0506-41.json) to
-[Oc1920,0506.48](../../collection/sources/bm-oc1920-0506-48.json). One catalogue
-photograph per adze is published; additional views were not reviewed.
+The eight Routledge adzes Oc1920,0506.41–48 are integrated as eight new objects
+with attributed catalogue sources, registered detail captures and eight
+photographs cleared for non-commercial reuse under CC BY-NC-SA 4.0. One
+catalogue photograph per adze is published; additional views were not reviewed.
+The sources run from [Oc1920,0506.41](../../collection/sources/bm-oc1920-0506-41.json)
+to [Oc1920,0506.48](../../collection/sources/bm-oc1920-0506-48.json).
 
-Four catalogue entries for Mathew James Harrison's 1868 drawings are now
-preserved as representation sources, with no new artefact records:
+### Non-figure artefacts
 
-| Catalogue entry | Source disposition | Remaining work |
-| --- | --- | --- |
-| [2017,2018.1](../../collection/sources/bm-harrison-2017-2018-1.json) | Links the existing Hoa Hakananai'a object; the claim reproduces the first sentence of the museum's drawing description. | Drawing image-rights review and publication remain deferred. |
-| [2017,2018.2](../../collection/sources/bm-harrison-2017-2018-2.json) | Unlinked source: a curator-quoted description identifies a pukao at Puna Pau. A generic reference to the British Museum statue does not establish the depicted object's identity. | Reconcile the depicted pukao; review the drawing image's rights. |
-| [2017,2018.3.a](../../collection/sources/bm-harrison-2017-2018-3-a.json) | Links Hoa Hakananai'a through the museum's description and explicit statue accession; one faithful description excerpt. | Drawing image-rights review and publication remain deferred. |
-| [2017,2018.3.b](../../collection/sources/bm-harrison-2017-2018-3-b.json) | Linked as comparative context for Hoa Hakananai'a, without asserting that its depicted pukao is Hoa. This drawing is on the reverse of .3.a's sheet. | Reconcile the depicted pukao and review image rights; do not count the two sides as two physical sheets. |
+A coherent review covered 27 catalogue entries: **16 new objects**, **one
+distinctive match** to the existing rei miro object, **nine unresolved
+identities**, and **one exclusion**. The exclusion, Oc1899,-.170, is described
+by the museum as “in style of” Easter Island, while its combined findspot and
+acquisition wording is uncertain; this does not establish Rapa Nui manufacture
+or provenance.
 
-The modern catalogue author remains the British Museum; Harrison is the
-attributed draughtsman. Paper dimensions and the drawings' 1868 date are not
-claims about the sculpture. These groups do not bound the wider campaign; the
-remaining candidate list has not undergone full detail review or collection
-reconciliation.
+Seventeen object photographs were checked on their image-detail pages and
+registered with CC BY-NC-SA 4.0 metadata across the 16 new objects and the
+existing rei miro match. The integrated records include
+[Oc.203](../../collection/sources/bm-nonfigure-oc-203.json) and the matched
+[Oc.9295 rei miro](../../collection/sources/bm-nonfigure-oc-9295.json). The nine
+unresolved catalogue records remain unlinked sources; no unsupported object
+identity was created.
 
-Use existing sources for Hoa Hakananai'a and the British Museum moai kavakava
-as positive controls. Reconcile the Arte-derived British Museum carvings,
-ornaments and tablet before adding potential duplicates. A common type and
-institution cannot establish an identity. `Found/Acquired` does not become a
-definite `found_at` claim, and `Not on display` is not a geographical location.
+### Figure artefacts
+
+A separate figure pass reviewed 34 entries and added **33 new figure objects
+with 33 catalogue sources**. The remaining entry, Oc,+.2595, matched the
+existing British Museum moai kavakava by exact accession. The 34 records were
+also compared with the nine Arte-derived British Museum or London identities;
+shared type or institution did not justify any further merge.
+
+No figure photographs were added because image-specific rights and credit were
+not reviewed. These are figure artefacts and catalogue sources, distinct from
+the photographic and drawn representations below. See
+[Oc,+.2597](../../collection/sources/bm-figure-oc-2597.json), the existing
+[moai kavakava source](../../collection/sources/bm-moai-kavakava.json), and
+[Moai Hava](../../collection/sources/bm-moai-hava.json).
+
+### Photographic representations
+
+The photographic-record pass reviewed **75 entries**. **Eight documentary
+catalogue sources were integrated** and **67 were deferred**. The selected
+records form three coherent clusters—Tahai, Rano Raraku and Orongo—and support
+five named site identities: [Ahu Ko Te Riku](../../collection/objects/ahu-ko-te-riku-site.json),
+[Ahu Tahai](../../collection/objects/ahu-tahai-site.json),
+[Ahu Vai Uri](../../collection/objects/ahu-vai-uri-site.json),
+[Orongo](../../collection/objects/orongo-site.json) and
+[Rano Raraku](../../collection/objects/rano-raraku-site.json).
+
+The museum records describe photographs by Katesa Schlosser and Katherine
+Routledge. They are documentary representations, not newly identified physical
+artefacts. Their descriptions add attributable evidence about sites, moai and
+bird-man carvings. No photograph image asset was published because exact image
+rights were not established.
+
+### Harrison drawings
+
+The four Harrison catalogue entries are representations, not four sculpture
+records. Entries [2017,2018.1](../../collection/sources/bm-harrison-2017-2018-1.json)
+and [2017,2018.3.a](../../collection/sources/bm-harrison-2017-2018-3-a.json)
+link to the existing Hoa Hakananaiʻa object; their drawing images are registered
+under the museum's image-specific CC BY-NC-SA 4.0 terms.
+
+Entry [2017,2018.2](../../collection/sources/bm-harrison-2017-2018-2.json)
+now links to the distinct pukao identified as EISP 4-137-001 at Puna Pau,
+supported by [Van Tilburg's *Remote Possibilities*](../../collection/sources/van-tilburg-2006-remote-possibilities.json),
+Image 44. The [pukao identity](../../collection/objects/pukao-puna-pau-4-137-001.json)
+and drawing image are registered. The British Museum Research Repository's
+publication page and open PDF preserve the identifying evidence.
+
+Entry [2017,2018.3.b](../../collection/sources/bm-harrison-2017-2018-3-b.json)
+remains comparative context for Hoa Hakananaiʻa. Its depicted pukao is not
+individually identified, so its rights-cleared drawing remains in private
+staging rather than being attached to an invented object. The .3.a and .3.b
+entries describe opposite sides of one physical sheet. Harrison is the
+attributed draughtsman; the British Museum is the catalogue source.
+
+### Ambiguous provenance candidates
+
+The provenance pass reviewed all **203** retained detail records selected from
+apparent `Found/Acquired: Easter Island` search-card matches. The combined field
+does not state whether the island is a find place or acquisition provenance,
+and it does not establish manufacture or a Rapanui maker. It was therefore not
+converted to `found_at`.
+
+**201 records remain deferred** because no secure whole-collection identity or
+stronger geographical evidence was established. Two records were excluded from
+the Rapa Nui-origin candidate set: Oc.6817 identifies `Juan de Fuca, Strait of
+(?)` on its detail page, contradicting the search-card signal; and
+Oc1944,02.670.b explicitly identifies its wooden spool as European-made. The
+review also retained cautions around items acquired in England or across Pacific
+islands, a modern fake, a modern carving group and a plaster cast, without
+turning them into speculative Rapa Nui object records.
+
+This pass produced no public source, object or image integration. That is a
+substantive outcome: exhaustive detail review removed two false origin signals
+and showed that the other 201 require object-level evidence rather than more
+interpretation of the same combined catalogue field.
 
 ## Next action
 
-Work through the retained candidate list in order of useful evidence gained,
-checking the complete existing collection before each new identity. Prioritise
-specific island-provenance records and representations that can enrich known
-objects, while retaining unresolved and incidental matches for explicit triage.
-Continue source, claim and rights review in coherent accession or documentary
-groups; the eight adzes need no repeat import. Resolve the Harrison pukao
-identities and drawing rights. Compare the remaining narrower-place and maker
-routes with the retained union and record their actual incremental coverage.
-Never call a captured result list or an initial imported batch complete
-catalogue integration.
+The catalogue baseline is now strong enough to shift effort from bulk search to
+high-information gaps. In priority order:
+
+1. Resolve the nine ambiguous non-figure identities through accession history,
+   visual comparison or independent catalogues; do not repeat the 203-page
+   combined-provenance review without new evidence.
+2. Review image rights for the 33 figure records and the eight selected
+   documentary sources when the resulting images would materially improve the
+   collection.
+3. Investigate the Routledge authority's 40-record discrepancy and exhaust only
+   locality-filtered or otherwise Rapa Nui-specific parts of the Schlosser
+   route. Broad person-route paging has poor expected yield.
+4. Revisit the 67 deferred representations in coherent subject clusters when a
+   named site, object or community account provides an identity anchor.
+5. Use the five retained thematic briefs for the next cross-institution
+   campaigns; they remain future work rather than unfinished British Museum
+   catalogue integration.
+
+Keep candidate totals separate from confirmed identities and integrated
+records. Prefer evidence that resolves a group, an accession series or a source
+network over isolated low-information object searches.
