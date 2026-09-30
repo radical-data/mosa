@@ -20,6 +20,15 @@ Values preserve source wording as text. Do not collapse different source
 accounts into one synthetic fact. Add another source and claim when accounts
 conflict.
 
+For `described_as`, extract the substantive description. The object link,
+source and locator already supply attribution and context: omit redundant
+object identifiers or document names, and do not add framing such as “the
+source says” or “the appendix describes”. For example, use “appear to be clearly
+associated with the Rano Kau I source” when those are the source's words.
+Preserve qualifiers, negation and any nested attribution needed to distinguish
+whose interpretation is being reported. Shorten by selecting a faithful excerpt,
+not by replacing the source's wording with an editorial summary.
+
 `made_at`, `found_at`, `located_at` and `held_by` are distinct. Holding
 does not imply ownership, consent or cultural authority. A catalogue number does
 not establish object identity by itself.
