@@ -292,3 +292,29 @@ Do not substitute accession numbers into these object-ID paths.
 - Read ditto marks in their column context and document any expansion. Keep
   origin, acquisition and designation fields distinct, and retain uncertain
   handwriting readings. Historical registers do not establish current custody.
+
+## Lower Saxony museums (PAESE and Kulturerbe Niedersachsen)
+
+- The [PAESE joint database](https://www.postcolonial-provenance-research.com/en/database/)
+  covers researched collections, not complete institutional inventories. Submit
+  the accession in its visible `inputSearchTerm` field and inspect the applied
+  query, result count, inventory number and location. `RPM_V 62` returned one
+  Hildesheim record; `Rapanui` returned seven Hildesheim records on 30 September
+  2026. Inspect pagination when results exceed the 30-row page size.
+- Observed record paths include `/en/database/exposition/rpm_v-62/` and
+  `/en/database/exposition/rpm_v-64/`. Substitution can generate a candidate;
+  verify the displayed institution-scoped number and supporting fields.
+- The default Basic Information tab does not capture Documentation or Additional
+  Information. Preserve and review each tab needed for claims. English interface
+  labels can accompany German values; retain uncertainty such as `vor 1879` and
+  `moai tangata (?)`. An indigenous-name field can describe a generic object
+  class, so its heading alone does not justify `has_name`.
+- Kulturerbe Niedersachsen's observed exact-phrase route is
+  `https://kulturerbe.niedersachsen.de/suche/-/DEFAULT:%22{encoded-phrase}%22/1/-/-/`.
+  Confirm the rendered global metadata query and count. The positive control
+  `V 62` returned an unrelated graphic-arts record `Z V 62`; this establishes
+  that the route works, not that another museum's inventory is fully indexed.
+  Record accession variants and geographic fallbacks separately. A zero result
+  remains bounded by the portal's coverage.
+- Displayed photographs do not imply reuse permission. Record image rights
+  separately from object identification and source preservation.
