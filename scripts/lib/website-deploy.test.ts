@@ -1,5 +1,8 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { deployWebsite } from "./website-deploy";
+import { verifyWebsiteHttp } from "./website-http";
+
+vi.mock("./website-http", () => ({ verifyWebsiteHttp: vi.fn() }));
 
 const config = {
   webhook: "https://hosting.example/api/v1/deploy?uuid=website",
@@ -21,6 +24,7 @@ const app = (settings: Record<string, boolean> = {}) =>
   });
 
 afterEach(() => {
+  vi.resetAllMocks();
   vi.restoreAllMocks();
   vi.unstubAllGlobals();
 });
@@ -33,18 +37,47 @@ describe("website deployment", () => {
     expect(fetch).toHaveBeenCalledTimes(1);
   });
 
-  it("verifies the deployed commit and both language listings", async () => {
+  it("verifies the deployed commit before running the shared public HTTP checks", async () => {
     const fetch = vi
       .fn()
       .mockResolvedValueOnce(app())
       .mockResolvedValueOnce(
         Response.json({ deployments: [{ resource_uuid: "website", deployment_uuid: "job-1" }] }),
       )
-      .mockResolvedValueOnce(Response.json({ status: "finished", commit: config.commit }))
-      .mockResolvedValueOnce(new Response('<article data-record-id="object-1">'))
-      .mockResolvedValueOnce(new Response('<article data-record-id="object-1">'));
+      .mockResolvedValueOnce(Response.json({ status: "finished", commit: config.commit }));
     vi.stubGlobal("fetch", fetch);
     await expect(deployWebsite(config)).resolves.toEqual(deployed);
-    expect(fetch).toHaveBeenCalledTimes(5);
+    expect(fetch).toHaveBeenCalledTimes(3);
+    expect(verifyWebsiteHttp).toHaveBeenCalledExactlyOnceWith(config.productionURL);
+  });
+
+  it("fails the release when public HTTP verification fails", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi
+        .fn()
+        .mockResolvedValueOnce(app())
+        .mockResolvedValueOnce(
+          Response.json({ deployments: [{ resource_uuid: "website", deployment_uuid: "job-1" }] }),
+        )
+        .mockResolvedValueOnce(Response.json({ status: "finished", commit: config.commit })),
+    );
+    vi.mocked(verifyWebsiteHttp).mockRejectedValueOnce(new Error("Broken public redirect"));
+    await expect(deployWebsite(config)).rejects.toThrow("Broken public redirect");
+  });
+
+  it("rejects a different deployed commit before checking HTTP", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi
+        .fn()
+        .mockResolvedValueOnce(app())
+        .mockResolvedValueOnce(
+          Response.json({ deployments: [{ resource_uuid: "website", deployment_uuid: "job-1" }] }),
+        )
+        .mockResolvedValueOnce(Response.json({ status: "finished", commit: "b".repeat(40) })),
+    );
+    await expect(deployWebsite(config)).rejects.toThrow("different commit");
+    expect(verifyWebsiteHttp).not.toHaveBeenCalled();
   });
 });

@@ -1,3 +1,5 @@
+import { verifyWebsiteHttp } from "./website-http";
+
 export interface WebsiteDeployment {
   webhook: string;
   token: string;
@@ -77,13 +79,7 @@ export async function deployWebsite(config: WebsiteDeployment): Promise<Deployed
     const result = (await status.json()) as { status?: string; commit?: string };
     if (result.status === "finished") {
       if (result.commit !== config.commit) throw Error("Website job built a different commit");
-      for (const route of ["/es/coleccion/", "/en/collection/"]) {
-        const page = await request(new URL(`${route}?verify=${Date.now()}`, config.productionURL), {
-          cache: "no-store",
-        });
-        if (!page.ok || !(await page.text()).includes("data-record-id="))
-          throw Error(`Deployed collection page is incomplete: ${route}`);
-      }
+      await verifyWebsiteHttp(config.productionURL);
       return { commit: result.commit };
     } else if (["failed", "cancelled"].includes(result.status ?? ""))
       throw Error(`Website deployment ${result.status}`);
