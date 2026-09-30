@@ -16,6 +16,13 @@ object, repeated depiction, grouped entry or unresolved. Counts and gallery
 cards do not establish distinct object identities. Preserve the source's own
 grouping unless evidence supports separating or consolidating entries.
 
+Before comparing gallery photographs, bind each image to the exact entry's DOM
+container or structured record and retain its accession, card identifier and
+image origin. Do not select the next image after a caption in raw HTML: it can
+belong to another card. Recheck container boundaries and image hashes before
+recording a photographic conflict. A blank or partial view cannot establish a
+contradiction in features it does not show.
+
 Match conservatively. Institution-scoped catalogue numbers, former identifiers,
 documented transfers, distinctive names or inscriptions, and photographs with
 several matching physical or provenance details can support a match. Similar
