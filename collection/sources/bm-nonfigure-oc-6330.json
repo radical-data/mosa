@@ -1,0 +1,18 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-6330_1",
+  "language": "en",
+  "claims": [],
+  "captures": [
+    {
+      "file": "2026-09-30t18-03-55-366z.html",
+      "capturedAt": "2026-09-30T18:03:55.366Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The collection has a generic BM `rei-miro-britanico` record, but its supporting source gives no distinguishing description or accession. Several BM rei miro records in this batch could fit it. The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": []
+}

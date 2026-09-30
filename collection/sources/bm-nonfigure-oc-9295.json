@@ -1,0 +1,105 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-9295",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc.9295",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "classified_as",
+      "value": "gorget",
+      "locator": "Object Type"
+    },
+    {
+      "id": "description",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "described_as",
+      "value": "Neck ornament, gorget (rei miro), made of wood (thespesia populnea). Crescent-shaped, terminated by two bearded male heads facing upwards. Two holes spaced evenly along the upper edge of the crescent to take a neck cord. A line of rongorongo glyphs follow the curve of the crescent.",
+      "locator": "Description"
+    },
+    {
+      "id": "production-place-1",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "production-date-1",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "made_during",
+      "value": "1800-1850 (circa)",
+      "locator": "Production date"
+    },
+    {
+      "id": "material-1",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "made_of",
+      "value": "thespesia populnea wood",
+      "locator": "Materials"
+    },
+    {
+      "id": "technique-1",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "described_as",
+      "value": "Technique: carved",
+      "locator": "Technique"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "described_as",
+      "value": "Height: 21.50 centimetres Width: 41.50 centimetres Depth: 2 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-name",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "described_as",
+      "value": "Purchased from: Rev. Dr William Sparrow Simpson",
+      "locator": "Acquisition name"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "predicate": "described_as",
+      "value": "Christy 9254 to 9500 was a single very large purchase of the collection of prehistoric and ethnographic material from across the world formed by the Rev. Dr William Sparrow Simpson (qv), sub-Dean of St Paul's. It was made using the Christy Fund on 18 January 1875 (cost £100).",
+      "locator": "Acquisition notes"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-30t18-05-26-963z.html",
+      "capturedAt": "2026-09-30T18:05:26.963Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "rei-miro-rongo-rongo-britanico",
+      "file": "rei-miro-rongo-rongo-britanico/british-museum-1613786928.jpg",
+      "alt": "Crescent-shaped wooden rei miro pendant with rongorongo glyphs and carved heads at both ends.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613786928"
+    }
+  ]
+}

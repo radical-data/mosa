@@ -1,0 +1,18 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_2020-2005-1-a-c",
+  "language": "en",
+  "claims": [],
+  "captures": [
+    {
+      "file": "2026-09-30t18-06-21-130z.html",
+      "capturedAt": "2026-09-30T18:06:21.130Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "This BM record is one accession for a three-part dance costume (head-piece, bodice and skirt). Preserve the group as catalogued; do not create part-level object records without supported separate identities. The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": []
+}

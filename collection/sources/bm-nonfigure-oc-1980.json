@@ -1,0 +1,84 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-1980_1",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc.1980",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "predicate": "classified_as",
+      "value": "tool/implement",
+      "locator": "Object Type"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "predicate": "described_as",
+      "value": "Implement, mata'a, with an obsidian head in a wooden handle which is wrapped with a piece of barkcloth.",
+      "locator": "Description"
+    },
+    {
+      "id": "production-place-1",
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "material-1",
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "predicate": "made_of",
+      "value": "obsidian wood paper mulberry bark bark",
+      "locator": "Materials"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "predicate": "described_as",
+      "value": "Width: 11.30 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "acquisition-name",
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "predicate": "described_as",
+      "value": "Bequeathed by: Henry Christy",
+      "locator": "Acquisition name"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-30t18-06-11-139z.html",
+      "capturedAt": "2026-09-30T18:06:11.139Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "british-museum-tool-implement-oc-1980",
+      "file": "british-museum-tool-implement-oc-1980/british-museum-1614576633.jpg",
+      "alt": "Obsidian cutting blade mounted on a wooden handle wrapped with barkcloth.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1614576633"
+    }
+  ]
+}

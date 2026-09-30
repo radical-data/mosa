@@ -1,0 +1,112 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-5850",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc.5850",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "classified_as",
+      "value": "ear-plug",
+      "locator": "Object Type"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "described_as",
+      "value": "Ornament: an ear-plug made of a fish vertebrae.",
+      "locator": "Description"
+    },
+    {
+      "id": "production-place-1",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "made_at",
+      "value": "Easter Island",
+      "locator": "Production place"
+    },
+    {
+      "id": "production-date-1",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "made_during",
+      "value": "1868 (before)",
+      "locator": "Production date"
+    },
+    {
+      "id": "found-acquired-1",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "described_as",
+      "value": "Found/Acquired: Easter Island",
+      "locator": "Findspot"
+    },
+    {
+      "id": "material-1",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "made_of",
+      "value": "fish bone",
+      "locator": "Materials"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "described_as",
+      "value": "Height: 2 centimetres Width: 3.50 centimetres Depth: 3.50 centimetres",
+      "locator": "Dimensions"
+    },
+    {
+      "id": "inscription",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "described_as",
+      "value": "Inscription type: annotation Inscription position: face of ornament Inscription content: Shark Inscription note: written in pencil",
+      "locator": "Inscriptions"
+    },
+    {
+      "id": "acquisition-name",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "described_as",
+      "value": "Donated by: Lt. M J Harrison",
+      "locator": "Acquisition name"
+    },
+    {
+      "id": "acquisition-notes",
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "predicate": "described_as",
+      "value": "Presented by Lieut. M.J. Harrison 27 October 1869. Obtained by him during the stay of H.M.S. Topaze at Easter Island in 1868.",
+      "locator": "Acquisition notes"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-30t18-05-16-360z.html",
+      "capturedAt": "2026-09-30T18:05:16.360Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "british-museum-ear-plug-oc-5850",
+      "file": "british-museum-ear-plug-oc-5850/british-museum-1613786926.jpg",
+      "alt": "Round fish-vertebra ear ornament viewed from the front.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613786926"
+    }
+  ]
+}

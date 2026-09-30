@@ -1,0 +1,18 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc-5849",
+  "language": "en",
+  "claims": [],
+  "captures": [
+    {
+      "file": "2026-09-30t18-06-42-608z.html",
+      "capturedAt": "2026-09-30T18:06:42.608Z",
+      "method": "singlefile"
+    }
+  ],
+  "notes": {
+    "text": "The collection already has the nonspecific handle `rapa-britanico` (“Rapa — Londres”), but its source gives no accession or distinguishing description. This catalogue entry cannot be matched to that handle, and several selected BM dance-paddles could fit it. The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
+    "language": "en-GB"
+  },
+  "images": []
+}
