@@ -149,3 +149,40 @@ Do not substitute accession numbers into these object-ID paths.
   The handle number is an internal identifier, not a substitutable accession.
 - Review image credit and licence on each record; this example displayed
   CC BY-SA 4.0. Do not apply that example's rights to other photographs.
+
+## Chile Patrimonios and SURDOC
+
+- Tested candidate template:
+  `https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-{series}-{number}`.
+  Verified examples are `05SDC-4-1915` (Museo de Historia Natural de Valparaíso)
+  and `05SDC-17-299` (Museo Antropológico Padre Sebastián Englert).
+- The DOI prefix varies by record. A `05SDC-` miss is not a missing accession:
+  the official search for `17-303` returned `02SDC-17-303` instead.
+- Fallback search:
+  `https://www.chilepatrimonios.gob.cl/resultados?Recursos=on&s={accession}`.
+  URL-encode the accession. Results can match substrings: `17-10` returned
+  114 results, including the exact `02SDC-17-10` record.
+- Verify the institution, title, descriptive fields and linked SURDOC
+  `surdoc.cl/registro/{series}-{number}` identifier. The accession is distinct
+  from the portal's DOI prefix.
+- A browser navigation timeout was followed by a fully rendered page. Inspect
+  current page state after a timeout before recording an access blocker.
+
+## Museum der Kulturen Basel
+
+- Catalogue: <https://onlinecollection.mkb.ch/>. Search the full accession in
+  the visible `Suche` interface. Open the object entry and verify `Objektnummer`;
+  results also include photographic-archive records with the same number.
+- `Einlaufnummer` is a separate field. The `/query/<uuid>` fragment identifies
+  a catalogue query/view; neither its UUID nor the surrounding query is an
+  accession substitution template. Keep the observed URL and recheck its record.
+- Four object links reopened correctly in the ordinary browser, but isolated
+  SingleFile captures saved the default catalogue even after a rendering wait.
+  Inspect captures for the accession and cited text rather than trusting success.
+- The catalogue's `PDF` control successfully exported the selected record with
+  `Detaillierte Informationen pro Datensatz`. Verify the first/last record
+  selection, download, inspect the PDF and register its original bytes using
+  the source-capture procedure. One export contained a logo placeholder instead
+  of a photograph; record such preservation limitations.
+- The explicit CC BY 4.0 notice covers the dataset. Do not infer clearance for
+  an individual photograph from that data licence alone.
