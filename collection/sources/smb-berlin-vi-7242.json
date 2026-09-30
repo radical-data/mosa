@@ -1,0 +1,83 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "reference": "https://id.smb.museum/object/998481",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "catalogue_number",
+      "value": "VI 7242"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "classified_as",
+      "value": "moai kavakava"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum"
+    },
+    {
+      "id": "participants",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "described_as",
+      "value": "Beteiligte: Johann Carl Pfluger (1883/1884) , Sammler*in"
+    },
+    {
+      "id": "date",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "made_during",
+      "value": "vor 1884"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "described_as",
+      "value": "Geografische Bezüge: Polynesien , Großregion Osterinsel (Rapa Nui) , Insel"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "made_of",
+      "value": "Holz , geschnitzt , Einlegearbeit aus Knochen (?) , rotes Pigment"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "predicate": "described_as",
+      "value": "Abmessungen: Gewicht: 650 g Höhe x Breite x Tiefe: 44 x 9,3 x 10 cm"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-kavakava-berlin-vi-7242",
+      "file": "moai-kavakava-berlin-vi-7242/smb.jpg",
+      "alt": "Eine dunkle stehende Holzfigur mit langen Ohren und fein geschnitzten Rippen.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Heinz-Günther Malenz",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998481"
+    }
+  ],
+  "notes": {
+    "text": "Matched displayed institution-scoped accession VI 7242 and the complete 44 x 9,3 x 10 cm dimensions with the IndiGen entry; type and provenance were also compared. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-00-24-074z.html",
+      "capturedAt": "2026-09-30T00:00:24.074Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ]
+}

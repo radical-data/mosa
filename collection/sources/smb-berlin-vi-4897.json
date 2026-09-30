@@ -1,0 +1,83 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "reference": "https://id.smb.museum/object/823460",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "catalogue_number",
+      "value": "VI 4897"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "classified_as",
+      "value": "moai tangata"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum"
+    },
+    {
+      "id": "participants",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "described_as",
+      "value": "Beteiligte: Wilhem Geiseler (1883) , Sammler*in S.M.S. Hyäne (27.6.1878 - 1924) , Expedition"
+    },
+    {
+      "id": "date",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "made_during",
+      "value": "vor 1883"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "described_as",
+      "value": "Geografische Bezüge: Polynesien , Großregion Osterinsel (Rapa Nui) , Insel"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "made_of",
+      "value": "Holz , Knochen , Obsidian , geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "predicate": "described_as",
+      "value": "Abmessungen: Objektmaß: 66 x 12,5 x 14 cm"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-berlin-vi-4897",
+      "file": "moai-tangata-berlin-vi-4897/smb.jpg",
+      "alt": "Eine stehende Holzfigur mit eingelegten Augen und einem hellen runden Fleck auf der Brust.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Martin Franken",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/823460"
+    }
+  ],
+  "notes": {
+    "text": "Matched displayed institution-scoped accession VI 4897 and the complete 66 x 12,5 x 14 cm dimensions with the IndiGen entry; type and provenance were also compared. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-00-54-649z.html",
+      "capturedAt": "2026-09-30T00:00:54.649Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ]
+}
