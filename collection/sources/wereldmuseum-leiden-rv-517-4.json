@@ -1,0 +1,74 @@
+{
+  "author": "Wereldmuseum",
+  "reference": "https://hdl.handle.net/20.500.11840/661934",
+  "language": "nl",
+  "images": [],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "catalogue_number",
+      "value": "RV-517-4"
+    },
+    {
+      "id": "title",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "classified_as",
+      "value": "Beeld - moko"
+    },
+    {
+      "id": "period",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Datering: voor 1885"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Afmetingen: 13 × 49 × 7cm"
+    },
+    {
+      "id": "materials",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "made_of",
+      "value": "hout ; schelp"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Verwerving: Aankoop, 1885-11-21"
+    },
+    {
+      "id": "origin",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Herkomst: Chili / Rapa Nui (eiland) / Zuid-Amerika / Midden- en Zuid-Amerika / Valparaíso (regio)"
+    },
+    {
+      "id": "description",
+      "objectId": "moko-leiden-rv-517-4",
+      "predicate": "described_as",
+      "value": "Waarschijnlijk is dit houtsnijwerk een \"moko\" , een dier- mensfiguur dat delen van hagedissen, vogels en mensen combineert en mogelijk verbeeldt dit type snijwerk machtige geesten \"akuaku\"."
+    }
+  ],
+  "notes": {
+    "text": "Selective extraction from the exact object record; field labels and wording are retained. The record-level Creative Commons notice describes the catalogue work. The museum publishes separate photo-order terms with delivery and use fees by category, so these pages alone do not establish image-specific reuse permission. No image is included pending rights/scope clarification. Field values are attributed to the unified collection catalogue.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-07-47-457z.html",
+      "capturedAt": "2026-09-30T01:07:47.457Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number RV-517-4 and catalogue content."
+    },
+    {
+      "file": "2026-09-30t01-08-37-258z.html",
+      "capturedAt": "2026-09-30T01:08:37.258Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number RV-517-4 and cited catalogue fields."
+    }
+  ]
+}

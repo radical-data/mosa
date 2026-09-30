@@ -1,0 +1,68 @@
+{
+  "author": "Wereldmuseum",
+  "reference": "https://hdl.handle.net/20.500.11840/662595",
+  "language": "nl",
+  "images": [],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "catalogue_number",
+      "value": "RV-547-3"
+    },
+    {
+      "id": "title",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "classified_as",
+      "value": "Beeld"
+    },
+    {
+      "id": "period",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "described_as",
+      "value": "Datering: voor 1886"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "described_as",
+      "value": "Afmetingen: 14,5 × 31 × 9,5cm"
+    },
+    {
+      "id": "materials",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "made_of",
+      "value": "hout ; obsidiaan"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "described_as",
+      "value": "Verwerving: Aankoop, 1886-04-01"
+    },
+    {
+      "id": "origin",
+      "objectId": "moai-tangata-leiden-rv-547-3",
+      "predicate": "described_as",
+      "value": "Herkomst: Chili / Rapa Nui (eiland) / Zuid-Amerika / Midden- en Zuid-Amerika / Valparaíso (regio)"
+    }
+  ],
+  "notes": {
+    "text": "Selective extraction from the exact object record; field labels and wording are retained. The record-level Creative Commons notice describes the catalogue work. The museum publishes separate photo-order terms with delivery and use fees by category, so these pages alone do not establish image-specific reuse permission. No image is included pending rights/scope clarification. Field values are attributed to the unified collection catalogue.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-07-19-577z.html",
+      "capturedAt": "2026-09-30T01:07:19.577Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number RV-547-3 and catalogue content."
+    },
+    {
+      "file": "2026-09-30t01-07-42-039z.html",
+      "capturedAt": "2026-09-30T01:07:42.039Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number RV-547-3 and cited catalogue fields."
+    }
+  ]
+}

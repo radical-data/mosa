@@ -1,0 +1,74 @@
+{
+  "author": "Wereldmuseum",
+  "reference": "https://hdl.handle.net/20.500.11840/84267",
+  "language": "nl",
+  "images": [],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "catalogue_number",
+      "value": "TM-2593-7"
+    },
+    {
+      "id": "title",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "classified_as",
+      "value": "Houten dansstaf, versierd met uitgesneden hoofd"
+    },
+    {
+      "id": "period",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Datering: voor 1957"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Afmetingen: 165 × 9 × 6cm"
+    },
+    {
+      "id": "materials",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "made_of",
+      "value": "hout"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Verwerving: Ruil, 1957-01-01"
+    },
+    {
+      "id": "origin",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Herkomst: Chili / Rapa Nui (eiland) / Zuid-Amerika / Midden- en Zuid-Amerika / Valparaíso (regio)"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-leiden-tm-2593-7",
+      "predicate": "described_as",
+      "value": "Deze staf vertoont uitzonderlijk liptatoeage. Op stenen beelden wordt dat soms weergegeven, maar eigenlijk nooit op houten beelden."
+    }
+  ],
+  "notes": {
+    "text": "Selective extraction from the exact object record; field labels and wording are retained. The record-level Creative Commons notice describes the catalogue work. The museum publishes separate photo-order terms with delivery and use fees by category, so these pages alone do not establish image-specific reuse permission. No image is included pending rights/scope clarification. Field values are attributed to the unified collection catalogue.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-08-27-296z.html",
+      "capturedAt": "2026-09-30T01:08:27.296Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number TM-2593-7 and catalogue content."
+    },
+    {
+      "file": "2026-09-30t01-09-55-946z.html",
+      "capturedAt": "2026-09-30T01:09:55.946Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number TM-2593-7 and cited catalogue fields."
+    }
+  ]
+}
