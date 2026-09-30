@@ -12,6 +12,7 @@
 | --- | --- |
 | Change system boundaries or the collection model | [Architecture](docs/architecture.md), relevant [ADRs](docs/adrs/) |
 | Change claims, sources or foregrounding | [Predicates](docs/predicates.md), [collection authoring](docs/collection-publication.md) |
+| Plan discovery or reorganise research history | [Research programme](docs/research.md), [roadmap](docs/roadmap.md#shared-research-programme) |
 | Add objects, images or editorials | [Collection authoring](docs/collection-publication.md) |
 | Bring a source page into the collection | [Incorporate source skill](.agents/skills/incorporate-source/SKILL.md) |
 | Configure or troubleshoot hosting | [Operations](docs/operations.md) |

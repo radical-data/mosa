@@ -10,6 +10,22 @@
   prominence as an automatic museum-data rule.
 - Review canonical navigation names against source-attributed names.
 
+## Shared research programme
+
+The [research guide](research.md), [programme overview](../research/README.md)
+and [ADR 026](adrs/026-share-research-plans-and-evidence.md) define the minimal
+shared workflow.
+
+- [x] Simplify the proposal to campaign documents and existing registers.
+- [ ] Adapt the research commands for shared storage and evidence limitations.
+- [ ] Share IndiGen progress and selected evidence; check historical parity and
+  resumption from a clean checkout.
+- [ ] Run the bounded Bishop mata‘a publication pilot.
+- [ ] Update contributor instructions to the tested workflow.
+
+Migrate other useful history and run wider institutional campaigns incrementally.
+Leave legacy scratch files alone; extend tooling only for problems found in use.
+
 ## Deliberately deferred model work
 
 The reduced model does not implement structured provenance events, custody,
