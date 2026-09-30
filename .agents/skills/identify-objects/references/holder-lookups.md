@@ -20,6 +20,14 @@ verification. A miss calls for the holder's search and documented identifier
 variants, not an immediate `not-found` outcome. Never use internal numeric IDs
 as if they were catalogue numbers.
 
+Before applying a search method across a batch, test it against an already
+verified accession when one is available. Check the submitted filter or result
+heading as well as the input value: some dynamic catalogues display new text
+without applying it. Record `not-found` only for a completed, catalogue-bounded
+search with appropriate identifier and broader-search fallbacks. It does not
+establish that the holder lacks the object. Keep interrupted searches pending
+and distinguish local tool failures from institutional access restrictions.
+
 ## Museum Rietberg
 
 - Catalogue: <https://rietberg.ch/sammlungen/sammlung-entdecken>.
@@ -101,7 +109,11 @@ Do not substitute accession numbers into these object-ID paths.
   returns <https://skd-online-collection.skd.museum/Details/Index/1589333>.
   The detail route uses an internal ID, not an accession.
 - Verify both `Inventarnummer` and the member museum. The same digits can return
-  records belonging to a different SKD collection.
+  records belonging to a different SKD collection. The observed member filters
+  are `sId=35` for Dresden and `sId=34` for Leipzig. Positive control: inventory
+  `62389` with the Dresden filter returns
+  <https://skd-online-collection.skd.museum/Details/Index/1634490>.
+  Full-text geography searches need not return every relevant record.
 - After an exact miss, search `Rapa Nui` or `Osterinsel` in the full-text field
   and compare accession numbers in the results. One exact miss is insufficient
   to establish that the record is absent.
@@ -116,6 +128,9 @@ Do not substitute accession numbers into these object-ID paths.
 - The observed record <https://sammlung-digital.lindenmuseum.de/en/object/staff_13736>
   displays inventory number `004567`. The trailing route number is an internal
   ID; the six-digit accession includes leading zeroes missing from IndiGen.
+- Check the applied query tag after submitting. In the reviewed browser, a
+  locator fill changed the textbox without applying the query; native input and
+  the search button did update it. `004567` provides a known positive control.
 - Verify the displayed accession, object type, dimensions and provenance.
   Preserve the named author of descriptive passages and inspect the individual
   photograph's credit and licence; this record displayed CC BY-SA 4.0.
@@ -192,3 +207,71 @@ Do not substitute accession numbers into these object-ID paths.
   of a photograph; record such preservation limitations.
 - The explicit CC BY 4.0 notice covers the dataset. Do not infer clearance for
   an individual photograph from that data licence alone.
+
+## Universitetsmuseet i Bergen
+
+- The museum's [archive guide](https://www4.uib.no/universitetsmuseet-i-bergen/samlinger/museumsarkiv)
+  links four digitised ethnographic accession registers in Digitalarkivet.
+  Use the volume's accession range, then its contents or image navigation.
+- The first volume's contents include accession milestones: entry `1193` is
+  on pages 223–224, [scan 117](https://www.digitalarkivet.no/ed60136683000117).
+  Entry `4936` is in the 4416–6064 volume,
+  [scan 80](https://www.digitalarkivet.no/ed60136685000080). Scan numbers are
+  positions in a volume, not substitutable object accessions.
+- The displayed scan image can be downloaded unchanged for source preservation.
+  Keep the stable page link, direct image URL and complete spread. These are
+  historical register entries, not current custody statements or object photos.
+- Compare the handwritten accession, dimensions and descriptive context.
+  Record legibility limits and retain source spelling; defer uncertain words
+  rather than silently modernising or guessing them.
+
+## Übersee-Museum Bremen (museum-digital)
+
+- Search `https://bremen.museum-digital.de/objects?extendQuery={accession}&s=`.
+  Preserve the `D` prefix and leading zeroes. `D00317` resolves to
+  <https://bremen.museum-digital.de/object/1214>; the route uses an internal ID.
+- Verify the breadcrumb accession, institution, dimensions and description.
+  `?recordlang=de&record=` selects German record text, but interface labels and
+  date formatting can remain English. Preserve the actual source language mix.
+- Keep `[About]` on date ranges. `Created` and `Owned` are distinct events;
+  neither an owner nor a broad creation date establishes an acquisition event.
+  Keep the combined `Material/Technique` field descriptive when it includes
+  carving or other techniques, retaining qualifiers such as `Wahrsch.`.
+- Open the selected photograph's `singleimage?imagenr={internal-image-id}` page.
+  Its licence can differ from the object metadata licence: the reviewed records
+  label metadata CC BY-NC-SA, while their photographs explicitly link CC BY-SA
+  4.0. Preserve the exact photographer credit, licence link and original-file
+  URL, and check every photograph independently.
+
+## MARKK Hamburg
+
+- The museum provides official Oceania database extracts for
+  [entries through 1920](https://markk-hamburg.de/files/media/2020/06/MARKK-OZ-bis-1920.pdf)
+  and [entries from 1921](https://markk-hamburg.de/files/media/2020/06/MARKK-OZ-ab-1921.pdf).
+- Search the complete PDF text, including spacing and punctuation variants.
+  IndiGen's `22.42.258` appears as `22.42:258` on PDF page 69 of the latter;
+  `E 614` appears on page 142 of the former. Search-result previews or truncated
+  terminal output cannot establish absence from a long PDF.
+- Visually review the matching row with its column headings. `Eingangsdatum`
+  records entry, not manufacture. Keep the source's historical-designation
+  notice, uncertain readings and designation disagreements with IndiGen.
+- These extracts contain blank image cells for the reviewed objects. They
+  provide no image licence and do not alone establish current custody.
+
+## Chilean capture and publication fallbacks
+
+- Expand `Ver más` before capturing a Chile Patrimonios description. After
+  bounded ordinary and adjusted capture attempts, the fiche's observed
+  `ficha/Pdf?doi={exact-observed-doi}` link can supply an official PDF export.
+  Inspect every page, including the description, dimensions and photograph;
+  note missing logos or images. Retain the linked SURDOC accession separately.
+- The portal's general terms grant no blanket image reuse licence. Look for
+  specific image permission before publishing a photograph.
+- An exact accession does not settle a conflicting match: compare photographs,
+  dimensions, maker and dates. Preserve genuine source disagreements; defer a
+  candidate when evidence indicates a different object or cannot resolve it.
+- Museum publications can supplement individual fiches. Ramírez Aliaga's
+  [2017 MHNV collection article](https://www.mhnv.gob.cl/sites/www.mhnv.gob.cl/files/images/articles-78393_archivo_PDF.pdf)
+  supplies illustrated, numbered entries. Match its museum numbers to the
+  appropriate identifier scheme and compare the photographs; do not distribute
+  unnumbered quotations among objects by their order of appearance.
