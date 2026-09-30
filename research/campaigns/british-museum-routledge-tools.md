@@ -63,10 +63,18 @@ route distinct.
 
 ## Next action
 
-Use the wider digital collection campaign to establish the remaining Routledge
-candidates. Broad
-keyword and place-authority counts mix objects from and about Rapa Nui; they
-do not replace systematic catalogue coverage. Extend to the thematic Routledge
-queries when catalogue coverage and evidence support that work. A later
-cross-institution expedition campaign can follow documented transfers; it must
-not infer that all items acquired in the same year travelled together.
+The wider digital collection campaign has now reconciled the complete Routledge
+authority route: its five pages expose 439 distinct object URLs, and every one
+already occurs in the retained catalogue inventory. The retained
+[person-route evidence](../evidence/british-museum-digital-collection/person-route-follow-up.json)
+records page membership and the collection crosswalk. The earlier 399-URL
+figure was an incomplete extraction rather than a 40-record catalogue gap. Do
+not repeat broad authority paging.
+
+Resume this brief from the retained inventory and locality routes. Prioritise a
+coherent accession or site sequence whose detail records distinguish production
+place, findspot, acquisition route and documentary subject. Broad keyword and
+place-authority counts mix objects from and about Rapa Nui and do not replace
+record-level evidence. A later cross-institution expedition campaign can follow
+documented transfers; it must not infer that all items acquired in the same year
+travelled together.

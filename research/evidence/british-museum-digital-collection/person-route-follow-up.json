@@ -1,0 +1,3500 @@
+{
+  "reviewedOn": "2026-09-30",
+  "status": "bounded person-route follow-up; search-card evidence only, not identity or publication decisions",
+  "deduplication": "canonical British Museum object URL (scheme, host and path)",
+  "interpretation": "Person and locality routes are discovery evidence. They do not establish geographic origin, depicted-object identity, consent or image reuse rights.",
+  "routledge": {
+    "authority": {
+      "name": "Katherine Maria Routledge",
+      "id": "BIOG177962",
+      "url": "https://www.britishmuseum.org/collection/term/BIOG177962"
+    },
+    "outcome": "The earlier 399-URL count was an incomplete page extraction. A fresh Chromium DOM extraction returned 439 raw cards and 439 distinct object URLs: 100 on each of pages 1–4 and 39 on page 5. There is no 40-record catalogue gap.",
+    "counts": {
+      "displayedRelatedObjects": 439,
+      "rawCardAppearances": 439,
+      "distinctObjectUrls": 439,
+      "duplicateAppearances": 0,
+      "inRetainedCatalogueInventory": 439,
+      "newToRetainedCatalogueInventory": 0,
+      "inCurrentCollectionSources": 12
+    },
+    "currentCollectionSources": [
+      {
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B102-35",
+        "source_id": "bm-photo-oc-b102-35"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1536",
+        "source_id": "bm-photo-oc-g-t-1536"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1756",
+        "source_id": "bm-photo-oc-g-t-1756"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-2",
+        "source_id": "bm-figure-oc1920-0506-2"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-41",
+        "source_id": "bm-oc1920-0506-41"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-42",
+        "source_id": "bm-oc1920-0506-42"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-43",
+        "source_id": "bm-oc1920-0506-43"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-44",
+        "source_id": "bm-oc1920-0506-44"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-45",
+        "source_id": "bm-oc1920-0506-45"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-46",
+        "source_id": "bm-oc1920-0506-46"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-47",
+        "source_id": "bm-oc1920-0506-47"
+      },
+      {
+        "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-48",
+        "source_id": "bm-oc1920-0506-48"
+      }
+    ],
+    "pages": [
+      {
+        "page": 1,
+        "cardCount": 100,
+        "distinctObjectUrls": 100,
+        "records": [
+          {
+            "museumNumber": "Oc,G.T.1537 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1537"
+          },
+          {
+            "museumNumber": "Oc,G.T.1516 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1516"
+          },
+          {
+            "museumNumber": "Oc1920,0506.57 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-57"
+          },
+          {
+            "museumNumber": "Oc,G.T.1494 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1494"
+          },
+          {
+            "museumNumber": "Oc,G.T.1655 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1655"
+          },
+          {
+            "museumNumber": "Oc,G.T.1771 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1771"
+          },
+          {
+            "museumNumber": "Oc,G.T.1559 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1559"
+          },
+          {
+            "museumNumber": "Oc,G.T.2605 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-2605"
+          },
+          {
+            "museumNumber": "Oc,G.T.1738 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1738"
+          },
+          {
+            "museumNumber": "Oc,G.T.1574 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1574"
+          },
+          {
+            "museumNumber": "Oc,G.T.1478 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1478"
+          },
+          {
+            "museumNumber": "Oc1920,0506.19 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-19"
+          },
+          {
+            "museumNumber": "Oc,G.T.1704 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1704"
+          },
+          {
+            "museumNumber": "Oc,G.T.1594 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1594"
+          },
+          {
+            "museumNumber": "Oc,G.T.1484 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1484"
+          },
+          {
+            "museumNumber": "Oc,G.T.1575 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1575"
+          },
+          {
+            "museumNumber": "Oc,G.T.1527 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1527"
+          },
+          {
+            "museumNumber": "Oc,G.T.1675 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1675"
+          },
+          {
+            "museumNumber": "Oc,G.T.1528 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1528"
+          },
+          {
+            "museumNumber": "Oc,G.T.1467 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1467"
+          },
+          {
+            "museumNumber": "Oc,G.T.1533 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1533"
+          },
+          {
+            "museumNumber": "Oc,G.T.1508 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1508"
+          },
+          {
+            "museumNumber": "Oc,G.T.1604 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1604"
+          },
+          {
+            "museumNumber": "Oc,G.T.1661 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1661"
+          },
+          {
+            "museumNumber": "Oc,G.T.1742 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1742"
+          },
+          {
+            "museumNumber": "Oc,G.T.1514 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1514"
+          },
+          {
+            "museumNumber": "Oc,G.T.1534 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1534"
+          },
+          {
+            "museumNumber": "Oc,G.T.1572 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1572"
+          },
+          {
+            "museumNumber": "Oc,G.T.1587 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1587"
+          },
+          {
+            "museumNumber": "Oc,G.T.1674 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1674"
+          },
+          {
+            "museumNumber": "Oc,G.T.1482 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1482"
+          },
+          {
+            "museumNumber": "Oc,G.T.1761 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1761"
+          },
+          {
+            "museumNumber": "Oc,G.T.1490 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1490"
+          },
+          {
+            "museumNumber": "Oc,G.T.1763 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1763"
+          },
+          {
+            "museumNumber": "Oc,G.T.1728 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1728"
+          },
+          {
+            "museumNumber": "Oc,G.T.1705 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1705"
+          },
+          {
+            "museumNumber": "Oc1920,0506.36 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-36"
+          },
+          {
+            "museumNumber": "Oc,G.T.1764 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1764"
+          },
+          {
+            "museumNumber": "Oc,G.T.1709 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1709"
+          },
+          {
+            "museumNumber": "Oc,G.T.1481 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1481"
+          },
+          {
+            "museumNumber": "Oc,G.T.1596 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1596"
+          },
+          {
+            "museumNumber": "Oc1920,0506.7 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-7"
+          },
+          {
+            "museumNumber": "Oc,G.T.1586 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1586"
+          },
+          {
+            "museumNumber": "Oc1920,0506.33 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-33"
+          },
+          {
+            "museumNumber": "Oc,G.T.1595 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1595"
+          },
+          {
+            "museumNumber": "Oc,B30.7 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-7"
+          },
+          {
+            "museumNumber": "Oc1920,0506.13 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-13"
+          },
+          {
+            "museumNumber": "Oc,G.T.1511 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1511"
+          },
+          {
+            "museumNumber": "Oc,G.T.1682 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1682"
+          },
+          {
+            "museumNumber": "Oc,G.T.1693 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1693"
+          },
+          {
+            "museumNumber": "Oc,G.T.1609 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1609"
+          },
+          {
+            "museumNumber": "Oc,G.T.1753 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1753"
+          },
+          {
+            "museumNumber": "Oc,G.T.2606 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-2606"
+          },
+          {
+            "museumNumber": "Oc,B30.4 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-4"
+          },
+          {
+            "museumNumber": "Oc,G.T.1488 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1488"
+          },
+          {
+            "museumNumber": "Oc1920,0506.65 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-65"
+          },
+          {
+            "museumNumber": "Oc,A69.48 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A69-48"
+          },
+          {
+            "museumNumber": "Oc,G.T.1752 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1752"
+          },
+          {
+            "museumNumber": "Oc1920,0506.83 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-83"
+          },
+          {
+            "museumNumber": "Oc1920,0506.44 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-44"
+          },
+          {
+            "museumNumber": "Oc,G.T.1726 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1726"
+          },
+          {
+            "museumNumber": "Oc,G.T.1504 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1504"
+          },
+          {
+            "museumNumber": "Oc,G.T.1602 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1602"
+          },
+          {
+            "museumNumber": "Oc,G.T.1464 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1464"
+          },
+          {
+            "museumNumber": "Oc,G.T.1613 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1613"
+          },
+          {
+            "museumNumber": "Oc1920,0506.58 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-58"
+          },
+          {
+            "museumNumber": "Oc,G.T.1571 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1571"
+          },
+          {
+            "museumNumber": "Oc,G.T.1658 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1658"
+          },
+          {
+            "museumNumber": "Oc,G.T.1768 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1768"
+          },
+          {
+            "museumNumber": "Oc,G.T.1747 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1747"
+          },
+          {
+            "museumNumber": "Oc,G.T.1774 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1774"
+          },
+          {
+            "museumNumber": "Oc,G.T.1617 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1617"
+          },
+          {
+            "museumNumber": "Oc1920,0506.61 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-61"
+          },
+          {
+            "museumNumber": "Oc,G.T.1668 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1668"
+          },
+          {
+            "museumNumber": "Oc1920,0506.32 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-32"
+          },
+          {
+            "museumNumber": "Oc,G.T.1600 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1600"
+          },
+          {
+            "museumNumber": "Oc,G.T.1565 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1565"
+          },
+          {
+            "museumNumber": "Oc,G.T.1653 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1653"
+          },
+          {
+            "museumNumber": "Oc,G.T.1539 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1539"
+          },
+          {
+            "museumNumber": "Oc,G.T.1569 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1569"
+          },
+          {
+            "museumNumber": "Oc,G.T.1589 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1589"
+          },
+          {
+            "museumNumber": "Oc1920,0506.91 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-91"
+          },
+          {
+            "museumNumber": "Oc,G.T.1466 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1466"
+          },
+          {
+            "museumNumber": "Oc1920,0506.1 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-1"
+          },
+          {
+            "museumNumber": "Oc,G.T.1598 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1598"
+          },
+          {
+            "museumNumber": "Oc,G.T.1686 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1686"
+          },
+          {
+            "museumNumber": "Oc,G.T.1493 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1493"
+          },
+          {
+            "museumNumber": "Oc,G.T.1615 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1615"
+          },
+          {
+            "museumNumber": "Oc1920,0506.35 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-35"
+          },
+          {
+            "museumNumber": "Oc,G.T.1634 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1634"
+          },
+          {
+            "museumNumber": "Oc1920,0506.18 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-18"
+          },
+          {
+            "museumNumber": "Oc,G.T.1474 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1474"
+          },
+          {
+            "museumNumber": "Oc,G.T.1455 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1455"
+          },
+          {
+            "museumNumber": "Oc,G.T.1729 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1729"
+          },
+          {
+            "museumNumber": "Oc1920,0506.8 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-8"
+          },
+          {
+            "museumNumber": "Oc1920,0506.84 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-84"
+          },
+          {
+            "museumNumber": "Oc1920,0506.3 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-3"
+          },
+          {
+            "museumNumber": "Oc1920,0506.10 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-10"
+          },
+          {
+            "museumNumber": "Oc,G.T.1517 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1517"
+          },
+          {
+            "museumNumber": "Oc,G.T.1582 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1582"
+          }
+        ]
+      },
+      {
+        "page": 2,
+        "cardCount": 100,
+        "distinctObjectUrls": 100,
+        "records": [
+          {
+            "museumNumber": "Oc,G.T.1483 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1483"
+          },
+          {
+            "museumNumber": "Oc1920,0506.29 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-29"
+          },
+          {
+            "museumNumber": "Oc,G.T.1593 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1593"
+          },
+          {
+            "museumNumber": "Oc,G.T.1677 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1677"
+          },
+          {
+            "museumNumber": "Oc,G.T.1622 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1622"
+          },
+          {
+            "museumNumber": "Oc,B30.10 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-10"
+          },
+          {
+            "museumNumber": "Oc,G.T.1461 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1461"
+          },
+          {
+            "museumNumber": "Oc,G.T.1657 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1657"
+          },
+          {
+            "museumNumber": "Oc,G.T.1707 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1707"
+          },
+          {
+            "museumNumber": "Oc1920,0506.62 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-62"
+          },
+          {
+            "museumNumber": "Oc,G.T.1610 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1610"
+          },
+          {
+            "museumNumber": "Oc,G.T.1762 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1762"
+          },
+          {
+            "museumNumber": "Oc1920,0506.27 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-27"
+          },
+          {
+            "museumNumber": "Oc,G.T.1692 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1692"
+          },
+          {
+            "museumNumber": "Oc,G.T.1564 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1564"
+          },
+          {
+            "museumNumber": "Oc,G.T.1561 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1561"
+          },
+          {
+            "museumNumber": "Oc,G.T.1721 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1721"
+          },
+          {
+            "museumNumber": "Oc1920,0506.88 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-88"
+          },
+          {
+            "museumNumber": "Oc,G.T.1624 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1624"
+          },
+          {
+            "museumNumber": "Oc1920,0506.55 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-55"
+          },
+          {
+            "museumNumber": "Oc,G.T.1491 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1491"
+          },
+          {
+            "museumNumber": "Oc,G.T.1519 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1519"
+          },
+          {
+            "museumNumber": "Oc,G.T.1524 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1524"
+          },
+          {
+            "museumNumber": "Oc,G.T.1672 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1672"
+          },
+          {
+            "museumNumber": "Oc,G.T.1578 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1578"
+          },
+          {
+            "museumNumber": "Oc,G.T.1628 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1628"
+          },
+          {
+            "museumNumber": "Oc,G.T.1775 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1775"
+          },
+          {
+            "museumNumber": "Oc,G.T.1781 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1781"
+          },
+          {
+            "museumNumber": "Oc,G.T.1782 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1782"
+          },
+          {
+            "museumNumber": "Oc1920,0506.79 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-79"
+          },
+          {
+            "museumNumber": "Oc,G.T.1671 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1671"
+          },
+          {
+            "museumNumber": "Oc,A69.49 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A69-49"
+          },
+          {
+            "museumNumber": "Oc,G.T.1702 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1702"
+          },
+          {
+            "museumNumber": "Oc1920,0506.2 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-2"
+          },
+          {
+            "museumNumber": "Oc,G.T.1641 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1641"
+          },
+          {
+            "museumNumber": "Oc,G.T.1567 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1567"
+          },
+          {
+            "museumNumber": "Oc,G.T.1691 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1691"
+          },
+          {
+            "museumNumber": "Oc1920,0506.75 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-75"
+          },
+          {
+            "museumNumber": "Oc,G.T.1651 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1651"
+          },
+          {
+            "museumNumber": "Oc1920,0506.46 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-46"
+          },
+          {
+            "museumNumber": "Oc,G.T.1562 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1562"
+          },
+          {
+            "museumNumber": "Oc,G.T.1783 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1783"
+          },
+          {
+            "museumNumber": "Oc,G.T.1749 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1749"
+          },
+          {
+            "museumNumber": "Oc,G.T.1733 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1733"
+          },
+          {
+            "museumNumber": "Oc,G.T.1736 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1736"
+          },
+          {
+            "museumNumber": "Oc,G.T.1694 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1694"
+          },
+          {
+            "museumNumber": "Oc,G.T.1592 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1592"
+          },
+          {
+            "museumNumber": "Oc,G.T.1580 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1580"
+          },
+          {
+            "museumNumber": "Oc,G.T.1550 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1550"
+          },
+          {
+            "museumNumber": "Oc,G.T.1765 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1765"
+          },
+          {
+            "museumNumber": "Oc,G.T.1536 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1536"
+          },
+          {
+            "museumNumber": "Oc,G.T.1552 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1552"
+          },
+          {
+            "museumNumber": "Oc,G.T.1535 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1535"
+          },
+          {
+            "museumNumber": "Oc,G.T.1487 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1487"
+          },
+          {
+            "museumNumber": "Oc,G.T.1459 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1459"
+          },
+          {
+            "museumNumber": "Oc,G.T.1619 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1619"
+          },
+          {
+            "museumNumber": "Oc,G.T.1715 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1715"
+          },
+          {
+            "museumNumber": "Oc,G.T.1654 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1654"
+          },
+          {
+            "museumNumber": "Oc1920,0506.12 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-12"
+          },
+          {
+            "museumNumber": "Oc,G.T.1591 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1591"
+          },
+          {
+            "museumNumber": "Oc,B30.8 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-8"
+          },
+          {
+            "museumNumber": "Oc,G.T.1720 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1720"
+          },
+          {
+            "museumNumber": "Oc1920,0506.17 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-17"
+          },
+          {
+            "museumNumber": "Oc,G.T.1744 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1744"
+          },
+          {
+            "museumNumber": "Oc,G.T.1548 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1548"
+          },
+          {
+            "museumNumber": "Oc,G.T.1584 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1584"
+          },
+          {
+            "museumNumber": "Oc1920,0506.37 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-37"
+          },
+          {
+            "museumNumber": "Oc,G.T.1480 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1480"
+          },
+          {
+            "museumNumber": "Oc,G.T.1520 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1520"
+          },
+          {
+            "museumNumber": "Oc,G.T.1515 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1515"
+          },
+          {
+            "museumNumber": "Oc,G.T.1612 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1612"
+          },
+          {
+            "museumNumber": "Oc,G.T.1697 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1697"
+          },
+          {
+            "museumNumber": "Oc,G.T.1659 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1659"
+          },
+          {
+            "museumNumber": "Oc1920,0506.71 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-71"
+          },
+          {
+            "museumNumber": "Oc,G.T.1701 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1701"
+          },
+          {
+            "museumNumber": "Oc,G.T.1585 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1585"
+          },
+          {
+            "museumNumber": "Oc1920,0506.54 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-54"
+          },
+          {
+            "museumNumber": "Oc1920,0506.56 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-56"
+          },
+          {
+            "museumNumber": "Oc,G.T.1457 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1457"
+          },
+          {
+            "museumNumber": "Oc,G.T.1644 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1644"
+          },
+          {
+            "museumNumber": "Oc,G.T.1557 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1557"
+          },
+          {
+            "museumNumber": "Oc,G.T.1724 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1724"
+          },
+          {
+            "museumNumber": "Oc,G.T.1518 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1518"
+          },
+          {
+            "museumNumber": "Oc,G.T.1714 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1714"
+          },
+          {
+            "museumNumber": "Oc1920,0506.49 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-49"
+          },
+          {
+            "museumNumber": "Oc,G.T.1526 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1526"
+          },
+          {
+            "museumNumber": "Oc,G.T.1618 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1618"
+          },
+          {
+            "museumNumber": "Oc,G.T.1623 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1623"
+          },
+          {
+            "museumNumber": "Oc,G.T.1601 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1601"
+          },
+          {
+            "museumNumber": "Oc1920,0506.87 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-87"
+          },
+          {
+            "museumNumber": "Oc,G.T.1553 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1553"
+          },
+          {
+            "museumNumber": "Oc,G.T.1722 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1722"
+          },
+          {
+            "museumNumber": "Oc,G.T.1525 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1525"
+          },
+          {
+            "museumNumber": "Oc1920,0506.48 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-48"
+          },
+          {
+            "museumNumber": "Oc,G.T.1699 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1699"
+          },
+          {
+            "museumNumber": "Oc,G.T.1608 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1608"
+          },
+          {
+            "museumNumber": "Oc1920,0506.4 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-4"
+          },
+          {
+            "museumNumber": "Oc,G.T.1627 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1627"
+          },
+          {
+            "museumNumber": "Oc,G.T.1479 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1479"
+          },
+          {
+            "museumNumber": "Oc,G.T.1652 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1652"
+          }
+        ]
+      },
+      {
+        "page": 3,
+        "cardCount": 100,
+        "distinctObjectUrls": 100,
+        "records": [
+          {
+            "museumNumber": "Oc,G.T.1685 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1685"
+          },
+          {
+            "museumNumber": "Oc,G.T.1637 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1637"
+          },
+          {
+            "museumNumber": "Oc,G.T.1739 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1739"
+          },
+          {
+            "museumNumber": "Oc,G.T.1662 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1662"
+          },
+          {
+            "museumNumber": "Oc,G.T.1673 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1673"
+          },
+          {
+            "museumNumber": "Oc,G.T.1560 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1560"
+          },
+          {
+            "museumNumber": "Oc1920,0506.6 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-6"
+          },
+          {
+            "museumNumber": "Oc1920,0506.21 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-21"
+          },
+          {
+            "museumNumber": "Oc1920,0506.68 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-68"
+          },
+          {
+            "museumNumber": "Oc1920,0506.41 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-41"
+          },
+          {
+            "museumNumber": "Oc1920,0506.24 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-24"
+          },
+          {
+            "museumNumber": "Oc,G.T.1603 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1603"
+          },
+          {
+            "museumNumber": "Oc1920,0506.26 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-26"
+          },
+          {
+            "museumNumber": "Oc,G.T.1497 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1497"
+          },
+          {
+            "museumNumber": "Oc,G.T.1645 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1645"
+          },
+          {
+            "museumNumber": "Oc,G.T.1755 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1755"
+          },
+          {
+            "museumNumber": "Oc,G.T.1620 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1620"
+          },
+          {
+            "museumNumber": "Oc,G.T.1770 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1770"
+          },
+          {
+            "museumNumber": "Oc,G.T.1684 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1684"
+          },
+          {
+            "museumNumber": "Oc,B102.35 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B102-35"
+          },
+          {
+            "museumNumber": "Oc,G.T.1576 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1576"
+          },
+          {
+            "museumNumber": "Oc1920,0506.53 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-53"
+          },
+          {
+            "museumNumber": "Oc,G.T.1543 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1543"
+          },
+          {
+            "museumNumber": "Oc,G.T.1498 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1498"
+          },
+          {
+            "museumNumber": "Oc,G.T.1563 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1563"
+          },
+          {
+            "museumNumber": "Oc,G.T.1769 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1769"
+          },
+          {
+            "museumNumber": "Oc,G.T.1751 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1751"
+          },
+          {
+            "museumNumber": "Oc1920,0506.43 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-43"
+          },
+          {
+            "museumNumber": "Oc1920,0506.60 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-60"
+          },
+          {
+            "museumNumber": "Oc1920,0506.9 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-9"
+          },
+          {
+            "museumNumber": "Oc,B30.13 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-13"
+          },
+          {
+            "museumNumber": "Oc,G.T.1716 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1716"
+          },
+          {
+            "museumNumber": "Oc,G.T.1549 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1549"
+          },
+          {
+            "museumNumber": "Oc,G.T.1541 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1541"
+          },
+          {
+            "museumNumber": "Oc1920,0506.40 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-40"
+          },
+          {
+            "museumNumber": "Oc,G.T.1496 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1496"
+          },
+          {
+            "museumNumber": "Oc,G.T.1532 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1532"
+          },
+          {
+            "museumNumber": "Oc,G.T.1731 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1731"
+          },
+          {
+            "museumNumber": "Oc,G.T.1502 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1502"
+          },
+          {
+            "museumNumber": "Oc1920,0506.64 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-64"
+          },
+          {
+            "museumNumber": "Oc,G.T.1544 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1544"
+          },
+          {
+            "museumNumber": "Oc,G.T.1745 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1745"
+          },
+          {
+            "museumNumber": "Oc1920,0506.59 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-59"
+          },
+          {
+            "museumNumber": "Oc,G.T.1546 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1546"
+          },
+          {
+            "museumNumber": "Oc1920,0506.85 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-85"
+          },
+          {
+            "museumNumber": "Oc,G.T.1486 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1486"
+          },
+          {
+            "museumNumber": "Oc,G.T.1633 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1633"
+          },
+          {
+            "museumNumber": "Oc,G.T.1454 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1454"
+          },
+          {
+            "museumNumber": "Oc,G.T.1640 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1640"
+          },
+          {
+            "museumNumber": "Oc,G.T.1510 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1510"
+          },
+          {
+            "museumNumber": "Oc,G.T.1471 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1471"
+          },
+          {
+            "museumNumber": "Oc,G.T.1730 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1730"
+          },
+          {
+            "museumNumber": "Oc1920,0506.76 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-76"
+          },
+          {
+            "museumNumber": "Oc,G.T.1458 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1458"
+          },
+          {
+            "museumNumber": "Oc,G.T.1469 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1469"
+          },
+          {
+            "museumNumber": "Oc1920,0506.67 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-67"
+          },
+          {
+            "museumNumber": "Oc1920,0506.90 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-90"
+          },
+          {
+            "museumNumber": "Oc,G.T.1648 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1648"
+          },
+          {
+            "museumNumber": "Oc,G.T.1678 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1678"
+          },
+          {
+            "museumNumber": "Oc,G.T.1665 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1665"
+          },
+          {
+            "museumNumber": "Oc,G.T.1513 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1513"
+          },
+          {
+            "museumNumber": "Oc,G.T.1767 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1767"
+          },
+          {
+            "museumNumber": "Oc,G.T.1531 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1531"
+          },
+          {
+            "museumNumber": "Oc,G.T.1499 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1499"
+          },
+          {
+            "museumNumber": "Oc,G.T.1568 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1568"
+          },
+          {
+            "museumNumber": "Oc,G.T.1683 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1683"
+          },
+          {
+            "museumNumber": "Oc,G.T.1695 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1695"
+          },
+          {
+            "museumNumber": "Oc1920,0506.78 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-78"
+          },
+          {
+            "museumNumber": "Oc,G.T.1689 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1689"
+          },
+          {
+            "museumNumber": "Oc1920,0506.69 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-69"
+          },
+          {
+            "museumNumber": "Oc1920,0506.51 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-51"
+          },
+          {
+            "museumNumber": "Oc,G.T.1611 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1611"
+          },
+          {
+            "museumNumber": "Oc,G.T.1667 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1667"
+          },
+          {
+            "museumNumber": "Oc,G.T.1558 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1558"
+          },
+          {
+            "museumNumber": "Oc,G.T.1621 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1621"
+          },
+          {
+            "museumNumber": "Oc1920,0506.39 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-39"
+          },
+          {
+            "museumNumber": "Oc,G.T.1577 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1577"
+          },
+          {
+            "museumNumber": "Oc,G.T.1780 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1780"
+          },
+          {
+            "museumNumber": "Oc1920,0506.28 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-28"
+          },
+          {
+            "museumNumber": "Oc,G.T.1614 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1614"
+          },
+          {
+            "museumNumber": "Oc,G.T.1703 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1703"
+          },
+          {
+            "museumNumber": "Oc,G.T.1759 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1759"
+          },
+          {
+            "museumNumber": "Oc1920,0506.72 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-72"
+          },
+          {
+            "museumNumber": "Oc,G.T.1638 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1638"
+          },
+          {
+            "museumNumber": "Oc,G.T.1663 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1663"
+          },
+          {
+            "museumNumber": "Oc1920,0506.30 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-30"
+          },
+          {
+            "museumNumber": "Oc1920,0506.92 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-92"
+          },
+          {
+            "museumNumber": "Oc1920,0506.45 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-45"
+          },
+          {
+            "museumNumber": "Oc,G.T.1647 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1647"
+          },
+          {
+            "museumNumber": "Oc,G.T.1554 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1554"
+          },
+          {
+            "museumNumber": "Oc,G.T.1495 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1495"
+          },
+          {
+            "museumNumber": "Oc,G.T.1605 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1605"
+          },
+          {
+            "museumNumber": "Oc1920,0506.80 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-80"
+          },
+          {
+            "museumNumber": "Oc,G.T.1503 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1503"
+          },
+          {
+            "museumNumber": "Oc1920,0506.47 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-47"
+          },
+          {
+            "museumNumber": "Oc,G.T.1735 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1735"
+          },
+          {
+            "museumNumber": "Oc,G.T.1631 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1631"
+          },
+          {
+            "museumNumber": "Oc,G.T.1718 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1718"
+          },
+          {
+            "museumNumber": "Oc1920,0506.89 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-89"
+          },
+          {
+            "museumNumber": "Oc,G.T.1583 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1583"
+          }
+        ]
+      },
+      {
+        "page": 4,
+        "cardCount": 100,
+        "distinctObjectUrls": 100,
+        "records": [
+          {
+            "museumNumber": "Oc,B30.12 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-12"
+          },
+          {
+            "museumNumber": "Oc,G.T.1473 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1473"
+          },
+          {
+            "museumNumber": "Oc,G.T.1711 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1711"
+          },
+          {
+            "museumNumber": "Oc,G.T.1463 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1463"
+          },
+          {
+            "museumNumber": "Oc,G.T.1505 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1505"
+          },
+          {
+            "museumNumber": "Oc,G.T.1732 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1732"
+          },
+          {
+            "museumNumber": "Oc,G.T.1630 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1630"
+          },
+          {
+            "museumNumber": "Oc,G.T.1696 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1696"
+          },
+          {
+            "museumNumber": "Oc,G.T.1757 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1757"
+          },
+          {
+            "museumNumber": "Oc,G.T.1453 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1453"
+          },
+          {
+            "museumNumber": "Oc,G.T.1476 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1476"
+          },
+          {
+            "museumNumber": "Oc1920,0506.20 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-20"
+          },
+          {
+            "museumNumber": "Oc1920,0506.5 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-5"
+          },
+          {
+            "museumNumber": "Oc,G.T.1472 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1472"
+          },
+          {
+            "museumNumber": "Oc1920,0506.23 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-23"
+          },
+          {
+            "museumNumber": "Oc,G.T.1538 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1538"
+          },
+          {
+            "museumNumber": "Oc,G.T.1573 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1573"
+          },
+          {
+            "museumNumber": "Oc,G.T.1547 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1547"
+          },
+          {
+            "museumNumber": "Oc,G.T.1579 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1579"
+          },
+          {
+            "museumNumber": "Oc1920,0506.42 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-42"
+          },
+          {
+            "museumNumber": "Oc,G.T.1713 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1713"
+          },
+          {
+            "museumNumber": "Oc,B30.6 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-6"
+          },
+          {
+            "museumNumber": "Oc,G.T.1468 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1468"
+          },
+          {
+            "museumNumber": "Oc1920,0506.34 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-34"
+          },
+          {
+            "museumNumber": "Oc,G.T.1664 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1664"
+          },
+          {
+            "museumNumber": "Oc,G.T.1485 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1485"
+          },
+          {
+            "museumNumber": "Oc1920,0506.86 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-86"
+          },
+          {
+            "museumNumber": "Oc1920,0506.50 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-50"
+          },
+          {
+            "museumNumber": "Oc,G.T.1772 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1772"
+          },
+          {
+            "museumNumber": "Oc,G.T.1507 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1507"
+          },
+          {
+            "museumNumber": "Oc,B30.9 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-9"
+          },
+          {
+            "museumNumber": "Oc,G.T.1629 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1629"
+          },
+          {
+            "museumNumber": "Oc,G.T.1470 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1470"
+          },
+          {
+            "museumNumber": "Oc,G.T.1740 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1740"
+          },
+          {
+            "museumNumber": "Oc,G.T.1660 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1660"
+          },
+          {
+            "museumNumber": "Oc,G.T.1743 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1743"
+          },
+          {
+            "museumNumber": "Oc,G.T.1542 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1542"
+          },
+          {
+            "museumNumber": "Oc,G.T.1779 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1779"
+          },
+          {
+            "museumNumber": "Oc,G.T.1590 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1590"
+          },
+          {
+            "museumNumber": "Oc,G.T.1501 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1501"
+          },
+          {
+            "museumNumber": "Oc,G.T.1606 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1606"
+          },
+          {
+            "museumNumber": "Oc,G.T.1639 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1639"
+          },
+          {
+            "museumNumber": "Oc,G.T.1712 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1712"
+          },
+          {
+            "museumNumber": "Oc,G.T.1506 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1506"
+          },
+          {
+            "museumNumber": "Oc,G.T.1717 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1717"
+          },
+          {
+            "museumNumber": "Oc,G.T.1642 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1642"
+          },
+          {
+            "museumNumber": "Oc,G.T.1723 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1723"
+          },
+          {
+            "museumNumber": "Oc,G.T.1750 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1750"
+          },
+          {
+            "museumNumber": "Oc1920,0506.52 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-52"
+          },
+          {
+            "museumNumber": "Oc1920,0506.22 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-22"
+          },
+          {
+            "museumNumber": "Oc,G.T.1746 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1746"
+          },
+          {
+            "museumNumber": "Oc,B30.5 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-5"
+          },
+          {
+            "museumNumber": "Oc,G.T.1756 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1756"
+          },
+          {
+            "museumNumber": "Oc1920,0506.31 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-31"
+          },
+          {
+            "museumNumber": "Oc,G.T.1646 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1646"
+          },
+          {
+            "museumNumber": "Oc,G.T.1688 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1688"
+          },
+          {
+            "museumNumber": "Oc,G.T.1566 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1566"
+          },
+          {
+            "museumNumber": "Oc,G.T.1551 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1551"
+          },
+          {
+            "museumNumber": "Oc,G.T.1758 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1758"
+          },
+          {
+            "museumNumber": "Oc,G.T.1687 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1687"
+          },
+          {
+            "museumNumber": "Oc,G.T.1656 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1656"
+          },
+          {
+            "museumNumber": "Oc1920,0506.63 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-63"
+          },
+          {
+            "museumNumber": "Oc1920,0506.15 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-15"
+          },
+          {
+            "museumNumber": "Oc,G.T.1529 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1529"
+          },
+          {
+            "museumNumber": "Oc,G.T.1555 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1555"
+          },
+          {
+            "museumNumber": "Oc,G.T.1636 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1636"
+          },
+          {
+            "museumNumber": "Oc,G.T.1635 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1635"
+          },
+          {
+            "museumNumber": "Oc,G.T.1570 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1570"
+          },
+          {
+            "museumNumber": "Oc,G.T.1670 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1670"
+          },
+          {
+            "museumNumber": "Oc,G.T.1777 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1777"
+          },
+          {
+            "museumNumber": "Oc,G.T.1599 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1599"
+          },
+          {
+            "museumNumber": "Oc,G.T.1737 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1737"
+          },
+          {
+            "museumNumber": "Oc,G.T.1700 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1700"
+          },
+          {
+            "museumNumber": "Oc1920,0506.73 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-73"
+          },
+          {
+            "museumNumber": "Oc,G.T.1676 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1676"
+          },
+          {
+            "museumNumber": "Oc1920,0506.70 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-70"
+          },
+          {
+            "museumNumber": "Oc,G.T.1741 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1741"
+          },
+          {
+            "museumNumber": "Oc,G.T.1679 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1679"
+          },
+          {
+            "museumNumber": "Oc,G.T.1522 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1522"
+          },
+          {
+            "museumNumber": "Oc,G.T.1465 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1465"
+          },
+          {
+            "museumNumber": "Oc,G.T.1708 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1708"
+          },
+          {
+            "museumNumber": "Oc,G.T.1776 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1776"
+          },
+          {
+            "museumNumber": "Oc,G.T.1540 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1540"
+          },
+          {
+            "museumNumber": "Oc1920,0506.38 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-38"
+          },
+          {
+            "museumNumber": "Oc,G.T.1719 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1719"
+          },
+          {
+            "museumNumber": "Oc1920,0506.14 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-14"
+          },
+          {
+            "museumNumber": "Oc,G.T.1784 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1784"
+          },
+          {
+            "museumNumber": "Oc1920,0506.66 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-66"
+          },
+          {
+            "museumNumber": "Oc,G.T.1489 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1489"
+          },
+          {
+            "museumNumber": "Oc,G.T.1509 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1509"
+          },
+          {
+            "museumNumber": "Oc,G.T.1456 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1456"
+          },
+          {
+            "museumNumber": "Oc,B30.11 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-B30-11"
+          },
+          {
+            "museumNumber": "Oc,G.T.1581 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1581"
+          },
+          {
+            "museumNumber": "Oc1920,0506.74 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-74"
+          },
+          {
+            "museumNumber": "Oc,G.T.1643 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1643"
+          },
+          {
+            "museumNumber": "Oc,G.T.1649 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1649"
+          },
+          {
+            "museumNumber": "Oc,G.T.1556 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1556"
+          },
+          {
+            "museumNumber": "Oc,G.T.1492 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1492"
+          },
+          {
+            "museumNumber": "Oc,G.T.1773 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1773"
+          },
+          {
+            "museumNumber": "Oc,G.T.1521 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1521"
+          }
+        ]
+      },
+      {
+        "page": 5,
+        "cardCount": 39,
+        "distinctObjectUrls": 39,
+        "records": [
+          {
+            "museumNumber": "Oc,G.T.1512 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1512"
+          },
+          {
+            "museumNumber": "Oc,G.T.1500 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1500"
+          },
+          {
+            "museumNumber": "Oc,G.T.1460 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1460"
+          },
+          {
+            "museumNumber": "Oc,G.T.1626 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1626"
+          },
+          {
+            "museumNumber": "Oc,G.T.1727 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1727"
+          },
+          {
+            "museumNumber": "Oc1920,0506.77 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-77"
+          },
+          {
+            "museumNumber": "Oc,G.T.1690 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1690"
+          },
+          {
+            "museumNumber": "Oc,G.T.1754 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1754"
+          },
+          {
+            "museumNumber": "Oc,G.T.1748 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1748"
+          },
+          {
+            "museumNumber": "Oc1920,0506.81 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-81"
+          },
+          {
+            "museumNumber": "Oc,G.T.1632 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1632"
+          },
+          {
+            "museumNumber": "Oc,G.T.1616 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1616"
+          },
+          {
+            "museumNumber": "Oc,G.T.1760 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1760"
+          },
+          {
+            "museumNumber": "Oc,G.T.1588 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1588"
+          },
+          {
+            "museumNumber": "Oc1920,0506.16 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-16"
+          },
+          {
+            "museumNumber": "Oc,G.T.1669 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1669"
+          },
+          {
+            "museumNumber": "Oc,G.T.1681 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1681"
+          },
+          {
+            "museumNumber": "Oc,G.T.1698 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1698"
+          },
+          {
+            "museumNumber": "Oc,G.T.1710 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1710"
+          },
+          {
+            "museumNumber": "Oc,G.T.1477 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1477"
+          },
+          {
+            "museumNumber": "Oc,G.T.1680 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1680"
+          },
+          {
+            "museumNumber": "Oc,G.T.1545 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1545"
+          },
+          {
+            "museumNumber": "Oc,G.T.1523 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1523"
+          },
+          {
+            "museumNumber": "Oc,G.T.1650 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1650"
+          },
+          {
+            "museumNumber": "Oc,G.T.1607 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1607"
+          },
+          {
+            "museumNumber": "Oc1920,0506.25 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-25"
+          },
+          {
+            "museumNumber": "Oc1920,0506.82 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-82"
+          },
+          {
+            "museumNumber": "Oc,G.T.1734 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1734"
+          },
+          {
+            "museumNumber": "Oc,G.T.1530 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1530"
+          },
+          {
+            "museumNumber": "Oc,G.T.1778 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1778"
+          },
+          {
+            "museumNumber": "Oc,G.T.1706 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1706"
+          },
+          {
+            "museumNumber": "Oc,G.T.1625 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1625"
+          },
+          {
+            "museumNumber": "Oc,G.T.1725 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1725"
+          },
+          {
+            "museumNumber": "Oc,G.T.1462 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1462"
+          },
+          {
+            "museumNumber": "Oc,G.T.1666 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1666"
+          },
+          {
+            "museumNumber": "Oc,G.T.1766 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1766"
+          },
+          {
+            "museumNumber": "Oc1920,0506.11 |",
+            "url": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-11"
+          },
+          {
+            "museumNumber": "Oc,G.T.1475 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1475"
+          },
+          {
+            "museumNumber": "Oc,G.T.1597 |",
+            "url": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1597"
+          }
+        ]
+      }
+    ]
+  },
+  "schlosser": {
+    "authority": {
+      "name": "Katesa Schlosser",
+      "british_museum_authority_id": "BIOG180580",
+      "url": "https://www.britishmuseum.org/collection/term/BIOG180580",
+      "live_confirmation": "The authority page was opened in Chromium on 2026-09-30; visible authority result identified Katesa Schlosser and reported 1,621 related objects across 17 pages. The broad related-object list was not paged."
+    },
+    "outcome": "Locality-bounded retained routes and targeted Rapa Nui searches isolate exact visible card-level Schlosser attributions without paging the broad 1,621-result authority route.",
+    "counts": {
+      "exact_card_level_schlosser_candidates_unique": 111,
+      "exact_candidates_in_retained_1356_catalogue_inventory": 111,
+      "exact_candidates_already_in_reviewed_75": 26,
+      "exact_candidates_outside_reviewed_75": 85,
+      "exact_candidates_outside_review_and_current_collection": 85,
+      "exact_candidates_in_current_collection": 5,
+      "exact_candidates_in_40_locality_authority_routes": 71,
+      "exact_candidates_outside_review_within_locality_routes": 55,
+      "A34_A35_series_URLs_in_40_locality_routes_series_membership_only": 71,
+      "A34_A35_series_URLs_outside_reviewed_75_series_membership_only": 55,
+      "locality_route_count": 40,
+      "locality_route_memberships_total": 273,
+      "unique_URLs_across_locality_routes": 248,
+      "easter_island_keyword_cards": 1021,
+      "easter_island_keyword_pages": 11,
+      "union_exact_maker_candidates_across_retained_keyword_and_authority_sets": 111
+    },
+    "productionPlaceCounts": {
+      "Rano Raraku": 20,
+      "Easter Island": 3,
+      "Ahu Akivi": 2,
+      "Hanga Roa": 38,
+      "Rano Kao": 2,
+      "Orongo": 5,
+      "Ahu Vinapu": 4,
+      "Anakena Beach": 1,
+      "Anakena (district)": 2,
+      "Puna Pau": 4,
+      "Bay La Perouse": 3,
+      "Mataveri": 2,
+      "Hotu Matua": 5,
+      "Tahai": 14,
+      "Ahu Ko Te Riku": 2,
+      "Ahu Tahai": 2,
+      "Ahu Vai Uri": 2
+    },
+    "recommendedClusters": [
+      {
+        "name": "Rano Raraku photographic sequence",
+        "candidate_count": 20,
+        "places": [
+          "Rano Raraku"
+        ],
+        "reason": "Largest sharply named site cluster; keep as its own coherent sequence."
+      },
+      {
+        "name": "Hanga Roa and Tahai complex",
+        "candidate_count": 58,
+        "places": [
+          "Hanga Roa",
+          "Tahai",
+          "Ahu Tahai",
+          "Ahu Ko Te Riku",
+          "Ahu Vai Uri"
+        ],
+        "reason": "Strong settlement and ceremonial-site grouping; preserve each recorded place label within the cluster."
+      },
+      {
+        "name": "Orongo and Rano Kao",
+        "candidate_count": 7,
+        "places": [
+          "Orongo",
+          "Rano Kao"
+        ],
+        "reason": "Adjacent ceremonial/village and volcanic-rim locations; retain the named subsite labels."
+      },
+      {
+        "name": "Puna Pau and Vinapu",
+        "candidate_count": 8,
+        "places": [
+          "Puna Pau",
+          "Ahu Vinapu"
+        ],
+        "reason": "Separate production/site visits suitable for a paired south-western route cluster."
+      },
+      {
+        "name": "North and east coast named sites",
+        "candidate_count": 13,
+        "places": [
+          "Bay La Perouse",
+          "Anakena (district)",
+          "Anakena Beach",
+          "Ahu Akivi",
+          "Hotu Matua"
+        ],
+        "reason": "Keep individual labels and avoid assuming that the eponym is a photographed subject."
+      },
+      {
+        "name": "Mataveri and island-wide/unspecified locations",
+        "candidate_count": 5,
+        "places": [
+          "Mataveri",
+          "Easter Island"
+        ],
+        "reason": "Lower locality precision; do not force into a site-specific cluster."
+      }
+    ],
+    "targetedQueryRoutes": [
+      {
+        "label": "Easter Island keyword search",
+        "retained_file": "easter-island-1021-results.json",
+        "unique_cards_in_file": 1021,
+        "distinct_page_urls": [
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=10",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=11",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=2",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=3",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+          "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9"
+        ]
+      },
+      {
+        "label": "Rapa Nui keyword search",
+        "retained_file": "rapa-nui-search-candidates.json",
+        "unique_cards_in_file": 68,
+        "distinct_page_urls": [
+          "https://www.britishmuseum.org/collection/search?keyword=Rapa&keyword=Nui"
+        ]
+      },
+      {
+        "label": "Orongo authority route",
+        "retained_file": "orongo-candidates.json",
+        "unique_cards_in_file": 41,
+        "distinct_page_urls": [
+          "https://www.britishmuseum.org/collection/term/x66696"
+        ]
+      },
+      {
+        "label": "Easter Island authority route",
+        "retained_file": "authority-search-candidates.json",
+        "unique_cards_in_file": 463,
+        "distinct_page_urls": [
+          "https://www.britishmuseum.org/collection/term/x69553"
+        ]
+      },
+      {
+        "label": "Rapanui keyword search",
+        "retained_file": "rapanui-332-candidates.json",
+        "unique_cards_in_file": 332,
+        "distinct_page_urls": [
+          "https://www.britishmuseum.org/collection/search?keyword=Rapanui"
+        ]
+      }
+    ],
+    "localityAuthorityRoutes": [
+      {
+        "name": "Ahu Akahanga",
+        "id": "x112560",
+        "url": "https://www.britishmuseum.org/collection/term/x112560",
+        "cards": 7
+      },
+      {
+        "name": "Ahu Akivi",
+        "id": "x112645",
+        "url": "https://www.britishmuseum.org/collection/term/x112645",
+        "cards": 2
+      },
+      {
+        "name": "Ahu Hanga Te Tenga",
+        "id": "x112506",
+        "url": "https://www.britishmuseum.org/collection/term/x112506",
+        "cards": 1
+      },
+      {
+        "name": "Ahu Heki'i",
+        "id": "x112572",
+        "url": "https://www.britishmuseum.org/collection/term/x112572",
+        "cards": 2
+      },
+      {
+        "name": "Ahu Puna Kape",
+        "id": "x112608",
+        "url": "https://www.britishmuseum.org/collection/term/x112608",
+        "cards": 1
+      },
+      {
+        "name": "Ahu Runga Vae",
+        "id": "x112500",
+        "url": "https://www.britishmuseum.org/collection/term/x112500",
+        "cards": 1
+      },
+      {
+        "name": "Ahu Te Pa Haha Tea",
+        "id": "x112569",
+        "url": "https://www.britishmuseum.org/collection/term/x112569",
+        "cards": 1
+      },
+      {
+        "name": "Ahu Tongariki",
+        "id": "x112498",
+        "url": "https://www.britishmuseum.org/collection/term/x112498",
+        "cards": 13
+      },
+      {
+        "name": "Ahu Ura Uranga Te Mahina",
+        "id": "x112627",
+        "url": "https://www.britishmuseum.org/collection/term/x112627",
+        "cards": 3
+      },
+      {
+        "name": "Ahu Vaihu",
+        "id": "x112505",
+        "url": "https://www.britishmuseum.org/collection/term/x112505",
+        "cards": 2
+      },
+      {
+        "name": "Ahu Vinapu",
+        "id": "x112661",
+        "url": "https://www.britishmuseum.org/collection/term/x112661",
+        "cards": 5
+      },
+      {
+        "name": "Ahutepeu",
+        "id": "x66875",
+        "url": "https://www.britishmuseum.org/collection/term/x66875",
+        "cards": 1
+      },
+      {
+        "name": "Ana Havea",
+        "id": "x112576",
+        "url": "https://www.britishmuseum.org/collection/term/x112576",
+        "cards": 2
+      },
+      {
+        "name": "Ana Kai Tangata",
+        "id": "x112509",
+        "url": "https://www.britishmuseum.org/collection/term/x112509",
+        "cards": 4
+      },
+      {
+        "name": "Anakena (district)",
+        "id": "x114373",
+        "url": "https://www.britishmuseum.org/collection/term/x114373",
+        "cards": 3
+      },
+      {
+        "name": "Bay La Perouse",
+        "id": "x112663",
+        "url": "https://www.britishmuseum.org/collection/term/x112663",
+        "cards": 3
+      },
+      {
+        "name": "Hanga Hoonu",
+        "id": "x112550",
+        "url": "https://www.britishmuseum.org/collection/term/x112550",
+        "cards": 1
+      },
+      {
+        "name": "Hanga Nui",
+        "id": "x112556",
+        "url": "https://www.britishmuseum.org/collection/term/x112556",
+        "cards": 1
+      },
+      {
+        "name": "Hanga Roa",
+        "id": "x66877",
+        "url": "https://www.britishmuseum.org/collection/term/x66877",
+        "cards": 44
+      },
+      {
+        "name": "Hanga Te'e",
+        "id": "x112504",
+        "url": "https://www.britishmuseum.org/collection/term/x112504",
+        "cards": 1
+      },
+      {
+        "name": "Hotu Iti",
+        "id": "x112555",
+        "url": "https://www.britishmuseum.org/collection/term/x112555",
+        "cards": 7
+      },
+      {
+        "name": "Marotiri",
+        "id": "x112537",
+        "url": "https://www.britishmuseum.org/collection/term/x112537",
+        "cards": 4
+      },
+      {
+        "name": "Mataveri",
+        "id": "x112541",
+        "url": "https://www.britishmuseum.org/collection/term/x112541",
+        "cards": 5
+      },
+      {
+        "name": "Motu Iti",
+        "id": "x112568",
+        "url": "https://www.britishmuseum.org/collection/term/x112568",
+        "cards": 2
+      },
+      {
+        "name": "Motu Kao Kao",
+        "id": "x112566",
+        "url": "https://www.britishmuseum.org/collection/term/x112566",
+        "cards": 2
+      },
+      {
+        "name": "Motu Nui",
+        "id": "x112567",
+        "url": "https://www.britishmuseum.org/collection/term/x112567",
+        "cards": 6
+      },
+      {
+        "name": "Otu’u",
+        "id": "x112552",
+        "url": "https://www.britishmuseum.org/collection/term/x112552",
+        "cards": 1
+      },
+      {
+        "name": "Poike",
+        "id": "x112536",
+        "url": "https://www.britishmuseum.org/collection/term/x112536",
+        "cards": 9
+      },
+      {
+        "name": "Poiki",
+        "id": "x66872",
+        "url": "https://www.britishmuseum.org/collection/term/x66872",
+        "cards": 38
+      },
+      {
+        "name": "Puna Kape",
+        "id": "x66878",
+        "url": "https://www.britishmuseum.org/collection/term/x66878",
+        "cards": 1
+      },
+      {
+        "name": "Ra Hi O",
+        "id": "x66874",
+        "url": "https://www.britishmuseum.org/collection/term/x66874",
+        "cards": 59
+      },
+      {
+        "name": "Raka",
+        "id": "x63003",
+        "url": "https://www.britishmuseum.org/collection/term/x63003",
+        "cards": 1
+      },
+      {
+        "name": "Rana Raka",
+        "id": "x66873",
+        "url": "https://www.britishmuseum.org/collection/term/x66873",
+        "cards": 3
+      },
+      {
+        "name": "Rano Aroi",
+        "id": "x66968",
+        "url": "https://www.britishmuseum.org/collection/term/x66968",
+        "cards": 1
+      },
+      {
+        "name": "Rano Kao",
+        "id": "x66876",
+        "url": "https://www.britishmuseum.org/collection/term/x66876",
+        "cards": 19
+      },
+      {
+        "name": "Rano Raraku",
+        "id": "x66969",
+        "url": "https://www.britishmuseum.org/collection/term/x66969",
+        "cards": 0
+      },
+      {
+        "name": "Runga Vai",
+        "id": "x112511",
+        "url": "https://www.britishmuseum.org/collection/term/x112511",
+        "cards": 2
+      },
+      {
+        "name": "Tahai",
+        "id": "x112687",
+        "url": "https://www.britishmuseum.org/collection/term/x112687",
+        "cards": 14
+      },
+      {
+        "name": "Toa Toa",
+        "id": "x112553",
+        "url": "https://www.britishmuseum.org/collection/term/x112553",
+        "cards": 1
+      },
+      {
+        "name": "Vinapu",
+        "id": "x114268",
+        "url": "https://www.britishmuseum.org/collection/term/x114268",
+        "cards": 0
+      }
+    ],
+    "candidates": [
+      {
+        "museumNumber": "Oc,A34.1",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-1",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.10",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-10",
+        "productionPlace": "Photographed in: Easter Island",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.11",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-11",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.12",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-12",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.13",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-13",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.14",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-14",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.15",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-15",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.16",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-16",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.17",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-17",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.18",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-18",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.19",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-19",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.2",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-2",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.20",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-20",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.22",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-22",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=10",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.23",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-23",
+        "productionPlace": "Photographed in: Ahu Akivi",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+        "localityAuthorities": [
+          "Ahu Akivi"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.24",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-24",
+        "productionPlace": "Photographed in: Ahu Akivi",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Ahu Akivi"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.25",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-25",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [
+          "Hanga Roa",
+          "Rano Kao"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.26",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-26",
+        "productionPlace": "Photographed in: Rano Kao",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Rano Kao"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.27",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-27",
+        "productionPlace": "Photographed in: Rano Kao",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Rano Kao"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.28",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-28",
+        "productionPlace": "Photographed in: Orongo",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Motu Iti",
+          "Motu Kao Kao",
+          "Motu Nui"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.29",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-29",
+        "productionPlace": "Photographed in: Orongo",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.3",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-3",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.30",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-30",
+        "productionPlace": "Photographed in: Orongo",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "integrated",
+          "sourceId": "bm-photo-oc-a34-30"
+        },
+        "currentSourceId": "bm-photo-oc-a34-30"
+      },
+      {
+        "museumNumber": "Oc,A34.31",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-31",
+        "productionPlace": "Photographed in: Orongo",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "integrated",
+          "sourceId": "bm-photo-oc-a34-31"
+        },
+        "currentSourceId": "bm-photo-oc-a34-31"
+      },
+      {
+        "museumNumber": "Oc,A34.32",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-32",
+        "productionPlace": "Photographed in: Orongo",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.33",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-33",
+        "productionPlace": "Photographed in: Easter Island",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+        "localityAuthorities": [
+          "Ahu Vinapu"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.34",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-34",
+        "productionPlace": "Photographed in: Ahu Vinapu",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Ahu Vinapu"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.35",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-35",
+        "productionPlace": "Photographed in: Ahu Vinapu",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Ahu Vinapu"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.36",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-36",
+        "productionPlace": "Photographed in: Ahu Vinapu",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Ahu Vinapu"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.37",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-37",
+        "productionPlace": "Photographed in: Ahu Vinapu",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [
+          "Ahu Vinapu"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.38",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-38",
+        "productionPlace": "Photographed in: Anakena Beach",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.39",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-39",
+        "productionPlace": "Photographed in: Anakena (district)",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Anakena (district)"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.4",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-4",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.40",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-40",
+        "productionPlace": "Photographed in: Anakena (district)",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Anakena (district)"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.41",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-41",
+        "productionPlace": "Photographed in: Puna Pau",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.42",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-42",
+        "productionPlace": "Photographed in: Puna Pau",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.43",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-43",
+        "productionPlace": "Photographed in: Puna Pau",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.44",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-44",
+        "productionPlace": "Photographed in: Puna Pau",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=2",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.45",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-45",
+        "productionPlace": "Photographed in: Easter Island",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.46",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-46",
+        "productionPlace": "Photographed in: Bay La Perouse",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Bay La Perouse"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.47",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-47",
+        "productionPlace": "Photographed in: Bay La Perouse",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Bay La Perouse"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.48",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-48",
+        "productionPlace": "Photographed in: Bay La Perouse",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Bay La Perouse"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.5",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-5",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.6",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-6",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.7",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-7",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.8",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-8",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A34.9",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-9",
+        "productionPlace": "Photographed in: Rano Raraku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.1",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-1",
+        "productionPlace": "Photographed in: Mataveri",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Mataveri"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.10",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-10",
+        "productionPlace": "Photographed in: Hotu Matua",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=10",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.11",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-11",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.12",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-12",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.13",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-13",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.14",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-14",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.15",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-15",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.16",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-16",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.17",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-17",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.18",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-18",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.19",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-19",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.2",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-2",
+        "productionPlace": "Photographed in: Mataveri",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Mataveri"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.20",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-20",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.21",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-21",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.22",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-22",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.23",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-23",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.24",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-24",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.25",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-25",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.26",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-26",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.27",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-27",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.28",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-28",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.29",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-29",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.3",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-3",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.30",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-30",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.31",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-31",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.32",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-32",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=8",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.33",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-33",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=10",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.34",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-34",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.35",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-35",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.36",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-36",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.37",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-37",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=10",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.38",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-38",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.39",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-39",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.4",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-4",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.40",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-40",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.41",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-41",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=10",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.42",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-42",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=9",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.43",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-43",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.44",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-44",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.45",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-45",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=3",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "integrated",
+          "sourceId": "bm-photo-oc-a35-45"
+        },
+        "currentSourceId": "bm-photo-oc-a35-45"
+      },
+      {
+        "museumNumber": "Oc,A35.46",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-46",
+        "productionPlace": "Photographed in: Ahu Ko Te Riku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=2",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.47",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-47",
+        "productionPlace": "Photographed in: Ahu Ko Te Riku",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "integrated",
+          "sourceId": "bm-photo-oc-a35-47"
+        },
+        "currentSourceId": "bm-photo-oc-a35-47"
+      },
+      {
+        "museumNumber": "Oc,A35.49",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-49",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.5",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-5",
+        "productionPlace": "Photographed in: Hanga Roa",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.50",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-50",
+        "productionPlace": "Photographed in: Ahu Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=2",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.51",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-51",
+        "productionPlace": "Photographed in: Ahu Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=3",
+        "localityAuthorities": [],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.52",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-52",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.53",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-53",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=3",
+        "localityAuthorities": [
+          "Hanga Roa",
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "integrated",
+          "sourceId": "bm-photo-oc-a35-53"
+        },
+        "currentSourceId": "bm-photo-oc-a35-53"
+      },
+      {
+        "museumNumber": "Oc,A35.54",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-54",
+        "productionPlace": "Photographed in: Ahu Vai Uri",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=3",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.55",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-55",
+        "productionPlace": "Photographed in: Ahu Vai Uri",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=3",
+        "localityAuthorities": [
+          "Hanga Roa"
+        ],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.56",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-56",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=2",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.57",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-57",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=3",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.58",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-58",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=2",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.59",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-59",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=2",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.6",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-6",
+        "productionPlace": "Photographed in: Hotu Matua",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=7",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.60",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-60",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.61",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-61",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.62",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-62",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.63",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-63",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=5",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.64",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-64",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=2",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.65",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-65",
+        "productionPlace": "Photographed in: Tahai",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island",
+        "localityAuthorities": [
+          "Tahai"
+        ],
+        "previousReview": {
+          "disposition": "deferred",
+          "sourceId": null
+        },
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.7",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-7",
+        "productionPlace": "Photographed in: Hotu Matua",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=4",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.8",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-8",
+        "productionPlace": "Photographed in: Hotu Matua",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      },
+      {
+        "museumNumber": "Oc,A35.9",
+        "url": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-9",
+        "productionPlace": "Photographed in: Hotu Matua",
+        "evidenceRoute": "https://www.britishmuseum.org/collection/search?keyword=Easter&keyword=Island&view=grid&sort=object_name__asc&page=6",
+        "localityAuthorities": [],
+        "previousReview": null,
+        "currentSourceId": null
+      }
+    ],
+    "limitations": [
+      "The 1,621 related-object authority list was deliberately not traversed because it is broad and unrelated to the locality-bounded scope.",
+      "The 40 retained locality authority routes total 273 memberships but 248 unique URLs; they are one-page retained observations and do not prove every BM locality authority was found. Orongo was retained separately.",
+      "Search captures are card-level evidence. Exact visible Producer name field supports maker attribution, but does not replace detail-page review of date, description, image subject, or source suitability.",
+      "The 75-record representation review and current collection overlap are URL/museum-number deduplications. A result absent from those sets is a candidate for review, not an approved source or object.",
+      "Names such as “Hotu Matua” and “Easter Island” are copied from the catalogue production-place field and may be broad, ambiguous, or person/site labels; preserve them as attributed metadata.",
+      "A34/A35 accession-series membership is only a discovery cross-check; it is not proof of Schlosser authorship."
+    ]
+  }
+}

@@ -70,11 +70,21 @@ identity decisions or source claims. Search-page captures and extraction code
 remain private scratch; substantive imported sources have their own registered
 captures. A search result is not a collection source.
 
-Two person routes remain bounded follow-ups. The Katherine Maria Routledge
-authority reported 439 records across five pages, but exposed only 399 object
-URLs, leaving a 40-record discrepancy. The Katesa Schlosser authority reported
-1,621 records across 17 pages; only its first page was sampled because it spans
-broad unrelated holdings. Neither route is claimed as complete coverage.
+The bounded [person-route follow-up](../evidence/british-museum-digital-collection/person-route-follow-up.json)
+resolved the apparent Routledge discrepancy. A fresh Chromium extraction found
+100 distinct object URLs on each of pages one to four and 39 on page five: all
+439 displayed records are distinct, and all 439 already occur in the retained
+1,356-URL inventory. The earlier 399 figure came from an incomplete page
+extraction, not 40 missing catalogue records.
+
+The Katesa Schlosser authority reported 1,621 records across 17 pages. Paging
+that broad person route remains poor value because it spans unrelated holdings.
+Instead, exact visible `Photographed by: Katesa Schlosser` card fields were
+intersected with the retained Rapa Nui queries and 40 named-locality routes.
+This isolated 111 attributed records already present in the catalogue inventory.
+Twenty-six were in the earlier 75-record photographic review; **85 are new to
+manual review**, including 20 at Rano Raraku and 38 catalogued under Hanga Roa.
+Accession-series membership was kept separate from photographer attribution.
 
 ## Candidate outcomes and integration
 
@@ -220,9 +230,10 @@ high-information gaps. In priority order:
    record. The BM accession identities and their histories are documented, but
    the generic Arte rows lack matching details; do not repeat the 203-page
    combined-provenance review without new evidence.
-2. Investigate the Routledge authority's 40-record discrepancy and exhaust only
-   locality-filtered or otherwise Rapa Nui-specific parts of the Schlosser
-   route. Broad person-route paging has poor expected yield.
+2. Review the 85 newly isolated Schlosser records by coherent sequence. Start
+   with the 20 Rano Raraku records, then split the 38 Hanga Roa records by their
+   detail-level subjects; the visible place field is a discovery filter, not a
+   depicted-object identity.
 3. Revisit the 67 deferred representations in coherent subject clusters when a
    named site, object or community account provides an identity anchor.
 4. Use the five retained thematic briefs for the next cross-institution
