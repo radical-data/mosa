@@ -24,7 +24,11 @@ sources. Do not copy search-result inventories or accepted claims here.
 
 Account for every candidate in the bounded pass, grouping identical outcomes
 where useful: new object, existing object, unresolved identity, or excluded
-with a reason. Link authoritative records; do not copy claims or catalogue
+with a reason. Also account for useful representation or documentary sources,
+including those whose depicted objects remain unresolved. Follow the
+[research guide](../../docs/research.md#discovery-strategy) to distinguish
+geographic provenance, cultural or maker attribution and evidence role;
+material can be both from and about Rapa Nui. Link authoritative records; do not copy claims or catalogue
 fields. Distinguish identity from integration and explain blocked or deferred
 stages. An optional compact table:
 
