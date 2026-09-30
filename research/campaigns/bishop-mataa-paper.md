@@ -1,3 +1,7 @@
+---
+started: "2026-09-30"
+---
+
 # Bishop Museum mata‘a paper
 
 ## Question and scope
@@ -12,19 +16,21 @@ record. No museum-wide census or automatic object creation is implied.
 
 The [working identifier list](bishop-mataa-paper/sample-identifiers.txt) is shared
 so another contributor can continue without repeating transcription. It contains
-labels and page locators, not a second source record or catalogue. Its entries
-still need identity reconciliation; a missing literal identifier is not proof
-that the object is absent from MoSA. The source notes also record an unresolved
-count discrepancy in the paper.
+labels and page locators, not a second source record or catalogue. The source
+record holds transcription decisions and object-specific identity findings; the
+rest of the list remains unreconciled.
 
 The supplied PDF, page images and raw OCR remain private. No PDF copy is included
 in Git or the website. The factual working transcription is available separately.
 
 ## Next action
 
-Take a small catalogue-matching batch, starting with the three labels discussed
-individually in the source notes. Check displayed identifiers and supporting
-object details before proposing a new object or match. Record verified facts
-and source-specific reasoning in the collection. Keep unresolved entries in
-this working list only while they help continuation; do not create a second
-report or register for each successful import.
+Investigate the accession conventions behind the paper's specimen labels using
+a published Bishop inventory or collection documentation. Start with C8353,
+which the paper explicitly calls an accession number, then establish whether
+the B3481 sample suffixes correspond to institutional object numbers. The
+separate [museum search source](../../collection/sources/bishop-ethnology-search.json)
+records the completed queries, preserved responses and their limits; do not
+repeat those exact searches without new evidence or changes to the catalogue.
+Keep the paper's sample labels distinct from confirmed museum accessions, and
+do not repeat the PDF transcription.

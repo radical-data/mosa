@@ -4,8 +4,79 @@
   "language": "en",
   "notes": {
     "language": "en-GB",
-    "text": "Reviewed a privately supplied PDF on 2026-09-30 after direct publisher downloads returned 404. The supplied copy's SHA-256 is 31157ea92bccf67883170f34abd6ca2d31de3c5665051816ff1b5ae63512ef8c; its original retrieval date is unknown. Permission to share the PDF has not been granted, so no capture is registered. PDF, page renders and raw OCR remain private.\n\nThe paper reports 332 analysed mata‘a (302 complete and 30 broken) on printed p. 303. The appendix, printed pp. 324–334, has 332 distinct Sample No. labels, transcribed visually with OCR used only to locate rows. Page row counts are 29, 32, 29, 32, 30, 32, 29, 32, 29, 32 and 26. Repeated B3481 letter suffixes, including lowercase ell, were visually distinguished. These analytical specimen labels do not by themselves establish current catalogue identities. The acquisition counts on printed p. 304 sum to 333 (232 + 81 + 20); the difference from the analysed sample and appendix is unexplained.\n\nThree individually discussed labels are useful starting points for reconciliation: C8353 (appendix p. 334; discussion pp. 314–315) is explicitly called an accession number in the text; its SVM assignment is Motu Iti and DFA assignment Orito. B3481c and B3481bbbb (appendix p. 325; discussion p. 315) have Rano Kau I assignments by both methods. All three are described as complete mata‘a.\n\nOn 2026-09-30, a literal identifier comparison with current collection JSON found no matching appendix label. Existing Bishop-linked source-table entries lacked recorded accessions and described other artefact types. This comparison was not a catalogue-wide search and does not resolve identities where numbers are missing. No object links or structured claims are asserted by this source record pending reconciliation."
+    "text": "Reviewed a privately supplied PDF on 2026-09-30 after direct publisher downloads returned 404. The supplied copy's SHA-256 is 31157ea92bccf67883170f34abd6ca2d31de3c5665051816ff1b5ae63512ef8c; its original retrieval date is unknown. Permission to share the PDF has not been granted, so no capture is registered. PDF, page renders and raw OCR remain private.\n\nThe paper reports 332 analysed mata‘a (302 complete and 30 broken) on printed p. 303. The appendix, printed pp. 324–334, has 332 distinct Sample No. labels, transcribed visually with OCR used only to locate rows. Page row counts are 29, 32, 29, 32, 30, 32, 29, 32, 29, 32 and 26. Repeated B3481 letter suffixes, including lowercase ell, were visually distinguished. These analytical specimen labels do not by themselves establish current catalogue identities. The acquisition counts on printed p. 304 sum to 333 (232 + 81 + 20); the difference from the analysed sample and appendix is unexplained.\n\nIdentity reconciliation (2026-09-30): the supplied paper and rendered pages were inspected directly. The three linked objects represent separately identifiable specimens documented in the appendix and discussion, not additional museum catalogue matches. C8353 is explicitly called an accession number on printed p. 314. B3481c and B3481bbbb are paper Sample Nos.; neither is independently verified as a museum accession. Their separate rows (appendix p. 325) and joint discussion (p. 317) support keeping them distinct. The extracted descriptions preserve the paper's wording, including analytical disagreement and uncertainty; geological source assignments do not establish manufacturing or find locations. These records do not assert present custody.\n\nThe three labels and institution-scoped variants were compared with all tracked collection JSON on 2026-09-30; no match was found. Existing Bishop-linked source claims describe other artefact types and contain no matching catalogue identifiers. Initial exact-label web-index searches returned no indexed detail pages. The subsequent museum-form searches and captured responses belong to the separate collection source bishop-ethnology-search. No present-day catalogue match or custody record was verified; the paper's B3481 sample labels remain unverified as museum accessions."
   },
-  "claims": [],
+  "claims": [
+    {
+      "id": "c8353-catalogue-number",
+      "objectId": "bishop-mataa-c8353",
+      "predicate": "catalogue_number",
+      "value": "C8353",
+      "locator": "Printed p. 314; Appendix, p. 334, Sample No. C8353"
+    },
+    {
+      "id": "c8353-classification",
+      "objectId": "bishop-mataa-c8353",
+      "predicate": "classified_as",
+      "value": "mata‘a",
+      "locator": "Appendix, p. 334, Description column"
+    },
+    {
+      "id": "c8353-completeness",
+      "objectId": "bishop-mataa-c8353",
+      "predicate": "described_as",
+      "value": "mata‘a (complete)",
+      "locator": "Appendix, p. 334, Sample No. C8353, Description column"
+    },
+    {
+      "id": "c8353-analysis",
+      "objectId": "bishop-mataa-c8353",
+      "predicate": "described_as",
+      "value": "assigned to the Orito source by the DFA and to the Motu Iti source by the SVM classification",
+      "locator": "Printed p. 312, Figure 3 caption"
+    },
+    {
+      "id": "b3481c-classification",
+      "objectId": "bishop-mataa-b3481c",
+      "predicate": "classified_as",
+      "value": "mata‘a",
+      "locator": "Appendix, p. 325, Sample No. B3481c"
+    },
+    {
+      "id": "b3481c-completeness",
+      "objectId": "bishop-mataa-b3481c",
+      "predicate": "described_as",
+      "value": "mata‘a (complete)",
+      "locator": "Appendix, p. 325, Sample No. B3481c, Description column"
+    },
+    {
+      "id": "b3481c-analysis",
+      "objectId": "bishop-mataa-b3481c",
+      "predicate": "described_as",
+      "value": "appear to be clearly associated with the Rano Kau I source",
+      "locator": "Printed p. 317"
+    },
+    {
+      "id": "b3481bbbb-classification",
+      "objectId": "bishop-mataa-b3481bbbb",
+      "predicate": "classified_as",
+      "value": "mata‘a",
+      "locator": "Appendix, p. 325, Sample No. B3481bbbb"
+    },
+    {
+      "id": "b3481bbbb-completeness",
+      "objectId": "bishop-mataa-b3481bbbb",
+      "predicate": "described_as",
+      "value": "mata‘a (complete)",
+      "locator": "Appendix, p. 325, Sample No. B3481bbbb, Description column"
+    },
+    {
+      "id": "b3481bbbb-analysis",
+      "objectId": "bishop-mataa-b3481bbbb",
+      "predicate": "described_as",
+      "value": "appear to be clearly associated with the Rano Kau I source",
+      "locator": "Printed p. 317"
+    }
+  ],
   "images": []
 }
