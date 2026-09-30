@@ -2,7 +2,8 @@
 
 ## Status
 
-Accepted
+Accepted; adapted for the static website by
+[ADR 025](025-retain-competencies-in-the-git-collection.md).
 
 ## Context
 

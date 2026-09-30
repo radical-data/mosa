@@ -1,7 +1,8 @@
 # Collection authoring and publication
 
 Every tracked record in `collection/` is public material. Git history supplies
-review, authorship and rollback. There is no separate database publishing step.
+authorship and rollback. Agents can work directly on public museum material;
+no separate publication approval or reviewer sign-off is required.
 
 ## Add or edit an object
 
@@ -72,6 +73,12 @@ Claim IDs are unique only within their source. Use short labels such as `name`,
 objects, and add a useful distinction when a predicate occurs more than once.
 Outside the source, refer to a claim as `<source-id>/<claim-id>`. Reordering an
 array must not change its claim IDs.
+
+Use optional `locator` text to identify a checked passage, for example
+`"locator": "Página 14, tabla 2, fila 6"`. Write it in the source's language;
+it appears beside the claim. Omit it when unknown and keep uncertainty in
+`value`. Existing claims do not need backfilling. Exact capture/version details
+can stay in the extraction audit.
 
 Use optional source `notes` for MoSA's research and transcription decisions:
 
@@ -427,9 +434,10 @@ navigation name obscures a source account.
 
 ## Deploy and withdraw
 
-Merging collection changes does not deploy automatically. The manually
-dispatched Website workflow builds the repository with Git LFS, deploys through
-Coolify and verifies the exact commit and both language collection pages.
+Merging collection changes does not deploy automatically. Follow the
+[release procedure](operations.md#release-the-website-and-collection) to run the
+Website workflow on `main` with `deploy` enabled. Collection and website content
+are built and released together; there is no separate database publication step.
 
 To withdraw material, delete its editorial, image reference, claim, source or
 object as appropriate, review links, and deploy the new commit. Preserve the Git

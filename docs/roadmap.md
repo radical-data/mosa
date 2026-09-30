@@ -14,8 +14,8 @@
 
 The reduced model does not implement structured provenance events, custody,
 restitution case administration, cultural-authority protocols, claim certainty
-or evidence locators. The [competency cases](test-cases/) preserve the harder
-requirements. Extend the model only when public material needs one of them.
+or structured evidence relationships. The [competency cases](test-cases/) preserve
+the harder requirements. Extend the model only when public material needs one of them.
 
 A future editing interface may be useful when Git becomes a practical barrier
 for contributors. Build it against the same small file contract before

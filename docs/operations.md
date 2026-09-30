@@ -1,12 +1,14 @@
 # Operations
 
+The website and collection deploy together from Git. Images and source captures
+use Git LFS; captures stay outside the website image. No Supabase project,
+database credentials or collection API is required.
+
 ## Local requirements
 
 Use the versions pinned in `mise.toml`. Install Git LFS and run `git lfs
 install` once per machine. `just install` installs JavaScript dependencies and
 Git hooks.
-
-The site needs no database, object storage account or collection API.
 
 ## Docker
 
@@ -42,14 +44,35 @@ The deployment script checks the application settings, triggers one deployment,
 verifies Coolify's job commit and checks both collection routes. Coolify's
 deployment history remains the record of which commit is currently live.
 
-GitHub's Website workflow is the production release path. It requires
-`COOLIFY_DEPLOY_WEBHOOK` and `COOLIFY_API_TOKEN` secrets plus the
-`PRODUCTION_URL` environment variable.
+## GitHub environment
+
+The [Website workflow](../.github/workflows/website.yml) uses
+[`website-production`](https://github.com/radical-data/mosa/settings/environments).
+Allow only branch `main`, with no tags, required reviewers, wait timer or custom
+protection rules. Keep these settings in that environment:
+
+| Name | Type | Value or purpose |
+| --- | --- | --- |
+| `COOLIFY_API_TOKEN` | Secret | Inspect and deploy the Coolify application |
+| `COOLIFY_DEPLOY_WEBHOOK` | Secret | Website application's HTTPS production webhook with its `uuid` |
+| `PRODUCTION_URL` | Variable | `https://museumofstolenartefacts.org/` |
+
+No repository-level copies, Supabase secrets or separate `production` environment
+are needed. GitHub supplies `GITHUB_SHA`.
+
+## Release the website and collection
+
+Merge into `main`, then run **Actions → Website → Run workflow** on `main` with
+`deploy` enabled. Pushes and pull requests run checks without deploying.
+The workflow verifies the build and current commit, serialises deployments,
+and checks Coolify's reported commit and both language collection pages.
+If verification fails, inspect Actions and Coolify before retrying.
 
 ## Recovery
 
 Collection and website releases are the same Git commit. Revert the faulty
-commit, run `just verify`, merge the revert and dispatch the Website workflow.
+commit, run `just verify`, merge the revert and follow the
+[release procedure](#release-the-website-and-collection).
 Do not restore an old Docker image as a durable content rollback because its
 Git state will be less clear.
 

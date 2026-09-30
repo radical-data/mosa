@@ -1,6 +1,7 @@
 # Case 10: Return of the Aberdeen Head of an Oba
 
-Status: implemented fixture and read-only explorer case.
+Status: historical fixture and explorer case; implementation removed under
+[ADR 020](../adrs/020-use-a-git-backed-public-collection.md).
 
 ## Purpose
 
