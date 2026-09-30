@@ -22,6 +22,24 @@ const source = parseSource(
 );
 
 describe("collection model", () => {
+  test("accepts an optional passage locator without changing claim wording", () => {
+    const { id: _id, ...record } = source;
+    const claim = { ...record.claims[0], locator: "Page 14, table 2, row 6" };
+    const parsed = parseSource({ ...record, claims: [claim] }, "source-one.json");
+    expect(parsed.claims[0]).toEqual(claim);
+    expect(parseSource(record, "source-one.json").claims[0].locator).toBeUndefined();
+  });
+
+  test.each([null, "", "  ", 14, { page: 14 }, ["page 14"]])(
+    "rejects malformed passage locators: %j",
+    (locator) => {
+      const { id: _id, ...record } = source;
+      expect(() =>
+        parseSource({ ...record, claims: [{ ...record.claims[0], locator }] }, "source-one.json"),
+      ).toThrow("locator must be non-empty text");
+    },
+  );
+
   test("preserves source research notes with their own language without creating claims", () => {
     const { id: _id, ...record } = source;
     const notes = { text: "Blank cells repeat the preceding holder.", language: "en-GB" };

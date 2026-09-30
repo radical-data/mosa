@@ -1,16 +1,15 @@
 import type { ImageMetadata, MarkdownInstance } from "astro";
 import {
-  type Claim,
   type CollectionImage,
   type CollectionObject,
   type EditorialMetadata,
   parseEditorialFrontmatter,
   parseObject,
   parseSource,
-  qualifyClaim,
   type Source,
   validateCollection,
 } from "./collection-model";
+import { getObjectAccounts, type SourcedClaim } from "./collection-record";
 
 const objectModules = import.meta.glob<unknown>("../../collection/objects/*.json", {
   eager: true,
@@ -48,27 +47,19 @@ export interface EditorialEntry extends EditorialMetadata {
   Content: MarkdownInstance<Record<string, unknown>>["Content"];
 }
 
-export interface SourcedClaim {
-  claim: Claim;
-  source: Source;
-}
-
 export interface SourcedImage {
   image: CollectionImage;
   source: Source;
   asset: ImageMetadata;
 }
 
-export interface ObjectSource extends Source {
-  claims: Claim[];
-  images: CollectionImage[];
-}
-
 export interface CollectionRecord {
   object: CollectionObject;
-  sources: ObjectSource[];
+  sources: Source[];
   claims: SourcedClaim[];
   foregroundedClaims: SourcedClaim[];
+  originClaims: SourcedClaim[];
+  holdingClaims: SourcedClaim[];
   images: SourcedImage[];
   editorials: EditorialEntry[];
   searchExact: string;
@@ -87,26 +78,9 @@ export const collectionObjects = checked.objects;
 export const collectionSources = checked.sources;
 
 export function getObjectRecord(objectId: string): CollectionRecord | undefined {
-  const object = checked.objects.find((entry) => entry.id === objectId);
-  if (!object) return undefined;
-  const objectSources = checked.sources
-    .map((source) => ({
-      ...source,
-      claims: source.claims.filter((claim) => claim.objectId === objectId),
-      images: source.images.filter((image) => image.objectId === objectId),
-    }))
-    .filter(
-      (source) =>
-        source.objectIds?.includes(objectId) ||
-        source.claims.length > 0 ||
-        source.images.length > 0,
-    );
-  const claims = objectSources.flatMap((source) =>
-    source.claims.map((claim) => ({ claim, source })),
-  );
-  const claimById = new Map(
-    claims.map((entry) => [qualifyClaim(entry.source.id, entry.claim.id), entry]),
-  );
+  const accounts = getObjectAccounts(checked, objectId);
+  if (!accounts) return undefined;
+  const { object, sources: objectSources, claims } = accounts;
   const recordEditorials = editorials
     .filter((entry) => entry.objectId === objectId)
     .sort((a, b) => a.id.localeCompare(b.id));
@@ -121,14 +95,7 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
     }),
   );
   return {
-    object,
-    sources: objectSources,
-    claims,
-    foregroundedClaims: object.foregroundedClaims.map((id) => {
-      const entry = claimById.get(id);
-      if (!entry) throw Error(`Missing foregrounded claim ${id}`);
-      return entry;
-    }),
+    ...accounts,
     images: recordImages,
     editorials: recordEditorials,
     searchExact: [

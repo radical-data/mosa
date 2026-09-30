@@ -1,0 +1,31 @@
+---
+import type { SourcedClaim } from "../data/collection-record";
+import type { Locale } from "../i18n/routes";
+import ClaimStatement from "./ClaimStatement.astro";
+
+interface Props {
+  claims: SourcedClaim[];
+  locale: Locale;
+}
+
+const { claims, locale } = Astro.props;
+---
+
+<ul class="attributed-claims">
+  {claims.map(({ claim, source }) => (
+    <li>
+      <ClaimStatement claim={claim} language={source.language} locale={locale} />
+      <p class="small muted">
+        {locale === "en" ? "Recorded in" : "Registrado en"}:{" "}
+        <a href={`#source-${source.id}`}>
+          {source.author && <>{source.author} · </>}{source.reference}
+        </a>
+      </p>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .attributed-claims { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem; list-style: none; padding: 0; }
+  .attributed-claims > li { border: 1px solid currentColor; padding: 1rem; overflow-wrap: anywhere; }
+</style>
