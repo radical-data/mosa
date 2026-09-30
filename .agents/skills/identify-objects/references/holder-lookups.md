@@ -275,3 +275,20 @@ Do not substitute accession numbers into these object-ID paths.
   supplies illustrated, numbered entries. Match its museum numbers to the
   appropriate identifier scheme and compare the photographs; do not distribute
   unnumbered quotations among objects by their order of appearance.
+
+## Rautenstrauch-Joest-Museum, Cologne (HAI)
+
+- Heidelberg's [HAI digitisation](https://digi.ub.uni-heidelberg.de/diglit/rjm_inv_buch)
+  provides the museum's inventory books. Select a volume and page by its actual
+  inventory range; scan positions are not catalogue numbers. Book 10,
+  [scan 8](https://digi.ub.uni-heidelberg.de/diglit/rjm_inv_buch_10/0008),
+  includes numbers 54 526–54 550.
+- A SingleFile capture of the viewer can preserve only its zoomed viewport,
+  even when the file is large and the live viewer can show the entire spread.
+  Inspect the saved facsimile for every cited row and column heading.
+- The observed viewer menu `Download page > JPEG` supplies a complete original
+  scan. Preserve those bytes, verify the full spread and use the stable scan
+  citation. The digitisation host is distinct from the museum register's author.
+- Read ditto marks in their column context and document any expansion. Keep
+  origin, acquisition and designation fields distinct, and retain uncertain
+  handwriting readings. Historical registers do not establish current custody.
