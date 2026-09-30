@@ -6,7 +6,7 @@
   "claims": [],
   "images": [],
   "notes": {
-    "text": "Modern catalogue entry for the drawing on the reverse of 2017,2018.3.a; the two catalogue entries describe drawings on the front and reverse of the same physical sheet. The catalogue attributes the drawing to Mathew James Harrison, Lieutenant, and dates it to 1868. Its curator's comment quotes Van Tilburg (2006:30) describing a pukao with birdmen similar to those on Hoa Hakananai'a and a komari to the right. This supports comparative context and relevance to the existing Hoa Hakananai'a record, but does not identify the pukao as Hoa Hakananai'a or establish that the drawing depicts the statue itself. The catalogue's descriptions concern the drawing and do not establish the sculpture's dimensions, material or physical appearance. No image is published; image-specific reuse rights for this drawing have not been reviewed.",
+    "text": "Modern catalogue entry for the drawing on the reverse of 2017,2018.3.a; the two catalogue entries describe drawings on the front and reverse of the same physical sheet. The catalogue attributes the drawing to Mathew James Harrison, Lieutenant, and dates it to 1868. Its curator's comment quotes Van Tilburg (2006:30) describing a pukao with birdmen similar to those on Hoa Hakananai'a and a komari to the right. Van Tilburg's Image 45 compares the motifs with Hoa Hakananai'a and a woodcarving but supplies no individual pukao identifier. This supports comparative context and relevance to the existing Hoa Hakananai'a record, but does not identify the depicted pukao or establish that the drawing depicts the statue itself. The catalogue's descriptions concern the drawing and do not establish the sculpture's dimensions, material or physical appearance. The museum's image page states image-specific CC BY-NC-SA 4.0 terms for image 1613289335, but the downloaded image remains in private staging because its depicted pukao cannot yet be linked safely to a collection object.",
     "language": "en-GB"
   },
   "captures": [
@@ -14,6 +14,13 @@
       "file": "2026-09-30t15-29-28-187z.html",
       "capturedAt": "2026-09-30T15:29:28.187Z",
       "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t18-05-05-267z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289335",
+      "capturedAt": "2026-09-30T18:05:05.267Z",
+      "method": "singlefile",
+      "note": "Image 1613289335 page identifies the drawing, its non-commercial CC BY-NC-SA 4.0 terms and required credit; no collection image is registered while the depicted pukao remains unidentified."
     }
   ]
 }

@@ -11,9 +11,19 @@
       "locator": "Description"
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "objectId": "hoa-hakananai-a",
+      "file": "hoa-hakananai-a/bm-harrison-1613289339.jpg",
+      "alt": "Grey wash landscape drawing of stone structures and vegetation at ʻOrongo.",
+      "caption": "Mathew James Harrison's 1868 drawing of the ʻOrongo structure associated by the catalogue with the place where Hoa Hakananaiʻa stood.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289339"
+    }
+  ],
   "notes": {
-    "text": "Modern catalogue entry for drawing 2017,2018.3.a. The catalogue attributes the drawing to Mathew James Harrison, Lieutenant, and dates the drawing to 1868; this does not date the sculpture. The description and scene details concern the drawing, not the sculpture's dimensions, material or physical appearance. The museum curator's comment identifies the statue by British Museum number Oc1869,1005.1, matching the existing Hoa Hakananai'a record. No image is published; image-specific reuse rights for this drawing have not been reviewed.",
+    "text": "Modern catalogue entry for drawing 2017,2018.3.a. The catalogue attributes the drawing to Mathew James Harrison, Lieutenant, and dates the drawing to 1868; this does not date the sculpture. The description and scene details concern the drawing, not the sculpture's dimensions, material or physical appearance. The museum curator's comment identifies the statue by British Museum number Oc1869,1005.1, matching the existing Hoa Hakananai'a record. Image 1613289339 was downloaded from the museum's image page after that page identified this drawing and stated image-specific CC BY-NC-SA 4.0 terms.",
     "language": "en-GB"
   },
   "captures": [
@@ -21,6 +31,13 @@
       "file": "2026-09-30t15-29-15-906z.html",
       "capturedAt": "2026-09-30T15:29:15.906Z",
       "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t18-04-46-760z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289339",
+      "capturedAt": "2026-09-30T18:04:46.760Z",
+      "method": "singlefile",
+      "note": "Image 1613289339 page identifies the drawing, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
     }
   ]
 }
