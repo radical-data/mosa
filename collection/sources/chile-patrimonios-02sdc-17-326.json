@@ -1,0 +1,56 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-326",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-rapa-nui-17-326",
+      "predicate": "classified_as",
+      "value": "Moai Kuhane Vahine"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-rapa-nui-17-326",
+      "predicate": "described_as",
+      "value": "Moai femenino en posición arrodillada, con las rodillas desplazadas hacia la izquierda del eje del cuerpo y con el tronco levemente girado hacia la derecha. sus brazos están pegados al cuerpo y las manos se ubican en el vientre apuntando hacia abajo a la zona genital. Tiene tallados los labios vaginales y las cotillas, que en la espalda se proyectan hasta el cuello y corren de manera paralela a la columna vertebral representada en relieve. En la nuca presenta una protuberancia con un orificio que se usaba para colgar las piezas. Tiene los lóbulos de las orejas alargados rematados con orejeras de vértebras de pez insertas en la madera. Los ojos están hechos de vértebras de pez y obsidiana. la cabeza termina en una forma cónica que se proyecta levemente hacia atrás y está decorada con un tallado que representa el pelo a través de finas líneas paralelas dando la impresión que la figura posee un peinado elevado."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-rapa-nui-17-326",
+      "predicate": "catalogue_number",
+      "value": "17-326"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-rapa-nui-17-326",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-kavakava-rapa-nui-17-326",
+      "predicate": "described_as",
+      "value": "Creador/a: Tomás Tuki Tepano"
+    },
+    {
+      "id": "creation-date",
+      "objectId": "moai-kavakava-rapa-nui-17-326",
+      "predicate": "described_as",
+      "value": "Fecha de creación: 2014"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t01-39-41-001z.html",
+      "capturedAt": "2026-09-30T01:39:41.001Z",
+      "method": "singlefile",
+      "note": "Expanded fiche description and object photograph preserved; rights not cleared for republication."
+    }
+  ],
+  "notes": {
+    "text": "The DOI (02SDC-17-326) identifies the Chile Patrimonios ficha; the linked SURDOC record displays 17-326. The official title is retained as a separate source classification. The ficha photograph and IndiGen gallery photograph depict the same kneeling female figure, matching the pose, carved torso and head details; the two sources use different names/classifications. No image is published because item-specific reuse permission was not established.",
+    "language": "en-GB"
+  }
+}

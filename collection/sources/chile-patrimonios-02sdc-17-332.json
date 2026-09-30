@@ -1,0 +1,50 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-332",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "classified_as",
+      "value": "Escultura"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "described_as",
+      "value": "Figura masculina tallada en madera. Se encuentra de pie con las piernas levemente flectadas. Tiene el pene tallado con bastante detalle. El brazo izquierdo por delante, con la mano apoyada bajo el vientre, y el brazo derecho está flectado por la espalda, con la mano en la zona lumbar. los dedos de las manos son muy estilizados y largos, especialmente los de la mano izquierda. Esta mano parece estar tallada dentro de un área delimitada por un borde en relieve que en la parte superior pareciera representar el pulgar, sin embargo, remata sobre el muslo derecho en una superficie triangular donde no llegan el resto de los dedos, mientras que por debajo el borde se pierde a la altura del pene. Este borde confunde la cuenta de los dedos pues incluyéndolos alcanzan a siete dedos. La mano derecha, en cambio tiene claramente cinco dedos, con el pulgar levantado hacia arriba y el resto de los dedos curvándose hacia abajo por el borde de la nalga izquierda. La clavícula está representada por una cresta en V muy abierta y con los extremos curvados, los cuales terminan en los hombros. aquí posee un rasgo especial, del centro de la clavícula sale otra cresta que sube en una suave curva hasta unirse al cuello. La cabeza está girada hacia la izquierda en 90° y parece descansar sobre una protuberancia que sigue el contorno de la nuca . la boca está entreabierta, se pueden apreciar los dientes tallados en forma rectangular. La cuenca de los ojos está elevada y los ojos están hechos de hueso y obsidiana. las cejas se proyectan por sobre los ojos y están decoradas con un diseño de chevrones que se orientan hacia el centro del rostro. las orejas son elongadas, peor no poseen orejeras ni un espacio para colocarlas. En la cabeza tiene un diseño de figura humana grabado."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "catalogue_number",
+      "value": "17-332"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-tangata-rapa-nui-17-332",
+      "predicate": "described_as",
+      "value": "Creador/a: César Manutomatoma"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t01-40-20-374z.html",
+      "capturedAt": "2026-09-30T01:40:20.374Z",
+      "method": "singlefile",
+      "note": "Expanded fiche description and object photograph preserved; rights not cleared for republication."
+    }
+  ],
+  "notes": {
+    "text": "The DOI (02SDC-17-332) identifies the Chile Patrimonios ficha; the linked SURDOC record displays 17-332. The gallery and catalogue photographs show the same figure, including its right-facing carved head and asymmetrical arm placement. The catalogue heading is the generic Escultura; no more specific classification is added from this source. No image is published because item-specific reuse permission was not established.",
+    "language": "en-GB"
+  }
+}
