@@ -1,0 +1,98 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-43",
+  "language": "en",
+  "notes": {
+    "text": "The linked image detail page identifies the same adze as this catalogue record and states that the image may be shared under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0). The required credit is “© The Trustees of the British Museum”; commercial use is directed to BM Images. The first carousel image was matched by the accession page’s exact image-detail link, the image page’s description and visual inspection. The supplied 1000-pixel-high JPEG is preserved unchanged; the website build resizes and re-encodes its copies.",
+    "language": "en-GB"
+  },
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "catalogue_number",
+      "value": "british-museum: Oc1920,0506.43",
+      "locator": "Museum number"
+    },
+    {
+      "id": "holder",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "held_by",
+      "value": "British Museum",
+      "locator": "Collection record"
+    },
+    {
+      "id": "object-type",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "classified_as",
+      "value": "adze",
+      "locator": "Object Type"
+    },
+    {
+      "id": "description",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "described_as",
+      "value": "Adze made of stone.",
+      "locator": "Description"
+    },
+    {
+      "id": "found-acquired",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "described_as",
+      "value": "Found/Acquired: Easter Island",
+      "locator": "Findspot"
+    },
+    {
+      "id": "field-collector",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "described_as",
+      "value": "Field Collection by: Katherine Maria Routledge",
+      "locator": "Excavator/field collector"
+    },
+    {
+      "id": "donation",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "described_as",
+      "value": "Donated by: William Scoresby Routledge",
+      "locator": "Acquisition name"
+    },
+    {
+      "id": "material",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "made_of",
+      "value": "stone",
+      "locator": "Materials"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "predicate": "described_as",
+      "value": "Height: 8.10 centimetres; Weight: 40 grammes; Width: 3 centimetres; Depth: 1.20 centimetres",
+      "locator": "Dimensions"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "british-museum-adze-oc1920-0506-43",
+      "file": "british-museum-adze-oc1920-0506-43/british-museum-1614122229.jpg",
+      "alt": "Long reddish stone adze with a flat face, against a grey background.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1614122229"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-30t15-12-14-835z.html",
+      "capturedAt": "2026-09-30T15:12:14.835Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t15-21-55-059z.html",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1614122229",
+      "capturedAt": "2026-09-30T15:21:55.059Z",
+      "method": "singlefile",
+      "note": "Image 1614122229 page identifies the adze, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ]
+}

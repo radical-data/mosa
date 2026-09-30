@@ -1,0 +1,26 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_2017-2018-3-a",
+  "language": "en-GB",
+  "claims": [
+    {
+      "id": "drawing-description",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Drawing, of the hut on Rapa Nui, where the statue, Hoa Hakananai'a, was found.",
+      "locator": "Description"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Modern catalogue entry for drawing 2017,2018.3.a. The catalogue attributes the drawing to Mathew James Harrison, Lieutenant, and dates the drawing to 1868; this does not date the sculpture. The description and scene details concern the drawing, not the sculpture's dimensions, material or physical appearance. The museum curator's comment identifies the statue by British Museum number Oc1869,1005.1, matching the existing Hoa Hakananai'a record. No image is published; image-specific reuse rights for this drawing have not been reviewed.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t15-29-15-906z.html",
+      "capturedAt": "2026-09-30T15:29:15.906Z",
+      "method": "singlefile"
+    }
+  ]
+}

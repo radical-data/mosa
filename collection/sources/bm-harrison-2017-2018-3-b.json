@@ -1,0 +1,19 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/E_2017-2018-3-b",
+  "language": "en-GB",
+  "objectIds": ["hoa-hakananai-a"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "Modern catalogue entry for the drawing on the reverse of 2017,2018.3.a; the two catalogue entries describe drawings on the front and reverse of the same physical sheet. The catalogue attributes the drawing to Mathew James Harrison, Lieutenant, and dates it to 1868. Its curator's comment quotes Van Tilburg (2006:30) describing a pukao with birdmen similar to those on Hoa Hakananai'a and a komari to the right. This supports comparative context and relevance to the existing Hoa Hakananai'a record, but does not identify the pukao as Hoa Hakananai'a or establish that the drawing depicts the statue itself. The catalogue's descriptions concern the drawing and do not establish the sculpture's dimensions, material or physical appearance. No image is published; image-specific reuse rights for this drawing have not been reviewed.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t15-29-28-187z.html",
+      "capturedAt": "2026-09-30T15:29:28.187Z",
+      "method": "singlefile"
+    }
+  ]
+}
