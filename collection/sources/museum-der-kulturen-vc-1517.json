@@ -1,0 +1,68 @@
+{
+  "author": "Museum der Kulturen Basel",
+  "reference": "https://onlinecollection.mkb.ch/?q=Vc%201517#/query/fce8d11b-b363-457f-ab0c-63314be17eaa",
+  "language": "de",
+  "claims": [
+    {
+      "id": "vc-1517-catalogue-number",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "catalogue_number",
+      "value": "Vc 1517"
+    },
+    {
+      "id": "vc-1517-classification",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "vc-1517-title",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "has_name",
+      "value": "Echsenmann"
+    },
+    {
+      "id": "vc-1517-dating",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "described_as",
+      "value": "Datierung: 1870-1880"
+    },
+    {
+      "id": "vc-1517-land",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "described_as",
+      "value": "Land: Easter Islands (Rapa Nui)"
+    },
+    {
+      "id": "vc-1517-material",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt, Knochen / Muschelschale (od.)"
+    },
+    {
+      "id": "vc-1517-dimensions",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "described_as",
+      "value": "L 97.5 cm, B 6 cm"
+    },
+    {
+      "id": "vc-1517-donor",
+      "objectId": "moko-basel-vc-1517",
+      "predicate": "described_as",
+      "value": "Einlieferer*in: Mme Pailloux-Haldimann"
+    }
+  ],
+  "notes": {
+    "text": "Matched the displayed catalogue number Vc 1517 and supporting object details. Selective transcription of the object record, retaining any linked group description with its group context. The catalogue dates and Land field are retained without inferring more precise relationships. The record’s CC BY 4.0 data licence does not by itself establish image-specific clearance.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-15-07-000z.pdf",
+      "capturedAt": "2026-09-30T00:15:07.000Z",
+      "method": "supplied-file",
+      "note": "Official catalogue PDF export, visually reviewed against the live object record. Preserves its accession and selected catalogue fields. The export shows the museum logo in place of an object photograph."
+    }
+  ]
+}
