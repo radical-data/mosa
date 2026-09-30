@@ -132,12 +132,15 @@ Historical discovery covered relevant AM journal, magazine and annual-report
 results and the Geiseler/Weißer rei miro bibliography. Etheridge's paper, the
 1927 Robins notice and the relevant Melka–Schoch passage were read in their
 original PDFs. The museum's 2014 wooden-head caption was inspected in its HTML.
-The full text of Torrence, Kononenko and White's *Revisiting Rapa Nui Matā*
-(Rapa Nui Journal 31(1–2), 2018, pp. 1–20) was not obtained: its [Project MUSE page](https://muse.jhu.edu/article/716984)
-stops at a human-verification challenge in the browser; the web reader also
-failed. Focused repository searches found no accessible authorised copy. No
-challenge was solved or institution contacted. The journal issue notice supplies
-the twelve-object sample lead, not individual specimen evidence. Thomsett's
+The initial [Project MUSE access challenge](https://muse.jhu.edu/article/716984)
+was resolved for this research on 30 September 2026 when a human supplied the
+original PDF of Torrence, Kononenko and White's *Revisiting Rapa Nui Matā*.
+The [collection source](../../collection/sources/torrence-kononenko-white-2018-rapa-nui-mata.json)
+now documents all twelve specimen identities, with selective table extraction
+and explicit identifier discrepancies. Reuse the supplied original in ignored
+`research-local/australian-museum/mata/project_muse_716984.pdf`; redistribution
+and figure reuse are not cleared. No challenge was solved or institution contacted.
+Thomsett's
 [1993 history of the Pacific collections](https://www.jstor.org/stable/23409019)
 is a further bibliographic lead; its full text was not reviewed.
 
@@ -170,8 +173,8 @@ existing historical moai and tablet records.
 | Fish-hook display | 94 caption-identified entries excluded; four display numbers unresolved | All 15 nation galleries reviewed. Missing caption numbers 48, 58, 67 and 97 require display-label evidence; no claim that all 98 advertised hooks are outside scope. |
 | Wooden figure described in 1908 | New [historical object](../../collection/objects/wooden-figure-etheridge-1908-australian-museum.json) | [Etheridge 1908](../../collection/sources/etheridge-1908-yodda-valley.json), p. 25, singles out a figure with a distinctive base. One contextual claim preserves the historical account. The public-domain original PDF is registered; its plates depict New Guinea objects, not this figure. Present whereabouts and accession remain unknown. |
 | [Wooden figure head photographed in 2014](https://australian.museum/blog-archive/science/our-global-neighbours-polynesian-brothers-and-sisters/) | Unresolved possible match to the 1908 figure; no additional object | Stan Florek’s article, dated 4 September 2014, captions a wooden figure head as Easter Island–Rapanui, twentieth century. No accession or matching base is supplied. The local HTML preserves the caption; image reuse is not cleared. Obtain the image’s object identifier before linking or separating it. |
-| Twelve matā studied by Torrence, Kononenko and White | Unresolved individual identities; not twelve invented records | [Publisher’s issue notice](https://uhpress.hawaii.edu/rapa-nui-journal-volume-31-2018/) explicitly places the study sample at the Australian Museum. The full 2018 paper and any specimen table are needed to identify the objects; abstract-level evidence cannot establish their accessions or overlap with other lots. |
-| Robins Collection Easter Island material | Unresolved group; no individual objects created | The [Australian Museum Magazine III(2), April–June 1927](https://museum-publications.australian.museum/media/dd/Uploads/Documents/28589/AMS368_V3-2_lowres.bb47806.pdf), printed p. 40, names obsidian weapons and carved figures acquired through Sir Alfred Meeks, without counts or identifiers. Original PDF inspected and retained locally. The acquisition schedule is the next useful evidence; this notice cannot establish whether the twelve studied matā belong to that lot. |
+| Twelve matā studied by Torrence, Kononenko and White | Twelve new records: A18926–28, E30734–41 and E65154 | The [supplied paper](../../collection/sources/torrence-kononenko-white-2018-rapa-nui-mata.json) identifies each specimen; no existing identifier or Australian Museum matā match was found. Extracted 96 claims covering identity, material, consistent acquisition rows, metrics/form and proposed use with confidence. E70735 in Table 2 is not silently substituted for E30735; that metric row is withheld. E65164 in Table 1 is not silently substituted for E65154; the Bard/cave acquisition is withheld. The original and figures remain private. |
+| Robins Collection Easter Island material | Unresolved group; no individual objects created | The [Australian Museum Magazine III(2), April–June 1927](https://museum-publications.australian.museum/media/dd/Uploads/Documents/28589/AMS368_V3-2_lowres.bb47806.pdf), printed p. 40, names obsidian weapons and carved figures acquired through Sir Alfred Meeks, without counts or identifiers. Original PDF inspected and retained locally. The matā paper associates E30734–41 with Capt. J. F. Robins and gives 1920, whereas this notice is from 1927. Their relationship remains unverified; obtain the acquisition schedules before equating the lots or dates. The carved figures remain unidentified. |
 | [“Lost and found” stone-tool article](https://australian.museum/learn/news/blog/lost-and-found-a-rapa-nui-stone-tool-finds-its-real-home/) | Excluded from this institution pass: concerns a Bishop Museum specimen reassigned to New Britain | It is not evidence of an Australian Museum object. |
 
 The annual-report original remains in ignored
@@ -202,17 +205,19 @@ sensory-model transcript. Reuse it locally instead of recapturing.
 
 ## Next action
 
-This expanded pass added four objects, three sources and eight claims, with two
-original PDFs preserved in Git LFS. It established eight Australian Museum
-campaign records in total, including a historical figure whose present custody
-is unknown. It did not enumerate the approximate hundred holdings. The campaign
-remains open, with useful evidence gaps rather than an artificial completion count.
+The initial expanded pass added four objects, three sources and eight claims,
+with two scholarly originals preserved in Git LFS. The supplied matā paper then
+added twelve objects, one source and 96 claims. This campaign now represents
+**twenty objects**, including historical holdings; it is not a verified current
+census of the approximate hundred reported holdings.
 
-1. **Obtain the twelve-matā paper.** A human with legitimate access can download
-   the original PDF and put it in ignored `research-local/australian-museum/`.
-   Read its specimen identifiers and reconcile against the whole collection,
-   then integrate supported objects, claims and permissible captures/images.
-   A supplied file does not imply permission to redistribute it.
+1. **Check the paper's inconsistent identifiers against museum records.**
+   Confirm E30735/E70735 and E65154/E65164. Also resolve Figure 7’s reversed
+   b/c captions for A18927 and A18928 against the visible object labels before
+   using those images. The first number conflict blocks the disputed
+   metric row; the E65154/E65164 conflict blocks assigning the Bard acquisition and cave
+   findspot to E65154. Keep the existing twelve specimen records and attach
+   new evidence rather than importing the study again.
 2. **Obtain the museum's Rapa Nui inventory/export or relevant register pages.**
    The useful fields are registration number, object description, lot/component
    relationship, collection attribution, acquisition/provenance and current
@@ -227,5 +232,5 @@ remains open, with useful evidence gaps rather than an artificial completion cou
    without new evidence.
 4. **Complete the restricted preservation/image stages when clearance exists.**
    Reuse the inspected local originals; source notes own their particular limits.
-   The annual report and contemporary HTML captures remain private, and no
-   publishable object photographs have been added.
+   The supplied matā paper, annual report and contemporary HTML captures remain
+   private, and no publishable object photographs have been added.
