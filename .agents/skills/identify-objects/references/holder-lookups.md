@@ -136,6 +136,12 @@ Do not substitute accession numbers into these object-ID paths.
   Detail routes use internal IDs, which cannot be generated from accessions.
 - Keep catalogue uncertainty and dated corrections. Review rights on the
   specific photograph; an icon elsewhere on the record is insufficient.
+- Seven reviewed photographs displayed a CC BY 4.0 badge as an overlay inside
+  the selected `galleria-image`. The accessibility text initially omitted the
+  gallery, so visual and rendered-DOM inspection was necessary. The preserved
+  SingleFile copies contained the same image-bound licence and original JPEG
+  bytes. Distinguish that per-image licence from a general data licence, and
+  retain the supplied institutional credit when no photographer is named.
 
 ## Wereldmuseum Leiden
 
