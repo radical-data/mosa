@@ -7,21 +7,24 @@ set of responsibilities. The [template](campaigns/template.md) is optional.
 
 ## Priorities
 
-1. Continue the [Bishop mata‘a paper](campaigns/bishop-mataa-paper.md) with a
-   small catalogue-matching batch using the shared identifier transcription.
-2. Resume the [Arte table follow-up](campaigns/arte-en-la-cultura-rapanui.md),
-   seeking distinguishing identifiers for the unresolved Vienna entries.
-3. Resume a bounded group from the [IndiGen follow-up](campaigns/indigen-follow-up.md).
+1. Use the [Australian Museum pilot](campaigns/australian-museum.md) to exercise
+   systematic discovery through collection integration. Its scope and access
+   limits determine the next bounded pass.
+2. Continue the [Bishop mata‘a paper](campaigns/bishop-mataa-paper.md) using its
+   shared identifier transcription; broader holdings remain a separate census.
+3. Resume the [Arte table follow-up](campaigns/arte-en-la-cultura-rapanui.md).
+   Prioritise unresolved groups and research-section leads as well as uncertain
+   individual matches; Vienna is one bounded subtask, not the whole campaign.
+4. Resume a bounded group from the [IndiGen follow-up](campaigns/indigen-follow-up.md).
    Its existing register preserves useful history; it is not a required workflow
    for other imports.
-4. Consider a wider Bishop or Australian Museum census and unresolved PDF groups
-   after those bounded investigations. The
-   [Australian Museum overview](https://australian.museum/learn/cultures/pasifika-collections/rapa-nui-collections/),
+5. Develop further institutional or collecting-network campaigns from the
    [Pacific-Studies directory](https://www.pacific-studies.net/geodetail.php?id=317)
-   and [Splendid Isolation](https://www.metmuseum.org/met-publications/splendid-isolation-art-of-easter-island)
-   are leads, not completed collection reviews.
+   and [Splendid Isolation](https://www.metmuseum.org/met-publications/splendid-isolation-art-of-easter-island).
+   These are leads, not completed collection reviews.
 
 Campaigns contain scope, unresolved questions and next actions. Published facts
 and source-specific findings stay in collection sources; shareable captures stay
 in `source-files/`. Private material and scratch files stay in `research-local/`.
+Retain useful research evidence only under the guide’s retention rule.
 Research files do not enter the website.

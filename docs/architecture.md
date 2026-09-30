@@ -50,6 +50,15 @@ bytes use Git LFS. Neither captures nor their metadata are rendered by the site;
 website builds do not require those bytes. [ADR 024](adrs/024-preserve-source-captures.md)
 records this boundary.
 
+Systematic research is coordinated in optional Markdown campaigns. Campaigns
+hold rationale, scope, planned and dated search coverage, concise candidate
+outcomes, links and remaining integration; they do not duplicate claims or
+collection inventories. Useful retained research files may live under
+`research/evidence/<campaign-id>/` under the
+[research retention rule](research.md#retaining-research-evidence). Source capture
+staging remains local until reviewed, while a registered source capture is
+durable verification evidence under `source-files/`.
+
 A **claim** has an ID local to its source, an object ID, a controlled predicate
 and a textual value. References outside the source qualify the local ID with the
 source handle, such as `wikipedia-mamari/name-mamari`. Claims stay inside sources

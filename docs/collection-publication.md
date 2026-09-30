@@ -87,7 +87,9 @@ it appears beside the claim. Omit it when unknown and keep uncertainty in
 `value`. Existing claims do not need backfilling. Keep capture/version details in
 capture metadata or source `notes` when needed.
 
-Use optional source `notes` for MoSA's research and transcription decisions:
+Use optional source `notes` for source relevance, interpretation and transcription
+decisions. Keep campaign scope, search attempts, processing progress and next
+actions in the campaign, not in `notes.text`:
 
 ```json
 "notes": {
@@ -191,6 +193,12 @@ just source doctor
 just source capture mapse-aringa-erua --url https://www.patrimoniocultural.gob.cl/en/regional-museums/easter-island-anthropological-museum/aringa-erua-moai-moai-two-faces
 ```
 
+For discovery before a source ID exists, `just source capture --url URL` stages
+an anonymous capture in ignored local staging and prints its path and capture
+time. It creates or changes no collection source. Inspect the file, then register
+it under the established source ID once the substantive source is identified.
+The source-ID form above retains its existing behaviour.
+
 The command prints JSON with a staging path and capture time. It does not modify
 the source. Open the saved HTML and check the catalogue number, relevant passages
 and essential images. Expand relevant sections before capture; use `--wait 3000`
@@ -208,7 +216,9 @@ just source check --content
 just format
 ```
 
-Place supplied files in ignored `research-local/` staging first.
+Place supplied files in ignored `research-local/` staging first. Capture or
+staging is not permission to commit a file; use `research/evidence/` only under
+the retention rule in the [research guide](research.md#retaining-research-evidence).
 For a supplied PDF or image, use `--method supplied-file --captured-at null` if
 its original retrieval date is unknown; `--name original.pdf` selects a readable
 filename. Preserve original bytes. Capture filenames otherwise use UTC timestamps.

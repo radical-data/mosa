@@ -1,6 +1,6 @@
 ---
 name: source-capture
-description: Preserve and backfill HTML, PDF or image evidence for existing MoSA sources using the repository capture commands. Use for source archiving, not candidate museum matching.
+description: Preserve and backfill HTML, PDF or image evidence for MoSA sources, or stage a capture before source registration, using the repository commands. Use for source archiving, not candidate museum matching.
 ---
 
 # Preserve a MoSA source
@@ -10,7 +10,10 @@ and read the relevant source JSON. Use the repository commands rather than
 recreating SingleFile invocation or metadata in ad hoc scripts.
 
 1. Run `just source doctor`; use the pinned dependency and isolated browser
-   profile. Never substitute a personal logged-in profile.
+   profile. Never substitute a personal logged-in profile. During discovery,
+   `just source capture --url URL` can stage an anonymous capture before a source
+   ID is established; it does not create a collection record. Once identified,
+   register reviewed evidence under the source's established ID.
 2. Check existing captures and supplied originals first. Preserve original bytes
    and known retrieval dates; use `null` when the retrieval date is unknown.
 3. Capture into ignored staging. Inspect the saved copy's identifier, cited text
@@ -21,7 +24,9 @@ recreating SingleFile invocation or metadata in ad hoc scripts.
    failures. If the execution environment requires approval to launch the
    isolated browser, use its normal permission mechanism before concluding that
    the museum page is inaccessible.
-4. Register usable evidence with concise limitation notes. Use the session's PDF
+4. Register usable evidence with concise limitation notes. A registered capture
+   is durable source evidence retained for later verification, not disposable
+   campaign scratch. Use the session's PDF
    skill when visual PDF inspection is needed. Keep claims and object links intact.
 5. Run `just source check --content`.
 

@@ -8,20 +8,32 @@ when they prevent repeated research, lost decisions or conflicting updates.
 Keep each fact in one authoritative place and each tool's responsibility clear,
 so another agent or human can resume without reconstructing the conversation.
 
-Use [collection authoring](collection-publication.md) directly for ordinary
-source imports. Record a source once in `collection/sources/`; keep its
-attribution, claims and source-specific research decisions there. A publication
-we have examined can have a source record before any objects are reconciled.
-Preserve usable, shareable evidence through the existing
-[source capture workflow](collection-publication.md#preserve-source-files).
-A source record without a capture is valid when the original is restricted or
-unavailable; record that limitation instead of silently omitting preservation.
+For systematic discovery of Rapa Nui cultural material held outside Rapa Nui,
+including mainland Chile, use a focused campaign to coordinate scope, search
+coverage, candidate outcomes and remaining integration. The campaign is a plan
+and continuation aid; collection records remain the maintained account of
+sources, objects, claims and images. The [incorporate source skill](../.agents/skills/incorporate-source/SKILL.md)
+owns the end-to-end procedure. This guide owns research strategy and campaign
+coordination; [collection authoring](collection-publication.md) owns record and
+publication rules.
 
-Add a research artefact only when it saves work that the existing records do
-not support. A campaign, inventory, evidence note and progress register are not
-required companions to a source import. Small questions stay in conversation;
-save an answer only where it helps someone resume or understand a decision.
-[ADR 026](adrs/026-share-research-plans-and-evidence.md) records this boundary.
+The default outcome for an in-scope candidate is complete integration: establish
+or link its source, reconcile supported object identities, record faithful
+attributed claims and add images only when their reuse is cleared. Object
+creation alone does not complete integration. A narrower pass is valid when its
+scope is explicit, such as a catalogue search or identity-only batch; record
+what remains for a later pass in the campaign. An examined publication can
+have a source record before any objects are reconciled.
+
+Add a research artefact only when it helps someone resume work or understand a
+consequential decision. A campaign, inventory, evidence note and progress
+register are not mandatory reports for every source. Source queries are search
+activity, not collection sources. Substantive publications, catalogues or
+records may be registered as sources even before an object link is established;
+use source `notes` for relevance and source-specific interpretation. Keep
+operational search logs out of source notes, and do not duplicate them as
+campaign inventories. [ADR 026](adrs/026-share-research-plans-and-evidence.md)
+records this boundary.
 
 ## Files and responsibilities
 
@@ -31,17 +43,20 @@ save an answer only where it helps someone resume or understand a decision.
 | `source-files/<source-id>/` | Shareable original files and captures; their metadata belongs in the source |
 | `research/README.md` | Campaign links and priorities |
 | `research/campaigns/` | Focused questions, scope, unresolved work and next actions |
+| `research/evidence/<campaign-id>/` | Optional ordinary research files retained only when they materially help future researchers |
 | `research/progress/` | Optional registers for substantial recurring follow-up; retained historical records |
 | `research-local/` | Restricted originals, private correspondence and disposable working files |
 
-There is no separate research source catalogue or evidence archive. Use source
-`notes` for extraction methods and source-specific decisions; use a campaign
-for a wider investigation. Do not copy catalogue fields, bibliographies, source
-notes, import counts or command results into campaign reports.
+There is no separate research source catalogue, evidence schema or manifest.
+Use source `notes` for interpretation, extraction methods and source-specific
+decisions; use a campaign for wider strategy, dated search coverage, candidate
+outcomes and next actions. Do not copy catalogue fields, bibliographies,
+accepted claims, object inventories or routine command results into campaign
+reports. A real publication or catalogue is a source; a query we ran is not.
 
 An inventory is a working list for processing a source, not a new record type.
 Create one only when a multi-entry source needs it. If it saves repeated work,
-a shareable list can be an attachment beside its campaign, named for its task
+a shareable list can live under `research/evidence/<campaign-id>/`, named for its task
 and linked to the existing source. It has no separate source identity or
 required schema. Published facts belong in the collection; keep only useful
 unresolved work active. Do not create objects just to give uncertain entries
@@ -50,27 +65,49 @@ somewhere to live.
 ## Focused campaigns
 
 Start from the [programme index](../research/README.md). A campaign needs a
-question, a bounded scope and the next useful action. The
-[template](../research/campaigns/template.md) is optional; omit sections that
-add nothing. Completion depends on that scope: an identity investigation does
-not need an image-acquisition phase.
+question, rationale, bounded scope, a dated search plan and the next useful
+action. Record coverage by institution or catalogue department, search terms
+and spelling variants, pagination or other result boundaries, and the date
+checked. Summarise candidate dispositions and link their source or object
+records; list any remaining integration work. The
+[template](../research/campaigns/template.md) supports this without requiring a
+copied inventory or a fixed report format. Account for every candidate within
+the bounded pass: new object, existing object, unresolved identity, or excluded
+with a reason. A concise grouped outcome is enough when all entries share the
+same disposition. Link the authoritative records instead of repeating their facts.
+Distinguish identity outcomes from integration: preserved source, reviewed
+claims and image rights, and any blocked, deferred or unavailable material.
+“Unavailable” means the relevant scope was examined; “blocked” means it could
+not be examined or used. Completion applies only to the stated scope.
+
+When delegating, assign disjoint candidates or stages and name the shared files
+one contributor will own. The coordinating agent reviews identity, attribution,
+captures and remaining work before marking the batch complete.
 
 Add YAML frontmatter with `started: "YYYY-MM-DD"` using the earliest documented
-campaign work. Date substantive research outcomes where they are recorded;
-no separate activity log is needed.
+campaign work. Date search coverage and consequential candidate outcomes as
+they are recorded; no event-by-event activity log is needed.
 
 Link collection records for completed imports. Update a campaign when its
 question, direction, obstacle or next action changes, not after every object.
-Record unsuccessful searches when doing so prevents another contributor from
-repeating them. Use either the campaign or an existing register, not both.
+Record unsuccessful searches when they define coverage or prevent substantial
+repeat work. Keep only search coverage and useful outcomes in the campaign; do
+not duplicate accepted claims, source fields or full entry inventories. Use
+either the campaign or an existing register for coordination, not both.
 
 ## Discovery strategy
 
 Investigate Rapa Nui cultural material outside Rapa Nui, including mainland
-Chile. Distinguish historical displacement from present location, return and
-unknown whereabouts. Include archaeological and everyday material alongside
-carvings and contemporary Rapanui work. Counts, groups, fragments, replicas and
-depictions need interpretation before they become individual object records.
+Chile. Set out why the target institution, department or catalogue is in scope
+and define the material and record types being sought. Search systematically
+across relevant departments and catalogue routes, with language, place-name,
+historical spelling and identifier variants. Follow pagination and load-more
+controls to the agreed boundary, and record what was covered and when. Inspect
+candidate records and preserve usable evidence before reconciliation. Distinguish
+historical displacement from present location, return and unknown whereabouts.
+Include archaeological and everyday material alongside carvings and
+contemporary Rapanui work. Counts, groups, fragments, replicas and depictions
+need interpretation before they become individual object records.
 
 Useful routes beyond the original PDF table and IndiGen gallery include:
 
@@ -83,15 +120,41 @@ Useful routes beyond the original PDF table and IndiGen gallery include:
 - Publication tables, appendices and illustrations, retaining locators and
   uncertainty. Revisit unresolved entries when new evidence appears.
 
-Campaign priorities and concrete leads belong in the programme index and
-campaigns, rather than a second queue in this guide.
+Campaign rationale, priorities, dated coverage, candidate dispositions and
+remaining integration belong in the programme index and campaigns, rather than
+a second queue in this guide.
+
+## Retaining research evidence
+
+The default staging area is ignored `research-local/`. Retain a file under
+`research/evidence/<campaign-id>/` only when a future researcher needs it to
+assess an unresolved candidate or consequential decision, recover otherwise
+fragile evidence, or avoid substantial repeated work. Routine queries,
+screenshots, copied catalogue entries and command output normally need only a
+concise campaign outcome, if anything. Capturing a file does not imply committing
+it. Every tracked file under `research/` is shared repository content.
+
+Link each retained file from its campaign with its purpose, origin, known date
+and limitations. Do not add a manifest or a second source catalogue. Reuse
+existing captures. If retained evidence becomes a substantive collection source,
+register its usable capture under `source-files/<source-id>/`, update references
+and remove the redundant research copy. Source metadata then owns that capture.
+Registered source captures are durable verification evidence, not disposable
+campaign scratch.
+
+When resuming or closing a campaign, remove encountered research files that are
+superseded or no longer useful; no separate audit schedule is required. Keep the
+concise consequential decision. Deleting a tracked file does not erase Git
+history, so restricted material must never be committed in the first place.
 
 ## Supplied and restricted material
 
 A human can supply a blocked page or PDF in local staging and tell the agent its
-path. Inspect it and continue the same work. There is no handover record or
-additional approval stage. Register a shareable capture through the existing
-source commands when useful; a source without a capture is valid.
+path. Ask in the conversation for the exact missing page, section or file and
+its original URL when known. Inspect what was supplied and continue the same work. There is no handover record or
+additional approval stage. Stage captures locally before review; registering a
+capture preserves evidence for later verification and is separate from the
+anonymous staging command. A source without a capture is valid.
 
 Keep restricted originals, page images and raw OCR local. Our reviewed factual
 transcriptions and findings are considered separately: a restriction on sharing

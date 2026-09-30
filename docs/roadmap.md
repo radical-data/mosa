@@ -13,14 +13,26 @@
 ## Shared research programme
 
 The [programme index](../research/README.md) owns research priorities.
-[Collection authoring](collection-publication.md) is the default workflow;
-[research guidance](research.md) covers optional campaigns and registers.
+[research guidance](research.md) owns strategy and campaign coordination, and
+the [incorporate source skill](../.agents/skills/incorporate-source/SKILL.md)
+owns the end-to-end procedure. Systematic discovery of Rapa Nui material abroad
+should cover relevant institutional departments and catalogue routes, document
+search terms and pagination coverage, inspect and preserve evidence, reconcile
+objects, extract attributed claims and clear any images for publication. A
+narrower pass must state what integration remains.
 
-The shared IndiGen history is portable. The Bishop paper has one collection
-source and a shared identifier transcription, with its PDF kept private.
-Next work is a bounded identity-reconciliation batch, not another research
-infrastructure phase. Extend tooling only when an actual task demonstrates the
-need; do not migrate or classify every legacy scratch file.
+Campaigns retain rationale, planned and dated coverage, concise candidate
+outcomes and next actions. They link to collection sources and objects rather
+than copying their contents. Keep research evidence in ignored local staging by
+default; retain an ordinary file under `research/evidence/` only when it
+supports an unresolved candidate or consequential decision, is hard to recover or prevents substantial
+repeat work.
+
+The [collection authoring guide](collection-publication.md) defines record and
+publication rules. The shared IndiGen history remains a separate existing
+follow-up: its Bishop paper has one collection source and a shared identifier
+transcription, with its PDF kept private. Continue its bounded identity work
+without treating the register as the default campaign format.
 
 ## Deliberately deferred model work
 

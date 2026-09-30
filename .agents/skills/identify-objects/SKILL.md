@@ -18,8 +18,12 @@ For multi-entry sources, use a working list when it prevents omissions or repeat
 work. Reconcile the entries in the agreed scope as existing objects, justified
 new objects, repeated depictions, groups or unresolved entries. The list is not
 a second source or catalogue and need not be a separate deliverable. Counts and
-gallery cards do not establish distinct object identities. Preserve the source's
-own grouping unless evidence supports separating or consolidating entries.
+gallery cards do not establish distinct object identities. For a systematic
+campaign, leave concise, dated candidate outcomes and evidence links in the
+campaign when they help show search coverage or continue unresolved work; the
+collection record remains authoritative for accepted claims. Preserve the
+source's own grouping unless evidence supports separating or consolidating
+entries.
 
 Before comparing gallery photographs, bind each image to the exact entry's DOM
 container or structured record and retain its accession, card identifier and
@@ -74,7 +78,7 @@ latter because the original cannot be shared.
 
 Reuse or add the documenting source when its identity is established, then use
 [extract-claims](../extract-claims/SKILL.md). Use
-[source-capture](../source-capture/SKILL.md) when preservation is useful and
+[source-capture](../source-capture/SKILL.md) when
 sharing is permitted. Review image-specific rights with
 [collection-images](../collection-images/SKILL.md). Keep failed searches and
 remaining candidates where the work already lives so the next batch can resume
@@ -92,4 +96,6 @@ and useful prior decisions, reuse reviewed decisions, and avoid duplicate object
 Record why ambiguous or grouped entries were deferred. Before handover, ensure
 every entry reviewed within the agreed scope has a disposition and every created or matched object
 has traceable evidence. Link to the resulting collection records and unresolved
-work; no additional audit report is required. Entry counts are not object counts.
+work; no additional audit report is required. In a systematic campaign, report
+the scope covered and remaining integration stages so new object records are
+not mistaken for a completed import. Entry counts are not object counts.
