@@ -12,3 +12,12 @@ source-files/**/*.webp filter=lfs diff=lfs merge=lfs -text
 source-files/**/*.avif filter=lfs diff=lfs merge=lfs -text
 source-files/**/*.tif filter=lfs diff=lfs merge=lfs -text
 source-files/**/*.tiff filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.html filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.png filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.webp filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.avif filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.tif filter=lfs diff=lfs merge=lfs -text
+research/evidence/**/*.tiff filter=lfs diff=lfs merge=lfs -text
