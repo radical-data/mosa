@@ -69,3 +69,83 @@ internal record IDs: Met accession `1979.206.1491` maps to
 accession to obtain another internal ID. Reuse the successful catalogue or API
 search method from the private audit, and verify the returned registration.
 Do not substitute accession numbers into these object-ID paths.
+
+## Ethnologisches Museum, Staatliche Museen zu Berlin
+
+- The old catalogue home redirects to <https://search.smb.museum/>. Its public
+  pages contain rendered search results and labelled catalogue fields.
+- Search: `https://search.smb.museum/?q={accession}`. URL-encode the complete
+  institution-scoped accession, for example `VI 4950`.
+- Follow the returned internal record link, for example
+  <https://search.smb.museum/object/obj-998470>. Prefer the record's explicit
+  permalink, <https://id.smb.museum/object/998470>, as the source reference.
+- Compare `Ident. Nr.`, the collection and dimensions. These URL IDs are not
+  accessions. The geographic-relations field is not an explicit making place.
+- In six reviewed IndiGen entries, appended `- A` or `- B` corresponded to
+  photograph views; the museum displayed the base accession. Searches including
+  the hyphen returned unrelated results. Removing the view suffix located the
+  record, and all dimensions matched. Apply this fallback only with supporting
+  evidence; do not strip meaningful sub-accessions indiscriminately.
+- Each gallery photograph has its own `Fotonachweis` and rights text beside its
+  original-file link. Preserve that image's photographer credit and licence,
+  rather than assigning another view's credit or assuming an institutional
+  blanket licence. Twenty-seven selected images explicitly carried CC BY-NC-SA
+  4.0 during this batch.
+
+## SKD Dresden and GRASSI Leipzig
+
+- Catalogue: <https://skd-online-collection.skd.museum/Search>. The extended
+  search has a dedicated inventory-number field. Its submitted URL is
+  `https://skd-online-collection.skd.museum/Result/Index?page=1&inv={accession}&smode=And`.
+- Preserve accession prefixes and leading zeroes; URL-encode spaces. `Po 00447`
+  returns <https://skd-online-collection.skd.museum/Details/Index/1589333>.
+  The detail route uses an internal ID, not an accession.
+- Verify both `Inventarnummer` and the member museum. The same digits can return
+  records belonging to a different SKD collection.
+- After an exact miss, search `Rapa Nui` or `Osterinsel` in the full-text field
+  and compare accession numbers in the results. One exact miss is insufficient
+  to establish that the record is absent.
+- Reviewed records labelled images `Freier Zugang – Rechte vorbehalten`.
+  Public viewing does not establish permission to republish those photographs.
+
+## Linden-Museum Stuttgart
+
+- Catalogue: <https://sammlung-digital.lindenmuseum.de/en/object>. Use its
+  advanced search's full-text field for an accession, then `Rapa Nui` as a
+  fallback if the accession returns no result.
+- The observed record <https://sammlung-digital.lindenmuseum.de/en/object/staff_13736>
+  displays inventory number `004567`. The trailing route number is an internal
+  ID; the six-digit accession includes leading zeroes missing from IndiGen.
+- Verify the displayed accession, object type, dimensions and provenance.
+  Preserve the named author of descriptive passages and inspect the individual
+  photograph's credit and licence; this record displayed CC BY-SA 4.0.
+
+## Swedish National Museums of World Culture (Carlotta)
+
+- Use the correct collection: Etnografiska museet uses
+  <https://collections.smvk.se/carlotta-em/web/>; Världskulturmuseet uses
+  <https://collections.smvk.se/carlotta-vkm/web/>.
+- The observed search route is
+  `perform/free_search?FreeSearch_TEXT_OPERAND=CONTAINS&FreeSearch_TEXT_VALUE={accession}`
+  under that collection's `web/` root. URL-encode the complete accession,
+  preserving leading zeroes and dot separators.
+- Searches can return photographs and fuzzy matches. Open a result of type
+  `Objekt` and verify `Inventarienummer`, plus supporting descriptive fields.
+- Example: Stockholm `1909.10.0021` is
+  <https://collections.smvk.se/carlotta-em/web/object/1587472>.
+  Detail routes use internal IDs, which cannot be generated from accessions.
+- Keep catalogue uncertainty and dated corrections. Review rights on the
+  specific photograph; an icon elsewhere on the record is insufficient.
+
+## Wereldmuseum Leiden
+
+- The catalogue is a browser-rendered application. A raw HTML application shell
+  is not evidence that the catalogue is inaccessible.
+- Enter the complete accession in the visible search field and select `Zoeken`.
+  Search is fuzzy: `RV-510-17` returned eight results. Open the plausible object
+  and verify its displayed `Inventarisnummer` and dimensions.
+- Use the record's stable handle, for example
+  <https://hdl.handle.net/20.500.11840/661771> for `RV-510-17`.
+  The handle number is an internal identifier, not a substitutable accession.
+- Review image credit and licence on each record; this example displayed
+  CC BY-SA 4.0. Do not apply that example's rights to other photographs.
