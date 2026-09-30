@@ -1,0 +1,62 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-296",
+  "language": "es",
+  "claims": [
+    {
+      "id": "catalogue-title",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "described_as",
+      "value": "Título de la ficha: Moai Mana'u"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "classified_as",
+      "value": "Escultura"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "described_as",
+      "value": "Escultura antropomorfa masculina en posición acuclillada. Presenta pene y costillas, sin embargo, no presenta otros rasgos del moai Kava Kava. Las costillas en la espalda se proyectan hasta el cuello de la pieza. En la nuca presenta una protuberancia con un orificio que se usaba para colgar la pieza en la antigüedad. La cabeza está decorada con un diseño antropomorfo lineal. Las orejas son normales y no elongadas como en la mayoría de los casos. Los brazos están flectados, apoyados en las rodillas con las manos sosteniendo la cabeza a la altura de la mandíbula. los ojos están hechos de vértebra de pez y obsidiana"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "catalogue_number",
+      "value": "17-296"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "described_as",
+      "value": "Creador/a: Tomás Tuki Tepano"
+    },
+    {
+      "id": "creation-date",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "described_as",
+      "value": "Fecha de creación: 2012"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t02-22-49-315z.html",
+      "capturedAt": "2026-09-30T02:22:49.315Z",
+      "method": "singlefile",
+      "note": "Official ficha and catalogue photo preserved; photo used for private identification comparison only; image rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "Official Chile Patrimonios fiche for MAPSE catalogue object 17-296. The catalogue statements remain attributed as written. No image is published; portal terms do not grant a general image reuse licence.",
+    "language": "en-GB"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "author": "Staatliche Kunstsammlungen Dresden",
+  "reference": "https://skd-online-collection.skd.museum/Details/Index/1634490",
+  "language": "de",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-dresden-62389",
+      "predicate": "classified_as",
+      "value": "Skulptur im Stil der moai kava kava"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-dresden-62389",
+      "predicate": "catalogue_number",
+      "value": "62389"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-dresden-62389",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-dresden-62389",
+      "predicate": "described_as",
+      "value": "Abmessungen: 35 x 9 x 13,5 cm"
+    },
+    {
+      "id": "place-and-dating",
+      "objectId": "moai-kavakava-dresden-62389",
+      "predicate": "described_as",
+      "value": "Rapa Nui (Osterinsel), vor 1981"
+    },
+    {
+      "id": "catalogue-roles",
+      "objectId": "moai-kavakava-dresden-62389",
+      "predicate": "described_as",
+      "value": "uns nicht bekannt - Hersteller"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-dresden-62389",
+      "predicate": "held_by",
+      "value": "Museum für Völkerkunde Dresden"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-02-03-471z.html",
+      "capturedAt": "2026-09-30T00:02:03.471Z",
+      "method": "singlefile",
+      "note": "Reviewed capture preserves the exact museum name, accession number, object title, and catalogue fields including material and dimensions; the page marks object images Freier Zugang – Rechte vorbehalten, so no image was imported."
+    }
+  ],
+  "notes": {
+    "text": "Transcribed the displayed catalogue fields and descriptive passage, retaining role labels, uncertainty and historical terminology. The combined place/dating field is preserved as a description without inferring a specific making-place relationship.",
+    "language": "en-GB"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "author": "Betty Haoa Rapahango & Diego Muñoz",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-vina-del-mar-2",
+  "language": "en",
+  "objectIds": [
+    "moai-kavakava-vina-del-mar-1831-545-coll-felbermayer",
+    "moai-kavakava-vina-del-mar-1825-539-coll-felbermayer",
+    "moai-kavakava-vina-del-mar-1833-547-coll-felbermayer",
+    "moai-kavakava-vina-del-mar-1739-453-coll-felbermayer",
+    "moai-kavakava-vina-del-mar-1391-105-coll-felbermayer",
+    "moai-kavakava-vina-del-mar-1571-285-coll-felbermayer",
+    "moai-kavakava-vina-del-mar-1332-46-coll-felbermayer",
+    "moai-kavakava-vina-del-mar-1575-289-coll-felbermayer"
+  ],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "This linked article is preserved as evidence, but no claims are extracted: its text is contextual, bibliographic, or does not distinguish which linked object a singular description concerns.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-32-59-333z.html",
+      "capturedAt": "2026-09-29T22:32:59.333Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Viña del Mar”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

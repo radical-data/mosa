@@ -1,0 +1,74 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510267/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "catalogue_number",
+      "value": "1927.1452"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Ua. A chief's staff of wood, carved with a janus human head at the top with obsidian eyes cut in shell."
+    },
+    {
+      "id": "place",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "made_of",
+      "value": "Wood; Shell; Obsidian"
+    },
+    {
+      "id": "local-term",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "measurements",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Measurements: 60mm x 55mm x 1519mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Source: Umlauff, J. F. G. [vendor]; von Hügel, Anatole Andreas Aloys (Baron) [donor]"
+    },
+    {
+      "id": "reference-numbers",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Reference Numbers: 1927.1452; O.XX.5 [written on object]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "ua-cambridge-1927-1452",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Acquisition Details) Purchased from Johann Friedrich Gustav Umlauff a Hamburg-based ethnographic dealership and associated museum. Established in 1868 the business ran until 1974. Event Date Author: maa"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession 1927.1452 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-52-12-196z.html",
+      "capturedAt": "2026-09-29T23:52:12.196Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

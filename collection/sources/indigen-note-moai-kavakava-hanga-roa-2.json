@@ -1,0 +1,32 @@
+{
+  "author": "Museo Antropológico Padre Sebastian Englert (MAPSE)",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-hanga-roa-2",
+  "language": "en",
+  "claims": [
+    {
+      "id": "moai-kavakava-rapa-nui-17-296-moai-manau-name",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "has_name",
+      "value": "Moai Mana‘u"
+    },
+    {
+      "id": "moai-kavakava-rapa-nui-17-296-account-1",
+      "objectId": "moai-kavakava-rapa-nui-17-296",
+      "predicate": "described_as",
+      "value": "This piece named Moai Mana‘u was carved by the artist Tomás Tuki Tepano, as part of his personal collection. This artist always carves a copy of his pieces to conserve one in his personal collection. He agreed to sell it to the museum because he was interested in keeping his work for the future. This piece won the seal of excellence for ‘Chilean handicrafts’ in 2012. It also received the UNESCO Artesanías del Mercosur recognition in 2012."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "2 object-specific claims extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-32-33-922z.html",
+      "capturedAt": "2026-09-29T22:32:33.922Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Rapa Nui”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

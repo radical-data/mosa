@@ -1,0 +1,116 @@
+{
+  "author": "Museum am Rothenbaum – Kulturen und Künste der Welt (MARKK)",
+  "reference": "https://markk-hamburg.de/files/media/2020/06/MARKK-OZ-bis-1920.pdf",
+  "language": "de",
+  "claims": [
+    {
+      "id": "inventory-number",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "catalogue_number",
+      "value": "E 614"
+    },
+    {
+      "id": "catalogue-designation",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "classified_as",
+      "value": "Idol aus Holz, Vogelgestalt"
+    },
+    {
+      "id": "origin-field",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "described_as",
+      "value": "Herkunft: Ozeanien/Polynesien/Chile"
+    },
+    {
+      "id": "e614-table-context",
+      "objectId": "manu-hamburg-e-614",
+      "predicate": "described_as",
+      "value": "Spender/Veräußerer lt. Inventar-/Postenbuch: C. Lüders"
+    },
+    {
+      "id": "e615-inventory-number",
+      "objectId": "moai-kavakava-hamburg-e-615",
+      "predicate": "catalogue_number",
+      "value": "E 615"
+    },
+    {
+      "id": "e615-designation",
+      "objectId": "moai-kavakava-hamburg-e-615",
+      "predicate": "described_as",
+      "value": "Idol aus Holz, stehende männliche Figur (ca. 30 cm) moai kavakava"
+    },
+    {
+      "id": "e615-origin-field",
+      "objectId": "moai-kavakava-hamburg-e-615",
+      "predicate": "described_as",
+      "value": "Herkunft: Ozeanien/Polynesien/Chile"
+    },
+    {
+      "id": "e615-table-context",
+      "objectId": "moai-kavakava-hamburg-e-615",
+      "predicate": "described_as",
+      "value": "Spender/Veräußerer lt. Inventar-/Postenbuch: C. Lüders"
+    },
+    {
+      "id": "e616-inventory-number",
+      "objectId": "moai-kavakava-hamburg-e-616",
+      "predicate": "catalogue_number",
+      "value": "E 616"
+    },
+    {
+      "id": "e616-designation",
+      "objectId": "moai-kavakava-hamburg-e-616",
+      "predicate": "described_as",
+      "value": "Idol aus Holz, gr. stehende männliche Figur (ca.50 cm) - moai tangata"
+    },
+    {
+      "id": "e616-origin-field",
+      "objectId": "moai-kavakava-hamburg-e-616",
+      "predicate": "described_as",
+      "value": "Herkunft: Ozeanien/Polynesien/Chile"
+    },
+    {
+      "id": "e616-table-context",
+      "objectId": "moai-kavakava-hamburg-e-616",
+      "predicate": "described_as",
+      "value": "Eingangsdatum: 1882; Spender/Veräußerer lt. Inventar-/Postenbuch: Kapitän Mekring [?]"
+    },
+    {
+      "id": "e617-inventory-number",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "catalogue_number",
+      "value": "E 617"
+    },
+    {
+      "id": "e617-designation",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "described_as",
+      "value": "Idol aus Holz, gr. stehende weibl. Figur (ca. 70 cm)"
+    },
+    {
+      "id": "e617-origin-field",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "described_as",
+      "value": "Herkunft: Ozeanien/Polynesien/Chile"
+    },
+    {
+      "id": "e617-table-context",
+      "objectId": "moai-pa-apa-a-hamburg-e-617",
+      "predicate": "described_as",
+      "value": "Eingangsdatum: 20. Oktober 1882; Spender/Veräußerer lt. Inventar-/Postenbuch: Kapitän Mekring [?]"
+    }
+  ],
+  "notes": {
+    "text": "Historical MARKK Oceania collection-database extract. It lists inventories E 614, E 615, E 616 and E 617 on PDF pages 142–143. The exact accession, object designations, origin fields, and available entry date/donor-seller fields are transcribed separately for linked objects. The table's “Eingangsdatum” is not treated as manufacture date. The PDF bears a notice that its designations are historical and may be outdated or racist; the source wording is preserved as an attributed historical record. Catalogue classifications are retained where they differ from IndiGen; established object handles are unchanged.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "markk-oz-bis-1920.pdf",
+      "capturedAt": "2026-09-30T01:04:10.000Z",
+      "method": "download",
+      "note": "Original 2020 database-extract PDF preserved unchanged. Relevant table rows, inventory number, designation, origin, printed attribution/date columns and notice appear on PDF pages 142–143; visually inspected. The catalogue excerpt itself warns that its designations may be outdated or racist."
+    }
+  ]
+}

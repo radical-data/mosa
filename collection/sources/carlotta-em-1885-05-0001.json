@@ -1,0 +1,89 @@
+{
+  "author": "Etnografiska Museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1585341",
+  "language": "sv",
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "catalogue_number",
+      "value": "1885.05.0001"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "classified_as",
+      "value": "klubba (vapen)"
+    },
+    {
+      "id": "local-name",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "has_name",
+      "value": "ua"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Klubba av toromiroträ, tungformig, med handtaget snidat i form av ett huvud med åt två sidor vända människoansikten med runda ögon av obsidian och musselskal. (generalkatalogen)"
+    },
+    {
+      "id": "origin",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "length",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Längd: 112 cm"
+    },
+    {
+      "id": "width",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Bredd: 10 cm"
+    },
+    {
+      "id": "thickness",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Tjocklek: 7 cm"
+    },
+    {
+      "id": "museum-acquisition",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1885"
+    },
+    {
+      "id": "former-id",
+      "objectId": "ua-stockholm-1885-05-0001",
+      "predicate": "catalogue_number",
+      "value": "RM.2263"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "ua-stockholm-1885-05-0001",
+      "file": "ua-stockholm-1885-05-0001/carlotta.jpg",
+      "alt": "Lång träklubba med ett snidat ansikte vid handtaget.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1585341"
+    }
+  ],
+  "notes": {
+    "text": "Evidence locators: Inventarienummer; Sakord; Lokalt namn; Beskrivning; Land - ursprung; Längd; Bredd; Tjocklek; Tidpunkt - förvärv till museet; Tidigare identitet. The selected photograph carries a CC BY 4.0 overlay in its image viewer. The original JPEG from the preserved page is included unchanged. No individual photographer is named in the reviewed image credit; the holding museum is credited.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-21-11-547z.html",
+      "capturedAt": "2026-09-30T00:21:11.547Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. The selected image and its CC BY 4.0 overlay are preserved in the catalogue image viewer."
+    }
+  ]
+}

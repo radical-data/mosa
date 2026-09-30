@@ -1,0 +1,20 @@
+{
+  "author": "Ana Maria Arredondo",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-wellington-2",
+  "language": "en",
+  "objectIds": ["moai-kavakava-wellington-234568-fe010655"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "This linked article is preserved as evidence, but no claims are extracted: its text is contextual, bibliographic, or does not distinguish which linked object a singular description concerns.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-33-17-338z.html",
+      "capturedAt": "2026-09-29T22:33:17.338Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Wellington”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

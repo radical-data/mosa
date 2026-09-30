@@ -1,0 +1,86 @@
+{
+  "author": "Wereldmuseum",
+  "reference": "https://hdl.handle.net/20.500.11840/663876",
+  "language": "nl",
+  "images": [],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "catalogue_number",
+      "value": "RV-579-1"
+    },
+    {
+      "id": "title",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "classified_as",
+      "value": "Staf - ua"
+    },
+    {
+      "id": "period",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Datering: Voor 1886"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Afmetingen: 136 x 9 x 6 cm"
+    },
+    {
+      "id": "materials",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "made_of",
+      "value": "Hout ; obsidiaan ; schelp"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Verwerving: Aankoop, 1886-10-01"
+    },
+    {
+      "id": "origin",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Herkomst: Chili / Rapa Nui (eiland) / Zuid-Amerika / Midden- en Zuid-Amerika / Valparaíso (regio)"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Deze staf (ua) met een menselijk gezicht aan de bovenzijde werd door hoofdmannen gedragen als teken van hun (sacrale) macht."
+    },
+    {
+      "id": "historical-context",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Historische bronnen melden dat de staf een eigen naam droeg; het menselijke gezicht was het portret van de eigenaar."
+    },
+    {
+      "id": "wood-context",
+      "objectId": "ua-leiden-rv-579-1",
+      "predicate": "described_as",
+      "value": "Doordat er op Paaseiland steeds minder bomen groeiden was hout een kostbare en zeldzame grondstof in de periode van de eerste contacten met Europeanen. Grote houten voorwerpen waren dan ook een luxe, die eigenlijk alleen aan hoofdmannen was voorbehouden."
+    }
+  ],
+  "notes": {
+    "text": "Selective extraction from the exact object record; field labels and wording are retained. The record-level Creative Commons notice describes the catalogue work. The museum publishes separate photo-order terms with delivery and use fees by category, so these pages alone do not establish image-specific reuse permission. No image is included pending rights/scope clarification. Field values are attributed to the unified collection catalogue.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-08-13-761z.html",
+      "capturedAt": "2026-09-30T01:08:13.761Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number RV-579-1 and catalogue content."
+    },
+    {
+      "file": "2026-09-30t01-09-30-635z.html",
+      "capturedAt": "2026-09-30T01:09:30.635Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number RV-579-1 and cited catalogue fields."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "author": "Universitetsmuseet i Bergen",
+  "reference": "https://www.digitalarkivet.no/ed60136683000117",
+  "language": "no",
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "catalogue_number",
+      "value": "1193"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "made_of",
+      "value": "træ"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-bergen-bme-1193",
+      "predicate": "described_as",
+      "value": "H. 75 cm."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Selective transcription of handwritten accession-register entry 1193, preserved as a full scan from Digitalarkivet. Catalogue number, material and dimensions are legible and match the IndiGen entry. Historical spelling is retained. The longer description and acquisition/place columns await a palaeographic review; no modern custody claim is inferred from this historical register. The scan is source evidence and supplies no object photograph.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-50-42-531z.jpg",
+      "originalUrl": "https://media.digitalarkivet.no/image/181601b6-9ae6-496f-bc82-3d1eec4b3c58",
+      "capturedAt": "2026-09-30T00:50:42.531Z",
+      "method": "download",
+      "note": "Original downloaded scan of pages 223–224, entry 1193; full spread inspected. Retrieval time retained from browser download file metadata."
+    }
+  ]
+}

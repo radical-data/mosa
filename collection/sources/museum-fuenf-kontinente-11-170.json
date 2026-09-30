@@ -1,0 +1,73 @@
+{
+  "author": "Museum Fünf Kontinente",
+  "reference": "https://onlinedatenbank-museum-fuenf-kontinente.de/detail/collection/66b9e8b4-25fe-44c2-9d0f-417caba0af4d",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-munich-11-170",
+      "predicate": "catalogue_number",
+      "value": "11-170"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-munich-11-170",
+      "predicate": "classified_as",
+      "value": "Zeremonialkeule | U'a"
+    },
+    {
+      "id": "holder",
+      "objectId": "ua-munich-11-170",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-munich-11-170",
+      "predicate": "made_of",
+      "value": "Holz; Knochen; Obsidian"
+    },
+    {
+      "id": "dating",
+      "objectId": "ua-munich-11-170",
+      "predicate": "made_during",
+      "value": "vor 1885"
+    },
+    {
+      "id": "geographic-origin",
+      "objectId": "ua-munich-11-170",
+      "predicate": "described_as",
+      "value": "Geografische Herkunft: Ozeanien/Polynesien (Region), Südamerika/Chile/Rapa Nui (Osterinsel)"
+    },
+    {
+      "id": "authorship",
+      "objectId": "ua-munich-11-170",
+      "predicate": "described_as",
+      "value": "Urheberschaft: Nicht dokumentiert"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-munich-11-170",
+      "predicate": "described_as",
+      "value": "Maße: Länge 182 cm"
+    },
+    {
+      "id": "provenance",
+      "objectId": "ua-munich-11-170",
+      "predicate": "described_as",
+      "value": "Provenienz: Museum Godeffroy | Ernst Hartwig | Kunst-Museum Bamberg; Tausch 1911"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The museum's online record displays inventory number 11-170, exactly matching the IndiGen gallery identifier for ua-munich-11-170. The classification claim preserves the full German title; the museum's geographic-origin field remains a source account and is not interpreted as a findspot or place of making.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-56-54-798z.html",
+      "capturedAt": "2026-09-29T22:56:54.798Z",
+      "method": "singlefile"
+    }
+  ]
+}

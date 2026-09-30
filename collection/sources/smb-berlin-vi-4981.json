@@ -1,0 +1,89 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "reference": "https://id.smb.museum/object/998383",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "catalogue_number",
+      "value": "VI 4981"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "classified_as",
+      "value": "moai kavakava"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum"
+    },
+    {
+      "id": "participants",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "described_as",
+      "value": "Beteiligte: S.M.S. Hyäne (27.6.1878 - 1924) , Expedition"
+    },
+    {
+      "id": "date",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "made_during",
+      "value": "vor 1883"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "described_as",
+      "value": "Geografische Bezüge: Polynesien , Großregion Osterinsel (Rapa Nui) , Insel"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "made_of",
+      "value": "Holz , geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "described_as",
+      "value": "Abmessungen: Höhe x Breite x Tiefe: 40,5 x 8 x 9 cm Gewicht: ca. 0,4 kg"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "predicate": "described_as",
+      "value": "Erwerbung: Zugang ungeklärt, von Kanonenboot S.M.S. Hyäne, Otto Weerth 1883"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-kavakava-berlin-vi-4981-b",
+      "file": "moai-kavakava-berlin-vi-4981-b/smb.jpg",
+      "alt": "Eine dunkle stehende Holzfigur mit eingelegten Augen, ausgeprägten Rippen und angewinkelten Armen.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998383"
+    }
+  ],
+  "notes": {
+    "text": "Matched displayed institution-scoped accession VI 4981 and the complete 40,5 x 8 x 9 cm dimensions with the IndiGen entry; type and provenance were also compared. The gallery appends a photographic view letter to this accession; the museum lists the base accession and separate image views. The established object handle is retained. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-00-01-225z.html",
+      "capturedAt": "2026-09-30T00:00:01.225Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ]
+}

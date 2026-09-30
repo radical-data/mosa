@@ -1,0 +1,74 @@
+{
+  "author": "Weltmuseum Wien",
+  "reference": "https://www.weltmuseumwien.at/en/objects/moai-kava-kava-454649",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "inventory-number",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "catalogue_number",
+      "value": "22860"
+    },
+    {
+      "id": "object-name",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "has_name",
+      "value": "moai kava kava"
+    },
+    {
+      "id": "object-name-classification",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "classified_as",
+      "value": "Figure"
+    },
+    {
+      "id": "collection-area",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "described_as",
+      "value": "Collection area: Oceania and Australia"
+    },
+    {
+      "id": "geography",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "described_as",
+      "value": "Geography: Ozeanien/Polynesien/Osterinsel/Chile"
+    },
+    {
+      "id": "material-technology",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "made_of",
+      "value": "Holz, Knochen, Obsidian"
+    },
+    {
+      "id": "collector-heinrich",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich Freiherr von Westenholz"
+    },
+    {
+      "id": "collector-klee-kocher",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "described_as",
+      "value": "Collector: Klee und Kocher, Hamburg"
+    },
+    {
+      "id": "time",
+      "objectId": "moai-kavakava-vienna-vo-22860",
+      "predicate": "described_as",
+      "value": "Time: um 1880"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Selective transcription from the museum online collection. Evidence locators: Object Name; Collector; Time where shown; Material/technology; Collection area; Geography; Invs. Inventory number verified against the Invs. field. The displayed copyright notice “Weltmuseum Wien” applies to the object imagery and is not a reuse licence; no image added. The source mixes English interface labels and German catalogue fields; these are retained in their original languages.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-25-21-675z.html",
+      "capturedAt": "2026-09-30T00:25:21.675Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. Original multilingual wording and uncertainty retained; no image republication rights inferred."
+    }
+  ]
+}

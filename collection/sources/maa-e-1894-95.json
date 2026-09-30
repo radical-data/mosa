@@ -1,0 +1,74 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510281/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "catalogue_number",
+      "value": "E 1894.95"
+    },
+    {
+      "id": "description",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Rapa. Dance-paddle carved of toromiro wood, a flattened 'head' form at one end with stylized facial features merging into a cylindrical hand-grip section broadening out into a flattened 'torso' form ending with a stylized phallus point. A section of wood missing from inside the edge of the 'torso' form."
+    },
+    {
+      "id": "place",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "material",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "local-term",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "classified_as",
+      "value": "Rapa"
+    },
+    {
+      "id": "measurements",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Measurements: 23mm x 873mm x 185mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Source: Froude, James Anthony [monetary donor]"
+    },
+    {
+      "id": "reference-numbers",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Reference Numbers: E 1894.95; MAA: AR 1894.414; Z 6125; Z 6435 [painted on object]; 16 [written in pencil]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "rapa-cambridge-e-1894-95",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Acquisition Details) Purchased with money provided to the Museum Accession Fund by James Anthony Froude, Professor of Modern History at Oxford University, and paternal uncle of Baroness Eliza von Hügel, wife of the curator Baron Anotole von Hügel Event Date 1894 Author: rachel hand"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession E 1894.95 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Some transverse measurements differ by a factor of ten between the sources; catalogue wording is retained without correction. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-51-45-880z.html",
+      "capturedAt": "2026-09-29T23:51:45.880Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

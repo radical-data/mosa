@@ -1,0 +1,62 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-295",
+  "language": "es",
+  "claims": [
+    {
+      "id": "catalogue-title",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "Título de la ficha: Moai Moe Tangata"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "classified_as",
+      "value": "Escultura"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "Escultura antropomorfa masculina. Llama la atención su postura, tiene sus piernas flectadas, el tronco curvado hacia adelante con el pene proyectándose hacia atrás entre las piernas, brazo derecho doblado sobre el estómago y el izquierdo flectado sobre la espalda de manera similar a la pose del derecho. La columna vertebral está tallada en relieve y se interrumpe en la zona donde se posa la mano izquierda. En la cabeza tiene tallado un diseño de tortuga y una especie de cintillo."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "catalogue_number",
+      "value": "17-295"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "Creador/a: Luis Tomás Paté Riroroko"
+    },
+    {
+      "id": "creation-date",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "Fecha de creación: 2015"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t02-22-14-340z.html",
+      "capturedAt": "2026-09-30T02:22:14.340Z",
+      "method": "singlefile",
+      "note": "Official ficha and catalogue photo preserved; photo used for private identification comparison only; image rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "Official Chile Patrimonios fiche for MAPSE catalogue object 17-295. The catalogue statements remain attributed as written. No image is published; portal terms do not grant a general image reuse licence.",
+    "language": "en-GB"
+  }
+}

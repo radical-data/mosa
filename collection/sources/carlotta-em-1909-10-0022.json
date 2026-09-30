@@ -1,0 +1,83 @@
+{
+  "author": "Etnografiska Museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1587473",
+  "language": "sv",
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "catalogue_number",
+      "value": "1909.10.0022"
+    },
+    {
+      "id": "classification",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "classified_as",
+      "value": "klubba (vapen)"
+    },
+    {
+      "id": "description",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Klubba av trä."
+    },
+    {
+      "id": "origin",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "materials",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "made_of",
+      "value": "snäckskal; sten; trä"
+    },
+    {
+      "id": "length",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Längd: 52 cm"
+    },
+    {
+      "id": "width",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Bredd: 12 cm"
+    },
+    {
+      "id": "thickness",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Tjocklek: 4 cm"
+    },
+    {
+      "id": "collector",
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "predicate": "described_as",
+      "value": "Namn - insamlad av: Skottsberg, Carl"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "paoa-stockholm-1909-10-0022",
+      "file": "paoa-stockholm-1909-10-0022/carlotta.jpg",
+      "alt": "Bred träklubba med ett snidat ansikte vid handtaget.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1587473"
+    }
+  ],
+  "notes": {
+    "text": "Evidence locators: Inventarienummer; Sakord; Beskrivning; Land - ursprung; Material - tillverkning; Längd; Bredd; Tjocklek; Namn - insamlad av. The selected photograph carries a CC BY 4.0 overlay in its image viewer. The original JPEG from the preserved page is included unchanged. No individual photographer is named in the reviewed image credit; the holding museum is credited.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-24-54-044z.html",
+      "capturedAt": "2026-09-30T00:24:54.044Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. The selected image and its CC BY 4.0 overlay are preserved in the catalogue image viewer."
+    }
+  ]
+}

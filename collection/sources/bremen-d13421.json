@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1236",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "catalogue_number",
+      "value": "D13421"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "classified_as",
+      "value": "moai kavakava"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "made_during",
+      "value": "1800-1953 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "described_as",
+      "value": "Owned — Who: Hornke"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "described_as",
+      "value": "Männliche, ausgmergelte, leicht gebückt stehende Figur, bei der die Arme am Körper anliegen. Die Wirbelsäule ist deutlich herausgearbeitet, dan Genital hingegen nur angedeutet. Die Füße sind im Verhältnis zum Körper klein und ohne Zehen gearbeitet. Auf dem Kopf befinden sich Einkerbungen. Das Gesicht ist gekennzeichnet durch eine große Nase , eine wulstige Monobraue und einen geöffneten Mund mit nach oben gezogenen Mundwinkeln, wobei die Zähne deutlich sichtbar sind. Die Ohren sind groß und mit einem Pflock als Ohrschmuck versehen. Die Figur verkörpert ein männliches Geistwesen."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "described_as",
+      "value": "Material/Technique: Holz | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "described_as",
+      "value": "Allgemein: 23 x 4 x 5,5 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moai-kavakava-bremen-d13421",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-kavakava-bremen-d13421",
+      "file": "moai-kavakava-bremen-d13421/museum-digital.jpg",
+      "alt": "Holzfigur mit breitem Mund und hervortretenden Rippen, Vorderansicht.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1236/d13421-figur-moai-kavakava-1236-4428.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-07-46-090z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1236?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:07:46.090Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-12-40-904z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=1481",
+      "capturedAt": "2026-09-30T01:12:40.904Z",
+      "method": "singlefile"
+    }
+  ]
+}

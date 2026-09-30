@@ -1,0 +1,95 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1354",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "catalogue_number",
+      "value": "D15413"
+    },
+    {
+      "id": "classification",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "classified_as",
+      "value": "moko"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "made_during",
+      "value": "January 1, 1800-November 30, 1990 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "created-who",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Created — Who: Luis Hey Chavez"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Owned — Who: Dr. Dieter Heintze"
+    },
+    {
+      "id": "description",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Anthopomorphe Eidechsen -Figur als Nachbildung eines moko. Der flache dreieickige Kopf hat eingelegte Augen, kund eine anthropomorphe Nase . Auf dem leicht gewölbten Schädel wurden zwei Vögel eingekerbt. Der schmale breite Mund reicht bis zu den Ohren und ist leicht geöffnet. Entlang des Rückens verläuft, etwas erhaben, ein Grat mit Wirbeln, der in einer Art Rückenflosse endet. Ein Zickzackmuster ziert den Hals . Die langen, dünnen Arme mit sehr feinen Händen sind in Brusthöhe angewinkelt und reichen bis zum Kinn , wo eine Vulva eingekerbt ist. Zwischen den langgestreckten Beinen liegt ein Penis . Die Figur wurde von Luis Hey Chavez hergestellt."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Material/Technique: Holz; Knochen; Obsidian | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "described_as",
+      "value": "Allgemein: 3 x 28 x 5 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moko-bremen-d15413",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moko-bremen-d15413",
+      "file": "moko-bremen-d15413/museum-digital.jpg",
+      "alt": "Helle geschnitzte Tierfigur mit langem Schwanz und eingesetztem Auge.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1354-d15413/d15413_figur__moko/d15413-figur-moko-1354-661165.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-09-24-121z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1354?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:09:24.121Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-14-10-843z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=5698",
+      "capturedAt": "2026-09-30T01:14:10.843Z",
+      "method": "singlefile"
+    }
+  ]
+}

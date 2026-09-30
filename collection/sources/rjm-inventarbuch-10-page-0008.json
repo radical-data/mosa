@@ -1,0 +1,148 @@
+{
+  "author": "Rautenstrauch-Joest-Museum",
+  "reference": "https://doi.org/10.11588/diglit.78034#0008",
+  "language": "de",
+  "claims": [
+    {
+      "id": "inventory-54529",
+      "objectId": "manu-cologne-54529",
+      "predicate": "catalogue_number",
+      "value": "54 529"
+    },
+    {
+      "id": "designation-54529",
+      "objectId": "manu-cologne-54529",
+      "predicate": "classified_as",
+      "value": "Holzanhänger"
+    },
+    {
+      "id": "inventory-54531",
+      "objectId": "ika-cologne-54531",
+      "predicate": "catalogue_number",
+      "value": "54 531"
+    },
+    {
+      "id": "designation-54531",
+      "objectId": "ika-cologne-54531",
+      "predicate": "classified_as",
+      "value": "gekrümmter Holzfisch"
+    },
+    {
+      "id": "inventory-54534",
+      "objectId": "moko-cologne-54534",
+      "predicate": "catalogue_number",
+      "value": "54 534"
+    },
+    {
+      "id": "designation-54534",
+      "objectId": "moko-cologne-54534",
+      "predicate": "classified_as",
+      "value": "Eidechsen-Figur"
+    },
+    {
+      "id": "inventory-54536",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "catalogue_number",
+      "value": "54 536"
+    },
+    {
+      "id": "designation-54536",
+      "objectId": "tangata-manu-cologne-54536",
+      "predicate": "classified_as",
+      "value": "zoo-anthropomorphe Holzfigur"
+    },
+    {
+      "id": "inventory-54537",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "catalogue_number",
+      "value": "54 537"
+    },
+    {
+      "id": "designation-54537",
+      "objectId": "tangata-manu-cologne-54537",
+      "predicate": "classified_as",
+      "value": "zoo-anthropomorphe Holzfigur"
+    },
+    {
+      "id": "inventory-54538",
+      "objectId": "manu-cologne-54538",
+      "predicate": "catalogue_number",
+      "value": "54 538"
+    },
+    {
+      "id": "designation-54538",
+      "objectId": "manu-cologne-54538",
+      "predicate": "classified_as",
+      "value": "Vogel"
+    },
+    {
+      "id": "inventory-54540",
+      "objectId": "moai-kavakava-cologne-54540",
+      "predicate": "catalogue_number",
+      "value": "54 540"
+    },
+    {
+      "id": "designation-54540",
+      "objectId": "moai-kavakava-cologne-54540",
+      "predicate": "classified_as",
+      "value": "anthropomorphe Holzfigur"
+    },
+    {
+      "id": "inventory-54541",
+      "objectId": "moai-kavakava-cologne-54541",
+      "predicate": "catalogue_number",
+      "value": "54 541"
+    },
+    {
+      "id": "designation-54541",
+      "objectId": "moai-kavakava-cologne-54541",
+      "predicate": "classified_as",
+      "value": "anthropomorphe Holzfigur"
+    },
+    {
+      "id": "inventory-54543",
+      "objectId": "moai-kavakava-cologne-54543",
+      "predicate": "catalogue_number",
+      "value": "54 543"
+    },
+    {
+      "id": "designation-54543",
+      "objectId": "moai-kavakava-cologne-54543",
+      "predicate": "classified_as",
+      "value": "anthropomorphe Holzfigur"
+    },
+    {
+      "id": "inventory-54544",
+      "objectId": "moai-kavakava-cologne-54544",
+      "predicate": "catalogue_number",
+      "value": "54 544"
+    },
+    {
+      "id": "designation-54544",
+      "objectId": "moai-kavakava-cologne-54544",
+      "predicate": "classified_as",
+      "value": "anthropomorphe Holzfigur"
+    }
+  ],
+  "notes": {
+    "text": "Rautenstrauch-Joest-Museum, Inventarbuch 10, page 8 (stable citation https://doi.org/10.11588/diglit.78034#0008). The printed headings identify Nr., Gegenstand, Herkunft, Erwerbung and Bemerkungen. Handwritten catalogue numerals separate the first two digits from the final three (for example, 54 529); the digits match the assigned accessions after removing spaces. The Gegenstand entries at 54 534, 54 537, 54 541, 54 543 and 54 544 use ditto marks, expanded here only where the immediately preceding Gegenstand entry makes the repeated wording clear. Herkunft is written as Chile, Osterinsel at 54 529 and repeated by ditto marks in the following entries. The Rautenstrauch-Joest-Museum warns that its historic documentation may contain discriminatory terms or erroneous regional, ethnic or linguistic attributions. HAI facsimile pages are labelled CC BY-NC-ND 4.0; no scan image is reused for the collection.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "rjm-inventarbuch-10-0008.html",
+      "originalUrl": "https://digi.ub.uni-heidelberg.de/diglit/rjm_inv_buch_10/0008/image,info",
+      "capturedAt": "2026-09-30T01:32:33.966Z",
+      "method": "singlefile",
+      "note": "HAI SingleFile HTML preserves the page DOI and catalogue metadata, but its embedded facsimile is only a cropped viewport. Do not use it alone to review object rows; the complete original page JPEG is preserved in the second capture."
+    },
+    {
+      "file": "rjm-inventarbuch-10-0008.jpg",
+      "originalUrl": "https://digi.ub.uni-heidelberg.de/diglitData/image/rjm_inv_buch_10/3/008_RJM_Inventarbuch_10.jpg",
+      "capturedAt": "2026-09-30T01:40:00.000Z",
+      "method": "download",
+      "note": "Complete original HAI page JPEG downloaded from the viewer JPEG link and visually reviewed; 4320 x 3370 px with full table. CC BY-NC-ND 4.0; preservation only."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1364",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "catalogue_number",
+      "value": "D07092"
+    },
+    {
+      "id": "classification",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "classified_as",
+      "value": "moko"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "made_during",
+      "value": "1800-1900 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "described_as",
+      "value": "Owned — Who: Dr. I. Hügel"
+    },
+    {
+      "id": "description",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "described_as",
+      "value": "Anthopomorphe Eidechsen -Figur. Der flache dreieickige Kopf hat eingelegte Augen und einen leicht gewölbten Schädel . Der schmale breite Mund ist leicht geöffnet. Entlang des Rückens verläuft, etwas erhaben, ein Grat mit Wirbeln. Die langen, dünnen Arme mit Händen sind in Brusthöhe angewinkelt, die Beine sind langgestreckt."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "described_as",
+      "value": "Material/Technique: Holz; Pflanzenfaser | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "described_as",
+      "value": "Allgemein: 5 x 57 x 5 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moko-bremen-d07092",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moko-bremen-d07092",
+      "file": "moko-bremen-d07092/museum-digital.jpg",
+      "alt": "Längliche geschnitzte Tierfigur mit Schnur am Hals, liegend.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1364-d07092/d07092_figur__moko/d07092-figur-moko-1364-225689.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-09-06-700z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1364?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:09:06.700Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-14-02-147z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=5691",
+      "capturedAt": "2026-09-30T01:14:02.147Z",
+      "method": "singlefile"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-358",
+  "language": "es",
+  "claims": [
+    {
+      "id": "surdoc-number",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "catalogue_number",
+      "value": "4-358"
+    },
+    {
+      "id": "classification",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "classified_as",
+      "value": "Tangata Manu"
+    },
+    {
+      "id": "cultural-area",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "described_as",
+      "value": "Área cultural: Chile-Polinesia (Rapa Nui)"
+    },
+    {
+      "id": "category",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "classified_as",
+      "value": "Utensilios, Herramientas y Equipos"
+    },
+    {
+      "id": "technique-material",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "described_as",
+      "value": "Técnica/Material: Madera-, Hueso (material animal orgánico)-"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "described_as",
+      "value": "Dimensiones: Largo 36.5 cm - Ancho 6.9 cm - Alto 14.7 cm"
+    },
+    {
+      "id": "institution",
+      "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
+      "predicate": "held_by",
+      "value": "Museo Historia Natural de Valparaíso"
+    }
+  ],
+  "images": [],
+  "captures": [],
+  "notes": {
+    "text": "Selected catalogue fields were read on 30 September 2026 through the web retrieval tool, which reported its Chile Patrimonios copy as crawled five months earlier. The linked SURDOC record 4-358 also lists inventory number 54, the same institution and matching dimensions. The complete description has not been extracted in this batch. Original-file preservation remains unsuccessful: browser captures timed out and the Chile Patrimonios PDF request returned a 403 HTML response. No error response is registered as a capture, and no image reuse permission is established.",
+    "language": "en-GB"
+  }
+}

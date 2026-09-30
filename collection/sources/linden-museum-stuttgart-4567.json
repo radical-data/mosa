@@ -1,0 +1,83 @@
+{
+  "author": "Linden-Museum Stuttgart",
+  "reference": "https://sammlung-digital.lindenmuseum.de/en/object/staff_13736",
+  "language": "en",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "classified_as",
+      "value": "Staff"
+    },
+    {
+      "id": "name",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "has_name",
+      "value": "ua"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "catalogue_number",
+      "value": "004567"
+    },
+    {
+      "id": "holder",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "held_by",
+      "value": "Linden-Museum Stuttgart"
+    },
+    {
+      "id": "dating",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "made_during",
+      "value": "Mitte 19. Jh."
+    },
+    {
+      "id": "materials",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "made_of",
+      "value": "Obsidian, Wood; carved"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "described_as",
+      "value": "length: 126 cm; width: 7 cm; depth: 5 cm"
+    },
+    {
+      "id": "history",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "described_as",
+      "value": "Text: Ulrich Menter. The object was inventoried in 1899 as part of a collection of 34 ‘Ethnographica of Fiji’. The objects were a gift from Carlos Majer (1826-?), who lived in Valparaiso (Chile) from 1852 (1854?) until about 1874, before returning to Germany. Majer did not travel to Fiji or Rapa Nui himself, but acquired the objects from sailors in the port of Valparaiso. The provenance preceding the sale is unknown."
+    },
+    {
+      "id": "description",
+      "objectId": "ua-stuttgart-4567",
+      "predicate": "described_as",
+      "value": "Ua were described in the past as clubs, among other things, but even if a use as a weapon was not ruled out, it was primarily a insignia of high rank. At the upper end of the staff is a carved double face, the eyes of which were made of obsidian. The staff has numerous historical repairs by wood inlays. (Text: Ulrich Menter)"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "ua-stuttgart-4567",
+      "file": "ua-stuttgart-4567/linden-staff.jpg",
+      "alt": "A tall wooden staff with a carved double face at the top.",
+      "credit": "Dominik Drasdow, Linden-Museum Stuttgart",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://sammlung-digital.lindenmuseum.de/en/object/staff_13736"
+    }
+  ],
+  "notes": {
+    "text": "The displayed catalogue number 004567 matches the existing MoSA object handle ending in 4567. The catalogue account identifies this item as a Rapanui staff and gives matching 126 cm length and Valparaiso provenance. The museum’s discussion of historical uses and uncertainty is retained as an attributed description. The accompanying photograph is credited to Dominik Drasdow and the image-specific CC BY-SA 4.0 licence is linked on the page; the displayed image matches a tall staff with a carved double face.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-57-30-498z.html",
+      "capturedAt": "2026-09-29T23:57:30.498Z",
+      "method": "singlefile",
+      "note": "Reviewed capture preserves the object title, inventory number 004567, classification, materials, dimensions, accession and origin fields, Ulrich Menter text, and the item image with CC BY-SA 4.0 credit."
+    }
+  ]
+}

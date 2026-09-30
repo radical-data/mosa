@@ -1,0 +1,68 @@
+{
+  "author": "Museum der Kulturen Basel",
+  "reference": "https://onlinecollection.mkb.ch/?q=Vc%201514#/query/cf7e8f28-8054-46d9-b132-e09d09f58de4",
+  "language": "de",
+  "claims": [
+    {
+      "id": "vc-1514-catalogue-number",
+      "objectId": "moai-kavakava-basel-vc-1514",
+      "predicate": "catalogue_number",
+      "value": "Vc 1514"
+    },
+    {
+      "id": "vc-1514-classification",
+      "objectId": "moai-kavakava-basel-vc-1514",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "vc-1514-title",
+      "objectId": "moai-kavakava-basel-vc-1514",
+      "predicate": "described_as",
+      "value": "Titel: männliche Figur"
+    },
+    {
+      "id": "vc-1514-group-description",
+      "objectId": "moai-kavakava-basel-vc-1514",
+      "predicate": "described_as",
+      "value": "EL_OZCK: Vc_157, Vc_1513-1516 (4) Polynesien, Osterinsel, 4 Figuren, ca. 1930/1950; Legat 1978 Helene Fischer, Davos und Chicago"
+    },
+    {
+      "id": "vc-1514-land",
+      "objectId": "moai-kavakava-basel-vc-1514",
+      "predicate": "described_as",
+      "value": "Land: Easter Islands (Rapa Nui)"
+    },
+    {
+      "id": "vc-1514-material",
+      "objectId": "moai-kavakava-basel-vc-1514",
+      "predicate": "made_of",
+      "value": "Holz, Schnitzerei"
+    },
+    {
+      "id": "vc-1514-dimensions",
+      "objectId": "moai-kavakava-basel-vc-1514",
+      "predicate": "described_as",
+      "value": "L 42.5 cm, B 7 cm"
+    },
+    {
+      "id": "vc-1514-collector",
+      "objectId": "moai-kavakava-basel-vc-1514",
+      "predicate": "described_as",
+      "value": "Sammler*in, zugl. Einlieferer*in: Helene Fischer"
+    }
+  ],
+  "notes": {
+    "text": "Matched the displayed catalogue number Vc 1514 and supporting object details. Selective transcription of the object record, retaining any linked group description with its group context. The catalogue dates and Land field are retained without inferring more precise relationships. The record’s CC BY 4.0 data licence does not by itself establish image-specific clearance.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-16-38-000z.pdf",
+      "capturedAt": "2026-09-30T00:16:38.000Z",
+      "method": "supplied-file",
+      "note": "Official catalogue PDF export, visually reviewed against the live object record. Preserves its accession and selected catalogue fields. The export includes the object photograph; preservation does not establish image republication rights."
+    }
+  ]
+}

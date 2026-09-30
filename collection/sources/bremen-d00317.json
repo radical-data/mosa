@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1214",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "catalogue_number",
+      "value": "D00317"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "classified_as",
+      "value": "moai kavakava"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "made_during",
+      "value": "1800-1853 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "described_as",
+      "value": "Owned — Who: Karl Andree (1808-1875)"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "described_as",
+      "value": "Männliche, ausgemergelt anmutende Holzfigur mit vorgewölbtem, skelettiertem Brustkorb. Der übergroße, schmale Kopf ist leicht nach vorne geneigt. Das Gesicht wird beherrscht durch die lange schmale gebogene Nase . Die Lippen sind leicht geöffnet, so dass die Zähne sichtbar werden. Die Augenbrauen treten hervor, und die Augen bestehen aus eingelegten Knochenringen mit darin eingelegten Obsidianscheibchen für die Pupillen. Das scharfkantige Kinn ziert ein Spitzbart . Die Ohrläppchen hängen herunter und zeigen runde Ohrpflöcke als Ohrschmuck . Auf dem Kopf sind Einkerbungen (Kopfglyphe). Von den Schultern hängen lange, im Ellbogen leicht gebeugte Arme an den Seiten herunter. Die Hände mit eingeritzten Fingern sind nicht vollplastisch ausgearbeitet, dafür aber die Handknöchel. Der Brustkorb mit den ausgeprägten Rippen endet in der Mitte mit dem weit über dem Bauch hervorstehenden Schwertfortsatz. Die Schultern weisen vor und hinter dem Hals einen Grat auf. Die Brustwarzen sind ausgearbeitet. Auf dem gewölbten Bauch ist der Nabel markiert. Der Penis ist ohne Hodensäcke. Die Beine sind im Verhältnis zum Körper und zu den Armen kurz und stämmig. Im Knie leicht angewinkelt enden die Beine in kleinen Füßen, die nicht vollplastisch ausgearbeitet wurden, dafür aber die Fußknöchel. Die Knie weisen beide ein eingeritztes V auf. Auf der Rückseite tritt die Wirbelsäule mit einzelnen Wirbeln stark hervor. Solche Figuren gehören zu den bekanntesten Schnitzereien der Osterinsel . Die Figur stellt ein akuaku genanntes Geistwesen dar. Es handelt sich bei den akuaku wahrscheinlich um Ahnengeister, die für Angehörige fremder Gruppen gefährlich werden konnten und die eigenen Nachkommen beschützten - solange diese sie respektierten. Bei Zeremonien stellte man die Figuren auf oder tanzte mit ihnen. Danach wickelte man sie in Rindenbaststoffe und bewahrte sie in Wohnhäusern oder Kultzentren auf."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "described_as",
+      "value": "Material/Technique: Wahrsch. toromiro (Sophora tetraptera) [OB: Holz]; Knochen; Obsidian | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "described_as",
+      "value": "Allgemein: 34 x 9 x 9 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moai-kavakava-bremen-d00317",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-kavakava-bremen-d00317",
+      "file": "moai-kavakava-bremen-d00317/museum-digital.jpg",
+      "alt": "Stehende Holzfigur mit eingesetzten Augen und deutlich geschnitzten Rippen.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1214/d00317-figur-moai-kavakava-1214-9630.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-07-06-562z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1214?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:07:06.562Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-12-02-813z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=1466",
+      "capturedAt": "2026-09-30T01:12:02.813Z",
+      "method": "singlefile"
+    }
+  ]
+}

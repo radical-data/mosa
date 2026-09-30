@@ -1,0 +1,74 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510280/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "catalogue_number",
+      "value": "Z 6124"
+    },
+    {
+      "id": "description",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Moai Moko. Wooden carving, comprising a curved length of wood carved to represent a lizard man, with traces of red ochre on the head. The figure is stylised and the wood is a light brown colour."
+    },
+    {
+      "id": "place",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "material",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "local-term",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "classified_as",
+      "value": "Moai moko"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Measurements: 120mm x 79mm x 676mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Source: von Hügel, Anatole Andreas Aloys (Baron) [donor]"
+    },
+    {
+      "id": "reference-numbers",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Reference Numbers: Z 6124; MAA: O.XX.3 [von hūgel no]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "moko-cambridge-z-6124",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Analysis) Double figure representing a lizard man, not a fish, carved in light coloured wood, ochred on the head. A Moai Moko. Condition good- but with recess formed by a knot in the wood. From notes by Rafal Wieczorek, 4/2/2014 Event Date 4/2/2014 Author: maa"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession Z 6124 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-50-43-938z.html",
+      "capturedAt": "2026-09-29T23:50:43.938Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

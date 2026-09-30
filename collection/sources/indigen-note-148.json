@@ -1,0 +1,32 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=148",
+  "language": "en",
+  "claims": [
+    {
+      "id": "rapa-cologne-32602-account-1",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "described_as",
+      "value": "According to Thode-Arora (2001) and the museum archival sources in Cologne, this Rapa, a ceremonial dance paddle, forms part of the Oldman collection. It was donated by the Joest/Deichmann family to Rautenstrauch-Joest-Museum in Cologne. W. O. Oldman (1879–1949) was an important British collector and trader of Oceanic and African art in Europe. Although he never travelled to the Pacific, his business “W. O. Oldman. Ethnographical Specimens in London” between the late 1890s and 1913 (Kaeppler 2004) led to the extension of the collection in Cologne on Rapa Nui. We have not yet identified the supplier and informant of Oldman for this Rapanui artefact (investigations are ongoing)."
+    },
+    {
+      "id": "rapa-cologne-32602-account-2",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "described_as",
+      "value": "Until 1909 this taonga was in the ownership of Tina Joest (1819–1909), the widow of Wilhelm Joest Sr., the uncle of Wilhelm Joest Jr. After her death, the collection was donated to the museum (RJM 1909)."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "2 object-specific claims extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-30-22-377z.html",
+      "capturedAt": "2026-09-29T22:30:22.377Z",
+      "method": "singlefile",
+      "note": "Preserves “Rapa, Cologne”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=143",
+  "language": "en",
+  "objectIds": [
+    "moai-kavakava-cologne-54540",
+    "moai-kavakava-cologne-54541",
+    "moai-kavakava-cologne-54543",
+    "moai-kavakava-cologne-54544"
+  ],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "This linked article is preserved as evidence, but no claims are extracted: its text is contextual, bibliographic, or does not distinguish which linked object a singular description concerns.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-29-30-763z.html",
+      "capturedAt": "2026-09-29T22:29:30.763Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Cologne”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

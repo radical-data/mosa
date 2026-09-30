@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1369",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "catalogue_number",
+      "value": "D13412"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "made_during",
+      "value": "1800-1900 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "described_as",
+      "value": "Owned — Who: Hornke"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "described_as",
+      "value": "Männliche aufrecht stehende Holzfigur mit gegrätschten Beinen, die die natürliche Torsion des gelblich-braunen Holzes nutzt, das wohl von einer Astgabel stammt. Dabei ist das rechte Bein zu einem Ausfallschritt zur Seite geführt, so dass die Figur lediglich auf dem linken Bein als Standbein steht. Der linke Arm ist langgestreckt und so an den Körper gelegt, dass die Hand das relativ große Glied zu berühren scheint. Der Kopf ist länglich geformt mit ausgeprägten Lippen und Augenbrauen. Die Füße sind nicht vollplastisch gearbeitet. Die Figur repräsentiert ein männliches Geistwesen."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "described_as",
+      "value": "Material/Technique: Wahrsch. toromiro (Sophora tetraptera) [OB: Holz] | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "described_as",
+      "value": "Allgemein: 64 x 22,5 x 10 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moai-tangata-bremen-d13412",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-bremen-d13412",
+      "file": "moai-tangata-bremen-d13412/museum-digital.jpg",
+      "alt": "Holzfigur mit einem seitlich angehobenen Bein auf einem Sockel.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1369/d13412-figur-1369-7739.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-08-13-915z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1369?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:08:13.915Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-13-16-499z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=1535",
+      "capturedAt": "2026-09-30T01:13:16.499Z",
+      "method": "singlefile"
+    }
+  ]
+}

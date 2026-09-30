@@ -1,0 +1,20 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=144",
+  "language": "en",
+  "objectIds": ["moai-kavakava-berlin-vi-54214", "moai-tangata-cologne-46889"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "This linked article is preserved as evidence, but no claims are extracted: its text is contextual, bibliographic, or does not distinguish which linked object a singular description concerns.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-29-39-482z.html",
+      "capturedAt": "2026-09-29T22:29:39.482Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Berlin”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

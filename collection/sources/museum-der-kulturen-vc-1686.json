@@ -1,0 +1,74 @@
+{
+  "author": "Museum der Kulturen Basel",
+  "reference": "https://onlinecollection.mkb.ch/?q=Vc%201514#/query/ed434f14-2350-4fb1-ba19-e3d0331a5c1f",
+  "language": "de",
+  "claims": [
+    {
+      "id": "vc-1686-catalogue-number",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "catalogue_number",
+      "value": "Vc 1686"
+    },
+    {
+      "id": "vc-1686-classification",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "vc-1686-title",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "described_as",
+      "value": "Titel: moai kavakava"
+    },
+    {
+      "id": "vc-1686-land",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "described_as",
+      "value": "Land: Easter Islands (Rapa Nui)"
+    },
+    {
+      "id": "vc-1686-material",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "made_of",
+      "value": "Holz"
+    },
+    {
+      "id": "vc-1686-dimensions",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "described_as",
+      "value": "47cm (1 Gesamt)"
+    },
+    {
+      "id": "vc-1686-previous-owner-user",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "described_as",
+      "value": "Vorbesitzer*in/Nutzer*in: Müller SO"
+    },
+    {
+      "id": "vc-1686-collector",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "described_as",
+      "value": "Sammler*in: Elsa Eckert-Voegelin"
+    },
+    {
+      "id": "vc-1686-incoming-number",
+      "objectId": "moai-kavakava-basel-vc-1686",
+      "predicate": "described_as",
+      "value": "Einlaufnummer: Vc_0174"
+    }
+  ],
+  "notes": {
+    "text": "Matched the displayed catalogue number Vc 1686 and supporting object details. Selective transcription of the object record, retaining any linked group description with its group context. The catalogue dates and Land field are retained without inferring more precise relationships. The record’s CC BY 4.0 data licence does not by itself establish image-specific clearance.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-16-58-000z.pdf",
+      "capturedAt": "2026-09-30T00:16:58.000Z",
+      "method": "supplied-file",
+      "note": "Official catalogue PDF export, visually reviewed against the live object record. Preserves its accession and selected catalogue fields. The export includes the object photograph; preservation does not establish image republication rights."
+    }
+  ]
+}

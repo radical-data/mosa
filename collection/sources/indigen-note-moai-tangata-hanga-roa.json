@@ -1,0 +1,26 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-tangata-hanga-roa",
+  "language": "en",
+  "claims": [
+    {
+      "id": "moai-tangata-rapa-nui-17-295-account-1",
+      "objectId": "moai-tangata-rapa-nui-17-295",
+      "predicate": "described_as",
+      "value": "This piece is a reproduction of the moai taŋata stored in the Museum Völkerkundesammlung in Lübeck (Museum number: 3778b and n°23 in this gallery)."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-33-35-111z.html",
+      "capturedAt": "2026-09-29T22:33:35.111Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai taŋata, Rapa Nui”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510279/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "catalogue_number",
+      "value": "Z 6123"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Moai tanagata. Wooden carved male figure, in a slightly bowed position, with a large head. One eye has a circle of shell inlay remaining, while the other is an empty cavity. The whole is a light brown colour; a wide crack runs from the proper right of the head down the length of the figure."
+    },
+    {
+      "id": "place",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "made_of",
+      "value": "Wood; Shell"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Measurements: 155mm x 605mm x 105mm"
+    },
+    {
+      "id": "source-agents",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Source: von Hügel, Anatole Andreas Aloys (Baron) [ donor]"
+    },
+    {
+      "id": "reference-numbers",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Reference Numbers: Z 6123; MAA: O.XX.2; ?D 1887.9 (part); 15 [written in black on rear]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Analysis) Roughly carved figure in light coloured wood. One shell eye inset with obsidian remaining. Probably late nineteenth century -early twentieth century. Condition fair: large crack down rear of back. From notes by Rafal Wieczorek, 4/2/2014 Event Date 4/2/2014 Author: maa"
+    },
+    {
+      "id": "catalogue-event-2",
+      "objectId": "moai-tangata-cambridge-z-6123",
+      "predicate": "described_as",
+      "value": "Catalogue event: Description (Physical description) Moai tanagata. These figures can be male or female- this is male. Carved using nineteeth century techiniques and styles with inlaid shell eyes- no obsidian remains. The base of the feet are rounded indicating it was suspended form the house and hung around the body like a bandolier for ceremonies, rather than carved for sale. From knowledge shared by Rapanui archaeologist Enerike Ngaara Te Manu Carrasco Hotu on a visit to MAA, 13/05/2025 Event Date 13/5/2025 Author: rachel hand"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession Z 6123 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-50-34-904z.html",
+      "capturedAt": "2026-09-29T23:50:34.904Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

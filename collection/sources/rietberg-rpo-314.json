@@ -1,0 +1,74 @@
+{
+  "author": "Museum Rietberg",
+  "reference": "https://rietberg.ch/sammlungen/rpo-314",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "catalogue_number",
+      "value": "RPO 314"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "classified_as",
+      "value": "Keule mit Kopf, paoa"
+    },
+    {
+      "id": "production-place",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "made_at",
+      "value": "Chile , Amerika; Rapa Nui , Polynesien"
+    },
+    {
+      "id": "production-date",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "made_during",
+      "value": "Vor 1911"
+    },
+    {
+      "id": "object-type",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "classified_as",
+      "value": "Gerät / Zubehör / Kleinobjekt"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "made_of",
+      "value": "Holz"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "described_as",
+      "value": "Masse: Gesamtmass: 42,5 cm"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "described_as",
+      "value": "Creditline: Geschenk Eduard von der Heydt"
+    },
+    {
+      "id": "provenance",
+      "objectId": "paoa-zurich-rpo-314",
+      "predicate": "described_as",
+      "value": "Provenienz: 13.04.1911–25.04.1911: Walter Alfred Knoche (1881–1945), Erwerbsumstände unbekannt in Rapa Nui Knoche hat die Werke in situ erworben, es ist jedoch nicht klar, ob es sich um Käufe, Geschenke oder Tausch handelt. S. Mückler, Hermann: Der vergessene Osterinsel-Forscher Walter Knoche, wissenschaftlicher Leiter der chilenischen Rapa Nui-Expedition 1911, in: Jahrbuch für Europäische Überseegeschichte, Harrasssowitz Verlag 2015, Wiesbaden, Bd. 15, S. 123–146.; Eduard von der Heydt (1882–1964); 06.06.1955: Museum Rietberg, als Geschenk erhalten"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession RPO 314 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of catalogue identity, type, making-place/date, materials, dimensions, credit line and the complete provenance list. Creator fields, exhibitions and bibliography are outside this batch. Historical provenance entries remain contextual descriptions, not current custody assertions.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-52-35-554z.html",
+      "capturedAt": "2026-09-29T23:52:35.554Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

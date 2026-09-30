@@ -1,0 +1,68 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1988",
+  "language": "es",
+  "images": [],
+  "claims": [
+    {
+      "id": "surdoc-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "catalogue_number",
+      "value": "4-1988"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Escultura de bulto. Objeto de forma alargada sin base. Figura antropomorfa de cabeza tallada con bonete, orejas largas, ojos perforados con material blanco y negro, posee el contorno de los, mismos sobresaliente y decorado con lineal inciso vertical en la parte superior. Nariz prominente, de arco curvado, boca abierta horizontal. Espalda curva, abdomen abultado con ombligo visible. Posee brazos en línea con el cuerpo, manos pegadas a caderas con dedos extendidos. Piernas gruesas y cortas semi extendidas y pies pequeños, planos con dedos en detalle. Superficie lisa marrón oscuro con vetas."
+    },
+    {
+      "id": "cultural-area",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Área cultural: Chile-Polinesia (Rapa Nui)"
+    },
+    {
+      "id": "category",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Categoría: Utensilios, Herramientas y Equipos"
+    },
+    {
+      "id": "technique-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Técnica/material: Hueso (material animal orgánico)-, Madera-, Piedra-Tallado, Piedra-Pulido"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 12.3 cm - Largo 36 cm - Ancho 13 cm"
+    },
+    {
+      "id": "institution",
+      "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
+      "predicate": "held_by",
+      "value": "Museo Historia Natural de Valparaíso"
+    }
+  ],
+  "notes": {
+    "text": "Transcribed from the expanded official Chile Patrimonios ficha, which credits SURDOC. The SURDOC number is documented by the ficha’s linked registration URL. Field labels, incomplete technique wording and measurement axes are retained. The portal terms grant no image reuse licence; no photograph is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-50-38-490z.html",
+      "capturedAt": "2026-09-30T01:50:38.490Z",
+      "method": "singlefile",
+      "note": "Reviewed expanded official ficha: page query 05SDC-4-1988, linked SURDOC 4-1988, MHNV institution, exact title, full description, material and dimensions."
+    }
+  ]
+}

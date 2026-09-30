@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1379",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "catalogue_number",
+      "value": "D13414"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "classified_as",
+      "value": "moai paapaa"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "made_during",
+      "value": "1800-1953 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "described_as",
+      "value": "Owned — Who: Hornke"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "described_as",
+      "value": "Weibliche, ein wenig ausgemergelt anmutende Holzfigur mit skelettiertem Brustkorb, die ein weibliches Geistwesen verkörpert. Der übergroße, schmale Kopf ist gerade gehalten und weist eine schmale gebogene Nase auf. Die Lippen sind geöffnet, so dass zwei Zahnreihen sichtbar werden. Die Augenbrauen treten hervor, und die Augen bestehen aus eingelegten Knochenringen mit darin eingelegten Obsidianscheibchen für die Pupillen. Das scharfkantige Kinn ziert ein hakenartiger Spitzbart . Die Ohrläppchen hängen rechteckig herunter und sind eingeritzt. Auf dem Kopf sind Risse vom Holz , aber keine Einkerbungen. Von den Schultern hängen lange, gerade Arme an den Seiten herunter. Die Hände mit eingeritzten Fingern sind nicht vollplastisch ausgearbeitet. Der Brustkorb mit den Rippen endet nicht in der Mitte mit dem weit über dem Bauch hervorstehenden Schwertfortsatz wie bei den anderen Figuren, sondern hat einen waagerechten Abschluss. Brustwarzen und Nabel sind nicht markiert.Eine Vulva ist eingeritzt. Die Beine sind im Verhältnis zum Körper und zu den Armen kurz und stämmig. Im Knie leicht angewinkelt enden die Beine in kleinen Füßen, die nicht vollplastisch ausgearbeitet wurden. Auf der Rückseite tritt keine Wirbelsäule mit einzelnen Wirbeln hervor, wie bei den anderen Figuren."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "described_as",
+      "value": "Material/Technique: Wahrsch. toromiro (Sophora tetraptera) [OB: Holz]; Knochen; Obsidian | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "described_as",
+      "value": "Allgemein: 62,5 x 11,5 x 13 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moai-kavakava-bremen-d13414",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-kavakava-bremen-d13414",
+      "file": "moai-kavakava-bremen-d13414/museum-digital.jpg",
+      "alt": "Stehende Holzfigur mit langem Gesicht und hervortretenden Rippen.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1379/d13414-figur-moai-paapaa-1379-1620.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-07-15-715z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1379?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:07:15.715Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-12-13-673z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=1538",
+      "capturedAt": "2026-09-30T01:12:13.673Z",
+      "method": "singlefile"
+    }
+  ]
+}

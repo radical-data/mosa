@@ -1,0 +1,83 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "reference": "https://id.smb.museum/object/998470",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "catalogue_number",
+      "value": "VI 4950"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "classified_as",
+      "value": "ao"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "classified_as",
+      "value": "Tanzpaddel"
+    },
+    {
+      "id": "holder",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum"
+    },
+    {
+      "id": "participants",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "described_as",
+      "value": "Beteiligte: Wilhem Geiseler (1883) , Sammler*in S.M.S. Hyäne (27.6.1878 - 1924) , Expedition"
+    },
+    {
+      "id": "date",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "made_during",
+      "value": "vor 1883"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "described_as",
+      "value": "Geografische Bezüge: Polynesien , Großregion Osterinsel (Rapa Nui) , Insel"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "made_of",
+      "value": "Holz , geschnitzt , rot und weiß bemalt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "ao-berlin-vi-4950-a",
+      "predicate": "described_as",
+      "value": "Abmessungen: Objektmaß: 195 x 29 x 7 cm Gewicht: ca. 2,9 kg"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "ao-berlin-vi-4950-a",
+      "file": "ao-berlin-vi-4950-a/smb.jpg",
+      "alt": "Ein langes hölzernes Doppelpaddel mit geschnitztem Gesicht und Resten roter und weisser Bemalung.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998470"
+    }
+  ],
+  "notes": {
+    "text": "Matched displayed institution-scoped accession VI 4950 and the complete 195 x 29 x 7 cm dimensions with the IndiGen entry; type and provenance were also compared. The gallery appends a photographic view letter to this accession; the museum lists the base accession and separate image views. The established object handle is retained. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-59-22-990z.html",
+      "capturedAt": "2026-09-29T23:59:22.990Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ]
+}

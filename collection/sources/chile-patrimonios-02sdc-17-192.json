@@ -1,0 +1,63 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-192",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-rapa-nui-17-192",
+      "predicate": "classified_as",
+      "value": "Moai Kava Kava"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-rapa-nui-17-192",
+      "predicate": "described_as",
+      "value": "Figura masculina de bulto de pié, lleva barba proyectada hacia abajo del mentón, decorada con tres incisiones paralelas. Las orejas son largas, pero están simplificadas y decoradas con líneas incisas paralelas en diagonal. Lleva decoración de líneas incisas que nacen desde la frente y se proyectan hacia los costados de la cabeza formando un arco. El mentón se proyecta hacia la nuca en relieve, alcanzando casi la parte superior de la cabeza, la boca esboza una leve sonrisa, sin mostrar los dientes. Las costillas nacen desde la espalda rodeando el cuerpo, la columna está tallada en relieve y termina en una figura triangular estriada que semeja una cola de ave, rasgo presente también en otro tipo de esculturas en madera, genitales tallados de manera estilizada, tiene un fino tallado en relieve que representa las clavículas."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-rapa-nui-17-192",
+      "predicate": "catalogue_number",
+      "value": "17-192"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-rapa-nui-17-192",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-kavakava-rapa-nui-17-192",
+      "predicate": "described_as",
+      "value": "Creador/a: Anónimo/desconocido"
+    },
+    {
+      "id": "technique",
+      "objectId": "moai-kavakava-rapa-nui-17-192",
+      "predicate": "described_as",
+      "value": "Técnica: Obsidiana-Incrustación, Madera-Tallado, Hueso (material animal orgánico)-Incrustación"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-rapa-nui-17-192",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 62 cm - Ancho 12 cm - Profundidad 12 cm"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "17-192-ficha.pdf",
+      "originalUrl": "https://www.chilepatrimonios.gob.cl/ficha/Pdf?doi=02SDC-17-192",
+      "capturedAt": null,
+      "method": "download",
+      "note": "Original PDF exported from the official record page on 2026-09-30; exact retrieval time is unknown. The PDF has two pages, includes the full description, dimensions and object photograph, but its header logo renders as a placeholder. The linked live ficha displays the SURDOC registration 17-192."
+    }
+  ],
+  "notes": {
+    "text": "The Chile Patrimonios DOI (02SDC-17-192) is distinct from the linked SURDOC registration (17-192), which is retained as the catalogue number. The official two-page ficha PDF supplies the full Spanish description, format, technique and dimensions; the live ficha supplied the SURDOC link. The PDF logo appears as a placeholder. Image reuse is withheld because the portal terms reserve intellectual-property rights and provide no item-specific reuse permission.",
+    "language": "en-GB"
+  }
+}

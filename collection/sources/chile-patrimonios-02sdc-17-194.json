@@ -1,0 +1,62 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-194",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "described_as",
+      "value": "Objeto de forma cilíndrica. El tope de la empuñadura de esta arma tiene la forma de una cabeza humana bifaz. El cuerpo está conformado por una hoja que se va ensanchando levemente hacia el extremo opuesto. La hoja está hecha con doble filo, y la punta es recta."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "catalogue_number",
+      "value": "17-194"
+    },
+    {
+      "id": "holder",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "described_as",
+      "value": "Creador/a: Anónimo/desconocido"
+    },
+    {
+      "id": "technique",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "described_as",
+      "value": "Técnica: Madera-Tallado"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-rapa-nui-17-194",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 8.1 cm - Largo 103 cm - Espesor 3.6 cm"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t02-02-29-896z.html",
+      "capturedAt": "2026-09-30T02:02:29.896Z",
+      "method": "singlefile",
+      "note": "Official fiche and photograph preserved; image reuse rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "The Chile Patrimonios fiche links to SURDOC registration 17-194 and MAPSE. It identifies the object as a Ua, with a bifacial human head on the handle and dimensions consistent with the assigned long wooden staff. Catalogue and gallery images are compatible with this form; all source claims retain the catalogue wording. No image is published because item-specific reuse permission was not established.",
+    "language": "en-GB"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "author": "José Miguel Ramírez Aliaga",
+  "reference": "https://www.mhnv.gob.cl/sites/www.mhnv.gob.cl/files/images/articles-78393_archivo_PDF.pdf#page=10",
+  "language": "es",
+  "claims": [
+    {
+      "id": "mhnv-1-inventory",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "catalogue_number",
+      "value": "1"
+    },
+    {
+      "id": "mhnv-1-holder",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "mhnv-21-inventory",
+      "objectId": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214",
+      "predicate": "catalogue_number",
+      "value": "21"
+    },
+    {
+      "id": "mhnv-21-holder",
+      "objectId": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "mhnv-3-inventory",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "catalogue_number",
+      "value": "3"
+    },
+    {
+      "id": "mhnv-3-holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "held_by",
+      "value": "Museo de Historia Natural de Valparaíso"
+    },
+    {
+      "id": "mhnv-1-type",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "classified_as",
+      "value": "paoa"
+    },
+    {
+      "id": "mhnv-1-description",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "described_as",
+      "value": "Reproducción moderna de maza de guerra (paoa), con ojos de vértebra de tiburón y discos de obsidiana."
+    },
+    {
+      "id": "mhnv-1-entry",
+      "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
+      "predicate": "described_as",
+      "value": "Ingresada en 1915."
+    },
+    {
+      "id": "mhnv-21-type",
+      "objectId": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214",
+      "predicate": "classified_as",
+      "value": "moái kava kava"
+    },
+    {
+      "id": "mhnv-21-material",
+      "objectId": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214",
+      "predicate": "made_of",
+      "value": "madera"
+    },
+    {
+      "id": "mhnv-21-date",
+      "objectId": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214",
+      "predicate": "described_as",
+      "value": "principios del s. xx"
+    },
+    {
+      "id": "mhnv-3-type",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "classified_as",
+      "value": "moái tangata"
+    },
+    {
+      "id": "mhnv-3-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "described_as",
+      "value": "posiblemente tallada en mako’i"
+    },
+    {
+      "id": "mhnv-3-gift",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "described_as",
+      "value": "Donada por el almirante Gómez Carreño en 1916."
+    },
+    {
+      "id": "mhnv-3-height",
+      "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
+      "predicate": "described_as",
+      "value": "35 cm de alto"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Selective extraction from La colección Isla de Pascua del Museo de Historia Natural de Valparaíso (2017), figures 1, 5 and 6 on pages 10, 13 and 14. Inventory 1, 21 and 3 photographs match the corresponding IndiGen photographs. The publication reports entry in 1915 for inventory 1 and a 35 cm height for inventory 3, differing from IndiGen’s acquisition date and measurement. These differences are retained rather than reconciled editorially. The uncertain wood identification for inventory 3 remains qualified. Broader descriptions quoting Leonardo Pakarati cannot generally be assigned to individual inventory numbers; the article itself warns against that mapping. No independent photograph reuse licence was established.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-08-27-664z.pdf",
+      "originalUrl": "https://www.mhnv.gob.cl/sites/www.mhnv.gob.cl/files/images/articles-78393_archivo_PDF.pdf",
+      "capturedAt": "2026-09-30T01:08:27.664Z",
+      "method": "download",
+      "note": "Official museum-hosted original PDF downloaded unchanged; pages 10, 13 and 14 visually reviewed against the gallery photographs and transcribed fields."
+    }
+  ]
+}

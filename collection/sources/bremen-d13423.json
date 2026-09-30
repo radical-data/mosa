@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1242",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "catalogue_number",
+      "value": "D13423"
+    },
+    {
+      "id": "classification",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "made-during",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "made_during",
+      "value": "1800-1953 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "described_as",
+      "value": "Owned — Who: Hornke"
+    },
+    {
+      "id": "description",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "described_as",
+      "value": "Als touristisches Souvenir gearbeitete Vogelfigur mit einem menschlichen herausgeschnitzten Kopf auf dem Rücken und einem aufgefächtem Schwanz . Außerdem zieren den Rücken zwei eingeritzte menschliche, sich gegenüber knieende Figuren. Der Vogel verfügt über keine Füße und steht auf einem Sockel . Der Schnabel des Vogels ist leicht geöffnet und zeigt zwei Zahnreihen. Unterhalb des Schnabels zeigt sich ein Riss im Holz . Die Augen des Vogels sind schwarz und von einem hellen Ring eingerahmt."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "described_as",
+      "value": "Material/Technique: Wahrsch. toromiro (Sophora tetraptera) [OB: Holz]; Obsidian | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "described_as",
+      "value": "Allgemein: 13 x 26 x 13 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "manu-bremen-d13423",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "manu-bremen-d13423",
+      "file": "manu-bremen-d13423/museum-digital.jpg",
+      "alt": "Vogelfigur mit geöffnetem Schnabel und einem menschlichen Kopf auf dem Rücken.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1242-d13423/d13423_figur/d13423-figur-1242-200603.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-06-57-879z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1242?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:06:57.879Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-11-53-183z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=5842",
+      "capturedAt": "2026-09-30T01:11:53.183Z",
+      "method": "singlefile"
+    }
+  ]
+}

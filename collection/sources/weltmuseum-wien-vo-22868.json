@@ -1,0 +1,68 @@
+{
+  "author": "Weltmuseum Wien",
+  "reference": "https://www.weltmuseumwien.at/en/objects/figure-octopus-454655",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "inventory-number",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "catalogue_number",
+      "value": "22868"
+    },
+    {
+      "id": "object-name",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "has_name",
+      "value": "Figure, octopus"
+    },
+    {
+      "id": "object-name-classification",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "classified_as",
+      "value": "Figure, octopus"
+    },
+    {
+      "id": "collection-area",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "described_as",
+      "value": "Collection area: Oceania and Australia"
+    },
+    {
+      "id": "geography",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "described_as",
+      "value": "Geography: Ozeanien/Polynesien/Osterinsel/Chile"
+    },
+    {
+      "id": "material-technology",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "made_of",
+      "value": "Holz, Knochen, Obsidian"
+    },
+    {
+      "id": "collector-heinrich",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich Freiherr von Westenholz"
+    },
+    {
+      "id": "collector-klee-kocher",
+      "objectId": "heke-vienna-vo-22868",
+      "predicate": "described_as",
+      "value": "Collector: Klee und Kocher, Hamburg"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Selective transcription from the museum online collection. Evidence locators: Object Name; Collector; Time where shown; Material/technology; Collection area; Geography; Invs. Inventory number verified against the Invs. field. The displayed copyright notice “Weltmuseum Wien” applies to the object imagery and is not a reuse licence; no image added. The source mixes English interface labels and German catalogue fields; these are retained in their original languages.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-24-31-391z.html",
+      "capturedAt": "2026-09-30T00:24:31.391Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. Original multilingual wording and uncertainty retained; no image republication rights inferred."
+    }
+  ]
+}

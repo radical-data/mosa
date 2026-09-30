@@ -1,0 +1,94 @@
+{
+  "author": "The Metropolitan Museum of Art",
+  "reference": "https://www.metmuseum.org/art/collection/search/313716",
+  "language": "en",
+  "claims": [
+    {
+      "id": "title-as-classification",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "classified_as",
+      "value": "Rei miro (gorget)"
+    },
+    {
+      "id": "date",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "made_during",
+      "value": "19th century"
+    },
+    {
+      "id": "geography",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "described_as",
+      "value": "Geography: Chile, Rapa Nui (Easter Island)"
+    },
+    {
+      "id": "culture",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "described_as",
+      "value": "Culture: Rapa Nui people"
+    },
+    {
+      "id": "medium",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "described_as",
+      "value": "Dimensions: 26.7 × 44.1 × 2.2 cm"
+    },
+    {
+      "id": "classification",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "classified_as",
+      "value": "Wood-Ornaments"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "described_as",
+      "value": "Credit Line: The Michael C. Rockefeller Memorial Collection, Bequest of Nelson A. Rockefeller, 1979"
+    },
+    {
+      "id": "object-number",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "catalogue_number",
+      "value": "1979.206.1527"
+    },
+    {
+      "id": "holder",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "display-status",
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "predicate": "located_at",
+      "value": "The Met Fifth Avenue in Gallery 352"
+    }
+  ],
+  "notes": {
+    "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object reimiro-new-york-1979-206-1527; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "reimiro-new-york-1979-206-1527",
+      "file": "reimiro-new-york-1979-206-1527/met.jpg",
+      "alt": "Front view of a crescent-shaped wooden gorget with a raised face at each end.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/313716"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-29t22-50-30-000z.html",
+      "capturedAt": "2026-09-29T22:50:30.000Z",
+      "method": "singlefile"
+    }
+  ]
+}

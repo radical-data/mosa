@@ -1,0 +1,68 @@
+{
+  "author": "Weltmuseum Wien",
+  "reference": "https://www.weltmuseumwien.at/en/objects/ao-454637",
+  "language": "mul",
+  "images": [],
+  "claims": [
+    {
+      "id": "inventory-number",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "catalogue_number",
+      "value": "22845"
+    },
+    {
+      "id": "object-name",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "classified_as",
+      "value": "Ceremonial paddle"
+    },
+    {
+      "id": "material-technology",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "made_of",
+      "value": "Holz, Knochen, Obsidian"
+    },
+    {
+      "id": "collector-heinrich",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Collector: Heinrich Freiherr von Westenholz"
+    },
+    {
+      "id": "collector-klee-kocher",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Collector: Klee und Kocher, Hamburg"
+    },
+    {
+      "id": "time",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Time: um 1885"
+    },
+    {
+      "id": "collection-area",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Collection area: Oceania and Australia"
+    },
+    {
+      "id": "geography",
+      "objectId": "ao-vienna-vo-22845",
+      "predicate": "described_as",
+      "value": "Geography: Ozeanien/Polynesien/Osterinsel/Chile"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the museum online collection. Evidence locators: Invs.; Object Name; Material/technology; Collector; Time; Collection area; Geography; Copyright. The displayed copyright notice “Weltmuseum Wien” is not a reuse licence; no image added. Catalogue field wording and language are retained. The museum displays the inventory number as 22845 (the scoped catalogue-number form is VO_22845).",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-12-30-741z.html",
+      "capturedAt": "2026-09-30T01:12:30.741Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object record capture; visible details include Invs. 22845, object name, collector, time, materials, geography and copyright notice."
+    }
+  ]
+}

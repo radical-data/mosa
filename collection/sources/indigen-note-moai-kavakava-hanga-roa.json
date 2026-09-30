@@ -1,0 +1,26 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-kavakava-hanga-roa",
+  "language": "en",
+  "claims": [
+    {
+      "id": "moai-kavakava-rapa-nui-17-299-account-1",
+      "objectId": "moai-kavakava-rapa-nui-17-299",
+      "predicate": "described_as",
+      "value": "According to the information provided by the Museum, this moai kavakava was purchased in 2011 from the shop Antigüedades Obilinovic. The piece is accompanied by a paper note showing the name ‘Juan Laharoa’, who, I assume, is the author of the piece."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-32-42-597z.html",
+      "capturedAt": "2026-09-29T22:32:42.597Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Rapa Nui”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

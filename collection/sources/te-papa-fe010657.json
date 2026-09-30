@@ -1,0 +1,74 @@
+{
+  "author": "Museum of New Zealand Te Papa Tongarewa",
+  "reference": "https://collections.tepapa.govt.nz/object/268216",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "catalogue_number",
+      "value": "FE010657"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "classified_as",
+      "value": "Ika Tangata (fish man)"
+    },
+    {
+      "id": "classification",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "classified_as",
+      "value": "clubs"
+    },
+    {
+      "id": "material",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "made_of",
+      "value": "wood, bone, obsidian"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "described_as",
+      "value": "Overall: 102mm (width), 410mm (length), 35mm (depth)"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "described_as",
+      "value": "Purchased 1996"
+    },
+    {
+      "id": "production-place",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    },
+    {
+      "id": "production-date",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "made_during",
+      "value": "1996"
+    },
+    {
+      "id": "production",
+      "objectId": "ika-wellington-234567-fe010657",
+      "predicate": "described_as",
+      "value": "Production: Bene Aukara Tuki Pate; artist; 1996; Easter Island ärtist"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched by institution and registration number FE010657. Catalogue fields and the explicit Made in relation are transcribed from the reviewed capture; collection and acquisition dates are not used as production dates. Image rights: All Rights Reserved. No new image is registered in this source.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-48-45-247z.html",
+      "capturedAt": "2026-09-29T22:48:45.247Z",
+      "method": "singlefile",
+      "note": "Reviewed title, registration FE010657, item details, explicit relationships and image-rights statement."
+    }
+  ]
+}

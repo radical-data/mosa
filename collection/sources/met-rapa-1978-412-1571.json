@@ -1,0 +1,94 @@
+{
+  "author": "The Metropolitan Museum of Art",
+  "reference": "https://www.metmuseum.org/art/collection/search/312002",
+  "language": "en",
+  "claims": [
+    {
+      "id": "title-as-classification",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "classified_as",
+      "value": "Rapa (dance paddle)"
+    },
+    {
+      "id": "date",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "made_during",
+      "value": "early 19th century"
+    },
+    {
+      "id": "geography",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "described_as",
+      "value": "Geography: Chile, Rapa Nui (Easter Island)"
+    },
+    {
+      "id": "culture",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "described_as",
+      "value": "Culture: Rapa Nui people"
+    },
+    {
+      "id": "medium",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "described_as",
+      "value": "Dimensions: 71.8 × 15.9 × 1.6 cm"
+    },
+    {
+      "id": "classification",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "classified_as",
+      "value": "Wood-Sculpture"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "described_as",
+      "value": "Credit Line: The Michael C. Rockefeller Memorial Collection, Gift of Mrs.Gertrud A. Mellon, 1972"
+    },
+    {
+      "id": "object-number",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "catalogue_number",
+      "value": "1978.412.1571"
+    },
+    {
+      "id": "holder",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "display-status",
+      "objectId": "rapa-new-york-1978-412-1571",
+      "predicate": "located_at",
+      "value": "The Met Fifth Avenue in Gallery 352"
+    }
+  ],
+  "notes": {
+    "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object rapa-new-york-1978-412-1571; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "rapa-new-york-1978-412-1571",
+      "file": "rapa-new-york-1978-412-1571/met.jpg",
+      "alt": "Front view of a wooden dance paddle with a carved face above its broad blade.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/312002"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-29t22-50-41-490z.html",
+      "capturedAt": "2026-09-29T22:50:41.490Z",
+      "method": "singlefile"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-259",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "classified_as",
+      "value": "Escultura"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "described_as",
+      "value": "Figura tradicionalmente femenina tallada en madera. Tiene tallados rasgos femeninos, como la vulva, aunque también tiene barba en el mentón."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "catalogue_number",
+      "value": "17-259"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "described_as",
+      "value": "Creador/a: Andrés Pakarati Novoa"
+    },
+    {
+      "id": "creation-date",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-259",
+      "predicate": "described_as",
+      "value": "Fecha de creación: 2017"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t01-50-52-724z.html",
+      "capturedAt": "2026-09-30T01:50:52.724Z",
+      "method": "singlefile",
+      "note": "Official fiche and photograph preserved; image reuse rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "The official search result for accession 17-259 linked to DOI 02SDC-17-259 and SURDOC registration 17-259. The title is the generic Escultura. The official photograph was compared with the IndiGen gallery image; distinctive face, eyes, head and beard match. The record describes the figure as traditionally female and notes a beard; that wording is retained. No image is published because no item-specific reuse permission was established.",
+    "language": "en-GB"
+  }
+}

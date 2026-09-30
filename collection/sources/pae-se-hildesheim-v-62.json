@@ -1,0 +1,62 @@
+{
+  "author": "Postcolonial Provenance Research in Lower Saxony (PAESE)",
+  "reference": "https://www.postcolonial-provenance-research.com/en/database/exposition/rpm_v-62/",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "inventory-number",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "catalogue_number",
+      "value": "RPM_V 62"
+    },
+    {
+      "id": "holder",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "held_by",
+      "value": "Roemer- und Pelizaeus-Museum Hildesheim"
+    },
+    {
+      "id": "object-name",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "classified_as",
+      "value": "Hoheitszeichen (\"Langkeule\")"
+    },
+    {
+      "id": "indigenous-name",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "classified_as",
+      "value": "ua"
+    },
+    {
+      "id": "place-where-collected",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "described_as",
+      "value": "Place where collected: Rapanui (Osterinsel)"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "described_as",
+      "value": "Dimensions: H: 150 cm, B: 10 cm, T: 5,5 cm"
+    },
+    {
+      "id": "year-of-manufacture",
+      "objectId": "ua-hildesheim-v-62",
+      "predicate": "made_during",
+      "value": "vor 1879"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Record in the PAESE joint database. It identifies the Roemer- und Pelizaeus-Museum Hildesheim as the location. The page labels the object Hoheitszeichen (\"Langkeule\") and ua; the latter corresponds to the IndiGen description Ua. The English interface labels display German source values. Although the page displays object photographs, it states no image-reuse permission, so no image is included. The project notes that images may be withheld in other cases for ethical or legal reasons.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t02-09-34-315z.html",
+      "capturedAt": "2026-09-30T02:09:34.315Z",
+      "method": "singlefile",
+      "note": "Reviewed default Basic Information tab; other record tabs were not included."
+    }
+  ]
+}

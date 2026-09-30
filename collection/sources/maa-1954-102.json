@@ -1,0 +1,74 @@
+{
+  "author": "Museum of Archaeology and Anthropology, University of Cambridge",
+  "reference": "https://collections.maa.cam.ac.uk/objects/510277/",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "catalogue_number",
+      "value": "1954.102"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Ua. Polished wooden paddle club, with face carved on each side of top of handle. Eyes formed of a shell ring with obsidian centre, but only one is complete."
+    },
+    {
+      "id": "place",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Place: Oceania; Polynesia; Rapa Nui [Easter Island]"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "made_of",
+      "value": "Wood; Shell; Obsidian"
+    },
+    {
+      "id": "local-term",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "classified_as",
+      "value": "Ua"
+    },
+    {
+      "id": "measurements",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Measurements: 7mm x 7mm x 1435mm"
+    },
+    {
+      "id": "reference-numbers",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Reference Numbers: 1954.102; 1043 [Beasley Collection no]; 133 [Lot number; J.C Stevens Auction 1916]"
+    },
+    {
+      "id": "catalogue-event-1",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Field collection) This object was collected during the HMS Topaze expedition to Rapanui in 1868. It is during that expedition that the two large stone moai now in the British Museum were collected: Hoa Hakananai'a (BM Oc1869,1005.1) and Moai Hava (BM Oc1869,1006.1). The collector of the club at MAA is given by Beasley as Mitford W. Pye - this could be Mitford William Pye, born in 1851, and recorded in the Royal Naval Officer's Service Records Index (1756-1931) as having enrolled on 24 March 1865. He died in October 1872 (aged 21). More research needs to be undertaken to confirm that he is indeed the collector [Lucie Carreau, 31/08/2017]. Event Date 1868 Author: Lucie Carreau"
+    },
+    {
+      "id": "catalogue-event-2",
+      "objectId": "ua-cambridge-1954-102",
+      "predicate": "described_as",
+      "value": "Catalogue event: Context (Other owners) This object was previously in the collection of Harry Geoffrey Beasley, no. 1043. It is recorded in Beasley's original acquisition register (vol.2) as: 'EASTER ISL. (RAPA NUI): Chief staff of red wood. The end carved as a double head. Having the eyes inlaid with bone + obsidian. Obtained by H.M.S. Topaz, 1868 by mitford W. Pye + formerly in the possession of H.W. Page Phillips of Pyrford, Sussex. Sold at Stevens Rooms, Lot 133 + Bt by S. Fenton M.O.O. Fenton Comm A.O.O. W.O Comm H.O.O.' It was acquired on 25 July 1916 for 8/-/- [Lucie Carreau, 31/08/2017]. Event Date 25/7/1916 Author: Lucie Carreau"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession 1954.102 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Some transverse measurements differ by a factor of ten between the sources; catalogue wording is retained without correction. Selective transcription of current catalogue fields and contextual analysis, acquisition, field-collection and amendment entries. Catalogue-event dates and recorders are retained; duplicate historical descriptions, related-document transcripts, exhibition/loan and conservation entries are outside this batch. The generic Place field does not assert a making place.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-52-20-883z.html",
+      "capturedAt": "2026-09-29T23:52:20.883Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

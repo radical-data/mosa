@@ -1,0 +1,83 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "reference": "https://id.smb.museum/object/2050022",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "catalogue_number",
+      "value": "VI 24940"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "classified_as",
+      "value": "ua"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "classified_as",
+      "value": "Stab"
+    },
+    {
+      "id": "holder",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum"
+    },
+    {
+      "id": "participants",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "described_as",
+      "value": "Beteiligte: Arthur Baessler (6.5.1857 - 31.3.1907) , Sammler*in"
+    },
+    {
+      "id": "date",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "made_during",
+      "value": "vor 1906"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "described_as",
+      "value": "Geografische Bezüge: Polynesien , Großregion Osterinsel (Rapa Nui) , Insel"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "made_of",
+      "value": "Holz , geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "ua-berlin-vi-24940",
+      "predicate": "described_as",
+      "value": "Abmessungen: Objektmaß: 140,5 x 5 x 7,8 cm"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "ua-berlin-vi-24940",
+      "file": "ua-berlin-vi-24940/smb.jpg",
+      "alt": "Ein langer dunkler Holzstab mit geschnitztem Kopf und abgerundetem unterem Ende.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Peter Jacob",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/2050022"
+    }
+  ],
+  "notes": {
+    "text": "Matched displayed institution-scoped accession VI 24940 and the complete 140,5 x 5 x 7,8 cm dimensions with the IndiGen entry; type and provenance were also compared. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-02-36-383z.html",
+      "capturedAt": "2026-09-30T00:02:36.383Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ]
+}

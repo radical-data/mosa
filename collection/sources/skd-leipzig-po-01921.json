@@ -1,0 +1,68 @@
+{
+  "author": "Staatliche Kunstsammlungen Dresden",
+  "reference": "https://skd-online-collection.skd.museum/Details/Index/1589244",
+  "language": "de",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "classified_as",
+      "value": "Figur 'moai tangata manu'"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "catalogue_number",
+      "value": "Po 01921"
+    },
+    {
+      "id": "material",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "made_of",
+      "value": "Holz, Muschelschale, geschnitzt"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "described_as",
+      "value": "Abmessungen: 79,4 x 10,0 x 15,8 cm"
+    },
+    {
+      "id": "place-and-dating",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "described_as",
+      "value": "Ozeanien, Polynesien, Rapa Nui (Osterinsel), vor 1966"
+    },
+    {
+      "id": "catalogue-roles",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "described_as",
+      "value": "uns nicht bekannt - Hersteller unbekannt - Sammler Centrum Warenhaus Leipzig (1946-1990) - Händler"
+    },
+    {
+      "id": "holder",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    },
+    {
+      "id": "description",
+      "objectId": "tangata-manu-leipzig-po-01921",
+      "predicate": "described_as",
+      "value": "Holzfigur 'moai tangata manu'. Hellbraun Vogelmann in hellem braun, eine moderne Arbeit. Die Augen sind mit weißen Muschelschalen oder Fisch-Wirbeln besetzt."
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-01-54-936z.html",
+      "capturedAt": "2026-09-30T00:01:54.936Z",
+      "method": "singlefile",
+      "note": "Reviewed capture preserves the exact museum name, accession number, object title, and catalogue fields including material and dimensions; the page marks object images Freier Zugang – Rechte vorbehalten, so no image was imported."
+    }
+  ],
+  "notes": {
+    "text": "Transcribed the displayed catalogue fields and descriptive passage, retaining role labels, uncertainty and historical terminology. The combined place/dating field is preserved as a description without inferring a specific making-place relationship.",
+    "language": "en-GB"
+  }
+}

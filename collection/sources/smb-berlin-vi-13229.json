@@ -1,0 +1,89 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "reference": "https://id.smb.museum/object/995662",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "catalogue_number",
+      "value": "VI 13229"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "classified_as",
+      "value": "tahonga"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "classified_as",
+      "value": "Brustschmuck"
+    },
+    {
+      "id": "holder",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum"
+    },
+    {
+      "id": "participants",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Beteiligte: P. Otto Zembsch (1883) , Sammler*in"
+    },
+    {
+      "id": "date",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "made_during",
+      "value": "vor 1896"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Geografische Bezüge: Polynesien , Großregion Osterinsel (Rapa Nui) , Insel"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "made_of",
+      "value": "Holz , geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Abmessungen: Objektmaß: 7,5 x 11,5 x 5,6 cm Gewicht: 192 g"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Erwerbung: Ankauf von P. Otto Zembsch 1896"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "ika-berlin-vi-13229",
+      "file": "ika-berlin-vi-13229/smb.jpg",
+      "alt": "Ein abgerundeter Holzanhänger mit parallelen geschnitzten Rillen und einer erhöhten runden Stelle.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/995662"
+    }
+  ],
+  "notes": {
+    "text": "Matched displayed institution-scoped accession VI 13229 and the complete 7,5 x 11,5 x 5,6 cm dimensions with the IndiGen entry; type and provenance were also compared. IndiGen classifies this object as Ika; the museum calls it tahonga / Brustschmuck. The exact accession, dimensions and collector support identity while the disagreement remains attributed. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-59-30-574z.html",
+      "capturedAt": "2026-09-29T23:59:30.574Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ]
+}

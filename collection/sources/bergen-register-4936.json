@@ -1,0 +1,39 @@
+{
+  "author": "Universitetsmuseet i Bergen",
+  "reference": "https://www.digitalarkivet.no/ed60136685000080",
+  "language": "nb",
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "catalogue_number",
+      "value": "4936"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "made_of",
+      "value": "brunlig tre"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-bergen-bme-4936",
+      "predicate": "described_as",
+      "value": "L. (uten sokkel) 36 cm"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Selective transcription of handwritten accession-register entry 4936, preserved as a full scan from Digitalarkivet. Catalogue number, material and dimensions are legible and match the IndiGen entry. Historical spelling is retained. The longer description and acquisition/place columns await a palaeographic review; no modern custody claim is inferred from this historical register. The scan is source evidence and supplies no object photograph.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-51-22-943z.jpg",
+      "originalUrl": "https://media.digitalarkivet.no/image/4e770757-9326-454e-bc92-28506289dde9",
+      "capturedAt": "2026-09-30T00:51:22.943Z",
+      "method": "download",
+      "note": "Original downloaded scan, image 80, entry 4936; full spread inspected. Retrieval time retained from browser download file metadata."
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "author": "The Metropolitan Museum of Art",
+  "reference": "https://www.metmuseum.org/art/collection/search/320134",
+  "language": "en",
+  "claims": [
+    {
+      "id": "title-as-classification",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "classified_as",
+      "value": "Dance Paddle (Rapa)"
+    },
+    {
+      "id": "date",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "made_during",
+      "value": "early 19th century"
+    },
+    {
+      "id": "geography",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Geography: Chile, Rapa Nui (Easter Island)"
+    },
+    {
+      "id": "culture",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Culture: Rapa Nui people"
+    },
+    {
+      "id": "medium",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "made_of",
+      "value": "Wood"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Dimensions: 90 x 15.2 cm"
+    },
+    {
+      "id": "classification",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "classified_as",
+      "value": "Wood-Sculpture"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Credit Line: The Michael C. Rockefeller Memorial Collection, Bequest of Nelson A. Rockefeller, 1979"
+    },
+    {
+      "id": "object-number",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "catalogue_number",
+      "value": "1979.206.1452"
+    },
+    {
+      "id": "holder",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "held_by",
+      "value": "The Metropolitan Museum of Art"
+    },
+    {
+      "id": "display-status",
+      "objectId": "rapa-new-york-1979-206-1452",
+      "predicate": "described_as",
+      "value": "Not on view"
+    }
+  ],
+  "notes": {
+    "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object rapa-new-york-1979-206-1452; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "objectId": "rapa-new-york-1979-206-1452",
+      "file": "rapa-new-york-1979-206-1452/met.jpg",
+      "alt": "Front view of a wooden dance paddle with a carved face and a broad, tapering blade.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/320134"
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-09-29t22-51-04-770z.html",
+      "capturedAt": "2026-09-29T22:51:04.770Z",
+      "method": "singlefile"
+    }
+  ]
+}

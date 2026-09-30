@@ -1,0 +1,62 @@
+{
+  "author": "Staatliche Kunstsammlungen Dresden",
+  "reference": "https://skd-online-collection.skd.museum/Details/Index/1590130",
+  "language": "de",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "classified_as",
+      "value": "Figur \"moai\""
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "catalogue_number",
+      "value": "Po 00232"
+    },
+    {
+      "id": "material",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "made_of",
+      "value": "Holz, Muschel, Obsidian, geschnitzt, geklebt"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "described_as",
+      "value": "Abmessungen: 56,5 x 7,5 x 6,5 cm"
+    },
+    {
+      "id": "place-and-dating",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "described_as",
+      "value": "Ozeanien, Polynesien, Rapa Nui/Osterinsel, vor 1902"
+    },
+    {
+      "id": "catalogue-roles",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "described_as",
+      "value": "J. F. G. Umlauff Naturalienhandlung & Museum (1869-1974) - Händler uns nicht bekannt - Hersteller"
+    },
+    {
+      "id": "holder",
+      "objectId": "moko-leipzig-po-00232",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-02-12-049z.html",
+      "capturedAt": "2026-09-30T00:02:12.049Z",
+      "method": "singlefile",
+      "note": "Reviewed capture preserves the exact museum name, accession number, object title, and catalogue fields including material and dimensions; the page marks object images Freier Zugang – Rechte vorbehalten, so no image was imported."
+    }
+  ],
+  "notes": {
+    "text": "Transcribed the displayed catalogue fields and descriptive passage, retaining role labels, uncertainty and historical terminology. The combined place/dating field is preserved as a description without inferring a specific making-place relationship.",
+    "language": "en-GB"
+  }
+}

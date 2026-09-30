@@ -1,0 +1,26 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/indigen-notes/moai-tangata-vina-del-mar-3",
+  "language": "en",
+  "claims": [
+    {
+      "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-account-1",
+      "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
+      "predicate": "described_as",
+      "value": "Federico Felbermayer collected this piece in Rapa Nui during his first travel in 1946. According to his register stored at the Museo Fonck, this piece was made by Juan Tepano. He was the most important collaborator of many researchers: in 1911 he was guide and interpreter of Walter Knoche, in 1914 interpreter and assistant of Katherine Routledge and in 1934 he was the main informant of Alfred Métraux. Tepano was born around 1876, in 1898 he traveled to Chile, accompanying the Rapanui king Riro Kainga. He did military service in the Regimiento Maipo in Valparaiso and returned to Rapa Nui in 1900. In 1902 he was named cacique by the captain of the ship Baquedano Basilio Rojas. According to Métraux and Lavachery, Tepano developed his own sculptural style, which can be seen in this piece from the Museo Fonck."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-34-07-542z.html",
+      "capturedAt": "2026-09-29T22:34:07.542Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai taŋata, Viña del Mar”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "reference": "https://id.smb.museum/object/998382",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "catalogue_number",
+      "value": "VI 4913"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "holder",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum"
+    },
+    {
+      "id": "participants",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "described_as",
+      "value": "Beteiligte: Wilhem Geiseler (1883) , Sammler*in S.M.S. Hyäne (27.6.1878 - 1924) , Expedition"
+    },
+    {
+      "id": "date",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "made_during",
+      "value": "vor 1883"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "described_as",
+      "value": "Geografische Bezüge: Polynesien , Großregion Osterinsel (Rapa Nui) , Insel"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "made_of",
+      "value": "Holz , Knochen , Obsidian (?) , geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "described_as",
+      "value": "Abmessungen: Höhe x Breite x Tiefe: 10 x 70 x 13 cm Gewicht: ca. 1,8 kg"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "ika-berlin-vi-4913",
+      "predicate": "described_as",
+      "value": "Erwerbung: Zugang ungeklärt, von Kanonenboot S.M.S. Hyäne, Wilhelm Geiseler 1883"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "ika-berlin-vi-4913",
+      "file": "ika-berlin-vi-4913/smb.jpg",
+      "alt": "Eine längliche Holzschnitzerei mit eingelegtem Auge und gebogenem, spitz zulaufendem Körper.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998382"
+    }
+  ],
+  "notes": {
+    "text": "Matched displayed institution-scoped accession VI 4913 and the complete 10 x 70 x 13 cm dimensions with the IndiGen entry; type and provenance were also compared. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-59-38-228z.html",
+      "capturedAt": "2026-09-29T23:59:38.228Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-4-1926",
+  "language": "es",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "catalogue_number",
+      "value": "4-1926"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "classified_as",
+      "value": "Moai Tangata"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "described_as",
+      "value": "Escultura de bulto. Objeto de forma alargada sin base. Figura antropomorfa de cabeza calva, orejas largas, posee un contorno de ojos sobresaliente, Nariz prominente, de arco quebrado, Boca abierta con comisuras que suben hacia la mejilla. Posee una perilla conformada por un pequeño promontorio. Espalda recta, brazos en línea con el cuerpo sin detalles, manos pegadas a caderas con dedos extendidos. Piernas gruesas semi extendidas y pies pequeños y planos sin detalles. Superficie lisa marrón oscuro."
+    },
+    {
+      "id": "cultural-area",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "described_as",
+      "value": "Área cultural: Chile-Polinesia (Rapa Nui)"
+    },
+    {
+      "id": "category",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "classified_as",
+      "value": "Utensilios, Herramientas y Equipos"
+    },
+    {
+      "id": "technique-material",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "described_as",
+      "value": "Técnica/Material: Madera-"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 10.8 cm - Largo 57 cm - Ancho 12.5 cm"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
+      "predicate": "held_by",
+      "value": "Museo Historia Natural de Valparaíso"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Transcribed from the expanded official Chile Patrimonios fiche, which credits SURDOC. The SURDOC number is documented by the fiche’s linked registration URL. Field labels, incomplete technique wording and source measurement axes are retained. The portal terms grant no image reuse licence; no photograph is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-23-15-973z.html",
+      "capturedAt": "2026-09-30T01:23:15.973Z",
+      "method": "singlefile"
+    }
+  ]
+}

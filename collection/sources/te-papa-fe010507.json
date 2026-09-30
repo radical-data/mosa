@@ -1,0 +1,62 @@
+{
+  "author": "Museum of New Zealand Te Papa Tongarewa",
+  "reference": "https://collections.tepapa.govt.nz/object/206768",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "catalogue_number",
+      "value": "FE010507"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "classified_as",
+      "value": "Moai Kavakava"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "classified_as",
+      "value": "figurines"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "made_of",
+      "value": "wood, obsidian, shell (animal material)"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "described_as",
+      "value": "Overall: 125mm (width), 505mm (length), 90mm (depth)"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "described_as",
+      "value": "Exchange from Otago Museum, 1937"
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-tangata-wellington-fe010507",
+      "predicate": "made_at",
+      "value": "Easter Island (Chile)"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched by institution and registration number FE010507. Catalogue fields and the explicit Made in relation are transcribed from the reviewed capture; collection and acquisition dates are not used as production dates. IndiGen classifies this registration as Moai taŋata, while Te Papa calls it Moai Kavakava; both accounts are retained without renaming the object handle. Image rights: © The copyright holder. We are actively seeking the copyright holder. Contact copyright@tepapa.govt.nz if you can help. All Rights Reserved. No new image is registered in this source.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-47-59-059z.html",
+      "capturedAt": "2026-09-29T22:47:59.059Z",
+      "method": "singlefile",
+      "note": "Reviewed title, registration FE010507, item details, explicit relationships and image-rights statement."
+    }
+  ]
+}

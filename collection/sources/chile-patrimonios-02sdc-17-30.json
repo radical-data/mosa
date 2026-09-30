@@ -1,0 +1,62 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-30",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "classified_as",
+      "value": "Reimiro"
+    },
+    {
+      "id": "description",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "described_as",
+      "value": "Objeto de forma semicircular irregular, de sección plana, con una pequeña base rectangular en la parte inferior. Se encuentra decorado con dos rostros humanos estilizados en cada extremo, y en la parte frontal con un ave bicéfala incisa a bisel. Está elaborado en madera tallada, pulida e incisa de color marrón."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "catalogue_number",
+      "value": "17-30"
+    },
+    {
+      "id": "holder",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "described_as",
+      "value": "Creador/a: Anónimo/desconocido"
+    },
+    {
+      "id": "technique",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "described_as",
+      "value": "Técnica: Madera-Tallado, Madera-Incisión"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "reimiro-rapa-nui-17-30",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 28 cm - Ancho 13 cm - Profundidad 4 cm"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t02-03-28-345z.html",
+      "capturedAt": "2026-09-30T02:03:28.345Z",
+      "method": "singlefile",
+      "note": "Official fiche and object photograph preserved; image reuse rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "The official search for 17-30 returned the Reimiro ficha at DOI 02SDC-17-30, linked to SURDOC registration 17-30 and MAPSE. The official photograph matches the IndiGen gallery photograph in form, carved terminal heads and central incision. No image is published because item-specific reuse permission was not established.",
+    "language": "en-GB"
+  }
+}

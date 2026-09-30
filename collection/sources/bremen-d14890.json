@@ -1,0 +1,89 @@
+{
+  "author": "Übersee-Museum Bremen",
+  "reference": "https://bremen.museum-digital.de/object/1342",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "catalogue_number",
+      "value": "D14890"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "made-during",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "made_during",
+      "value": "1800-1961 [About]"
+    },
+    {
+      "id": "made-at",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "made_at",
+      "value": "Pascua"
+    },
+    {
+      "id": "owned-who",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "described_as",
+      "value": "Owned — Who: Ernesto Hornke"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "described_as",
+      "value": "Aus Holz geschnitzte Figur für den touristischen Markt . Die Figur zeigt einen langgezogenen Kopf mit länglicher Nase und geschnitzten Augen ohne Pupillen. Der untere Teil des Kopfes wirkt vom oberen optisch getrennt und besteht aus einem dominanten Kinn und einem Mund mit dicken, wulstigen Lippen. Die Figur steht auf einem kleinen Sockel , der einen Riss aufweist."
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "described_as",
+      "value": "Material/Technique: Holz | geschnitzt"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "described_as",
+      "value": "Allgemein: 18 x 6 x 8 cm"
+    },
+    {
+      "id": "holding-institution",
+      "objectId": "moai-tangata-bremen-d14890",
+      "predicate": "held_by",
+      "value": "Übersee-Museum Bremen"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-bremen-d14890",
+      "file": "moai-tangata-bremen-d14890/museum-digital.jpg",
+      "alt": "Grob geschnitzte Holzfigur mit vorspringender Nase, schräg von der Seite.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1342/d14890-figur-1342-7987.jpg"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-08-56-794z.html",
+      "originalUrl": "https://bremen.museum-digital.de/object/1342?recordlang=de&record=",
+      "capturedAt": "2026-09-30T01:08:56.794Z",
+      "method": "singlefile"
+    },
+    {
+      "file": "2026-09-30t01-13-43-596z.html",
+      "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=1525",
+      "capturedAt": "2026-09-30T01:13:43.596Z",
+      "method": "singlefile"
+    }
+  ]
+}

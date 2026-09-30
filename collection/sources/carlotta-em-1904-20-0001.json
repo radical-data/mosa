@@ -1,0 +1,83 @@
+{
+  "author": "Etnografiska Museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1585753",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "catalogue_number",
+      "value": "1904.20.0001"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "classified_as",
+      "value": "figur; moai kavakava; skulptur"
+    },
+    {
+      "id": "description-en",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "described_as",
+      "value": "Male figure (moai kavakava). The figure is missing one eye. There is no perforation at the back of the figure for suspension, a feature noted on some other moai kavakava. An ornate abstract figure is carved on the head of the object."
+    },
+    {
+      "id": "origin-en",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "described_as",
+      "value": "Land, engelska - ursprung: Easter Island"
+    },
+    {
+      "id": "materials",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "made_of",
+      "value": "obsidian; trä; ben"
+    },
+    {
+      "id": "museum-acquisition",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1904"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "described_as",
+      "value": "Träbild, manlig. (generalkatalogen)"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "described_as",
+      "value": "Höjd: 32 cm; Bredd: 8 cm; Djup: 6 cm"
+    },
+    {
+      "id": "acquired-from",
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "predicate": "described_as",
+      "value": "Namn - förvärvat från: Retzius, Gustaf (1842-10-17 - 1919-07-22), anatom, antropolog, tidningsman"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-kavakava-stockholm-1904-20-0001",
+      "file": "moai-kavakava-stockholm-1904-20-0001/carlotta.jpg",
+      "alt": "Träfigur med tydliga revben och ett bevarat inlagt öga.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1585753"
+    }
+  ],
+  "notes": {
+    "text": "Evidence locators from reviewed Carlotta entry: Inventarienummer; Sakord; Beskrivning - engelska; Land, engelska - ursprung; Material - tillverkning; Tidpunkt - förvärv till museet. The record contains Swedish and English catalogue text; both are retained in the original wording. The selected photograph carries a CC BY 4.0 overlay in its image viewer. The original JPEG from the preserved page is included unchanged. No individual photographer is named in the reviewed image credit; the holding museum is credited.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-21-39-127z.html",
+      "capturedAt": "2026-09-30T00:21:39.127Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. The selected image and its CC BY 4.0 overlay are preserved in the catalogue image viewer."
+    }
+  ]
+}

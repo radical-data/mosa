@@ -1,0 +1,20 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=195",
+  "language": "en",
+  "objectIds": ["ao-berlin-vi-4950-a"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "This linked article is preserved as evidence, but no claims are extracted: its text is contextual, bibliographic, or does not distinguish which linked object a singular description concerns.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-31-31-924z.html",
+      "capturedAt": "2026-09-29T22:31:31.924Z",
+      "method": "singlefile",
+      "note": "Preserves “Ao, Berlin”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=197",
+  "language": "en",
+  "claims": [
+    {
+      "id": "moai-kavakava-dresden-18359-account-1",
+      "objectId": "moai-kavakava-dresden-18359",
+      "predicate": "described_as",
+      "value": "This moai kavakava was in the ownership of Alexander Ariipaea Salmon when the ‘SMS Hyäne’ expedition led by Wilhelm Geissler stopped in Rapa Nui in 1882."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-31-49-640z.html",
+      "capturedAt": "2026-09-29T22:31:49.640Z",
+      "method": "singlefile",
+      "note": "Preserves “Moai kavakava, Dresden”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

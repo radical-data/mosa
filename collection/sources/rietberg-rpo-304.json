@@ -1,0 +1,74 @@
+{
+  "author": "Museum Rietberg",
+  "reference": "https://rietberg.ch/sammlungen/rpo-304",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "catalogue_number",
+      "value": "RPO 304"
+    },
+    {
+      "id": "title-as-classification",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "classified_as",
+      "value": "Männliche Figur, bemalt, maoi kavakava"
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "made_at",
+      "value": "Chile , Amerika; Rapa Nui , Polynesien"
+    },
+    {
+      "id": "production-date",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "made_during",
+      "value": "Vor 1920/30er Jahre"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "made_of",
+      "value": "Holz"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "described_as",
+      "value": "Masse: Gesamtmass: 55 cm"
+    },
+    {
+      "id": "credit-line",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "described_as",
+      "value": "Creditline: Geschenk Eduard von der Heydt"
+    },
+    {
+      "id": "provenance",
+      "objectId": "moai-kavakava-zurich-rpo-304",
+      "predicate": "described_as",
+      "value": "Provenienz: Vor 1920/30er Jahre: Urheber*in unbekannt, in Chile; [...]; Eduard von der Heydt (1882–1964), Sammler*in"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Matched the displayed accession RPO 304 in the holder's own catalogue and compared the object description, dimensions and provenance with the IndiGen entry. Selective transcription of catalogue identity, type, making-place/date, materials, dimensions, credit line and the complete provenance list. Creator fields, exhibitions and bibliography are outside this batch. Historical provenance entries remain contextual descriptions, not current custody assertions.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t23-50-25-944z.html",
+      "capturedAt": "2026-09-29T23:50:25.944Z",
+      "method": "singlefile",
+      "note": "Reviewed displayed accession, labelled catalogue fields and contextual passages against the preserved page."
+    }
+  ]
+}

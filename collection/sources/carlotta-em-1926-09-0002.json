@@ -1,0 +1,95 @@
+{
+  "author": "Etnografiska museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1585336",
+  "language": "sv",
+  "images": [
+    {
+      "objectId": "ua-stockholm-1926-09-0002",
+      "file": "ua-stockholm-1926-09-0002/carlotta.jpg",
+      "alt": "Lång träklubba med två skulpterade ansikten och böjd kropp.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1585336"
+    }
+  ],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "catalogue_number",
+      "value": "1926.09.0002"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "classified_as",
+      "value": "klubba (vapen); käpp"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Klubba av tungt, ljusbrunt trä. Tvenne ansikten som föregående, dock med hakskägg. Ögonen endast skurna i trä. Bladet runt (generalkatalogen)."
+    },
+    {
+      "id": "origin",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "made_of",
+      "value": "trä"
+    },
+    {
+      "id": "length",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Längd: 103 cm"
+    },
+    {
+      "id": "width",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Bredd: 4,7 cm"
+    },
+    {
+      "id": "collector",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Namn - insamlad av: Salmon, Alexander Ariipaea (1855 - 1914), plantageägare"
+    },
+    {
+      "id": "acquired-from",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Namn - förvärvat från: Ulff, Carl Edward (1856-05-16 - 1942-04-28), kommendör"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1926"
+    },
+    {
+      "id": "field-circumstances",
+      "objectId": "ua-stockholm-1926-09-0002",
+      "predicate": "described_as",
+      "value": "Förvärvsomständigheter - i fält: Vid Vanadis besök på Tahiti 1884 fick kommendör C. E. Ulff dessa klubbor av den tahitiske prinsen Arie-Paea (\"Onkel Skål\") som då ägde stora fårhjordar på Påskön. (generalkatalogen)"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from labelled fields on the detail record. The field ‘Förvärvsomständigheter - i fält’ is a historical account attributed to the general catalogue and is retained with its wording and attribution, not independently verified as ownership history. The selected photo showed an image-bound CC BY 4.0 badge; its unchanged viewer JPEG was visually reviewed at 1000 × 219 px.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-54-39-050z.html",
+      "capturedAt": "2026-09-30T00:54:39.050Z",
+      "method": "singlefile",
+      "note": "Capture checked for displayed accession 1926.09.0002 and catalogue description."
+    }
+  ]
+}

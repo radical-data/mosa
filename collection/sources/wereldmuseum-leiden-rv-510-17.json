@@ -1,0 +1,62 @@
+{
+  "author": "Wereldmuseum",
+  "reference": "https://hdl.handle.net/20.500.11840/661771",
+  "language": "nl",
+  "images": [],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "moai-kavakava-leiden-rv-510-17",
+      "predicate": "catalogue_number",
+      "value": "RV-510-17"
+    },
+    {
+      "id": "title",
+      "objectId": "moai-kavakava-leiden-rv-510-17",
+      "predicate": "classified_as",
+      "value": "Voorouderbeeld - moai kavakava"
+    },
+    {
+      "id": "period",
+      "objectId": "moai-kavakava-leiden-rv-510-17",
+      "predicate": "described_as",
+      "value": "Datering: voor 1885"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-leiden-rv-510-17",
+      "predicate": "described_as",
+      "value": "Afmetingen: 26,5 x 6,2 x 5,5 cm"
+    },
+    {
+      "id": "materials",
+      "objectId": "moai-kavakava-leiden-rv-510-17",
+      "predicate": "made_of",
+      "value": "hout"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "moai-kavakava-leiden-rv-510-17",
+      "predicate": "described_as",
+      "value": "Verwerving: Aankoop, 1885-10-29"
+    },
+    {
+      "id": "origin",
+      "objectId": "moai-kavakava-leiden-rv-510-17",
+      "predicate": "described_as",
+      "value": "Herkomst: Chili / Rapa Nui (eiland) / Zuid-Amerika / Midden- en Zuid-Amerika / Valparaíso (regio)"
+    }
+  ],
+  "notes": {
+    "text": "Selective extraction from the exact object record; field labels and wording are retained. The record-level Creative Commons notice describes the catalogue work. The museum publishes separate photo-order terms with delivery and use fees by category, so these pages alone do not establish image-specific reuse permission. No image is included pending rights/scope clarification. Field values are attributed to the unified collection catalogue.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-05-59-556z.html",
+      "capturedAt": "2026-09-30T01:05:59.556Z",
+      "method": "singlefile",
+      "note": "Reviewed SingleFile capture of the exact official object detail; visible text includes RV-510-17, title, origin, date, dimensions, material and descriptive context."
+    }
+  ]
+}

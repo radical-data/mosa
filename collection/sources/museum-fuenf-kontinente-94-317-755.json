@@ -1,0 +1,73 @@
+{
+  "author": "Museum Fünf Kontinente",
+  "reference": "https://onlinedatenbank-museum-fuenf-kontinente.de/detail/collection/65469251-ca87-42dc-b549-1d4b278ca1d8",
+  "language": "de",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "catalogue_number",
+      "value": "94-317 755"
+    },
+    {
+      "id": "classification",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "classified_as",
+      "value": "Schnitzerei: Vogelmensch | Tangata manu"
+    },
+    {
+      "id": "holder",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "held_by",
+      "value": "Museum Fünf Kontinente"
+    },
+    {
+      "id": "material",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "made_of",
+      "value": "Holz, Knochen, Obsidian"
+    },
+    {
+      "id": "dating",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "made_during",
+      "value": "vor 1994"
+    },
+    {
+      "id": "geographic-origin",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "described_as",
+      "value": "Geografische Herkunft: Ozeanien/Polynesien (Region), Südamerika/Chile/Rapa Nui (Osterinsel)"
+    },
+    {
+      "id": "authorship",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "described_as",
+      "value": "Urheberschaft: Nicht dokumentiert"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "described_as",
+      "value": "Maße: Höhe 15 cm | Breite 8,7 cm | Tiefe 2 cm"
+    },
+    {
+      "id": "provenance",
+      "objectId": "tangata-manu-munich-94-317-755",
+      "predicate": "described_as",
+      "value": "Provenienz: Provinz der bayerischen Kapuziner; Geschenk 1994"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The museum's online record displays inventory number 94-317 755, exactly matching the IndiGen gallery identifier for tangata-manu-munich-94-317-755. The classification claim preserves the full German title; the museum's geographic-origin field remains a source account and is not interpreted as a findspot or place of making.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-57-12-840z.html",
+      "capturedAt": "2026-09-29T22:57:12.840Z",
+      "method": "singlefile"
+    }
+  ]
+}

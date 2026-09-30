@@ -1,0 +1,56 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=05SDC-17-299",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-rapa-nui-17-299",
+      "predicate": "classified_as",
+      "value": "Moai Kava Kava"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-rapa-nui-17-299",
+      "predicate": "described_as",
+      "value": "Figura antropomorfa de madera. Posee pómulos y cejas tallados en relieve, ojos tallados en la misma madera, costillas y vértebras conspicuas y extremidades esquemáticas. Posee un diseño cefálico lineal simple."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-rapa-nui-17-299",
+      "predicate": "catalogue_number",
+      "value": "17-299"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-kavakava-rapa-nui-17-299",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "technique",
+      "objectId": "moai-kavakava-rapa-nui-17-299",
+      "predicate": "described_as",
+      "value": "Técnica: Madera-Tallado, Madera-Pulido"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-kavakava-rapa-nui-17-299",
+      "predicate": "described_as",
+      "value": "Dimensiones: Alto 116 cm - Ancho 15 cm - Profundidad 25 cm"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t01-45-01-902z.html",
+      "capturedAt": "2026-09-30T01:45:01.902Z",
+      "method": "singlefile",
+      "note": "Official fiche and photograph preserved; image reuse rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "The Chile Patrimonios DOI (05SDC-17-299) is distinct from the linked SURDOC registration (17-299), retained as the catalogue number. Selective ficha fields are transcribed in Spanish. No image is published because no item-specific reuse permission was established.",
+    "language": "en-GB"
+  }
+}

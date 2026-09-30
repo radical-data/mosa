@@ -1,0 +1,61 @@
+{
+  "author": "Canterbury Museum",
+  "reference": "https://collection.canterburymuseum.com/objects/72184/carving-moai-kavakava",
+  "language": "en",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-canterbury-e150-1132-oldman-343",
+      "predicate": "classified_as",
+      "value": "Carving: Moai Kavakava"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-canterbury-e150-1132-oldman-343",
+      "predicate": "described_as",
+      "value": "Carved mimosa wood male figure with inlaid eyes of bone and obsidian."
+    },
+    {
+      "id": "production-place",
+      "objectId": "moai-kavakava-canterbury-e150-1132-oldman-343",
+      "predicate": "made_at",
+      "value": "Easter Island/Pacific"
+    },
+    {
+      "id": "provenance",
+      "objectId": "moai-kavakava-canterbury-e150-1132-oldman-343",
+      "predicate": "described_as",
+      "value": "Puchased by: New Zealand Government: 1948; Purchased by: William O Oldman"
+    },
+    {
+      "id": "measurements",
+      "objectId": "moai-kavakava-canterbury-e150-1132-oldman-343",
+      "predicate": "described_as",
+      "value": "Dimensions (h x w): whole: 415.93 x 88.9mm"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-kavakava-canterbury-e150-1132-oldman-343",
+      "predicate": "catalogue_number",
+      "value": "E150.1132"
+    },
+    {
+      "id": "former-catalogue-number",
+      "objectId": "moai-kavakava-canterbury-e150-1132-oldman-343",
+      "predicate": "catalogue_number",
+      "value": "OLDMAN 343"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The catalogue number E150.1132 and former identifier OLDMAN 343 match the IndiGen entry. Its description, production place, provenance and measurements support the identity link. The Classification date is catalogue metadata, not a date of manufacture. The museum image is marked All Rights Reserved, so no image is included.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-10-33-406z.html",
+      "capturedAt": "2026-09-30T00:10:33.406Z",
+      "method": "singlefile"
+    }
+  ]
+}

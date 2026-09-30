@@ -1,0 +1,26 @@
+{
+  "author": "Diego Muñoz",
+  "reference": "https://www.indigen.eu/index.php?option=com_content&view=article&id=201",
+  "language": "en",
+  "claims": [
+    {
+      "id": "manu-cologne-54529-account-1",
+      "objectId": "manu-cologne-54529",
+      "predicate": "described_as",
+      "value": "Carving by Pedro Atan Pakomio (1906–1976). Pedro Atan Pakomio was an important Rapanui leader between the 1930s and 1960s, and an informant of Thor Heyerdahl in 1955. When Atan Pakomio left Rapa Nui to live in Chile in the 1960s, his Chilean house in the village of Quilpué became a reception center for many Rapanui migrants and especially a place to learn how to carve wood. He was a teacher for a new generation of Rapanui artists."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "1 object-specific claim extracted from the article narrative. Bibliographic entries and contextual passages without a direct object relationship are not mapped as claims.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-29t22-32-16-321z.html",
+      "capturedAt": "2026-09-29T22:32:16.321Z",
+      "method": "singlefile",
+      "note": "Preserves “Manu, Cologne”, its named byline, article text and bibliography where present."
+    }
+  ]
+}

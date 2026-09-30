@@ -1,0 +1,57 @@
+{
+  "author": "Rautenstrauch-Joest-Museum",
+  "reference": "https://doi.org/10.11588/diglit.76627#0096",
+  "language": "de",
+  "claims": [
+    {
+      "id": "inventory-32600",
+      "objectId": "honu-cologne-32600",
+      "predicate": "catalogue_number",
+      "value": "32 600"
+    },
+    {
+      "id": "designation-32600",
+      "objectId": "honu-cologne-32600",
+      "predicate": "described_as",
+      "value": "Holzschnitzerei (Kopf)"
+    },
+    {
+      "id": "origin-32600",
+      "objectId": "honu-cologne-32600",
+      "predicate": "described_as",
+      "value": "Herkunft: Osterinsel"
+    },
+    {
+      "id": "inventory-32602",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "catalogue_number",
+      "value": "32 602"
+    },
+    {
+      "id": "designation-32602",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "described_as",
+      "value": "Tanzhandhabe [?]"
+    },
+    {
+      "id": "origin-32602",
+      "objectId": "rapa-cologne-32602",
+      "predicate": "described_as",
+      "value": "Herkunft: Osterinsel"
+    }
+  ],
+  "notes": {
+    "text": "Rautenstrauch-Joest-Museum, Inventarbuch 6, page 96 (stable citation https://doi.org/10.11588/diglit.76627#0096). The printed headings are Nr., Gegenstand, Herkunft, Erwerbung and Bemerkungen. The numbered entries appear as 32 600 and 32 602; the digits match the assigned accessions after removing the space. The Gegenstand entry at 32 600 reads 'Holzschnitzerei (Kopf)'. The final compound at 32 602 appears to read 'Tanzhandhabe'; retain the reading as uncertain. Herkunft is handwritten 'Osterinsel' for both. These are historical register descriptions, not a claim of present location or a MoSA classification. The HAI page states CC BY-NC-ND 4.0; the preserved scan is source evidence only.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "rjm-inventarbuch-06-0096.jpg",
+      "originalUrl": "https://digi.ub.uni-heidelberg.de/diglitData/image/rjm_inv_buch_06/3/096_RJM_Inventarbuch_06.jpg",
+      "capturedAt": null,
+      "method": "download",
+      "note": "Official full-page JPEG linked from the HAI viewer Download page > JPEG; downloaded 2026-09-30 (exact retrieval time not recorded) and visually inspected at 4444 x 3692 px. CC BY-NC-ND 4.0; preservation for source evidence only."
+    }
+  ]
+}

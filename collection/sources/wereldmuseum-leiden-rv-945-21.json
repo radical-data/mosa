@@ -1,0 +1,74 @@
+{
+  "author": "Wereldmuseum",
+  "reference": "https://hdl.handle.net/20.500.11840/677943",
+  "language": "nl",
+  "images": [],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "catalogue_number",
+      "value": "RV-945-21"
+    },
+    {
+      "id": "title",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "classified_as",
+      "value": "Danspeddel - rapa"
+    },
+    {
+      "id": "period",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Datering: Voor 1893"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Afmetingen: 82 x 18 x 1,8 cm"
+    },
+    {
+      "id": "materials",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "made_of",
+      "value": "Hout"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Verwerving: Aankoop, 1893-06-16"
+    },
+    {
+      "id": "origin",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Herkomst: Chili / Rapa Nui (eiland) / Zuid-Amerika / Midden- en Zuid-Amerika / Valparaíso (regio)"
+    },
+    {
+      "id": "description",
+      "objectId": "rapa-leiden-rv-945-21",
+      "predicate": "described_as",
+      "value": "Deze sterk gestileerde antropomorfe danspeddel (rapa) is uit één stuk toromirohout gesneden. Het bovendeel vormt een hoofd met neus, wenkbrauwen en oren, het onderste gedeelte eindigt in een fallische punt."
+    }
+  ],
+  "notes": {
+    "text": "Selective extraction from the exact object record; field labels and wording are retained. The record-level Creative Commons notice describes the catalogue work. The museum publishes separate photo-order terms with delivery and use fees by category, so these pages alone do not establish image-specific reuse permission. No image is included pending rights/scope clarification. Field values are attributed to the unified collection catalogue.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t01-08-00-840z.html",
+      "capturedAt": "2026-09-30T01:08:00.840Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number RV-945-21 and catalogue content."
+    },
+    {
+      "file": "2026-09-30t01-09-04-709z.html",
+      "capturedAt": "2026-09-30T01:09:04.709Z",
+      "method": "singlefile",
+      "note": "Reviewed exact official object detail capture; visible record includes inventory number RV-945-21 and cited catalogue fields."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "author": "Ministerio de las Culturas, las Artes y el Patrimonio",
+  "reference": "https://www.chilepatrimonios.gob.cl/ficha?doi=02SDC-17-9",
+  "language": "es",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "classified_as",
+      "value": "Moai Tangata Manu"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "described_as",
+      "value": "Figura exenta. Escultura antropomorfa de bulto redondo que representa una figura de pie. Objeto de forma alargada con base plana; tiene la cabeza redondeada con orejas alargadas, cejas prominentes, ojos de hueso y piedra, nariz ancha y larga, boca destacada con labios gruesos. Tórax y abdomen cilíndricos con el pecho en relieve. Tiene una mano sobre el pecho y la otra en el bajo vientre. Está elaborado en madera tallada, pulida e incisa de color marrón claro con vetas oscuras. Superficie lisa y brillante."
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "catalogue_number",
+      "value": "17-9"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "held_by",
+      "value": "Museo Antropológico Padre Sebastián Englert"
+    },
+    {
+      "id": "creator",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "described_as",
+      "value": "Creador/a: Anónimo/desconocido"
+    },
+    {
+      "id": "technique",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "described_as",
+      "value": "Técnica: Madera-Tallado, Madera-Pulido, Madera-Incisión, Hueso (material animal orgánico)-Tallado, Obsidiana-Tallado"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-pa-apa-a-rapa-nui-17-9",
+      "predicate": "described_as",
+      "value": "Dimensiones: Ancho 7 cm - Profundidad 5 cm - Alto 32 cm"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t01-53-32-049z.html",
+      "capturedAt": "2026-09-30T01:53:32.049Z",
+      "method": "singlefile",
+      "note": "Expanded official fiche and photograph preserved; image reuse rights not cleared."
+    }
+  ],
+  "notes": {
+    "text": "The candidate DOI 02SDC-17-9 is the linked Chile Patrimonios ficha for SURDOC registration 17-9 and MAPSE. The official photograph matches the IndiGen gallery photograph in figure pose, long ears, eye inlays and carving. No image is published because item-specific reuse permission was not established.",
+    "language": "en-GB"
+  }
+}

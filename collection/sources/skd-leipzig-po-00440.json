@@ -1,0 +1,62 @@
+{
+  "author": "Staatliche Kunstsammlungen Dresden",
+  "reference": "https://skd-online-collection.skd.museum/Details/Index/1590077",
+  "language": "de",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "classified_as",
+      "value": "Hoheitszeichen \"reimiro\""
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "catalogue_number",
+      "value": "Po 00440"
+    },
+    {
+      "id": "material",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt, poliert"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "described_as",
+      "value": "Abmessungen: 55,6 x 13,8 x 2,5 cm"
+    },
+    {
+      "id": "catalogue-roles",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "described_as",
+      "value": "uns nicht bekannt - Hersteller"
+    },
+    {
+      "id": "place-and-dating",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "described_as",
+      "value": "Ozeanien"
+    },
+    {
+      "id": "holder",
+      "objectId": "reimiro-leipzig-po-00440",
+      "predicate": "held_by",
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+    }
+  ],
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-02-20-890z.html",
+      "capturedAt": "2026-09-30T00:02:20.890Z",
+      "method": "singlefile",
+      "note": "Reviewed capture preserves the exact museum name, accession number, object title, and catalogue fields including material and dimensions; the page marks object images Freier Zugang – Rechte vorbehalten, so no image was imported."
+    }
+  ],
+  "notes": {
+    "text": "Transcribed the displayed catalogue fields and descriptive passage, retaining role labels, uncertainty and historical terminology. The combined place/dating field is preserved as a description without inferring a specific making-place relationship.",
+    "language": "en-GB"
+  }
+}

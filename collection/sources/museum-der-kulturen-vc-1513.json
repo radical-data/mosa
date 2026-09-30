@@ -1,0 +1,62 @@
+{
+  "author": "Museum der Kulturen Basel",
+  "reference": "https://onlinecollection.mkb.ch/?q=Vc%201513#/query/78f1b590-98f4-4175-8481-63106bf17d52",
+  "language": "de",
+  "claims": [
+    {
+      "id": "vc-1513-catalogue-number",
+      "objectId": "moai-kavakava-basel-vc-1513",
+      "predicate": "catalogue_number",
+      "value": "Vc 1513"
+    },
+    {
+      "id": "vc-1513-classification",
+      "objectId": "moai-kavakava-basel-vc-1513",
+      "predicate": "classified_as",
+      "value": "Figur"
+    },
+    {
+      "id": "vc-1513-group-description",
+      "objectId": "moai-kavakava-basel-vc-1513",
+      "predicate": "described_as",
+      "value": "EL_OZCK: Vc_157, Vc_1513-1516 (4) Polynesien, Osterinsel, 4 Figuren, ca. 1930/1950; Legat 1978 Helene Fischer, Davos und Chicago"
+    },
+    {
+      "id": "vc-1513-land",
+      "objectId": "moai-kavakava-basel-vc-1513",
+      "predicate": "described_as",
+      "value": "Land: Easter Islands (Rapa Nui)"
+    },
+    {
+      "id": "vc-1513-material",
+      "objectId": "moai-kavakava-basel-vc-1513",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt / lackiert, Muschel"
+    },
+    {
+      "id": "vc-1513-dimensions",
+      "objectId": "moai-kavakava-basel-vc-1513",
+      "predicate": "described_as",
+      "value": "L 90 cm, B 17 cm, H 30 cm"
+    },
+    {
+      "id": "vc-1513-collector",
+      "objectId": "moai-kavakava-basel-vc-1513",
+      "predicate": "described_as",
+      "value": "Sammler*in, zugl. Einlieferer*in: Helene Fischer"
+    }
+  ],
+  "notes": {
+    "text": "Matched the displayed catalogue number Vc 1513 and supporting object details. Selective transcription of the object record, retaining any linked group description with its group context. The catalogue dates and Land field are retained without inferring more precise relationships. The record’s CC BY 4.0 data licence does not by itself establish image-specific clearance.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "2026-09-30t00-16-17-000z.pdf",
+      "capturedAt": "2026-09-30T00:16:17.000Z",
+      "method": "supplied-file",
+      "note": "Official catalogue PDF export, visually reviewed against the live object record. Preserves its accession and selected catalogue fields. The export includes the object photograph; preservation does not establish image republication rights."
+    }
+  ]
+}
