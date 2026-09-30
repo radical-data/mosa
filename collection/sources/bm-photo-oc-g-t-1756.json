@@ -1,0 +1,26 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/EA_Oc-G-T-1756",
+  "language": "en",
+  "claims": [
+    {
+      "id": "description-rano-raraku-quarry-distant-view",
+      "objectId": "rano-raraku-site",
+      "predicate": "described_as",
+      "value": "Lantern Slide (black and white); view of Rano Raraku quarry from a distance; moai statue road in the foreground, with teo groups of fallen moai (figure carvings) each; Easter Island.",
+      "locator": "Description"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "This British Museum catalogue record describes a lantern slide attributed to Katherine Maria Routledge, photographed in 1914–1915. It is registered as a documentary source, not as a physical Rapa Nui artefact, and no image is published. The claim preserves the museum's complete Description wording, including its apparent typo ‘teo groups’. The longer curator's overview is not extracted.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-46-12-692z.html",
+      "capturedAt": "2026-09-30T18:46:12.692Z",
+      "method": "singlefile"
+    }
+  ]
+}

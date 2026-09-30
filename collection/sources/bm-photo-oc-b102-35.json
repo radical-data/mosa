@@ -1,0 +1,26 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/EA_Oc-B102-35",
+  "language": "en",
+  "claims": [
+    {
+      "id": "description-orongo-in-situ-birdman-carving",
+      "objectId": "orongo-site",
+      "predicate": "described_as",
+      "value": "Photograph (black and white); carving in stone, in-situ, of a bird-man; Orongo, Easter Island.",
+      "locator": "Description"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "This British Museum catalogue record describes a photograph attributed to Katherine Maria Routledge, dated circa 1919. It is registered as a documentary source, not as a physical Rapa Nui artefact, and no image is published. The complete Description and the photograph's inscription identify an in-situ bird-man carving at Orongo; the record does not identify the individual carving as a separate MoSA object.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-46-45-454z.html",
+      "capturedAt": "2026-09-30T18:46:45.454Z",
+      "method": "singlefile"
+    }
+  ]
+}

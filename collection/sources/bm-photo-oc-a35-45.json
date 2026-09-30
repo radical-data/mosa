@@ -1,0 +1,40 @@
+{
+  "author": "British Museum",
+  "reference": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-45",
+  "language": "en",
+  "claims": [
+    {
+      "id": "view-ahu-vai-uri",
+      "objectId": "ahu-vai-uri-site",
+      "predicate": "described_as",
+      "value": "view of three ahu's (ceremonial platforms) with moai (figure carvings), Ahu Vai Uri on the left",
+      "locator": "Description"
+    },
+    {
+      "id": "view-ahu-tahai",
+      "objectId": "ahu-tahai-site",
+      "predicate": "described_as",
+      "value": "Ahu Tahai in the centre",
+      "locator": "Description"
+    },
+    {
+      "id": "view-ahu-ko-te-riku",
+      "objectId": "ahu-ko-te-riku-site",
+      "predicate": "described_as",
+      "value": "Ahu Ko Te Riki on the right",
+      "locator": "Description"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "This British Museum catalogue record describes a 1980 photograph by Katesa Schlosser. It is registered as a documentary source, not as a physical Rapa Nui artefact, and no image is published. Its description places three named ahu sites in the frame. The description spells the third name as ‘Ahu Ko Te Riki’; the record's structured associated-place link identifies ‘Ahu Ko Te Riku’, which is used for the linked MoSA site identity while the claim preserves the description's wording. The museum's longer contextual comment is collapsed in the live record and was not extracted.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t18-36-23-951z.html",
+      "capturedAt": "2026-09-30T18:36:23.951Z",
+      "method": "singlefile"
+    }
+  ]
+}
