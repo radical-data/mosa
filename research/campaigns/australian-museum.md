@@ -12,33 +12,78 @@ The museum's [Rapa Nui overview](https://australian.museum/learn/cultures/pasifi
 offers a route beyond the Arte and IndiGen seeds. Its approximate holding count
 is a lead, not a denominator or permission to create individual objects.
 
-This first pass covers the overview, its three collection highlights, the linked
-fish-hook gallery and relevant public cultural, Pasifika and archaeology access
-routes. It includes contemporary Rapanui works and physical replicas, explicitly
-distinguished from originals. Shop listings, incidental comparisons and images
-mistaken for their depicted objects are outside this pass. Sensitive material
-requires discussion before publication.
+The initial highlight pilot added three contemporary works to the one historical
+Arte-table entry already in MoSA. The expanded investigation starts from those
+four records. The approximate holding total is neither a verified current
+inventory nor a target of 96 new objects: holdings, catalogue entries, lots,
+components and previously represented objects must be distinguished.
+
+The expanded campaign covers publicly documented Australian Museum Rapa Nui
+holdings: historical and contemporary cultural material, archaeological objects,
+physical replicas and accessible object-level collection documentation. Search
+across cultural collections, exhibitions, museum publications, annual reports,
+archives and external catalogues that explicitly document Australian Museum
+objects. Historical attribution does not establish present custody. Incidental
+mentions, shop products and objects held by other museums are excluded from
+this institution pass. Sensitive material requires discussion before publication.
 
 ## Ordered plan
 
-1. Compare existing Australian Museum attribution, identifiers and candidate
-   names across MoSA; retain existing handles and unresolved historical matches.
-2. Inspect the overview and all three highlighted object pages, then enumerate
-   relevant entries in the fish-hook gallery. Follow directly cited object or
-   inventory evidence, without expanding into unrelated Pasifika material.
-3. Inspect cultural, Pasifika and archaeology routes for public catalogues or
-   exports. Search `Rapa Nui`, `Rapanui` and `Easter Island` across available
-   relevant fields, supplemented by `mata‘a`/`mataa`, `toki`/`adze` and
-   `fish hook` with provenance clues. Record supported fields, pagination and
-   access limits. General web searches are reconnaissance, not catalogue censuses.
-4. Give every candidate an identity decision against the whole collection.
-   Preserve usable substantive sources, extract the relevant object-specific
-   claims faithfully, review image identity and reuse rights, and register
-   cleared images. Use the [integration procedure](../../.agents/skills/incorporate-source/SKILL.md).
-5. Review records and both language routes. Finish this pass when each planned
-   route is examined or explicitly blocked and each candidate has an identity
-   decision and integration outcome. Keep outstanding work visible; neither a
-   blocked route nor an object file means full integration is complete.
+1. **Reuse the baseline.** Compare new candidates against all MoSA objects and
+   sources, including the four existing Australian Museum records. Reuse the
+   inspected local captures and previous search outcomes below.
+2. **Complete website discovery.** Review the remaining result pages for
+   `Rapa Nui`, `Rapanui` and `Easter Island`; cover relevant material variants
+   (`mata‘a`/`mataa`, `toki`/`adze`, `fish hook`) to their visible result boundary.
+   Distinguish the keyword index from AI-generated answers. Inspect relevant
+   results and explicitly record inaccessible pages and unresolved pagination.
+3. **Find the inventory.** Inspect observed collection/database access routes,
+   museum research publications and digitised historical catalogues. Follow
+   accession numbers, named collectors and transfers only when linked evidence
+   makes them relevant. Search historical place-name variants where encountered.
+   An aggregate report may expose gaps but does not identify its constituent objects.
+4. **Resolve existing leads.** Investigate Vaitiare Pakarati's sensory models
+   through exhibition/acquisition evidence; establish holding location and
+   component boundaries. Review the fish-hook display's individual labels if
+   accessible. Seek evidence for the historical rei miro's current identity.
+5. **Integrate supported candidates in coherent batches.** Inspect substantive
+   sources, preserve usable shareable files or explain restrictions, reconcile
+   identities, extract faithful object-specific claims and review images. Add
+   only cleared images. Use the [integration procedure](../../.agents/skills/incorporate-source/SKILL.md).
+   Keep every inspected candidate accounted for as new, existing, unresolved or
+   excluded; collection records own accepted facts.
+6. **Review coverage and continuation.** Compare discovered records with the
+   approximate reported holdings, explaining rather than filling gaps. A fresh
+   agent must be able to identify the next useful action from this campaign.
+   Finish this public-evidence pass when the planned routes have outcomes and
+   supported candidates are integrated or their remaining stages are explicit.
+   An inaccessible inventory prevents a census-completeness claim; specify the
+   exact export, inventory or supplied file needed to continue.
+
+The parent owns shared campaign and collection edits. Cheaper research agents
+receive separate routes and return checked evidence and precise limits. A
+separate review checks attribution, identity and claim wording. No new register,
+schema or recurring tooling is planned. Human help uses ordinary conversation
+and locally supplied files. Institution contact, permission requests, pushing
+and deployment are outside the authorised work.
+
+## Git commit strategy
+
+- Commit this expanded scope before starting the new research:
+  `docs(research): scope the australian museum census`.
+- Commit each independently reviewed integration batch with its source records,
+  justified objects, claims, authorised captures/images and concise campaign
+  outcomes together, for example `feat(collection): add australian museum ...`.
+  Do not split a dependent source/object pair across invalid commits.
+- If a route produces only consequential unresolved findings, commit its
+  campaign update as `docs(research): record australian museum ...`; do not
+  manufacture a collection source to record a search.
+- Conclude with reconciled coverage and a specific next action. Keep routine
+  test and commit history in Git, not a duplicate campaign activity log.
+- Stage explicit reviewed paths. Keep restricted originals and disposable work
+  in ignored local staging. Run collection validation, relevant model tests and
+  the build for data changes; check docs and whitespace for campaign changes.
+  Review new object pages on both language routes before the batch commit.
 
 ## Coverage and decisions
 
@@ -96,15 +141,7 @@ sensory-model transcript. Reuse it locally instead of recapturing.
 
 ## Next action
 
-Investigate the sensory models in public Wansolmoana exhibition/acquisition
-records, starting from the locally preserved overview transcript. Establish current
-location and whether the platform is a separate object or component. This is
-the next bounded discovery task, not a reason to re-run the highlight import.
-
-A broader holdings pass needs a usable institutional inventory or catalogue
-route. The website index's remaining pages and full fish-hook display have not
-been covered. If the display remains inaccessible, a human can supply the
-captioned image or saved HTML in local staging. Request contact or image
-permissions only if the user authorises that work. Until these gaps are resolved,
-this pilot demonstrates a partial collection import, not a completed census or
-fully illustrated integration.
+Execute the expanded plan: complete public website coverage, investigate the
+sensory models and fish-hook display, and search museum/publication inventory
+routes in parallel. Integrate supported discoveries and replace this next action
+with the precise remaining gap once those routes have outcomes.
