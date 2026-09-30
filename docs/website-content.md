@@ -40,6 +40,10 @@ classifications and descriptions remain claims. Editorial prose belongs in
 `collection/editorials/`; image metadata belongs to the source that documents
 the image.
 
+Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-the-git-collection.md).
+Keep all source accounts, qualifiers and optional locators visible. Holding and
+location labels describe source reports, which may be historical.
+
 Use explicit `Intl` locales and metric units. Preserve the precision and
 uncertainty of historical dates. Do not infer ownership, consent or cultural
 authority from current holding or location.

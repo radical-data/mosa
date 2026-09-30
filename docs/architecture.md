@@ -3,6 +3,8 @@
 ## System
 
 MoSA has one deployed application and one versioned public collection.
+Git is the canonical collection store. Supabase is no longer part of the
+application, and there is no database synchronisation or separate content release.
 
 ```text
 source JSON ──► direct object links ─────┐
@@ -52,6 +54,9 @@ source handle, such as `wikipedia-mamari/name-mamari`. Claims stay inside source
 so attribution is structural rather than an optional afterthought. Conflicting
 names and classifications can coexist.
 
+An optional claim `locator` identifies a passage within the source; see
+[collection authoring](collection-publication.md).
+
 An **image record** also stays inside a source. It links an object to a local,
 publishable image and records alt text, credit, rights, caption and original URL
 where available. The binary image lives in Git LFS.
@@ -78,12 +83,11 @@ restitution cases, cultural authority, access protocols or competing event
 chronologies. The retained [competency cases](test-cases/) document those needs
 without making the current publishing job depend on implementing all of them.
 
-## Publication boundary
+## Publication
 
-Git review is the publication workflow. Everything committed under
-`collection/` is eligible for the public build. This makes publication simple
-and auditable, but it also means private notes, unlicensed media and uncertain
-drafts must stay outside that directory until the team chooses to publish them.
+The static build includes `collection/`. Agents can update public museum material
+without a separate publication approval step. Website and collection changes
+are deployed together. Private material stays in ignored `research-local/`.
 
 The initial migration intentionally included 17 canonical records and three
 previously unaccepted drafts at the owner's direction. Later evidence reconciled

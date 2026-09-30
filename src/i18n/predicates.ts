@@ -8,7 +8,7 @@ const labels = {
   made_at: ["Made at", "Hecho en"],
   made_during: ["Made during", "Hecho durante"],
   found_at: ["Found at", "Encontrado en"],
-  located_at: ["Located at", "Ubicado en"],
+  located_at: ["Reported location", "Ubicación informada"],
   held_by: ["Reported holder", "Custodia informada"],
   catalogue_number: ["Catalogue number", "Número de catálogo"],
   refers_to: ["Refers to", "Se refiere a"],

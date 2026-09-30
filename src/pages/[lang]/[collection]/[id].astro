@@ -1,8 +1,9 @@
 ---
 import { Image } from "astro:assets";
+import AttributedClaims from "../../../components/AttributedClaims.astro";
+import ClaimStatement from "../../../components/ClaimStatement.astro";
 import EditorialArticle from "../../../components/EditorialArticle.astro";
 import { collectionObjects, getObjectRecord } from "../../../data/collection";
-import { predicateLabel } from "../../../i18n/predicates";
 import { type Locale, localeIds, pagePath } from "../../../i18n/routes";
 import Layout from "../../../layouts/Layout.astro";
 
@@ -27,6 +28,10 @@ export function getStaticPaths() {
 const copy = {
   en: {
     back: "Collection",
+    navigation: "On this page",
+    origin: "Origin and findspot",
+    holding: "Reported holding and location",
+    holdingNote: "Sources may describe historical holdings or locations.",
     foregrounded: "Foregrounded perspectives",
     images: "Images",
     editorials: "MoSA editorials",
@@ -40,6 +45,10 @@ const copy = {
   },
   es: {
     back: "Colección",
+    navigation: "En esta página",
+    origin: "Origen y lugar de hallazgo",
+    holding: "Custodia y ubicación informadas",
+    holdingNote: "Las fuentes pueden describir custodias o ubicaciones históricas.",
     foregrounded: "Perspectivas destacadas",
     images: "Imágenes",
     editorials: "Editoriales de MoSA",
@@ -81,25 +90,27 @@ const referenceURL = (value: string) => {
       <p><a href={pagePath("collection", locale)}>← {t.back}</a></p>
       <h1>{record.object.name}</h1>
 
+      <nav aria-label={t.navigation} class="object-navigation">
+        <ul>
+          {record.foregroundedClaims.length > 0 && <li><a href="#foregrounded">{t.foregrounded}</a></li>}
+          {record.images.length > 0 && <li><a href="#images">{t.images}</a></li>}
+          {record.originClaims.length > 0 && <li><a href="#origin">{t.origin}</a></li>}
+          {record.holdingClaims.length > 0 && <li><a href="#holding">{t.holding}</a></li>}
+          <li><a href="#sources">{t.sources}</a></li>
+          {record.editorials.length > 0 && <li><a href="#editorials">{t.editorials}</a></li>}
+        </ul>
+      </nav>
+
       {record.foregroundedClaims.length > 0 && (
-        <section>
-          <h2>{t.foregrounded}</h2>
-          <div class="claims">
-            {record.foregroundedClaims.map(({ claim, source }) => (
-              <article class="claim">
-                <p lang={source.language === "und" ? undefined : source.language}>
-                  <strong>{predicateLabel(claim.predicate, locale)}:</strong> {claim.value}
-                </p>
-                <p class="small muted">{t.recorded}: {source.reference}</p>
-              </article>
-            ))}
-          </div>
+        <section id="foregrounded" aria-labelledby="foregrounded-heading">
+          <h2 id="foregrounded-heading">{t.foregrounded}</h2>
+          <AttributedClaims claims={record.foregroundedClaims} locale={locale} />
         </section>
       )}
 
       {record.images.length > 0 && (
-        <section>
-          <h2>{t.images}</h2>
+        <section id="images" aria-labelledby="images-heading">
+          <h2 id="images-heading">{t.images}</h2>
           <div class="image-gallery">
             {record.images.map(({ image, source, asset }) => (
               <figure>
@@ -123,29 +134,35 @@ const referenceURL = (value: string) => {
         </section>
       )}
 
-      {record.editorials.length > 0 && (
-        <section>
-          <h2>{t.editorials}</h2>
-          {record.editorials
-            .sort((a, b) => Number(b.language.startsWith(locale)) - Number(a.language.startsWith(locale)))
-            .map((editorial) => <EditorialArticle editorial={editorial} locale={locale} />)}
+      {record.originClaims.length > 0 && (
+        <section id="origin" aria-labelledby="origin-heading">
+          <h2 id="origin-heading">{t.origin}</h2>
+          <AttributedClaims claims={record.originClaims} locale={locale} />
         </section>
       )}
 
-      <section>
-        <h2>{t.sources}</h2>
+      {record.holdingClaims.length > 0 && (
+        <section id="holding" aria-labelledby="holding-heading">
+          <h2 id="holding-heading">{t.holding}</h2>
+          <p class="small muted">{t.holdingNote}</p>
+          <AttributedClaims claims={record.holdingClaims} locale={locale} />
+        </section>
+      )}
+
+      <section id="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">{t.sources}</h2>
         <div class="source-accounts">
           {record.sources.map((source) => {
             const url = referenceURL(source.reference);
             return (
-              <article class="source-account">
+              <article class="source-account" id={`source-${source.id}`}>
                 <h3>{url ? <a href={url} rel="noreferrer">{source.reference}</a> : source.reference}</h3>
                 {source.author && <p class="small muted">{t.author}: {source.author}</p>}
                 {source.claims.length > 0 && (
                   <ul>
                     {source.claims.map((claim) => (
-                      <li lang={source.language === "und" ? undefined : source.language}>
-                        <strong>{predicateLabel(claim.predicate, locale)}:</strong> {claim.value}
+                      <li>
+                        <ClaimStatement claim={claim} language={source.language} locale={locale} />
                       </li>
                     ))}
                   </ul>
@@ -155,6 +172,14 @@ const referenceURL = (value: string) => {
           })}
         </div>
       </section>
+      {record.editorials.length > 0 && (
+        <section id="editorials" aria-labelledby="editorials-heading">
+          <h2 id="editorials-heading">{t.editorials}</h2>
+          {record.editorials
+            .sort((a, b) => Number(b.language.startsWith(locale)) - Number(a.language.startsWith(locale)))
+            .map((editorial) => <EditorialArticle editorial={editorial} locale={locale} />)}
+        </section>
+      )}
     </article>
   )}
 </Layout>
@@ -162,8 +187,10 @@ const referenceURL = (value: string) => {
 <style>
   .dossier { max-width: 72rem; }
   .dossier > section { margin-block-start: clamp(3rem, 8vw, 6rem); }
-  .claims, .source-accounts, .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem; }
-  .claim, .source-account { border: 1px solid currentColor; padding: 1rem; overflow-wrap: anywhere; }
+  .source-accounts, .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem; }
+  .source-account { border: 1px solid currentColor; padding: 1rem; overflow-wrap: anywhere; }
+  .object-navigation ul { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; list-style: none; padding: 0; }
+  .dossier section, .source-account { scroll-margin-top: 2rem; }
   .source-account h3 { font-size: 1rem; }
   .source-account ul { padding-inline-start: 1.25rem; }
   figure { margin: 0; }

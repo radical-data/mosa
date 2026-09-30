@@ -24,6 +24,7 @@ export interface Claim {
   objectId: string;
   predicate: Predicate;
   value: string;
+  locator?: string;
 }
 
 export interface CollectionImage {
@@ -93,7 +94,7 @@ const sourceKeys = [
   "objectIds",
   "reference",
 ];
-const claimKeys = ["id", "objectId", "predicate", "value"];
+const claimKeys = ["id", "objectId", "predicate", "value", "locator"];
 const imageKeys = ["alt", "caption", "credit", "file", "objectId", "originalUrl", "rights"];
 const captureKeys = ["archiveUrl", "capturedAt", "file", "method", "note", "originalUrl"];
 const captureExtensions = "html|pdf|jpg|jpeg|png|webp|avif|tif|tiff";
@@ -287,6 +288,8 @@ export function parseSource(value: unknown, file: string): Source {
         `${at}.predicate is unsupported`,
       );
       add(errors, text(claim.value), `${at}.value is required`);
+      if ("locator" in claim)
+        add(errors, text(claim.locator), `${at}.locator must be non-empty text`);
     });
   if (Array.isArray(value.images))
     value.images.forEach((entry, index) => {
