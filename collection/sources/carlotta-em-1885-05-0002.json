@@ -1,0 +1,83 @@
+{
+  "author": "Etnografiska Museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1586333",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "catalogue_number",
+      "value": "1885.05.0002"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "classified_as",
+      "value": "figur, gudabild, moai tangata, skulptur"
+    },
+    {
+      "id": "local-name",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "has_name",
+      "value": "moai tangata"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "described_as",
+      "value": "Gudabild av toromiroträ, föreställande en människofigur, hållande de mycket långa armarna utefter sidorna. Ögonen av runda obsidianplattor, omgivna av ringar av mussekskal. Sprucken. Inlindad i ett stycke vit tapa. (generalkatalogen)"
+    },
+    {
+      "id": "description-en",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "described_as",
+      "value": "Male ancestor image made of wood with obsidian and bone eyes"
+    },
+    {
+      "id": "origin-en",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "described_as",
+      "value": "Land, engelska - ursprung: Easter Island"
+    },
+    {
+      "id": "materials",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "made_of",
+      "value": "obsidian; trä; toromiroträ; ben"
+    },
+    {
+      "id": "height",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "described_as",
+      "value": "Höjd: 60 cm"
+    },
+    {
+      "id": "museum-acquisition",
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1885"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-stockholm-1885-05-0002",
+      "file": "moai-tangata-stockholm-1885-05-0002/carlotta.jpg",
+      "alt": "Träfigur med inlagda ögon och långa armar längs sidorna.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1586333"
+    }
+  ],
+  "notes": {
+    "text": "Evidence locators: Inventarienummer; Sakord; Lokalt namn; Beskrivning; Beskrivning - engelska; Land, engelska - ursprung; Material - tillverkning; Höjd; Tidpunkt - förvärv till museet. The record contains Swedish and English catalogue text; both are retained in the original wording. The selected photograph carries a CC BY 4.0 overlay in its image viewer. The original JPEG from the preserved page is included unchanged. No individual photographer is named in the reviewed image credit; the holding museum is credited.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-21-25-916z.html",
+      "capturedAt": "2026-09-30T00:21:25.916Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. The selected image and its CC BY 4.0 overlay are preserved in the catalogue image viewer."
+    }
+  ]
+}

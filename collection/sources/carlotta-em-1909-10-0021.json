@@ -1,0 +1,89 @@
+{
+  "author": "Etnografiska Museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1587472",
+  "language": "sv",
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "catalogue_number",
+      "value": "1909.10.0021"
+    },
+    {
+      "id": "classification",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "classified_as",
+      "value": "prydnad, bröstprydnad"
+    },
+    {
+      "id": "local-name",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "has_name",
+      "value": "rei miro"
+    },
+    {
+      "id": "description",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Bröstprydnad av trä. (generalkatalogen)"
+    },
+    {
+      "id": "origin",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "materials",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "made_of",
+      "value": "obsidian; trä; ben"
+    },
+    {
+      "id": "length",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Längd: 47 cm"
+    },
+    {
+      "id": "width",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Bredd: 24 cm"
+    },
+    {
+      "id": "thickness",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Tjocklek: 4,3 cm"
+    },
+    {
+      "id": "collector",
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "predicate": "described_as",
+      "value": "Namn - insamlad av: Skottsberg, Carl"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "reimiro-stockholm-1909-10-0021",
+      "file": "reimiro-stockholm-1909-10-0021/carlotta.jpg",
+      "alt": "Halvmåneformad bröstprydnad av trä med två snidade huvuden och en snodd.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1587472"
+    }
+  ],
+  "notes": {
+    "text": "Evidence locators: Inventarienummer; Sakord; Lokalt namn; Beskrivning; Land - ursprung; Material - tillverkning; Längd; Bredd; Tjocklek; Namn - insamlad av. The selected photograph carries a CC BY 4.0 overlay in its image viewer. The original JPEG from the preserved page is included unchanged. No individual photographer is named in the reviewed image credit; the holding museum is credited.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-25-02-827z.html",
+      "capturedAt": "2026-09-30T00:25:02.827Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. The selected image and its CC BY 4.0 overlay are preserved in the catalogue image viewer."
+    }
+  ]
+}

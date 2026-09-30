@@ -1,0 +1,83 @@
+{
+  "author": "Etnografiska Museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1816030",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "catalogue_number",
+      "value": "1950.01.0001"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "classified_as",
+      "value": "figur, moai tangata, skulptur"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Förfädersfigur."
+    },
+    {
+      "id": "description-en",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Small male figure (moai tangata) carved of wood featuring obsidian and bone eyes."
+    },
+    {
+      "id": "origin",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "materials",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "made_of",
+      "value": "obsidian; trä; ben"
+    },
+    {
+      "id": "height",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Höjd: 37 cm"
+    },
+    {
+      "id": "museum-acquisition",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1950"
+    },
+    {
+      "id": "collection",
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "predicate": "described_as",
+      "value": "Belongs to Samling: 1950.01 :: Antikvitetsaffär, Antiquity shop"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-stockholm-1950-01-0001",
+      "file": "moai-tangata-stockholm-1950-01-0001/carlotta.jpg",
+      "alt": "Träfigur med inlagda ögon och armar längs sidorna.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1816030"
+    }
+  ],
+  "notes": {
+    "text": "Evidence locators: Inventarienummer; Sakord; Beskrivning; Beskrivning - engelska; Land - ursprung; Material - tillverkning; Höjd; Tidpunkt - förvärv till museet; Belongs to Samling. The record contains Swedish and English catalogue text; both are retained in the original wording. The selected photograph carries a CC BY 4.0 overlay in its image viewer. The original JPEG from the preserved page is included unchanged. No individual photographer is named in the reviewed image credit; the holding museum is credited.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-24-21-832z.html",
+      "capturedAt": "2026-09-30T00:24:21.832Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. The selected image and its CC BY 4.0 overlay are preserved in the catalogue image viewer."
+    }
+  ]
+}

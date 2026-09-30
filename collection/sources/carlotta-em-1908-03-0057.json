@@ -1,0 +1,107 @@
+{
+  "author": "Etnografiska Museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1585337",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "inventory-number",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "catalogue_number",
+      "value": "1908.03.0057"
+    },
+    {
+      "id": "catalogue-classification",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "figur, statyett, gudabild, moai tangata [?], moai kavakava [?]"
+    },
+    {
+      "id": "catalogue-description",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Denna manliga figur har en synlig bröstkorg och en uthängande mage. Ryggraden är tydligt snidad på baksidan. Ett öga saknas. (Den benämns \"moai tangata\" av O´Brian år 2018 men \"moai kavakava\" i utställninstext för Human Nature 2020. Mer utmärglade figurer brukar kallas kavakava och sannolikt är det därför denna istället har kallats tangata. MJ/2026)."
+    },
+    {
+      "id": "museum-description-en",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "This male figure features a visible ribcage and an extended stomach. The backbone is prominently carved on the reverse. One eye is missing."
+    },
+    {
+      "id": "material-category",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "made_of",
+      "value": "ben-horn; sten-mineral; trä"
+    },
+    {
+      "id": "manufacturing-material",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "made_of",
+      "value": "obsidian; trä; ben"
+    },
+    {
+      "id": "height",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Höjd: 60 cm"
+    },
+    {
+      "id": "width",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Bredd: 12 cm"
+    },
+    {
+      "id": "thickness",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Tjocklek: 8,5 cm"
+    },
+    {
+      "id": "collector",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Namn - insamlad av: Rodéhn, Andreas (1831 - 1907), överstyrman"
+    },
+    {
+      "id": "museum-acquisition-date",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1908"
+    },
+    {
+      "id": "provenance-uncertainty",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Förvärvsomständigheter - i fält: Bröderna Carl och Andreas deltog i många resor och var samlare. Därför är proveniens osäker."
+    },
+    {
+      "id": "exhibition-account",
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "predicate": "described_as",
+      "value": "Träskulptur (Moai kavakava) som troligen representerar förfäder eller döda andar. Den väl synliga ryggraden visar möjligen på släktförhållanden, och är ett sätt att spåra sitt ursprung till mytiska förfäder eller gudar. (utställningstext, Human Nature 2020)"
+    }
+  ],
+  "images": [
+    {
+      "objectId": "moai-tangata-stockholm-1908-03-0057",
+      "file": "moai-tangata-stockholm-1908-03-0057/carlotta.jpg",
+      "alt": "Träfigur med synliga revben, utskjutande mage och ett bevarat inlagt öga.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1585337"
+    }
+  ],
+  "notes": {
+    "text": "The catalogue record's Sakord field labels the figure `moai tangata [?]` and `moai kavakava [?]`. Its Swedish description also explains this unresolved variation: it was called moai tangata by O'Brian (2018) but moai kavakava in the Human Nature exhibition text (2020); the catalogue editor's note says the less emaciated figure may be why tangata was used. Preserve the question marks and competing labels. Evidence locators: Sakord; Beskrivning; Beskrivning - engelska; Materialkategori; Material - tillverkning; Höjd; Bredd; Tjocklek; Namn - insamlad av; Tidpunkt - förvärv till museet. The record contains Swedish and English catalogue text; both are retained in the original wording. The selected photograph carries a CC BY 4.0 overlay in its image viewer. The original JPEG from the preserved page is included unchanged. No individual photographer is named in the reviewed image credit; the holding museum is credited.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-19-55-290z.html",
+      "capturedAt": "2026-09-30T00:19:55.290Z",
+      "method": "singlefile",
+      "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. The selected image and its CC BY 4.0 overlay are preserved in the catalogue image viewer."
+    }
+  ]
+}
