@@ -1,0 +1,19 @@
+{
+  "author": "Tomi S. Melka and Robert M. Schoch",
+  "reference": "Melka, T. S. and Schoch, R. M. (2021). The Quest for Information Retrieval: An Inscribed Relic from Ancient Rapa Nui (Easter Island) – Part I. Asian and African Studies 30(1): 137–172; figures pp. 249–253. https://www.sav.sk/journals/uploads/0528092807_Melka_FINAL.pdf",
+  "language": "en",
+  "notes": {
+    "language": "en-GB",
+    "text": "Retained for the Australian Museum rei miro identification evidence on pp. 159–160, rather than for the privately held fragment that is the article’s principal subject. Page 160 quotes Fischer’s provisional inventory entry RR a, naming Australian Museum 18853, dimensions 32 × 9 cm and approximately 17 glyphs; footnotes 104–107 identify earlier drawings and descriptions. These are nested attributed accounts, not an independently inspected museum catalogue record. The Arte table identifies only a rei miro at the Australian Museum, with no number or dimensions. Shared institution and type do not establish that the numbered piece is MoSA object rei-miro-australian-museum. No object link or claims are therefore assigned, and no potentially duplicate object is created. The original PDF is retained unchanged under the publisher’s journal-wide CC BY 4.0 policy (https://orient.sav.sk/asian-and-african-studies/; https://creativecommons.org/licenses/by/4.0/), with its author and image credits intact. Image plates concern the article’s main object, not a verified Australian Museum object, so no collection images are imported."
+  },
+  "claims": [],
+  "images": [],
+  "captures": [
+    {
+      "file": "original.pdf",
+      "originalUrl": "https://www.sav.sk/journals/uploads/0528092807_Melka_FINAL.pdf",
+      "capturedAt": "2026-09-30T14:21:32Z",
+      "method": "download"
+    }
+  ]
+}

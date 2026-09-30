@@ -93,9 +93,59 @@ Reviewed on 30 September 2026:
 | --- | --- |
 | [Overview](../../collection/sources/australian-museum-rapa-nui-collections.json) and its three highlights | Read all four articles, expanded transcripts and image alternative text. Captured all four locally; sharing limits below prevent registering them in Git. The overview also describes sensory models; their holding location and item boundaries remain uncertain. |
 | [Collections](https://australian.museum/learn/collections/), [Pasifika](https://australian.museum/learn/cultures/pasifika-collections/) and [archaeology](https://australian.museum/learn/collections/natural-science/australian-archaeology/) routes | Found explanatory pages, not a public accession-level cultural catalogue or export. The collections page describes registration-linked database records and ongoing digitisation. The archaeology route concerns Aboriginal archaeology in Australia. This does not establish that no other catalogue access exists. |
-| [Museum website search](https://australian.museum/ami/) | First result page only for `Rapa Nui`, `Rapanui`, `Easter Island`, `mata‘a`, `mataa`, `toki`, `adze` and `fish hook`. This is a website keyword/AI index, not the museum database. Remaining result pages were not reviewed. No catalogue-completeness claim follows. |
+| [Museum website search](https://australian.museum/ami/) | Keyword results reviewed separately from generated answers; exact bounds below. Known highlight pages recur, without a new object candidate. Changing result totals and stale page states prevent a complete-index claim. |
 | [Annual report 2024–25](../../collection/sources/australian-museum-annual-report-2024-25.json) | Inspected the original PDF and case study on printed pp. 72–73. It identifies six contemporary acquisitions: the three existing highlight works and three petroglyphs. The original is retained locally because redistribution rights for its cultural images are unresolved. |
-| [Fish-hook gallery](https://australian.museum/learn/cultures/pasifika-collections/fish-hooks/) | Examined the index's 15 nation links and example cards; none is labelled Rapa Nui. Did not individually enumerate the advertised 98 hooks: the zoomed display image was blank in the research viewer. Gallery-wide exclusion remains unproven. |
+| [Fish-hook gallery](https://australian.museum/learn/cultures/pasifika-collections/fish-hooks/) | Reviewed the individual gallery captions on all 15 linked nation pages: 99 caption instances cover 94 distinct display numbers, all attributed to other places. Numbers 48, 58, 67 and 97 are absent from the captions; repeated numbers explain the difference between caption instances and distinct hooks. The advertised 98-hook display is therefore not fully accounted for, even though the captioned 94 are outside this pass. |
+
+The keyword-index bounds below record observed pages, not object counts. The
+counts changed during navigation; an attempted click with stale content is not a
+reviewed page. Do not repeat the entire index pass to repair a single gap.
+
+| Term | Reviewed pages | Unresolved boundary |
+| --- | --- | --- |
+| `Rapa Nui` | 1, 2, 3, 5 (41 results / 5 pages observed) | Page 4 not reliably verified |
+| `Rapanui` | 1–5 (45 / 5 observed) | No further visible page at that observation |
+| `Easter Island` | 1 and 4 | Counts shifted from 37 to 44 and 4 to 5 pages; pages 2, 3 and 5 not verified |
+| `mata‘a` | 1–4 | Counts shifted between 32 / 4 and 48 / 5; page 5 not verified |
+| `mataa` | 1–3 (29 / 3 observed) | No further visible page at that observation |
+| `toki` | 1–5 | Counts shifted between 40 / 4 and 52 / 6; page 6 not verified |
+| `adze` | 1–5 | Counts shifted between 37 / 4 and 51 / 6; page 6 not verified |
+| `fish hook` | 1 | Remaining keyword pages unreviewed; separate gallery coverage above |
+
+An additional `Isla de Pascua` first-page check returned unrelated results; its
+remaining pages were not reviewed. Material-term results were predominantly
+unrelated publications, species and visitor pages. These exclusions apply to
+the inspected results, not to the museum's underlying holdings.
+
+The [archives guide](https://australian.museum/learn/collections/museum-archives-library/museum-archives/)
+identifies accession schedules (1879–1956), purchase schedules (1883–1924) and
+exchange records (c. 1874–1926), but exposes no searchable inventory there. The
+linked [research library catalogue](https://library.australian.museum/) loads and
+searches publications; it is not an object catalogue. The collections page's ALA
+link concerns natural-science specimens. The [Wansolmoana digitisation case study](https://australian.museum/learn/cultures/cultural-collection-enhancement-project/wansolmoana-digitisation/)
+locates its collection interactive on a gallery touchscreen; no remote object
+export was exposed by that page or the collection-enhancement overview. These
+are concrete access routes to pursue, not proof that every public catalogue
+route has been exhausted.
+
+Historical discovery covered relevant AM journal, magazine and annual-report
+results and the Geiseler/Weißer rei miro bibliography. Etheridge's paper, the
+1927 Robins notice and the relevant Melka–Schoch passage were read in their
+original PDFs. The museum's 2014 wooden-head caption was inspected in its HTML.
+The full text of Torrence, Kononenko and White's *Revisiting Rapa Nui Matā*
+(Rapa Nui Journal 31(1–2), 2018, pp. 1–20) was not obtained: its [Project MUSE page](https://muse.jhu.edu/article/716984)
+stops at a human-verification challenge in the browser; the web reader also
+failed. Focused repository searches found no accessible authorised copy. No
+challenge was solved or institution contacted. The journal issue notice supplies
+the twelve-object sample lead, not individual specimen evidence. Thomsett's
+[1993 history of the Pacific collections](https://www.jstor.org/stable/23409019)
+is a further bibliographic lead; its full text was not reviewed.
+
+The museum's [July 2026 return announcement](https://australian.museum/about/organisation/media-centre/australian-museum-returns-ancestors-to-rapa-nui/)
+reports the return of 17 ancestors and a hair sample. These are outside this
+cultural-object publication batch. There is no evidence that the overview's
+approximate hundred-object count includes them; do not subtract them from that
+count or treat historical holdings as current custody.
 
 Web-index reconnaissance combined the museum domain with Rapa Nui/Easter Island,
 `Catalogue Number`, `mataa`, `fish hook`, `adze` and `toki`, plus Pasifika
@@ -104,7 +154,7 @@ above, not a complete institutional inventory.
 
 ## Candidate outcomes
 
-Comparison against all collection JSON found one existing Australian Museum
+The pre-pilot comparison against all collection JSON found one Australian Museum
 entry, [rei-miro-australian-museum](../../collection/objects/rei-miro-australian-museum.json),
 from the Arte table. The following contemporary works do not match it or the
 existing historical moai and tablet records.
@@ -115,16 +165,19 @@ existing historical moai and tablet records.
 | Kōhau Roŋoroŋo replica | New [object](../../collection/objects/kohau-rongorongo-replica-australian-museum.json), not a historical original | [Article](../../collection/sources/australian-museum-kohau-rongorongo-replica.json) and overview inspected and captured locally; object-specific claims extracted; image reuse unresolved. |
 | Nua María Aŋata bust | New [object](../../collection/objects/bust-nua-maria-angata-australian-museum.json), distinct from its sitter | [Article](../../collection/sources/australian-museum-nua-maria-angata-bust.json) and overview inspected and captured locally; object-specific claims extracted; image reuse unresolved. The lantern slide is a different work. |
 | Three contemporary petroglyphs depicting Tahia Makemake, Manu Tara and Tangata Manu | New [Tahia Makemake](../../collection/objects/petroglyph-tahia-makemake-australian-museum.json), [Manu Tara](../../collection/objects/petroglyph-manu-tara-australian-museum.json) and [Tangata Manu](../../collection/objects/petroglyph-tangata-manu-australian-museum.json) records | The [annual report](../../collection/sources/australian-museum-annual-report-2024-25.json) differentiates three works by their depicted figures. Claims preserve its collective wording; individual materials, makers and accessions are not supplied. These are contemporary commissions, not the original Oroŋo carvings. No cleared individual images found. |
-| Vaitiare Pakarati's Tahai sensory representation and accompanying island platform | Unresolved: one work or multiple components, and location outside Rapa Nui not established | Described in the overview's expanded transcript. Use its local capture to investigate public exhibition/acquisition documentation before creating records. |
-| Rei miro | Existing object; no new match established | This pass found no accession-level record that establishes whether the Arte entry is among current holdings. Continue with institutional inventory evidence. |
-| Fish-hook index examples | Excluded from this pass: cards attribute examples to other nations | The full display remains unreviewed; no claim that all 98 hooks are outside scope. |
+| Vaitiare Pakarati's Tahai sensory representation and accompanying island platform | Unresolved: one work or multiple components, and location outside Rapa Nui not established | Described in the overview's expanded transcript. The annual report, Wansolmoana exhibition and digitisation descriptions did not establish a museum-held physical work or its component boundaries. Obtain an acquisition record or object-specific exhibition label before creating records. |
+| Rei miro, Australian Museum 18853 in Fischer’s inventory quotation | Unresolved match to the existing [Arte object](../../collection/objects/rei-miro-australian-museum.json); no duplicate created | [Melka and Schoch 2021](../../collection/sources/melka-schoch-2021-quest-part-i.json), p. 160, preserves an identifier, dimensions and references to earlier illustrations. The original PDF is registered under the publisher’s CC BY 4.0 policy. The Arte row has only type and holder; an accession crosswalk or distinctive illustrated match is still needed before assigning claims. |
+| Fish-hook display | 94 caption-identified entries excluded; four display numbers unresolved | All 15 nation galleries reviewed. Missing caption numbers 48, 58, 67 and 97 require display-label evidence; no claim that all 98 advertised hooks are outside scope. |
+| Wooden figure described in 1908 | New [historical object](../../collection/objects/wooden-figure-etheridge-1908-australian-museum.json) | [Etheridge 1908](../../collection/sources/etheridge-1908-yodda-valley.json), p. 25, singles out a figure with a distinctive base. One contextual claim preserves the historical account. The public-domain original PDF is registered; its plates depict New Guinea objects, not this figure. Present whereabouts and accession remain unknown. |
+| [Wooden figure head photographed in 2014](https://australian.museum/blog-archive/science/our-global-neighbours-polynesian-brothers-and-sisters/) | Unresolved possible match to the 1908 figure; no additional object | Stan Florek’s article, dated 4 September 2014, captions a wooden figure head as Easter Island–Rapanui, twentieth century. No accession or matching base is supplied. The local HTML preserves the caption; image reuse is not cleared. Obtain the image’s object identifier before linking or separating it. |
+| Twelve matā studied by Torrence, Kononenko and White | Unresolved individual identities; not twelve invented records | [Publisher’s issue notice](https://uhpress.hawaii.edu/rapa-nui-journal-volume-31-2018/) explicitly places the study sample at the Australian Museum. The full 2018 paper and any specimen table are needed to identify the objects; abstract-level evidence cannot establish their accessions or overlap with other lots. |
+| Robins Collection Easter Island material | Unresolved group; no individual objects created | The [Australian Museum Magazine III(2), April–June 1927](https://museum-publications.australian.museum/media/dd/Uploads/Documents/28589/AMS368_V3-2_lowres.bb47806.pdf), printed p. 40, names obsidian weapons and carved figures acquired through Sir Alfred Meeks, without counts or identifiers. Original PDF inspected and retained locally. The acquisition schedule is the next useful evidence; this notice cannot establish whether the twelve studied matā belong to that lot. |
 | [“Lost and found” stone-tool article](https://australian.museum/learn/news/blog/lost-and-found-a-rapa-nui-stone-tool-finds-its-real-home/) | Excluded from this institution pass: concerns a Bishop Museum specimen reassigned to New Britain | It is not evidence of an Australian Museum object. |
 
-The expanded contemporary batch adds three petroglyph records and seven claims
-across all six acquisitions, bringing the institution campaign to seven represented
-objects including the historical rei miro. The annual-report original remains in
-ignored `research-local/australian-museum/modern/`; source notes explain its
-preservation and identity limits. Historical and inventory routes remain in progress.
+The annual-report original remains in ignored
+`research-local/australian-museum/modern/`; source notes explain its preservation
+and identity limits. The two shareable scholarly originals are registered in
+their sources; no second evidence inventory is maintained.
 
 The initial claim pass covers the works' identification, makers, materials and
 stated educational/partnership context. Wider interpretations in oral accounts
@@ -149,7 +202,30 @@ sensory-model transcript. Reuse it locally instead of recapturing.
 
 ## Next action
 
-Execute the expanded plan: complete public website coverage, investigate the
-sensory models and fish-hook display, and search museum/publication inventory
-routes in parallel. Integrate supported discoveries and replace this next action
-with the precise remaining gap once those routes have outcomes.
+This expanded pass added four objects, three sources and eight claims, with two
+original PDFs preserved in Git LFS. It established eight Australian Museum
+campaign records in total, including a historical figure whose present custody
+is unknown. It did not enumerate the approximate hundred holdings. The campaign
+remains open, with useful evidence gaps rather than an artificial completion count.
+
+1. **Obtain the twelve-matā paper.** A human with legitimate access can download
+   the original PDF and put it in ignored `research-local/australian-museum/`.
+   Read its specimen identifiers and reconcile against the whole collection,
+   then integrate supported objects, claims and permissible captures/images.
+   A supplied file does not imply permission to redistribute it.
+2. **Obtain the museum's Rapa Nui inventory/export or relevant register pages.**
+   The useful fields are registration number, object description, lot/component
+   relationship, collection attribution, acquisition/provenance and current
+   status. Prioritise the Robins acquisition and the rei miro reference 18853;
+   include the historical wooden figure and 2014 photograph identifier in the
+   crosswalk. A human-saved HTML or PDF can use the same local staging path.
+   Institution contact requires a separate request.
+3. **Resolve bounded remaining routes.** Repair the specific keyword-pagination
+   gaps above if stable results become available; obtain labels for fish-hook
+   display numbers 48, 58, 67 and 97 and acquisition evidence for the sensory
+   models. Read Thomsett's history if accessible. Do not restart reviewed routes
+   without new evidence.
+4. **Complete the restricted preservation/image stages when clearance exists.**
+   Reuse the inspected local originals; source notes own their particular limits.
+   The annual report and contemporary HTML captures remain private, and no
+   publishable object photographs have been added.
