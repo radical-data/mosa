@@ -1,0 +1,83 @@
+{
+  "author": "Etnografiska museet",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1307892",
+  "language": "sv",
+  "images": [
+    {
+      "objectId": "ika-stockholm-1885-05-0003",
+      "file": "ika-stockholm-1885-05-0003/carlotta.jpg",
+      "alt": "Mörk träfetisch i form av en kort, hoptryckt fisk med runda ögon.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1307892"
+    }
+  ],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "catalogue_number",
+      "value": "1885.05.0003"
+    },
+    {
+      "id": "former-number",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Tidigare identitet: RM.2270"
+    },
+    {
+      "id": "classification",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "classified_as",
+      "value": "fetisch; figur; skulptur"
+    },
+    {
+      "id": "description",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Fetisch av mörkt trä i form av en kort, hoptryckt fisk. Ögonen av runda obsidianplattor omgivna av benringar."
+    },
+    {
+      "id": "origin",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "materials",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "made_of",
+      "value": "obsidian; trä; ben"
+    },
+    {
+      "id": "height",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Höjd: 13 cm"
+    },
+    {
+      "id": "diameter",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Diameter: 7,5 cm"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "ika-stockholm-1885-05-0003",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1885"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the detail record: Inventarienummer, Tidigare identitet, Sakord, Beskrivning, Land - ursprung, Material - tillverkning, Höjd, Diameter and Tidpunkt - förvärv till museet. Catalogue description identifies the form as a fetish and compares it to a compressed fish; this is retained as the museum's wording. The selected photo showed an image-bound CC BY 4.0 badge; its unchanged viewer JPEG was visually reviewed at 444 × 600 px.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-54-15-150z.html",
+      "capturedAt": "2026-09-30T00:54:15.150Z",
+      "method": "singlefile",
+      "note": "Capture checked for displayed accession 1885.05.0003 and catalogue description."
+    }
+  ]
+}

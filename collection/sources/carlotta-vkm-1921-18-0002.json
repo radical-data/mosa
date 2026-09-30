@@ -1,0 +1,71 @@
+{
+  "author": "Världskulturmuseet",
+  "reference": "https://collections.smvk.se/carlotta-vkm/web/object/63751",
+  "language": "sv",
+  "images": [
+    {
+      "objectId": "ua-goteborg-1921-18-0002",
+      "file": "ua-goteborg-1921-18-0002/carlotta.jpg",
+      "alt": "Lång träklubba med snidat huvud, fotograferad liggande.",
+      "credit": "Världskulturmuseet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-vkm/web/object/63751"
+    }
+  ],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "catalogue_number",
+      "value": "1921.18.0002"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "classified_as",
+      "value": "klubba (vapen)"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "described_as",
+      "value": "Klubba. Inköpt från en gammal samling i Wien. (katalogkort/originalbeskrivning)"
+    },
+    {
+      "id": "length",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "described_as",
+      "value": "Längd: 103 cm"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1921"
+    },
+    {
+      "id": "origin",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "category",
+      "objectId": "ua-goteborg-1921-18-0002",
+      "predicate": "described_as",
+      "value": "kategori: redskap"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the object detail record: Inventarienummer, Sakord, Beskrivning, Längd, Tidpunkt - förvärv till museet, Land - ursprung and kategori. The historical note reports purchase from an old collection in Vienna; it does not name the seller or establish earlier ownership. The selected photograph's viewer displayed an image-bound CC BY 4.0 badge. The image is the unchanged JPEG embedded by the catalogue viewer; its rendered dimensions are 800 × 164 px.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-46-30-073z.html",
+      "capturedAt": "2026-09-30T00:46:30.073Z",
+      "method": "singlefile",
+      "note": "Displayed accession 1921.18.0002 and catalogue description reviewed."
+    }
+  ]
+}

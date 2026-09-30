@@ -1,0 +1,89 @@
+{
+  "author": "Världskulturmuseet",
+  "reference": "https://collections.smvk.se/carlotta-vkm/web/object/63768",
+  "language": "sv",
+  "images": [
+    {
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "file": "moai-kavakava-goteborg-1947-10-0001/carlotta.jpg",
+      "alt": "Stående moai kavakava av trä mot en ljus bakgrund.",
+      "credit": "Världskulturmuseet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-vkm/web/object/63768"
+    }
+  ],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "catalogue_number",
+      "value": "1947.10.0001"
+    },
+    {
+      "id": "classification",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "classified_as",
+      "value": "figur; skulptur; träfigur"
+    },
+    {
+      "id": "local-name",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "classified_as",
+      "value": "moai kavakava"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "described_as",
+      "value": "Liten träfigur. (katalogkort/originalbeskrivning)"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "made_of",
+      "value": "trä"
+    },
+    {
+      "id": "height",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "described_as",
+      "value": "Höjd: 18 cm"
+    },
+    {
+      "id": "collector",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "described_as",
+      "value": "Namn - insamlare: Andersson-Igglund, Ivar (1894-03-03 - 1968-07-20 [?]), präst"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1947"
+    },
+    {
+      "id": "origin",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "original-collector",
+      "objectId": "moai-kavakava-goteborg-1947-10-0001",
+      "predicate": "described_as",
+      "value": "Original: insamlat av: Ivar A:son Igglund, Valparaiso"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the object detail record: Inventarienummer, Sakord, Lokalt namn, Beskrivning, Materialkategori, Höjd, Namn - insamlare, Tidpunkt - förvärv till museet, Land - ursprung and Original: insamlat av. The selected photograph's viewer displayed an image-bound CC BY 4.0 badge. The image is the unchanged JPEG embedded by the catalogue viewer; its rendered dimensions are 194 × 600 px.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-46-26-630z.html",
+      "capturedAt": "2026-09-30T00:46:26.630Z",
+      "method": "singlefile",
+      "note": "Displayed accession 1947.10.0001 and catalogue description reviewed."
+    }
+  ]
+}

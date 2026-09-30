@@ -1,0 +1,89 @@
+{
+  "author": "Världskulturmuseet",
+  "reference": "https://collections.smvk.se/carlotta-vkm/web/object/63754",
+  "language": "sv",
+  "images": [
+    {
+      "objectId": "ua-goteborg-1927-13-0001",
+      "file": "ua-goteborg-1927-13-0001/carlotta.jpg",
+      "alt": "Långt träföremål med snidat huvud, fotograferat liggande.",
+      "credit": "Världskulturmuseet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-vkm/web/object/63754"
+    }
+  ],
+  "claims": [
+    {
+      "id": "number",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "catalogue_number",
+      "value": "1927.13.0001"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "classified_as",
+      "value": "svärd"
+    },
+    {
+      "id": "description",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "Svärd av trä med skulpterat handtag. (Gåva av fru Olga Karström, Valparaiso. Förem. hemfört fr. Påskön av hennes make sjökapten G. Karström). (katalogkort/originalbeskrivning)"
+    },
+    {
+      "id": "category",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "kategori: vapen"
+    },
+    {
+      "id": "material",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "made_of",
+      "value": "trä"
+    },
+    {
+      "id": "donor",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "insamlare/donator/säljare: fru Olga Karström, Valparaiso."
+    },
+    {
+      "id": "acquisition",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "Tidpunkt - förvärv till museet: 1927"
+    },
+    {
+      "id": "origin",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "Land - ursprung: Påskön (Chile)"
+    },
+    {
+      "id": "original-gift",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "Original: insamlat av: Gåva av fru Olga Karström, Valparaiso."
+    },
+    {
+      "id": "exhibition-reference",
+      "objectId": "ua-goteborg-1927-13-0001",
+      "predicate": "described_as",
+      "value": "Original: utställt: Söderh. II 33"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription from the object detail record: Inventarienummer, Sakord, Beskrivning, kategori, Materialkategori, insamlare/donator/säljare, Tidpunkt - förvärv till museet, Land - ursprung, Original: insamlat av and Original: utställt. The parenthetical historical account is attributed to the catalogue's original record and is not independently verified provenance. The selected photograph's viewer displayed an image-bound CC BY 4.0 badge. The image is the unchanged JPEG embedded by the catalogue viewer; its rendered dimensions are 1200 × 179 px.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t00-45-10-294z.html",
+      "capturedAt": "2026-09-30T00:45:10.294Z",
+      "method": "singlefile",
+      "note": "Capture inspected against displayed accession 1927.13.0001 and catalogue description."
+    }
+  ]
+}
