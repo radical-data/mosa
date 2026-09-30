@@ -260,8 +260,11 @@ Do not substitute accession numbers into these object-ID paths.
 
 ## Chilean capture and publication fallbacks
 
-- Expand `Ver más` before capturing a Chile Patrimonios description. After
-  bounded ordinary and adjusted capture attempts, the fiche's observed
+- Expand `Ver más` before capturing a Chile Patrimonios description. Inspect
+  the saved description element itself: a `Ver menos` control does not prove
+  that the paragraph is complete. Exclude both controls from extracted claims
+  and reject a visibly truncated paragraph. After bounded ordinary and adjusted
+  capture attempts, the fiche's observed
   `ficha/Pdf?doi={exact-observed-doi}` link can supply an official PDF export.
   Inspect every page, including the description, dimensions and photograph;
   note missing logos or images. Retain the linked SURDOC accession separately.
