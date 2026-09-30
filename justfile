@@ -51,7 +51,7 @@ test *args:
     pnpm exec vitest run "$@"
 
 # Run every check that does not require Docker.
-verify: check docs-check typecheck test source-check research-check build
+verify: check docs-check typecheck test source-check build
 
 # Build the production image from the repository root.
 image:

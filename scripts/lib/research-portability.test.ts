@@ -37,8 +37,8 @@ async function fixture() {
     name: "Item A",
     foregroundedClaims: [],
   });
-  await mkdir(path.join(root, "research/evidence"), { recursive: true });
-  await writeFile(path.join(root, "research/evidence/review.md"), "Reviewed evidence.\n");
+  await mkdir(path.join(root, "research/campaigns"), { recursive: true });
+  await writeFile(path.join(root, "research/campaigns/test.md"), "Reviewed evidence.\n");
   return root;
 }
 
@@ -52,7 +52,7 @@ function batch(id: string, extra: Record<string, unknown> = {}) {
     checkedAt: "2026-09-30",
     scope: "Example Museum catalogue search",
     searches: [],
-    evidence: ["research/evidence/review.md"],
+    evidence: ["research/campaigns/test.md"],
     checks: [],
     commits: [],
     updates: [
@@ -139,6 +139,22 @@ describe("portable research registers", () => {
     }
   });
 
+  it("allows future batches to omit optional checks and commits and reads legacy commit references without Git history", async () => {
+    const root = await fixture();
+    await initialiseRegister(root, "seed-source", false, deps);
+    const input = batch("lightweight-review");
+    delete (input as { checks?: unknown }).checks;
+    delete (input as { commits?: unknown }).commits;
+    const withLegacyCommit = { ...batch("legacy-commit"), commits: ["0123456789ab"] };
+
+    await recordBatch(root, "seed-source", input, 1, deps);
+    const result = await recordBatch(root, "seed-source", withLegacyCommit, 2, deps);
+    expect(result.batches[0].checks).toBeUndefined();
+    expect(result.batches[0].commits).toBeUndefined();
+    expect(result.batches[1].commits).toEqual(["0123456789ab"]);
+    expect((await inspectRegister(root, "seed-source")).ok).toBe(true);
+  });
+
   it("still requires real shared evidence and bars private evidence paths from shared batches", async () => {
     const root = await fixture();
     await initialiseRegister(root, "seed-source", false, deps);
@@ -146,7 +162,7 @@ describe("portable research registers", () => {
       recordBatch(
         root,
         "seed-source",
-        batch("missing-evidence", { evidence: ["research/missing.md"] }),
+        batch("missing-evidence", { evidence: ["research/campaigns/missing.md"] }),
         1,
         deps,
       ),

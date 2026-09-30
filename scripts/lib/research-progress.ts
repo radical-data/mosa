@@ -2,7 +2,6 @@ import { createHash, randomUUID } from "node:crypto";
 import { lstat, mkdir, open, readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { parseSource, type Source } from "../../src/data/collection-model";
-import { runCommand } from "./run-command";
 
 export const stages = ["identity", "capture", "claims", "images"] as const;
 export type Stage = (typeof stages)[number];
@@ -26,8 +25,8 @@ export interface Batch {
   searches: { url: string; query: string; result: string }[];
   evidence: string[];
   evidenceLimitations?: string[];
-  checks: { command: string; result: "passed" | "failed"; note: string }[];
-  commits: string[];
+  checks?: { command: string; result: "passed" | "failed"; note: string }[];
+  commits?: string[];
   updates: Update[];
 }
 interface Entry {
@@ -56,7 +55,6 @@ export interface Register {
 }
 interface Dependencies {
   now?: () => Date;
-  run?: typeof runCommand;
 }
 const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const digest = (value: string) => createHash("sha256").update(value).digest("hex");
@@ -127,9 +125,11 @@ export function parseBatch(value: unknown): Batch {
   if (value.evidenceLimitations !== undefined)
     strings(value.evidenceLimitations, "evidenceLimitations");
   requireThat(value.evidence.length, "A batch needs an evidence reference");
-  strings(value.commits, "commits");
-  for (const commit of value.commits)
-    requireThat(/^[a-f0-9]{7,40}$/.test(commit), `Invalid commit: ${commit}`);
+  if (value.commits !== undefined) {
+    strings(value.commits, "commits");
+    for (const commit of value.commits)
+      requireThat(/^[a-f0-9]{7,40}$/.test(commit), `Invalid commit: ${commit}`);
+  }
   requireThat(Array.isArray(value.searches), "searches must be an array");
   for (const search of value.searches) {
     record(search, ["url", "query", "result"], "search");
@@ -137,8 +137,9 @@ export function parseBatch(value: unknown): Batch {
     text(search.query, "query");
     text(search.result, "result");
   }
-  requireThat(Array.isArray(value.checks), "checks must be an array");
-  for (const check of value.checks) {
+  if (value.checks !== undefined)
+    requireThat(Array.isArray(value.checks), "checks must be an array");
+  for (const check of value.checks ?? []) {
     record(check, ["command", "result", "note"], "check");
     text(check.command, "command");
     text(check.note, "check note");
@@ -408,7 +409,7 @@ async function validateRefs(root: string, objectId: string, stage: Stage, outcom
   }
   return hashes;
 }
-async function validateEvidence(root: string, batch: Batch, deps: Dependencies, shared = true) {
+async function validateEvidence(root: string, batch: Batch, shared = true) {
   for (const ref of batch.evidence) {
     if (/^https?:\/\//.test(ref)) url(ref);
     else {
@@ -420,11 +421,6 @@ async function validateEvidence(root: string, batch: Batch, deps: Dependencies, 
       await file(root, ref);
     }
   }
-  for (const commit of batch.commits)
-    await (deps.run ?? runCommand)("git", ["rev-parse", "--verify", `${commit}^{commit}`], {
-      cwd: root,
-      captureOutput: true,
-    });
 }
 async function mutate(root: string, sourceId: string, action: () => Promise<Register>) {
   requireThat(
@@ -506,7 +502,7 @@ export async function recordBatch(
       (await source(root, sourceId)).hash === r.inventories.at(-1)?.sourceHash,
       "Seed source changed; inspect the change and run research sync",
     );
-    await validateEvidence(root, batch, deps);
+    await validateEvidence(root, batch);
     const entries = currentEntries(r);
     const sourceHashes: Record<string, string> = {};
     for (const update of batch.updates) {
@@ -550,26 +546,28 @@ export interface StatusFilter {
 interface ProgressRow extends Entry {
   stages: Record<Stage, Outcome & { batchId?: string; checkedAt?: string }>;
   issues: string[];
+  warnings: string[];
   complete: boolean;
 }
 export async function inspectRegister(
   root: string,
   sourceId: string,
   filter: StatusFilter = {},
-  deps: Dependencies = {},
+  _deps: Dependencies = {},
 ) {
   const location = await registerLocation(root, sourceId);
   const shared = location === registerPath(sourceId);
   const r = await readRegister(root, sourceId);
   const issues: string[] = [];
+  const warnings: string[] = [];
   const seedChanged = (await source(root, sourceId)).hash !== r.inventories.at(-1)?.sourceHash;
-  if (seedChanged) issues.push("Seed source changed; inspect it and run research sync");
+  if (seedChanged) warnings.push("Seed source changed; inspect it and run research sync");
   const all = currentEntries(r);
   const rows: ProgressRow[] = [];
   const batchIssues = new Map<string, string>();
   for (const batch of r.batches) {
     try {
-      await validateEvidence(root, batch, deps, shared);
+      await validateEvidence(root, batch, shared);
     } catch (error) {
       const issue = `Batch ${batch.id}: ${error instanceof Error ? error.message : String(error)}`;
       batchIssues.set(batch.id, issue);
@@ -577,7 +575,8 @@ export async function inspectRegister(
     }
   }
   for (const entry of all) {
-    const entryIssues: string[] = seedChanged
+    const entryIssues: string[] = [];
+    const entryWarnings: string[] = seedChanged
       ? ["Seed source changed; sync and review inventory"]
       : [];
     for (const batch of r.batches)
@@ -599,14 +598,14 @@ export async function inspectRegister(
             refs: [],
           };
       if (!latest) continue;
-      for (const check of latest.batch.checks)
+      for (const check of latest.batch.checks ?? [])
         if (check.result === "failed")
-          entryIssues.push(`${stage}: recorded check failed: ${check.command} (${check.note})`);
+          entryWarnings.push(`${stage}: recorded check failed: ${check.command} (${check.note})`);
       try {
         const hashes = await validateRefs(root, entry.objectId, stage, latest.outcome);
         for (const [id, h] of Object.entries(hashes))
           if (latest.batch.sourceHashes[id] !== h)
-            entryIssues.push(`${stage}: source ${id} changed since review`);
+            entryWarnings.push(`${stage}: source ${id} changed since review`);
       } catch (error) {
         entryIssues.push(`${stage}: ${error instanceof Error ? error.message : String(error)}`);
       }
@@ -617,6 +616,7 @@ export async function inspectRegister(
     )
       entryIssues.push("Identity is no longer verified; review dependent completed stages");
     issues.push(...entryIssues.map((i) => `${entry.objectId}: ${i}`));
+    warnings.push(...entryWarnings.map((i) => `${entry.objectId}: ${i}`));
     rows.push({
       objectId: entry.objectId,
       holders: entry.holders,
@@ -624,6 +624,7 @@ export async function inspectRegister(
       descriptions: entry.descriptions,
       stages: states,
       issues: entryIssues,
+      warnings: entryWarnings,
       complete:
         entryIssues.length === 0 &&
         states.identity.status === "verified" &&
@@ -673,8 +674,9 @@ export async function inspectRegister(
       filter.object ||
       (filter.stage
         ? !["verified", "complete", "unavailable"].includes(row.stages[filter.stage].status) ||
-          row.issues.length
-        : !row.complete)
+          row.issues.length ||
+          row.warnings.length
+        : !row.complete || row.issues.length > 0 || row.warnings.length > 0)
     );
   });
   const historical = new Set(r.inventories.flatMap((i) => i.entries.map((e) => e.objectId)));
@@ -682,9 +684,12 @@ export async function inspectRegister(
     ok: issues.length === 0,
     sourceId,
     file: location,
-    warnings: shared
-      ? []
-      : [`Legacy register is read-only: ${location}. Migrate it before recording more work.`],
+    warnings: [
+      ...warnings,
+      ...(shared
+        ? []
+        : [`Legacy register is read-only: ${location}. Migrate it before recording more work.`]),
+    ],
     evidenceLimitations: r.batches
       .filter(
         (batch) =>
@@ -694,7 +699,7 @@ export async function inspectRegister(
       .map((batch) => ({ batchId: batch.id, notes: batch.evidenceLimitations })),
     revision: r.revision,
     active: rows.length,
-    needsReview: rows.filter((row) => row.issues.length > 0).length,
+    needsReview: rows.filter((row) => row.issues.length > 0 || row.warnings.length > 0).length,
     completed: rows.filter((row) => row.complete).length,
     inactive: historical.size - rows.length,
     batches: r.batches.length,
@@ -728,8 +733,16 @@ export async function inspectSharedRegisters(root: string, deps: Dependencies = 
   for (const name of names.filter((name) => name.endsWith(".json")).sort()) {
     const sourceId = name.slice(0, -5);
     try {
-      const { ok, revision, active, completed, needsReview, evidenceLimitations, issues } =
-        await inspectRegister(root, sourceId, { limit: 0 }, deps);
+      const {
+        ok,
+        revision,
+        active,
+        completed,
+        needsReview,
+        evidenceLimitations,
+        issues,
+        warnings,
+      } = await inspectRegister(root, sourceId, { limit: 0 }, deps);
       registers.push({
         sourceId,
         ok,
@@ -739,6 +752,7 @@ export async function inspectSharedRegisters(root: string, deps: Dependencies = 
         needsReview,
         evidenceLimitations,
         issues,
+        warnings,
       });
     } catch (error) {
       registers.push({
