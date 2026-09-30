@@ -1,0 +1,68 @@
+{
+  "author": "Postcolonial Provenance Research in Lower Saxony (PAESE)",
+  "reference": "https://www.postcolonial-provenance-research.com/en/database/exposition/rpm_v-64/",
+  "language": "mul",
+  "claims": [
+    {
+      "id": "inventory-number",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "catalogue_number",
+      "value": "RPM_V 64"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "held_by",
+      "value": "Roemer- und Pelizaeus-Museum Hildesheim"
+    },
+    {
+      "id": "object-name",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "classified_as",
+      "value": "Figürliche Darstellung (männlich)"
+    },
+    {
+      "id": "indigenous-name",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "classified_as",
+      "value": "moai tangata (?)"
+    },
+    {
+      "id": "place-where-collected",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "described_as",
+      "value": "Place where collected: Rapanui (Osterinsel)"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "described_as",
+      "value": "Dimensions: H: 57 cm, B: 13 cm, T: 7 cm"
+    },
+    {
+      "id": "year-of-manufacture",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "made_during",
+      "value": "vor 1879"
+    },
+    {
+      "id": "description",
+      "objectId": "moai-tangata-hildesheim-v-64",
+      "predicate": "described_as",
+      "value": "Vermutlich Figur eines männlichen Geistwesens \"moai tangata\", vgl. Thode-Arora 2001: 73."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Record in the PAESE joint database. It identifies the Roemer- und Pelizaeus-Museum Hildesheim as the location. The accession, Rapanui collection-place field, dimensions and description support the identity match. The indigenous-name field and the description retain the source's question mark and qualification. The page's English interface labels display German field values. Although the page displays object photographs, it states no image-reuse permission, so no image is included. The project notes that images may be withheld in other cases for ethical or legal reasons.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-09-30t02-10-48-150z.html",
+      "capturedAt": "2026-09-30T02:10:48.150Z",
+      "method": "singlefile",
+      "note": "Reviewed default Basic Information tab; Documentation tab was separately reviewed live but not included in this capture."
+    }
+  ]
+}
