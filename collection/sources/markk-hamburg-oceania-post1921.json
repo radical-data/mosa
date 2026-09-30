@@ -1,0 +1,116 @@
+{
+  "author": "Museum am Rothenbaum – Kulturen und Künste der Welt (MARKK)",
+  "reference": "https://markk-hamburg.de/files/media/2020/06/MARKK-OZ-ab-1921.pdf",
+  "language": "de",
+  "claims": [
+    {
+      "id": "inventory-number",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "catalogue_number",
+      "value": "22.42:258"
+    },
+    {
+      "id": "designation",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "described_as",
+      "value": "Holzfigur, Mann (Ca. 30 cm)"
+    },
+    {
+      "id": "origin",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "described_as",
+      "value": "Herkunft: Ozeanien/Polynesien/Chile"
+    },
+    {
+      "id": "entry-date",
+      "objectId": "moai-tangata-hamburg-22-42-258",
+      "predicate": "described_as",
+      "value": "Eingangsdatum: 21. August 1922"
+    },
+    {
+      "id": "inventory-number-259",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "catalogue_number",
+      "value": "22.42:259"
+    },
+    {
+      "id": "designation-259",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "classified_as",
+      "value": "Holzfigur, Mann"
+    },
+    {
+      "id": "origin-259",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "described_as",
+      "value": "Herkunft: Ozeanien/Polynesien/Chile"
+    },
+    {
+      "id": "entry-date-259",
+      "objectId": "moai-pa-apa-a-hamburg-22-42-259",
+      "predicate": "described_as",
+      "value": "Eingangsdatum: 21. August 1922"
+    },
+    {
+      "id": "inventory-number-260",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "catalogue_number",
+      "value": "22.42:260"
+    },
+    {
+      "id": "designation-260",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "described_as",
+      "value": "kleine Holzfigur, Frau - polierte Oberfläche - moai pa a pa a"
+    },
+    {
+      "id": "origin-260",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "described_as",
+      "value": "Herkunft: Ozeanien/Polynesien/Chile"
+    },
+    {
+      "id": "entry-date-260",
+      "objectId": "moai-tangata-hamburg-22-42-260",
+      "predicate": "described_as",
+      "value": "Eingangsdatum: 21. August 1922"
+    },
+    {
+      "id": "inventory-number-261",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "catalogue_number",
+      "value": "22.42:261"
+    },
+    {
+      "id": "designation-261",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "classified_as",
+      "value": "Vogelfigur aus Holz"
+    },
+    {
+      "id": "origin-261",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "described_as",
+      "value": "Herkunft: Ozeanien/Polynesien/Chile"
+    },
+    {
+      "id": "entry-date-261",
+      "objectId": "manu-hamburg-22-42-261",
+      "predicate": "described_as",
+      "value": "Eingangsdatum: 21. August 1922"
+    }
+  ],
+  "notes": {
+    "text": "MARKK historical Oceania collection-database extract for accessions from 1921 onwards. The table rows for 22.42:258–261 appear on PDF page 69. Inventory number, designation, origin field and entry date are recorded separately for each linked object. The printed notice says the designations may be outdated or racist; original wording is preserved as attributed historical text. The table's ‘Eingangsdatum’ is not treated as a manufacture date. Catalogue classifications are retained where they differ from IndiGen; established object handles are unchanged.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "captures": [
+    {
+      "file": "markk-oz-ab-1921.pdf",
+      "capturedAt": "2026-09-30T01:07:14.000Z",
+      "method": "download",
+      "note": "Original official database-extract PDF preserved unchanged. Relevant rows 22.42:258–261 on PDF page 69 visually inspected; title headings and historical-designations notice checked."
+    }
+  ]
+}
