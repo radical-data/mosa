@@ -104,8 +104,8 @@ async function fixture() {
   });
   await mkdir(path.join(root, "collection/images/item-a"), { recursive: true });
   await writeFile(path.join(root, "collection/images/item-a/front.jpg"), "image fixture");
-  await mkdir(path.join(root, "research-local"), { recursive: true });
-  await writeFile(path.join(root, "research-local/evidence.md"), "Reviewed source evidence.\n");
+  await mkdir(path.join(root, "research/evidence"), { recursive: true });
+  await writeFile(path.join(root, "research/evidence/test.md"), "Reviewed source evidence.\n");
   return root;
 }
 
@@ -137,7 +137,7 @@ function batch(
         result: "One catalogue record found.",
       },
     ],
-    evidence: ["research-local/evidence.md"],
+    evidence: ["research/evidence/test.md"],
     checks: [{ command: "just collection-check", result: "passed" as const, note: "Passed." }],
     commits: [],
     updates,
@@ -459,9 +459,9 @@ describe("museum research progress register", () => {
   it("rejects symlinked evidence paths and releases the writer lock after validation fails", async () => {
     const root = await fixture();
     await initialiseRegister(root, "seed-source", false, deps);
-    const linked = path.join(root, "research-local/evidence-link.md");
-    await symlink(path.join(root, "research-local/evidence.md"), linked);
-    const unsafe = { ...batch("unsafe-evidence"), evidence: ["research-local/evidence-link.md"] };
+    const linked = path.join(root, "research/evidence/link.md");
+    await symlink(path.join(root, "research/evidence/test.md"), linked);
+    const unsafe = { ...batch("unsafe-evidence"), evidence: ["research/evidence/link.md"] };
 
     await expect(recordBatch(root, "seed-source", unsafe, 1, deps)).rejects.toThrow(
       "Symlink paths are not allowed",
@@ -555,20 +555,20 @@ describe("museum research progress register", () => {
       },
     ];
     await recordBatch(root, "seed-source", batch("earlier-batch", updates), 1, deps);
-    await writeFile(path.join(root, "research-local/evidence-later.md"), "Later review.\n");
+    await writeFile(path.join(root, "research/evidence/later.md"), "Later review.\n");
     await recordBatch(
       root,
       "seed-source",
-      { ...batch("latest-batch", updates), evidence: ["research-local/evidence-later.md"] },
+      { ...batch("latest-batch", updates), evidence: ["research/evidence/later.md"] },
       2,
       deps,
     );
 
-    await rm(path.join(root, "research-local/evidence.md"));
+    await rm(path.join(root, "research/evidence/test.md"));
     let report = await inspectRegister(root, "seed-source");
     expect(report.ok).toBe(false);
     expect(report.issues.join(" ")).toContain("Batch earlier-batch");
-    await writeFile(path.join(root, "research-local/evidence.md"), "Restored evidence.\n");
+    await writeFile(path.join(root, "research/evidence/test.md"), "Restored evidence.\n");
     report = await inspectRegister(root, "seed-source", { object: "item-a" });
     expect(report.ok).toBe(true);
     expect(report.queue[0].complete).toBe(true);

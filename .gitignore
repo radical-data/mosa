@@ -8,3 +8,7 @@ dist/
 !.env.example
 repomix-output.xml
 research-local/
+
+# Research writers leave only completed JSON files in Git.
+research/progress/*.lock
+research/progress/*.tmp

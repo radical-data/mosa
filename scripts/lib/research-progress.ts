@@ -1,5 +1,5 @@
 import { createHash, randomUUID } from "node:crypto";
-import { lstat, mkdir, open, readFile, rename, rm, writeFile } from "node:fs/promises";
+import { lstat, mkdir, open, readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { parseSource, type Source } from "../../src/data/collection-model";
 import { runCommand } from "./run-command";
@@ -25,6 +25,7 @@ export interface Batch {
   scope: string;
   searches: { url: string; query: string; result: string }[];
   evidence: string[];
+  evidenceLimitations?: string[];
   checks: { command: string; result: "passed" | "failed"; note: string }[];
   commits: string[];
   updates: Update[];
@@ -112,6 +113,7 @@ const batchKeys = [
   "scope",
   "searches",
   "evidence",
+  "evidenceLimitations",
   "checks",
   "commits",
   "updates",
@@ -122,6 +124,8 @@ export function parseBatch(value: unknown): Batch {
   date(value.checkedAt);
   text(value.scope, "scope");
   strings(value.evidence, "evidence");
+  if (value.evidenceLimitations !== undefined)
+    strings(value.evidenceLimitations, "evidenceLimitations");
   requireThat(value.evidence.length, "A batch needs an evidence reference");
   strings(value.commits, "commits");
   for (const commit of value.commits)
@@ -209,7 +213,25 @@ async function file(root: string, relative: string) {
 }
 export function registerPath(sourceId: string) {
   id(sourceId);
+  return `research/progress/${sourceId}.json`;
+}
+function legacyRegisterPath(sourceId: string) {
+  id(sourceId);
   return `research-local/progress/${sourceId}.json`;
+}
+async function exists(root: string, relative: string) {
+  try {
+    await file(root, relative);
+    return true;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return false;
+    throw error;
+  }
+}
+async function registerLocation(root: string, sourceId: string) {
+  const shared = registerPath(sourceId);
+  if (await exists(root, shared)) return shared;
+  return legacyRegisterPath(sourceId);
 }
 async function source(root: string, sourceId: string) {
   id(sourceId);
@@ -313,7 +335,7 @@ export function parseRegister(value: unknown): Register {
 }
 export async function readRegister(root: string, sourceId: string) {
   const r = parseRegister(
-    JSON.parse(await readFile(await file(root, registerPath(sourceId)), "utf8")),
+    JSON.parse(await readFile(await file(root, await registerLocation(root, sourceId)), "utf8")),
   );
   requireThat(r.sourceId === sourceId, "Register source ID mismatch");
   return r;
@@ -386,10 +408,17 @@ async function validateRefs(root: string, objectId: string, stage: Stage, outcom
   }
   return hashes;
 }
-async function validateEvidence(root: string, batch: Batch, deps: Dependencies) {
+async function validateEvidence(root: string, batch: Batch, deps: Dependencies, shared = true) {
   for (const ref of batch.evidence) {
     if (/^https?:\/\//.test(ref)) url(ref);
-    else await file(root, ref);
+    else {
+      if (shared)
+        requireThat(
+          /^(collection|source-files|research)\//.test(ref),
+          `Shared evidence must use collection/, source-files/ or research/: ${ref}. Share reviewed evidence or describe its absence in evidenceLimitations.`,
+        );
+      await file(root, ref);
+    }
   }
   for (const commit of batch.commits)
     await (deps.run ?? runCommand)("git", ["rev-parse", "--verify", `${commit}^{commit}`], {
@@ -398,6 +427,11 @@ async function validateEvidence(root: string, batch: Batch, deps: Dependencies) 
     });
 }
 async function mutate(root: string, sourceId: string, action: () => Promise<Register>) {
+  requireThat(
+    (await exists(root, registerPath(sourceId))) ||
+      !(await exists(root, legacyRegisterPath(sourceId))),
+    `Legacy register is read-only: ${legacyRegisterPath(sourceId)}. Migrate reviewed evidence and the register to ${registerPath(sourceId)} before writing.`,
+  );
   const destination = await safePath(root, registerPath(sourceId), true);
   await mkdir(path.dirname(destination), { recursive: true });
   const lockPath = `${destination}.lock`;
@@ -524,6 +558,8 @@ export async function inspectRegister(
   filter: StatusFilter = {},
   deps: Dependencies = {},
 ) {
+  const location = await registerLocation(root, sourceId);
+  const shared = location === registerPath(sourceId);
   const r = await readRegister(root, sourceId);
   const issues: string[] = [];
   const seedChanged = (await source(root, sourceId)).hash !== r.inventories.at(-1)?.sourceHash;
@@ -533,7 +569,7 @@ export async function inspectRegister(
   const batchIssues = new Map<string, string>();
   for (const batch of r.batches) {
     try {
-      await validateEvidence(root, batch, deps);
+      await validateEvidence(root, batch, deps, shared);
     } catch (error) {
       const issue = `Batch ${batch.id}: ${error instanceof Error ? error.message : String(error)}`;
       batchIssues.set(batch.id, issue);
@@ -645,7 +681,17 @@ export async function inspectRegister(
   return {
     ok: issues.length === 0,
     sourceId,
-    file: registerPath(sourceId),
+    file: location,
+    warnings: shared
+      ? []
+      : [`Legacy register is read-only: ${location}. Migrate it before recording more work.`],
+    evidenceLimitations: r.batches
+      .filter(
+        (batch) =>
+          batch.evidenceLimitations?.length &&
+          (!filter.object || batch.updates.some((update) => update.objectId === filter.object)),
+      )
+      .map((batch) => ({ batchId: batch.id, notes: batch.evidenceLimitations })),
     revision: r.revision,
     active: rows.length,
     needsReview: rows.filter((row) => row.issues.length > 0).length,
@@ -668,4 +714,39 @@ export async function inspectRegister(
     matching: selected.length,
     queue: selected.slice(0, filter.limit ?? 30),
   };
+}
+
+export async function inspectSharedRegisters(root: string, deps: Dependencies = {}) {
+  let names: string[];
+  try {
+    names = await readdir(await safePath(root, "research/progress"));
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+    names = [];
+  }
+  const registers = [];
+  for (const name of names.filter((name) => name.endsWith(".json")).sort()) {
+    const sourceId = name.slice(0, -5);
+    try {
+      const { ok, revision, active, completed, needsReview, evidenceLimitations, issues } =
+        await inspectRegister(root, sourceId, { limit: 0 }, deps);
+      registers.push({
+        sourceId,
+        ok,
+        revision,
+        active,
+        completed,
+        needsReview,
+        evidenceLimitations,
+        issues,
+      });
+    } catch (error) {
+      registers.push({
+        sourceId,
+        ok: false,
+        issues: [error instanceof Error ? error.message : String(error)],
+      });
+    }
+  }
+  return { ok: registers.every((register) => register.ok), registers };
 }
