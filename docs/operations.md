@@ -17,7 +17,9 @@ before the Docker build because `.git` is not in the build context. Astro
 generates the whole site in the build stage; the runtime image serves the files
 with unprivileged Nginx on port 8080. CI runs the non-build repository checks
 first, then uses this production image as its single site build. It restores
-Astro's image transformation cache and Docker layers between workflow runs.
+Astro's image transformation cache between workflow runs. The workflow does not
+export a general Docker layer cache because transferring it takes longer than
+rebuilding the inexpensive layers.
 
 HTTPS terminates at the reverse proxy. Keep `absolute_redirect off` in
 `nginx.conf` so the root and trailing-slash redirects return relative locations
