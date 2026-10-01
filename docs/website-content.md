@@ -68,6 +68,9 @@ and derive image galleries from explicit `depicts` relationships. Article
 pages retain their declared prose language and can concern multiple objects and
 sources or have no record subjects. Methodological notes and preservation captures are excluded from public rendering and search.
 
+The object index offers grid and table views alongside text search. Preserve the
+selected view and query when switching languages.
+
 Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-the-git-collection.md).
 Keep all source accounts, qualifiers and optional locators visible. Holding and
 location labels describe source reports, which may be historical.
