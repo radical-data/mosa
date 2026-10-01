@@ -1,0 +1,31 @@
+{
+  "title": "Dibujo de Hoa Hakananaiʻa entre árboles, mostrado en Te Kuhane",
+  "kind": "artwork",
+  "author": null,
+  "reference": "Dibujo mostrado en Te Kuhane o Te Tupuna (2015), edición con subtítulos en inglés, 01:02:44; 00:24:55–00:24:58.",
+  "language": "es",
+  "topics": ["representations"],
+  "claims": [],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "te-kuhane/hoa-between-trees.jpg",
+      "alt": "Fotograma con una hoja sostenida en la sala de clases: un moái entre dos árboles y las palabras RAPA NUI.",
+      "caption": "Dibujo de Hoa Hakananaiʻa entre árboles, sostenido durante la actividad en la sala de clases. Fotograma de Te Kuhane o Te Tupuna (2015), 00:24:58.",
+      "credit": "Autoría del dibujo no identificada. Fotograma: Te Kuhane o Te Tupuna, Mahatua Producciones (2015).",
+      "rights": "Publicación en MoSA autorizada por la persona responsable del proyecto el 1 de octubre de 2026. No se declara una licencia para otros usos."
+    }
+  ],
+  "notes": {
+    "text": "An independently identifiable sheet held up during the classroom activity to draw and write to Hoa Hakananaiʻa. The frontal figure stands between two trees, with RAPA NUI written across the upper part. This composition distinguishes it from the other sheets in the following museum montage. The person holding the drawing is not assumed to be its maker; the visible writing does not establish a reliable author identification. The title is editorial. The representation is an unretouched film still at 00:24:58, retaining the original frame composition.",
+    "language": "en-GB"
+  }
+}

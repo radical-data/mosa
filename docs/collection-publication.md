@@ -171,6 +171,28 @@ Public source notes record concise methodological decisions; caveats needed to
 understand a claim belong in its value because notes are not rendered on the site.
 Validate each batch and review the affected object pages in both language routes.
 
+### Extract audiovisual claims
+
+Register a film once as an `audiovisual` source. Attribute selected accounts to
+the film using the existing claims and “Recorded in” presentation; its credits
+do not imply that the director speaks every passage or that each account is a
+collective position. Preserve qualifications and nested quotations. Include a
+speaker in the locator only when needed to understand the passage.
+
+Use timestamp ranges and identify the reviewed edition in the reference or
+notes. Use original-language transcripts for spoken claims, preserving wording
+and qualifications; translated subtitles must not replace the spoken account.
+Check the selected passages in context and record consequential transcription
+uncertainty in source notes. Set the source language to the extracted wording.
+Keep restricted films, transcripts and working frames in `research-local/`; a
+film source needs no public media file.
+
+Register independently identifiable drawings or publications shown in the film
+as sources and connect them with existing relationships. Image publication
+requires its own rights evidence. Keep the workflow proportionate: reuse
+existing fields and record consequential limitations once, without requiring
+speaker registries, passage records or duplicate reports.
+
 ### Extract a source table
 
 Choose and state the table scope; visually review the rows and layout before

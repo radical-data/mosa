@@ -1,0 +1,100 @@
+{
+  "title": "Te Kuhane o Te Tupuna / El espíritu de los ancestros",
+  "kind": "audiovisual",
+  "author": "Leonardo Pakarati (guion y dirección); Paula Rossetti (producción)",
+  "reference": "Te Kuhane o Te Tupuna (Mahatua Producciones, 2015), edición con subtítulos en inglés, 01:02:44. https://guidedoc.tv/documentary/the-spirit-of-the-ancestors-documentary-film/",
+  "language": "es",
+  "date": "2015",
+  "topics": ["displacement", "restitution", "representations"],
+  "claims": [
+    {
+      "id": "hoa-name",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "has_name",
+      "value": "Hoa Hakananai'a",
+      "locator": "00:23:55–00:23:57, presentación en la sala de clases, diálogo en español."
+    },
+    {
+      "id": "hoa-removal-topaze",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "En el año 1868, llegó a la isla un barco inglés que se llamaba Topaze. Y en ese barco se llevó al moái Hoa Hakananai'a. Tiempo después, el moái fue regalado a la reina de Inglaterra y hoy está en Londres y es visitado por miles de personas.",
+      "locator": "00:23:58–00:24:22, presentación en la sala de clases, diálogo en español."
+    },
+    {
+      "id": "hoa-sadness",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Yo creo que debe estar muy triste.",
+      "locator": "00:24:21–00:24:25, presentación en la sala de clases sobre Hoa Hakananaiʻa en Londres, diálogo en español."
+    },
+    {
+      "id": "hoa-ahu-awaiting-return",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "El moai fue hecho para estar en este lugar, no en otro. Ese ahu está ahí esperando que el moai vuelva.",
+      "locator": "00:29:04–00:29:12, visita a Orongo, diálogo en español."
+    },
+    {
+      "id": "hoa-mana-and-return",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Ese moai yo creo que hay que traer de vuelta. Por algo es único, porque no hay dos, no hay ni tres, es uno solo. Y yo creo que ahí está. Ahí está ese, eh, ahí está el mana de esta isla. Hay que traerlo de vuelta.",
+      "locator": "00:33:59–00:34:22, conversación sobre el retorno de Hoa Hakananaiʻa, diálogo en español."
+    },
+    {
+      "id": "hoa-cultural-significance",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Pero ahí uno se da cuenta que para ellos las cosas son un objeto, no alcanzan a darse cuenta que, que el moai es algo, no es solo un objeto. O sea, tiene que ver con la cultura, en este caso, rapanui, significa algo.",
+      "locator": "00:35:28–00:35:43, conversación sobre los acuerdos para filmar en el Museo Británico, diálogo en español."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      },
+      "locator": "00:55:10–00:55:18, visita a Hoa Hakananaiʻa en el Museo Británico."
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-kuhane-hoa-drawing-between-trees"
+      },
+      "locator": "00:24:55–00:24:58, dibujo sostenido en la sala de clases."
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-kuhane-hoa-drawing-shaded-figure"
+      },
+      "locator": "00:24:59–00:25:00, dibujo expuesto en el Museo Británico."
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-kuhane-hoa-drawing-front-and-back"
+      },
+      "locator": "00:25:01–00:25:03, dibujo expuesto en el Museo Británico."
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-kuhane-hoa-drawing-blue-yellow-band"
+      },
+      "locator": "00:25:04–00:25:05, dibujo y carta expuestos en el Museo Británico."
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Selective Hoa Hakananaiʻa extraction from the supplied 01:02:44 English-subtitled copy. Claims preserve the original spoken Spanish from the supplied Scribe v2 transcript, including repetitions and qualifications; the English subtitles were used to check the scene context, not as published wording. These excerpts have not had an independent audio transcription review. Punctuation marks excerpt boundaries. The ahu excerpt ends before a Rapa Nui term whose transcription is uncertain. The language tag describes the selected claims, not every language spoken in the film. Locators count from the beginning of this copy and may differ in other editions. Credits at 00:59:35–00:59:40 identify the writer/director and producer; the closing copyright credit identifies Mahatua Producciones and 2015. Attribution is to the film as a documentary source, not a claim that its director speaks every passage or that every participant represents a collective position. The named figure, Orongo discussion and British Museum visit establish the link to the existing Hoa Hakananaiʻa object. The full film and transcripts remain private research inputs. Four authorised film stills represent the independently identified artwork sources linked below. No book is independently identified in these selected passages.",
+    "language": "en-GB"
+  }
+}
