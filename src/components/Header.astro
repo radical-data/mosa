@@ -9,13 +9,18 @@ const t = messages(locale);
 ---
 <header class="site-header container">
   <PageLink class="brand" page="home" locale={locale} aria-label={`MoSA — ${t.home}`}><img src="/images/logo-dark.png" alt="Museum of Stolen Artefacts" lang="en" width="303" height="162" /></PageLink>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" hidden>{t.menu} <span aria-hidden="true">+</span></button>
-  <nav id="primary-navigation" aria-label={t.primaryNavigation}>
-    {pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)} aria-current={page === id ? "page" : undefined}>{t[id]}</a>)}
-  </nav>
-  {page && <nav class="language-switcher" aria-label={t.language}>
-    {localeIds.map((id) => <a href={languageLink(page, id, Astro.url)} lang={locales[id].language} hreflang={locales[id].hreflang} aria-current={locale === id ? "true" : undefined} data-language-link data-anchors={JSON.stringify(page ? anchors[page] : [])} data-page={page}>{locales[id].name}</a>)}
-  </nav>}
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-panel" aria-label={t.menu} data-open-label={t.menu} data-close-label={t.closeMenu} hidden>
+    <span class="menu-label">{t.menu}</span>
+    <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <div class="navigation-panel" id="navigation-panel">
+    <nav id="primary-navigation" aria-label={t.primaryNavigation}>
+      {pageIds.map((id) => <a class:list={{ "nav-home": id === "home" }} href={pagePath(id, locale)} aria-current={page === id ? "page" : undefined}>{t[id]}</a>)}
+    </nav>
+    {page && <nav class="language-switcher" aria-label={t.language}>
+      {localeIds.map((id) => <a href={languageLink(page, id, Astro.url)} lang={locales[id].language} hreflang={locales[id].hreflang} aria-current={locale === id ? "true" : undefined} data-language-link data-anchors={JSON.stringify(page ? anchors[page] : [])} data-page={page}>{locales[id].name}</a>)}
+    </nav>}
+  </div>
 </header>
 <script>
   import { updateLanguageLinks } from "../i18n/switcher";
@@ -24,14 +29,25 @@ const t = messages(locale);
   window.addEventListener("hashchange", updateLanguageLinks);
   window.addEventListener("popstate", updateLanguageLinks);
   const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
-  const nav = document.querySelector<HTMLElement>("#primary-navigation");
-  if (toggle && nav) {
+  const panel = document.querySelector<HTMLElement>("#navigation-panel");
+  if (toggle && panel) {
     toggle.hidden = false;
-    nav.classList.add("collapsible");
-    const close = () => { toggle.setAttribute("aria-expanded", "false"); nav.classList.remove("is-open"); };
+    panel.classList.add("collapsible");
+    const close = () => {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", toggle.dataset.openLabel ?? "");
+      panel.classList.remove("is-open");
+      document.documentElement.classList.remove("menu-open");
+    };
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") !== "true";
-      toggle.setAttribute("aria-expanded", String(open)); nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? toggle.dataset.closeLabel ?? "" : toggle.dataset.openLabel ?? "");
+      panel.classList.toggle("is-open", open);
+      document.documentElement.classList.toggle("menu-open", open);
+    });
+    panel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", close);
     });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") { close(); toggle.focus(); }

@@ -20,8 +20,16 @@ const t = messages(locale);
   <section class="container section collection-section" aria-label={t.collectionExplore} data-locale={locale}>
     <CollectionNav locale={locale} active="objects" />
     <div class="collection-controls" hidden>
-      <label for="collection-search">{t.collectionSearch}</label>
-      <input id="collection-search" type="search" placeholder={t.collectionSearch} />
+      <fieldset class="view-controls">
+        <legend class="sr-only">{t.collectionView}</legend>
+        <span aria-hidden="true">{t.viewAs}</span>
+        <button type="button" data-collection-view="grid" aria-pressed="true">{t.grid}</button>
+        <button type="button" data-collection-view="table" aria-pressed="false">{t.table}</button>
+      </fieldset>
+      <label class="collection-search" for="collection-search">
+        <span>{t.collectionSearch}</span>
+        <input id="collection-search" type="search" />
+      </label>
     </div>
     <p class="small muted" id="collection-count" role="status" aria-live="polite">{referenceCount(locale, { count: collection.length })}</p>
     {collection.length === 0 && <p>{t.collectionPending}</p>}
