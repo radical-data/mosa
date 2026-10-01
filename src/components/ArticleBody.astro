@@ -1,0 +1,37 @@
+---
+import type { ArticleEntry } from "../data/collection";
+import type { Locale } from "../i18n/routes";
+import { publicRecordPath } from "../i18n/routes";
+
+interface Props {
+  article: ArticleEntry;
+  locale: Locale;
+  showTitle?: boolean;
+}
+
+const { article, locale, showTitle = true } = Astro.props;
+const Content = article.Content;
+const language = new Intl.DisplayNames([locale === "en" ? "en-GB" : "es-CL"], {
+  type: "language",
+}).of(article.language);
+const copy = {
+  en: { by: "By", language: "Published in" },
+  es: { by: "Por", language: "Publicado en" },
+} as const;
+const t = copy[locale];
+---
+
+<article class="article-body">
+  <header>
+    {showTitle && <h2 lang={article.language}><a href={publicRecordPath("articles", article.id, locale)}>{article.title}</a></h2>}
+    <p class="small muted">
+      {article.author && <>{t.by} <span lang={article.language}>{article.author}</span> · </>}{t.language} {language ?? article.language}
+    </p>
+  </header>
+  <div class="article-prose" lang={article.language}><Content /></div>
+</article>
+
+<style>
+  .article-prose { max-width: 48rem; }
+  .article-prose :global(p) { line-height: 1.7; }
+</style>

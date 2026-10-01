@@ -22,10 +22,10 @@ export function pagePath(page: PageId, locale: Locale): string {
 export function absolutePageURL(page: PageId, locale: Locale): string {
   return new URL(pagePath(page, locale), siteURL).href;
 }
-export type PublicSection = "sources" | "editorials";
+export type PublicSection = "sources" | "articles";
 export function publicSectionPath(section: PublicSection, locale: Locale): string {
   if (section === "sources") return locale === "en" ? "/en/sources/" : "/es/fuentes/";
-  return locale === "en" ? "/en/editorials/" : "/es/editoriales/";
+  return locale === "en" ? "/en/articles/" : "/es/articulos/";
 }
 export function publicRecordPath(
   section: PublicSection | "objects",
@@ -51,7 +51,7 @@ export function languageLink(page: PageId, locale: Locale, current: URL): string
   let filterKeys: string[] = [];
   const path = current.pathname;
   const sourceMatch = /^\/(?:en\/sources|es\/fuentes)(?:\/([^/]+))?\/?$/.exec(path);
-  const editorialMatch = /^\/(?:en\/editorials|es\/editoriales)(?:\/([^/]+))?\/?$/.exec(path);
+  const articleMatch = /^\/(?:en\/articles|es\/articulos)(?:\/([^/]+))?\/?$/.exec(path);
   const objectPrefix =
     path.startsWith(pagePath("collection", "en")) || path.startsWith(pagePath("collection", "es"));
   if (sourceMatch) {
@@ -59,10 +59,10 @@ export function languageLink(page: PageId, locale: Locale, current: URL): string
       ? publicRecordPath("sources", decodeURIComponent(sourceMatch[1]), locale)
       : publicSectionPath("sources", locale);
     filterKeys = ["q", "kind", "topic"];
-  } else if (editorialMatch) {
-    targetPath = editorialMatch[1]
-      ? publicRecordPath("editorials", decodeURIComponent(editorialMatch[1]), locale)
-      : publicSectionPath("editorials", locale);
+  } else if (articleMatch) {
+    targetPath = articleMatch[1]
+      ? publicRecordPath("articles", decodeURIComponent(articleMatch[1]), locale)
+      : publicSectionPath("articles", locale);
   } else if (page === "collection" && objectPrefix) {
     const objectMatch = /^\/(?:en\/collection|es\/coleccion)(?:\/([^/]+))?\/?$/.exec(path);
     targetPath = objectMatch?.[1]

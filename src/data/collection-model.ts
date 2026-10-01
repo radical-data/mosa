@@ -107,10 +107,11 @@ export interface Source {
   images: CollectionImage[];
 }
 
-export interface EditorialMetadata {
+export interface ArticleMetadata {
   id: string;
   subjects?: RecordReference[];
   title: string;
+  summary?: string;
   author: string | null;
   language: string;
 }
@@ -549,21 +550,21 @@ export function validateCollection(
   };
 }
 
-export function parseEditorialFrontmatter(value: string, file: string): EditorialMetadata {
-  const editorialId = fileId(file, "md");
+export function parseArticleFrontmatter(value: string, file: string): ArticleMetadata {
+  const articleId = fileId(file, "md");
   const match = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/.exec(value);
-  if (!match) throw Error(`${file}: editorial requires YAML front matter`);
+  if (!match) throw Error(`${file}: article requires YAML front matter`);
   let parsed: unknown;
   try {
     parsed = parseYaml(match[1]);
   } catch (error) {
-    throw Error(`${file}: invalid editorial YAML front matter: ${String(error)}`);
+    throw Error(`${file}: invalid article YAML front matter: ${String(error)}`);
   }
-  if (!isObject(parsed)) throw Error(`${file}: editorial front matter must be a YAML mapping`);
-  const allowed = new Set(["subjects", "title", "author", "language"]);
+  if (!isObject(parsed)) throw Error(`${file}: article front matter must be a YAML mapping`);
+  const allowed = new Set(["subjects", "title", "summary", "author", "language"]);
   if ([...Object.keys(parsed)].some((key) => !allowed.has(key)))
-    throw Error(`${file}: editorial contains an unsupported field`);
-  const metadata = parsed as unknown as Omit<EditorialMetadata, "id">;
+    throw Error(`${file}: article contains an unsupported field`);
+  const metadata = parsed as unknown as Omit<ArticleMetadata, "id">;
   const validSubjects = (subjects: unknown): subjects is RecordReference[] =>
     Array.isArray(subjects) &&
     subjects.every(
@@ -576,17 +577,18 @@ export function parseEditorialFrontmatter(value: string, file: string): Editoria
     new Set(subjects.map((subject) => `${subject.type}:${subject.id}`)).size === subjects.length;
   if (
     !text(metadata.title) ||
+    ("summary" in metadata && !text(metadata.summary)) ||
     !(metadata.author === null || text(metadata.author)) ||
     typeof metadata.language !== "string" ||
     !language.test(metadata.language) ||
     ("subjects" in metadata && !validSubjects(metadata.subjects))
   )
-    throw Error(`${file}: editorial front matter is incomplete or invalid`);
-  return { ...metadata, id: editorialId };
+    throw Error(`${file}: article front matter is incomplete or invalid`);
+  return { ...metadata, id: articleId };
 }
 
-export function validateEditorialSubjects(
-  metadata: EditorialMetadata,
+export function validateArticleSubjects(
+  metadata: ArticleMetadata,
   data: CollectionData,
   file: string,
 ) {

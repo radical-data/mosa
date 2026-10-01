@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { collectionObjects, editorialPublications, sourceRecords } from "../data/collection";
+import { articlePublications, collectionObjects, sourceRecords } from "../data/collection";
 import {
   localeIds,
   locales,
@@ -49,18 +49,18 @@ export const GET: APIRoute = async () => {
           locale,
         ),
       );
-  for (const editorial of editorialPublications)
+  for (const article of articlePublications)
     for (const locale of localeIds)
       urls.push(
         item(
           {
-            es: publicRecordPath("editorials", editorial.id, "es"),
-            en: publicRecordPath("editorials", editorial.id, "en"),
+            es: publicRecordPath("articles", article.id, "es"),
+            en: publicRecordPath("articles", article.id, "en"),
           },
           locale,
         ),
       );
-  for (const section of ["sources", "editorials"] as const) {
+  for (const section of ["sources", "articles"] as const) {
     const paths = {
       es: publicSectionPath(section, "es"),
       en: publicSectionPath(section, "en"),

@@ -1,10 +1,10 @@
 import { describe, expect, test } from "vitest";
 import {
-  parseEditorialFrontmatter,
+  parseArticleFrontmatter,
   parseObject,
   parseSource,
+  validateArticleSubjects,
   validateCollection,
-  validateEditorialSubjects,
 } from "./collection-model";
 
 const object = parseObject(
@@ -312,23 +312,24 @@ describe("collection model", () => {
     ).toThrow("source-one.json: duplicate image file: object-one/front.jpg");
   });
 
-  test("parses prose-only editorial metadata", () => {
+  test("parses prose-only article metadata", () => {
     expect(
-      parseEditorialFrontmatter(
-        "---\ntitle: A title\nauthor: null\nlanguage: rap\n---\n\nText.",
+      parseArticleFrontmatter(
+        "---\ntitle: A title\nsummary: A short introduction.\nauthor: null\nlanguage: rap\n---\n\nText.",
         "essay-one.md",
       ),
     ).toEqual({
       id: "essay-one",
       title: "A title",
+      summary: "A short introduction.",
       author: null,
       language: "rap",
     });
   });
 
-  test("parses YAML editorial subjects for objects and sources", () => {
+  test("parses YAML article subjects for objects and sources", () => {
     expect(
-      parseEditorialFrontmatter(
+      parseArticleFrontmatter(
         [
           "---",
           "subjects:",
@@ -486,7 +487,7 @@ describe("collection model", () => {
     ).toThrow("is_part_of relationships contain a cycle");
   });
 
-  test("enforces relationship target types and resolves editorial subjects", () => {
+  test("enforces relationship target types and resolves article subjects", () => {
     expect(() =>
       parseSource(
         {
@@ -496,16 +497,12 @@ describe("collection model", () => {
         "source-one.json",
       ),
     ).toThrow("depicts must target an object");
-    const editorial = parseEditorialFrontmatter(
+    const article = parseArticleFrontmatter(
       "---\nsubjects:\n  - type: source\n    id: missing\ntitle: Essay\nauthor: null\nlanguage: en\n---\n",
       "essay-one.md",
     );
     expect(() =>
-      validateEditorialSubjects(
-        editorial,
-        { objects: [object], sources: [source] },
-        "essay-one.md",
-      ),
+      validateArticleSubjects(article, { objects: [object], sources: [source] }, "essay-one.md"),
     ).toThrow("refers to missing source missing");
   });
 

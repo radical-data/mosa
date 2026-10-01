@@ -48,13 +48,13 @@ export async function verifyWebsiteHttp(
     }
 
   const sourceId = "bm-hoa-hakananai-a-photograph";
-  const editorialId = "hoa-haka-nana-ia";
+  const articleId = "hoa-haka-nana-ia";
   for (const locale of localeIds) {
     for (const [path, marker] of [
       [publicSectionPath("sources", locale), "source-index"],
       [publicRecordPath("sources", sourceId, locale), "data-record-id="],
-      [publicSectionPath("editorials", locale), "editorial-index"],
-      [publicRecordPath("editorials", editorialId, locale), "editorial-article"],
+      [publicSectionPath("articles", locale), "article-index"],
+      [publicRecordPath("articles", articleId, locale), "article-body"],
     ]) {
       const response = await request(path);
       assert.equal(response.status, 200, `${path}: public collection route`);

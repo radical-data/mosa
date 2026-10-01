@@ -45,8 +45,8 @@ describe("localised routes and collection state", () => {
     );
     const sourceDetail = new URL("https://example.org/es/fuentes/a-letter/");
     expect(languageLink("collection", "en", sourceDetail)).toBe("/en/sources/a-letter/");
-    const editorial = new URL("https://example.org/es/editoriales/a-story/");
-    expect(languageLink("resources", "en", editorial)).toBe("/en/editorials/a-story/");
+    const article = new URL("https://example.org/es/articulos/a-story/");
+    expect(languageLink("resources", "en", article)).toBe("/en/articles/a-story/");
     const object = new URL("https://example.org/en/collection/a-carving/");
     expect(languageLink("collection", "es", object)).toBe("/es/coleccion/a-carving/");
   });

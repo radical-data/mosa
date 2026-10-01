@@ -3,6 +3,7 @@ subjects:
   - type: object
     id: hoa-hakananai-a
 title: Hoa Haka Nana Ia
+summary: La historia de Hoa Haka Nana Ia, su traslado a Inglaterra y las disputas sobre su nombre y su retorno a Rapa Nui.
 author: null
 language: es-CL
 ---

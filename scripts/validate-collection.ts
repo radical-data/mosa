@@ -2,16 +2,16 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
-  parseEditorialFrontmatter,
+  parseArticleFrontmatter,
   parseObject,
   parseSource,
+  validateArticleSubjects,
   validateCollection,
-  validateEditorialSubjects,
 } from "../src/data/collection-model";
 
 const repositoryRoot = fileURLToPath(new URL("../", import.meta.url));
 const root = path.join(repositoryRoot, "collection");
-const editorialRoot = path.join(repositoryRoot, "editorials");
+const articleRoot = path.join(repositoryRoot, "articles");
 const files = async (directory: string, extension: string) =>
   (await readdir(path.join(root, directory), { withFileTypes: true }).catch(() => []))
     .filter((entry) => entry.isFile() && entry.name.endsWith(extension))
@@ -55,20 +55,20 @@ const checked = validateCollection(
     imageFiles,
   },
 );
-const editorialIds = new Set<string>();
-const editorialNames = (await readdir(editorialRoot, { withFileTypes: true }).catch(() => []))
+const articleIds = new Set<string>();
+const articleNames = (await readdir(articleRoot, { withFileTypes: true }).catch(() => []))
   .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
   .map((entry) => entry.name)
   .sort();
-for (const name of editorialNames) {
-  const metadata = parseEditorialFrontmatter(
-    await readFile(path.join(editorialRoot, name), "utf8"),
+for (const name of articleNames) {
+  const metadata = parseArticleFrontmatter(
+    await readFile(path.join(articleRoot, name), "utf8"),
     name,
   );
-  if (editorialIds.has(metadata.id)) throw Error(`${name}: duplicate editorial id ${metadata.id}`);
-  editorialIds.add(metadata.id);
-  validateEditorialSubjects(metadata, checked, name);
+  if (articleIds.has(metadata.id)) throw Error(`${name}: duplicate article id ${metadata.id}`);
+  articleIds.add(metadata.id);
+  validateArticleSubjects(metadata, checked, name);
 }
 console.log(
-  `Validated ${objects.length} objects, ${sources.length} sources, ${checked.claims.size} claims, ${imageFiles.size} images and ${editorialIds.size} editorials.`,
+  `Validated ${objects.length} objects, ${sources.length} sources, ${checked.claims.size} claims, ${imageFiles.size} images and ${articleIds.size} articles.`,
 );

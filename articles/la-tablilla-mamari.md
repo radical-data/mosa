@@ -3,6 +3,7 @@ subjects:
   - type: object
     id: mamari
 title: La tablilla Mamari
+summary: La escritura rongo rongo, la historia de la tablilla Mamari y las desigualdades en el acceso al patrimonio de Rapa Nui.
 author: null
 language: es-CL
 ---

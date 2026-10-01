@@ -1,15 +1,15 @@
 import type { ImageMetadata, MarkdownInstance } from "astro";
 import { stringify as stringifyYaml } from "yaml";
 import {
+  type ArticleMetadata,
   type CollectionImage,
   type CollectionObject,
-  type EditorialMetadata,
-  parseEditorialFrontmatter,
+  parseArticleFrontmatter,
   parseObject,
   parseSource,
   type Source,
+  validateArticleSubjects,
   validateCollection,
-  validateEditorialSubjects,
 } from "./collection-model";
 import { getObjectAccounts, getSourceRelationships, type SourcedClaim } from "./collection-record";
 
@@ -25,8 +25,8 @@ const imageModules = import.meta.glob<ImageMetadata>(
   "../../collection/images/**/*.{avif,jpeg,jpg,png,webp}",
   { eager: true, import: "default" },
 );
-const editorialModules = import.meta.glob<MarkdownInstance<Record<string, unknown>>>(
-  "../../editorials/*.md",
+const articleModules = import.meta.glob<MarkdownInstance<Record<string, unknown>>>(
+  "../../articles/*.md",
   { eager: true },
 );
 
@@ -45,7 +45,7 @@ const checked = validateCollection(
   },
 );
 
-export interface EditorialEntry extends EditorialMetadata {
+export interface ArticleEntry extends ArticleMetadata {
   Content: MarkdownInstance<Record<string, unknown>>["Content"];
 }
 
@@ -70,15 +70,15 @@ export interface CollectionRecord {
   originClaims: SourcedClaim[];
   holdingClaims: SourcedClaim[];
   images: SourcedImage[];
-  editorials: EditorialEntry[];
+  articles: ArticleEntry[];
   searchExact: string;
   searchFoldable: string;
 }
 
-const editorials: EditorialEntry[] = Object.entries(editorialModules).map(([file, module]) => {
+const articles: ArticleEntry[] = Object.entries(articleModules).map(([file, module]) => {
   const raw = stringifyYaml(module.frontmatter);
-  const metadata = parseEditorialFrontmatter(`---\n${raw}---\n`, basename(file));
-  validateEditorialSubjects(
+  const metadata = parseArticleFrontmatter(`---\n${raw}---\n`, basename(file));
+  validateArticleSubjects(
     metadata,
     { objects: checked.objects, sources: checked.sources },
     basename(file),
@@ -88,7 +88,7 @@ const editorials: EditorialEntry[] = Object.entries(editorialModules).map(([file
 
 export const collectionObjects = checked.objects;
 export const collectionSources = checked.sources;
-export const editorialPublications = editorials;
+export const articlePublications = articles;
 
 function imageAsset(image: CollectionImage): ImageMetadata {
   const asset =
@@ -118,23 +118,23 @@ export function getSourceRecord(sourceId: string) {
     source,
     images: source.imagesWithAssets,
     claims: source.claims.map((claim) => ({ claim, source })),
-    editorials: editorials
-      .filter((editorial) =>
-        editorial.subjects?.some((subject) => subject.type === "source" && subject.id === sourceId),
+    articles: articles
+      .filter((article) =>
+        article.subjects?.some((subject) => subject.type === "source" && subject.id === sourceId),
       )
       .sort((a, b) => a.id.localeCompare(b.id)),
   };
 }
 
-export function getEditorialRecord(editorialId: string) {
-  return editorials.find((entry) => entry.id === editorialId);
+export function getArticleRecord(articleId: string) {
+  return articles.find((entry) => entry.id === articleId);
 }
 
 export function getObjectRecord(objectId: string): CollectionRecord | undefined {
   const accounts = getObjectAccounts(checked, objectId);
   if (!accounts) return undefined;
   const { object, sources: objectSources, claims } = accounts;
-  const recordEditorials = editorials
+  const recordArticles = articles
     .filter((entry) =>
       entry.subjects?.some((subject) => subject.type === "object" && subject.id === objectId),
     )
@@ -154,7 +154,7 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
   return {
     ...accounts,
     images: recordImages,
-    editorials: recordEditorials,
+    articles: recordArticles,
     searchExact: [
       object.id,
       object.name,

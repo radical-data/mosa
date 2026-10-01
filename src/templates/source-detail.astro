@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import ArticlePreview from "../components/ArticlePreview.astro";
 import ClaimStatement from "../components/ClaimStatement.astro";
 import CollectionNav from "../components/CollectionNav.astro";
 import { collectionObjects, type getSourceRecord } from "../data/collection";
@@ -10,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 
 interface Props { locale: Locale; record: NonNullable<ReturnType<typeof getSourceRecord>>; }
 const { locale, record } = Astro.props;
-const { source, outgoing, incoming, relatedObjects, depictingObjects, images, claims, editorials } = record;
+const { source, outgoing, incoming, relatedObjects, depictingObjects, images, claims, articles } = record;
 const t = messages(locale);
 const kindLabels: Record<SourceKind, string> = {
   webpage: t.sourceKindWebpage, publication: t.sourceKindPublication, photograph: t.sourceKindPhotograph,
@@ -69,6 +70,6 @@ const sourceURL = referenceURL(source.reference);
         </ul>
       </section>
     )}
-    {editorials.length > 0 && <section><h2>{locale === "en" ? "Editorials examining this source" : "Editoriales que examinan esta fuente"}</h2><ul>{editorials.map((entry) => <li><a href={publicRecordPath("editorials", entry.id, locale)}>{entry.title}</a></li>)}</ul></section>}
+    {articles.length > 0 && <section><h2>{locale === "en" ? "Articles about this source" : "Artículos sobre esta fuente"}</h2>{articles.map((article) => <ArticlePreview article={article} locale={locale} />)}</section>}
   </article>
 </Layout>

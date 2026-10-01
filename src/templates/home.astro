@@ -40,7 +40,7 @@ const [nextEvent] = getEvents(storedEvents, locale).upcoming;
     {nextEvent ? <Event event={nextEvent} open /> : <p class="muted">{t.eventsPending}</p>}
   </section>
   <img class="full-image landscape" src="/images/rapa-nui-absence.webp" alt={copy.passage03} width="1800" height="1200" loading="lazy" />
-  <section class="container section editorial home-about">
+  <section class="container section prose-section home-about">
     <div><h2 class="eyebrow"><Fragment set:html={copy.passage13} /></h2><img class="about-figure" src="/images/kavakava.webp" alt="" aria-hidden="true" width="222" height="972" loading="lazy" /></div>
     <div><p class="statement"><Fragment set:html={copy.passage14} /></p><PageLink class="button" page="about" locale={locale}>{copy.passage18}<span aria-hidden="true">↗</span></PageLink></div>
   </section>
