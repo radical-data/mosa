@@ -233,12 +233,125 @@ strong {
   padding-block: 0.4rem;
   white-space: nowrap;
 }
+.collection-subnav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 0.2rem;
+  text-underline-offset: 0.3rem;
+}
 .site-header nav a:hover,
 .site-header nav a[aria-current="page"] {
   background: linear-gradient(transparent 55%, var(--coral) 55%, var(--coral) 75%, transparent 75%);
 }
 .site-header nav a[aria-current="page"] {
   font-weight: 600;
+}
+.collection-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-block: 0 3rem;
+  padding-block: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+.source-filters {
+  display: grid;
+  grid-template-columns: minmax(14rem, 2fr) repeat(2, minmax(10rem, 1fr));
+  gap: 1rem;
+  margin-block: 2rem;
+}
+.source-filters label {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+.source-filters input,
+.source-filters select {
+  min-width: 0;
+  padding: 0.65rem;
+  border: 1px solid var(--rule);
+  background: #fff;
+}
+.source-list,
+.editorial-index-list {
+  border-top: 1px solid var(--rule);
+}
+.source-card,
+.editorial-index-list > article {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.8fr) 2fr;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.source-card > a img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.source-card h2,
+.editorial-index-list h2 {
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  margin-block: 0.35rem;
+}
+.source-topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  font-size: 0.8rem;
+}
+.source-topic-list li {
+  border: 1px solid var(--rule);
+  padding: 0.15rem 0.45rem;
+}
+.source-metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+  margin-block: 2rem;
+}
+.source-metadata > div {
+  border-top: 1px solid var(--rule);
+  padding-top: 0.6rem;
+  overflow-wrap: anywhere;
+}
+.source-metadata dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.source-metadata dd {
+  margin: 0.25rem 0 0;
+}
+.source-detail > section,
+.editorial-detail > section {
+  margin-block-start: clamp(3rem, 8vw, 6rem);
+}
+.source-detail > section h2,
+.editorial-detail > section h2 {
+  margin-block-end: 1rem;
+}
+.source-relations,
+.source-claims {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.source-relations li,
+.source-claims li {
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  overflow-wrap: anywhere;
+}
+.editorial-index-list > article {
+  grid-template-columns: 1fr;
+}
+.editorial-detail > .editorial-article {
+  margin-block-start: 3rem;
 }
 .language {
   padding-left: 1.25rem;
@@ -945,6 +1058,9 @@ strong {
   }
 }
 @media (max-width: 1100px) {
+  .source-filters {
+    grid-template-columns: 1fr;
+  }
   .site-header {
     gap: 1rem;
   }

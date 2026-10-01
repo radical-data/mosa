@@ -1,0 +1,22 @@
+---
+import EditorialArticle from "../components/EditorialArticle.astro";
+import { collectionObjects, collectionSources, type EditorialEntry } from "../data/collection";
+import type { RecordReference } from "../data/collection-model";
+import { type Locale, publicRecordPath, publicSectionPath } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; editorial: EditorialEntry; }
+const { locale, editorial } = Astro.props;
+const subjectTitle = (subject: RecordReference) =>
+  subject.type === "object"
+    ? collectionObjects.find((object) => object.id === subject.id)?.name ?? subject.id
+    : collectionSources.find((source) => source.id === subject.id)?.title ?? subject.id;
+---
+<Layout locale={locale} page="resources" publicRecord={{ section: "editorials", id: editorial.id }} title={`${editorial.title} — MoSA`} description={editorial.title}>
+  <article class="container section editorial-detail" lang={editorial.language}>
+    <p><a href={publicSectionPath("editorials", locale)}>{locale === "en" ? "← Editorials" : "← Editoriales"}</a></p>
+    <h1>{editorial.title}</h1>
+    {editorial.subjects && editorial.subjects.length > 0 && <section><h2>{locale === "en" ? "Subjects" : "Temas"}</h2><ul>{editorial.subjects.map((subject) => <li><a href={publicRecordPath(subject.type === "object" ? "objects" : "sources", subject.id, locale)}>{subjectTitle(subject)}</a></li>)}</ul></section>}
+    <EditorialArticle editorial={editorial} locale={locale} showTitle={false} />
+  </article>
+</Layout>

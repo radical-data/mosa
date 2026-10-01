@@ -1,0 +1,28 @@
+---
+import { collectionObjects, collectionSources, editorialPublications } from "../data/collection";
+import type { RecordReference } from "../data/collection-model";
+import { messages } from "../i18n/catalogues";
+import { type Locale, publicRecordPath } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = messages(locale);
+const subjectTitle = (subject: RecordReference) =>
+  subject.type === "object"
+    ? collectionObjects.find((object) => object.id === subject.id)?.name ?? subject.id
+    : collectionSources.find((source) => source.id === subject.id)?.title ?? subject.id;
+---
+<Layout locale={locale} page="resources" publicIndex="editorials" title={`${t.editorialIndexTitle} — MoSA`} description={t.editorialIndexDescription}>
+  <section class="container section editorial-index">
+    <header class="section-heading"><div><p class="eyebrow">MoSA</p><h1>{t.editorialIndexTitle}</h1><p>{t.editorialIndexDescription}</p></div></header>
+    <div class="editorial-index-list">
+      {editorialPublications.map((editorial) => <article>
+        <p class="small muted" lang={editorial.language}>{editorial.language}</p>
+        <h2><a href={publicRecordPath("editorials", editorial.id, locale)}>{editorial.title}</a></h2>
+        {editorial.author && <p>{editorial.author}</p>}
+        {editorial.subjects && <ul>{editorial.subjects.map((subject) => <li><a href={publicRecordPath(subject.type === "object" ? "objects" : "sources", subject.id, locale)}>{subjectTitle(subject)}</a></li>)}</ul>}
+      </article>)}
+    </div>
+  </section>
+</Layout>

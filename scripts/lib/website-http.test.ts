@@ -2,7 +2,8 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { verifyWebsiteHttp } from "./website-http";
 
 const origin = "https://museum.example";
-const html = '<!doctype html><html lang="es"><article data-record-id="object-1"></article></html>';
+const html =
+  '<!doctype html><html lang="es"><section class="source-index editorial-index"></section><article data-record-id="object-1" class="editorial-article"></article></html>';
 
 function responseFor(url: URL): Response {
   const path = url.pathname;
@@ -44,6 +45,14 @@ describe("public website HTTP verification", () => {
         "/en/",
         "/es/coleccion/",
         "/en/collection/",
+        "/en/sources/",
+        "/es/fuentes/",
+        "/en/editorials/",
+        "/es/editoriales/",
+        "/en/sources/bm-hoa-hakananai-a-photograph/",
+        "/es/fuentes/bm-hoa-hakananai-a-photograph/",
+        "/en/editorials/hoa-haka-nana-ia/",
+        "/es/editoriales/hoa-haka-nana-ia/",
         "/missing-page/",
         "/_astro/missing.js",
       ]),

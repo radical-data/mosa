@@ -9,7 +9,9 @@ import {
   validateEditorialSubjects,
 } from "../src/data/collection-model";
 
-const root = fileURLToPath(new URL("../collection/", import.meta.url));
+const repositoryRoot = fileURLToPath(new URL("../", import.meta.url));
+const root = path.join(repositoryRoot, "collection");
+const editorialRoot = path.join(repositoryRoot, "editorials");
 const files = async (directory: string, extension: string) =>
   (await readdir(path.join(root, directory), { withFileTypes: true }).catch(() => []))
     .filter((entry) => entry.isFile() && entry.name.endsWith(extension))
@@ -54,9 +56,13 @@ const checked = validateCollection(
   },
 );
 const editorialIds = new Set<string>();
-for (const name of await files("editorials", ".md")) {
+const editorialNames = (await readdir(editorialRoot, { withFileTypes: true }).catch(() => []))
+  .filter((entry) => entry.isFile() && entry.name.endsWith(".md"))
+  .map((entry) => entry.name)
+  .sort();
+for (const name of editorialNames) {
   const metadata = parseEditorialFrontmatter(
-    await readFile(path.join(root, "editorials", name), "utf8"),
+    await readFile(path.join(editorialRoot, name), "utf8"),
     name,
   );
   if (editorialIds.has(metadata.id)) throw Error(`${name}: duplicate editorial id ${metadata.id}`);

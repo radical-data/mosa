@@ -1,6 +1,14 @@
 import type { APIRoute } from "astro";
-import { collectionObjects } from "../data/collection";
-import { localeIds, locales, pageIds, pagePath, siteURL } from "../i18n/routes";
+import { collectionObjects, editorialPublications, sourceRecords } from "../data/collection";
+import {
+  localeIds,
+  locales,
+  pageIds,
+  pagePath,
+  publicRecordPath,
+  publicSectionPath,
+  siteURL,
+} from "../i18n/routes";
 
 const escapeXML = (value: string) => value.replaceAll("&", "&amp;").replaceAll('"', "&quot;");
 const item = (paths: Record<"es" | "en", string>, locale: "es" | "en") => {
@@ -30,6 +38,35 @@ export const GET: APIRoute = async () => {
           locale,
         ),
       );
+  for (const source of sourceRecords)
+    for (const locale of localeIds)
+      urls.push(
+        item(
+          {
+            es: publicRecordPath("sources", source.id, "es"),
+            en: publicRecordPath("sources", source.id, "en"),
+          },
+          locale,
+        ),
+      );
+  for (const editorial of editorialPublications)
+    for (const locale of localeIds)
+      urls.push(
+        item(
+          {
+            es: publicRecordPath("editorials", editorial.id, "es"),
+            en: publicRecordPath("editorials", editorial.id, "en"),
+          },
+          locale,
+        ),
+      );
+  for (const section of ["sources", "editorials"] as const) {
+    const paths = {
+      es: publicSectionPath(section, "es"),
+      en: publicSectionPath(section, "en"),
+    };
+    for (const locale of localeIds) urls.push(item(paths, locale));
+  }
   return new Response(
     `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls.join("")}</urlset>`,
     { headers: { "Content-Type": "application/xml; charset=utf-8" } },

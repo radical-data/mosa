@@ -1,6 +1,7 @@
 ---
 import type { SourcedClaim } from "../data/collection-record";
 import type { Locale } from "../i18n/routes";
+import { publicRecordPath } from "../i18n/routes";
 import ClaimStatement from "./ClaimStatement.astro";
 
 interface Props {
@@ -17,8 +18,8 @@ const { claims, locale } = Astro.props;
       <ClaimStatement claim={claim} language={source.language} locale={locale} />
       <p class="small muted">
         {locale === "en" ? "Recorded in" : "Registrado en"}:{" "}
-        <a href={`#source-${source.id}`}>
-          {source.author && <>{source.author} · </>}{source.reference}
+        <a href={publicRecordPath("sources", source.id, locale)}>
+          {source.author && <>{source.author} · </>}{source.title}
         </a>
       </p>
     </li>

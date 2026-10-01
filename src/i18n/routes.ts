@@ -22,6 +22,20 @@ export function pagePath(page: PageId, locale: Locale): string {
 export function absolutePageURL(page: PageId, locale: Locale): string {
   return new URL(pagePath(page, locale), siteURL).href;
 }
+export type PublicSection = "sources" | "editorials";
+export function publicSectionPath(section: PublicSection, locale: Locale): string {
+  if (section === "sources") return locale === "en" ? "/en/sources/" : "/es/fuentes/";
+  return locale === "en" ? "/en/editorials/" : "/es/editoriales/";
+}
+export function publicRecordPath(
+  section: PublicSection | "objects",
+  id: string,
+  locale: Locale,
+): string {
+  const base =
+    section === "objects" ? pagePath("collection", locale) : publicSectionPath(section, locale);
+  return `${base}${encodeURIComponent(id)}/`;
+}
 // Anchors are stable identities shared by both templates. No guessed fragments.
 export const anchors: Record<PageId, readonly string[]> = {
   home: ["main", "collection-title", "resources-title", "events-title"],
@@ -33,12 +47,33 @@ export const anchors: Record<PageId, readonly string[]> = {
   contact: ["main", "contact-privacy-title", "contact-email-help"],
 };
 export function languageLink(page: PageId, locale: Locale, current: URL): string {
-  const target = new URL(pagePath(page, locale), current.origin);
-  if (page === "collection") {
-    for (const key of ["q", "concept", "type", "view"]) {
-      const value = current.searchParams.get(key);
-      if (value) target.searchParams.set(key, value);
-    }
+  let targetPath = pagePath(page, locale);
+  let filterKeys: string[] = [];
+  const path = current.pathname;
+  const sourceMatch = /^\/(?:en\/sources|es\/fuentes)(?:\/([^/]+))?\/?$/.exec(path);
+  const editorialMatch = /^\/(?:en\/editorials|es\/editoriales)(?:\/([^/]+))?\/?$/.exec(path);
+  const objectPrefix =
+    path.startsWith(pagePath("collection", "en")) || path.startsWith(pagePath("collection", "es"));
+  if (sourceMatch) {
+    targetPath = sourceMatch[1]
+      ? publicRecordPath("sources", decodeURIComponent(sourceMatch[1]), locale)
+      : publicSectionPath("sources", locale);
+    filterKeys = ["q", "kind", "topic"];
+  } else if (editorialMatch) {
+    targetPath = editorialMatch[1]
+      ? publicRecordPath("editorials", decodeURIComponent(editorialMatch[1]), locale)
+      : publicSectionPath("editorials", locale);
+  } else if (page === "collection" && objectPrefix) {
+    const objectMatch = /^\/(?:en\/collection|es\/coleccion)(?:\/([^/]+))?\/?$/.exec(path);
+    targetPath = objectMatch?.[1]
+      ? publicRecordPath("objects", decodeURIComponent(objectMatch[1]), locale)
+      : pagePath(page, locale);
+    filterKeys = ["q", "concept", "type", "view"];
+  }
+  const target = new URL(targetPath, current.origin);
+  for (const key of filterKeys) {
+    const value = current.searchParams.get(key);
+    if (value) target.searchParams.set(key, value);
   }
   if (anchors[page].some((anchor) => `#${anchor}` === current.hash)) target.hash = current.hash;
   return `${target.pathname}${target.search}${target.hash}`;

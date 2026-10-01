@@ -1,6 +1,6 @@
 # Collection authoring and publication
 
-Every tracked record in `collection/` is public material. Git history supplies
+Every tracked file in `collection/` is public material. Git history supplies
 authorship and rollback. Agents can work directly on public museum material;
 no separate publication approval or reviewer sign-off is required.
 
@@ -339,7 +339,10 @@ the metadata. Review the gallery on both language routes.
 
 ## Add an editorial
 
-Create `collection/editorials/<id>.md`:
+An editorial is an authored MoSA publication, not a collection record. The same
+small build still validates and links its subjects.
+
+Create `editorials/<id>.md`:
 
 ```markdown
 ---

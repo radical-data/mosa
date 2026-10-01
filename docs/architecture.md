@@ -85,11 +85,14 @@ source with `reproduces`. Scans and captures remain representations of their
 documentary source unless the physical item itself is under investigation. The
 binary image lives in Git LFS.
 
-An **editorial** is authored Markdown with its own author and language. Its
-optional `subjects` can identify multiple objects and sources, or be omitted for
-a general article. Editorial prose does not become an unattributed claim.
-Sources have public index and detail pages, as do editorials. Object pages retain
-their existing URLs and information hierarchy.
+An **editorial** is an authored MoSA publication, not a collection record. Its
+Markdown has its own author and language. Optional `subjects` can identify
+multiple objects and sources, or be omitted for a general article. These links
+state what the publication examines; they do not make it a third research record
+type. Editorial prose does not become an unattributed claim. Sources have public
+index and detail pages within the collection. Editorials have separate public
+publication pages reached through Resources and relevant records. Object pages
+retain their existing URLs and information hierarchy.
 
 ## Politics of presentation
 

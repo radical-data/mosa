@@ -35,7 +35,7 @@ before committing. Run `just` to list all commands.
 | --- | --- |
 | `collection/objects/` | One small identity and foregrounding record per object |
 | `collection/sources/` | Sources with their attributed claims and image records |
-| `collection/editorials/` | Optional authored Markdown publications linked to objects |
+| `editorials/` | Authored MoSA publications with optional object and source subjects |
 | `collection/images/` | Publishable image files stored through Git LFS |
 | `source-files/` | Preserved source captures in Git LFS, excluded from the website |
 | `research/` | Optional campaigns and retained research progress, excluded from the website |

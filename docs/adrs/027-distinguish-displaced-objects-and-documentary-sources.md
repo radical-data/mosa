@@ -2,10 +2,8 @@
 
 ## Status
 
-Accepted. The collection model and migration are implemented; the public source
-and editorial pages remain pending in the next commit. The source and image
-contract is documented in the
-[collection authoring guide](../collection-publication.md).
+Accepted and implemented. The collection and website use the source and image
+contract documented in the [collection authoring guide](../collection-publication.md).
 
 ## Context
 
@@ -77,14 +75,20 @@ types, reject duplicates and self-links, and reject cycles in `is_part_of`.
 Relationships do not transfer claims, authorship, rights or object identity.
 Retain direct source-to-object links for documentation without extracted claims.
 
-An editorial can concern multiple objects and sources, or have no record link.
+An **editorial** is an authored publication by MoSA, not a collection record or
+a third research entity alongside objects and sources. It can concern multiple
+objects and sources, or have no record link. Keeping its typed subjects does not
+make it part of the collection; those links state what the publication examines.
 Preserve editorial prose, authorship and language. Source pages show
 bibliographic metadata, cleared representations, related objects, source
 relationships, attributed claims with locators and relevant editorials. Object
 pages retain their present information hierarchy, link to source pages, and
-derive image galleries from explicit `depicts` relationships. The paired source
-and editorial indexes and detail pages are bilingual; source and editorial
-prose keeps its declared language.
+derive image galleries from explicit `depicts` relationships. Sources remain in
+the collection navigation. Editorials form a separate publication layer reached
+from Resources and from relevant object or source pages. Their Markdown lives
+under top-level `editorials/`, outside `collection/`. The source and editorial
+indexes and detail pages are bilingual; source and editorial prose keeps its
+declared language.
 
 For a photograph found through a British Museum catalogue webpage, the records
 will be:
@@ -115,7 +119,7 @@ captions, credits, rights and original URLs.
 The source index lists every source and supports text search and kind/topic
 filters, with the complete listing available without JavaScript. Search titles,
 authors, references and topics. The collection section label will be “Documents and images”
-and “Documentos e imágenes”. Keep existing object URLs, add paired source and
+and “Documentos e imágenes”. Keep existing object URLs, add source and
 editorial indexes and detail routes, and update canonical links, sitemap,
 alternate-language metadata and language switching. Switching language retains
 the corresponding record or article and supported index filters.
@@ -131,6 +135,7 @@ the corresponding record or article and supported index filters.
 | Examine a refusal letter | Create a correspondence source and an editorial about it; no object is required. |
 | Discuss *Black Panther* | Create an audiovisual source, identify the relevant scene with a locator, and explain its relevance in an editorial. |
 | Exhibit the refusal letter | Present its existing source record prominently; do not duplicate or convert it. |
+| Publish MoSA's interpretation | Create an authored editorial and link its object and source subjects; do not make it a collection record. |
 
 Compare this with one record type that allows overlapping object and source
 roles. A single type makes it easy to misread documentary identity as object

@@ -33,20 +33,34 @@ The local General Sans fonts do not cover every Rapa Nui character. The
 characters under the
 [SIL Open Font License](../public/fonts/noto-sans-OFL.txt).
 
-## Collection presentation
+## Collection and publication presentation
 
 Collection navigation names come from object JSON. Source-attributed names,
-classifications and descriptions remain claims. Editorial prose belongs in
-`collection/editorials/`; image metadata belongs to the source that documents
-the image.
+classifications and descriptions remain claims. Every source has a navigation
+title and kind. Image
+metadata belongs to the source that represents the image; independently
+identifiable photographs have their own source records, linked to publishing
+pages with `reproduces` and to depicted objects with `depicts`.
 
-The current site publishes object pages and object-linked editorials. The
-accepted source index, source detail pages and editorials index in
-[ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md)
-are pending implementation. Until then, keep current routes and presentation
-behaviour accurate. Once implemented, follow ADR 027 for paired English and
-Chilean Spanish routes, source relationships, language switching and the
-“Documents and images” / “Documentos e imágenes” collection label.
+The collection contains objects and sources. Its subnavigation uses the label
+“Documents and images” / “Documentos e imágenes” for sources. The site publishes
+object and source indexes and detail pages.
+Sources are listed at `/en/sources/` and `/es/fuentes/`; editorials are listed
+at `/en/editorials/` and `/es/editoriales/`. Editorials are authored MoSA
+publications rather than collection records. Their source files live under
+`editorials/`, and they appear through Resources and links from the objects and
+sources they examine. Source indexes
+provide text search and kind/topic filters, with the full list available without
+JavaScript. Language switching retains the corresponding record or article and
+supported index filters.
+
+Source pages show bibliographic metadata, publishable representations, related
+objects and source relationships, attributed object claims with locators, and
+relevant editorials. Object pages retain their established URLs and hierarchy;
+they link to source pages and derive image galleries from explicit `depicts`
+relationships. Editorial pages retain their declared prose language and can
+concern multiple objects and sources or have no record subjects. Methodological
+notes and preservation captures are excluded from public rendering and search.
 
 Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-the-git-collection.md).
 Keep all source accounts, qualifiers and optional locators visible. Holding and

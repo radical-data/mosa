@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { localeIds, pagePath } from "../../src/i18n/routes";
+import { localeIds, pagePath, publicRecordPath, publicSectionPath } from "../../src/i18n/routes";
 
 /** Small public HTTP contract, used by both container tests and release verification. */
 export async function verifyWebsiteHttp(
@@ -46,6 +46,22 @@ export async function verifyWebsiteHttp(
       if (page === "collection")
         assert.match(html, /data-record-id=/, `${path}: rendered collection`);
     }
+
+  const sourceId = "bm-hoa-hakananai-a-photograph";
+  const editorialId = "hoa-haka-nana-ia";
+  for (const locale of localeIds) {
+    for (const [path, marker] of [
+      [publicSectionPath("sources", locale), "source-index"],
+      [publicRecordPath("sources", sourceId, locale), "data-record-id="],
+      [publicSectionPath("editorials", locale), "editorial-index"],
+      [publicRecordPath("editorials", editorialId, locale), "editorial-article"],
+    ]) {
+      const response = await request(path);
+      assert.equal(response.status, 200, `${path}: public collection route`);
+      assert.equal(response.headers.get("cache-control"), "no-cache", `${path}: revalidate pages`);
+      assert.match(await response.text(), new RegExp(marker), `${path}: expected rendered content`);
+    }
+  }
 
   for (const path of [
     "/missing-page/",

@@ -1,13 +1,15 @@
 ---
 import type { EditorialEntry } from "../data/collection";
 import type { Locale } from "../i18n/routes";
+import { publicRecordPath } from "../i18n/routes";
 
 interface Props {
   editorial: EditorialEntry;
   locale: Locale;
+  showTitle?: boolean;
 }
 
-const { editorial, locale } = Astro.props;
+const { editorial, locale, showTitle = true } = Astro.props;
 const Content = editorial.Content;
 const language = new Intl.DisplayNames([locale === "en" ? "en-GB" : "es-CL"], {
   type: "language",
@@ -21,7 +23,7 @@ const t = copy[locale];
 
 <article class="editorial-article" lang={editorial.language}>
   <header>
-    <h2>{editorial.title}</h2>
+    {showTitle && <h2><a href={publicRecordPath("editorials", editorial.id, locale)}>{editorial.title}</a></h2>}
     <p class="small muted">
       {editorial.author && <>{t.by} {editorial.author} · </>}{t.language} {language ?? editorial.language}
     </p>

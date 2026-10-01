@@ -26,7 +26,7 @@ const imageModules = import.meta.glob<ImageMetadata>(
   { eager: true, import: "default" },
 );
 const editorialModules = import.meta.glob<MarkdownInstance<Record<string, unknown>>>(
-  "../../collection/editorials/*.md",
+  "../../editorials/*.md",
   { eager: true },
 );
 
@@ -88,7 +88,7 @@ const editorials: EditorialEntry[] = Object.entries(editorialModules).map(([file
 
 export const collectionObjects = checked.objects;
 export const collectionSources = checked.sources;
-export const collectionEditorials = editorials;
+export const editorialPublications = editorials;
 
 function imageAsset(image: CollectionImage): ImageMetadata {
   const asset =

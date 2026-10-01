@@ -9,7 +9,10 @@ The image-relationship parts of this decision were superseded by
 [ADR 027](027-distinguish-displaced-objects-and-documentary-sources.md).
 Images remain identified by their asset paths, but their photograph source owns
 the metadata and a `depicts` relationship now links that source to each object.
-The original decision text below records the model used at the time.
+ADR 027 also clarifies that editorials are authored publications rather than
+collection records. Their readable file identities and typed subject links are
+unchanged, while their files now live under top-level `editorials/`. The original
+decision text below records the terminology and model used at the time.
 
 The owner confirmed on 29 September 2026 that the website has not been released
 to the public. This migration can replace existing object URLs without redirects
@@ -159,8 +162,9 @@ foregrounding selection is illustrative, not an editorial decision to publish.
 }
 ```
 
-The existing editorial remains `collection/editorials/la-tablilla-mamari.md`.
-Its front matter uses `objectId: mamari` and omits `id`.
+The existing editorial is now `editorials/la-tablilla-mamari.md`. Its front
+matter identifies `mamari` as an object subject and omits `id`; ADR 027 later
+moved authored MoSA publications outside the collection directory.
 
 The object routes become `/es/coleccion/mamari/` and `/en/collection/mamari/`.
 The collection links, canonical metadata and language switch use the same ID.

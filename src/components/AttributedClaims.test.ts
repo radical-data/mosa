@@ -18,6 +18,8 @@ describe("attributed claim presentation", () => {
           },
           source: {
             id: "catalogue-a",
+            title: "Catalogue A",
+            kind: "publication",
             author: "Museum A",
             reference: "Catalogue A",
             language: "en-GB",
@@ -34,6 +36,8 @@ describe("attributed claim presentation", () => {
           },
           source: {
             id: "catalogue-b",
+            title: "Catálogo B",
+            kind: "publication",
             author: null,
             reference: "Catálogo B",
             language: "es-CL",
@@ -48,8 +52,12 @@ describe("attributed claim presentation", () => {
       expect(html).toContain("Museo B, sin confirmar");
       expect(html).toContain('lang="en-GB"');
       expect(html).toContain('lang="es-CL"');
-      expect(html).toContain('href="#source-catalogue-a"');
-      expect(html).toContain('href="#source-catalogue-b"');
+      expect(html).toContain(
+        `href="${locale === "en" ? "/en/sources" : "/es/fuentes"}/catalogue-a/"`,
+      );
+      expect(html).toContain(
+        `href="${locale === "en" ? "/en/sources" : "/es/fuentes"}/catalogue-b/"`,
+      );
       expect(html).toContain("Catalogue A");
       expect(html).toContain("Catálogo B");
       expect(html).toContain("&lt;script&gt;");

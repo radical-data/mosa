@@ -2,27 +2,40 @@
 import { Image } from "astro:assets";
 import AttributedClaims from "../../../components/AttributedClaims.astro";
 import ClaimStatement from "../../../components/ClaimStatement.astro";
+import CollectionNav from "../../../components/CollectionNav.astro";
 import EditorialArticle from "../../../components/EditorialArticle.astro";
-import { collectionObjects, getObjectRecord } from "../../../data/collection";
-import { type Locale, localeIds, pagePath } from "../../../i18n/routes";
+import { collectionObjects, editorialPublications, getEditorialRecord, getObjectRecord, getSourceRecord, sourceRecords } from "../../../data/collection";
+import { type Locale, localeIds, pagePath, publicRecordPath } from "../../../i18n/routes";
 import Layout from "../../../layouts/Layout.astro";
+import EditorialDetail from "../../../templates/editorial-detail.astro";
+import SourceDetail from "../../../templates/source-detail.astro";
 
 interface Props {
   locale: Locale;
-  objectId: string;
+  recordKind: "object" | "source" | "editorial";
+  recordId: string;
 }
 
 export function getStaticPaths() {
-  return collectionObjects.flatMap((object) =>
+  const objectPaths = collectionObjects.flatMap((object) =>
     localeIds.map((locale) => ({
       params: {
         lang: locale,
-        collection: locale === "es" ? "coleccion" : "collection",
+        recordSection: locale === "es" ? "coleccion" : "collection",
         id: object.id,
       },
-      props: { locale, objectId: object.id },
+      props: { locale, recordKind: "object" as const, recordId: object.id },
     })),
   );
+  const sourcePaths = sourceRecords.flatMap((source) => localeIds.map((locale) => ({
+    params: { lang: locale, recordSection: locale === "es" ? "fuentes" : "sources", id: source.id },
+    props: { locale, recordKind: "source" as const, recordId: source.id },
+  })));
+  const editorialPaths = editorialPublications.flatMap((editorial) => localeIds.map((locale) => ({
+    params: { lang: locale, recordSection: locale === "es" ? "editoriales" : "editorials", id: editorial.id },
+    props: { locale, recordKind: "editorial" as const, recordId: editorial.id },
+  })));
+  return [...objectPaths, ...sourcePaths, ...editorialPaths];
 }
 
 const copy = {
@@ -61,9 +74,10 @@ const copy = {
     missing: "No se encontró el objeto",
   },
 } as const;
-const { locale, objectId } = Astro.props;
-const record = getObjectRecord(objectId);
-if (!record) throw new Error(`Missing collection object ${objectId}`);
+const { locale, recordKind, recordId } = Astro.props;
+const record = recordKind === "object" ? getObjectRecord(recordId) : undefined;
+const sourceRecord = recordKind === "source" ? getSourceRecord(recordId) : undefined;
+const editorialRecord = recordKind === "editorial" ? getEditorialRecord(recordId) : undefined;
 const t = copy[locale];
 const referenceURL = (value: string) => {
   const candidate = value.match(/https?:\/\/\S+$/u)?.[0] ?? value;
@@ -76,7 +90,7 @@ const referenceURL = (value: string) => {
 };
 ---
 
-<Layout
+{recordKind === "source" && sourceRecord ? <SourceDetail locale={locale} record={sourceRecord} /> : recordKind === "editorial" && editorialRecord ? <EditorialDetail locale={locale} editorial={editorialRecord} /> : <Layout
   locale={locale}
   page={record ? "collection" : undefined}
   collectionItemId={record?.object.id}
@@ -87,6 +101,7 @@ const referenceURL = (value: string) => {
     <section class="container section"><h1>{t.missing}</h1></section>
   ) : (
     <article class="container section dossier" data-record-id={record.object.id}>
+      <CollectionNav locale={locale} active="objects" />
       <p><a href={pagePath("collection", locale)}>← {t.back}</a></p>
       <h1>{record.object.name}</h1>
 
@@ -126,7 +141,7 @@ const referenceURL = (value: string) => {
                   {image.credit && <span>{t.credit}: <span lang={source.language}>{image.credit}</span></span>}
                   {image.rights && <span>{t.rights}: <span lang={source.language}>{image.rights}</span></span>}
                   {image.originalUrl && <a href={image.originalUrl} rel="noreferrer">{t.original}</a>}
-                  <span>{t.recorded}: {source.reference}</span>
+                  <span>{t.recorded}: <a href={publicRecordPath("sources", source.id, locale)}>{source.title}</a></span>
                 </figcaption>
               </figure>
             ))}
@@ -156,7 +171,8 @@ const referenceURL = (value: string) => {
             const url = referenceURL(source.reference);
             return (
               <article class="source-account" id={`source-${source.id}`}>
-                <h3>{url ? <a href={url} rel="noreferrer">{source.reference}</a> : source.reference}</h3>
+                <h3><a href={publicRecordPath("sources", source.id, locale)}>{source.title}</a></h3>
+                {url && <p class="small"><a href={url} rel="noreferrer">{source.reference}</a></p>}
                 {source.author && <p class="small muted">{t.author}: {source.author}</p>}
                 {source.claims.length > 0 && (
                   <ul>
@@ -182,7 +198,7 @@ const referenceURL = (value: string) => {
       )}
     </article>
   )}
-</Layout>
+</Layout>}
 
 <style>
   .dossier { max-width: 72rem; }

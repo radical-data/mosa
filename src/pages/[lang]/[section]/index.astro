@@ -1,0 +1,18 @@
+---
+import type { Locale } from "../../../i18n/routes";
+import Editorials from "../../../templates/editorials.astro";
+import Sources from "../../../templates/sources.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: "en", section: "sources" }, props: { locale: "en", section: "sources" } },
+    { params: { lang: "es", section: "fuentes" }, props: { locale: "es", section: "sources" } },
+    { params: { lang: "en", section: "editorials" }, props: { locale: "en", section: "editorials" } },
+    { params: { lang: "es", section: "editoriales" }, props: { locale: "es", section: "editorials" } },
+  ];
+}
+
+interface Props { locale: Locale; section: "sources" | "editorials"; }
+const { locale, section } = Astro.props;
+---
+{section === "sources" ? <Sources locale={locale} /> : <Editorials locale={locale} />}
