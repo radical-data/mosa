@@ -11,7 +11,12 @@ import {
   validateArticleSubjects,
   validateCollection,
 } from "./collection-model";
-import { getObjectAccounts, getSourceRelationships, type SourcedClaim } from "./collection-record";
+import {
+  getObjectAccounts,
+  getSourceRelationships,
+  type SourcedClaim,
+  sourceImagesForObject,
+} from "./collection-record";
 
 const objectModules = import.meta.glob<unknown>("../../collection/objects/*.json", {
   eager: true,
@@ -139,18 +144,13 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
       entry.subjects?.some((subject) => subject.type === "object" && subject.id === objectId),
     )
     .sort((a, b) => a.id.localeCompare(b.id));
-  const recordImages = objectSources
-    .filter((source) =>
-      source.relationships?.some(
-        (relationship) =>
-          relationship.type === "depicts" &&
-          relationship.target.type === "object" &&
-          relationship.target.id === objectId,
-      ),
-    )
-    .flatMap((source) =>
-      source.images.map((image) => ({ image, source, asset: imageAsset(image) })),
-    );
+  const recordImages = objectSources.flatMap((source) =>
+    sourceImagesForObject(source, objectId).map((image) => ({
+      image,
+      source,
+      asset: imageAsset(image),
+    })),
+  );
   return {
     ...accounts,
     images: recordImages,

@@ -1,0 +1,177 @@
+{
+  "title": "Te Kuhane o Te Tupuna / El espíritu de los ancestros",
+  "kind": "audiovisual",
+  "author": "Leonardo Pakarati (guion y dirección); Paula Rossetti (producción)",
+  "reference": "Te Kuhane o Te Tupuna (Mahatua Producciones, 2015), edición con subtítulos en inglés, 01:02:44. https://guidedoc.tv/documentary/the-spirit-of-the-ancestors-documentary-film/",
+  "language": "es",
+  "date": "2015",
+  "topics": ["displacement", "restitution", "representations"],
+  "claims": [
+    {
+      "id": "hoa-name",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "has_name",
+      "value": "Hoa Hakananai'a",
+      "locator": "00:23:55–00:23:57, presentación en la sala de clases, diálogo en español."
+    },
+    {
+      "id": "hoa-removal-topaze",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "En el año 1868, llegó a la isla un barco inglés que se llamaba Topaze. Y en ese barco se llevó al moái Hoa Hakananai'a. Tiempo después, el moái fue regalado a la reina de Inglaterra y hoy está en Londres y es visitado por miles de personas.",
+      "locator": "00:23:58–00:24:22, presentación en la sala de clases, diálogo en español."
+    },
+    {
+      "id": "hoa-sadness",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Yo creo que debe estar muy triste.",
+      "locator": "00:24:21–00:24:25, presentación en la sala de clases sobre Hoa Hakananaiʻa en Londres, diálogo en español."
+    },
+    {
+      "id": "hoa-drawings-and-letter-invitation",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Yo les quería proponer: si le pueden mandar un, un dibujo al moai y una carta si quieren al moai para que ellos se la vayan a entregar.",
+      "locator": "00:24:28–00:24:39, invitación a enviar un dibujo y una carta al moai, diálogo en español."
+    },
+    {
+      "id": "hoa-ahu-awaiting-return",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "El moai fue hecho para estar en este lugar, no en otro. Ese ahu está ahí esperando que el moai vuelva.",
+      "locator": "00:29:04–00:29:12, visita a Orongo, diálogo en español."
+    },
+    {
+      "id": "hoa-return-to-island",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Yo creo que tiene que devolver para acá. Tiene que volver todo para acá y no que se viene y se queda allá en el continente, que se viene todo a la isla.",
+      "locator": "00:29:43–00:29:55, conversación sobre el retorno a la isla, diálogo en español."
+    },
+    {
+      "id": "hoa-promise-to-ahu",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Entonces le vamos a decir al ahu, que espere tranquilo que ya vamos a traer su moai.",
+      "locator": "00:31:05–00:31:10, conversación junto al ahu, diálogo en español."
+    },
+    {
+      "id": "hoa-grandfather-visit",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Sería el abuelo más feliz ir contigo a ver el Hoa Hakananai'a.",
+      "locator": "00:33:42–00:33:51, conversación sobre visitar Hoa Hakananaiʻa, diálogo en español."
+    },
+    {
+      "id": "hoa-mana-and-return",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Ese moai yo creo que hay que traer de vuelta. Por algo es único, porque no hay dos, no hay ni tres, es uno solo. Y yo creo que ahí está. Ahí está ese, eh, ahí está el mana de esta isla. Hay que traerlo de vuelta.",
+      "locator": "00:33:59–00:34:22, conversación sobre el retorno de Hoa Hakananaiʻa, diálogo en español."
+    },
+    {
+      "id": "hoa-cultural-significance",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Pero ahí uno se da cuenta que para ellos las cosas son un objeto, no alcanzan a darse cuenta que, que el moai es algo, no es solo un objeto. O sea, tiene que ver con la cultura, en este caso, rapanui, significa algo. Para ellos significa una cosa y que si le pasa algo, tenemos que pagar a través de una aseguradora plata para reponer la cosa. Y nosotros sabemos que no se puede reponer.",
+      "locator": "00:35:28–00:35:58, conversación sobre los acuerdos para filmar en el Museo Británico, diálogo en español."
+    },
+    {
+      "id": "hoa-ancestors-and-mana-appeal",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Please think in my ancestors. Think in the living face of the tupuna. We need this mana again, return to Rapanui.",
+      "language": "en",
+      "locator": "Aproximadamente 00:57:18–00:57:34, intervención junto a Hoa Hakananaiʻa en el Museo Británico, discurso en inglés."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      },
+      "locator": "00:55:10–00:55:18, visita a Hoa Hakananaiʻa en el Museo Británico."
+    },
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc-2597"
+      },
+      "locator": "00:50:44–00:50:54 y 00:52:25–00:52:34, figura de madera sobre la mesa del Museo Británico; etiqueta +2597 visible en 00:52:34."
+    },
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc1898-1010-13"
+      },
+      "locator": "00:50:44–00:51:10, figura de madera de dos cabezas sobre la mesa del Museo Británico."
+    },
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-head-quai-branly-71-1930-35-1"
+      },
+      "locator": "00:42:50–00:44:25, encuentro con la cabeza monumental en el Musée du quai Branly; vista de la sala en 00:43:05."
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-kuhane-hoa-drawing-between-trees"
+      },
+      "locator": "00:24:55–00:24:58, dibujo sostenido en la sala de clases."
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-kuhane-hoa-drawing-shaded-figure"
+      },
+      "locator": "00:24:59–00:25:00, dibujo expuesto en el Museo Británico."
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-kuhane-hoa-drawing-front-and-back"
+      },
+      "locator": "00:25:01–00:25:03, dibujo expuesto en el Museo Británico."
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-kuhane-hoa-drawing-blue-yellow-band"
+      },
+      "locator": "00:25:04–00:25:05, dibujo y carta expuestos en el Museo Británico."
+    }
+  ],
+  "images": [
+    {
+      "file": "te-kuhane/british-museum-table.jpg",
+      "alt": "Una niña y un adulto observan una mesa del Museo Británico con dos figuras de madera, herramientas de piedra y una pieza tejida mientras una mujer la acomoda.",
+      "caption": "Encuentro con piezas rapanui en el Museo Británico. En primer plano: la figura alargada Oc,+.2597 y, a su izquierda, la figura de dos cabezas Oc1898,1010.13. Fotograma de Te Kuhane o Te Tupuna (2015), 00:50:54.",
+      "credit": "Fotograma: Te Kuhane o Te Tupuna, Mahatua Producciones (2015).",
+      "rights": "Publicación en MoSA autorizada por la persona responsable del proyecto. No se declara una licencia para otros usos.",
+      "depicts": ["british-museum-figure-oc-2597", "british-museum-figure-oc1898-1010-13"]
+    },
+    {
+      "file": "te-kuhane/quai-branly-encounter.jpg",
+      "alt": "Un adulto y una niña caminan juntos hacia una cabeza monumental de moái iluminada detrás de un vidrio en el Musée du quai Branly.",
+      "caption": "Encuentro con la cabeza monumental de moái 71.1930.35.1 en el Musée du quai Branly. Fotograma de Te Kuhane o Te Tupuna (2015), 00:43:05.",
+      "credit": "Fotograma: Te Kuhane o Te Tupuna, Mahatua Producciones (2015).",
+      "rights": "Publicación en MoSA autorizada por la persona responsable del proyecto. No se declara una licencia para otros usos.",
+      "depicts": ["moai-head-quai-branly-71-1930-35-1"]
+    }
+  ],
+  "notes": {
+    "text": "Selective import from the supplied 01:02:44 English-subtitled edition. Spanish claims preserve Scribe v2 original-language wording, repetitions and qualifications; they have not had independent audio review. The short English appeal comes from the local Qwen3-ASR transcript of the film audio. The project editor checked that passage against the speech on 2 October 2026 and confirmed the wording, including “return”; it is not changed to a possible intended “returned”. The alternate English transcript supplies its approximate locator, not its wording. Claim language overrides apply to values; Spanish remains the default and the language of editorial locators. Attribution is to the film, not an assertion that the director speaks every passage or each participant represents a collective position. Credits at 00:59:35–00:59:40 identify the director and producer; the closing copyright credit identifies Mahatua Producciones and 2015. The ahu excerpt stops before an uncertain Rapa Nui term. The flat figure matches Oc,+.2597 through its legible tag at 00:52:34, arm positions, belly scratches and circular knee mark. The compact figure matches Oc1898,1010.13 through its aligned double heads, pale eye rings with dark centres and bent limbs at 00:50:54 and 00:51:10; its tag is illegible. The monumental Paris head matches 71.1930.35.1 through its brow, nose, broken neck and exhibition setting, compared with the accessioned photograph by Thesupermat on Wikimedia Commons. The smaller head at 00:42:25 and other table objects remain unidentified. The two encounter stills represent the film and retain the full frames; four earlier stills represent the separately registered artworks. The full film and transcripts remain private. Locators may differ in other editions.",
+    "language": "en-GB"
+  }
+}

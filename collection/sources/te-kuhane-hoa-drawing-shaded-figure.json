@@ -1,0 +1,31 @@
+{
+  "title": "Dibujo sombreado de Hoa Hakananaiʻa, mostrado en Te Kuhane",
+  "kind": "artwork",
+  "author": null,
+  "reference": "Dibujo mostrado en Te Kuhane o Te Tupuna (2015), edición con subtítulos en inglés, 01:02:44; 00:24:59–00:25:00.",
+  "language": "es",
+  "topics": ["representations"],
+  "claims": [],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "te-kuhane/hoa-shaded-figure.jpg",
+      "alt": "Fotograma de un dibujo sombreado de un moái visto de frente, bajo un mensaje manuscrito, junto a una tarjeta floral morada.",
+      "caption": "Dibujo de Hoa Hakananaiʻa expuesto en el Museo Británico. Fotograma de Te Kuhane o Te Tupuna (2015), 00:24:59.",
+      "credit": "Autoría del dibujo no identificada. Fotograma: Te Kuhane o Te Tupuna, Mahatua Producciones (2015).",
+      "rights": "Publicación en MoSA autorizada por la persona responsable del proyecto el 1 de octubre de 2026. No se declara una licencia para otros usos."
+    }
+  ],
+  "notes": {
+    "text": "A distinct sheet displayed beside a purple floral card in the montage following the classroom invitation to draw and write to Hoa Hakananaiʻa. It shows a single shaded frontal figure with dark eyes and nose, beneath a handwritten Spanish message addressed to the moai. The film's assignment and display sequence support the depicted-object link; no maker is securely identified. The title is editorial. The representation is an unretouched film still at 00:24:59, retaining the original frame composition.",
+    "language": "en-GB"
+  }
+}

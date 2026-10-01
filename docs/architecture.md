@@ -79,7 +79,9 @@ An **image record** stays inside the source that represents the image and
 records a local publishable file, alt text, credit, rights, caption and original
 URL where available. Photograph sources use `depicts` relationships to identify
 the objects shown; the same photograph can depict several objects, and the
-object pages derive their galleries from those relationships. A catalogue page
+object pages derive their galleries from those relationships. An optional
+image-level `depicts` subset restricts individual frames or representations to
+the objects actually shown. A catalogue page
 that reproduces an independently authored photograph links to its photograph
 source with `reproduces`. Scans and captures remain representations of their
 documentary source unless the physical item itself is under investigation. The

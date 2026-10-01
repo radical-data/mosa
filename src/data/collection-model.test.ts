@@ -33,6 +33,26 @@ describe("collection model", () => {
     expect(parseSource(record, "source-one.json").claims[0].locator).toBeUndefined();
   });
 
+  test("accepts an optional claim language override and leaves it absent by default", () => {
+    const { id: _id, ...record } = source;
+    const claim = { ...record.claims[0], language: "en" };
+    expect(parseSource({ ...record, claims: [claim] }, "source-one.json").claims[0]).toEqual(claim);
+    expect(parseSource(record, "source-one.json").claims[0].language).toBeUndefined();
+  });
+
+  test.each([null, "", "  ", 14, "English", { language: "en" }])(
+    "rejects malformed claim language overrides: %j",
+    (claimLanguage) => {
+      const { id: _id, ...record } = source;
+      expect(() =>
+        parseSource(
+          { ...record, claims: [{ ...record.claims[0], language: claimLanguage }] },
+          "source-one.json",
+        ),
+      ).toThrow("claims[0].language is invalid");
+    },
+  );
+
   test.each([null, "", "  ", 14, { page: 14 }, ["page 14"]])(
     "rejects malformed passage locators: %j",
     (locator) => {
@@ -75,6 +95,24 @@ describe("collection model", () => {
     expect(parseSource({ ...record, captures }, "source-one.json").captures).toEqual(captures);
     expect(parseSource(record, "source-one.json").captures).toBeUndefined();
   });
+
+  test("parses explicit image depiction scopes, including an empty list", () => {
+    const { id: _id, ...record } = source;
+    const image = { ...record.images[0], depicts: [] };
+    const parsed = parseSource({ ...record, images: [image] }, "source-one.json");
+    expect(parsed.images[0].depicts).toEqual([]);
+    expect(parseSource(record, "source-one.json").images[0].depicts).toBeUndefined();
+  });
+
+  test.each([null, "object-one", ["bad id"], ["object-one", "object-one"]])(
+    "rejects malformed image depiction lists: %j",
+    (depicts) => {
+      const { id: _id, ...record } = source;
+      expect(() =>
+        parseSource({ ...record, images: [{ ...record.images[0], depicts }] }, "source-one.json"),
+      ).toThrow("images[0].depicts");
+    },
+  );
 
   test.each([
     { file: "../source-one/catalogue.pdf" },
@@ -545,5 +583,42 @@ describe("collection model", () => {
     expect(() =>
       validateCollection({ objects: [unforegroundedObject], sources: [depicted] }),
     ).toThrow("redundant objectId object-one");
+  });
+
+  test("validates image depiction targets against objects and source depicts links", () => {
+    const { id: _id, ...record } = source;
+    const objectTwo = parseObject(
+      { name: "Object two", foregroundedClaims: [] },
+      "object-two.json",
+    );
+    const relationship = {
+      type: "depicts" as const,
+      target: { type: "object" as const, id: "object-one" },
+    };
+    const scoped = parseSource(
+      {
+        ...record,
+        relationships: [relationship],
+        images: [{ ...record.images[0], depicts: ["object-one"] }],
+      },
+      "source-one.json",
+    );
+    expect(() =>
+      validateCollection({ objects: [object, objectTwo], sources: [scoped] }),
+    ).not.toThrow();
+
+    expect(() =>
+      validateCollection({
+        objects: [object, objectTwo],
+        sources: [{ ...scoped, images: [{ ...scoped.images[0], depicts: ["missing-object"] }] }],
+      }),
+    ).toThrow("images[0].depicts refers to missing object missing-object");
+
+    expect(() =>
+      validateCollection({
+        objects: [object, objectTwo],
+        sources: [{ ...scoped, images: [{ ...scoped.images[0], depicts: ["object-two"] }] }],
+      }),
+    ).toThrow("images[0].depicts object object-two is not depicted by the source");
   });
 });

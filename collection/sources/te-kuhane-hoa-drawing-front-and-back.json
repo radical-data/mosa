@@ -1,0 +1,31 @@
+{
+  "title": "Dibujo de Hoa Hakananaiʻa de frente y de espalda, mostrado en Te Kuhane",
+  "kind": "artwork",
+  "author": "Juan",
+  "reference": "Dibujo mostrado en Te Kuhane o Te Tupuna (2015), edición con subtítulos en inglés, 01:02:44; 00:25:01–00:25:03.",
+  "language": "es",
+  "topics": ["representations"],
+  "claims": [],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "te-kuhane/hoa-front-and-back.jpg",
+      "alt": "Fotograma de una hoja firmada De: Juan, con vistas frontal y posterior de un moái, una flor roja y franjas amarillas.",
+      "caption": "Dibujo de Juan con vistas frontal y posterior de Hoa Hakananaiʻa, expuesto en el Museo Británico. Fotograma de Te Kuhane o Te Tupuna (2015), 00:25:02.",
+      "credit": "Dibujo: Juan. Fotograma: Te Kuhane o Te Tupuna, Mahatua Producciones (2015).",
+      "rights": "Publicación en MoSA autorizada por la persona responsable del proyecto el 1 de octubre de 2026. No se declara una licencia para otros usos."
+    }
+  ],
+  "notes": {
+    "text": "One sheet showing a shaded frontal figure and a rear view with a red flower and yellow bands. The inscription reads De: Juan and addresses Hoa Hakananaiʻa by name. Only the displayed given name is recorded; no surname or identity match to film participants is inferred. The two views are one artwork, not two objects or sources. The title is editorial. The representation is an unretouched film still at 00:25:02, retaining the original frame composition.",
+    "language": "en-GB"
+  }
+}

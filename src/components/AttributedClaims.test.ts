@@ -4,6 +4,37 @@ import type { SourcedClaim } from "../data/collection-record";
 import AttributedClaims from "./AttributedClaims.astro";
 
 describe("attributed claim presentation", () => {
+  test("uses a claim language override for its value and the source language for its locator", async () => {
+    const claim: SourcedClaim[] = [
+      {
+        claim: {
+          id: "quoted-passage",
+          objectId: "figure",
+          predicate: "described_as",
+          value: "English quotation",
+          language: "en",
+          locator: "Minuto 2, diálogo en español",
+        },
+        source: {
+          id: "film",
+          title: "Film",
+          kind: "audiovisual",
+          author: null,
+          reference: "Film, 2015",
+          language: "es",
+          claims: [],
+          images: [],
+        },
+      },
+    ];
+    const container = await AstroContainer.create();
+    const html = await container.renderToString(AttributedClaims, {
+      props: { claims: claim, locale: "en" },
+    });
+    expect(html).toContain('<span lang="en">English quotation</span>');
+    expect(html).toContain('<span lang="es">Minuto 2, diálogo en español</span>');
+  });
+
   test.each(["en", "es"] as const)(
     "preserves competing accounts and safely renders locators in %s",
     async (locale) => {

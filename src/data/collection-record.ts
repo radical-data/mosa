@@ -5,6 +5,23 @@ export interface SourcedClaim {
   source: Source;
 }
 
+export function claimValueLanguage(claim: Pick<Claim, "language">, sourceLanguage: string) {
+  const language = claim.language ?? sourceLanguage;
+  return language === "und" ? undefined : language;
+}
+
+export function sourceImagesForObject(source: Source, objectId: string) {
+  const sourceDepictsObject = source.relationships?.some(
+    (relationship) =>
+      relationship.type === "depicts" &&
+      relationship.target.type === "object" &&
+      relationship.target.id === objectId,
+  );
+  return source.images.filter((image) =>
+    image.depicts === undefined ? sourceDepictsObject : image.depicts.includes(objectId),
+  );
+}
+
 // Project validated records without choosing a preferred factual account.
 export function getObjectAccounts(data: CollectionData, objectId: string) {
   const object = data.objects.find((entry) => entry.id === objectId);
@@ -22,16 +39,10 @@ export function getObjectAccounts(data: CollectionData, objectId: string) {
         ),
     )
     .map((source) => {
-      const depictsObject = source.relationships?.some(
-        (relationship) =>
-          relationship.type === "depicts" &&
-          relationship.target.type === "object" &&
-          relationship.target.id === objectId,
-      );
       return {
         ...source,
         claims: source.claims.filter((claim) => claim.objectId === objectId),
-        images: depictsObject ? source.images : [],
+        images: sourceImagesForObject(source, objectId),
       };
     });
   const objectClaims = sources.flatMap((source) =>

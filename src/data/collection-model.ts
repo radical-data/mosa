@@ -26,12 +26,14 @@ export interface Claim {
   objectId: string;
   predicate: Predicate;
   value: string;
+  language?: string;
   locator?: string;
 }
 
 export interface CollectionImage {
   file: string;
   alt: string;
+  depicts?: string[];
   originalUrl?: string;
   caption?: string;
   credit?: string;
@@ -147,8 +149,8 @@ const sourceKeys = [
   "title",
   "topics",
 ];
-const claimKeys = ["id", "objectId", "predicate", "value", "locator"];
-const imageKeys = ["alt", "caption", "credit", "file", "originalUrl", "rights"];
+const claimKeys = ["id", "objectId", "predicate", "value", "language", "locator"];
+const imageKeys = ["alt", "caption", "credit", "depicts", "file", "originalUrl", "rights"];
 const relationshipKeys = ["locator", "target", "type"];
 const recordReferenceKeys = ["id", "type"];
 const captureKeys = ["archiveUrl", "capturedAt", "file", "method", "note", "originalUrl"];
@@ -408,6 +410,12 @@ export function parseSource(value: unknown, file: string): Source {
         `${at}.predicate is unsupported`,
       );
       add(errors, text(claim.value), `${at}.value is required`);
+      if ("language" in claim)
+        add(
+          errors,
+          typeof claim.language === "string" && language.test(claim.language),
+          `${at}.language is invalid`,
+        );
       if ("locator" in claim)
         add(errors, text(claim.locator), `${at}.locator must be non-empty text`);
     });
@@ -423,6 +431,17 @@ export function parseSource(value: unknown, file: string): Source {
         `${at}.file must be a safe collection image path`,
       );
       add(errors, typeof entry.alt === "string", `${at}.alt is required`);
+      if ("depicts" in entry) {
+        add(errors, Array.isArray(entry.depicts), `${at}.depicts must be an array`);
+        if (Array.isArray(entry.depicts)) {
+          add(errors, entry.depicts.every(id), `${at}.depicts contains an invalid object ID`);
+          add(
+            errors,
+            new Set(entry.depicts).size === entry.depicts.length,
+            `${at}.depicts contains duplicates`,
+          );
+        }
+      }
       for (const field of ["caption", "credit", "rights"])
         if (field in entry) add(errors, text(entry[field]), `${at}.${field} cannot be empty`);
       if ("originalUrl" in entry) {
@@ -468,6 +487,18 @@ export function validateCollection(
         )
         .map((relationship) => relationship.target.id),
     );
+    for (const [index, image] of source.images.entries()) {
+      for (const objectId of image.depicts ?? []) {
+        if (!objects.has(objectId))
+          errors.push(
+            `${source.id}.json: images[${index}].depicts refers to missing object ${objectId}`,
+          );
+        if (!depictedObjects.has(objectId))
+          errors.push(
+            `${source.id}.json: images[${index}].depicts object ${objectId} is not depicted by the source`,
+          );
+      }
+    }
     for (const objectId of source.objectIds ?? []) {
       if (!objects.has(objectId))
         errors.push(`${source.id}.json: objectIds refers to missing object ${objectId}`);

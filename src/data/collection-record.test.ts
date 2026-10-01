@@ -1,6 +1,10 @@
 import { describe, expect, test } from "vitest";
 import { type CollectionData, validateCollection } from "./collection-model";
-import { getObjectAccounts, getSourceRelationships } from "./collection-record";
+import {
+  getObjectAccounts,
+  getSourceRelationships,
+  sourceImagesForObject,
+} from "./collection-record";
 
 // Synthetic examples exercise retained competencies, not historical assertions.
 function fixture() {
@@ -170,6 +174,45 @@ describe("retained collection competencies", () => {
     ]);
     expect(record?.sources.some((source) => source.id === "unpublished-photograph")).toBe(true);
     expect(getObjectAccounts(data, "object-two")?.sources).toHaveLength(1);
+  });
+
+  test("image depiction lists narrow each object's gallery and preserve source-page images", () => {
+    const data = fixture();
+    data.sources.push({
+      id: "film",
+      title: "Film with several objects",
+      kind: "audiovisual",
+      author: null,
+      reference: "Film",
+      language: "en",
+      claims: [],
+      images: [
+        { file: "film/hoa.jpg", alt: "Hoa still", depicts: ["object-one"] },
+        { file: "film/figure.jpg", alt: "Figure still", depicts: ["object-two"] },
+        { file: "film/shared.jpg", alt: "Shared still" },
+        { file: "film/unassigned.jpg", alt: "Unassigned still", depicts: [] },
+      ],
+      relationships: [
+        { type: "depicts", target: { type: "object", id: "object-one" } },
+        { type: "depicts", target: { type: "object", id: "object-two" } },
+      ],
+    });
+    const checked = validateCollection(data);
+    const film = checked.sources.find(({ id }) => id === "film");
+    if (!film) throw Error("film fixture is missing");
+
+    expect(sourceImagesForObject(film, "object-one").map(({ file }) => file)).toEqual([
+      "film/hoa.jpg",
+      "film/shared.jpg",
+    ]);
+    expect(sourceImagesForObject(film, "object-two").map(({ file }) => file)).toEqual([
+      "film/figure.jpg",
+      "film/shared.jpg",
+    ]);
+    expect(
+      getObjectAccounts(checked, "object-one")?.sources.find(({ id }) => id === "film")?.images,
+    ).toEqual(sourceImagesForObject(film, "object-one"));
+    expect(getSourceRelationships(checked, "film")?.source.images).toHaveLength(4);
   });
 
   test("ADR 027: source relationships project outgoing, incoming and object links", () => {
