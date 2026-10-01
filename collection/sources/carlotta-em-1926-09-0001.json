@@ -1,17 +1,9 @@
 {
   "author": "Etnografiska museet",
+  "title": "Etnografiska museet collection record for Ua, Stockholm — 1926.09.0001",
+  "kind": "webpage",
   "reference": "https://collections.smvk.se/carlotta-em/web/object/1585335",
   "language": "sv",
-  "images": [
-    {
-      "objectId": "ua-stockholm-1926-09-0001",
-      "file": "ua-stockholm-1926-09-0001/carlotta.jpg",
-      "alt": "Lång träklubba med ett skulpterat ansikte i ena änden.",
-      "credit": "Etnografiska museet / Statens museer för världskultur",
-      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
-      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1585335"
-    }
-  ],
   "claims": [
     {
       "id": "number",
@@ -102,6 +94,16 @@
       "capturedAt": "2026-09-30T00:54:27.389Z",
       "method": "singlefile",
       "note": "Capture checked for displayed accession 1926.09.0001 and catalogue description."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "carlotta-em-1926-09-0001-photograph"
+      }
     }
   ]
 }

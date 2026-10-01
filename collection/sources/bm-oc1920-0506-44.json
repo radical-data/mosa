@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for Adze Oc1920,0506.44",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-44",
   "language": "en",
   "notes": {
@@ -71,16 +73,6 @@
       "locator": "Dimensions"
     }
   ],
-  "images": [
-    {
-      "objectId": "british-museum-adze-oc1920-0506-44",
-      "file": "british-museum-adze-oc1920-0506-44/british-museum-1614122232.jpg",
-      "alt": "Broad red-brown stone adze with a chipped edge, against a grey background.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1614122232"
-    }
-  ],
   "captures": [
     {
       "file": "2026-09-30t15-12-27-031z.html",
@@ -93,6 +85,16 @@
       "capturedAt": "2026-09-30T15:22:06.741Z",
       "method": "singlefile",
       "note": "Image 1614122232 page identifies the adze, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-oc1920-0506-44-photograph"
+      }
     }
   ]
 }

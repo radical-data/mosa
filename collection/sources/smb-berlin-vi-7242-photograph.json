@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai kavakava, Berlin — VI 7242",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/998481",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-kavakava-berlin-vi-7242/smb.jpg",
+      "alt": "Eine dunkle stehende Holzfigur mit langen Ohren und fein geschnitzten Rippen.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Heinz-Günther Malenz",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998481"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-kavakava-berlin-vi-7242"
+      }
+    }
+  ]
+}

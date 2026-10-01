@@ -31,6 +31,9 @@ image origin. Do not select the next image after a caption in raw HTML: it can
 belong to another card. Recheck container boundaries and image hashes before
 recording a photographic conflict. A blank or partial view cannot establish a
 contradiction in features it does not show.
+Keep photograph identity distinct from depicted-object identity. The
+photograph's source record links each depicted object with `depicts`; a page
+that reproduces the photograph links to that source with `reproduces`.
 
 Match conservatively. Institution-scoped catalogue numbers, former identifiers,
 documented transfers, distinctive names or inscriptions, and photographs with
@@ -85,11 +88,16 @@ remaining candidates where the work already lives so the next batch can resume
 without repeating them.
 
 Create `collection/objects/<stable-id>.json` only for a separately identifiable
-object without a verified record. Use a concise navigation `name`, preserve all
+object whose displacement MoSA investigates and that lacks a verified record.
+A site or landscape shown in a photograph is not an object when its own
+displacement is not under investigation; register the page and independently
+identifiable photograph as sources, including a photograph without a reusable
+local image file. Use a concise navigation `name`, preserve all
 established handles, and begin with an empty `foregroundedClaims` array. Do not
 put source names, classifications, locations or provenance into the object file;
-add attributed claims through the source that supports them. Link the object to
-its documenting source using a claim, image or `objectIds` as appropriate.
+add attributed claims through the source that supports them. A documenting
+source can use a claim or `objectIds` when appropriate. A photograph uses a
+`depicts` relationship; its image record has no object ID.
 
 Make the process repeatable: compare proposed entries with existing records
 and useful prior decisions, reuse reviewed decisions, and avoid duplicate objects.

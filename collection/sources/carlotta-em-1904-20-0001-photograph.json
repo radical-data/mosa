@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai kavakava, Stockholm — 1904.20.0001",
+  "kind": "photograph",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1585753",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-kavakava-stockholm-1904-20-0001/carlotta.jpg",
+      "alt": "Träfigur med tydliga revben och ett bevarat inlagt öga.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1585753"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-kavakava-stockholm-1904-20-0001"
+      }
+    }
+  ]
+}

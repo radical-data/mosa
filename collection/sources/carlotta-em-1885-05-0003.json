@@ -1,17 +1,9 @@
 {
   "author": "Etnografiska museet",
+  "title": "Etnografiska museet collection record for Ika, Stockholm — 1885.05.0003",
+  "kind": "webpage",
   "reference": "https://collections.smvk.se/carlotta-em/web/object/1307892",
   "language": "sv",
-  "images": [
-    {
-      "objectId": "ika-stockholm-1885-05-0003",
-      "file": "ika-stockholm-1885-05-0003/carlotta.jpg",
-      "alt": "Mörk träfetisch i form av en kort, hoptryckt fisk med runda ögon.",
-      "credit": "Etnografiska museet / Statens museer för världskultur",
-      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
-      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1307892"
-    }
-  ],
   "claims": [
     {
       "id": "number",
@@ -78,6 +70,16 @@
       "capturedAt": "2026-09-30T00:54:15.150Z",
       "method": "singlefile",
       "note": "Capture checked for displayed accession 1885.05.0003 and catalogue description."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "carlotta-em-1885-05-0003-photograph"
+      }
     }
   ]
 }

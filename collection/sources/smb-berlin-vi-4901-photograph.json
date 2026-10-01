@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moko, Berlin — VI 4901",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/998478",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "moko-berlin-vi-4901/smb.jpg",
+      "alt": "Eine dunkle längliche Holzschnitzerei mit seitlich anliegenden Gliedmassen.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998478"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moko-berlin-vi-4901"
+      }
+    }
+  ]
+}

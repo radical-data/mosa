@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for Figure — British Museum (Oc,EP.22)",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-22",
   "language": "en",
   "claims": [
@@ -60,16 +62,6 @@
       "locator": "Dimensions"
     }
   ],
-  "images": [
-    {
-      "objectId": "british-museum-figure-oc-ep-22",
-      "file": "british-museum-figure-oc-ep-22/british-museum-209819001.jpg",
-      "alt": "Carved male figure, moai tangata, made of wood.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/209819001"
-    }
-  ],
   "notes": {
     "language": "en-GB",
     "text": "Selective extraction of the record heading, Object Type, Museum number, Production date, Production place, Materials, Description and Dimensions. Acquisition notes and curator comments are claimed only when the full relevant wording is visibly present in the preserved capture; collapsed or truncated fields remain in the capture without a public claim. The combined Found/Acquired field is retained in the capture and is not treated as a definite findspot. Image 209819001 was downloaded from the museum's image page after it identified this object and stated image-specific CC BY-NC-SA 4.0 terms and required credit. The original JPEG was visually reviewed and preserved unchanged."
@@ -86,6 +78,16 @@
       "capturedAt": "2026-09-30T19:39:27.244Z",
       "method": "singlefile",
       "note": "Image 209819001 page identifies the depicted figure, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-figure-oc-ep-22-photograph"
+      }
     }
   ]
 }

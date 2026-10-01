@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai kavakava, Berlin — VI 4917",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/823466",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-kavakava-berlin-vi-4917/smb.jpg",
+      "alt": "Eine helle stehende Holzfigur mit grossem Kopf, langen Ohren und schmalem Rumpf.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Martin Franken",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/823466"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-kavakava-berlin-vi-4917"
+      }
+    }
+  ]
+}

@@ -1,17 +1,9 @@
 {
   "author": "Etnografiska museet",
+  "title": "Etnografiska museet collection record for Ua, Stockholm — 1926.09.0002",
+  "kind": "webpage",
   "reference": "https://collections.smvk.se/carlotta-em/web/object/1585336",
   "language": "sv",
-  "images": [
-    {
-      "objectId": "ua-stockholm-1926-09-0002",
-      "file": "ua-stockholm-1926-09-0002/carlotta.jpg",
-      "alt": "Lång träklubba med två skulpterade ansikten och böjd kropp.",
-      "credit": "Etnografiska museet / Statens museer för världskultur",
-      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
-      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1585336"
-    }
-  ],
   "claims": [
     {
       "id": "number",
@@ -90,6 +82,16 @@
       "capturedAt": "2026-09-30T00:54:39.050Z",
       "method": "singlefile",
       "note": "Capture checked for displayed accession 1926.09.0002 and catalogue description."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "carlotta-em-1926-09-0002-photograph"
+      }
     }
   ]
 }

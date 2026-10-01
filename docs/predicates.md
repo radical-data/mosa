@@ -43,8 +43,11 @@ Optional claim `locator` text identifies a source passage; it is citation metada
 ADR 027 accepts source-to-source relationships such as `reproduces`,
 `discusses` and `is_part_of`, plus source-to-object `depicts`. These are
 relationships between records, not claim predicates, and do not transfer a
-source's claims. They are pending implementation; the current collection
-continues to use direct object links, claims and embedded image records.
+source's claims. The collection implements them with a typed `target` reference.
+An independent photograph source uses `depicts` to link each object shown;
+publishing sources use `reproduces` to link that photograph. Object galleries
+derive membership from `depicts`. Direct `objectIds` remains available when a
+source documents an object before claims are extracted.
 
 Foregrounding refers to a claim ID from the same object. It expresses MoSA's
 editorial salience, not certainty, publication approval or truth ranking.

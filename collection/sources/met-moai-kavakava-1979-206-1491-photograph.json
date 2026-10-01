@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai kavakava, New York — 1979.206.1491",
+  "kind": "photograph",
+  "reference": "https://www.metmuseum.org/art/collection/search/313680",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-kavakava-new-york-1979-206-1491/met.jpg",
+      "alt": "Front view of a carved standing male figure with elongated facial features and prominently carved ribs.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain (The Met Open Access)",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/313680"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-kavakava-new-york-1979-206-1491"
+      }
+    }
+  ]
+}

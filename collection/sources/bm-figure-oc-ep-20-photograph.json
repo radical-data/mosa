@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Figure — British Museum (Oc,EP.20)",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/209764001",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-figure-oc-ep-20/british-museum-209764001.jpg",
+      "alt": "Standing emaciated male figure, moai kavakava, carved in brown wood, on the head is carved a bird-like beast in low relief.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/209764001"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc-ep-20"
+      }
+    }
+  ]
+}

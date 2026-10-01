@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of British Museum spear-head Oc1953,14.3",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1614139731",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-spear-head-oc1953-14-3/british-museum-1614139731.jpg",
+      "alt": "Black obsidian spear-head.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1614139731"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-spear-head-oc1953-14-3"
+      }
+    }
+  ]
+}

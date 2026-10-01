@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Figure — British Museum (Oc1950,04.12)",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1322891001",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-figure-oc1950-04-12/british-museum-1322891001.jpg",
+      "alt": "Bird god figure made of wood with female symbols in relief and eyes pierced though the head.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1322891001"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc1950-04-12"
+      }
+    }
+  ]
+}

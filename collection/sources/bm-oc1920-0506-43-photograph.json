@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Adze Oc1920,0506.43",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1614122229",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-adze-oc1920-0506-43/british-museum-1614122229.jpg",
+      "alt": "Long reddish stone adze with a flat face, against a grey background.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1614122229"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-adze-oc1920-0506-43"
+      }
+    }
+  ]
+}

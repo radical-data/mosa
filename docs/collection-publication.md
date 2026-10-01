@@ -4,12 +4,10 @@ Every tracked record in `collection/` is public material. Git history supplies
 authorship and rollback. Agents can work directly on public museum material;
 no separate publication approval or reviewer sign-off is required.
 
-The accepted source and editorial model in
-[ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md)
-is pending implementation. Until the collection migration commit lands, follow
-the current instructions on this page. The ADR's
-[“In everyday work” table](adrs/027-distinguish-displaced-objects-and-documentary-sources.md#in-everyday-work)
-is the quick reference for the target workflow.
+Follow the implemented source and editorial model in
+[ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md).
+Its [“In everyday work” table](adrs/027-distinguish-displaced-objects-and-documentary-sources.md#in-everyday-work)
+is the quick reference for deciding which record to create.
 
 ## Add or edit an object
 
@@ -29,6 +27,11 @@ changes. Preserve established handles because they form public URLs. The `name`
 is an editorial navigation label; put names asserted by sources in `has_name`
 claims.
 
+Create an object only when MoSA investigates the displacement of that particular
+material. A place shown in a photograph is not an object when the place itself
+has not been displaced. Register the catalogue page and the photograph as
+sources instead, even when the photograph has no reusable local image file.
+
 ## Add a source, claims and images
 
 For a complete import from a supplied museum, archive or collection page, use
@@ -42,10 +45,11 @@ the source ID:
 
 ```json
 {
+  "title": "Catalogue record 123",
+  "kind": "webpage",
   "author": "Named person or institution",
   "reference": "https://example.org/catalogue/123",
   "language": "en-GB",
-  "objectIds": ["example-object"],
   "claims": [
     {
       "id": "classification",
@@ -54,30 +58,75 @@ the source ID:
       "value": "Moai / Living Ancestor"
     }
   ],
-  "images": [
+  "images": [],
+  "relationships": [
     {
-      "objectId": "example-object",
-      "file": "example-object/front.jpg",
-      "alt": "Front view of the object",
-      "credit": "Institution or photographer",
-      "rights": "Rights statement",
-      "originalUrl": "https://example.org/catalogue/123"
+      "type": "reproduces",
+      "target": { "type": "source", "id": "example-photograph" }
     }
   ]
 }
 ```
 
-A publication or catalogue we have examined can be registered with its known
-attribution, reference and language, empty `claims` and `images`, and no
-`objectIds` or `captures`. For an unlinked source, use `notes` to explain its
-relevance to the investigation and why no object relationship is established.
-This records the source without inventing object identities or requiring a
-shareable copy of the original.
+A source requires an editorial `title` and a `kind`, as well as `author` (use
+`null` when unknown), `reference`, `language`, `claims` and `images`. Available
+kinds are `webpage`, `publication`, `photograph`, `artwork`, `correspondence`,
+`audiovisual` and `other`. The title is a navigation label; do not present it as
+an original title unless the evidence supports that. A publication or catalogue
+can have empty `claims` and `images`, and no object links, captures or local
+files. For an unlinked source, use `notes` to explain its relevance and why no
+object relationship is established. This records it without inventing object
+identities or requiring a shareable copy of the original.
 
-Use `objectIds` to publish a source that documents an object before any claims
-or images are extracted. Do not repeat an object ID when a claim or image in the
-same source already links that object. A source can still use `objectIds` for one
-object while its claims or images link different objects.
+Use `objectIds` when a source documents an object before any claims are
+extracted. Do not repeat an object ID already linked by one of the source's
+claims or `depicts` relationships. A source can link one object with `objectIds`
+while its claims or relationships link other objects. Relationship entries use
+`target: {"type": "object"|"source", "id": "…"}`. Use `depicts` for a source
+that depicts an object, and `reproduces`, `discusses` or `is_part_of` for a
+source-to-source link. Add a locator when it identifies the relevant passage or
+part. Relationships do not transfer claims, authorship, rights or identity.
+
+### Give an independently identifiable photograph its own source
+
+When a catalogue webpage reproduces an independently authored photograph,
+record the photograph as a `photograph` source. Keep the webpage's text, claims
+and capture with the webpage source; put the photograph's attribution,
+image-specific rights and publishable representation with the photograph source.
+The webpage uses `reproduces` to link to the photograph, and the photograph
+uses `depicts` to link to each object shown. Image entries have no `objectId`;
+the `depicts` relationship makes the photograph appear in each depicted object's
+gallery.
+
+```json
+{
+  "title": "Front view of the carving",
+  "kind": "photograph",
+  "author": "Photographer or institution, when established",
+  "reference": "https://example.org/catalogue/123/photo",
+  "language": "en-GB",
+  "claims": [],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "example-object" } }
+  ],
+  "images": [
+    {
+      "file": "example-object/front.jpg",
+      "alt": "Front view of the object",
+      "credit": "Established image credit",
+      "rights": "Rights statement",
+      "originalUrl": "https://example.org/catalogue/123/photo"
+    }
+  ]
+}
+```
+
+Register an identified photograph once when several publications reproduce it,
+and add a `reproduces` relationship from each publication. One photograph can
+depict several objects. A photograph source can have no local publishable image.
+A scan of a letter stays as a representation on its letter source; a webpage
+screenshot remains capture evidence unless it has an independent source
+identity. Resized renditions are files for the same photograph, not new sources.
 
 Use `null` for an unknown author rather than inventing one. Use a BCP 47
 language tag such as `es-CL`, `en-GB`, `rap` or `und`.
@@ -272,12 +321,15 @@ Stage downloads in `research-local/` and inspect the actual image before adding
 it. Confirm the depicted object, view, resolution and image-specific reuse
 terms; a webpage's text licence does not necessarily cover its photographs.
 Prefer the original downloadable file over a thumbnail, and preserve its bytes.
-Record credit, the licence name and URL, and any changes in the image metadata.
-The `originalUrl` can identify the image's description page when that page supplies
-its attribution and licence. When the download URL differs, keep it in source
-`notes` with any useful rights review context. Git LFS records the file checksum; do not duplicate routine
-metadata in a separate audit. Leave uncertain rights or object matches in staging.
-Write image prose in the source record's declared language; the gallery and
+Put the image entry and its credit, licence, alt text and original URL in the
+source record that represents the image. For an independently identifiable
+photograph, that is its `photograph` source; connect the publishing webpage with
+`reproduces` and connect the photograph to each object shown with `depicts`.
+Do not infer a photographer from the hosting institution. When the download URL
+differs, keep it in source `notes` with any useful rights review context. Git
+LFS records the file checksum; do not duplicate routine metadata in a separate
+audit. Leave uncertain rights or object matches in staging. Write image prose
+in the source record's declared language; the gallery and
 collection previews mark that language explicitly. Gallery interface labels
 are translated for each route.
 
@@ -291,7 +343,11 @@ Create `collection/editorials/<id>.md`:
 
 ```markdown
 ---
-objectId: example-object
+subjects:
+  - type: object
+    id: example-object
+  - type: source
+    id: example-source
 title: Editorial title
 author: Named author
 language: es-CL
@@ -303,9 +359,10 @@ Editorial text in Markdown.
 The Markdown file name without `.md` is the editorial ID.
 
 Use `author: null` only while authorship is genuinely unresolved. An editorial
-can be in one language; the page marks its language rather than pretending it is
-translated. Claims made in the prose do not automatically become structured
-claims.
+can be in one language; its standalone page marks that language rather than
+pretending it is translated. `subjects` is optional and can identify multiple
+objects and sources. Omit it for a general editorial. Claims made in the prose
+do not automatically become structured claims.
 
 ## Foreground a perspective
 
@@ -323,9 +380,10 @@ just collection-check
 just build
 ```
 
-Review the affected object page in both routes. Check attribution, source
-language, image rights and alt text, foregrounding, and whether the canonical
-navigation name obscures a source account.
+Review affected object and source pages and the standalone editorial in both
+language routes. Check attribution, source language, image rights and alt text,
+foregrounding, and whether a canonical navigation name obscures a source
+account.
 
 ## Deploy and withdraw
 

@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Paoa, Berlin — VI 4864 - A",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/998472",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "paoa-berlin-vi-4864-a/smb.jpg",
+      "alt": "Eine breite Holzkeule, die am Griffende in einen geschnitzten Kopf übergeht.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Heinz-Günther Malenz",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998472"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "paoa-berlin-vi-4864-a"
+      }
+    }
+  ]
+}

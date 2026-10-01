@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai Hava — British Museum",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/84146001",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-hava-british-museum/british-museum-84146001.jpg",
+      "alt": "Ancestor figure or moai, referred to as Moai Hava, made of basalt, showing arms, torso and head.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/84146001"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-hava-british-museum"
+      }
+    }
+  ]
+}

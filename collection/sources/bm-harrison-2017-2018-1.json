@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum catalogue record for drawing 2017,2018.1",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_2017-2018-1",
   "language": "en-GB",
   "claims": [
@@ -9,17 +11,6 @@
       "predicate": "described_as",
       "value": "Drawing, of the hut on Rapa Nui, where the stone statue, Hoa Hakananai'a, was found by Europeans.",
       "locator": "Description"
-    }
-  ],
-  "images": [
-    {
-      "objectId": "hoa-hakananai-a",
-      "file": "hoa-hakananai-a/bm-harrison-1613289345.jpg",
-      "alt": "Grey wash drawing of Hoa Hakananaiʻa inside a stone structure, with a standing figure on each side.",
-      "caption": "Mathew James Harrison's 1868 drawing of Hoa Hakananaiʻa in the stone structure at ʻOrongo.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289345"
     }
   ],
   "notes": {
@@ -38,6 +29,16 @@
       "capturedAt": "2026-09-30T18:04:01.991Z",
       "method": "singlefile",
       "note": "Image 1613289345 page identifies the drawing, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-harrison-2017-2018-1-drawing"
+      }
     }
   ]
 }

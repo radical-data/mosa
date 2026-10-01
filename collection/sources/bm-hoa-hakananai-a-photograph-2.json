@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Hoa Hakananaiʻa",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613770913",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "hoa-hakananai-a/british-museum-1613770913.jpg",
+      "alt": "Close view of the carvings on the back of Hoa Hakananai’a’s head against a black background.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613770913"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      }
+    }
+  ]
+}

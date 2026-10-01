@@ -1,5 +1,7 @@
 {
   "author": "Linden-Museum Stuttgart",
+  "title": "Linden-Museum Stuttgart collection record for Ua, Stuttgart — 4567",
+  "kind": "webpage",
   "reference": "https://sammlung-digital.lindenmuseum.de/en/object/staff_13736",
   "language": "en",
   "claims": [
@@ -58,16 +60,6 @@
       "value": "Ua were described in the past as clubs, among other things, but even if a use as a weapon was not ruled out, it was primarily a insignia of high rank. At the upper end of the staff is a carved double face, the eyes of which were made of obsidian. The staff has numerous historical repairs by wood inlays. (Text: Ulrich Menter)"
     }
   ],
-  "images": [
-    {
-      "objectId": "ua-stuttgart-4567",
-      "file": "ua-stuttgart-4567/linden-staff.jpg",
-      "alt": "A tall wooden staff with a carved double face at the top.",
-      "credit": "Dominik Drasdow, Linden-Museum Stuttgart",
-      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
-      "originalUrl": "https://sammlung-digital.lindenmuseum.de/en/object/staff_13736"
-    }
-  ],
   "notes": {
     "text": "The displayed catalogue number 004567 matches the existing MoSA object handle ending in 4567. The catalogue account identifies this item as a Rapanui staff and gives matching 126 cm length and Valparaiso provenance. The museum’s discussion of historical uses and uncertainty is retained as an attributed description. The accompanying photograph is credited to Dominik Drasdow and the image-specific CC BY-SA 4.0 licence is linked on the page; the displayed image matches a tall staff with a carved double face.",
     "language": "en-GB"
@@ -78,6 +70,16 @@
       "capturedAt": "2026-09-29T23:57:30.498Z",
       "method": "singlefile",
       "note": "Reviewed capture preserves the object title, inventory number 004567, classification, materials, dimensions, accession and origin fields, Ulrich Menter text, and the item image with CC BY-SA 4.0 credit."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "linden-museum-stuttgart-4567-photograph"
+      }
     }
   ]
 }

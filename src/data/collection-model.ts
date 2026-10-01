@@ -1,3 +1,5 @@
+import { parse as parseYaml } from "yaml";
+
 export const predicates = [
   "has_name",
   "classified_as",
@@ -28,13 +30,53 @@ export interface Claim {
 }
 
 export interface CollectionImage {
-  objectId: string;
   file: string;
   alt: string;
   originalUrl?: string;
   caption?: string;
   credit?: string;
   rights?: string;
+}
+
+export const sourceKinds = [
+  "webpage",
+  "publication",
+  "photograph",
+  "artwork",
+  "correspondence",
+  "audiovisual",
+  "other",
+] as const;
+
+export type SourceKind = (typeof sourceKinds)[number];
+
+export const sourceTopics = [
+  "displacement",
+  "restitution",
+  "museum-practices",
+  "representations",
+] as const;
+
+export type SourceTopic = (typeof sourceTopics)[number];
+
+export interface RecordReference {
+  type: "object" | "source";
+  id: string;
+}
+
+export const sourceRelationshipTypes = [
+  "depicts",
+  "reproduces",
+  "discusses",
+  "is_part_of",
+] as const;
+
+export type SourceRelationshipType = (typeof sourceRelationshipTypes)[number];
+
+export interface SourceRelationship {
+  type: SourceRelationshipType;
+  target: RecordReference;
+  locator?: string;
 }
 
 export type SourceCaptureMethod = "singlefile" | "download" | "supplied-file" | "browser-pdf";
@@ -50,10 +92,15 @@ export interface SourceCapture {
 
 export interface Source {
   id: string;
+  title: string;
+  kind: SourceKind;
   author: string | null;
   reference: string;
   language: string;
+  date?: string;
+  topics?: SourceTopic[];
   objectIds?: string[];
+  relationships?: SourceRelationship[];
   notes?: { text: string; language: string };
   captures?: SourceCapture[];
   claims: Claim[];
@@ -62,7 +109,7 @@ export interface Source {
 
 export interface EditorialMetadata {
   id: string;
-  objectId: string;
+  subjects?: RecordReference[];
   title: string;
   author: string | null;
   language: string;
@@ -88,14 +135,21 @@ const sourceKeys = [
   "author",
   "captures",
   "claims",
+  "date",
   "images",
+  "kind",
   "language",
   "notes",
   "objectIds",
   "reference",
+  "relationships",
+  "title",
+  "topics",
 ];
 const claimKeys = ["id", "objectId", "predicate", "value", "locator"];
-const imageKeys = ["alt", "caption", "credit", "file", "objectId", "originalUrl", "rights"];
+const imageKeys = ["alt", "caption", "credit", "file", "originalUrl", "rights"];
+const relationshipKeys = ["locator", "target", "type"];
+const recordReferenceKeys = ["id", "type"];
 const captureKeys = ["archiveUrl", "capturedAt", "file", "method", "note", "originalUrl"];
 const captureExtensions = "html|pdf|jpg|jpeg|png|webp|avif|tif|tiff";
 
@@ -177,6 +231,8 @@ export function parseSource(value: unknown, file: string): Source {
   add(errors, isObject(value), `${file}: expected an object`);
   if (!isObject(value)) throw Error(errors.join("\n"));
   add(errors, sameKeys(value, sourceKeys), `${file}: contains an unsupported field`);
+  add(errors, text(value.title), `${file}: title is required`);
+  add(errors, sourceKinds.includes(value.kind as SourceKind), `${file}: kind is unsupported`);
   add(errors, value.author === null || text(value.author), `${file}: author must be text or null`);
   add(errors, text(value.reference), `${file}: reference is required`);
   add(
@@ -184,6 +240,22 @@ export function parseSource(value: unknown, file: string): Source {
     typeof value.language === "string" && language.test(value.language),
     `${file}: language is invalid`,
   );
+  if ("date" in value) add(errors, text(value.date), `${file}: date must be non-empty text`);
+  if ("topics" in value) {
+    add(errors, Array.isArray(value.topics), `${file}: topics must be an array`);
+    if (Array.isArray(value.topics)) {
+      add(
+        errors,
+        value.topics.every((topic) => sourceTopics.includes(topic as SourceTopic)),
+        `${file}: topics contains an unsupported topic`,
+      );
+      add(
+        errors,
+        new Set(value.topics).size === value.topics.length,
+        `${file}: topics contains duplicates`,
+      );
+    }
+  }
   add(errors, Array.isArray(value.claims), `${file}: claims must be an array`);
   add(errors, Array.isArray(value.images), `${file}: images must be an array`);
   if ("objectIds" in value) {
@@ -196,6 +268,53 @@ export function parseSource(value: unknown, file: string): Source {
         new Set(value.objectIds).size === value.objectIds.length,
         `${file}: objectIds contains duplicates`,
       );
+    }
+  }
+  if ("relationships" in value) {
+    add(errors, Array.isArray(value.relationships), `${file}: relationships must be an array`);
+    if (Array.isArray(value.relationships)) {
+      value.relationships.forEach((relationship, index) => {
+        const at = `${file}: relationships[${index}]`;
+        add(errors, isObject(relationship), `${at} must be an object`);
+        if (!isObject(relationship)) return;
+        add(
+          errors,
+          sameKeys(relationship, relationshipKeys),
+          `${at} contains an unsupported field`,
+        );
+        add(
+          errors,
+          sourceRelationshipTypes.includes(relationship.type as SourceRelationshipType),
+          `${at}.type is unsupported`,
+        );
+        add(errors, isObject(relationship.target), `${at}.target must be an object reference`);
+        if (isObject(relationship.target)) {
+          add(
+            errors,
+            sameKeys(relationship.target, recordReferenceKeys),
+            `${at}.target contains an unsupported field`,
+          );
+          add(
+            errors,
+            ["object", "source"].includes(String(relationship.target.type)),
+            `${at}.target.type is unsupported`,
+          );
+          add(errors, id(relationship.target.id), `${at}.target.id is invalid`);
+        }
+        if ("locator" in relationship)
+          add(errors, text(relationship.locator), `${at}.locator must be non-empty text`);
+        if (relationship.type === "depicts" && isObject(relationship.target))
+          add(errors, relationship.target.type === "object", `${at}.depicts must target an object`);
+        if (
+          ["reproduces", "discusses", "is_part_of"].includes(String(relationship.type)) &&
+          isObject(relationship.target)
+        )
+          add(
+            errors,
+            relationship.target.type === "source",
+            `${at}.${relationship.type} must target a source`,
+          );
+      });
     }
   }
   if ("notes" in value) {
@@ -297,7 +416,6 @@ export function parseSource(value: unknown, file: string): Source {
       add(errors, isObject(entry), `${at} must be an object`);
       if (!isObject(entry)) return;
       add(errors, sameKeys(entry, imageKeys), `${at} contains an unsupported field`);
-      add(errors, id(entry.objectId), `${at}.objectId is invalid`);
       add(
         errors,
         typeof entry.file === "string" && imagePath.test(entry.file),
@@ -341,13 +459,20 @@ export function validateCollection(
     if (sources.has(source.id)) errors.push(`duplicate source id: ${source.id}`);
     sources.add(source.id);
     const claimedObjects = new Set(source.claims.map((claim) => claim.objectId));
-    const imagedObjects = new Set(source.images.map((image) => image.objectId));
+    const depictedObjects = new Set(
+      (source.relationships ?? [])
+        .filter(
+          (relationship) =>
+            relationship.type === "depicts" && relationship.target.type === "object",
+        )
+        .map((relationship) => relationship.target.id),
+    );
     for (const objectId of source.objectIds ?? []) {
       if (!objects.has(objectId))
         errors.push(`${source.id}.json: objectIds refers to missing object ${objectId}`);
-      if (claimedObjects.has(objectId) || imagedObjects.has(objectId))
+      if (claimedObjects.has(objectId) || depictedObjects.has(objectId))
         errors.push(
-          `${source.id}.json: redundant objectId ${objectId} is already linked by a claim or image`,
+          `${source.id}.json: redundant objectId ${objectId} is already linked by a claim or depicts relationship`,
         );
     }
     const sourceClaims = new Set<string>();
@@ -362,16 +487,53 @@ export function validateCollection(
         errors.push(`claim ${claimId} refers to missing object ${claim.objectId}`);
     }
     for (const image of source.images) {
-      const imageId = `${image.objectId}/${image.file}`;
-      if (sourceImages.has(imageId))
-        errors.push(`${source.id}.json: duplicate image for ${image.objectId}: ${image.file}`);
-      sourceImages.add(imageId);
-      if (!objects.has(image.objectId))
-        errors.push(`image ${source.id}/${image.file} refers to missing object ${image.objectId}`);
+      if (sourceImages.has(image.file))
+        errors.push(`${source.id}.json: duplicate image file: ${image.file}`);
+      sourceImages.add(image.file);
       if (options.imageFiles && !options.imageFiles.has(image.file))
         errors.push(`image ${source.id}/${image.file} refers to missing file ${image.file}`);
     }
+    const relationshipKeys = new Set<string>();
+    for (const relationship of source.relationships ?? []) {
+      const { type, target } = relationship;
+      const key = `${type}:${target.type}:${target.id}`;
+      if (relationshipKeys.has(key))
+        errors.push(`${source.id}.json: duplicate relationship ${key}`);
+      relationshipKeys.add(key);
+      if (target.type === "object" && !objects.has(target.id))
+        errors.push(`${source.id}.json: ${type} refers to missing object ${target.id}`);
+      if (
+        target.type === "source" &&
+        !sources.has(target.id) &&
+        !data.sources.some((entry) => entry.id === target.id)
+      )
+        errors.push(`${source.id}.json: ${type} refers to missing source ${target.id}`);
+      if (target.type === "source" && target.id === source.id)
+        errors.push(`${source.id}.json: ${type} cannot target itself`);
+    }
   }
+  const parentSources = new Map<string, string[]>();
+  for (const source of data.sources)
+    for (const relationship of source.relationships ?? [])
+      if (relationship.type === "is_part_of" && relationship.target.type === "source") {
+        const parents = parentSources.get(source.id) ?? [];
+        parents.push(relationship.target.id);
+        parentSources.set(source.id, parents);
+      }
+  const visited = new Set<string>();
+  const active = new Set<string>();
+  const visit = (sourceId: string) => {
+    if (active.has(sourceId)) {
+      errors.push(`is_part_of relationships contain a cycle at ${sourceId}`);
+      return;
+    }
+    if (visited.has(sourceId)) return;
+    active.add(sourceId);
+    for (const parent of parentSources.get(sourceId) ?? []) visit(parent);
+    active.delete(sourceId);
+    visited.add(sourceId);
+  };
+  for (const sourceId of parentSources.keys()) visit(sourceId);
   for (const object of data.objects)
     for (const claimId of object.foregroundedClaims) {
       const claim = claims.get(claimId);
@@ -391,29 +553,48 @@ export function parseEditorialFrontmatter(value: string, file: string): Editoria
   const editorialId = fileId(file, "md");
   const match = /^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/.exec(value);
   if (!match) throw Error(`${file}: editorial requires YAML front matter`);
-  const fields = new Map<string, string | null>();
-  for (const line of match[1].split(/\r?\n/)) {
-    if (!line.trim()) continue;
-    const field = /^([A-Za-z][A-Za-z0-9]*):(?:\s+(.*))?$/.exec(line);
-    if (!field) throw Error(`${file}: editorial front matter accepts scalar fields only`);
-    const raw = field[2]?.trim() ?? "";
-    fields.set(
-      field[1],
-      raw === "null" || raw === "~" || raw === ""
-        ? null
-        : raw.replace(/^(?:"(.*)"|'(.*)')$/, "$1$2"),
-    );
+  let parsed: unknown;
+  try {
+    parsed = parseYaml(match[1]);
+  } catch (error) {
+    throw Error(`${file}: invalid editorial YAML front matter: ${String(error)}`);
   }
-  const allowed = new Set(["objectId", "title", "author", "language"]);
-  if ([...fields.keys()].some((key) => !allowed.has(key)))
+  if (!isObject(parsed)) throw Error(`${file}: editorial front matter must be a YAML mapping`);
+  const allowed = new Set(["subjects", "title", "author", "language"]);
+  if ([...Object.keys(parsed)].some((key) => !allowed.has(key)))
     throw Error(`${file}: editorial contains an unsupported field`);
-  const metadata = Object.fromEntries(fields) as unknown as EditorialMetadata;
+  const metadata = parsed as unknown as Omit<EditorialMetadata, "id">;
+  const validSubjects = (subjects: unknown): subjects is RecordReference[] =>
+    Array.isArray(subjects) &&
+    subjects.every(
+      (subject) =>
+        isObject(subject) &&
+        sameKeys(subject, recordReferenceKeys) &&
+        ["object", "source"].includes(String(subject.type)) &&
+        id(subject.id),
+    ) &&
+    new Set(subjects.map((subject) => `${subject.type}:${subject.id}`)).size === subjects.length;
   if (
-    !id(metadata.objectId) ||
     !text(metadata.title) ||
     !(metadata.author === null || text(metadata.author)) ||
-    !language.test(metadata.language)
+    typeof metadata.language !== "string" ||
+    !language.test(metadata.language) ||
+    ("subjects" in metadata && !validSubjects(metadata.subjects))
   )
     throw Error(`${file}: editorial front matter is incomplete or invalid`);
   return { ...metadata, id: editorialId };
+}
+
+export function validateEditorialSubjects(
+  metadata: EditorialMetadata,
+  data: CollectionData,
+  file: string,
+) {
+  const objectIds = new Set(data.objects.map((object) => object.id));
+  const sourceIds = new Set(data.sources.map((source) => source.id));
+  for (const subject of metadata.subjects ?? []) {
+    const exists =
+      subject.type === "object" ? objectIds.has(subject.id) : sourceIds.has(subject.id);
+    if (!exists) throw Error(`${file}: refers to missing ${subject.type} ${subject.id}`);
+  }
 }

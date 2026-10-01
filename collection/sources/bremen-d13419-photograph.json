@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai taŋata, Bremen — D13419",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/202403/1233/d13419-figur-1233-3668.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-tangata-bremen-d13419/museum-digital.jpg",
+      "alt": "Kurze Holzfigur mit breitem Gesicht und abgeschnittenem Unterkörper.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1233/d13419-figur-1233-3668.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-tangata-bremen-d13419"
+      }
+    }
+  ]
+}

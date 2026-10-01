@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Adze Oc1920,0506.45",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1614122238",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-adze-oc1920-0506-45/british-museum-1614122238.jpg",
+      "alt": "Dark stone adze with a polished central surface and brown sides, against a grey background.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1614122238"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-adze-oc1920-0506-45"
+      }
+    }
+  ]
+}

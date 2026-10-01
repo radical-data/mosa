@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ua, Göteborg — 1927.13.0001",
+  "kind": "photograph",
+  "reference": "https://collections.smvk.se/carlotta-vkm/web/object/63754",
+  "language": "sv",
+  "claims": [],
+  "images": [
+    {
+      "file": "ua-goteborg-1927-13-0001/carlotta.jpg",
+      "alt": "Långt träföremål med snidat huvud, fotograferat liggande.",
+      "credit": "Världskulturmuseet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-vkm/web/object/63754"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ua-goteborg-1927-13-0001"
+      }
+    }
+  ]
+}

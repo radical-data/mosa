@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Hoa Hakananaiʻa",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/839364001",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "hoa-hakananai-a/british-museum-839364001.jpg",
+      "alt": "Frontal view of Hoa Hakananai’a from below, with the carved stone figure filling the frame.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/839364001"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      }
+    }
+  ]
+}

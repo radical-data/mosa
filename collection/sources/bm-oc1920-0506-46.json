@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for Adze Oc1920,0506.46",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-46",
   "language": "en",
   "notes": {
@@ -85,16 +87,6 @@
       "locator": "Curator’s comments"
     }
   ],
-  "images": [
-    {
-      "objectId": "british-museum-adze-oc1920-0506-46",
-      "file": "british-museum-adze-oc1920-0506-46/british-museum-1614122244.jpg",
-      "alt": "Dark stone adze with an uneven glossy face, against a grey background.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1614122244"
-    }
-  ],
   "captures": [
     {
       "file": "2026-09-30t15-12-52-662z.html",
@@ -107,6 +99,16 @@
       "capturedAt": "2026-09-30T15:22:29.655Z",
       "method": "singlefile",
       "note": "Image 1614122244 page identifies the adze, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-oc1920-0506-46-photograph"
+      }
     }
   ]
 }

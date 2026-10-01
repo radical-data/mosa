@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of British Museum fishing-net Oc.6349",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613788004",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-fishing-net-oc-6349/british-museum-1613788004.jpg",
+      "alt": "Rolled fishing net made from vegetable-fibre string, tied with cord.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788004"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-fishing-net-oc-6349"
+      }
+    }
+  ]
+}

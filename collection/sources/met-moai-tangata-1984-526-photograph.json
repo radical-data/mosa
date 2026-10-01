@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai taŋata, New York — 1984.526",
+  "kind": "photograph",
+  "reference": "https://www.metmuseum.org/art/collection/search/314826",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-tangata-new-york-1984-526/met.jpg",
+      "alt": "Three-quarter view of a standing wooden figure with an incised head and arms at its sides.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/314826"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-tangata-new-york-1984-526"
+      }
+    }
+  ]
+}

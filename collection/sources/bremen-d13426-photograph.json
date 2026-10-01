@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Taŋata manu, Bremen — D13426",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/202403/1257/d13426-figur-moai-tangata-manu-1257-3204.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "tangata-manu-bremen-d13426/museum-digital.jpg",
+      "alt": "Vogelmenschliche Holzfigur mit angezogenen Beinen und Händen am Schnabel.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1257/d13426-figur-moai-tangata-manu-1257-3204.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "tangata-manu-bremen-d13426"
+      }
+    }
+  ]
+}

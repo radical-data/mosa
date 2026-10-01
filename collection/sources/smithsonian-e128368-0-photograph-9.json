@@ -1,0 +1,27 @@
+{
+  "author": null,
+  "title": "Photograph of Moai de piedra con sombrero",
+  "kind": "photograph",
+  "reference": "https://collections.nmnh.si.edu/media/?i=11121201",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-piedra-sombrero/smithsonian-11121201.jpg",
+      "alt": "Oblique view of the moai without a pukao in front of a red museum panel.",
+      "caption": "E128368-0.",
+      "credit": "Smithsonian Institution, National Museum of Natural History, Department of Anthropology; E128368-0.",
+      "rights": "Usage conditions apply: educational and other non-commercial reuse under https://www.si.edu/termsofuse. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://collections.nmnh.si.edu/media/?i=11121201"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-piedra-sombrero"
+      }
+    }
+  ]
+}

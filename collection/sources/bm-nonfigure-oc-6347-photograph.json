@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of British Museum girdle Oc.6347",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613790861",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-girdle-oc-6347/british-museum-1613790861.jpg",
+      "alt": "Long human-hair cord girdle with barkcloth fastenings at the ends.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613790861"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-girdle-oc-6347"
+      }
+    }
+  ]
+}

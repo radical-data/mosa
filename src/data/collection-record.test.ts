@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 import { type CollectionData, validateCollection } from "./collection-model";
-import { getObjectAccounts } from "./collection-record";
+import { getObjectAccounts, getSourceRelationships } from "./collection-record";
 
 // Synthetic examples exercise retained competencies, not historical assertions.
 function fixture() {
@@ -12,6 +12,8 @@ function fixture() {
     sources: [
       {
         id: "first",
+        title: "Catalogue A",
+        kind: "publication",
         author: "Catalogue A",
         reference: "Catalogue A, 1900",
         language: "en-GB",
@@ -42,6 +44,8 @@ function fixture() {
       },
       {
         id: "second",
+        title: "Catalogue B",
+        kind: "publication",
         author: null,
         reference: "Catalogue B",
         language: "es-CL",
@@ -64,12 +68,45 @@ function fixture() {
       },
       {
         id: "linked",
+        title: "Untranscribed source",
+        kind: "other",
         author: null,
         reference: "Untranscribed source",
         language: "und",
         objectIds: ["object-one"],
         claims: [],
         images: [],
+      },
+      {
+        id: "photograph",
+        title: "Photograph of Figure",
+        kind: "photograph",
+        author: null,
+        reference: "Photograph A",
+        language: "en-GB",
+        claims: [],
+        images: [
+          {
+            file: "figure/photograph.jpg",
+            alt: "A carved figure.",
+            credit: "Museum A",
+          },
+        ],
+        relationships: [{ type: "depicts", target: { type: "object", id: "object-one" } }],
+      },
+      {
+        id: "unpublished-photograph",
+        title: "Unpublished photograph of Figure",
+        kind: "photograph",
+        author: null,
+        reference: "Photograph B",
+        language: "en-GB",
+        claims: [],
+        images: [],
+        relationships: [
+          { type: "depicts", target: { type: "object", id: "object-one" } },
+          { type: "is_part_of", target: { type: "source", id: "linked" } },
+        ],
       },
     ],
   };
@@ -123,5 +160,35 @@ describe("retained collection competencies", () => {
     expect(record?.sources.find((source) => source.id === "linked")?.claims).toEqual([]);
     expect(record?.claims.some(({ source }) => source.id === "linked")).toBe(false);
     expect(record?.foregroundedClaims.some(({ source }) => source.id === "linked")).toBe(false);
+  });
+
+  test("ADR 027: depicting sources remain visible and supply object images", () => {
+    const data = fixture();
+    const record = getObjectAccounts(data, "object-one");
+    expect(record?.sources.find((source) => source.id === "photograph")?.images).toEqual([
+      expect.objectContaining({ file: "figure/photograph.jpg" }),
+    ]);
+    expect(record?.sources.some((source) => source.id === "unpublished-photograph")).toBe(true);
+    expect(getObjectAccounts(data, "object-two")?.sources).toHaveLength(1);
+  });
+
+  test("ADR 027: source relationships project outgoing, incoming and object links", () => {
+    const relationships = getSourceRelationships(fixture(), "unpublished-photograph");
+    expect(relationships?.outgoing).toEqual([
+      expect.objectContaining({
+        source: expect.objectContaining({ id: "linked" }),
+        type: "is_part_of",
+      }),
+    ]);
+    expect(relationships?.depictingObjects).toEqual([{ type: "object", id: "object-one" }]);
+    expect(relationships?.relatedObjects).toEqual([]);
+
+    const linked = getSourceRelationships(fixture(), "linked");
+    expect(linked?.incoming).toEqual([
+      expect.objectContaining({
+        source: expect.objectContaining({ id: "unpublished-photograph" }),
+        type: "is_part_of",
+      }),
+    ]);
   });
 });

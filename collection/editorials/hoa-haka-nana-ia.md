@@ -1,5 +1,7 @@
 ---
-objectId: hoa-hakananai-a
+subjects:
+  - type: object
+    id: hoa-hakananai-a
 title: Hoa Haka Nana Ia
 author: null
 language: es-CL

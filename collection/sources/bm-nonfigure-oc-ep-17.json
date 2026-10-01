@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for British Museum tool/implement Oc,EP.17",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-17",
   "language": "en",
   "claims": [
@@ -92,14 +94,14 @@
     "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
     "language": "en-GB"
   },
-  "images": [
+  "images": [],
+  "relationships": [
     {
-      "objectId": "british-museum-tool-implement-oc-ep-17",
-      "file": "british-museum-tool-implement-oc-ep-17/british-museum-1613200520.jpg",
-      "alt": "Obsidian cutting blade bound to a wooden handle with fibre cord and barkcloth.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1613200520"
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-nonfigure-oc-ep-17-photograph"
+      }
     }
   ]
 }

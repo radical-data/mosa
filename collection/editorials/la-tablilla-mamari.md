@@ -1,5 +1,7 @@
 ---
-objectId: mamari
+subjects:
+  - type: object
+    id: mamari
 title: La tablilla Mamari
 author: null
 language: es-CL

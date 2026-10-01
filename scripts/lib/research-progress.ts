@@ -239,11 +239,28 @@ async function source(root: string, sourceId: string) {
   const raw = await readFile(await file(root, `collection/sources/${sourceId}.json`), "utf8");
   return { value: parseSource(JSON.parse(raw), `${sourceId}.json`), hash: hash(JSON.parse(raw)) };
 }
+type SourceRelationship = {
+  type: "depicts" | "reproduces" | "discusses" | "is_part_of";
+  target: { type: "object" | "source"; id: string };
+  locator?: string;
+};
+type SourceImage = Source["images"][number];
+function relationships(s: Source): SourceRelationship[] {
+  return (s as Source & { relationships?: SourceRelationship[] }).relationships ?? [];
+}
+function depicts(s: Source, objectId: string) {
+  return relationships(s).some(
+    (relationship) =>
+      relationship.type === "depicts" &&
+      relationship.target.type === "object" &&
+      relationship.target.id === objectId,
+  );
+}
 function linked(s: Source, objectId: string) {
   return (
     s.objectIds?.includes(objectId) ||
     s.claims.some((c) => c.objectId === objectId) ||
-    s.images.some((i) => i.objectId === objectId)
+    depicts(s, objectId)
   );
 }
 async function inventory(root: string, sourceId: string, now: string): Promise<Inventory> {
@@ -252,7 +269,12 @@ async function inventory(root: string, sourceId: string, now: string): Promise<I
     ...new Set([
       ...(s.value.objectIds ?? []),
       ...s.value.claims.map((c) => c.objectId),
-      ...s.value.images.map((i) => i.objectId),
+      ...relationships(s.value)
+        .filter(
+          (relationship) =>
+            relationship.type === "depicts" && relationship.target.type === "object",
+        )
+        .map((relationship) => relationship.target.id),
     ]),
   ].sort();
   const entries = [];
@@ -399,12 +421,42 @@ async function validateRefs(root: string, objectId: string, stage: Stage, outcom
         `Missing object-specific claim: ${ref}`,
       );
     } else {
-      const image = s.value.images.find(
-        (i) => i.file === ref.slice(slash + 1) && i.objectId === objectId,
-      );
-      requireThat(image, `Missing object-specific image: ${ref}`);
-      requireThat(image.rights && image.credit, `Image lacks rights or credit: ${ref}`);
-      await file(root, `collection/images/${image.file}`);
+      const imageFile = ref.slice(slash + 1);
+      const directImage = s.value.images.find((i) => i.file === imageFile);
+      if (directImage) {
+        requireThat(
+          depicts(s.value, objectId),
+          `Image source ${sourceId} does not depict object ${objectId}`,
+        );
+        requireThat(
+          directImage.rights && directImage.credit,
+          `Image lacks rights or credit: ${ref}`,
+        );
+        await file(root, `collection/images/${directImage.file}`);
+      } else {
+        // Historical registers named an embedded image on its publishing source.
+        // Resolve that exact file through a single reproduces relationship.
+        const reproductions = relationships(s.value).filter(
+          (relationship) =>
+            relationship.type === "reproduces" && relationship.target.type === "source",
+        );
+        const matches: { sourceId: string; image: SourceImage; hash: string }[] = [];
+        for (const relationship of reproductions) {
+          const reproduced = await source(root, relationship.target.id);
+          const image = reproduced.value.images.find((candidate) => candidate.file === imageFile);
+          if (image && depicts(reproduced.value, objectId))
+            matches.push({ sourceId: relationship.target.id, image, hash: reproduced.hash });
+        }
+        requireThat(
+          matches.length === 1,
+          matches.length
+            ? `Ambiguous historical image reference: ${ref}`
+            : `Missing object-specific image: ${ref}`,
+        );
+        const { image } = matches[0];
+        requireThat(image.rights && image.credit, `Image lacks rights or credit: ${ref}`);
+        await file(root, `collection/images/${image.file}`);
+      }
     }
   }
   return hashes;

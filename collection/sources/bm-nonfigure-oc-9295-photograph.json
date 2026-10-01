@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Rei miro con caras humanas y signos rongo rongo — Londres",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613786928",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "rei-miro-rongo-rongo-britanico/british-museum-1613786928.jpg",
+      "alt": "Crescent-shaped wooden rei miro pendant with rongorongo glyphs and carved heads at both ends.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613786928"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "rei-miro-rongo-rongo-britanico"
+      }
+    }
+  ]
+}

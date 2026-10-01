@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for British Museum rope Oc,EP.15",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-15",
   "language": "en",
   "claims": [
@@ -92,14 +94,14 @@
     "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
     "language": "en-GB"
   },
-  "images": [
+  "images": [],
+  "relationships": [
     {
-      "objectId": "british-museum-rope-oc-ep-15",
-      "file": "british-museum-rope-oc-ep-15/british-museum-1613788008.jpg",
-      "alt": "Coil of twisted rope made from fibre and human hair.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788008"
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-nonfigure-oc-ep-15-photograph"
+      }
     }
   ]
 }

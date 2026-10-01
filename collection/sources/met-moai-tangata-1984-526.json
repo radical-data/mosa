@@ -1,5 +1,7 @@
 {
   "author": "The Metropolitan Museum of Art",
+  "title": "The Metropolitan Museum of Art collection record for Moai taŋata, New York — 1984.526",
+  "kind": "webpage",
   "reference": "https://www.metmuseum.org/art/collection/search/314826",
   "language": "en",
   "claims": [
@@ -74,21 +76,21 @@
     "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object moai-tangata-new-york-1984-526; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
     "language": "en-GB"
   },
-  "images": [
-    {
-      "objectId": "moai-tangata-new-york-1984-526",
-      "file": "moai-tangata-new-york-1984-526/met.jpg",
-      "alt": "Three-quarter view of a standing wooden figure with an incised head and arms at its sides.",
-      "credit": "The Metropolitan Museum of Art",
-      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
-      "originalUrl": "https://www.metmuseum.org/art/collection/search/314826"
-    }
-  ],
   "captures": [
     {
       "file": "2026-09-29t22-50-08-948z.html",
       "capturedAt": "2026-09-29T22:50:08.948Z",
       "method": "singlefile"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "met-moai-tangata-1984-526-photograph"
+      }
     }
   ]
 }

@@ -9,7 +9,9 @@ Read the repository's [predicates](../../../docs/predicates.md) and
 [collection authoring guide](../../../docs/collection-publication.md), then the
 selected source JSON, linked objects and relevant existing claims. Confirm the
 accepted fields against [the model](../../../src/data/collection-model.ts).
-Use the current ontology; extraction alone does not require extending it.
+Every source has a navigation `title` and `kind`. Keep a claim with the source
+that asserts it and target the object described. Use the current ontology;
+extraction alone does not require extending it.
 
 ## Bound the evidence
 
@@ -87,8 +89,11 @@ compare its object, predicate and meaning with existing claims: reuse an existin
 ID for a correction, and skip an equivalent claim. A repeat run should not append
 duplicates or replace reviewed work merely to follow a new naming scheme.
 
-Remove an object from `objectIds` once a claim or image links it; retain links to
-other objects and omit an empty `objectIds` array. Preserve object handles,
+Remove an object from `objectIds` once a claim or `depicts` relationship links
+that same object; retain other direct object links and omit an empty `objectIds`
+array. Image records have no object ID. Independent photograph sources use
+`depicts` relationships and are linked to publishing sources with `reproduces`;
+claim extraction does not change those relationships. Preserve object handles,
 existing claim references, image records and captures. Extraction does not
 select foregrounded perspectives or authorise image publication or deployment.
 

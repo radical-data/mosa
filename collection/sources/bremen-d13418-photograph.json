@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai taŋata, Bremen — D13418",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/202403/1230/d13418-figur-1230-5024.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-tangata-bremen-d13418/museum-digital.jpg",
+      "alt": "Stehende Holzfigur mit Metallband und Kette am Kopf.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1230/d13418-figur-1230-5024.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-tangata-bremen-d13418"
+      }
+    }
+  ]
+}

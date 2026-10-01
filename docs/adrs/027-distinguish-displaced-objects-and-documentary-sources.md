@@ -2,11 +2,10 @@
 
 ## Status
 
-Accepted; implementation pending. The current collection and website still use
-the source and image contract documented in the
-[collection authoring guide](../collection-publication.md). Implement this
-decision on `objects-and-sources` after the campaign merge, then update
-that guide to describe the implemented contract.
+Accepted. The collection model and migration are implemented; the public source
+and editorial pages remain pending in the next commit. The source and image
+contract is documented in the
+[collection authoring guide](../collection-publication.md).
 
 ## Context
 
@@ -42,6 +41,12 @@ identity connects questions of origin, removal, separation, custody and return.
 Object status does not assert that theft, origin or present whereabouts have
 been established.
 
+A material place is not an object merely because a source documents it. A site
+on Rapa Nui remains outside the object collection when its displacement is not
+under investigation. A catalogue webpage about a photograph of that site and
+the photograph itself are separate sources; the photograph source can exist
+without a publishable image file.
+
 A **source** is an identifiable member of the documentary body through which
 MoSA investigates displacement, restitution and museums themselves. A source
 can concern particular objects, other sources or the subject in general.
@@ -73,12 +78,12 @@ Relationships do not transfer claims, authorship, rights or object identity.
 Retain direct source-to-object links for documentation without extracted claims.
 
 An editorial can concern multiple objects and sources, or have no record link.
-Preserve editorial prose, authorship and language. Source pages will show
+Preserve editorial prose, authorship and language. Source pages show
 bibliographic metadata, cleared representations, related objects, source
 relationships, attributed claims with locators and relevant editorials. Object
 pages retain their present information hierarchy, link to source pages, and
 derive image galleries from explicit `depicts` relationships. The paired source
-and editorial indexes and detail pages will be bilingual; source and editorial
+and editorial indexes and detail pages are bilingual; source and editorial
 prose keeps its declared language.
 
 For a photograph found through a British Museum catalogue webpage, the records
@@ -101,13 +106,13 @@ from publishable representations. A letter scan remains with its letter source;
 a webpage screenshot remains a capture unless independent source identity is
 justified. Resized renditions remain files representing the same photograph.
 
-Image entries will represent their owning photograph source rather than naming
+Image entries represent their owning photograph source rather than naming
 an `objectId`. Derive object-gallery membership from `depicts`; a photograph may
 depict several objects. A document scan does not enter an artefact gallery just
 because its source concerns that artefact. Preserve file-level alt text,
 captions, credits, rights and original URLs.
 
-The source index will list every source and support text search and kind/topic
+The source index lists every source and supports text search and kind/topic
 filters, with the complete listing available without JavaScript. Search titles,
 authors, references and topics. The collection section label will be “Documents and images”
 and “Documentos e imágenes”. Keep existing object URLs, add paired source and
@@ -122,6 +127,7 @@ the corresponding record or article and supported index filters.
 | Register another displaced carving | Create an object with a stable identity; link documentary sources. |
 | Add a museum catalogue | Create a source and extract its attributed object claims. |
 | Separate an embedded photograph | Create a photograph source; connect it to the publishing source and depicted object. |
+| Add a catalogue record for a photograph of a Rapa Nui site | Create webpage and photograph sources; do not create a site object when the site's displacement is not under investigation. |
 | Examine a refusal letter | Create a correspondence source and an editorial about it; no object is required. |
 | Discuss *Black Panther* | Create an audiovisual source, identify the relevant scene with a locator, and explain its relevance in an editorial. |
 | Exhibit the refusal letter | Present its existing source record prominently; do not duplicate or convert it. |
@@ -144,7 +150,7 @@ Use three main Conventional Commits in dependency order:
 
 | Commit | Scope |
 |---|---|
-| `docs(collection): define objects and documentary sources` | This ADR and rationale. Keep the implementation status pending. |
+| `docs(collection): define objects and documentary sources` | This ADR and rationale. Keep the implementation status accurate. |
 | `feat(collection)!: separate photograph sources` | Model and validation, full record migration, image ownership, editorial subjects, affected loaders and research tools, tests, and matching authoring and skill guidance. Schema, data and consumers change together. |
 | `feat(website): publish sources and editorials` | Public indexes and pages, navigation, relationships, search, localisation, metadata, sitemap, HTTP coverage, and final presentation guidance. |
 

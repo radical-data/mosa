@@ -6,6 +6,7 @@ import {
   parseObject,
   parseSource,
   validateCollection,
+  validateEditorialSubjects,
 } from "../src/data/collection-model";
 
 const root = fileURLToPath(new URL("../collection/", import.meta.url));
@@ -58,9 +59,9 @@ for (const name of await files("editorials", ".md")) {
     await readFile(path.join(root, "editorials", name), "utf8"),
     name,
   );
+  if (editorialIds.has(metadata.id)) throw Error(`${name}: duplicate editorial id ${metadata.id}`);
   editorialIds.add(metadata.id);
-  if (!checked.objects.some((object) => object.id === metadata.objectId))
-    throw Error(`${name}: refers to missing object ${metadata.objectId}`);
+  validateEditorialSubjects(metadata, checked, name);
 }
 console.log(
   `Validated ${objects.length} objects, ${sources.length} sources, ${checked.claims.size} claims, ${imageFiles.size} images and ${editorialIds.size} editorials.`,

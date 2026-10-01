@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ua, Stockholm — 1926.09.0002",
+  "kind": "photograph",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1585336",
+  "language": "sv",
+  "claims": [],
+  "images": [
+    {
+      "file": "ua-stockholm-1926-09-0002/carlotta.jpg",
+      "alt": "Lång träklubba med två skulpterade ansikten och böjd kropp.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1585336"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ua-stockholm-1926-09-0002"
+      }
+    }
+  ]
+}

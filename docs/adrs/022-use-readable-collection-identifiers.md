@@ -5,6 +5,12 @@
 Accepted and implemented. Extends
 [ADR 020](020-use-a-git-backed-public-collection.md).
 
+The image-relationship parts of this decision were superseded by
+[ADR 027](027-distinguish-displaced-objects-and-documentary-sources.md).
+Images remain identified by their asset paths, but their photograph source owns
+the metadata and a `depicts` relationship now links that source to each object.
+The original decision text below records the model used at the time.
+
 The owner confirmed on 29 September 2026 that the website has not been released
 to the public. This migration can replace existing object URLs without redirects
 or UUID aliases. That instruction supersedes the UUID-preservation constraint

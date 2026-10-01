@@ -1,5 +1,7 @@
 {
   "author": "The Metropolitan Museum of Art",
+  "title": "The Metropolitan Museum of Art collection record for Moko, New York — 1995.416",
+  "kind": "webpage",
   "reference": "https://www.metmuseum.org/art/collection/search/317746",
   "language": "en",
   "claims": [
@@ -74,21 +76,21 @@
     "text": "The exact catalogue number in the Met record matches the accession already recorded for MoSA object moko-new-york-1995-416; this number is the decisive identity evidence. The title is mapped as a classification because it names an object type rather than an individual work. Metric dimensions were transcribed verbatim from the metric portion of the Met dual-unit dimensions field.",
     "language": "en-GB"
   },
-  "images": [
-    {
-      "objectId": "moko-new-york-1995-416",
-      "file": "moko-new-york-1995-416/met.jpg",
-      "alt": "Side view of a long carved lizardlike figure with a reptile head, birdlike tail and humanlike body.",
-      "credit": "The Metropolitan Museum of Art",
-      "rights": "Public Domain (The Met Open Access)",
-      "originalUrl": "https://www.metmuseum.org/art/collection/search/317746"
-    }
-  ],
   "captures": [
     {
       "file": "2026-09-29t22-51-25-382z.html",
       "capturedAt": "2026-09-29T22:51:25.382Z",
       "method": "singlefile"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "met-moko-1995-416-photograph"
+      }
     }
   ]
 }

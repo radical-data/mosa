@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ika, Berlin — VI 13229",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/995662",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "ika-berlin-vi-13229/smb.jpg",
+      "alt": "Ein abgerundeter Holzanhänger mit parallelen geschnitzten Rillen und einer erhöhten runden Stelle.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/995662"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ika-berlin-vi-13229"
+      }
+    }
+  ]
+}

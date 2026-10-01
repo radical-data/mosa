@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Paoa, Stockholm — 1909.10.0022",
+  "kind": "photograph",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1587473",
+  "language": "sv",
+  "claims": [],
+  "images": [
+    {
+      "file": "paoa-stockholm-1909-10-0022/carlotta.jpg",
+      "alt": "Bred träklubba med ett snidat ansikte vid handtaget.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1587473"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "paoa-stockholm-1909-10-0022"
+      }
+    }
+  ]
+}

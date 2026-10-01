@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Figure — British Museum (Oc,EP.23)",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/209925001",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-figure-oc-ep-23/british-museum-209925001.jpg",
+      "alt": "Standing female figure (moai papa), very flat; brown wood, one arm crossed across the belly; lobes of the ears ornamented; carved beast on head in low relief.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/209925001"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc-ep-23"
+      }
+    }
+  ]
+}

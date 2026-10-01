@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for British Museum club Oc.203",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc-203",
   "language": "en",
   "claims": [
@@ -85,14 +87,14 @@
     "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
     "language": "en-GB"
   },
-  "images": [
+  "images": [],
+  "relationships": [
     {
-      "objectId": "british-museum-club-oc-203",
-      "file": "british-museum-club-oc-203/british-museum-1613790740.jpg",
-      "alt": "Long wooden club with a carved face at the end.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1613790740"
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-nonfigure-oc-203-photograph"
+      }
     }
   ]
 }

@@ -15,6 +15,10 @@ and the selected source records. Work within the requested batch size.
    acquisition credits separate from photographer credits; preserve conflicting
    or unknown attribution. A webpage's text licence does not cover every image.
    Preserve established object links; this task does not re-identify objects.
+   Record an independently identifiable photograph as a source with a required
+   title and `kind: photograph`. Link its publishing source with `reproduces`
+   and each depicted object with `depicts`. Do not infer the photographer from
+   the hosting institution.
 3. Stage originals under `research-local/`. Compare publisher checksums when
    available and check for duplicate files. Visually inspect the downloaded
    bytes for the correct object, view, completeness and usable resolution.
@@ -22,10 +26,14 @@ and the selected source records. Work within the requested batch size.
    rights review context or unresolved issue in source notes. Keep restricted
    correspondence local. Do not require a separate audit that repeats metadata
    or file properties already available from the image and Git LFS.
-4. Copy cleared originals unchanged into `collection/images/` and add image
-   records to the source that documents them. Follow the guide's metadata and
-   language rules. If an image now links an object listed in that source's
-   `objectIds`, remove that redundant entry. Preserve claims and foregrounding.
+4. Copy cleared originals unchanged into `collection/images/` and add the image
+   representation to its owning source record. For an independent photograph,
+   the photograph source owns its image record; a scan or screenshot remains a
+   representation or capture of its documentary source. Image records have no
+   `objectId`; depiction relationships drive object galleries. Follow the
+   guide's metadata and language rules. Remove an `objectIds` entry if the same
+   object is now linked by a claim or `depicts` relationship. Preserve claims
+   and foregrounding.
 5. Run `just collection-check`, relevant tests and `just build`; use `just verify`
    if website code or shared TypeScript also changed. Check Git LFS attributes
    for the new assets. Review image loading, credit, rights and layout on both

@@ -1,0 +1,28 @@
+{
+  "author": "Mathew James Harrison",
+  "title": "Mathew James Harrison drawing of Hoa Hakananaiʻa at Orongo",
+  "kind": "artwork",
+  "reference": "https://www.britishmuseum.org/collection/object/E_2017-2018-1",
+  "language": "en-GB",
+  "claims": [],
+  "images": [
+    {
+      "file": "hoa-hakananai-a/bm-harrison-1613289345.jpg",
+      "alt": "Grey wash drawing of Hoa Hakananaiʻa inside a stone structure, with a standing figure on each side.",
+      "caption": "Mathew James Harrison's 1868 drawing of Hoa Hakananaiʻa in the stone structure at ʻOrongo.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613289345"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      }
+    }
+  ],
+  "date": "1868"
+}
