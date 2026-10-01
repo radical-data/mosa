@@ -4,6 +4,13 @@ Every tracked record in `collection/` is public material. Git history supplies
 authorship and rollback. Agents can work directly on public museum material;
 no separate publication approval or reviewer sign-off is required.
 
+The accepted source and editorial model in
+[ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md)
+is pending implementation. Until the collection migration commit lands, follow
+the current instructions on this page. The ADR's
+[“In everyday work” table](adrs/027-distinguish-displaced-objects-and-documentary-sources.md#in-everyday-work)
+is the quick reference for the target workflow.
+
 ## Add or edit an object
 
 Create `collection/objects/<object-id>.json`. The file name without `.json` is

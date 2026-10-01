@@ -40,6 +40,14 @@ classifications and descriptions remain claims. Editorial prose belongs in
 `collection/editorials/`; image metadata belongs to the source that documents
 the image.
 
+The current site publishes object pages and object-linked editorials. The
+accepted source index, source detail pages and editorials index in
+[ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md)
+are pending implementation. Until then, keep current routes and presentation
+behaviour accurate. Once implemented, follow ADR 027 for paired English and
+Chilean Spanish routes, source relationships, language switching and the
+“Documents and images” / “Documentos e imágenes” collection label.
+
 Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-the-git-collection.md).
 Keep all source accounts, qualifiers and optional locators visible. Holding and
 location labels describe source reports, which may be historical.

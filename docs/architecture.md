@@ -31,6 +31,12 @@ package; it does not declare application packages.
 
 ## Reduced collection model
 
+The current implementation and the accepted next model are recorded separately
+in [ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md).
+Its implementation is pending; until the migration commit lands, use the
+current authoring contract below and in the
+[collection authoring guide](collection-publication.md).
+
 An **object** has a stable, readable file handle, a concise canonical navigation
 name and a list of qualified claim references selected for foregrounding. The
 file handle is also the public URL identity.
@@ -75,6 +81,12 @@ where available. The binary image lives in Git LFS.
 An **editorial** is authored Markdown linked to an object. It is a publication
 layer with its own author and language. Editorial prose does not become an
 unattributed claim.
+
+The accepted next model gives sources their own public pages and allows an
+editorial to refer to objects, sources, both or neither. It separates an
+independently identifiable photograph from the webpage that reproduces it.
+See ADR 027 for the relationship rules and migration boundary; these behaviours
+are pending implementation.
 
 ## Politics of presentation
 

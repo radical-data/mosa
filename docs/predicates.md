@@ -40,5 +40,11 @@ explained with a competency case or ADR.
 
 Optional claim `locator` text identifies a source passage; it is citation metadata.
 
+ADR 027 accepts source-to-source relationships such as `reproduces`,
+`discusses` and `is_part_of`, plus source-to-object `depicts`. These are
+relationships between records, not claim predicates, and do not transfer a
+source's claims. They are pending implementation; the current collection
+continues to use direct object links, claims and embedded image records.
+
 Foregrounding refers to a claim ID from the same object. It expresses MoSA's
 editorial salience, not certainty, publication approval or truth ranking.

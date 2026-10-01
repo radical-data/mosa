@@ -36,6 +36,14 @@ without treating the register as the default campaign format.
 
 ## Deliberately deferred model work
 
+Implement the accepted distinction between displaced objects and documentary
+sources in [ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md).
+The planned work adds public source and editorial pages, explicit source
+relationships, and migrates independently identifiable photographs out of
+publishing-source image metadata. The ADR records its three-commit review
+sequence and acceptance checks. This work is accepted and pending; it is not
+part of the current implementation.
+
 The reduced model does not implement structured provenance events, custody,
 restitution case administration, cultural-authority protocols, claim certainty
 or structured evidence relationships. The [competency cases](test-cases/) preserve
