@@ -17,7 +17,8 @@ COPY public public
 COPY scripts scripts
 COPY collection collection
 COPY articles articles
-RUN pnpm build
+RUN --mount=type=cache,id=astro-assets,target=/app/node_modules/.astro/assets \
+    pnpm build
 
 FROM nginxinc/nginx-unprivileged:1.29-alpine AS runtime
 COPY nginx.conf /etc/nginx/conf.d/default.conf

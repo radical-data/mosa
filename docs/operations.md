@@ -15,7 +15,9 @@ Git hooks.
 `just image` builds the root `Dockerfile`. Published image Git LFS files must be hydrated
 before the Docker build because `.git` is not in the build context. Astro
 generates the whole site in the build stage; the runtime image serves the files
-with unprivileged Nginx on port 8080.
+with unprivileged Nginx on port 8080. CI runs the non-build repository checks
+first, then uses this production image as its single site build. It restores
+Astro's image transformation cache and Docker layers between workflow runs.
 
 HTTPS terminates at the reverse proxy. Keep `absolute_redirect off` in
 `nginx.conf` so the root and trailing-slash redirects return relative locations
@@ -40,7 +42,7 @@ response. Use the Docker image and `pnpm test:http http://127.0.0.1:8080` for
 those. The container tests and post-deployment verification share the same
 smoke checks for relative redirects, query strings, both homepages and collection
 listings, cache headers and genuine 404s. Container tests additionally check every
-object page and a built fingerprinted asset.
+object page and a fingerprinted asset discovered from the rendered homepage.
 
 ## Coolify
 
