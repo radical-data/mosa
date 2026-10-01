@@ -27,9 +27,11 @@ for (const objectId of objectIds)
     assert.equal(response.status, 200, `${locale}/${collection}/${objectId}: object page`);
     assert.match(await response.text(), /data-record-id=/, `${objectId}: rendered object record`);
   }
-const assets = await readdir(new URL("../dist/_astro/", import.meta.url));
-assert.ok(assets.length, "built fingerprinted assets exist");
-const asset = await fetch(new URL(`/_astro/${assets[0]}`, origin), { redirect: "manual" });
+const homepage = await fetch(new URL("/es/", origin));
+assert.equal(homepage.status, 200, "Spanish homepage is served");
+const assetPath = (await homepage.text()).match(/\b(?:href|src)="(\/_astro\/[^"?]+)["?]/)?.[1];
+assert.ok(assetPath, "Spanish homepage references a built fingerprinted asset");
+const asset = await fetch(new URL(assetPath, origin), { redirect: "manual" });
 assert.equal(asset.status, 200, "fingerprinted asset is served");
 assert.equal(asset.headers.get("cache-control"), "public, max-age=31536000, immutable");
 await asset.body?.cancel();

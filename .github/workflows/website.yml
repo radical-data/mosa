@@ -35,10 +35,39 @@ jobs:
           cache: true
       - name: Install dependencies
         run: mise x -- just install
-      - name: Verify repository
-        run: mise x -- just verify
+      - name: Verify repository checks
+        run: mise x -- just verify-checks
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v4
+      - name: Restore Astro image cache
+        id: astro-image-cache
+        uses: actions/cache@v4
+        with:
+          path: .astro-image-cache
+          key: astro-images-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('Dockerfile', 'astro.config.mjs', 'package.json', 'src/**', 'collection/**', 'articles/**') }}
+          restore-keys: |
+            astro-images-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('pnpm-lock.yaml') }}-
+      - name: Attach Astro image cache to BuildKit
+        uses: reproducible-containers/buildkit-cache-dance@v3
+        with:
+          builder: ${{ steps.buildx.outputs.name }}
+          cache-map: |
+            {
+              ".astro-image-cache": {
+                "target": "/app/node_modules/.astro/assets",
+                "id": "astro-assets"
+              }
+            }
+          skip-extraction: ${{ steps.astro-image-cache.outputs.cache-hit }}
       - name: Build production image
-        run: mise x -- just image
+        uses: docker/build-push-action@v7
+        env:
+          DOCKER_BUILD_RECORD_UPLOAD: "false"
+        with:
+          context: .
+          load: true
+          tags: mosa-website:local
       - name: Check production HTTP behaviour
         run: |
           docker run --rm -d --name mosa-website-check -p 127.0.0.1:8080:8080 \
