@@ -11,7 +11,7 @@ source JSON ──► source page + relationships ──► source index
       ├──► attributed claims ─────────────────► object page
       └──► image metadata ─► LFS image ───────► object gallery via depicts
 object JSON ─► name + foreground choices ─────► object page
-editorial Markdown ─► object/source subjects ─► editorial pages and index
+article Markdown ─► object/source subjects ─► article pages and index
 ```
 
 The root Astro project validates and loads `collection/` during its build. It
@@ -85,12 +85,12 @@ source with `reproduces`. Scans and captures remain representations of their
 documentary source unless the physical item itself is under investigation. The
 binary image lives in Git LFS.
 
-An **editorial** is an authored MoSA publication, not a collection record. Its
+An **article** is an authored MoSA publication, not a collection record. Its
 Markdown has its own author and language. Optional `subjects` can identify
 multiple objects and sources, or be omitted for a general article. These links
 state what the publication examines; they do not make it a third research record
-type. Editorial prose does not become an unattributed claim. Sources have public
-index and detail pages within the collection. Editorials have separate public
+type. Article prose does not become an unattributed claim. Sources have public
+index and detail pages within the collection. Articles have separate public
 publication pages reached through Resources and relevant records. Object pages
 retain their existing URLs and information hierarchy.
 
@@ -103,7 +103,7 @@ universal truth.
 
 The canonical object name is necessary for navigation and URLs, but it is
 deliberately thin. Source-attributed names and classifications remain available
-on the page. Rich MoSA interpretation has named authorship in editorials rather
+on the page. Rich MoSA interpretation has named authorship in articles rather
 than being smuggled into supposedly objective database fields.
 
 This preserves a practical form of plurality while accepting the limits of the

@@ -1,7 +1,7 @@
 # MoSA collection
 
 The public collection is part of the website build. Every tracked file is
-publishable. Authored MoSA publications live separately under `../editorials/`.
+publishable. Authored MoSA publications live separately under `../articles/`.
 
 ## Structure
 

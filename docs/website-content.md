@@ -1,8 +1,8 @@
 # Website content
 
 The website publishes Chilean Spanish and British English routes from local
-files. Collection data and editorials follow their own language metadata; an
-editorial does not need an invented translation.
+files. Collection data and articles follow their own language metadata; an
+article does not need an invented translation.
 
 ## Page copy
 
@@ -45,22 +45,28 @@ pages with `reproduces` and to depicted objects with `depicts`.
 The collection contains objects and sources. Its subnavigation uses the label
 “Documents and images” / “Documentos e imágenes” for sources. The site publishes
 object and source indexes and detail pages.
-Sources are listed at `/en/sources/` and `/es/fuentes/`; editorials are listed
-at `/en/editorials/` and `/es/editoriales/`. Editorials are authored MoSA
-publications rather than collection records. Their source files live under
-`editorials/`, and they appear through Resources and links from the objects and
-sources they examine. Source indexes
+Sources are listed at `/en/sources/` and `/es/fuentes/`; articles are listed
+at `/en/articles/` and `/es/articulos/`, labelled “Articles” / “Artículos”.
+Articles are authored MoSA publications rather than collection records. Their
+source files live under `articles/`, and they appear through Resources and links
+from the objects and sources they examine. Articles sit under Resources, outside the primary
+navigation. Their index links back to Resources, and individual articles show
+the Resources → Articles path. Source indexes
 provide text search and kind/topic filters, with the full list available without
 JavaScript. Language switching retains the corresponding record or article and
 supported index filters.
 
 Source pages show bibliographic metadata, publishable representations, related
 objects and source relationships, attributed object claims with locators, and
-relevant editorials. Object pages retain their established URLs and hierarchy;
-they link to source pages and derive image galleries from explicit `depicts`
-relationships. Editorial pages retain their declared prose language and can
-concern multiple objects and sources or have no record subjects. Methodological
-notes and preservation captures are excluded from public rendering and search.
+relevant articles. Object pages retain their established URLs and foregrounded
+accounts, images, origin and holding sections. Before the source accounts,
+“Articles about this object” / “Artículos sobre este objeto” introduces related
+writing with its title, author when known, publication language and optional
+summary. The full prose appears on the standalone article page. Source pages
+and the article index use the same previews. Object pages link to source pages
+and derive image galleries from explicit `depicts` relationships. Article
+pages retain their declared prose language and can concern multiple objects and
+sources or have no record subjects. Methodological notes and preservation captures are excluded from public rendering and search.
 
 Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-the-git-collection.md).
 Keep all source accounts, qualifiers and optional locators visible. Holding and

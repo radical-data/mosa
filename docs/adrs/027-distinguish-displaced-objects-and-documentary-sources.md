@@ -61,12 +61,12 @@ reference, language, claims, direct object links, notes and captures.
 Methodological notes and capture metadata remain excluded from public rendering
 and search. Keep structured claims inside their asserting sources and target
 them at objects. Keep source analysis in metadata, relationships and authored
-editorials for this release. A source's files, scans, captures and resized
+articles for this release. A source's files, scans, captures and resized
 renditions are representations or preservation evidence. They are not new
 sources merely because they are separate files.
 
 Use a shared reference that identifies exactly one object or source for
-editorial subjects and directed source relationships. Support these
+article subjects and directed source relationships. Support these
 relationships: `depicts` from a source to an object; `reproduces` and `discusses`
 from a source to a source; and `is_part_of` from an independently registered
 source to a larger source. Relationships can carry locators. Store each
@@ -75,20 +75,20 @@ types, reject duplicates and self-links, and reject cycles in `is_part_of`.
 Relationships do not transfer claims, authorship, rights or object identity.
 Retain direct source-to-object links for documentation without extracted claims.
 
-An **editorial** is an authored publication by MoSA, not a collection record or
+An **article** is an authored publication by MoSA, not a collection record or
 a third research entity alongside objects and sources. It can concern multiple
 objects and sources, or have no record link. Keeping its typed subjects does not
 make it part of the collection; those links state what the publication examines.
-Preserve editorial prose, authorship and language. Source pages show
+Preserve article prose, authorship and language. Source pages show
 bibliographic metadata, cleared representations, related objects, source
-relationships, attributed claims with locators and relevant editorials. Object
+relationships, attributed claims with locators and relevant articles. Object
 pages retain their present information hierarchy, link to source pages, and
 derive image galleries from explicit `depicts` relationships. Sources remain in
-the collection navigation. Editorials form a separate publication layer reached
+the collection navigation. Articles form a separate publication layer reached
 from Resources and from relevant object or source pages. Their Markdown lives
-under top-level `editorials/`, outside `collection/`. The source and editorial
-indexes and detail pages are bilingual; source and editorial prose keeps its
-declared language.
+under top-level `articles/`, outside `collection/`. The source and article
+indexes and detail pages are bilingual; source and article prose keep their
+declared languages.
 
 For a photograph found through a British Museum catalogue webpage, the records
 will be:
@@ -120,7 +120,7 @@ The source index lists every source and supports text search and kind/topic
 filters, with the complete listing available without JavaScript. Search titles,
 authors, references and topics. The collection section label will be “Documents and images”
 and “Documentos e imágenes”. Keep existing object URLs, add source and
-editorial indexes and detail routes, and update canonical links, sitemap,
+article indexes and detail routes, and update canonical links, sitemap,
 alternate-language metadata and language switching. Switching language retains
 the corresponding record or article and supported index filters.
 
@@ -132,10 +132,10 @@ the corresponding record or article and supported index filters.
 | Add a museum catalogue | Create a source and extract its attributed object claims. |
 | Separate an embedded photograph | Create a photograph source; connect it to the publishing source and depicted object. |
 | Add a catalogue record for a photograph of a Rapa Nui site | Create webpage and photograph sources; do not create a site object when the site's displacement is not under investigation. |
-| Examine a refusal letter | Create a correspondence source and an editorial about it; no object is required. |
-| Discuss *Black Panther* | Create an audiovisual source, identify the relevant scene with a locator, and explain its relevance in an editorial. |
+| Examine a refusal letter | Create a correspondence source and an article about it; no object is required. |
+| Discuss *Black Panther* | Create an audiovisual source, identify the relevant scene with a locator, and explain its relevance in an article. |
 | Exhibit the refusal letter | Present its existing source record prominently; do not duplicate or convert it. |
-| Publish MoSA's interpretation | Create an authored editorial and link its object and source subjects; do not make it a collection record. |
+| Publish MoSA's interpretation | Create an authored article and link its object and source subjects; do not make it a collection record. |
 
 Compare this with one record type that allows overlapping object and source
 roles. A single type makes it easy to misread documentary identity as object
@@ -156,8 +156,8 @@ Use three main Conventional Commits in dependency order:
 | Commit | Scope |
 |---|---|
 | `docs(collection): define objects and documentary sources` | This ADR and rationale. Keep the implementation status accurate. |
-| `feat(collection)!: separate photograph sources` | Model and validation, full record migration, image ownership, editorial subjects, affected loaders and research tools, tests, and matching authoring and skill guidance. Schema, data and consumers change together. |
-| `feat(website): publish sources and editorials` | Public indexes and pages, navigation, relationships, search, localisation, metadata, sitemap, HTTP coverage, and final presentation guidance. |
+| `feat(collection)!: separate photograph sources` | Model and validation, full record migration, image ownership, article subjects, affected loaders and research tools, tests, and matching authoring and skill guidance. Schema, data and consumers change together. |
+| `feat(website): publish sources and articles` | Public indexes and pages, navigation, relationships, search, localisation, metadata, sitemap, HTTP coverage, and final presentation guidance. |
 
 The breaking collection commit body and `BREAKING CHANGE` footer will describe
 the new authoring contract and state that existing records migrate in the same
@@ -207,5 +207,5 @@ every original object, claim and image asset, and explain source-count increases
 Image paths and bytes remain unchanged except for reviewed moves. Verification
 includes collection and research checks, `just verify`, `git diff --check`, a
 production image and HTTP tests for new routes, plus review of representative
-object, photograph, unlinked-source and editorial pages in both languages and
+object, photograph, unlinked-source and article pages in both languages and
 at narrow widths, with keyboard navigation and enlarged text.

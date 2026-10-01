@@ -4,7 +4,7 @@
 
 - Review the three migrated records marked as former drafts in the
   [migration report](../collection/migration-report.md).
-- Confirm authorship for the Hoa Haka Nana Ia and Mamari editorials.
+- Confirm authorship for the Hoa Haka Nana Ia and Mamari articles.
 - Add authorised object images with credit, rights, alt text and source records.
 - Choose foregrounded claims with Rapa Nui collaborators rather than treating
   prominence as an automatic museum-data rule.
@@ -39,7 +39,7 @@ without treating the register as the default campaign format.
 The distinction between displaced objects and documentary sources is
 implemented as recorded in [ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md).
 Sources have public pages and typed relationships; independently identifiable
-photographs have their own source records. Editorials are a separate layer of
+photographs have their own source records. Articles are a separate layer of
 authored MoSA publications and can concern objects, sources, both or neither.
 Follow the collection authoring guide for the current record, image and
 publication workflows.

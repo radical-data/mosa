@@ -16,9 +16,9 @@ former database model or its maintenance burden.
 
 Keep the earlier ADRs' useful intent within the static, Git-backed application:
 
-- After foregrounded perspectives and images, show origin/findspot, reported
-  holding/location, full source accounts, then authored editorials. Derive groups
-  from existing claims, keep predicate distinctions and omit empty groups.
+- After foregrounded perspectives and images, show origin/findspot and reported
+  holding/location, then article previews before the full source accounts. Derive
+  groups from existing claims, keep predicate distinctions and omit empty groups.
   Unsupported provenance and restitution sections remain absent. This adapts
   ADR 011's ordering and requirement to show empty tiers.
 - Link grouped claims to their source accounts. Preserve competing accounts,

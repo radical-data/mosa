@@ -9,9 +9,9 @@ The image-relationship parts of this decision were superseded by
 [ADR 027](027-distinguish-displaced-objects-and-documentary-sources.md).
 Images remain identified by their asset paths, but their photograph source owns
 the metadata and a `depicts` relationship now links that source to each object.
-ADR 027 also clarifies that editorials are authored publications rather than
+ADR 027 also clarifies that articles are authored publications rather than
 collection records. Their readable file identities and typed subject links are
-unchanged, while their files now live under top-level `editorials/`. The original
+unchanged, while their files now live under top-level `articles/`. The original
 decision text below records the terminology and model used at the time.
 
 The owner confirmed on 29 September 2026 that the website has not been released
@@ -21,9 +21,9 @@ for this migration.
 
 ## Context
 
-The collection contains 20 objects, 13 sources, 43 claims, 2 editorials and no
+The collection contains 20 objects, 13 sources, 43 claims, 2 articles and no
 image records at the time of this proposal. Objects and sources use UUIDs;
-claims use UUIDs or UUID-derived strings. Editorials already use readable IDs.
+claims use UUIDs or UUID-derived strings. Articles already use readable IDs.
 The validators already accept readable identifiers, but authoring still
 requires copying opaque references and repeating file identities inside files.
 
@@ -42,20 +42,20 @@ Store an identity only where another record needs to refer to it.
 | Object | JSON file name without extension | `mamari` |
 | Source | JSON file name without extension | `wikipedia-mamari` |
 | Claim | Source ID plus local claim ID | `wikipedia-mamari/name-mamari` |
-| Editorial | Markdown file name without extension | `la-tablilla-mamari` |
+| Article | Markdown file name without extension | `la-tablilla-mamari` |
 | Image asset | Path relative to `collection/images/` | `mamari/front.jpg` |
 
 ### File names establish record identity
 
 `collection/objects/mamari.json` establishes the object ID `mamari`. Remove the
-stored `id` field from object JSON, source JSON and editorial front matter.
+stored `id` field from object JSON, source JSON and article front matter.
 The loader derives each ID from the actual file name and supplies `id` to the
-application's runtime records. Keep `objectId` on claims, images and editorials
+application's runtime records. Keep `objectId` on claims, images and articles
 because those fields express relationships.
 
-Objects, sources and editorials have separate namespaces. An object and an
-editorial can both be called `mamari`. Each namespace remains flat; directories
-inside `objects/`, `sources/` and `editorials/` are not part of this design.
+Objects, sources and articles have separate namespaces. An object and an
+article can both be called `mamari`. Each namespace remains flat; directories
+inside `objects/`, `sources/` and `articles/` are not part of this design.
 
 ### Choose a readable handle once
 
@@ -67,7 +67,7 @@ rejects invalid spelling rather than silently normalising references.
 - Objects use a recognisable navigation handle: `mamari`, `hoa-hakananai-a`.
 - Sources use a short reference label: `wikipedia-mamari`,
   `bm-hoa-hakananai-a`, `arte-rapanui-table`.
-- Editorials keep their existing readable file names.
+- Articles keep their existing readable file names.
 - When labels collide, add a useful distinguishing word. If no reliable
   distinction is available, use a numeric suffix such as `figure-2`.
 - For an unnamed object, use an unoccupied handle such as `object-1` rather
@@ -162,7 +162,7 @@ foregrounding selection is illustrative, not an editorial decision to publish.
 }
 ```
 
-The existing editorial is now `editorials/la-tablilla-mamari.md`. Its front
+The existing article is now `articles/la-tablilla-mamari.md`. Its front
 matter identifies `mamari` as an object subject and omits `id`; ADR 027 later
 moved authored MoSA publications outside the collection directory.
 
@@ -216,17 +216,17 @@ readers. Do not introduce a permanent dual-format reader.
    handle, and every existing claim ID to its qualified reference. Retain the
    mapping with the migration report as an audit record, outside runtime loading.
 2. Rename files and update all relationships. Remove redundant top-level IDs
-   and editorial IDs. Preserve the two existing editorial file handles.
+   and article IDs. Preserve the two existing article file handles.
 3. Preserve every record as a separate identity. In particular, the canonical
    Hoa Hakananaiʻa record and the former draft labelled Hoa Haka Nana Ia remain
    separate, with distinct handles. Similar names or shared references do not
    authorise merging objects or sources.
-4. Preserve source metadata, names, claim wording, predicates, editorial prose,
+4. Preserve source metadata, names, claim wording, predicates, article prose,
    foregrounding selections and their order. The migration adds no foregrounding.
    Preserve historical IDs in the previous migration report; append the mapping
    rather than rewriting the historical account.
 5. Update JSON Schemas, parsing, cross-reference validation, collection loading
-   and editorial loading together. Both the command-line validator and Astro
+   and article loading together. Both the command-line validator and Astro
    build derive identities from real file paths. Validate file names before
    indexing records; reject stored top-level `id` fields under the new contract.
 6. Update routes, links, search, tests and documentation that depend on IDs.
@@ -241,7 +241,7 @@ routes; no redirects, compatibility aliases or database are required.
 
 ## Acceptance criteria
 
-- Every pre-migration object, source, claim and editorial has exactly one mapped
+- Every pre-migration object, source, claim and article has exactly one mapped
   counterpart. Counts remain 20, 13, 43 and 2 respectively if the collection has
   not changed in the meantime. Compare complete record contents after applying
   the mapping; counts alone cannot establish preservation.
@@ -258,7 +258,7 @@ routes; no redirects, compatibility aliases or database are required.
 - Both the standalone validator and the website build reject invalid identities
   and unresolved references. Neither reconstructs a supposed file name from a
   record's contents to bypass checking the actual file name.
-- Both language routes render each object with its mapped sources and editorials.
+- Both language routes render each object with its mapped sources and articles.
   Collection links, canonical URLs and language switching use the readable ID.
   Existing UUID object paths return 404 in the production image.
 - Run relevant unit tests, `just collection-check` and `just verify`. Build the

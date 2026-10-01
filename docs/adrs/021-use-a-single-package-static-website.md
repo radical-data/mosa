@@ -6,7 +6,7 @@ Accepted.
 
 ## Context
 
-The repository now has one application. Its collection, editorial and general
+The repository now has one application. Its collection, article and general
 website content all come from files that are available at build time. The
 website has no request-time database access, authentication or personalised
 state.

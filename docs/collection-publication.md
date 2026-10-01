@@ -4,7 +4,7 @@ Every tracked file in `collection/` is public material. Git history supplies
 authorship and rollback. Agents can work directly on public museum material;
 no separate publication approval or reviewer sign-off is required.
 
-Follow the implemented source and editorial model in
+Follow the implemented source and article model in
 [ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md).
 Its [“In everyday work” table](adrs/027-distinguish-displaced-objects-and-documentary-sources.md#in-everyday-work)
 is the quick reference for deciding which record to create.
@@ -337,12 +337,12 @@ Astro optimises website copies with the direct `sharp` dependency. Run a full
 build after adding images so decoding and optimisation are checked as well as
 the metadata. Review the gallery on both language routes.
 
-## Add an editorial
+## Add an article
 
-An editorial is an authored MoSA publication, not a collection record. The same
+An article is an authored MoSA publication, not a collection record. The same
 small build still validates and links its subjects.
 
-Create `editorials/<id>.md`:
+Create `articles/<id>.md`:
 
 ```markdown
 ---
@@ -351,21 +351,25 @@ subjects:
     id: example-object
   - type: source
     id: example-source
-title: Editorial title
+title: Article title
+summary: A short introduction in the article’s language.
 author: Named author
 language: es-CL
 ---
 
-Editorial text in Markdown.
+Article text in Markdown.
 ```
 
-The Markdown file name without `.md` is the editorial ID.
+The Markdown file name without `.md` is the article ID. The website labels
+these publications “Articles” / “Artículos”. An optional `summary` introduces
+the article on object and source pages and in the article index. Write it in
+the same language as the prose.
 
-Use `author: null` only while authorship is genuinely unresolved. An editorial
-can be in one language; its standalone page marks that language rather than
-pretending it is translated. `subjects` is optional and can identify multiple
-objects and sources. Omit it for a general editorial. Claims made in the prose
-do not automatically become structured claims.
+Use `author: null` only while authorship is unresolved. An article can be in one
+language; its standalone page marks that language rather than pretending it is
+translated. `subjects` is optional and can identify multiple objects and sources.
+Omit it for a general article. Claims made in the prose do not automatically
+become structured claims.
 
 ## Foreground a perspective
 
@@ -383,7 +387,7 @@ just collection-check
 just build
 ```
 
-Review affected object and source pages and the standalone editorial in both
+Review affected object and source pages and the standalone article in both
 language routes. Check attribution, source language, image rights and alt text,
 foregrounding, and whether a canonical navigation name obscures a source
 account.
@@ -395,7 +399,7 @@ Merging collection changes does not deploy automatically. Follow the
 Website workflow on `main` with `deploy` enabled. Collection and website content
 are built and released together; there is no separate database publication step.
 
-To withdraw material, delete its editorial, image reference, claim, source or
+To withdraw material, delete its article, image reference, claim, source or
 object as appropriate, review links, and deploy the new commit. Preserve the Git
 history. For an urgent rollback, revert the responsible commit and deploy that
 revert.
