@@ -113,8 +113,13 @@ justified. Resized renditions remain files representing the same photograph.
 Image entries represent their owning photograph source rather than naming
 an `objectId`. Derive object-gallery membership from `depicts`; a photograph may
 depict several objects. A document scan does not enter an artefact gallery just
-because its source concerns that artefact. Preserve file-level alt text,
-captions, credits, rights and original URLs.
+because its source concerns that artefact. A source such as a film can depict
+several objects across different frames. An optional image-level `depicts` list
+narrows that representation to a subset of the source's depicted objects; an
+empty list excludes it from object galleries. Without the list, existing
+source-level gallery behaviour is retained. This addresses the Te Kuhane stills
+without inventing independently authored sources for extracted frames. Preserve
+file-level alt text, captions, credits, rights and original URLs.
 
 The source index lists every source and supports text search and kind/topic
 filters, with the complete listing available without JavaScript. Search titles,

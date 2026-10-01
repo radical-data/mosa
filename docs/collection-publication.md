@@ -184,6 +184,10 @@ notes. Use original-language transcripts for spoken claims, preserving wording
 and qualifications; translated subtitles must not replace the spoken account.
 Check the selected passages in context and record consequential transcription
 uncertainty in source notes. Set the source language to the extracted wording.
+When one passage is spoken in another language, set that claim's optional
+`language` field to its BCP 47 tag; otherwise it inherits the source language.
+This override marks the claim value only. The locator remains in the source
+language.
 Keep restricted films, transcripts and working frames in `research-local/`; a
 film source needs no public media file.
 
@@ -354,6 +358,14 @@ audit. Leave uncertain rights or object matches in staging. Write image prose
 in the source record's declared language; the gallery and
 collection previews mark that language explicitly. Gallery interface labels
 are translated for each route.
+
+For a source with representations of different objects, such as film stills,
+set each image's optional `depicts` array to the object IDs visible in that
+image. These IDs must also have a `depicts` relationship on the owning source.
+Omitting the array retains the source's depiction links; an empty array keeps
+the image on the source page only. This narrows object galleries without making
+a film frame into a separate source. For example, a Paris moai still must not
+appear in Hoa Hakananaiʻa's gallery merely because the film depicts both.
 
 Astro optimises website copies with the direct `sharp` dependency. Run a full
 build after adding images so decoding and optimisation are checked as well as

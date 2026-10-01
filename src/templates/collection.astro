@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import CollectionNav from "../components/CollectionNav.astro";
 import PageIntro from "../components/PageIntro.astro";
 import { getCopy } from "../content/content";
+import { claimValueLanguage } from "../data/collection-record";
 import { collectionRecords } from "../data/site";
 import { messages } from "../i18n/catalogues";
 import { referenceCount } from "../i18n/messages";
@@ -29,8 +30,8 @@ const t = messages(locale);
       {item.images[0] && <Image src={item.images[0].asset} alt={item.images[0].image.alt} lang={item.images[0].source.language} widths={[360, 720]} sizes="(max-width: 48rem) 100vw, 33vw" />}
       <div class="collection-caption">
         <h2><a href={`${pagePath("collection", locale)}${item.object.id}/`}>{item.object.name}</a></h2>
-        {[...new Set(item.claims.filter(({ claim }) => claim.predicate === "held_by").map(({ claim }) => claim.value))].map((holder) => <p>{t.reportedHolder} {holder}</p>)}
-        {item.claims.filter(({ claim }) => claim.predicate === "catalogue_number").map(({ claim }) => <p>{t.catalogueNumber} {claim.value}</p>)}
+        {[...new Map(item.claims.filter(({ claim }) => claim.predicate === "held_by").map((entry) => [`${entry.claim.language ?? entry.source.language}\u0000${entry.claim.value}`, entry])).values()].map(({ claim, source }) => <p>{t.reportedHolder} <span lang={claimValueLanguage(claim, source.language)}>{claim.value}</span></p>)}
+        {item.claims.filter(({ claim }) => claim.predicate === "catalogue_number").map(({ claim, source }) => <p>{t.catalogueNumber} <span lang={claimValueLanguage(claim, source.language)}>{claim.value}</span></p>)}
       </div>
     </article>)}</div>
     <div class="empty-state" hidden><h2><Fragment set:html={t.noMatches} /></h2><p><Fragment set:html={t.noMatchesHelp} /></p><button class="button" type="button" id="reset-filters">{t.clearFilters}</button></div>
