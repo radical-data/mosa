@@ -22,6 +22,16 @@
       "locator": "S. 8, Erläuterung zu Fig. 10"
     }
   ],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "tepano-moai-removal-tattoo"
+      },
+      "locator": "S. 8, Fig. 10"
+    }
+  ],
   "images": [],
   "notes": {
     "text": "Selective extraction from page 8 and Figure 10 of the public-domain Biodiversity Heritage Library scan. Stolpe records Tepano's explanation of the tattoo before making his own identification of the depicted statue as Hoa Hakananaiʻa from the reported interval and Tepano's recognition of Palmer. Tepano is not recorded naming the statue in this passage. The baptismal name Tepano is retained as published and is not equated with Juan Tepano or another individual. Historical wording and attribution are preserved without adopting Stolpe's colonial framing as MoSA's account.",
