@@ -22,7 +22,7 @@ original bundle proposals remain under the ignored `research-local/` directory.
   restitution records, so the migration did not invent any.
 - The source archive contained 3 PDFs and 3 HTML captures. These remain private
   evidence and are not presented as object images.
-- Two supplied Spanish editorials were added for Mamari and Hoa Hakananaiʻa.
+- Two supplied Spanish articles were added for Mamari and Hoa Hakananaiʻa.
   Their authors were not recorded in the supplied files and remain `null`.
 
 ## Object reconciliation
@@ -167,7 +167,7 @@ assigned during the Supabase migration.
 | `7c77ba64-b866-49ce-b702-c9963609fb12` | `wikipedia-mamari/name-text-c` |
 | `fe0cd6e8-b40a-48b5-9b64-de3634a88707` | `wikipedia-mamari/name-mamari` |
 
-The editorial IDs `hoa-haka-nana-ia` and `la-tablilla-mamari` were already
+The article IDs `hoa-haka-nana-ia` and `la-tablilla-mamari` were already
 readable and did not change. Their redundant front-matter IDs were removed. The
 collection had no image records to migrate.
 

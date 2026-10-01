@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Paoa, Bremen — D13432",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/1275-d13432/d13432_stock/d13432-stock-1275-534622.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "paoa-bremen-d13432/museum-digital.jpg",
+      "alt": "Langer gebogener Holzstab mit geschnitztem Kopf an einem Ende.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1275-d13432/d13432_stock/d13432-stock-1275-534622.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "paoa-bremen-d13432"
+      }
+    }
+  ]
+}

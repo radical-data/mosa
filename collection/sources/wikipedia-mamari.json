@@ -1,5 +1,7 @@
 {
   "author": "Wikipedia contributors",
+  "title": "Wikipedia contributors collection record for Mamari",
+  "kind": "webpage",
   "reference": "https://en.wikipedia.org/wiki/Rongorongo_text_C",
   "language": "en",
   "claims": [
@@ -82,26 +84,6 @@
       "value": "Two and a half of the fourteen lines on the recto have been shown to include calendrical information; Guy suggests possible phonetic readings of some of the glyphs in this section. Additional lines on both sides may also be calendrical."
     }
   ],
-  "images": [
-    {
-      "objectId": "mamari",
-      "file": "mamari/recto.jpg",
-      "alt": "Black-and-white photograph of the recto of the Mamari tablet, covered with rows of carved rongorongo glyphs.",
-      "caption": "Mamari, recto (side a).",
-      "credit": "Photographer unknown; Stéphen-Charles Chauvet, L’île de Pâques et ses mystères (1935), online translation by Ann M. Altman (2004), via Wikimedia Commons.",
-      "rights": "CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/. Original file preserved; website copies resized and re-encoded.",
-      "originalUrl": "https://commons.wikimedia.org/wiki/File:Rongorongo_C-a_Mamari.jpg"
-    },
-    {
-      "objectId": "mamari",
-      "file": "mamari/verso.jpg",
-      "alt": "Black-and-white photograph of the verso of the Mamari tablet, covered with rows of carved rongorongo glyphs.",
-      "caption": "Mamari, verso (side b).",
-      "credit": "Photographer unknown; Stéphen-Charles Chauvet, L’île de Pâques et ses mystères (1935), online translation by Ann M. Altman (2004), via Wikimedia Commons.",
-      "rights": "CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/. Original file preserved; website copies resized and re-encoded.",
-      "originalUrl": "https://commons.wikimedia.org/wiki/File:Rongorongo_C-b_Mamari.jpg"
-    }
-  ],
   "captures": [
     {
       "file": "2026-09-29t20-52-30-949z.html",
@@ -112,5 +94,22 @@
   "notes": {
     "text": "Extracted from the preserved Wikipedia account; its underlying publications were not independently verified. The Other names section supplies RR2 and explicitly attributes Miro-Mimosa to Jaussen. Location describes the original; reproduction locations are excluded. Only metric dimensions are quoted. Apparent collection, alternative transfer dates and calendrical uncertainty remain in the descriptions. The glyph count differs from the quai Branly account and is not reconciled. Inferred tree age is not a production date; debated identifications and detailed glyph readings are deferred. The photographs are linked from this article. Image credits and CC BY-SA 3.0 licensing were checked against the respective Wikimedia Commons file pages on 29 September 2026. Both file pages list the author as unknown; the recto description separately attributes the photograph to Widow Hoare. No photographer identity or capture date has been inferred. Downloaded originals match the SHA-1 checksums published by Commons.",
     "language": "en-GB"
-  }
+  },
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "wikipedia-mamari-photograph"
+      }
+    },
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "wikipedia-mamari-photograph-2"
+      }
+    }
+  ]
 }

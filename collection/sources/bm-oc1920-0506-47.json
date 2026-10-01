@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for Adze Oc1920,0506.47",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc1920-0506-47",
   "language": "en",
   "notes": {
@@ -78,16 +80,6 @@
       "locator": "Curator’s comments"
     }
   ],
-  "images": [
-    {
-      "objectId": "british-museum-adze-oc1920-0506-47",
-      "file": "british-museum-adze-oc1920-0506-47/british-museum-1614122248.jpg",
-      "alt": "Rounded stone adze with a worn, marked surface, against a grey background.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1614122248"
-    }
-  ],
   "captures": [
     {
       "file": "2026-09-30t15-13-04-933z.html",
@@ -100,6 +92,16 @@
       "capturedAt": "2026-09-30T15:22:41.099Z",
       "method": "singlefile",
       "note": "Image 1614122248 page identifies the adze, its non-commercial CC BY-NC-SA 4.0 terms and required credit."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-oc1920-0506-47-photograph"
+      }
     }
   ]
 }

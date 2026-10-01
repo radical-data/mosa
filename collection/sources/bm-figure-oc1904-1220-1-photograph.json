@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Figure — British Museum (Oc1904,1220.1)",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613787995",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-figure-oc1904-1220-1/british-museum-1613787995.jpg",
+      "alt": "Fishlike figure (phallus, with human figure) made of wood.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613787995"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc1904-1220-1"
+      }
+    }
+  ]
+}

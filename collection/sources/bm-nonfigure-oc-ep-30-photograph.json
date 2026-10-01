@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of British Museum weapon club Oc,EP.30",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613788014",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-weapon-club-oc-ep-30/british-museum-1613788014.jpg",
+      "alt": "Curved wooden fish-shaped club with carved concentric details at both ends.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788014"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-weapon-club-oc-ep-30"
+      }
+    }
+  ]
+}

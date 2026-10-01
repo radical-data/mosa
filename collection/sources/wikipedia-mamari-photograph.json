@@ -1,0 +1,27 @@
+{
+  "author": null,
+  "title": "Photograph of Mamari",
+  "kind": "photograph",
+  "reference": "https://commons.wikimedia.org/wiki/File:Rongorongo_C-a_Mamari.jpg",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "mamari/recto.jpg",
+      "alt": "Black-and-white photograph of the recto of the Mamari tablet, covered with rows of carved rongorongo glyphs.",
+      "caption": "Mamari, recto (side a).",
+      "credit": "Photographer unknown; Stéphen-Charles Chauvet, L’île de Pâques et ses mystères (1935), online translation by Ann M. Altman (2004), via Wikimedia Commons.",
+      "rights": "CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/. Original file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://commons.wikimedia.org/wiki/File:Rongorongo_C-a_Mamari.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "mamari"
+      }
+    }
+  ]
+}

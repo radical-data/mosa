@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Hoa Hakananaiʻa",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/210397001",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "hoa-hakananai-a/british-museum-210397001.jpg",
+      "alt": "Three-quarter front view of Hoa Hakananai’a on a plinth in an arched alcove.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Original downloaded file preserved; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/210397001"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      }
+    }
+  ]
+}

@@ -18,7 +18,7 @@ collection and does not make the richer ontology directly useful to the public.
 The public collection currently contains 12 reviewed records. The final export
 also contains 5 canonical objects without visible publication records and 3
 unaccepted drafts. The exported source files are PDFs and HTML captures rather
-than object photographs. MoSA has no editorial articles yet.
+than object photographs. MoSA has no authored articles yet.
 
 ## Decision
 
@@ -28,7 +28,7 @@ than object photographs. MoSA has no editorial articles yet.
   foregrounded claim identifiers.
 - Give each source one JSON file containing its authorship, reference, language,
   attributed claims and image records.
-- Store future editorials as Markdown with YAML front matter. Editorial prose is
+- Store future articles as Markdown with YAML front matter. Article prose is
   not automatically a structured claim.
 - Keep claim values as source wording in plain text. Keep source attribution and
   conflicting accounts visible.

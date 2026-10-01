@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Rapa, New York — 1979.206.1452",
+  "kind": "photograph",
+  "reference": "https://www.metmuseum.org/art/collection/search/320134",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "rapa-new-york-1979-206-1452/met.jpg",
+      "alt": "Front view of a wooden dance paddle with a carved face and a broad, tapering blade.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/320134"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "rapa-new-york-1979-206-1452"
+      }
+    }
+  ]
+}

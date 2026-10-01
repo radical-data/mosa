@@ -1,5 +1,7 @@
 {
   "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Ethnologisches Museum, Staatliche Museen zu Berlin collection record for Rapa, Berlin — VI 2129 - B",
+  "kind": "webpage",
   "reference": "https://id.smb.museum/object/998469",
   "language": "de",
   "claims": [
@@ -58,16 +60,6 @@
       "value": "Erwerbung: Ankauf von Museum Godeffroy 1878"
     }
   ],
-  "images": [
-    {
-      "objectId": "rapa-berlin-vi-2129-b",
-      "file": "rapa-berlin-vi-2129-b/smb.jpg",
-      "alt": "Ein dunkles hölzernes Doppelpaddel mit schmalem Mittelgriff und vorspringender Spitze.",
-      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://id.smb.museum/object/998469"
-    }
-  ],
   "notes": {
     "text": "Matched displayed institution-scoped accession VI 2129 and the complete 80,5 x 17,5 x 2 cm dimensions with the IndiGen entry; type and provenance were also compared. The gallery appends a photographic view letter to this accession; the museum lists the base accession and separate image views. The established object handle is retained. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
     "language": "en-GB"
@@ -78,6 +70,16 @@
       "capturedAt": "2026-09-30T00:02:04.988Z",
       "method": "singlefile",
       "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "smb-berlin-vi-2129-photograph"
+      }
     }
   ]
 }

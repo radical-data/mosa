@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for British Museum tool/implement Oc,EP.18",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-18",
   "language": "en",
   "claims": [
@@ -99,14 +101,14 @@
     "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
     "language": "en-GB"
   },
-  "images": [
+  "images": [],
+  "relationships": [
     {
-      "objectId": "british-museum-tool-implement-oc-ep-18",
-      "file": "british-museum-tool-implement-oc-ep-18/british-museum-1613200523.jpg",
-      "alt": "Obsidian cutting blade mounted on a short wooden handle with cord bindings.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1613200523"
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-nonfigure-oc-ep-18-photograph"
+      }
     }
   ]
 }

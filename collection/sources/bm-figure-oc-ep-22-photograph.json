@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Figure — British Museum (Oc,EP.22)",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/209819001",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-figure-oc-ep-22/british-museum-209819001.jpg",
+      "alt": "Carved male figure, moai tangata, made of wood.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/209819001"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc-ep-22"
+      }
+    }
+  ]
+}

@@ -2,15 +2,24 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { messages } from "../i18n/catalogues";
-import { absolutePageURL, type Locale, localeIds, locales, type PageId, pagePath, siteURL } from "../i18n/routes";
+import { absolutePageURL, type Locale, localeIds, locales, type PageId, type PublicSection, pagePath, publicRecordPath, publicSectionPath, siteURL } from "../i18n/routes";
 import "../styles/global.css";
 
-interface Props { title: string; description: string; locale: Locale; page?: PageId; collectionItemId?: string; }
-const { title, description, locale, page, collectionItemId } = Astro.props;
-const pageURL = (id: Locale) => collectionItemId
-  ? new URL(`${pagePath("collection", id)}${collectionItemId}/`, siteURL).href
-  : page ? absolutePageURL(page, id) : undefined;
+interface Props { title: string; description: string; locale: Locale; page?: PageId; collectionItemId?: string; publicRecord?: { section: PublicSection; id: string }; publicIndex?: PublicSection; }
+const { title, description, locale, page, collectionItemId, publicRecord, publicIndex } = Astro.props;
+const pathFor = (id: Locale) => publicRecord
+  ? publicRecordPath(publicRecord.section, publicRecord.id, id)
+  : publicIndex
+    ? publicSectionPath(publicIndex, id)
+    : collectionItemId
+      ? `${pagePath("collection", id)}${collectionItemId}/`
+      : page ? pagePath(page, id) : undefined;
+const pageURL = (id: Locale) => {
+  const path = pathFor(id);
+  return path ? new URL(path, siteURL).href : page ? absolutePageURL(page, id) : undefined;
+};
 const canonicalURL = pageURL(locale);
+const isPublicRoute = Boolean(page || publicRecord || publicIndex);
 ---
 <!doctype html>
 <html lang={locales[locale].language}>
@@ -19,13 +28,13 @@ const canonicalURL = pageURL(locale);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#ffffff" />
-    {!page && <meta name="robots" content="noindex, nofollow" />}
+    {!isPublicRoute && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     {canonicalURL && <meta property="og:url" content={canonicalURL} />}
     {canonicalURL && <link rel="canonical" href={canonicalURL} />}
-    {page && <>
+    {isPublicRoute && <>
       {localeIds.map((id) => <link rel="alternate" hreflang={locales[id].hreflang} href={pageURL(id)} />)}
       <link rel="alternate" hreflang="x-default" href={pageURL("es")} />
       <link rel="sitemap" href="/sitemap-index.xml" />

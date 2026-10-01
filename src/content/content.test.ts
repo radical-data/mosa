@@ -3,7 +3,7 @@ import { validateLocalisation } from "../../scripts/validate-localisation";
 import { content, getCopy } from "./content";
 
 describe("bilingual content checks", () => {
-  it("accepts the site's copy without editorial metadata", () => {
+  it("accepts the site's copy without publishing metadata", () => {
     expect(() => validateLocalisation()).not.toThrow();
     expect(getCopy("home", "en")).toBe(content.home.en);
   });

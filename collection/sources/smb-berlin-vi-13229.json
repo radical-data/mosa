@@ -1,5 +1,7 @@
 {
   "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Ethnologisches Museum, Staatliche Museen zu Berlin collection record for Ika, Berlin — VI 13229",
+  "kind": "webpage",
   "reference": "https://id.smb.museum/object/995662",
   "language": "de",
   "claims": [
@@ -64,16 +66,6 @@
       "value": "Erwerbung: Ankauf von P. Otto Zembsch 1896"
     }
   ],
-  "images": [
-    {
-      "objectId": "ika-berlin-vi-13229",
-      "file": "ika-berlin-vi-13229/smb.jpg",
-      "alt": "Ein abgerundeter Holzanhänger mit parallelen geschnitzten Rillen und einer erhöhten runden Stelle.",
-      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://id.smb.museum/object/995662"
-    }
-  ],
   "notes": {
     "text": "Matched displayed institution-scoped accession VI 13229 and the complete 7,5 x 11,5 x 5,6 cm dimensions with the IndiGen entry; type and provenance were also compared. IndiGen classifies this object as Ika; the museum calls it tahonga / Brustschmuck. The exact accession, dimensions and collector support identity while the disagreement remains attributed. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
     "language": "en-GB"
@@ -84,6 +76,16 @@
       "capturedAt": "2026-09-29T23:59:30.574Z",
       "method": "singlefile",
       "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "smb-berlin-vi-13229-photograph"
+      }
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai taŋata, Stockholm — 1885.05.0002",
+  "kind": "photograph",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1586333",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-tangata-stockholm-1885-05-0002/carlotta.jpg",
+      "alt": "Träfigur med inlagda ögon och långa armar längs sidorna.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1586333"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-tangata-stockholm-1885-05-0002"
+      }
+    }
+  ]
+}

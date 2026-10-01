@@ -8,6 +8,8 @@ import { captureSource, checkCaptures, registerCapture } from "./source-capture"
 const roots: string[] = [];
 const fixedNow = () => new Date("2026-09-29T20:30:00.000Z");
 const source = {
+  title: "Example source",
+  kind: "webpage",
   author: null,
   reference: "https://example.org/item",
   language: "en-GB",

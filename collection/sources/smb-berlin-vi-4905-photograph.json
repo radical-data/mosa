@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ua, Berlin — VI 4905",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/2049814",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "ua-berlin-vi-4905/smb.jpg",
+      "alt": "Ein sich verjüngender Holzstab mit geschnitztem Gesicht und mehreren hellen Sammlungsetiketten.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Peter Jacob",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/2049814"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ua-berlin-vi-4905"
+      }
+    }
+  ]
+}

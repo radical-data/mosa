@@ -1,0 +1,16 @@
+---
+import { messages } from "../i18n/catalogues";
+import { type Locale, pagePath, publicSectionPath } from "../i18n/routes";
+
+interface Props { locale: Locale; active: "objects" | "sources"; }
+const { locale, active } = Astro.props;
+const t = messages(locale);
+---
+<nav class="collection-subnav" aria-label={t.collectionSubnavigation}>
+  <a href={pagePath("collection", locale)} aria-current={active === "objects" ? "page" : undefined}>
+    {locale === "en" ? "Objects" : "Objetos"}
+  </a>
+  <a href={publicSectionPath("sources", locale)} aria-current={active === "sources" ? "page" : undefined}>
+    {t.documentsImages}
+  </a>
+</nav>

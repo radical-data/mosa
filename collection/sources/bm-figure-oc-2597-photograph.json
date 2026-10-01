@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Figure — British Museum (Oc,+.2597)",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613753770",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-figure-oc-2597/british-museum-1613753770.jpg",
+      "alt": "Standing female figure, carved of hard brown wood, very flat: eyes of obsidian surrounded by bone.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613753770"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc-2597"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ua, Berlin — VI 24939",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/2050021",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "ua-berlin-vi-24939/smb.jpg",
+      "alt": "Ein langer schmaler Holzstab mit geschnitztem Kopf.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Peter Jacob",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/2050021"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ua-berlin-vi-24939"
+      }
+    }
+  ]
+}

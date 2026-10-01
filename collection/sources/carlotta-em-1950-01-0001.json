@@ -1,5 +1,7 @@
 {
   "author": "Etnografiska Museet",
+  "title": "Etnografiska Museet collection record for Moai taŋata, Stockholm — 1950.01.0001",
+  "kind": "webpage",
   "reference": "https://collections.smvk.se/carlotta-em/web/object/1816030",
   "language": "mul",
   "claims": [
@@ -58,16 +60,6 @@
       "value": "Belongs to Samling: 1950.01 :: Antikvitetsaffär, Antiquity shop"
     }
   ],
-  "images": [
-    {
-      "objectId": "moai-tangata-stockholm-1950-01-0001",
-      "file": "moai-tangata-stockholm-1950-01-0001/carlotta.jpg",
-      "alt": "Träfigur med inlagda ögon och armar längs sidorna.",
-      "credit": "Etnografiska museet / Statens museer för världskultur",
-      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
-      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1816030"
-    }
-  ],
   "notes": {
     "text": "Evidence locators: Inventarienummer; Sakord; Beskrivning; Beskrivning - engelska; Land - ursprung; Material - tillverkning; Höjd; Tidpunkt - förvärv till museet; Belongs to Samling. The record contains Swedish and English catalogue text; both are retained in the original wording. The selected photograph carries a CC BY 4.0 overlay in its image viewer. The original JPEG from the preserved page is included unchanged. No individual photographer is named in the reviewed image credit; the holding museum is credited.",
     "language": "en-GB"
@@ -78,6 +70,16 @@
       "capturedAt": "2026-09-30T00:24:21.832Z",
       "method": "singlefile",
       "note": "Reviewed preserved record against its displayed accession and cited catalogue fields. The selected image and its CC BY 4.0 overlay are preserved in the catalogue image viewer."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "carlotta-em-1950-01-0001-photograph"
+      }
     }
   ]
 }

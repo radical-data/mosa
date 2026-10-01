@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai taŋata, Berlin — VI 4897",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/823460",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-tangata-berlin-vi-4897/smb.jpg",
+      "alt": "Eine stehende Holzfigur mit eingelegten Augen und einem hellen runden Fleck auf der Brust.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Martin Franken",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/823460"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-tangata-berlin-vi-4897"
+      }
+    }
+  ]
+}

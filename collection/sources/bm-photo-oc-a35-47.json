@@ -1,19 +1,13 @@
 {
   "author": "British Museum",
+  "title": "British Museum catalogue record for photograph Oc-A35-47",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/EA_Oc-A35-47",
   "language": "en",
-  "claims": [
-    {
-      "id": "view-ahu-ko-te-riku",
-      "objectId": "ahu-ko-te-riku-site",
-      "predicate": "described_as",
-      "value": "Photograph (colour); close up view of Ahu Ko Te Riku with a moai (figure carving) with its red pukao (hat) representing a tuft of hair, right side profile; Ahu Ko Te Riku, Easter Island.",
-      "locator": "Description"
-    }
-  ],
+  "claims": [],
   "images": [],
   "notes": {
-    "text": "This British Museum catalogue record describes a 1980 photograph by Katesa Schlosser. It is registered as a documentary source, not as a physical Rapa Nui artefact. The 30 September 2026 image-rights review found that the museum's image page explicitly says the image is unavailable for download and supplies no reusable image licence or credit, so no image is published. The complete Description field identifies the represented site as Ahu Ko Te Riku; the curator's contextual comment is collapsed in the live record and was not extracted.",
+    "text": "This British Museum catalogue record describes a 1980 photograph by Katesa Schlosser. It is registered as a documentary source, not as a physical Rapa Nui artefact. The 30 September 2026 image-rights review found that the museum's image page explicitly says the image is unavailable for download and supplies no reusable image licence or credit, so no image is published. The complete Description field identifies the represented site as Ahu Ko Te Riku; the curator's contextual comment is collapsed in the live record and was not extracted. The former site-targeted extraction is retained here after correcting the collection boundary: “Photograph (colour); close up view of Ahu Ko Te Riku with a moai (figure carving) with its red pukao (hat) representing a tuft of hair, right side profile; Ahu Ko Te Riku, Easter Island.” (Description) The site is not a collection object because its displacement is not under investigation.",
     "language": "en-GB"
   },
   "captures": [
@@ -28,6 +22,15 @@
       "capturedAt": "2026-09-30T19:59:29.170Z",
       "method": "singlefile",
       "note": "Image 513739001 page identifies the depicted place but reports that the image is unavailable for download and supplies no reusable image licence or credit."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "discusses",
+      "target": {
+        "type": "source",
+        "id": "bm-photo-oc-a35-47-photograph"
+      }
     }
   ]
 }

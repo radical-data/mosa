@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ao, Berlin — VI 4950 - A",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/998470",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "ao-berlin-vi-4950-a/smb.jpg",
+      "alt": "Ein langes hölzernes Doppelpaddel mit geschnitztem Gesicht und Resten roter und weisser Bemalung.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998470"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ao-berlin-vi-4950-a"
+      }
+    }
+  ]
+}

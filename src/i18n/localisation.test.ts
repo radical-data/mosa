@@ -36,6 +36,20 @@ describe("localised routes and collection state", () => {
     expect(languageLink("about", "en", source)).toBe("/en/about/");
     expect(anchors.resources).toContain("guide");
   });
+  it("switches collection record routes and retains source filters", () => {
+    const sourceIndex = new URL(
+      "https://example.org/en/sources/?q=letter&kind=correspondence&topic=restitution&tracking=x",
+    );
+    expect(languageLink("collection", "es", sourceIndex)).toBe(
+      "/es/fuentes/?q=letter&kind=correspondence&topic=restitution",
+    );
+    const sourceDetail = new URL("https://example.org/es/fuentes/a-letter/");
+    expect(languageLink("collection", "en", sourceDetail)).toBe("/en/sources/a-letter/");
+    const article = new URL("https://example.org/es/articulos/a-story/");
+    expect(languageLink("resources", "en", article)).toBe("/en/articles/a-story/");
+    const object = new URL("https://example.org/en/collection/a-carving/");
+    expect(languageLink("collection", "es", object)).toBe("/es/coleccion/a-carving/");
+  });
   it("keeps original-name diacritics meaningful", () => {
     expect(matchesSearch("berlin", "Berlín", "Berlín")).toBe(true);
     expect(matchesSearch("Haka Nononga", "Haka Nonoŋa", "")).toBe(false);

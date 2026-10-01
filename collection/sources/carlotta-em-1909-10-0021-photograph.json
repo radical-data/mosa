@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Reimiro, Stockholm — 1909.10.0021",
+  "kind": "photograph",
+  "reference": "https://collections.smvk.se/carlotta-em/web/object/1587472",
+  "language": "sv",
+  "claims": [],
+  "images": [
+    {
+      "file": "reimiro-stockholm-1909-10-0021/carlotta.jpg",
+      "alt": "Halvmåneformad bröstprydnad av trä med två snidade huvuden och en snodd.",
+      "credit": "Etnografiska museet / Statens museer för världskultur",
+      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+      "originalUrl": "https://collections.smvk.se/carlotta-em/web/object/1587472"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "reimiro-stockholm-1909-10-0021"
+      }
+    }
+  ]
+}

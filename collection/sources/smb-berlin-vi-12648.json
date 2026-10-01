@@ -1,5 +1,7 @@
 {
   "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Ethnologisches Museum, Staatliche Museen zu Berlin collection record for Reimiro, Berlin — VI 12648",
+  "kind": "webpage",
   "reference": "https://id.smb.museum/object/998653",
   "language": "de",
   "claims": [
@@ -58,16 +60,6 @@
       "value": "Erwerbung: Ankauf von Schneider 1895"
     }
   ],
-  "images": [
-    {
-      "objectId": "reimiro-berlin-vi-12648",
-      "file": "reimiro-berlin-vi-12648/smb.jpg",
-      "alt": "Ein halbmondförmiger Holzschmuck mit geschnitzten Köpfen an beiden Enden.",
-      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://id.smb.museum/object/998653"
-    }
-  ],
   "notes": {
     "text": "Matched displayed institution-scoped accession VI 12648 and the complete 15,5 x 43,5 x 4 cm dimensions with the IndiGen entry; type and provenance were also compared. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
     "language": "en-GB"
@@ -78,6 +70,16 @@
       "capturedAt": "2026-09-30T00:02:12.516Z",
       "method": "singlefile",
       "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "smb-berlin-vi-12648-photograph"
+      }
     }
   ]
 }

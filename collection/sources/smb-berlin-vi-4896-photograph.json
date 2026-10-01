@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ua, Berlin — VI 4896",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/2044994",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "ua-berlin-vi-4896/smb.jpg",
+      "alt": "Ein langer Holzstab mit eingelegten Augen im geschnitzten Kopf.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Peter Jacob",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/2044994"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ua-berlin-vi-4896"
+      }
+    }
+  ]
+}

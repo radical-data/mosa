@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of British Museum flake Oc.6339",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1614138862",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-flake-oc-6339/british-museum-1614138862.jpg",
+      "alt": "Dark obsidian flake chipped to form a tang at one end.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1614138862"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-flake-oc-6339"
+      }
+    }
+  ]
+}

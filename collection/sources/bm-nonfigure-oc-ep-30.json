@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for British Museum weapon club Oc,EP.30",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc-EP-30",
   "language": "en",
   "claims": [
@@ -99,14 +101,14 @@
     "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
     "language": "en-GB"
   },
-  "images": [
+  "images": [],
+  "relationships": [
     {
-      "objectId": "british-museum-weapon-club-oc-ep-30",
-      "file": "british-museum-weapon-club-oc-ep-30/british-museum-1613788014.jpg",
-      "alt": "Curved wooden fish-shaped club with carved concentric details at both ends.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1613788014"
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-nonfigure-oc-ep-30-photograph"
+      }
     }
   ]
 }

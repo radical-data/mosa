@@ -1,5 +1,7 @@
 {
   "author": "British Museum",
+  "title": "British Museum collection record for British Museum flake Oc.6341",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc-6341_1",
   "language": "en",
   "claims": [
@@ -85,14 +87,14 @@
     "text": "The catalogue labels this combined field “Found/Acquired”; it is retained as source wording and is not treated as an independently established findspot. A separate “Production place” field is represented as made_at when present.",
     "language": "en-GB"
   },
-  "images": [
+  "images": [],
+  "relationships": [
     {
-      "objectId": "british-museum-flake-oc-6341",
-      "file": "british-museum-flake-oc-6341/british-museum-1614138866.jpg",
-      "alt": "Dark obsidian flake with a worked edge.",
-      "credit": "© The Trustees of the British Museum",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://www.britishmuseum.org/collection/image/1614138866"
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bm-nonfigure-oc-6341-photograph"
+      }
     }
   ]
 }

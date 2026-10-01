@@ -1,0 +1,217 @@
+---
+import { Image } from "astro:assets";
+import ArticlePreview from "../../../components/ArticlePreview.astro";
+import AttributedClaims from "../../../components/AttributedClaims.astro";
+import ClaimStatement from "../../../components/ClaimStatement.astro";
+import CollectionNav from "../../../components/CollectionNav.astro";
+import { articlePublications, collectionObjects, getArticleRecord, getObjectRecord, getSourceRecord, sourceRecords } from "../../../data/collection";
+import { type Locale, localeIds, pagePath, publicRecordPath } from "../../../i18n/routes";
+import Layout from "../../../layouts/Layout.astro";
+import ArticleDetail from "../../../templates/article-detail.astro";
+import SourceDetail from "../../../templates/source-detail.astro";
+
+interface Props {
+  locale: Locale;
+  recordKind: "object" | "source" | "article";
+  recordId: string;
+}
+
+export function getStaticPaths() {
+  const objectPaths = collectionObjects.flatMap((object) =>
+    localeIds.map((locale) => ({
+      params: {
+        lang: locale,
+        recordSection: locale === "es" ? "coleccion" : "collection",
+        id: object.id,
+      },
+      props: { locale, recordKind: "object" as const, recordId: object.id },
+    })),
+  );
+  const sourcePaths = sourceRecords.flatMap((source) => localeIds.map((locale) => ({
+    params: { lang: locale, recordSection: locale === "es" ? "fuentes" : "sources", id: source.id },
+    props: { locale, recordKind: "source" as const, recordId: source.id },
+  })));
+  const articlePaths = articlePublications.flatMap((article) => localeIds.map((locale) => ({
+    params: { lang: locale, recordSection: locale === "es" ? "articulos" : "articles", id: article.id },
+    props: { locale, recordKind: "article" as const, recordId: article.id },
+  })));
+  return [...objectPaths, ...sourcePaths, ...articlePaths];
+}
+
+const copy = {
+  en: {
+    back: "Collection",
+    navigation: "On this page",
+    origin: "Origin and findspot",
+    holding: "Reported holding and location",
+    holdingNote: "Sources may describe historical holdings or locations.",
+    foregrounded: "Foregrounded perspectives",
+    images: "Images",
+    articles: "Articles about this object",
+    sources: "Source accounts",
+    recorded: "Recorded in",
+    author: "Source author",
+    credit: "Credit",
+    rights: "Rights",
+    original: "Original image",
+    missing: "Object not found",
+  },
+  es: {
+    back: "Colección",
+    navigation: "En esta página",
+    origin: "Origen y lugar de hallazgo",
+    holding: "Custodia y ubicación informadas",
+    holdingNote: "Las fuentes pueden describir custodias o ubicaciones históricas.",
+    foregrounded: "Perspectivas destacadas",
+    images: "Imágenes",
+    articles: "Artículos sobre este objeto",
+    sources: "Relatos de las fuentes",
+    recorded: "Registrado en",
+    author: "Autoría de la fuente",
+    credit: "Crédito",
+    rights: "Derechos",
+    original: "Imagen original",
+    missing: "No se encontró el objeto",
+  },
+} as const;
+const { locale, recordKind, recordId } = Astro.props;
+const record = recordKind === "object" ? getObjectRecord(recordId) : undefined;
+const sourceRecord = recordKind === "source" ? getSourceRecord(recordId) : undefined;
+const articleRecord = recordKind === "article" ? getArticleRecord(recordId) : undefined;
+const t = copy[locale];
+const referenceURL = (value: string) => {
+  const candidate = value.match(/https?:\/\/\S+$/u)?.[0] ?? value;
+  try {
+    const url = new URL(candidate);
+    return ["http:", "https:"].includes(url.protocol) ? url.href : null;
+  } catch {
+    return null;
+  }
+};
+---
+
+{recordKind === "source" && sourceRecord ? <SourceDetail locale={locale} record={sourceRecord} /> : recordKind === "article" && articleRecord ? <ArticleDetail locale={locale} article={articleRecord} /> : <Layout
+  locale={locale}
+  page={record ? "collection" : undefined}
+  collectionItemId={record?.object.id}
+  title={`${record?.object.name ?? "Collection"} — MoSA`}
+  description={record?.object.name ?? "Collection"}
+>
+  {!record ? (
+    <section class="container section"><h1>{t.missing}</h1></section>
+  ) : (
+    <article class="container section dossier" data-record-id={record.object.id}>
+      <CollectionNav locale={locale} active="objects" />
+      <p><a href={pagePath("collection", locale)}>← {t.back}</a></p>
+      <h1>{record.object.name}</h1>
+
+      <nav aria-label={t.navigation} class="object-navigation">
+        <ul>
+          {record.foregroundedClaims.length > 0 && <li><a href="#foregrounded">{t.foregrounded}</a></li>}
+          {record.images.length > 0 && <li><a href="#images">{t.images}</a></li>}
+          {record.originClaims.length > 0 && <li><a href="#origin">{t.origin}</a></li>}
+          {record.holdingClaims.length > 0 && <li><a href="#holding">{t.holding}</a></li>}
+          {record.articles.length > 0 && <li><a href="#articles">{t.articles}</a></li>}
+          <li><a href="#sources">{t.sources}</a></li>
+        </ul>
+      </nav>
+
+      {record.foregroundedClaims.length > 0 && (
+        <section id="foregrounded" aria-labelledby="foregrounded-heading">
+          <h2 id="foregrounded-heading">{t.foregrounded}</h2>
+          <AttributedClaims claims={record.foregroundedClaims} locale={locale} />
+        </section>
+      )}
+
+      {record.images.length > 0 && (
+        <section id="images" aria-labelledby="images-heading">
+          <h2 id="images-heading">{t.images}</h2>
+          <div class="image-gallery">
+            {record.images.map(({ image, source, asset }) => (
+              <figure>
+                <Image
+                  src={asset}
+                  alt={image.alt}
+                  lang={source.language}
+                  widths={[480, 960, 1440]}
+                  sizes="(max-width: 60rem) 100vw, 50vw"
+                />
+                <figcaption class="small">
+                  {image.caption && <span lang={source.language}>{image.caption}</span>}
+                  {image.credit && <span>{t.credit}: <span lang={source.language}>{image.credit}</span></span>}
+                  {image.rights && <span>{t.rights}: <span lang={source.language}>{image.rights}</span></span>}
+                  {image.originalUrl && <a href={image.originalUrl} rel="noreferrer">{t.original}</a>}
+                  <span>{t.recorded}: <a href={publicRecordPath("sources", source.id, locale)}>{source.title}</a></span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {record.originClaims.length > 0 && (
+        <section id="origin" aria-labelledby="origin-heading">
+          <h2 id="origin-heading">{t.origin}</h2>
+          <AttributedClaims claims={record.originClaims} locale={locale} />
+        </section>
+      )}
+
+      {record.holdingClaims.length > 0 && (
+        <section id="holding" aria-labelledby="holding-heading">
+          <h2 id="holding-heading">{t.holding}</h2>
+          <p class="small muted">{t.holdingNote}</p>
+          <AttributedClaims claims={record.holdingClaims} locale={locale} />
+        </section>
+      )}
+
+      {record.articles.length > 0 && (
+        <section id="articles" aria-labelledby="articles-heading">
+          <h2 id="articles-heading">{t.articles}</h2>
+          {record.articles
+            .sort((a, b) => Number(b.language.startsWith(locale)) - Number(a.language.startsWith(locale)))
+            .map((article) => <ArticlePreview article={article} locale={locale} />)}
+        </section>
+      )}
+
+      <section id="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">{t.sources}</h2>
+        <div class="source-accounts">
+          {record.sources.map((source) => {
+            const url = referenceURL(source.reference);
+            return (
+              <article class="source-account" id={`source-${source.id}`}>
+                <h3><a href={publicRecordPath("sources", source.id, locale)}>{source.title}</a></h3>
+                {url && <p class="small"><a href={url} rel="noreferrer">{source.reference}</a></p>}
+                {source.author && <p class="small muted">{t.author}: {source.author}</p>}
+                {source.claims.length > 0 && (
+                  <ul>
+                    {source.claims.map((claim) => (
+                      <li>
+                        <ClaimStatement claim={claim} language={source.language} locale={locale} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+    </article>
+  )}
+</Layout>}
+
+<style>
+  .dossier { max-width: 72rem; }
+  .dossier > section { margin-block-start: clamp(3rem, 8vw, 6rem); }
+  .source-accounts, .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem; }
+  .source-account { border: 1px solid currentColor; padding: 1rem; overflow-wrap: anywhere; }
+  .object-navigation ul { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; list-style: none; padding: 0; }
+  .dossier section, .source-account { scroll-margin-top: 2rem; }
+  .source-account h3 { font-size: 1rem; }
+  .source-account ul { padding-inline-start: 1.25rem; }
+  figure { margin: 0; }
+  figure :global(img) { width: 100%; height: auto; }
+  figcaption { display: grid; gap: .25rem; margin-block-start: .5rem; }
+</style>

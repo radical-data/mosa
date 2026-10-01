@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Figure — British Museum (Oc1953,14.1)",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613865722",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-figure-oc1953-14-1/british-museum-1613865722.jpg",
+      "alt": "Wood carving of a human figure with head, arms and body.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613865722"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc1953-14-1"
+      }
+    }
+  ]
+}

@@ -1,40 +1,13 @@
 {
   "author": "Jo Anne Van Tilburg",
+  "title": "Remote Possibilities: Hoa Hakananai'a and HMS Topaze on Rapa Nui",
+  "kind": "publication",
   "reference": "https://britishmuseum.iro.bl.uk/entities/publication/5bf77d6d-67f1-4c58-a268-db829885bc0b",
   "language": "en-GB",
-  "claims": [
-    {
-      "id": "eisp-number",
-      "objectId": "pukao-puna-pau-4-137-001",
-      "predicate": "catalogue_number",
-      "value": "4-137-001",
-      "locator": "p. 30, Image 44"
-    },
-    {
-      "id": "classification",
-      "objectId": "pukao-puna-pau-4-137-001",
-      "predicate": "classified_as",
-      "value": "Red scoria pukao",
-      "locator": "p. 30, Image 44"
-    },
-    {
-      "id": "location",
-      "objectId": "pukao-puna-pau-4-137-001",
-      "predicate": "located_at",
-      "value": "Puna Pau",
-      "locator": "p. 30, Image 44"
-    },
-    {
-      "id": "petroglyphs",
-      "objectId": "pukao-puna-pau-4-137-001",
-      "predicate": "described_as",
-      "value": "Note petroglyphs of canoes (vaka), one with outrigger.",
-      "locator": "p. 30, Image 44"
-    }
-  ],
+  "claims": [],
   "images": [],
   "notes": {
-    "text": "Image 44 reproduces Mathew James Harrison's 1868 drawing and identifies the depicted pukao with the Easter Island Statue Project number 4-137-001. The preceding text says that Harrison recorded pukao at Puna Pau with incised crescent, bird or komari forms. Image 45 reproduces Harrison's other pukao drawing and compares its motifs with Hoa Hakananai'a and a woodcarving, but supplies no individual pukao identifier; that second drawing therefore remains unlinked. The British Museum Research Repository's open copy and publication record were reviewed on 30 September 2026.",
+    "text": "Image 44 reproduces Mathew James Harrison's 1868 drawing and identifies the depicted pukao with the Easter Island Statue Project number 4-137-001. The preceding text says that Harrison recorded pukao at Puna Pau with incised crescent, bird or komari forms. Image 45 reproduces Harrison's other pukao drawing and compares its motifs with Hoa Hakananai'a and a woodcarving, but supplies no individual pukao identifier; that second drawing therefore remains unlinked. The British Museum Research Repository's open copy and publication record were reviewed on 30 September 2026. The former claims about the in-situ pukao are retained here after correcting the collection boundary: “4-137-001” (p. 30, Image 44) “Red scoria pukao” (p. 30, Image 44) “Puna Pau” (p. 30, Image 44) “Note petroglyphs of canoes (vaka), one with outrigger.” (p. 30, Image 44) The pukao is not a collection object because its displacement is not under investigation.",
     "language": "en-GB"
   },
   "captures": [
@@ -48,6 +21,16 @@
       "originalUrl": "https://britishmuseum.iro.bl.uk/bitstreams/990e7521-baac-44ec-ad8c-9207d61702f8/download",
       "capturedAt": "2026-09-30T18:41:25.000Z",
       "method": "supplied-file"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "discusses",
+      "target": {
+        "type": "source",
+        "id": "bm-harrison-2017-2018-2-drawing"
+      },
+      "locator": "p. 30, Image 44"
     }
   ]
 }

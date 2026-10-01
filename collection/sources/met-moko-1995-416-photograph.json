@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moko, New York — 1995.416",
+  "kind": "photograph",
+  "reference": "https://www.metmuseum.org/art/collection/search/317746",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "moko-new-york-1995-416/met.jpg",
+      "alt": "Side view of a long carved lizardlike figure with a reptile head, birdlike tail and humanlike body.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain (The Met Open Access)",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/317746"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moko-new-york-1995-416"
+      }
+    }
+  ]
+}

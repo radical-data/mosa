@@ -1,5 +1,7 @@
 {
   "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Ethnologisches Museum, Staatliche Museen zu Berlin collection record for Moai kavakava, Berlin — VI 12650 - A",
+  "kind": "webpage",
   "reference": "https://id.smb.museum/object/989207",
   "language": "de",
   "claims": [
@@ -64,16 +66,6 @@
       "value": "Erwerbung: Ankauf von Martha Leybold 1895"
     }
   ],
-  "images": [
-    {
-      "objectId": "moai-kavakava-berlin-vi-12650-a",
-      "file": "moai-kavakava-berlin-vi-12650-a/smb.jpg",
-      "alt": "Eine stehende Holzfigur mit eingelegten Augen und deutlich geschnitzten Rippen.",
-      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://id.smb.museum/object/989207"
-    }
-  ],
   "notes": {
     "text": "Matched displayed institution-scoped accession VI 12650 and the complete 50,5 x 11 x 15 cm dimensions with the IndiGen entry; type and provenance were also compared. The gallery appends a photographic view letter to this accession; the museum lists the base accession and separate image views. The established object handle is retained. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
     "language": "en-GB"
@@ -84,6 +76,16 @@
       "capturedAt": "2026-09-29T23:59:45.799Z",
       "method": "singlefile",
       "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "smb-berlin-vi-12650-photograph"
+      }
     }
   ]
 }

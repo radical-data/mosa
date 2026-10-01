@@ -26,6 +26,8 @@ async function fixture() {
   const root = await mkdtemp(path.join(os.tmpdir(), "mosa-research-progress-"));
   roots.push(root);
   const seed = {
+    title: "Example collection",
+    kind: "webpage",
     author: "Example Museum",
     reference: "https://museum.example/collection",
     language: "en-GB",
@@ -73,6 +75,8 @@ async function fixture() {
     "<!doctype html><html><body>Evidence</body></html>",
   );
   await writeJson(root, "collection/sources/museum-record.json", {
+    title: "Museum catalogue record",
+    kind: "webpage",
     author: "Example Museum",
     reference: "https://museum.example/item-a",
     language: "en-GB",
@@ -84,16 +88,19 @@ async function fixture() {
         value: "A-100",
       },
     ],
+    relationships: [{ type: "reproduces", target: { type: "source", id: "photo-record" } }],
     images: [],
   });
   await writeJson(root, "collection/sources/photo-record.json", {
+    title: "Photograph of Item A",
+    kind: "photograph",
     author: "Example Museum",
     reference: "https://museum.example/item-a/photo",
     language: "en-GB",
     claims: [],
+    relationships: [{ type: "depicts", target: { type: "object", id: "item-a" } }],
     images: [
       {
-        objectId: "item-a",
         file: "item-a/front.jpg",
         alt: "Front view of Item A",
         credit: "Example Museum",
@@ -154,11 +161,11 @@ describe("museum research progress register", () => {
     );
     seed.images = [
       {
-        objectId: "item-a",
         file: "item-a/front.jpg",
         alt: "Front view",
       },
     ];
+    seed.relationships = [{ type: "depicts", target: { type: "object", id: "item-a" } }];
     seed.objectIds = ["item-a"];
     await writeJson(root, "collection/sources/seed-source.json", seed);
 
@@ -174,6 +181,13 @@ describe("museum research progress register", () => {
       catalogueNumbers: ["A-100"],
       descriptions: ["Carved figure"],
     });
+  });
+
+  it("includes objects depicted by an independent photograph source in its inventory", async () => {
+    const root = await fixture();
+    const register = await initialiseRegister(root, "photo-record", false, deps);
+
+    expect(register.inventories[0].entries.map((entry) => entry.objectId)).toEqual(["item-a"]);
   });
 
   it("keeps stage outcomes independent and makes identical batch retries idempotent", async () => {
@@ -412,7 +426,7 @@ describe("museum research progress register", () => {
     );
   });
 
-  it("requires object-linked capture and credited, rights-described, present images before completion", async () => {
+  it("requires source-linked capture and credited, rights-described, present images before completion", async () => {
     const root = await fixture();
     await initialiseRegister(root, "seed-source", false, deps);
     const full = batch("all-stages", [
@@ -444,9 +458,49 @@ describe("museum research progress register", () => {
     const complete = await inspectRegister(root, "seed-source", { object: "item-a" });
     expect(complete.queue[0].complete).toBe(true);
 
+    const historical = batch("historical-image-reference", [
+      {
+        objectId: "item-a",
+        identity: {
+          status: "verified",
+          note: "The catalogue number matches.",
+          refs: ["https://museum.example/item-a"],
+        },
+        images: {
+          status: "complete",
+          note: "The historic image reference resolves through its catalogue page.",
+          refs: ["museum-record/item-a/front.jpg"],
+        },
+      },
+    ]);
+    await recordBatch(root, "seed-source", historical, 2, deps);
+
+    const secondPhoto = JSON.parse(
+      await readFile(path.join(root, "collection/sources/photo-record.json"), "utf8"),
+    );
+    secondPhoto.title = "Second record of the same photograph";
+    await writeJson(root, "collection/sources/photo-record-two.json", secondPhoto);
+    const museumRecord = JSON.parse(
+      await readFile(path.join(root, "collection/sources/museum-record.json"), "utf8"),
+    );
+    museumRecord.relationships.push({
+      type: "reproduces",
+      target: { type: "source", id: "photo-record-two" },
+    });
+    await writeJson(root, "collection/sources/museum-record.json", museumRecord);
+    await expect(
+      recordBatch(
+        root,
+        "seed-source",
+        batch("ambiguous-historical-image", historical.updates),
+        3,
+        deps,
+      ),
+    ).rejects.toThrow("Ambiguous historical image reference");
+
     await rm(path.join(root, "collection/images/item-a/front.jpg"));
     await expect(
-      recordBatch(root, "seed-source", batch("image-file-missing", full.updates), 2, deps),
+      recordBatch(root, "seed-source", batch("image-file-missing", full.updates), 3, deps),
     ).rejects.toThrow(/front\.jpg|ENOENT/);
     await writeFile(path.join(root, "collection/images/item-a/front.jpg"), "image fixture");
 
@@ -455,15 +509,15 @@ describe("museum research progress register", () => {
     delete photo.images[0].rights;
     await writeJson(root, "collection/sources/photo-record.json", photo);
     await expect(
-      recordBatch(root, "seed-source", batch("rights-missing", full.updates), 2, deps),
+      recordBatch(root, "seed-source", batch("rights-missing", full.updates), 3, deps),
     ).rejects.toThrow("Image lacks rights or credit");
     photo.images[0].rights = "CC BY 4.0";
     delete photo.images[0].credit;
     await writeJson(root, "collection/sources/photo-record.json", photo);
     await expect(
-      recordBatch(root, "seed-source", batch("credit-missing", full.updates), 2, deps),
+      recordBatch(root, "seed-source", batch("credit-missing", full.updates), 3, deps),
     ).rejects.toThrow("Image lacks rights or credit");
-    expect((await readRegister(root, "seed-source")).revision).toBe(2);
+    expect((await readRegister(root, "seed-source")).revision).toBe(3);
   });
 
   it("rejects symlinked evidence paths and releases the writer lock after validation fails", async () => {

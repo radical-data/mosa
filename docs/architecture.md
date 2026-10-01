@@ -7,16 +7,15 @@ Git is the canonical collection store. Supabase is no longer part of the
 application, and there is no database synchronisation or separate content release.
 
 ```text
-source JSON ──► direct object links ─────┐
-      ├──► attributed claims ──► object page
-      │                                  ▲
-      └──► image metadata ─► LFS image ──┤
-object JSON ─► name + foreground choices ┤
-editorial Markdown ──────────────────────┘
+source JSON ──► source page + relationships ──► source index
+      ├──► attributed claims ─────────────────► object page
+      └──► image metadata ─► LFS image ───────► object gallery via depicts
+object JSON ─► name + foreground choices ─────► object page
+article Markdown ─► object/source subjects ─► article pages and index
 ```
 
 The root Astro project validates and loads `collection/` during its build. It
-generates every language and object page as static HTML. Docker packages those
+generates every language and collection page as static HTML. Docker packages those
 files and processed images in an unprivileged Nginx image. The running container
 has no Node.js application, database credentials or collection-service request.
 
@@ -31,18 +30,26 @@ package; it does not declare application packages.
 
 ## Reduced collection model
 
-An **object** has a stable, readable file handle, a concise canonical navigation
-name and a list of qualified claim references selected for foregrounding. The
-file handle is also the public URL identity.
+The implemented distinction between displaced objects and documentary sources
+is recorded in [ADR 027](adrs/027-distinguish-displaced-objects-and-documentary-sources.md).
+The two record types serve MoSA's investigation; source status does not assert
+object identity or turn every representation into a separate source.
 
-A **source** records who authored or asserted it when known, its exact reference,
-its language, and the claims and image records derived from it. It can link
-directly to an object before claims or images are extracted. An examined
-publication can also have a source record with no object links or claims yet;
-registering it does not assert an object identity. Claims and images
-already provide their own object links, so direct links are used only where that
-association would otherwise be absent. Sources and objects have different
-identities. A shared URL does not prove that two objects are the same.
+An **object** is particular material whose displacement MoSA investigates. It
+has a stable, readable file handle, a concise canonical navigation name and a
+list of qualified claim references selected for foregrounding. The file handle
+is also the public URL identity. A documented site remains outside the object
+collection when its displacement is not under investigation.
+
+A **source** records a required editorial navigation `title` and `kind`, plus
+its author or attribution, exact reference, language, claims, relationships and
+image representations. Kinds include `webpage`, `publication`, `photograph`,
+`artwork`, `correspondence`, `audiovisual` and `other`. It can exist without
+object links, claims or local files. Direct `objectIds` links are available for
+documentation before claims are extracted. A source can also relate to objects
+and sources through `depicts`, `reproduces`, `discusses` and `is_part_of` links.
+The collection loader validates targets and derives incoming relationships for
+source pages. A shared URL does not prove that two objects are the same.
 
 A source can also record `captures`: preservation metadata pointing to original
 files in the repository-only `source-files/` tree or an exact archive URL. Capture
@@ -68,13 +75,24 @@ names and classifications can coexist.
 An optional claim `locator` identifies a passage within the source; see
 [collection authoring](collection-publication.md).
 
-An **image record** also stays inside a source. It links an object to a local,
-publishable image and records alt text, credit, rights, caption and original URL
-where available. The binary image lives in Git LFS.
+An **image record** stays inside the source that represents the image and
+records a local publishable file, alt text, credit, rights, caption and original
+URL where available. Photograph sources use `depicts` relationships to identify
+the objects shown; the same photograph can depict several objects, and the
+object pages derive their galleries from those relationships. A catalogue page
+that reproduces an independently authored photograph links to its photograph
+source with `reproduces`. Scans and captures remain representations of their
+documentary source unless the physical item itself is under investigation. The
+binary image lives in Git LFS.
 
-An **editorial** is authored Markdown linked to an object. It is a publication
-layer with its own author and language. Editorial prose does not become an
-unattributed claim.
+An **article** is an authored MoSA publication, not a collection record. Its
+Markdown has its own author and language. Optional `subjects` can identify
+multiple objects and sources, or be omitted for a general article. These links
+state what the publication examines; they do not make it a third research record
+type. Article prose does not become an unattributed claim. Sources have public
+index and detail pages within the collection. Articles have separate public
+publication pages reached through Resources and relevant records. Object pages
+retain their existing URLs and information hierarchy.
 
 ## Politics of presentation
 
@@ -85,7 +103,7 @@ universal truth.
 
 The canonical object name is necessary for navigation and URLs, but it is
 deliberately thin. Source-attributed names and classifications remain available
-on the page. Rich MoSA interpretation has named authorship in editorials rather
+on the page. Rich MoSA interpretation has named authorship in articles rather
 than being smuggled into supposedly objective database fields.
 
 This preserves a practical form of plurality while accepting the limits of the

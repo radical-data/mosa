@@ -26,6 +26,8 @@ async function fixture() {
   const root = await mkdtemp(path.join(os.tmpdir(), "mosa-research-portability-"));
   roots.push(root);
   await writeJson(root, "collection/sources/seed-source.json", {
+    title: "Example collection",
+    kind: "webpage",
     author: "Example Museum",
     reference: "https://museum.example/collection",
     language: "en-GB",

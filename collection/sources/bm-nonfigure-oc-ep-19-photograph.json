@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of British Museum tool/implement Oc,EP.19",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613200525",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-tool-implement-oc-ep-19/british-museum-1613200525.jpg",
+      "alt": "Obsidian cutting blade mounted on a wooden handle.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613200525"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-tool-implement-oc-ep-19"
+      }
+    }
+  ]
+}

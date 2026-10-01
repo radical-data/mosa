@@ -1,17 +1,9 @@
 {
   "author": "Världskulturmuseet",
+  "title": "Världskulturmuseet collection record for Moai kavakava, Göteborg — 1947.09.0001",
+  "kind": "webpage",
   "reference": "https://collections.smvk.se/carlotta-vkm/web/object/63761",
   "language": "sv",
-  "images": [
-    {
-      "objectId": "moai-kavakava-goteborg-1947-09-0001",
-      "file": "moai-kavakava-goteborg-1947-09-0001/carlotta.jpg",
-      "alt": "Moai kavakava av trä, fotograferad liggande.",
-      "credit": "Världskulturmuseet / Statens museer för världskultur",
-      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
-      "originalUrl": "https://collections.smvk.se/carlotta-vkm/web/object/63761"
-    }
-  ],
   "claims": [
     {
       "id": "number",
@@ -90,6 +82,16 @@
       "capturedAt": "2026-09-30T00:46:05.256Z",
       "method": "singlefile",
       "note": "Capture inspected against displayed accession 1947.09.0001 and the original catalogue description."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "carlotta-vkm-1947-09-0001-photograph"
+      }
     }
   ]
 }

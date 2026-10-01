@@ -1,5 +1,7 @@
 {
   "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Ethnologisches Museum, Staatliche Museen zu Berlin collection record for Moai taŋata, Berlin — VI 1000",
+  "kind": "webpage",
   "reference": "https://id.smb.museum/object/2044961",
   "language": "de",
   "claims": [
@@ -46,16 +48,6 @@
       "value": "Abmessungen: Objektmaß: 25,3 x 6 x 8 cm"
     }
   ],
-  "images": [
-    {
-      "objectId": "moai-tangata-berlin-vi-1000",
-      "file": "moai-tangata-berlin-vi-1000/smb.jpg",
-      "alt": "Eine kleine braune Holzfigur mit abgerundetem Kopf, grossen Augen und angewinkelten Armen.",
-      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Peter Jacob",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://id.smb.museum/object/2044961"
-    }
-  ],
   "notes": {
     "text": "Matched displayed institution-scoped accession VI 1000 and the complete 25,3 x 6 x 8 cm dimensions with the IndiGen entry; type and provenance were also compared. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
     "language": "en-GB"
@@ -66,6 +58,16 @@
       "capturedAt": "2026-09-30T00:00:47.086Z",
       "method": "singlefile",
       "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "smb-berlin-vi-1000-photograph"
+      }
     }
   ]
 }

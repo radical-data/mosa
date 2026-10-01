@@ -1,17 +1,9 @@
 {
   "author": "Världskulturmuseet",
+  "title": "Världskulturmuseet collection record for Ua, Göteborg — 1921.18.0002",
+  "kind": "webpage",
   "reference": "https://collections.smvk.se/carlotta-vkm/web/object/63751",
   "language": "sv",
-  "images": [
-    {
-      "objectId": "ua-goteborg-1921-18-0002",
-      "file": "ua-goteborg-1921-18-0002/carlotta.jpg",
-      "alt": "Lång träklubba med snidat huvud, fotograferad liggande.",
-      "credit": "Världskulturmuseet / Statens museer för världskultur",
-      "rights": "CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
-      "originalUrl": "https://collections.smvk.se/carlotta-vkm/web/object/63751"
-    }
-  ],
   "claims": [
     {
       "id": "number",
@@ -66,6 +58,16 @@
       "capturedAt": "2026-09-30T00:46:30.073Z",
       "method": "singlefile",
       "note": "Displayed accession 1921.18.0002 and catalogue description reviewed."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "carlotta-vkm-1921-18-0002-photograph"
+      }
     }
   ]
 }

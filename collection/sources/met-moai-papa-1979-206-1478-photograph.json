@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai pa'apa'a, New York — 1979.206.1478",
+  "kind": "photograph",
+  "reference": "https://www.metmuseum.org/art/collection/search/313666",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-pa-apa-a-new-york-1979-206-1478/met.jpg",
+      "alt": "Front view of a standing wooden figure with one hand crossing the torso and the other resting lower on the abdomen.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/313666"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-pa-apa-a-new-york-1979-206-1478"
+      }
+    }
+  ]
+}

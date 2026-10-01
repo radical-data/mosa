@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of British Museum string Oc.6018",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613786927",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-string-oc-6018/british-museum-1613786927.jpg",
+      "alt": "A hank of neatly twisted human-hair string.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613786927"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-string-oc-6018"
+      }
+    }
+  ]
+}

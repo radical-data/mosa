@@ -1,5 +1,7 @@
 {
   "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Ethnologisches Museum, Staatliche Museen zu Berlin collection record for Moai pa'apa'a, Berlin — VI 42601 - B",
+  "kind": "webpage",
   "reference": "https://id.smb.museum/object/998502",
   "language": "de",
   "claims": [
@@ -58,16 +60,6 @@
       "value": "Erwerbung: Tausch von Museum Johann Friedrich Gustav Umlauff 1933"
     }
   ],
-  "images": [
-    {
-      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
-      "file": "moai-pa-apa-a-berlin-vi-42601-b/smb.jpg",
-      "alt": "Eine flache dunkle Holzfigur mit eingelegten Augen und Händen auf dem Rumpf.",
-      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
-      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
-      "originalUrl": "https://id.smb.museum/object/998502"
-    }
-  ],
   "notes": {
     "text": "Matched displayed institution-scoped accession VI 42601 and the complete 64 x 14,5 x 8,5 cm dimensions with the IndiGen entry; type and provenance were also compared. The gallery appends a photographic view letter to this accession; the museum lists the base accession and separate image views. The established object handle is retained. Selective transcription of the displayed catalogue fields; participant roles and acquisition wording remain contextual descriptions, and geographical associations are not treated as making-place claims. The chosen photograph was checked visually against the catalogue and carries an explicit image-specific CC BY-NC-SA 4.0 credit.",
     "language": "en-GB"
@@ -78,6 +70,16 @@
       "capturedAt": "2026-09-30T00:00:31.902Z",
       "method": "singlefile",
       "note": "Reviewed displayed accession, dimensions, catalogue fields and the image-specific photographer credit and licence."
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "smb-berlin-vi-42601-photograph"
+      }
     }
   ]
 }

@@ -1,0 +1,29 @@
+---
+import type { ArticleEntry } from "../data/collection";
+import { type Locale, publicRecordPath } from "../i18n/routes";
+
+interface Props {
+  article: ArticleEntry;
+  locale: Locale;
+  headingLevel?: "h2" | "h3";
+}
+const { article, locale, headingLevel: Heading = "h3" } = Astro.props;
+const language = new Intl.DisplayNames([locale === "en" ? "en-GB" : "es-CL"], {
+  type: "language",
+}).of(article.language);
+---
+<article class="article-preview">
+  <Heading lang={article.language}><a href={publicRecordPath("articles", article.id, locale)}>{article.title}</a></Heading>
+  <p class="small muted">
+    {article.author && <><span lang={article.language}>{article.author}</span> · </>}
+    {locale === "en" ? "Published in" : "Publicado en"} {language ?? article.language}
+  </p>
+  {article.summary && <p lang={article.language}>{article.summary}</p>}
+  <slot />
+</article>
+
+<style>
+  .article-preview { max-width: 48rem; padding-block: 1.5rem; border-top: 1px solid var(--rule); }
+  h2, h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); margin-block: .35rem; }
+  p { line-height: 1.6; }
+</style>

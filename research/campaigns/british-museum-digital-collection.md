@@ -155,12 +155,13 @@ from the photographic and drawn representations below. See
 
 The photographic-record pass reviewed **75 entries**. **Eight documentary
 catalogue sources were integrated** and **67 were deferred**. The selected
-records form three coherent clusters—Tahai, Rano Raraku and Orongo—and support
-five named site identities: [Ahu Ko Te Riku](../../collection/objects/ahu-ko-te-riku-site.json),
-[Ahu Tahai](../../collection/objects/ahu-tahai-site.json),
-[Ahu Vai Uri](../../collection/objects/ahu-vai-uri-site.json),
-[Orongo](../../collection/objects/orongo-site.json) and
-[Rano Raraku](../../collection/objects/rano-raraku-site.json).
+records form three coherent clusters—Tahai, Rano Raraku and Orongo. They were
+initially linked through five site records: Ahu Ko Te Riku, Ahu Tahai, Ahu Vai
+Uri, Orongo and Rano Raraku. ADR 027 subsequently clarified that these places
+are outside the object boundary because their displacement is not under
+investigation. The site records were therefore removed. The catalogue pages
+and the photographs they document remain separate sources, including
+photograph sources without a reusable local image file.
 
 The museum records describe photographs by Katesa Schlosser and Katherine
 Routledge. They are documentary representations, not newly identified physical
@@ -181,15 +182,20 @@ images. All eight rights-page outcomes are preserved with their sources.
 The four Harrison catalogue entries are representations, not four sculpture
 records. Entries [2017,2018.1](../../collection/sources/bm-harrison-2017-2018-1.json)
 and [2017,2018.3.a](../../collection/sources/bm-harrison-2017-2018-3-a.json)
-link to the existing Hoa Hakananaiʻa object; their drawing images are registered
-under the museum's image-specific CC BY-NC-SA 4.0 terms.
+document Hoa Hakananaiʻa; their drawings are registered as artwork sources and
+their digital representations retain the museum's image-specific CC BY-NC-SA
+4.0 terms. The first drawing depicts Hoa Hakananaiʻa. The second documents the
+structure where the catalogue says it stood and is linked through the
+catalogue's attributed claim rather than treated as an image of the sculpture.
 
 Entry [2017,2018.2](../../collection/sources/bm-harrison-2017-2018-2.json)
-now links to the distinct pukao identified as EISP 4-137-001 at Puna Pau,
-supported by [Van Tilburg's *Remote Possibilities*](../../collection/sources/van-tilburg-2006-remote-possibilities.json),
-Image 44. The [pukao identity](../../collection/objects/pukao-puna-pau-4-137-001.json)
-and drawing image are registered. The British Museum Research Repository's
-publication page and open PDF preserve the identifying evidence.
+was initially linked to a separate object record for the in-situ pukao
+identified as EISP 4-137-001 at Puna Pau. ADR 027 subsequently clarified that
+the pukao is outside the object boundary because its displacement is not under
+investigation. Harrison's drawing is now an artwork source. [Van Tilburg's
+*Remote Possibilities*](../../collection/sources/van-tilburg-2006-remote-possibilities.json),
+Image 44, discusses that drawing, and the publication record, open PDF and
+source notes preserve the identifying evidence.
 
 Entry [2017,2018.3.b](../../collection/sources/bm-harrison-2017-2018-3-b.json)
 remains comparative context for Hoa Hakananaiʻa. Its depicted pukao is not

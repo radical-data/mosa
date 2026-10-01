@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Paoa, Berlin — VI 4908",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/2049817",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "paoa-berlin-vi-4908/smb.jpg",
+      "alt": "Eine Holzkeule mit geschnitztem Kopf, hellen Oberflächenflecken und angebrachten Sammlungsetiketten.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Peter Jacob",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/2049817"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "paoa-berlin-vi-4908"
+      }
+    }
+  ]
+}

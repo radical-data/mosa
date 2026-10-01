@@ -1,8 +1,9 @@
 import { describe, expect, test } from "vitest";
 import {
-  parseEditorialFrontmatter,
+  parseArticleFrontmatter,
   parseObject,
   parseSource,
+  validateArticleSubjects,
   validateCollection,
 } from "./collection-model";
 
@@ -13,10 +14,12 @@ const object = parseObject(
 const source = parseSource(
   {
     author: null,
+    title: "Example catalogue",
+    kind: "publication",
     reference: "Example catalogue",
     language: "en-GB",
     claims: [{ id: "name", objectId: "object-one", predicate: "has_name", value: "Object one" }],
-    images: [{ objectId: "object-one", file: "object-one/front.jpg", alt: "Front view" }],
+    images: [{ file: "object-one/front.jpg", alt: "Front view" }],
   },
   "source-one.json",
 );
@@ -198,6 +201,8 @@ describe("collection model", () => {
     const linkedSource = parseSource(
       {
         author: "Example Museum",
+        title: "Museum collection record",
+        kind: "webpage",
         reference: "https://example.org/collection/123",
         language: "en-GB",
         objectIds: ["object-one"],
@@ -260,6 +265,8 @@ describe("collection model", () => {
     const otherSource = parseSource(
       {
         author: null,
+        title: "Another catalogue",
+        kind: "publication",
         reference: "Another catalogue",
         language: "en-GB",
         claims: [
@@ -296,27 +303,247 @@ describe("collection model", () => {
     );
   });
 
-  test("rejects duplicate images within one source", () => {
+  test("rejects duplicate representations within one source", () => {
     expect(() =>
       validateCollection({
         objects: [object],
         sources: [{ ...source, images: [source.images[0], source.images[0]] }],
       }),
-    ).toThrow("source-one.json: duplicate image for object-one: object-one/front.jpg");
+    ).toThrow("source-one.json: duplicate image file: object-one/front.jpg");
   });
 
-  test("parses prose-only editorial metadata", () => {
+  test("parses prose-only article metadata", () => {
     expect(
-      parseEditorialFrontmatter(
-        "---\nobjectId: object-one\ntitle: A title\nauthor: null\nlanguage: rap\n---\n\nText.",
+      parseArticleFrontmatter(
+        "---\ntitle: A title\nsummary: A short introduction.\nauthor: null\nlanguage: rap\n---\n\nText.",
         "essay-one.md",
       ),
     ).toEqual({
       id: "essay-one",
-      objectId: "object-one",
       title: "A title",
+      summary: "A short introduction.",
       author: null,
       language: "rap",
     });
+  });
+
+  test("parses YAML article subjects for objects and sources", () => {
+    expect(
+      parseArticleFrontmatter(
+        [
+          "---",
+          "subjects:",
+          "  - type: object",
+          "    id: object-one",
+          "  - type: source",
+          "    id: source-one",
+          "title: A title",
+          "author: null",
+          "language: en-GB",
+          "---",
+          "Text.",
+        ].join("\n"),
+        "essay-one.md",
+      ).subjects,
+    ).toEqual([
+      { type: "object", id: "object-one" },
+      { type: "source", id: "source-one" },
+    ]);
+  });
+
+  test("validates source metadata and source-owned representations", () => {
+    const unlinked = parseSource(
+      {
+        title: "A navigation title",
+        kind: "other",
+        author: null,
+        reference: "An unidentified source",
+        language: "en",
+        date: "c. 1920",
+        topics: ["museum-practices"],
+        claims: [],
+        images: [],
+      },
+      "source-two.json",
+    );
+    expect(unlinked).toMatchObject({
+      title: "A navigation title",
+      kind: "other",
+      date: "c. 1920",
+      topics: ["museum-practices"],
+    });
+    const { id: _id, ...record } = unlinked;
+    expect(() => parseSource({ ...record, title: undefined }, "source-two.json")).toThrow(
+      "title is required",
+    );
+    expect(() =>
+      parseSource(
+        {
+          ...record,
+          images: [{ file: "source-two/scan.jpg", alt: "Letter scan", objectId: "object-one" }],
+        },
+        "source-two.json",
+      ),
+    ).toThrow("unsupported field");
+  });
+
+  test("validates relationship targets and rejects duplicates, self-links and cycles", () => {
+    const unforegroundedObject = parseObject(
+      { name: "Object one", foregroundedClaims: [] },
+      "object-one.json",
+    );
+    const sourceA = parseSource(
+      {
+        title: "Source A",
+        kind: "publication",
+        author: null,
+        reference: "A",
+        language: "en",
+        claims: [],
+        images: [],
+        relationships: [{ type: "reproduces", target: { type: "source", id: "source-b" } }],
+      },
+      "source-a.json",
+    );
+    const sourceB = parseSource(
+      {
+        title: "Source B",
+        kind: "photograph",
+        author: null,
+        reference: "B",
+        language: "en",
+        claims: [],
+        images: [],
+        relationships: [{ type: "depicts", target: { type: "object", id: "object-one" } }],
+      },
+      "source-b.json",
+    );
+    expect(() =>
+      validateCollection({ objects: [unforegroundedObject], sources: [sourceA, sourceB] }),
+    ).not.toThrow();
+    const reproduces = sourceA.relationships?.[0];
+    if (!reproduces) throw Error("fixture relationship is missing");
+    expect(() =>
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [{ ...sourceA, relationships: [reproduces, reproduces] }, sourceB],
+      }),
+    ).toThrow("duplicate relationship reproduces:source:source-b");
+    expect(() =>
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [
+          {
+            ...sourceA,
+            relationships: [{ type: "discusses", target: { type: "source", id: "source-a" } }],
+          },
+          sourceB,
+        ],
+      }),
+    ).toThrow("cannot target itself");
+    const partA = {
+      ...sourceA,
+      relationships: [
+        { type: "is_part_of" as const, target: { type: "source" as const, id: "source-b" } },
+      ],
+    };
+    const partB = {
+      ...sourceB,
+      relationships: [
+        { type: "is_part_of" as const, target: { type: "source" as const, id: "source-a" } },
+      ],
+    };
+    expect(() =>
+      validateCollection({ objects: [unforegroundedObject], sources: [partA, partB] }),
+    ).toThrow("is_part_of relationships contain a cycle");
+
+    const sourceC = parseSource(
+      {
+        title: "Source C",
+        kind: "publication",
+        author: null,
+        reference: "C",
+        language: "en",
+        claims: [],
+        images: [],
+      },
+      "source-c.json",
+    );
+    expect(() =>
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [
+          {
+            ...sourceA,
+            relationships: [
+              { type: "is_part_of", target: { type: "source", id: "source-b" } },
+              { type: "is_part_of", target: { type: "source", id: "source-c" } },
+            ],
+          },
+          partB,
+          sourceC,
+        ],
+      }),
+    ).toThrow("is_part_of relationships contain a cycle");
+  });
+
+  test("enforces relationship target types and resolves article subjects", () => {
+    expect(() =>
+      parseSource(
+        {
+          ...source,
+          relationships: [{ type: "depicts", target: { type: "source", id: "source-two" } }],
+        },
+        "source-one.json",
+      ),
+    ).toThrow("depicts must target an object");
+    const article = parseArticleFrontmatter(
+      "---\nsubjects:\n  - type: source\n    id: missing\ntitle: Essay\nauthor: null\nlanguage: en\n---\n",
+      "essay-one.md",
+    );
+    expect(() =>
+      validateArticleSubjects(article, { objects: [object], sources: [source] }, "essay-one.md"),
+    ).toThrow("refers to missing source missing");
+  });
+
+  test("rejects relationships to missing records and redundant object links", () => {
+    const missingObject = parseSource(
+      {
+        title: "Missing depiction",
+        kind: "photograph",
+        author: null,
+        reference: "A photograph",
+        language: "en",
+        claims: [],
+        images: [],
+        relationships: [{ type: "depicts", target: { type: "object", id: "missing-object" } }],
+      },
+      "source-two.json",
+    );
+    expect(() => validateCollection({ objects: [object], sources: [missingObject] })).toThrow(
+      "depicts refers to missing object missing-object",
+    );
+
+    const depicted = parseSource(
+      {
+        title: "Depicted object",
+        kind: "photograph",
+        author: null,
+        reference: "A photograph",
+        language: "en",
+        objectIds: ["object-one"],
+        claims: [],
+        images: [],
+        relationships: [{ type: "depicts", target: { type: "object", id: "object-one" } }],
+      },
+      "source-two.json",
+    );
+    const unforegroundedObject = parseObject(
+      { name: "Object one", foregroundedClaims: [] },
+      "object-one.json",
+    );
+    expect(() =>
+      validateCollection({ objects: [unforegroundedObject], sources: [depicted] }),
+    ).toThrow("redundant objectId object-one");
   });
 });

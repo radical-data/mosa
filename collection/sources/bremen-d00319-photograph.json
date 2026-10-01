@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Taŋata manu, Bremen — D00319",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/1256-d00319/d00319_figur__tangata_man/d00319-figur-tangata-manu-1256-499393.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "tangata-manu-bremen-d00319/museum-digital.jpg",
+      "alt": "Gebeugte geschnitzte Figur mit vogelähnlichem Kopf, schräg von vorne.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1256-d00319/d00319_figur__tangata_man/d00319-figur-tangata-manu-1256-499393.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "tangata-manu-bremen-d00319"
+      }
+    }
+  ]
+}

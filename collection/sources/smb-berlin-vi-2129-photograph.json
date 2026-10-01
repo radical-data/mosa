@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Rapa, Berlin — VI 2129 - B",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/998469",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "rapa-berlin-vi-2129-b/smb.jpg",
+      "alt": "Ein dunkles hölzernes Doppelpaddel mit schmalem Mittelgriff und vorspringender Spitze.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998469"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "rapa-berlin-vi-2129-b"
+      }
+    }
+  ]
+}

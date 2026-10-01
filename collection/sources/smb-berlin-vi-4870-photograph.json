@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Reimiro, Berlin — VI 4870",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/833881",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "reimiro-berlin-vi-4870/smb.jpg",
+      "alt": "Ein gebogener Holzschmuck mit spitzen Enden und einem abgenutzten helleren Streifen.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/833881"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "reimiro-berlin-vi-4870"
+      }
+    }
+  ]
+}

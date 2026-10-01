@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ika, Bremen — D13424",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/1245-d13424/d13424_figur/d13424-figur-1245-468985.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "ika-bremen-d13424/museum-digital.jpg",
+      "alt": "Geschnitzte Fischfigur auf einem runden Sockel, Seitenansicht.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1245-d13424/d13424_figur/d13424-figur-1245-468985.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ika-bremen-d13424"
+      }
+    }
+  ]
+}

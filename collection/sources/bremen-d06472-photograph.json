@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai taŋata, Bremen — D06472",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/1350-d06472/d06472_figur__moai_tangat/d06472-figur-moai-tangata-1350-524183.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-tangata-bremen-d06472/museum-digital.jpg",
+      "alt": "Stehende Holzfigur mit einem langen Riss durch Kopf und Körper.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1350-d06472/d06472_figur__moai_tangat/d06472-figur-moai-tangata-1350-524183.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-tangata-bremen-d06472"
+      }
+    }
+  ]
+}

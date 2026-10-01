@@ -33,10 +33,11 @@ in this order:
    sections within the agreed scope before calling it complete. Use a working
    entry list only when needed for reconciliation; no separate inventory report
    is required. Add or reuse one source record with established attribution and
-   language. It may have no object links or claims until identities are resolved.
-   Explain a source’s relevance in its notes when its purpose is not evident
-   from linked objects or claims. Do not register our searches as sources, and
-   do not treat entry counts as object counts.
+   language, a required editorial title and kind. It may have no object links or
+   claims until identities are resolved. Explain a source’s relevance in its
+   notes when its purpose is not evident from linked objects or claims. Do not
+   register our searches as sources, and do not treat entry counts as object
+   counts.
 2. **Objects:** use [identify-objects](../identify-objects/SKILL.md) to reconcile
    entries with existing handles and identify justified new objects. Track each
    entry's disposition and evidence: new object, existing object, unresolved
@@ -52,8 +53,12 @@ in this order:
    foregrounding decisions unchanged.
 4. **Images:** use [collection-images](../collection-images/SKILL.md) for
    object photographs. Verify the particular image's rights and depicted
-   object; public access or a gallery credit alone is not permission. Keep
-   unresolved assets private and report the missing evidence.
+   object; public access or a gallery credit alone is not permission. Give an
+   independently identifiable photograph its own `photograph` source, put its
+   image representation there, link each publication with `reproduces` and
+   each depicted object with `depicts`. Keep a document scan with its document
+   source, and treat screenshots as captures unless independent source identity
+   is established. Keep unresolved assets private and report the missing evidence.
 5. **Review and continue:** verify the source, object, claim and image links and
    inspect affected pages in both languages. Account for every in-scope candidate
    and any blocked or deferred stages. Update the campaign’s coverage and next

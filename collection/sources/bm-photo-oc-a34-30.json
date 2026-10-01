@@ -1,19 +1,13 @@
 {
   "author": "British Museum",
+  "title": "British Museum catalogue record for photograph Oc-A34-30",
+  "kind": "webpage",
   "reference": "https://www.britishmuseum.org/collection/object/EA_Oc-A34-30",
   "language": "en",
-  "claims": [
-    {
-      "id": "description-orongo-birdman-petroglyph-rock",
-      "objectId": "orongo-site",
-      "predicate": "described_as",
-      "value": "Photograph (colour); view of petroglyphs of the bird-man on a rock; Orongo, Easter Island.",
-      "locator": "Description"
-    }
-  ],
+  "claims": [],
   "images": [],
   "notes": {
-    "text": "This British Museum catalogue record describes a photograph by Katesa Schlosser, made in September 1980. It is registered as a documentary source, not as a physical Rapa Nui artefact. The 30 September 2026 image-rights review found that the museum's image page explicitly says the image is unavailable for download and supplies no reusable image licence or credit, so no image is published. Only the complete Description field is extracted; the museum's acquisition information is retained in the capture, not interpreted as a claim about the depicted rock carving.",
+    "text": "This British Museum catalogue record describes a photograph by Katesa Schlosser, made in September 1980. It is registered as a documentary source, not as a physical Rapa Nui artefact. The 30 September 2026 image-rights review found that the museum's image page explicitly says the image is unavailable for download and supplies no reusable image licence or credit, so no image is published. Only the complete Description field is extracted; the museum's acquisition information is retained in the capture, not interpreted as a claim about the depicted rock carving. The former site-targeted extraction is retained here after correcting the collection boundary: “Photograph (colour); view of petroglyphs of the bird-man on a rock; Orongo, Easter Island.” (Description) The site is not a collection object because its displacement is not under investigation.",
     "language": "en-GB"
   },
   "captures": [
@@ -28,6 +22,15 @@
       "capturedAt": "2026-09-30T19:58:54.476Z",
       "method": "singlefile",
       "note": "Image 512396001 page identifies the depicted place but reports that the image is unavailable for download and supplies no reusable image licence or credit."
+    }
+  ],
+  "relationships": [
+    {
+      "type": "discusses",
+      "target": {
+        "type": "source",
+        "id": "bm-photo-oc-a34-30-photograph"
+      }
     }
   ]
 }

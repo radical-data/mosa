@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Figure — British Museum (Oc,EP.21)",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/847945001",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-figure-oc-ep-21/british-museum-847945001.jpg",
+      "alt": "Carved emaciated male figure with pendant ears, moai kavakava, made of hard light brown wood (Thespesia populnea) with eyes of bone; on the head is carved a bird-like beast in low relief.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/. Source JPEG preserved unchanged; website copies resized and re-encoded.",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/847945001"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-figure-oc-ep-21"
+      }
+    }
+  ]
+}

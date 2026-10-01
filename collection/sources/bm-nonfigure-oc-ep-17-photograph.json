@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of British Museum tool/implement Oc,EP.17",
+  "kind": "photograph",
+  "reference": "https://www.britishmuseum.org/collection/image/1613200520",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "british-museum-tool-implement-oc-ep-17/british-museum-1613200520.jpg",
+      "alt": "Obsidian cutting blade bound to a wooden handle with fibre cord and barkcloth.",
+      "credit": "© The Trustees of the British Museum",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://www.britishmuseum.org/collection/image/1613200520"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "british-museum-tool-implement-oc-ep-17"
+      }
+    }
+  ]
+}

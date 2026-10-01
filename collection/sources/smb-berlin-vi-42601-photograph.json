@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai pa'apa'a, Berlin — VI 42601 - B",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/998502",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-pa-apa-a-berlin-vi-42601-b/smb.jpg",
+      "alt": "Eine flache dunkle Holzfigur mit eingelegten Augen und Händen auf dem Rumpf.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998502"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-pa-apa-a-berlin-vi-42601-b"
+      }
+    }
+  ]
+}

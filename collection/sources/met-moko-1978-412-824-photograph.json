@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moko, New York — 1978.412.824",
+  "kind": "photograph",
+  "reference": "https://www.metmuseum.org/art/collection/search/311295",
+  "language": "en",
+  "claims": [],
+  "images": [
+    {
+      "file": "moko-new-york-1978-412-824/met.jpg",
+      "alt": "Front view of a long carved figure with a lizardlike head, large eyes, and bands of incised decoration along its body.",
+      "credit": "The Metropolitan Museum of Art",
+      "rights": "Public Domain — CC0 https://creativecommons.org/publicdomain/zero/1.0/. Original bytes preserved; website copies resized and re-encoded by Astro.",
+      "originalUrl": "https://www.metmuseum.org/art/collection/search/311295"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moko-new-york-1978-412-824"
+      }
+    }
+  ]
+}

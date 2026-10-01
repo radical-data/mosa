@@ -1,5 +1,7 @@
 {
   "author": "Übersee-Museum Bremen",
+  "title": "Übersee-Museum Bremen collection record for Moko, Bremen — D07092",
+  "kind": "webpage",
   "reference": "https://bremen.museum-digital.de/object/1364",
   "language": "mul",
   "claims": [
@@ -58,16 +60,6 @@
       "value": "Übersee-Museum Bremen"
     }
   ],
-  "images": [
-    {
-      "objectId": "moko-bremen-d07092",
-      "file": "moko-bremen-d07092/museum-digital.jpg",
-      "alt": "Längliche geschnitzte Tierfigur mit Schnur am Hals, liegend.",
-      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
-      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
-      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1364-d07092/d07092_figur__moko/d07092-figur-moko-1364-225689.jpg"
-    }
-  ],
   "notes": {
     "text": "Selective transcription from the institution’s German object text with English interface labels and date formatting. Source qualifiers, including [About] on date ranges, are retained. Material/Technique is kept as a combined descriptive field. The museum’s catalogue wording remains distinct from MoSA’s existing navigation label; Created and Owned events are not treated as acquisition events. Object metadata is labelled CC BY-NC-SA; the separately preserved image resource page explicitly licenses the photograph under CC BY-SA 4.0.",
     "language": "en-GB"
@@ -84,6 +76,16 @@
       "originalUrl": "https://bremen.museum-digital.de/singleimage?imagenr=5691",
       "capturedAt": "2026-09-30T01:14:02.147Z",
       "method": "singlefile"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "bremen-d07092-photograph"
+      }
     }
   ]
 }

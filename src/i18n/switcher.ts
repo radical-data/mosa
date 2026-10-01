@@ -5,7 +5,9 @@ export function updateLanguageLinks() {
     target.search = "";
     if (link.dataset.page === "collection") {
       const parameters = new URLSearchParams(location.search);
-      for (const key of ["q", "concept", "type", "view"]) {
+      const sourceRoute = /^\/(?:en\/sources|es\/fuentes)(?:\/[^/]+)?\/?$/.test(location.pathname);
+      const keys = sourceRoute ? ["q", "kind", "topic"] : ["q", "concept", "type", "view"];
+      for (const key of keys) {
         const value = parameters.get(key);
         if (value) target.searchParams.set(key, value);
       }

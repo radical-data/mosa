@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moai kavakava, Bremen — D13414",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/202403/1379/d13414-figur-moai-paapaa-1379-1620.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-kavakava-bremen-d13414/museum-digital.jpg",
+      "alt": "Stehende Holzfigur mit langem Gesicht und hervortretenden Rippen.",
+      "credit": "Übersee-Museum Bremen",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/202403/1379/d13414-figur-moai-paapaa-1379-1620.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moai-kavakava-bremen-d13414"
+      }
+    }
+  ]
+}

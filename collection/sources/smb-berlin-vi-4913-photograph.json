@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Ika, Berlin — VI 4913",
+  "kind": "photograph",
+  "reference": "https://id.smb.museum/object/998382",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "ika-berlin-vi-4913/smb.jpg",
+      "alt": "Eine längliche Holzschnitzerei mit eingelegtem Auge und gebogenem, spitz zulaufendem Körper.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://id.smb.museum/object/998382"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ika-berlin-vi-4913"
+      }
+    }
+  ]
+}

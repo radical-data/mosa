@@ -1,0 +1,26 @@
+{
+  "author": null,
+  "title": "Photograph of Moko, Bremen — D15413",
+  "kind": "photograph",
+  "reference": "https://assets.museum-digital.org/bremen/images/4/1354-d15413/d15413_figur__moko/d15413-figur-moko-1354-661165.jpg",
+  "language": "mul",
+  "claims": [],
+  "images": [
+    {
+      "file": "moko-bremen-d15413/museum-digital.jpg",
+      "alt": "Helle geschnitzte Tierfigur mit langem Schwanz und eingesetztem Auge.",
+      "credit": "Übersee-Museum Bremen / Volker Beinhorn",
+      "rights": "CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)",
+      "originalUrl": "https://assets.museum-digital.org/bremen/images/4/1354-d15413/d15413_figur__moko/d15413-figur-moko-1354-661165.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moko-bremen-d15413"
+      }
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 {
   "author": "Museum of New Zealand Te Papa Tongarewa",
+  "title": "Te Papa Collections Online: Ao (Dance paddle), object 180901",
+  "kind": "webpage",
   "reference": "Te Papa Collections Online: Ao (Dance paddle), object 180901 — https://collections.tepapa.govt.nz/object/180901",
   "language": "en",
   "claims": [
@@ -52,16 +54,6 @@
       "value": "Oldman Collection. Gift of the New Zealand Government, 1992"
     }
   ],
-  "images": [
-    {
-      "objectId": "ao-te-papa",
-      "file": "te-papa-ao/front.jpg",
-      "alt": "Front view of an ao (dance paddle), showing the carved face at the top and broad blade at the foot.",
-      "credit": "Ao (Dance paddle), 1800s, Easter Island, maker unknown. Oldman Collection. Gift of the New Zealand Government, 1992. CC BY-NC-ND 4.0. Te Papa (OL001116)",
-      "rights": "CC BY-NC-ND 4.0 — https://creativecommons.org/licenses/by-nc-nd/4.0/. Original bytes are preserved; website copies are resized and re-encoded by Astro.",
-      "originalUrl": "https://collections.tepapa.govt.nz/object/180901"
-    }
-  ],
   "captures": [
     {
       "file": "2026-09-22t19-29-16-817z.html",
@@ -80,5 +72,15 @@
   "notes": {
     "text": "Extracted the individual catalogue fields from the 29 September 2026 capture, using the explicit Made in relation for production place. Unknown in the Production field refers to the maker, not the date. Claims describe catalogue OL001116 on the established ao-te-papa object; no new inventory-row match is asserted by extraction. Museum opening hours and visitor addresses are excluded.",
     "language": "en-GB"
-  }
+  },
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "te-papa-ao-photograph"
+      }
+    }
+  ]
 }
