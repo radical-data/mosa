@@ -1,0 +1,38 @@
+{
+  "title": "Über die Tätowirung der Oster-Insulaner",
+  "kind": "publication",
+  "author": "Hjalmar Stolpe",
+  "reference": "https://www.biodiversitylibrary.org/page/33471767",
+  "language": "de",
+  "date": "1899",
+  "topics": ["displacement", "representations"],
+  "claims": [
+    {
+      "id": "tattoo-removal-scene",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Auf Anfrage, was diese Bilderschrift bedeute, gab Tepano die überraschende Antwort, sie stelle das Herunterschleppen einer der grossen Steinstatuen der Oster Insel zum Ufer vor. Die zehn Leute, die am Taue ziehen, wären „englische Matrosen“, der grosse Mann mit dem Stabe sei „First Officer“, der andere „Second Officer“. Die kleine Figur, die auf der liegenden Statue steht, sei ein tanzender Häuptling.",
+      "locator": "S. 8, Erläuterung zu Fig. 10"
+    },
+    {
+      "id": "tattoo-hoa-identification",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Das Ereignis, das Tepano in dieser Weise in seiner Haut „verewigt“ hatte, sollte damals, im Jahre 1884, „vor etwa 15 Jahren“ stattgefunden haben. Es kann sich also nur um die jetzt im Britischen Museum befindliche Statue „Moa-haka-nana-ia“ handeln, die im Jahre 1868 durch die Fürsorge des Arztes auf dem englischen Kriegsschiffe Topaze, des Herrn Dr. J. L. Palmer, nach Europa gebracht wurde. Tepano bestätigte auch diese Annahme, indem er den Namen Palmer sofort erkannte.",
+      "locator": "S. 8, Erläuterung zu Fig. 10"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "Selective extraction from page 8 and Figure 10 of the public-domain Biodiversity Heritage Library scan. Stolpe records Tepano's explanation of the tattoo before making his own identification of the depicted statue as Hoa Hakananaiʻa from the reported interval and Tepano's recognition of Palmer. Tepano is not recorded naming the statue in this passage. The baptismal name Tepano is retained as published and is not equated with Juan Tepano or another individual. Historical wording and attribution are preserved without adopting Stolpe's colonial framing as MoSA's account.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "stolpe-1899-volume.pdf",
+      "originalUrl": "https://archive.org/download/mobot31753003648695/mobot31753003648695_bw.pdf",
+      "capturedAt": "2026-10-01T23:25:31.000Z",
+      "method": "download"
+    }
+  ]
+}
