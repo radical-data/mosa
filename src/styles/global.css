@@ -1197,6 +1197,60 @@ strong {
 .privacy-note h2 {
   color: #000;
 }
+.newsletter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 1fr);
+  gap: 2rem 4rem;
+}
+.newsletter h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.5rem, 2.4vw, 2.35rem);
+}
+.newsletter-copy p {
+  max-width: 42rem;
+  font-size: 0.95rem;
+}
+.newsletter-form {
+  min-width: 0;
+}
+.newsletter-form > label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.newsletter-field {
+  display: flex;
+}
+.newsletter-field input {
+  min-width: 0;
+  flex: 1;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #000;
+  border-radius: 0;
+  background: #fff;
+}
+.newsletter-field .button {
+  flex-shrink: 0;
+}
+.newsletter-note {
+  margin-top: 0.65rem;
+  font-size: 0.7rem;
+}
+.newsletter-note a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.newsletter-trap {
+  position: absolute;
+  left: -5000px;
+}
+.newsletter-contact {
+  grid-template-columns: 1fr;
+  margin-block: 3rem 1rem;
+  padding-block: 2rem;
+  border-block: 1px solid var(--rule);
+}
 .site-footer {
   background: #000;
   color: #fff;
@@ -1242,11 +1296,30 @@ strong {
 .footer-purpose {
   font-size: 0.9rem;
 }
+.newsletter-footer {
+  padding-block: 2.5rem;
+  border-block: 1px solid #666;
+}
+.newsletter-footer .newsletter-field input {
+  border-color: #fff;
+  background: #000;
+  color: #fff;
+}
+.newsletter-footer .newsletter-field .button {
+  border-color: #fff;
+  background: #fff;
+  color: #000;
+}
+.newsletter-footer .newsletter-field .button:hover {
+  border-color: var(--coral);
+  background: var(--coral);
+}
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+  padding-top: 2rem;
   font-size: 0.65rem;
 }
 .footer-bottom > div {
@@ -1467,6 +1540,9 @@ strong {
     font-size: 1.05rem;
     margin-bottom: 2rem;
   }
+  .newsletter {
+    grid-template-columns: 1fr;
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
@@ -1686,6 +1762,13 @@ strong {
   }
   .contact-intro {
     margin-top: 0;
+  }
+  .newsletter-field {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .newsletter-field .button {
+    width: 100%;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;

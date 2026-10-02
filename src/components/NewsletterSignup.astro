@@ -1,0 +1,39 @@
+---
+import { mailchimpSignupAction } from "../data/site";
+import { messages } from "../i18n/catalogues";
+import type { Locale } from "../i18n/routes";
+
+interface Props {
+  locale: Locale;
+  placement: "contact" | "footer";
+}
+
+const { locale, placement } = Astro.props;
+const t = messages(locale);
+const titleId = `newsletter-title-${placement}`;
+const emailId = `newsletter-email-${placement}`;
+const noteId = `newsletter-note-${placement}`;
+---
+<section
+  id={placement === "contact" ? "newsletter" : undefined}
+  class:list={["newsletter", `newsletter-${placement}`, placement === "footer" && "container"]}
+  aria-labelledby={titleId}
+>
+  <div class="newsletter-copy">
+    <h2 id={titleId}>{t.newsletterTitle}</h2>
+    <p>{t.newsletterDescription}</p>
+  </div>
+  <form class="newsletter-form" action={mailchimpSignupAction} method="post">
+    <label for={emailId}>{t.newsletterEmail}</label>
+    <div class="newsletter-field">
+      <input id={emailId} name="EMAIL" type="email" autocomplete="email" required aria-describedby={noteId} />
+      <button class="button" type="submit" name="subscribe">{t.newsletterSubmit}</button>
+    </div>
+    <div class="newsletter-trap" aria-hidden="true">
+      <input type="text" name="b_3484234c1c5960682945b6be0_712b203609" tabindex="-1" value="" autocomplete="off" />
+    </div>
+    <p class="newsletter-note" id={noteId}>
+      {t.newsletterPrivacy} <a href="https://www.intuit.com/privacy/statement/">{t.newsletterPrivacyLink}</a>.
+    </p>
+  </form>
+</section>
