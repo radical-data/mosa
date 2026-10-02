@@ -33,7 +33,7 @@ const [nextEvent] = getEvents(storedEvents, locale).upcoming;
   </section>
   <section class="section" aria-labelledby="resources-title">
     <div class="container section-heading"><div><h2 id="resources-title" class="eyebrow"><Fragment set:html={copy.passage09} /></h2><p><Fragment set:html={copy.passage10} /></p></div><PageLink class="text-link" page="resources" locale={locale}>{copy.passage16}<span aria-hidden="true">↗</span></PageLink></div>
-    <div class="resource-lines">{resources.map((resource) => <PageLink class="resource-line" page="resources" locale={locale} suffix={`#${resource.id}`}><div class="container"><h3>{resource.title}</h3><span aria-hidden="true">↗</span><p>{resource.description}</p></div></PageLink>)}</div>
+    <div class="resource-lines">{resources.map((resource) => <a class="resource-line" href={resource.path}><div class="container"><h3>{resource.title}</h3><span aria-hidden="true">↗</span><p>{resource.description}</p></div></a>)}</div>
   </section>
   <section class="container section" aria-labelledby="events-title">
     <div class="section-heading"><div><h2 id="events-title" class="eyebrow"><Fragment set:html={copy.passage11} /></h2><p><Fragment set:html={copy.passage12} /></p></div><PageLink class="text-link" page="events" locale={locale}>{copy.passage17}<span aria-hidden="true">↗</span></PageLink></div>

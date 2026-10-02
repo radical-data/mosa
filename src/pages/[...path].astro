@@ -1,29 +1,35 @@
 ---
-import { type Locale, localeIds, type PageId, pageIds, pagePath } from "../i18n/routes";
+import { type Locale, localeIds, type PageId, pageIds, pagePath, type ResourceId, resourceIds, resourcePath } from "../i18n/routes";
 import About from "../templates/about.astro";
 import Collection from "../templates/collection.astro";
 import Contact from "../templates/contact.astro";
 import Events from "../templates/events.astro";
 import Home from "../templates/home.astro";
+import ResourceDetail from "../templates/resource-detail.astro";
 import Resources from "../templates/resources.astro";
 import Visit from "../templates/visit.astro";
 
 interface Props {
   locale: Locale;
   page: PageId;
+  resource?: ResourceId;
 }
 
 export function getStaticPaths() {
-  return pageIds.flatMap((page) =>
+  const pages = pageIds.flatMap((page) =>
     localeIds.map((locale) => ({
       params: { path: pagePath(page, locale).replace(/^\//, "").replace(/\/$/, "") },
       props: { locale, page },
     })),
   );
+  return [...pages, ...resourceIds.flatMap((resource) => localeIds.map((locale) => ({
+    params: { path: resourcePath(resource, locale).replace(/^\//, "").replace(/\/$/, "") },
+    props: { locale, page: "resources" as const, resource },
+  })))];
 }
 
-const { locale, page } = Astro.props;
+const { locale, page, resource } = Astro.props;
 const staticTemplates = { home: Home, about: About, events: Events, resources: Resources, contact: Contact };
 const StaticTemplate = staticTemplates[page as keyof typeof staticTemplates] ?? Home;
 ---
-{page === "collection" ? <Collection locale={locale} /> : page === "visit" ? <Visit locale={locale} /> : <StaticTemplate locale={locale} />}
+{resource ? <ResourceDetail locale={locale} resource={resource} /> : page === "collection" ? <Collection locale={locale} /> : page === "visit" ? <Visit locale={locale} /> : <StaticTemplate locale={locale} />}

@@ -7,6 +7,8 @@ import {
   pagePath,
   publicRecordPath,
   publicSectionPath,
+  resourceIds,
+  resourcePath,
   siteURL,
 } from "../i18n/routes";
 
@@ -27,6 +29,11 @@ export const GET: APIRoute = async () => {
     const paths = { es: pagePath(page, "es"), en: pagePath(page, "en") };
     return localeIds.map((locale) => item(paths, locale));
   });
+  for (const resource of resourceIds)
+    for (const locale of localeIds)
+      urls.push(
+        item({ es: resourcePath(resource, "es"), en: resourcePath(resource, "en") }, locale),
+      );
   for (const record of collectionObjects)
     for (const locale of localeIds)
       urls.push(
