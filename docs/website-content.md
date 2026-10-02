@@ -124,6 +124,24 @@ authority from current holding or location.
 
 Show `mosa@radicaldata.org` as selectable text and a native email link usable
 without JavaScript. Invite general descriptions before sensitive attachments.
+Present Instagram as a public way to follow project updates, not as a channel
+for sensitive information. Keep Instagram and the GitHub source repository in
+the global footer. Explain the open-source website and its MIT licence on the
+About page. Use descriptive text labels rather than icon-only links, and let
+external links follow normal browser behaviour instead of forcing a new tab.
+
+## Licensing
+
+The website footer identifies original MoSA writing as CC BY-SA 4.0 and the
+MoSA collection database as ODC-By 1.0. It also warns that individual records,
+images and Indigenous knowledge can carry different rights or notices. The
+About page identifies the website source code as MIT-licensed and links to its
+GitHub repository.
+
+Keep the detailed repository scope in `LICENSING.md`. Do not let a site-wide
+notice override item-specific image rights, third-party source wording, Local
+Contexts labels or notices, other community protocols, or pre-existing
+intellectual property.
 
 ## Mailing list
 

@@ -11,6 +11,8 @@ export {
 export { getResources } from "./resources";
 
 export const contactEmail = "mosa@radicaldata.org";
+export const githubURL = "https://github.com/radical-data/mosa";
+export const instagramURL = "https://www.instagram.com/museumofstolenartefacts/";
 export const mailchimpSignupAction =
   "https://radicaldata.us18.list-manage.com/subscribe/post?u=3484234c1c5960682945b6be0&id=712b203609&f_id=0094b6e6f0";
 export const conceptIds = [
