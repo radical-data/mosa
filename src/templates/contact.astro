@@ -1,4 +1,5 @@
 ---
+import NewsletterSignup from "../components/NewsletterSignup.astro";
 import { getCopy } from "../content/content";
 import { contactEmail } from "../data/site";
 import type { Locale } from "../i18n/routes";
@@ -30,6 +31,7 @@ const copy = getCopy("contact", locale);
         <p><Fragment set:html={copy.passage09} /></p>
         <p><Fragment set:html={copy.passage10} /></p>
       </section>
+      <NewsletterSignup locale={locale} placement="contact" />
     </div>
   </section>
 </Layout>

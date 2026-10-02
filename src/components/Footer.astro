@@ -1,6 +1,7 @@
 ---
 import { messages } from "../i18n/catalogues";
 import { type Locale, pageIds, pagePath } from "../i18n/routes";
+import NewsletterSignup from "./NewsletterSignup.astro";
 import PageLink from "./PageLink.astro";
 
 interface Props { locale: Locale; }
@@ -14,6 +15,7 @@ const t = messages(locale);
     <nav aria-label={t.footerNavigation}>{pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)}>{t[id]}</a>)}</nav>
     <div class="footer-purpose"><p>{t.footerPurpose}</p><PageLink class="text-link" page="contact" locale={locale}>{t.connect} <span aria-hidden="true">↗</span></PageLink></div>
   </div>
+  <NewsletterSignup locale={locale} placement="footer" />
   <div class="container footer-bottom">
     <p><span lang="en">Museum of Stolen Artefacts</span> © {new Date().getFullYear()}.</p>
     <div><p>{t.funding}</p><img src="/images/funding-logo.webp" alt="Creative Industries Fund NL" lang="en" width="3221" height="193" loading="lazy" /></div>

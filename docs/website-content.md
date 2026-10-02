@@ -124,3 +124,18 @@ authority from current holding or location.
 
 Show `mosa@radicaldata.org` as selectable text and a native email link usable
 without JavaScript. Invite general descriptions before sensitive attachments.
+
+## Mailing list
+
+The footer and Contact page publish a bilingual email-only signup form for the
+existing MoSA Mailchimp audience. The form submits directly to Mailchimp and
+works without JavaScript; the website does not proxy or retain subscriptions.
+Link Instagram and other external profiles directly to the website form at
+`/es/contacto/#newsletter` or `/en/contact/#newsletter` as appropriate.
+
+Mailchimp owns the confirmation, unsubscribe and subscriber-management journey.
+Keep double opt-in and abuse protection enabled, and review those screens and
+emails whenever the audience configuration or website copy changes. The route
+language localises the website form only; do not imply that it records a
+subscriber's preferred newsletter language unless Mailchimp is configured to
+capture and use that preference.

@@ -69,7 +69,7 @@ export const anchors: Record<PageId, readonly string[]> = {
     "sustain",
     "reconnect",
   ],
-  contact: ["main", "contact-privacy-title", "contact-email-help"],
+  contact: ["main", "contact-privacy-title", "contact-email-help", "newsletter"],
 };
 export function languageLink(page: PageId, locale: Locale, current: URL): string {
   let targetPath = pagePath(page, locale);
