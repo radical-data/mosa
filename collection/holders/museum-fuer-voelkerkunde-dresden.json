@@ -1,5 +1,6 @@
 {
   "name": "Museum für Völkerkunde Dresden",
+  "visitUrl": "https://voelkerkunde-dresden.skd.museum/besuch/",
   "location": {
     "name": "Dresden, Germany",
     "precision": "locality",

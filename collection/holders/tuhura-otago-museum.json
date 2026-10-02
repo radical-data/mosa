@@ -1,6 +1,7 @@
 {
   "name": "Tūhura Otago Museum",
   "aliases": ["Otago Museum"],
+  "visitUrl": "https://tuhura.nz/visit/opening-hours/",
   "location": {
     "name": "Dunedin, New Zealand",
     "precision": "locality",

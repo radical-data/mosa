@@ -1,5 +1,6 @@
 {
   "name": "Canterbury Museum",
+  "visitUrl": "https://www.canterburymuseum.com/visit",
   "location": {
     "name": "Christchurch, New Zealand",
     "precision": "locality",

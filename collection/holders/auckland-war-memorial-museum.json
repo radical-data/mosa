@@ -1,6 +1,7 @@
 {
   "name": "Auckland War Memorial Museum",
   "aliases": ["Aukland Institute and Museum"],
+  "visitUrl": "https://www.aucklandmuseum.com/visit/plan-your-visit/hours-and-admission",
   "location": {
     "name": "Auckland, New Zealand",
     "precision": "locality",

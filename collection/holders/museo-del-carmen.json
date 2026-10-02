@@ -1,5 +1,6 @@
 {
   "name": "Museo del Carmen",
+  "visitUrl": "https://www.museodelcarmen.cl/",
   "location": {
     "name": "Maipú, Chile",
     "precision": "locality",

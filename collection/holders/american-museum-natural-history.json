@@ -3,9 +3,9 @@
   "visitUrl": "https://www.amnh.org/plan-your-visit",
   "location": {
     "name": "New York, United States",
-    "precision": "locality",
-    "longitude": -74.006,
-    "latitude": 40.7128,
-    "reference": "https://www.openstreetmap.org/?mlat=40.7128&mlon=-74.006#map=10/40.7128/-74.006"
+    "precision": "site",
+    "longitude": -73.97421,
+    "latitude": 40.7811,
+    "reference": "https://www.openstreetmap.org/way/388436810"
   }
 }

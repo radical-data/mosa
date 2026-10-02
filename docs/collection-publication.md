@@ -18,6 +18,14 @@ holderless `located_at` evidence or a genuine location exception. Never infer
 current custody from an old claim or assign a precise point when the evidence
 supports only a broader locality.
 
+Prefer verified museum-site coordinates to city-centre points. When holders
+share exact coordinates, check whether they are historical names for the same
+institution, distinct sites that were given a common city point, or genuinely
+unresolved locality-level records. Reconcile supported aliases while retaining
+source wording; do not alter recorded coordinates or invent street-level
+precision to separate markers. Small visual offsets for coincident approximate
+points belong in the map presentation, not the collection records.
+
 A holder may also have an optional `visitUrl`: a verified official visitor
 information page using HTTP(S). Closed institutions and private collections
 remain eligible for the Visit page. Omit an unverified URL; a coordinate

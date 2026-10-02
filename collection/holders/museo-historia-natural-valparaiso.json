@@ -1,6 +1,7 @@
 {
   "name": "Museo de Historia Natural de Valparaíso",
-  "aliases": ["Museo Historia Natural de Valparaíso"],
+  "visitUrl": "https://www.mhnv.gob.cl/faq",
+  "aliases": ["Museo Historia Natural de Valparaíso", "Museo de Historia Natural (Valparaíso)"],
   "location": {
     "name": "Valparaíso, Chile",
     "precision": "locality",

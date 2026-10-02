@@ -1,5 +1,6 @@
 {
   "name": "University Museum of Bergen",
+  "visitUrl": "https://www4.uib.no/en/university-museum-of-bergen/visit-the-museum/plan-your-visit",
   "location": {
     "name": "Bergen, Norway",
     "precision": "locality",

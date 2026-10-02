@@ -1,6 +1,10 @@
 {
-  "name": "National Museum of Natural History, Smithsonian Institution",
-  "aliases": ["Smithsonian Institution, United States National Museum"],
+  "name": "National Museum of Natural History",
+  "aliases": [
+    "Smithsonian Institution, United States National Museum",
+    "National Museum of Natural History, Smithsonian Institution"
+  ],
+  "visitUrl": "https://naturalhistory.si.edu/visit",
   "location": {
     "name": "Washington, DC, United States",
     "precision": "locality",

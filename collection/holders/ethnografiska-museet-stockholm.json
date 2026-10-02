@@ -1,6 +1,7 @@
 {
-  "name": "Etnografiska Museet",
-  "aliases": ["Statens Etnografisca Museum"],
+  "name": "Etnografiska museet",
+  "visitUrl": "https://www.etnografiskamuseet.se/en/visit/opening-hours/",
+  "aliases": ["Statens Etnografisca Museum", "Etnografiska Museet"],
   "location": {
     "name": "Stockholm, Sweden",
     "precision": "locality",

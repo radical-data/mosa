@@ -1,6 +1,7 @@
 {
-  "name": "Museo Missionario Etnologico",
-  "aliases": ["Museo Misionero Etnologico"],
+  "name": "Museo Etnologico Anima Mundi",
+  "visitUrl": "https://www.museivaticani.va/content/museivaticani/en/info.html",
+  "aliases": ["Museo Misionero Etnologico", "Museo Missionario Etnologico"],
   "location": {
     "name": "Vatican City",
     "precision": "locality",

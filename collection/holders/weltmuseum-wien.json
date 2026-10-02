@@ -1,5 +1,6 @@
 {
   "name": "Weltmuseum Wien",
+  "visitUrl": "https://www.weltmuseumwien.at/en/visit",
   "location": {
     "name": "Vienna, Austria",
     "precision": "locality",

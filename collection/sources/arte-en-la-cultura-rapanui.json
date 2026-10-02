@@ -5,7 +5,7 @@
   "reference": "Arte en la cultura rapanui — PDF, pages 12–19, “MUSEOS DEL MUNDO EN DONDE HAY PIEZAS DE RAPA NUI”",
   "language": "es",
   "notes": {
-    "text": "In extracting this table, MoSA interprets blank museum/collection and location cells as repeating the preceding values within the same institution block, including where the block continues onto another page. For example, the entries ‘Figura humana curva’ and ‘Figura femenina’ beneath ‘Moko’ inherit ‘Sammlung Raft, Nash’ and ‘Hamburg, Alemania’. Inheritance stops when a new institution or section begins; object cells are never filled down. Wrapped text within a cell and descriptions split across pages are joined, while separate repeated rows remain distinct. These are MoSA’s transcription decisions; the reported holders and locations have not been independently verified as current.",
+    "text": "In extracting this table, MoSA interprets blank museum/collection and location cells as repeating the preceding values within the same institution block, including where the block continues onto another page. For example, the entries ‘Figura humana curva’ and ‘Figura femenina’ beneath ‘Moko’ inherit ‘Sammlung Raft, Nash’ and ‘Hamburg, Alemania’. Inheritance stops when a new institution or section begins; object cells are never filled down. Wrapped text within a cell and descriptions split across pages are joined, while separate repeated rows remain distinct. These are MoSA’s transcription decisions; the reported holders and locations have not been independently verified as current. MoSA resolves this table’s “Museo Miklucho-Maklaja” in Leningrado to the Kunstkamera holder. ArcheoBiblioBase’s institutional history identifies the Leningrad/St Petersburg branch of the N. N. Miklukho-Maklai Institute as the predecessor of the independent Kunstkamera established in 1992 (https://abb.eastview.com/rep/E-29.tab2.php, consulted 2 October 2026). This is an institutional reconciliation, not an identification of these seven entries with particular modern catalogue records or a verification of their present custody; the table’s original holder and location wording is preserved.",
     "language": "en-GB"
   },
   "claims": [
@@ -1411,7 +1411,7 @@
       "objectId": "moai-tangata-leningrado",
       "predicate": "held_by",
       "value": "Museo Miklucho-Maklaja",
-      "holderId": "museum-miklucho-maklaja"
+      "holderId": "kunstkamera"
     },
     {
       "id": "moai-tangata-leningrado-location",
@@ -1430,7 +1430,7 @@
       "objectId": "moai-tangata-penacho-leningrado",
       "predicate": "held_by",
       "value": "Museo Miklucho-Maklaja",
-      "holderId": "museum-miklucho-maklaja"
+      "holderId": "kunstkamera"
     },
     {
       "id": "moai-tangata-penacho-leningrado-location",
@@ -1455,7 +1455,7 @@
       "objectId": "tangata-manu-leningrado",
       "predicate": "held_by",
       "value": "Museo Miklucho-Maklaja",
-      "holderId": "museum-miklucho-maklaja"
+      "holderId": "kunstkamera"
     },
     {
       "id": "tangata-manu-leningrado-location",
@@ -1474,7 +1474,7 @@
       "objectId": "tablilla-rongo-rongo-leningrado",
       "predicate": "held_by",
       "value": "Museo Miklucho-Maklaja",
-      "holderId": "museum-miklucho-maklaja"
+      "holderId": "kunstkamera"
     },
     {
       "id": "tablilla-rongo-rongo-leningrado-location",
@@ -1493,7 +1493,7 @@
       "objectId": "figura-curva-sonriente-leningrado",
       "predicate": "held_by",
       "value": "Museo Miklucho-Maklaja",
-      "holderId": "museum-miklucho-maklaja"
+      "holderId": "kunstkamera"
     },
     {
       "id": "figura-curva-sonriente-leningrado-location",
@@ -1518,7 +1518,7 @@
       "objectId": "moai-kava-kava-leningrado",
       "predicate": "held_by",
       "value": "Museo Miklucho-Maklaja",
-      "holderId": "museum-miklucho-maklaja"
+      "holderId": "kunstkamera"
     },
     {
       "id": "moai-kava-kava-leningrado-location",
@@ -1537,7 +1537,7 @@
       "objectId": "figura-tipo-kava-kava-leningrado",
       "predicate": "held_by",
       "value": "Museo Miklucho-Maklaja",
-      "holderId": "museum-miklucho-maklaja"
+      "holderId": "kunstkamera"
     },
     {
       "id": "figura-tipo-kava-kava-leningrado-location",
@@ -3070,7 +3070,7 @@
       "objectId": "cabeza-piedra-valparaiso",
       "predicate": "held_by",
       "value": "Museo de Historia Natural",
-      "holderId": "museum-history-natural-valparaiso"
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "cabeza-piedra-valparaiso-location",

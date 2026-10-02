@@ -1,6 +1,7 @@
 {
-  "name": "Ethnologisches Museum, Staatliche Museen zu Berlin",
-  "aliases": ["Ethnologisches Museum", "Museum für Volkerkunde SMPK"],
+  "name": "Ethnologisches Museum",
+  "visitUrl": "https://www.humboldtforum.org/de/besuch/",
+  "aliases": ["Museum für Volkerkunde SMPK", "Ethnologisches Museum, Staatliche Museen zu Berlin"],
   "location": {
     "name": "Berlin, Germany",
     "precision": "locality",

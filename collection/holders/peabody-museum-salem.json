@@ -1,6 +1,7 @@
 {
   "name": "Peabody Essex Museum",
   "aliases": ["Peabody Museum"],
+  "visitUrl": "https://www.pem.org/visit",
   "location": {
     "name": "Salem, Massachusetts, United States",
     "precision": "locality",

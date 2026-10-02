@@ -1,3 +1,10 @@
 {
-  "name": "Hooper Collection"
+  "name": "Hooper Collection",
+  "location": {
+    "name": "London, United Kingdom (historical reported locality; uncertain)",
+    "precision": "locality",
+    "longitude": -0.1278,
+    "latitude": 51.5074,
+    "reference": "https://www.sothebys.com/buy/9a100b18-d135-4b93-81ef-34e0d35821ea/lots/b548c2d4-4719-4582-a3a0-213e36d3182a"
+  }
 }

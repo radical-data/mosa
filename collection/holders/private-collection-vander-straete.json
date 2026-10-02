@@ -1,3 +1,10 @@
 {
-  "name": "Colección Vander Straete"
+  "name": "Colección Vander Straete",
+  "location": {
+    "name": "Brussels, Belgium (estimated historical locality)",
+    "precision": "locality",
+    "longitude": 4.3517,
+    "latitude": 50.8503,
+    "reference": "https://www.osterinsel-freunde.de/literatur"
+  }
 }

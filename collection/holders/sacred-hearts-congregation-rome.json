@@ -1,6 +1,9 @@
 {
-  "name": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma",
-  "aliases": ["Padri dei Sacri Cuori (SSCC)"],
+  "name": "Congregazione dei Sacri Cuori (Picpus)",
+  "aliases": [
+    "Padri dei Sacri Cuori (SSCC)",
+    "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+  ],
   "location": {
     "name": "Rome, Italy",
     "precision": "locality",

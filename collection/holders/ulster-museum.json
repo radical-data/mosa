@@ -1,5 +1,6 @@
 {
   "name": "Ulster Museum",
+  "visitUrl": "https://www.ulstermuseum.org/visit",
   "location": {
     "name": "Belfast, Northern Ireland",
     "precision": "locality",

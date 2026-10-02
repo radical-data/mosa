@@ -1,11 +1,12 @@
 {
   "name": "Musée de l’Homme",
+  "visitUrl": "https://www.museedelhomme.fr/fr/tarifs-horaires-acces",
   "aliases": ["Museo del Hombre"],
   "location": {
     "name": "Paris, France",
-    "precision": "locality",
-    "longitude": 2.3522,
-    "latitude": 48.8566,
-    "reference": "https://www.openstreetmap.org/?mlat=48.8566&mlon=2.3522#map=10/48.8566/2.3522"
+    "precision": "site",
+    "longitude": 2.28765,
+    "latitude": 48.86205,
+    "reference": "https://www.openstreetmap.org/node/3787532339"
   }
 }

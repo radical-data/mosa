@@ -1,5 +1,6 @@
 {
   "name": "Linden-Museum Stuttgart",
+  "visitUrl": "https://lindenmuseum.de/besuch/",
   "location": {
     "name": "Stuttgart, Germany",
     "precision": "locality",

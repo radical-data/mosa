@@ -1,3 +1,10 @@
 {
-  "name": "Sammlung Raft, Nash"
+  "name": "Sammlung Raft, Nash",
+  "location": {
+    "name": "Hamburg, Germany (historical reported locality; uncertain)",
+    "precision": "locality",
+    "longitude": 9.987,
+    "latitude": 53.5488,
+    "reference": "https://www.osterinsel-freunde.de/literatur"
+  }
 }
