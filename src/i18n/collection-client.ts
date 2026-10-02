@@ -1,4 +1,4 @@
-import { hasBrowseFilter, matchesBrowseState, readBrowseState } from "./collection-browse";
+import { matchesBrowseState, readBrowseState } from "./collection-browse";
 import { referenceCount } from "./messages";
 import { updateLanguageLinks } from "./switcher";
 
@@ -7,14 +7,12 @@ const search = document.querySelector<HTMLInputElement>("#collection-search");
 const results = document.querySelector<HTMLElement>("#collection-results");
 const count = document.querySelector<HTMLElement>("#collection-count");
 const empty = document.querySelector<HTMLElement>(".empty-state");
-const featured = document.querySelector<HTMLElement>("[data-featured-objects]");
 const viewButtons = Array.from(
   document.querySelectorAll<HTMLButtonElement>("[data-collection-view]"),
 );
 const locale =
   document.querySelector<HTMLElement>("[data-locale]")?.dataset.locale === "en" ? "en" : "es";
 if (controls && search && results && count && empty) {
-  // Featured cards are outside the result set and its count.
   const cards = Array.from(results.querySelectorAll<HTMLElement>("[data-catalogue-card]"));
   let state = readBrowseState(new URLSearchParams(location.search));
   controls.hidden = false;
@@ -28,7 +26,6 @@ if (controls && search && results && count && empty) {
       card.hidden = !matches;
       if (matches) visible++;
     }
-    if (featured) featured.hidden = hasBrowseFilter(state);
     count.textContent = referenceCount(locale, { count: visible });
     empty.hidden = visible > 0;
     results.hidden = visible === 0;

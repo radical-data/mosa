@@ -68,27 +68,26 @@ and derive image galleries from explicit `depicts` relationships. Article
 pages retain their declared prose language and can concern multiple objects and
 sources or have no record subjects. Methodological notes and preservation captures are excluded from public rendering and search.
 
-The object index uses one shared card for featured objects and catalogue results.
+The object index uses one shared catalogue card, without a featured-object tier.
 Cards contain an uncropped image in a white square frame, or a plain pale-grey
-square when no image is available, followed by the object name, source count and
-image-source link. Missing-image text is available to screen readers but is not
-displayed. The white image frame avoids adding a contrasting border around
+square when no image is available, followed by the object name and source count.
+Image-source links and attribution remain on the object page. Missing-image
+text is available to screen readers but is not displayed. The white image frame
+avoids adding a contrasting border around
 photographs with white backgrounds; the photograph itself remains unchanged.
 Image captions, credits and rights remain on the object page and in text search.
 Grid and list views share text search. Image availability does not filter the
 catalogue. Language switching preserves the query and view. Legacy `view=table`
 URLs select the list view.
 
-Featured objects appear in configured order above the full catalogue. They also
-remain in the catalogue; featured cards do not add to the result count. A text
-query hides the featured section.
+Every object appears once in the catalogue. Source counts describe documentation
+coverage, not an object's importance; they do not determine catalogue order.
 
 `src/content/collection-presentation.json` contains website presentation choices,
-not collection assertions. `featuredObjectIds` is an ordered list of existing
-object handles. The optional `leadImages` map selects a lead image by object
-handle, with a `sourceId` and `file` from that object's depicting gallery. The
-build rejects unknown handles, duplicate featured handles and lead images that
-are not in the object's gallery. Without an override, photographs precede other
+not collection assertions. The optional `leadImages` map selects a lead image by
+object handle, with a `sourceId` and `file` from that object's depicting gallery.
+The build rejects unknown handles and lead images that are not in the object's
+gallery. Without an override, photographs precede other
 image sources, then source ID and file determine the order. Cards and galleries
 use the same lead image. Do not create object-specific template branches.
 

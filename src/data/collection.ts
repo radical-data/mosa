@@ -183,11 +183,3 @@ export const collectionRecords = checked.objects.map((object) => {
   if (!record) throw Error(`Missing collection object ${object.id}`);
   return record;
 });
-
-export const featuredCollectionRecords = collectionPresentation.featuredObjectIds.map(
-  (objectId) => {
-    const record = collectionRecords.find(({ object }) => object.id === objectId);
-    if (!record) throw Error(`Missing featured collection object ${objectId}`);
-    return record;
-  },
-);

@@ -14,7 +14,7 @@ describe("collection presentation", () => {
     ];
 
     const resolved = resolveCollectionPresentation(
-      { featuredObjectIds: ["object-a"] },
+      {},
       ["object-a"],
       new Map([["object-a", gallery]]),
     );
@@ -35,7 +35,6 @@ describe("collection presentation", () => {
 
     const resolved = resolveCollectionPresentation(
       {
-        featuredObjectIds: ["object-a"],
         leadImages: { "object-a": { sourceId: "b-photo", file: "back.jpg" } },
       },
       ["object-a"],
@@ -45,24 +44,10 @@ describe("collection presentation", () => {
     expect(resolved.imagesByObjectId.get("object-a")?.[0]).toBe(gallery[0]);
   });
 
-  it("rejects duplicate featured object IDs", () => {
+  it("rejects lead image keys that do not identify collection objects", () => {
     expect(() =>
       resolveCollectionPresentation(
-        { featuredObjectIds: ["object-a", "object-a"] },
-        ["object-a"],
-        new Map(),
-      ),
-    ).toThrow(/featured object "object-a" more than once/);
-  });
-
-  it("rejects featured IDs and lead image keys that do not identify collection objects", () => {
-    expect(() =>
-      resolveCollectionPresentation({ featuredObjectIds: ["missing"] }, ["object-a"], new Map()),
-    ).toThrow(/featuredObjectIds contains unknown object "missing"/);
-
-    expect(() =>
-      resolveCollectionPresentation(
-        { featuredObjectIds: [], leadImages: { missing: { sourceId: "photo", file: "a.jpg" } } },
+        { leadImages: { missing: { sourceId: "photo", file: "a.jpg" } } },
         ["object-a"],
         new Map(),
       ),
@@ -73,7 +58,6 @@ describe("collection presentation", () => {
     expect(() =>
       resolveCollectionPresentation(
         {
-          featuredObjectIds: ["object-a"],
           leadImages: { "object-a": { sourceId: "other-photo", file: "other.jpg" } },
         },
         ["object-a"],

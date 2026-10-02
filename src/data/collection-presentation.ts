@@ -4,7 +4,6 @@ export interface CollectionPresentationLeadImage {
 }
 
 export interface CollectionPresentationConfig {
-  featuredObjectIds: string[];
   leadImages?: Record<string, CollectionPresentationLeadImage>;
 }
 
@@ -14,7 +13,6 @@ export interface PresentationImage {
 }
 
 export interface ResolvedCollectionPresentation<TImage extends PresentationImage> {
-  featuredObjectIds: string[];
   imagesByObjectId: Map<string, TImage[]>;
 }
 
@@ -24,25 +22,6 @@ export function resolveCollectionPresentation<TImage extends PresentationImage>(
   depictingGalleries: ReadonlyMap<string, readonly TImage[]>,
 ): ResolvedCollectionPresentation<TImage> {
   const knownObjectIds = new Set(objectIds);
-  const featuredObjectIds = config.featuredObjectIds;
-  const duplicateFeaturedId = featuredObjectIds.find(
-    (objectId, index) => featuredObjectIds.indexOf(objectId) !== index,
-  );
-
-  if (duplicateFeaturedId) {
-    throw new Error(
-      `Collection presentation lists featured object "${duplicateFeaturedId}" more than once; remove the duplicate from src/content/collection-presentation.json.`,
-    );
-  }
-
-  for (const objectId of featuredObjectIds) {
-    if (!knownObjectIds.has(objectId)) {
-      throw new Error(
-        `Collection presentation featuredObjectIds contains unknown object "${objectId}"; correct the ID in src/content/collection-presentation.json or add the object under collection/objects/.`,
-      );
-    }
-  }
-
   const imagesByObjectId = new Map<string, TImage[]>();
   for (const objectId of objectIds) {
     const gallery = [...(depictingGalleries.get(objectId) ?? [])].sort(
@@ -74,5 +53,5 @@ export function resolveCollectionPresentation<TImage extends PresentationImage>(
     if (selectedLead) gallery.unshift(selectedLead);
   }
 
-  return { featuredObjectIds: [...featuredObjectIds], imagesByObjectId };
+  return { imagesByObjectId };
 }

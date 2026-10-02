@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { hasBrowseFilter, matchesBrowseState, readBrowseState } from "./collection-browse";
+import { matchesBrowseState, readBrowseState } from "./collection-browse";
 import { languageLink } from "./routes";
 
 describe("collection browsing", () => {
@@ -17,11 +17,5 @@ describe("collection browsing", () => {
     expect(matchesBrowseState(state, record)).toBe(true);
     expect(matchesBrowseState({ ...state, q: "P 003" }, record)).toBe(true);
     expect(matchesBrowseState({ ...state, q: "not present" }, record)).toBe(false);
-  });
-  it("hides featured objects for active filters but not a view change", () => {
-    const state = readBrowseState(new URLSearchParams("view=list"));
-    expect(hasBrowseFilter(state)).toBe(false);
-    expect(hasBrowseFilter({ ...state, q: "Mamari" })).toBe(true);
-    expect(hasBrowseFilter({ ...state, q: " " })).toBe(false);
   });
 });

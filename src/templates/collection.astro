@@ -3,7 +3,7 @@ import CollectionCard from "../components/CollectionCard.astro";
 import CollectionNav from "../components/CollectionNav.astro";
 import PageIntro from "../components/PageIntro.astro";
 import { getCopy } from "../content/content";
-import { collectionRecords, featuredCollectionRecords } from "../data/collection";
+import { collectionRecords } from "../data/collection";
 import { messages } from "../i18n/catalogues";
 import { referenceCount } from "../i18n/messages";
 import type { Locale } from "../i18n/routes";
@@ -19,11 +19,6 @@ const t = messages(locale);
   <PageIntro title={copy.passage03} image="mahute"><p><Fragment set:html={copy.passage06} /></p><a class="text-link" href="#more-information">{copy.passage17}</a></PageIntro>
   <section class="container section collection-section" aria-label={t.collectionExplore} data-locale={locale}>
     <CollectionNav locale={locale} active="objects" />
-    {featuredCollectionRecords.length > 0 && <section class="featured-objects" data-featured-objects aria-labelledby="featured-title">
-      <h2 id="featured-title">{t.featuredObjects}</h2>
-      <p class="small muted">{t.featuredNote}</p>
-      <div class="catalogue-grid featured-grid">{featuredCollectionRecords.map((record) => <CollectionCard record={record} locale={locale} />)}</div>
-    </section>}
     <h2 class="catalogue-heading">{t.allObjects}</h2>
     <div class="collection-controls" hidden>
       <fieldset class="view-controls">
@@ -39,7 +34,7 @@ const t = messages(locale);
     </div>
     <p class="small muted" id="collection-count" role="status" aria-live="polite">{referenceCount(locale, { count: collection.length })}</p>
     {collection.length === 0 && <p>{t.collectionPending}</p>}
-    <div class="catalogue-grid" id="collection-results">{collection.map((record) => <CollectionCard record={record} locale={locale} searchable />)}</div>
+    <div class="catalogue-grid" id="collection-results">{collection.map((record) => <CollectionCard record={record} locale={locale} />)}</div>
     <div class="empty-state" hidden><h2><Fragment set:html={t.noMatches} /></h2><p><Fragment set:html={t.noMatchesHelp} /></p><button class="button" type="button" id="reset-filters">{t.clearFilters}</button></div>
     <noscript><p><Fragment set:html={t.enableCollectionScript} /></p></noscript>
   </section>
@@ -51,12 +46,10 @@ const t = messages(locale);
 </script>
 
 <style>
-  .featured-objects { margin-block: 2rem 3rem; }
-  .featured-objects h2, .catalogue-heading { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: .5rem; }
+  .catalogue-heading { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: .5rem; }
   .catalogue-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem 1.25rem; margin-top: 1.5rem; }
-  .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 42rem; }
   .catalogue-grid.is-list { display: block; }
   .collection-controls { margin-block: 1.5rem 1rem; gap: 1rem 2rem; }
   @media (max-width: 65rem) { .catalogue-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 40rem) { .catalogue-grid { grid-template-columns: minmax(0, 1fr); } .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; } }
+  @media (max-width: 40rem) { .catalogue-grid { grid-template-columns: minmax(0, 1fr); } }
 </style>

@@ -18,7 +18,3 @@ export function matchesBrowseState(
 ): boolean {
   return matchesSearch(state.q, record.searchExact, record.searchFoldable);
 }
-
-export function hasBrowseFilter(state: BrowseState): boolean {
-  return Boolean(state.q.trim());
-}
