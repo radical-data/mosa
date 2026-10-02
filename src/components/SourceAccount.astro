@@ -1,0 +1,55 @@
+---
+import type { Source } from "../data/collection-model";
+import type { SourcedClaim } from "../data/collection-record";
+import { type Locale, publicRecordPath } from "../i18n/routes";
+import ClaimStatement from "./ClaimStatement.astro";
+
+interface Props {
+  source: Source;
+  claims: SourcedClaim[];
+  locale: Locale;
+}
+
+const { source, claims, locale } = Astro.props;
+const t = locale === "en"
+  ? { author: "Source author", claim: "claim", claims: "claims", reference: "Reference" }
+  : { author: "Autoría de la fuente", claim: "afirmación", claims: "afirmaciones", reference: "Referencia" };
+const referenceURL = (value: string) => {
+  const candidate = value.match(/https?:\/\/\S+$/u)?.[0] ?? value;
+  try {
+    const url = new URL(candidate);
+    return ["http:", "https:"].includes(url.protocol) ? url.href : null;
+  } catch {
+    return null;
+  }
+};
+const url = referenceURL(source.reference);
+---
+<article class="source-account" id={`source-${source.id}`}>
+  {claims.length === 0 && <p class="source-link"><a href={publicRecordPath("sources", source.id, locale)}>{source.title}</a></p>}
+  <details>
+    <summary>{source.title} <span class="small muted">({claims.length} {claims.length === 1 ? t.claim : t.claims})</span></summary>
+    <div class="account-content">
+      <p class="small"><a href={publicRecordPath("sources", source.id, locale)}>{locale === "en" ? "View source record" : "Ver ficha de la fuente"}</a></p>
+      {url && <p class="small">{t.reference}: <a href={url} rel="noreferrer">{source.reference}</a></p>}
+      {!url && <p class="small">{t.reference}: {source.reference}</p>}
+      {source.author && <p class="small muted">{t.author}: {source.author}</p>}
+      {claims.length > 0 && (
+        <ul>
+          {claims.map(({ claim }) => (
+            <li><ClaimStatement claim={claim} language={source.language} locale={locale} /></li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </details>
+</article>
+
+<style>
+  .source-account { border: 1px solid currentColor; padding: 1rem; overflow-wrap: anywhere; }
+  .source-link { margin-block: 0 .5rem; }
+  summary { cursor: pointer; }
+  .account-content { padding-block-start: .5rem; }
+  .account-content ul { padding-inline-start: 1.25rem; }
+  .account-content li + li { margin-block-start: .75rem; }
+</style>

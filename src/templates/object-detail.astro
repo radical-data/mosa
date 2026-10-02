@@ -1,0 +1,119 @@
+---
+import ArticlePreview from "../components/ArticlePreview.astro";
+import AttributedClaims from "../components/AttributedClaims.astro";
+import CollectionNav from "../components/CollectionNav.astro";
+import ObjectGallery from "../components/ObjectGallery.astro";
+import SourceAccount from "../components/SourceAccount.astro";
+import type { CollectionRecord } from "../data/collection";
+import { qualifyClaim } from "../data/collection-model";
+import { type Locale, pagePath } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props {
+  locale: Locale;
+  record: CollectionRecord;
+}
+
+const { locale, record } = Astro.props;
+const object = record.object;
+const t = locale === "en"
+  ? {
+      back: "Collection", navigation: "On this page", foregrounded: "Foregrounded perspectives",
+      foregroundedNote: "MoSA selects these claims for prominence; this selection does not rank their truth.",
+      images: "Images", origin: "Origin and findspot", holding: "Reported holding and location",
+      holdingNote: "Sources may describe historical holdings or locations.",
+      articles: "Articles about this object", sources: "Source accounts",
+    }
+  : {
+      back: "Colección", navigation: "En esta página", foregrounded: "Perspectivas destacadas",
+      foregroundedNote: "MoSA selecciona estas afirmaciones para darles prominencia; esta selección no jerarquiza su veracidad.",
+      images: "Imágenes", origin: "Origen y lugar de hallazgo", holding: "Custodia y ubicación informadas",
+      holdingNote: "Las fuentes pueden describir custodias o ubicaciones históricas.",
+      articles: "Artículos sobre este objeto", sources: "Relatos de las fuentes",
+    };
+const foregroundedIds = new Set(record.foregroundedClaims.map(({ source, claim }) => qualifyClaim(source.id, claim.id)));
+const originClaims = record.originClaims.filter(({ source, claim }) => !foregroundedIds.has(qualifyClaim(source.id, claim.id)));
+const holdingClaims = record.holdingClaims.filter(({ source, claim }) => !foregroundedIds.has(qualifyClaim(source.id, claim.id)));
+const hasNavigation = record.foregroundedClaims.length > 0 || record.images.length > 0 || originClaims.length > 0 || holdingClaims.length > 0 || record.articles.length > 0 || record.sources.length > 0;
+const articles = [...record.articles].sort((a, b) => Number(b.language.startsWith(locale)) - Number(a.language.startsWith(locale)));
+---
+<Layout
+  locale={locale}
+  page="collection"
+  collectionItemId={object.id}
+  title={`${object.name} — MoSA`}
+  description={object.name}
+>
+  <article class="container section dossier" data-record-id={object.id}>
+    <CollectionNav locale={locale} active="objects" />
+    <p><a href={pagePath("collection", locale)}>← {t.back}</a></p>
+    <h1>{object.name}</h1>
+
+    {hasNavigation && <nav aria-label={t.navigation} class="object-navigation">
+      <ul>
+        {record.foregroundedClaims.length > 0 && <li><a href="#foregrounded">{t.foregrounded}</a></li>}
+        {record.images.length > 0 && <li><a href="#images">{t.images}</a></li>}
+        {originClaims.length > 0 && <li><a href="#origin">{t.origin}</a></li>}
+        {holdingClaims.length > 0 && <li><a href="#holding">{t.holding}</a></li>}
+        {articles.length > 0 && <li><a href="#articles">{t.articles}</a></li>}
+        {record.sources.length > 0 && <li><a href="#sources">{t.sources}</a></li>}
+      </ul>
+    </nav>}
+
+    {record.foregroundedClaims.length > 0 && (
+      <section id="foregrounded" aria-labelledby="foregrounded-heading">
+        <h2 id="foregrounded-heading">{t.foregrounded}</h2>
+        <p class="small muted">{t.foregroundedNote}</p>
+        <AttributedClaims claims={record.foregroundedClaims} locale={locale} />
+      </section>
+    )}
+
+    {record.images.length > 0 && (
+      <section id="images" aria-labelledby="images-heading">
+        <h2 id="images-heading">{t.images}</h2>
+        <ObjectGallery images={record.images} locale={locale} />
+      </section>
+    )}
+
+    {originClaims.length > 0 && (
+      <section id="origin" aria-labelledby="origin-heading">
+        <h2 id="origin-heading">{t.origin}</h2>
+        <AttributedClaims claims={originClaims} locale={locale} />
+      </section>
+    )}
+
+    {holdingClaims.length > 0 && (
+      <section id="holding" aria-labelledby="holding-heading">
+        <h2 id="holding-heading">{t.holding}</h2>
+        <p class="small muted">{t.holdingNote}</p>
+        <AttributedClaims claims={holdingClaims} locale={locale} />
+      </section>
+    )}
+
+    {articles.length > 0 && (
+      <section id="articles" aria-labelledby="articles-heading">
+        <h2 id="articles-heading">{t.articles}</h2>
+        {articles.map((article) => <ArticlePreview article={article} locale={locale} />)}
+      </section>
+    )}
+
+    {record.sources.length > 0 && (
+      <section id="sources" aria-labelledby="sources-heading">
+        <h2 id="sources-heading">{t.sources}</h2>
+        <div class="source-accounts">
+          {record.sources.map((source) => (
+            <SourceAccount source={source} claims={record.claims.filter(({ source: claimSource }) => claimSource.id === source.id)} locale={locale} />
+          ))}
+        </div>
+      </section>
+    )}
+  </article>
+</Layout>
+
+<style>
+  .dossier { max-width: 72rem; }
+  .dossier > section { margin-block-start: clamp(3rem, 8vw, 6rem); }
+  .source-accounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); align-items: start; gap: 1rem; }
+  .object-navigation ul { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; list-style: none; padding: 0; }
+  .dossier section { scroll-margin-top: 2rem; }
+</style>
