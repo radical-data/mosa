@@ -1,98 +1,48 @@
 ---
-import PageIntro from "../components/PageIntro.astro";
-import { guideSections, organisations, resourceLabels } from "../data/resources";
+import ActorMapGuide from "../components/resources/ActorMapGuide.astro";
+import DirectoryGuide from "../components/resources/DirectoryGuide.astro";
+import LetterGuide from "../components/resources/LetterGuide.astro";
+import RestitutionGuide from "../components/resources/RestitutionGuide.astro";
+import { resourceLabels } from "../data/resources";
 import { type Locale, pagePath, type ResourceId } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
 interface Props { locale: Locale; resource: ResourceId; }
+
 const { locale, resource } = Astro.props;
 const label = resourceLabels[locale][resource];
 const isEnglish = locale === "en";
-const strings = isEnglish ? {
-  resources: "Resources",
-  letterIntro: "Adapt this structure to your relationship and process. Keep only what is accurate and appropriate to share. Bracketed text is a prompt to replace or remove.",
-  mandate: "Representation and mandate", withMandate: "Where there is a collective mandate", withoutMandate: "Where a collective mandate is still being formed", relationship: "Relationship and meaning", separation: "History and separation", request: "What we are asking for", interim: "While the process continues", records: "Information and records", next: "Next steps and response", sign: "Names, roles and signatures as appropriate", attachments: "Possible supporting material", actorLead: "Restitution begins with a relationship between those who offer and those who receive. Either side may initiate a process. The participants and route depend on each case.",
-  holder: "Holders or custodians", requester: "Requesters or communities", mediator: "Facilitators and mediators", technical: "Technical and political actors", contexts: "Conditions that shape a process", routes: "Possible routes", contextIntro: "These positions are not fixed identities, and the map is not a required sequence. One institution may hold an item and also mediate its own process. Communities may include families, authorities and organisations with different responsibilities or views.",
-} : {
-  resources: "Recursos",
-  letterIntro: "Adapta esta estructura a tu relación y a tu proceso. Conserva solo lo que sea correcto y pertinente compartir. El texto entre corchetes es una indicación que puedes reemplazar o eliminar.",
-  mandate: "Representación y mandato", withMandate: "Cuando existe un mandato colectivo", withoutMandate: "Cuando el mandato colectivo aún se está construyendo", relationship: "Relación y significado", separation: "Historia y separación", request: "Qué solicitamos", interim: "Mientras avanza el proceso", records: "Información y antecedentes", next: "Próximos pasos y respuesta", sign: "Nombres, cargos y firmas que correspondan", attachments: "Antecedentes que podrían acompañar la solicitud", actorLead: "La restitución comienza con una relación entre quien entrega y quien recibe. Cualquiera de las partes puede activar el proceso. Los participantes y la vía dependen de cada caso.",
-  holder: "Tenedores o custodios", requester: "Solicitantes o comunidades", mediator: "Facilitadores y mediadores", technical: "Actores técnicos y políticos", contexts: "Condiciones que influyen en el proceso", routes: "Vías posibles", contextIntro: "Estas posiciones no son identidades fijas y el mapa no propone una secuencia obligatoria. Una institución puede retener un objeto y también mediar su propio proceso. Una comunidad puede incluir familias, autoridades y organizaciones con responsabilidades o perspectivas distintas.",
-};
-const actorGroups = isEnglish ? [
-  { title: strings.holder, description: "Museums; private collections; religious congregations; governments; universities and research centres." },
-  { title: strings.requester, description: "The Rapa Nui people, a clan or family, traditional authorities such as Te Mau Hatu, or representative bodies such as CODEIPA, depending on the case." },
-  { title: strings.mediator, description: "Diplomatic services, ministries, heritage agencies, international organisations, NGOs, individual intermediaries and agreements between institutions." },
-  { title: strings.technical, description: "Curators, conservators, researchers, laboratories, legal specialists, customs, health services and decision-making bodies." },
-] : [
-  { title: strings.holder, description: "Museos; colecciones privadas; congregaciones religiosas; gobiernos; universidades y centros de investigación." },
-  { title: strings.requester, description: "El pueblo rapa nui, un clan o familia, autoridades tradicionales como Te Mau Hatu o entidades representativas como CODEIPA, según cada caso." },
-  { title: strings.mediator, description: "Servicios diplomáticos, ministerios, entidades patrimoniales, organismos internacionales, ONG, intermediarios y acuerdos entre instituciones." },
-  { title: strings.technical, description: "Curadores, conservadores, investigadores, laboratorios, especialistas jurídicos, aduanas, servicios de salud y órganos decisores." },
-];
-const contexts = isEnglish ? ["Legal frameworks and policies", "Consent and community validation", "Institutional decision-making", "Research and documentation", "Transport and logistics", "Cultural and spiritual responsibilities"] : ["Marcos jurídicos y políticas", "Consentimiento y validación comunitaria", "Decisiones institucionales", "Investigación y documentación", "Traslado y logística", "Responsabilidades culturales y espirituales"];
-const routes = isEnglish ? ["Museum → Rapa Nui community", "Cultural institution → MAPSE → community", "Collector → Rapa Nui family", "University → Rapa Nui organisation"] : ["Museo → comunidad rapa nui", "Institución cultural → MAPSE → comunidad", "Coleccionista → familia rapa nui", "Universidad → organización rapa nui"];
-const listItems = isEnglish ? ["A community or organisational statement describing who is represented and the scope of the mandate.", "A decision or record from the relevant authority, where available.", "A note describing how additional families, authorities or knowledge holders will be consulted."] : ["Una declaración comunitaria u organizacional que indique a quién se representa y cuál es el alcance del mandato.", "Una resolución o antecedente de la autoridad correspondiente, si existe.", "Una nota sobre cómo se consultará a otras familias, autoridades o personas portadoras de conocimiento."];
 ---
+
 <Layout locale={locale} page="resources" resource={resource} title={`${label.title} — MoSA`} description={label.description}>
-  <div class="container resource-breadcrumb"><a href={pagePath("resources", locale)}>{strings.resources}</a><span aria-hidden="true">/</span><span>{label.title}</span></div>
-  <PageIntro title={label.title} />
-  <article class="container section resource-detail prose-section">
-    <p class="resource-lede">{label.description}</p>
-    {resource === "guide" && <>
-      <p>{isEnglish ? "This guide emerged in Rapa Nui from processes to bring back cultural entities and ivi tupuna separated from their territory. It shares questions and tools that may be useful elsewhere, without proposing a universal method or treating Rapa Nui as interchangeable with other peoples." : "Esta guía nace en Rapa Nui, a partir de procesos para traer de vuelta entidades culturales e ivi tupuna separados de su territorio. Comparte preguntas y herramientas que pueden servir en otros lugares, sin proponer un método universal ni tratar a Rapa Nui como intercambiable con otros pueblos."}</p>
-      <p>{isEnglish ? "MoSA uses ‘stolen’ as a political position on colonial histories, not as an identical legal conclusion for every case. A receipt, donation or permit does not by itself settle consent or make extraction an exchange between equals." : "MoSA usa ‘robado’ como una posición política frente a las historias coloniales, no como una conclusión jurídica idéntica para todos los casos. Un recibo, una donación o un permiso no resuelven por sí solos la cuestión del consentimiento ni convierten la extracción en un intercambio entre iguales."}</p>
-      <div class="guide-layout"><nav class="guide-section-nav" aria-label={isEnglish ? "Guide sections" : "Secciones de la guía"}>
-        <span class="guide-rail-title">{label.title}</span>{guideSections[locale].map((section) => <a href={`#${section.id}`}>{section.label}</a>)}
-      </nav>
-      <div class="guide-sections">{guideSections[locale].map((section) => <section id={section.id} class="guide-section" aria-labelledby={`${section.id}-title`}>
-        <p class="eyebrow">{section.label}</p><h2 id={`${section.id}-title`}>{section.heading}</h2><p>{section.intro}</p><ul>{section.points.map((point) => <li>{point}</li>)}</ul>
-      </section>)}</div></div>
-      <aside class="resource-note"><h2>{isEnglish ? "Cultural entities and ancestors are not the same" : "Las entidades culturales y los ancestros no son lo mismo"}</h2>
-        <p>{isEnglish ? "A cultural entity may be ceremonial, everyday, archival or another form. In Rapa Nui, ta‘oa can name relationships and meanings that should not be reduced to a catalogue category. An ancestor is not a collection object or cultural property. Speaking of ivi tupuna restores a relationship obscured when a person is reduced to ‘remains’ or an inventory number." : "Una entidad cultural puede ser ceremonial, cotidiana, archivística u otra. En Rapa Nui, ta‘oa puede nombrar relaciones y significados que no deben reducirse a una categoría de catálogo. Un ancestro no es un objeto de colección ni un bien cultural. Hablar de ivi tupuna restituye una relación que se borra cuando una persona queda reducida a ‘restos’ o a un número de inventario."}</p>
-      </aside>
-    </>}
-    {resource === "letter" && <>
-      <p>{strings.letterIntro}</p>
-      <section class="letter-template" aria-label={isEnglish ? "Adaptable letter template" : "Modelo de carta adaptable"}>
-        <p><strong>[{isEnglish ? "Community or cultural organisation" : "Nombre de la comunidad u organización cultural"}]</strong><br />[{isEnglish ? "Postal address" : "Dirección postal"}]<br />[{isEnglish ? "City, country and date" : "Ciudad, país y fecha"}]</p>
-        <p><strong>[{isEnglish ? "Institution or custodian and address" : "Institución o custodio y dirección"}]</strong></p>
-        <p><strong>{isEnglish ? "Subject:" : "Asunto:"}</strong> [{isEnglish ? "request for restitution or return of…" : "solicitud de restitución o retorno de…"}]</p>
-        <p>{isEnglish ? "Dear [name or institutional team]," : "Estimadas y estimados [nombre o equipo de la institución]:"}</p>
-        <section><h2>{strings.mandate}</h2><h3>{strings.withMandate}</h3><p>{isEnglish ? "We write as [community, family or organisation], represented by [people and roles], under a mandate agreed through [process or decision]. This request concerns [person or entity], connected with [territory or community]." : "Nos dirigimos a ustedes como [comunidad, familia u organización], representada por [personas y cargos], de acuerdo con un mandato acordado mediante [proceso o resolución]. Esta solicitud se refiere a [persona o entidad], vinculada con [territorio o comunidad]."}</p><h3>{strings.withoutMandate}</h3><p>{isEnglish ? "We write as [person or group] to begin a conversation about [person or entity]. We are still identifying the relevant authorities and relationships. Please share the information needed to support that process and avoid treating this initial contact as a final collective mandate." : "Nos dirigimos a ustedes como [persona o grupo] para iniciar una conversación sobre [persona o entidad]. Aún estamos identificando las autoridades y relaciones pertinentes. Les pedimos compartir la información necesaria para acompañar ese proceso y no interpretar este primer contacto como un mandato colectivo definitivo."}</p></section>
-        <section><h2>{strings.relationship}</h2><p>[{isEnglish ? "Describe the relationship, meaning, names and knowledge that the community has decided may be shared. Do not include restricted or sacred knowledge without authorisation." : "Describe la relación, el significado, los nombres y los conocimientos que la comunidad haya decidido compartir. No incluyas conocimientos restringidos o sagrados sin autorización."}]</p></section>
-        <section><h2>{strings.separation}</h2><p>[{isEnglish ? "Describe what is known about separation, including sources, dates and uncertainties. If the history is not yet clear, say so." : "Describe lo que se conoce sobre la separación, incluyendo fuentes, fechas e incertidumbres. Si la historia aún no está clara, indícalo."}]</p></section>
-        <section><h2>{strings.request}</h2><p>{isEnglish ? "We request [specific action: information, access, suspension of an activity, transfer of title or restitution]. We would like [desired outcome or conditions] to be considered by [responsible decision-making body]." : "Solicitamos [acción concreta: información, acceso, suspensión de una actividad, transferencia de titularidad o restitución]. Pedimos que [resultado o condiciones deseadas] sean consideradas por [órgano responsable de decidir]."}</p></section>
-        <section><h2>{strings.interim}</h2><p>[{isEnglish ? "For example: pause display, sampling, publication or other use while this request is considered, where appropriate." : "Por ejemplo: pausar la exhibición, el muestreo, la publicación u otro uso mientras se evalúa esta solicitud, si corresponde."}]</p></section>
-        <section><h2>{strings.records}</h2><p>{isEnglish ? "Please provide the complete associated record, including acquisition documents, earlier inventories, correspondence, photographs, research, conservation records, samples and derived data where relevant." : "Solicitamos los antecedentes asociados disponibles, incluidos documentos de adquisición, inventarios anteriores, correspondencia, fotografías, investigaciones, registros de conservación, muestras y datos derivados, cuando corresponda."}</p></section>
-        <section><h2>{strings.next}</h2><p>{isEnglish ? "Please confirm receipt, name the people and body responsible for the decision, explain the applicable process and provide a timetable for the next response by [date]." : "Agradecemos confirmar la recepción, indicar quiénes y qué órgano tomarán la decisión, explicar el procedimiento aplicable y proponer un plazo para la próxima respuesta antes de [fecha]."}</p></section>
-        <section><h2>{strings.attachments}</h2><ul>{listItems.map((item) => <li>{item}</li>)}</ul></section>
-        <p>{isEnglish ? "We welcome respectful dialogue and ask that it lead to clear responsibilities, decisions and steps." : "Estamos disponibles para un diálogo respetuoso y pedimos que se traduzca en responsabilidades, decisiones y pasos claros."}</p>
-        <p>{isEnglish ? "Sincerely," : "Atentamente,"}<br /><strong>[{strings.sign}]</strong></p>
-      </section>
-      <button class="button print-button" type="button" onclick="window.print()">{isEnglish ? "Print or save this template" : "Imprimir o guardar este modelo"}</button>
-    </>}
-    {resource === "directory" && <>
-      <p>{isEnglish ? "This directory is a starting point for learning and making connections. Inclusion does not imply endorsement. Check each organisation’s current remit and contact details before relying on them." : "Este directorio es un punto de partida para conocer iniciativas y establecer vínculos. La inclusión no implica respaldo. Revisa el trabajo y los datos de contacto vigentes de cada organización antes de usarlos."}</p>
-      <section class="organisation-table-wrap" tabindex="0" aria-label={isEnglish ? "Organisation directory" : "Directorio de organizaciones"}>
-        <table class="organisation-table"><thead><tr><th scope="col">{isEnglish ? "Name" : "Nombre"}</th><th scope="col">{isEnglish ? "Description" : "Descripción"}</th><th scope="col">{isEnglish ? "Website" : "Sitio web"}</th></tr></thead>
-          <tbody>{organisations.map((organisation) => <tr><th scope="row" data-label={isEnglish ? "Name" : "Nombre"}>{organisation.name}</th><td data-label={isEnglish ? "Description" : "Descripción"}>{organisation.description[locale]}</td><td data-label={isEnglish ? "Website" : "Sitio web"}><a href={organisation.url}>{isEnglish ? "Visit website" : "Visitar sitio"}<span class="visually-hidden"> — {organisation.name}</span> <span aria-hidden="true">↗</span></a></td></tr>)}</tbody>
-        </table>
-      </section>
-    </>}
-    {resource === "actors" && <>
-      <p>{strings.actorLead}</p><p>{strings.contextIntro}</p>
-      <figure class="actor-network" aria-labelledby="actor-map-title" aria-describedby="actor-map-summary">
-        <figcaption id="actor-map-title">{isEnglish ? "A network of relationships in restitution" : "Red de relaciones en un proceso de restitución"}</figcaption>
-        <p id="actor-map-summary" class="actor-map-summary">{isEnglish ? "Participants may connect directly with the process, one another and the entity or ancestor at its centre." : "Las personas y entidades participantes pueden vincularse directamente con el proceso, entre sí y con la entidad o el ancestro que está en el centro."}</p>
-        <div class="actor-network-core">{isEnglish ? "Entity or ancestor to be returned" : "Entidad o ancestro a restituir"}</div>
-        <div class="actor-network-groups">{actorGroups.map((group) => <section class="actor-network-group"><h2>{group.title}</h2><p>{group.description}</p></section>)}</div>
-        <section class="actor-contexts"><h2>{strings.contexts}</h2><ul>{contexts.map((item) => <li>{item}</li>)}</ul></section>
-        <section class="actor-routes"><h2>{strings.routes}</h2><ol>{routes.map((route) => <li>{route}</li>)}</ol></section>
-      </figure>
-      <p>{isEnglish ? "What returns may be ancestors, cultural or ceremonial objects, documents and archives, elements connected to territory, or something else defined by the people concerned. The process may also involve states and diplomatic relations, competent institutions, regulation, specialised expertise and community support." : "Lo que retorna puede ser un ancestro, un objeto cultural o ceremonial, documentos y archivos, elementos vinculados al territorio u otra cosa definida por quienes están involucrados. El proceso también puede requerir Estados y relaciones diplomáticas, instituciones competentes, regulación, conocimientos especializados y acompañamiento comunitario."}</p>
-      <aside class="resource-note"><h2>{isEnglish ? "Questions to keep open" : "Preguntas que conviene mantener abiertas"}</h2><ul><li>{isEnglish ? "Can a holder also mediate its own restitution process and set the conditions for its cooperation?" : "¿Puede un tenedor mediar su propio proceso de restitución y definir las condiciones de su cooperación?"}</li><li>{isEnglish ? "Who takes responsibility for care after a return?" : "¿Quién asume la responsabilidad del cuidado después del retorno?"}</li><li>{isEnglish ? "Does a return restore a relationship, or move unresolved questions of authority and care elsewhere?" : "¿El retorno recompone una relación o traslada a otro lugar preguntas pendientes sobre autoridad y cuidado?"}</li></ul></aside>
-    </>}
-    <p class="resource-back"><a href={pagePath("resources", locale)}>← {isEnglish ? "Back to resources" : "Volver a recursos"}</a></p>
-  </article>
+  <nav class="container resource-breadcrumb" aria-label={isEnglish ? "Breadcrumb" : "Migas de pan"}>
+    <a href={pagePath("resources", locale)}>{isEnglish ? "Resources" : "Recursos"}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{label.title}</span>
+  </nav>
+  {resource === "guide" && <RestitutionGuide locale={locale} />}
+  {resource === "letter" && <div class="container"><LetterGuide locale={locale} /></div>}
+  {resource === "directory" && <DirectoryGuide locale={locale} />}
+  {resource === "actors" && <div class="container"><ActorMapGuide locale={locale} /></div>}
+  <div class="container resource-detail-back">
+    <a href={pagePath("resources", locale)}>← {isEnglish ? "Back to resources" : "Volver a recursos"}</a>
+  </div>
 </Layout>
+
+<style>
+  .resource-detail-back {
+    padding-block: 3rem 6rem;
+  }
+
+  .resource-detail-back a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  @media print {
+    .resource-breadcrumb,
+    .resource-detail-back {
+      display: none;
+    }
+  }
+</style>

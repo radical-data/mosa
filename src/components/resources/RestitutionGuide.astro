@@ -1,0 +1,147 @@
+---
+import { restitutionGuide } from "../../data/restitution-guide";
+import type { Locale } from "../../i18n/routes";
+import "../../styles/restitution-guide.css";
+
+interface Props { locale: Locale; }
+
+const { locale } = Astro.props;
+const copy = restitutionGuide[locale];
+const isEnglish = locale === "en";
+const movementSections = copy.sections.filter((section) => copy.movements.some((movement) => movement.id === section.id));
+const closingSections = copy.sections.filter((section) => !copy.movements.some((movement) => movement.id === section.id));
+---
+
+<article class="restitution-guide">
+  <header class="guide-hero container">
+    <p class="guide-kicker">{isEnglish ? "A possible route" : "Una ruta posible"}</p>
+    <h1>{copy.title}</h1>
+    <div class="guide-hero-copy">
+      <h2>{copy.introTitle}</h2>
+      {copy.intro.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <img src="/images/wooden-figure.webp" alt="" aria-hidden="true" width="246" height="971" />
+  </header>
+
+  <section class="guide-opening container" aria-labelledby="guide-opening-title">
+    <h2 id="guide-opening-title">{copy.startingPoints.title}</h2>
+    <ol>
+      {copy.startingPoints.items.map((item, index) => <li><span aria-hidden="true">0{index + 1}</span><p>{item}</p></li>)}
+    </ol>
+    <p class="guide-opening-close">{copy.startingPoints.closing}</p>
+  </section>
+
+  <section class="guide-contrast container" aria-labelledby="guide-contrast-title">
+    <div class="guide-contrast-heading">
+      <p class="guide-kicker">{isEnglish ? "The route changes" : "La ruta cambia"}</p>
+      <h2 id="guide-contrast-title">{copy.heritageContrast.title}</h2>
+      <p>{copy.heritageContrast.intro}</p>
+    </div>
+    <article class="guide-contrast-card is-coral">
+      <h3>{copy.heritageContrast.heritage.title}</h3>
+      {copy.heritageContrast.heritage.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </article>
+    <article class="guide-contrast-card is-dark">
+      <h3>{copy.heritageContrast.ancestors.title}</h3>
+      {copy.heritageContrast.ancestors.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      <ul>{copy.heritageContrast.ancestors.questions.map((question) => <li>{question}</li>)}</ul>
+      <p>{copy.heritageContrast.ancestors.closing}</p>
+    </article>
+  </section>
+
+  <section class="guide-movements" aria-labelledby="guide-movements-title" data-movement-guide>
+    <div class="container">
+      <div class="guide-movements-heading">
+        <p class="guide-kicker">{isEnglish ? "Use the route without losing the relationship" : "Usar la ruta sin perder la relación"}</p>
+        <h2 id="guide-movements-title">{isEnglish ? "Four movements" : "Cuatro movimientos"}</h2>
+      </div>
+      <div class="guide-movement-shell">
+        <div class="guide-movement-rail" role="tablist" aria-label={isEnglish ? "Guide movements" : "Movimientos de la guía"}>
+          {copy.movements.map((movement, index) => <button type="button" role="tab" id={`tab-${movement.id}`} aria-controls={`panel-${movement.id}`} aria-selected={index === 0 ? "true" : "false"} tabindex={index === 0 ? "0" : "-1"} data-movement-tab={movement.id}>
+            <span>0{index + 1}</span>{movement.title}
+          </button>)}
+        </div>
+        <div class="guide-movement-panels">
+          {movementSections.map((section, index) => {
+            const movement = copy.movements.find((item) => item.id === section.id);
+            return <section role="tabpanel" id={`panel-${section.id}`} aria-labelledby={`tab-${section.id}`} hidden={index !== 0} data-movement-panel={section.id}>
+              <p class="guide-panel-number">0{index + 1}</p>
+              <h3>{section.title}</h3>
+              {movement && <p class="guide-panel-question">{movement.question}</p>}
+              {section.blocks.slice(0, 4).map((block) => {
+                if (block.type === "paragraph") return <p>{block.text}</p>;
+                if (block.type === "heading") return <h4>{block.text}</h4>;
+                if (block.type === "list") return <ul>{block.items.slice(0, 5).map((item) => <li>{item}</li>)}</ul>;
+                if (block.type === "quote") return <blockquote>{block.text}</blockquote>;
+                if (block.type === "sequence") return <p class="guide-sequence">{block.items.join(" → ")}</p>;
+                return <ul class="guide-checklist">{block.items.slice(0, 5).map((item) => <li>{item}</li>)}</ul>;
+              })}
+              <a href={`#${section.id}`}>{isEnglish ? "Read the full movement" : "Leer el movimiento completo"} <span aria-hidden="true">↓</span></a>
+            </section>;
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="guide-longread container">
+    {movementSections.map((section, index) => <section id={section.id} class="guide-chapter" aria-labelledby={`${section.id}-title`}>
+      <header><p>0{index + 1}</p><h2 id={`${section.id}-title`}>{section.title}</h2></header>
+      <div class="guide-chapter-body">
+        {section.blocks.map((block) => {
+          if (block.type === "paragraph") return <p>{block.text}</p>;
+          if (block.type === "heading") return block.level === 2 ? <h3>{block.text}</h3> : <h4>{block.text}</h4>;
+          if (block.type === "list") return <ul>{block.items.map((item) => <li>{item}</li>)}</ul>;
+          if (block.type === "quote") return <blockquote>{block.text}</blockquote>;
+          if (block.type === "sequence") return <p class="guide-sequence">{block.items.join(" → ")}</p>;
+          return <ul class="guide-checklist">{block.items.map((item) => <li>{item}</li>)}</ul>;
+        })}
+      </div>
+    </section>)}
+  </div>
+
+  <div class="guide-closing">
+    {closingSections.map((section, index) => <section id={section.id} class:list={["guide-closing-section", { "is-dark": index % 2 === 0 }]} aria-labelledby={`${section.id}-title`}>
+      <div class="container guide-closing-grid">
+        <h2 id={`${section.id}-title`}>{section.title}</h2>
+        <div>
+          {section.blocks.map((block) => {
+            if (block.type === "paragraph") return <p>{block.text}</p>;
+            if (block.type === "heading") return <h3>{block.text}</h3>;
+            if (block.type === "list") return <ul>{block.items.map((item) => <li>{item}</li>)}</ul>;
+            if (block.type === "quote") return <blockquote>{block.text}</blockquote>;
+            if (block.type === "sequence") return <p class="guide-sequence">{block.items.join(" → ")}</p>;
+            return <ul class="guide-checklist">{block.items.map((item) => <li>{item}</li>)}</ul>;
+          })}
+        </div>
+      </div>
+    </section>)}
+  </div>
+</article>
+
+<script>
+  for (const guide of document.querySelectorAll<HTMLElement>("[data-movement-guide]")) {
+    const tabs = [...guide.querySelectorAll<HTMLButtonElement>("[data-movement-tab]")];
+    const panels = [...guide.querySelectorAll<HTMLElement>("[data-movement-panel]")];
+    const activate = (tab: HTMLButtonElement) => {
+      const id = tab.dataset.movementTab;
+      for (const candidate of tabs) {
+        const selected = candidate === tab;
+        candidate.setAttribute("aria-selected", String(selected));
+        candidate.tabIndex = selected ? 0 : -1;
+      }
+      for (const panel of panels) panel.hidden = panel.dataset.movementPanel !== id;
+    };
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activate(tab));
+      tab.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        event.preventDefault();
+        const offset = event.key === "ArrowRight" ? 1 : -1;
+        const next = tabs[(index + offset + tabs.length) % tabs.length];
+        activate(next);
+        next.focus();
+      });
+    });
+  }
+</script>
