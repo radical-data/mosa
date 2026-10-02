@@ -753,80 +753,6 @@ strong {
 .filter-controls input {
   width: 195px;
 }
-.collection-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 3.5rem 1rem;
-  margin-top: 2rem;
-}
-.collection-card:nth-child(3) {
-  grid-column: 4;
-}
-.collection-card:nth-child(5) {
-  grid-column: 3;
-}
-.collection-image {
-  position: relative;
-  background: #f3f3f3;
-}
-.collection-image img {
-  aspect-ratio: 1;
-  object-fit: cover;
-}
-.tag {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  padding: 0.15rem 0.4rem;
-  background: var(--coral);
-  color: #000;
-  font-size: 0.65rem;
-  font-weight: 400;
-}
-.collection-caption {
-  margin-top: 1.25rem;
-}
-.collection-caption h2 {
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
-}
-.collection-caption p {
-  font-size: 0.75rem;
-  margin: 0.2rem 0;
-}
-.collection-caption span {
-  font-weight: 500;
-}
-.institution {
-  color: var(--muted);
-}
-.collection-grid.is-list {
-  display: block;
-}
-.is-list .collection-card {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 2rem;
-  align-items: center;
-  padding-block: 1.5rem;
-  border-top: 1px solid var(--rule);
-}
-.is-list .collection-caption {
-  margin: 0;
-}
-.is-list .collection-caption h2 {
-  font-size: 1.5rem;
-}
-.is-list .collection-caption p {
-  font-size: 0.9rem;
-}
-.is-list .tag {
-  left: 0.4rem;
-  bottom: 0.4rem;
-  font-size: 0.55rem;
-}
 .empty-state {
   padding-block: 5rem;
   border-block: 1px solid var(--rule);
@@ -1087,14 +1013,6 @@ strong {
   margin-left: auto;
 }
 
-@media (min-width: 801px) {
-  .collection-grid:has(.collection-card[hidden]) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-  .collection-grid:has(.collection-card[hidden]) .collection-card {
-    grid-column: auto;
-  }
-}
 @media (max-width: 1100px) {
   .source-filters {
     grid-template-columns: 1fr;
@@ -1260,13 +1178,6 @@ strong {
   .has-art .intro-copy {
     max-width: 78%;
   }
-  .collection-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.5rem 1rem;
-  }
-  .collection-card:nth-child(n) {
-    grid-column: auto;
-  }
   .filter-controls {
     width: 100%;
   }
@@ -1421,32 +1332,6 @@ strong {
   }
   .info-card {
     min-height: 240px;
-  }
-  .collection-caption h2 {
-    font-size: 0.95rem;
-  }
-  .collection-caption p {
-    font-size: 0.7rem;
-  }
-  .tag {
-    left: 0.5rem;
-    bottom: 0.5rem;
-    font-size: 0.6rem;
-  }
-  .is-list .collection-card {
-    grid-template-columns: 90px 1fr;
-    gap: 1rem;
-  }
-  .is-list .collection-caption h2 {
-    font-size: 1.05rem;
-  }
-  .is-list .collection-caption p {
-    font-size: 0.7rem;
-  }
-  .is-list .tag {
-    position: static;
-    display: block;
-    font-size: 0.55rem;
   }
   .archive-card {
     grid-template-columns: 1fr;
@@ -1748,24 +1633,4 @@ h3 {
   .has-art h1 {
     max-width: 100%;
   }
-}
-
-/* Public records are readable without an image or a classification. */
-.public-collection .collection-card:nth-child(n) {
-  margin-top: 0;
-}
-.public-collection .collection-card {
-  border-top: 1px solid currentColor;
-  padding-top: 1rem;
-}
-.public-collection .collection-caption {
-  padding: 0;
-}
-.public-collection .collection-caption p {
-  overflow-wrap: anywhere;
-}
-.public-collection .collection-caption a {
-  display: inline-block;
-  margin-right: 0.5rem;
-  text-decoration: underline;
 }

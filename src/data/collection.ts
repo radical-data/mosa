@@ -1,5 +1,6 @@
 import type { ImageMetadata, MarkdownInstance } from "astro";
 import { stringify as stringifyYaml } from "yaml";
+import presentationConfig from "../content/collection-presentation.json";
 import {
   type ArticleMetadata,
   type CollectionImage,
@@ -11,7 +12,9 @@ import {
   validateArticleSubjects,
   validateCollection,
 } from "./collection-model";
+import { resolveCollectionPresentation } from "./collection-presentation";
 import { getObjectAccounts, getSourceRelationships, type SourcedClaim } from "./collection-record";
+import { buildObjectSearchExact } from "./collection-search";
 
 const objectModules = import.meta.glob<unknown>("../../collection/objects/*.json", {
   eager: true,
@@ -105,6 +108,27 @@ export const sourceRecords: SourceEntry[] = checked.sources.map((source) => ({
   ),
 }));
 
+const depictingGalleries = new Map<string, SourcedImage[]>(
+  checked.objects.map(({ id }) => [
+    id,
+    sourceRecords
+      .filter((source) =>
+        source.relationships?.some(
+          (relationship) =>
+            relationship.type === "depicts" &&
+            relationship.target.type === "object" &&
+            relationship.target.id === id,
+        ),
+      )
+      .flatMap((source) => source.imagesWithAssets),
+  ]),
+);
+const collectionPresentation = resolveCollectionPresentation(
+  presentationConfig,
+  checked.objects.map(({ id }) => id),
+  depictingGalleries,
+);
+
 export function getSourceRecord(sourceId: string) {
   const relationships = getSourceRelationships(
     { objects: checked.objects, sources: checked.sources },
@@ -139,31 +163,17 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
       entry.subjects?.some((subject) => subject.type === "object" && subject.id === objectId),
     )
     .sort((a, b) => a.id.localeCompare(b.id));
-  const recordImages = objectSources
-    .filter((source) =>
-      source.relationships?.some(
-        (relationship) =>
-          relationship.type === "depicts" &&
-          relationship.target.type === "object" &&
-          relationship.target.id === objectId,
-      ),
-    )
-    .flatMap((source) =>
-      source.images.map((image) => ({ image, source, asset: imageAsset(image) })),
-    );
+  const recordImages = collectionPresentation.imagesByObjectId.get(objectId) ?? [];
   return {
     ...accounts,
     images: recordImages,
     articles: recordArticles,
-    searchExact: [
-      object.id,
-      object.name,
-      ...objectSources.map((source) => source.reference),
-      ...claims.map(
-        ({ claim, source }) =>
-          `${claim.predicate} ${claim.value} ${source.title} ${source.reference}`,
-      ),
-    ].join(" "),
+    searchExact: buildObjectSearchExact({
+      object,
+      sources: objectSources,
+      claims,
+      images: recordImages,
+    }),
     searchFoldable: object.name,
   };
 }
@@ -173,3 +183,11 @@ export const collectionRecords = checked.objects.map((object) => {
   if (!record) throw Error(`Missing collection object ${object.id}`);
   return record;
 });
+
+export const featuredCollectionRecords = collectionPresentation.featuredObjectIds.map(
+  (objectId) => {
+    const record = collectionRecords.find(({ object }) => object.id === objectId);
+    if (!record) throw Error(`Missing featured collection object ${objectId}`);
+    return record;
+  },
+);

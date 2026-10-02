@@ -1,5 +1,5 @@
+import { hasBrowseFilter, matchesBrowseState, readBrowseState } from "./collection-browse";
 import { referenceCount } from "./messages";
-import { matchesSearch } from "./search";
 import { updateLanguageLinks } from "./switcher";
 
 const controls = document.querySelector<HTMLElement>(".collection-controls");
@@ -7,62 +7,62 @@ const search = document.querySelector<HTMLInputElement>("#collection-search");
 const results = document.querySelector<HTMLElement>("#collection-results");
 const count = document.querySelector<HTMLElement>("#collection-count");
 const empty = document.querySelector<HTMLElement>(".empty-state");
-const cards = Array.from(document.querySelectorAll<HTMLElement>(".collection-card"));
+const featured = document.querySelector<HTMLElement>("[data-featured-objects]");
 const viewButtons = Array.from(
   document.querySelectorAll<HTMLButtonElement>("[data-collection-view]"),
 );
 const locale =
   document.querySelector<HTMLElement>("[data-locale]")?.dataset.locale === "en" ? "en" : "es";
-if (controls && search && results && count && empty && cards.length) {
+if (controls && search && results && count && empty) {
+  // Featured cards are outside the result set and its count.
+  const cards = Array.from(results.querySelectorAll<HTMLElement>("[data-catalogue-card]"));
+  let state = readBrowseState(new URLSearchParams(location.search));
   controls.hidden = false;
-  const setView = (view: "grid" | "table") => {
-    results.classList.toggle("is-list", view === "table");
-    for (const button of viewButtons) {
-      button.setAttribute("aria-pressed", String(button.dataset.collectionView === view));
-    }
-    const url = new URL(location.href);
-    if (view === "table") url.searchParams.set("view", view);
-    else url.searchParams.delete("view");
-    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
-    updateLanguageLinks();
-  };
-  const filter = () => {
+  const render = () => {
     let visible = 0;
     for (const card of cards) {
-      const matches = matchesSearch(
-        search.value,
-        card.dataset.searchExact ?? "",
-        card.dataset.searchFoldable ?? "",
-      );
+      const matches = matchesBrowseState(state, {
+        searchExact: card.dataset.searchExact ?? "",
+        searchFoldable: card.dataset.searchFoldable ?? "",
+      });
       card.hidden = !matches;
       if (matches) visible++;
     }
+    if (featured) featured.hidden = hasBrowseFilter(state);
     count.textContent = referenceCount(locale, { count: visible });
     empty.hidden = visible > 0;
     results.hidden = visible === 0;
+    results.classList.toggle("is-list", state.view === "list");
+    for (const button of viewButtons) {
+      button.setAttribute("aria-pressed", String(button.dataset.collectionView === state.view));
+    }
     const url = new URL(location.href);
-    for (const key of ["concept", "type"]) url.searchParams.delete(key);
-    if (search.value) url.searchParams.set("q", search.value);
-    else url.searchParams.delete("q");
+    for (const key of ["q", "view", "images", "concept", "type"]) url.searchParams.delete(key);
+    if (state.q) url.searchParams.set("q", state.q);
+    if (state.view === "list") url.searchParams.set("view", "list");
     history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
     updateLanguageLinks();
   };
   const restore = () => {
-    const params = new URLSearchParams(location.search);
-    search.value = params.get("q") ?? "";
-    setView(params.get("view") === "table" ? "table" : "grid");
-    filter();
+    state = readBrowseState(new URLSearchParams(location.search));
+    search.value = state.q;
+    render();
   };
-  search.addEventListener("input", filter);
+  search.addEventListener("input", () => {
+    state.q = search.value;
+    render();
+  });
   for (const button of viewButtons) {
     button.addEventListener("click", () => {
-      setView(button.dataset.collectionView === "table" ? "table" : "grid");
+      state.view = button.dataset.collectionView === "list" ? "list" : "grid";
+      render();
     });
   }
   window.addEventListener("popstate", restore);
   document.querySelector("#reset-filters")?.addEventListener("click", () => {
     search.value = "";
-    filter();
+    state.q = "";
+    render();
     search.focus();
   });
   restore();
