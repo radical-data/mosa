@@ -929,6 +929,265 @@ strong {
 .institution-list p {
   font-size: 0.9rem;
 }
+.visit-distribution {
+  border-top: 1px solid var(--rule);
+}
+.visit-map-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.visit-map-heading > div {
+  max-width: 52rem;
+}
+.visit-map-heading .eyebrow {
+  margin-bottom: 1.25rem;
+}
+.visit-statement {
+  font-size: clamp(1.6rem, 3.1vw, 3.3rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  max-width: 18ch;
+  margin-bottom: 1.5rem;
+}
+.visit-count {
+  display: grid;
+  gap: 0.25rem;
+  flex: 0 0 auto;
+  text-align: right;
+}
+.visit-count strong {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+.visit-count span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.visit-search {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1fr);
+  gap: 0.5rem;
+  max-width: 34rem;
+  margin-bottom: 1rem;
+}
+.visit-search label {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.visit-search input {
+  border: 1px solid #777;
+  border-radius: 0;
+  min-height: 2.8rem;
+  padding: 0.6rem 0.75rem;
+}
+.visit-search p {
+  min-height: 1.2em;
+  margin: 0;
+}
+.visit-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(17rem, 0.7fr);
+  border: 1px solid #c7c4bc;
+  background: #f9f8f4;
+}
+.visit-map-column {
+  min-width: 0;
+}
+.visit-map-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  border-bottom: 1px solid #d7d4cc;
+}
+.visit-map-toolbar .button {
+  font-size: 0.8rem;
+}
+.visit-map {
+  position: relative;
+  height: clamp(24rem, 56vw, 42rem);
+  min-height: 340px;
+  overflow: hidden;
+  background: #e9e7e1;
+}
+.visit-map .maplibregl-map {
+  font-family: "General Sans", "MoSA Eng Fallback", Arial, sans-serif;
+}
+.visit-map .maplibregl-ctrl-group {
+  border-radius: 0;
+  box-shadow: none;
+}
+.visit-map .maplibregl-ctrl-attrib {
+  font-size: 0.65rem;
+}
+.visit-map-fallback {
+  position: absolute;
+  z-index: 1;
+  inset: 50% auto auto 50%;
+  width: min(28rem, 82%);
+  transform: translate(-50%, -50%);
+  padding: 1rem 1.25rem;
+  background: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+}
+.visit-map.is-ready .visit-map-fallback {
+  display: none;
+}
+.visit-map-marker {
+  display: grid;
+  place-items: center;
+  min-width: 2.3rem;
+  height: 2.3rem;
+  padding-inline: 0.55rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #000;
+  box-shadow: 0 1px 6px #0005;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+.visit-map-marker.is-cluster {
+  min-width: 2.8rem;
+  height: 2.8rem;
+  background: #111;
+  color: #fff;
+}
+.visit-map-marker:hover,
+.visit-map-marker:focus-visible {
+  z-index: 2;
+  transform: scale(1.12);
+}
+.visit-map-details {
+  padding: 1.5rem;
+  max-height: 42rem;
+  overflow: auto;
+  border-left: 1px solid #d7d4cc;
+}
+.visit-map-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.visit-detail-object {
+  padding-block: 1rem;
+  border-top: 1px solid #d7d4cc;
+}
+.visit-detail-object > a {
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-underline-offset: 0.2em;
+}
+.visit-detail-object p {
+  font-size: 0.87rem;
+  margin-top: 0.5rem;
+}
+.visit-detail-object .visit-evidence a,
+.visit-evidence a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  margin-right: 0.5rem;
+}
+.visit-cluster-place {
+  padding: 0.4rem 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-underline-offset: 0.2em;
+}
+.visit-map-caption {
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+.visit-location-list,
+.visit-unresolved {
+  margin-top: 4rem;
+}
+.visit-location-list > h3,
+.visit-unresolved > h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.visit-place {
+  border-top: 1px solid var(--rule);
+}
+.visit-place details > summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: 1.15rem;
+  cursor: pointer;
+  font-weight: 500;
+  list-style-position: inside;
+}
+.visit-place details > summary span:first-child {
+  font-size: 1.15rem;
+}
+.visit-place details > summary span:last-child {
+  text-align: right;
+}
+.visit-place .visit-coordinate-source {
+  margin: -0.3rem 0 1rem 1.5rem;
+}
+.visit-coordinate-source a {
+  font-size: 0.78rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.visit-place ul,
+.visit-unresolved ul {
+  margin: 0 0 1rem;
+  padding: 0 0 0 2rem;
+}
+.visit-place li,
+.visit-unresolved li {
+  padding-block: 0.8rem;
+  border-top: 1px solid #e5e3dd;
+}
+.visit-place li > a,
+.visit-unresolved li > a {
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-underline-offset: 0.2em;
+}
+.visit-location-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.visit-place li p,
+.visit-unresolved li p {
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+.visit-unresolved {
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+.visit-unresolved ul {
+  list-style: none;
+  padding: 0;
+}
+.visit-unresolved-details > summary {
+  width: fit-content;
+  padding-block: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-underline-offset: 0.2em;
+}
+.visit-no-matches {
+  margin-top: 1rem;
+}
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
@@ -1422,6 +1681,25 @@ strong {
   .connect-strip {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .visit-map-heading {
+    align-items: flex-start;
+  }
+  .visit-count {
+    padding-top: 2rem;
+  }
+  .visit-map-layout {
+    grid-template-columns: 1fr;
+  }
+  .visit-map {
+    height: 25rem;
+    min-height: 0;
+  }
+  .visit-map-details {
+    max-height: none;
+    min-height: 12rem;
+    border-left: 0;
+    border-top: 1px solid #d7d4cc;
   }
   .actor-map,
   .distribution {
