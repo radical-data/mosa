@@ -1,0 +1,25 @@
+{
+  "author": "Paula Rossetti, Leo Pakarati, Ana María Arredondo",
+  "articleId": "hoa-haka-nana-ia",
+  "title": "Hoa Haka Nana Ia",
+  "kind": "publication",
+  "reference": "MoSA article: Hoa Haka Nana Ia",
+  "language": "es-CL",
+  "claims": [
+    {
+      "id": "room",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "located_at",
+      "value": "Museo Británico, SALA 24",
+      "locator": "El traslado a Inglaterra"
+    },
+    {
+      "id": "restitution-comment",
+      "objectId": "hoa-hakananai-a",
+      "predicate": "described_as",
+      "value": "Con el tiempo, se ha convertido en un emblema del proceso de restitución que el pueblo rapa nui exige.",
+      "locator": "Un emblema de la restitución"
+    }
+  ],
+  "images": []
+}

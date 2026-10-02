@@ -10,8 +10,10 @@ import {
   parseObject,
   parseSource,
   type Source,
+  validateArticlePublicationSource,
   validateArticleSubjects,
   validateCollection,
+  validateUniqueSourceArticleLinks,
 } from "./collection-model";
 import {
   getLocationProjection,
@@ -111,8 +113,10 @@ const articles: ArticleEntry[] = Object.entries(articleModules).map(([file, modu
     { objects: checked.objects, sources: checked.sources },
     basename(file),
   );
+  validateArticlePublicationSource(metadata, checked.sources, basename(file));
   return { ...metadata, Content: module.Content };
 });
+validateUniqueSourceArticleLinks(checked.sources, articles);
 
 export const collectionObjects = checked.objects;
 export const collectionSources = checked.sources;
@@ -130,7 +134,11 @@ function imageAsset(image: CollectionImage): ImageMetadata {
 
 export const sourceRecords: SourceEntry[] = checked.sources.map((source) => ({
   ...source,
-  imagesWithAssets: source.images.map((image) => ({ image, source, asset: imageAsset(image) })),
+  imagesWithAssets: source.images.map((image) => ({
+    image,
+    source,
+    asset: imageAsset(image),
+  })),
   searchText: [source.title, source.author ?? "", source.reference, ...(source.topics ?? [])].join(
     " ",
   ),
@@ -154,6 +162,7 @@ export function getSourceRecord(sourceId: string) {
         article.subjects?.some((subject) => subject.type === "source" && subject.id === sourceId),
       )
       .sort((a, b) => a.id.localeCompare(b.id)),
+    publicationArticle: articles.find((article) => article.id === source.articleId),
   };
 }
 

@@ -97,7 +97,14 @@ An **article** is an authored MoSA publication, not a collection record. Its
 Markdown has its own author and language. Optional `subjects` can identify
 multiple objects and sources, or be omitted for a general article. These links
 state what the publication examines; they do not make it a third research record
-type. Article prose does not become an unattributed claim. Sources have public
+type. Its companion `publication` source names the article with `articleId`.
+Every article must have exactly one such source; the source title, author and
+language must match the article, and `articleId` must resolve to an article.
+This keeps the authored text and bibliographic record distinct but explicitly
+paired. The source page links to its article, and article pages label their
+language in the visitor's interface language while marking the prose with its
+BCP 47 tag.
+Article prose does not become an unattributed claim. Sources have public
 index and detail pages within the collection. Articles have separate public
 publication pages reached through Resources and relevant records. Object pages
 retain their existing URLs and information hierarchy.

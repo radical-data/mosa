@@ -1,0 +1,18 @@
+{
+  "author": "Paula Rossetti, Leo Pakarati, Ana María Arredondo",
+  "articleId": "ivi-tupuna-san-pedro-nolasco",
+  "title": "Cráneo humano: ivi tupuna",
+  "kind": "publication",
+  "reference": "MoSA article: Cráneo humano: ivi tupuna",
+  "language": "es-CL",
+  "claims": [
+    {
+      "id": "return-comment",
+      "objectId": "san-pedro-nolasco-cranium",
+      "predicate": "described_as",
+      "value": "Hubo acercamiento y promesas de devolución que no se han concretado.",
+      "locator": "Comentario"
+    }
+  ],
+  "images": []
+}

@@ -100,6 +100,11 @@ files. For an unlinked source, use `notes` to explain its relevance and why no
 object relationship is established. This records it without inventing object
 identities or requiring a shareable copy of the original.
 
+For a source that is the bibliographic record of an authored MoSA article, add
+`articleId` with the article's filename ID. Use this field only on a
+`publication` source. The source must agree with the article's title, author and
+language, and its detail page links to the authored text.
+
 Use `objectIds` when a source documents an object before any claims are
 extracted. Do not repeat an object ID already linked by one of the source's
 claims or `depicts` relationships. A source can link one object with `objectIds`
@@ -129,7 +134,10 @@ gallery.
   "language": "en-GB",
   "claims": [],
   "relationships": [
-    { "type": "depicts", "target": { "type": "object", "id": "example-object" } }
+    {
+      "type": "depicts",
+      "target": { "type": "object", "id": "example-object" }
+    }
   ],
   "images": [
     {
@@ -249,7 +257,7 @@ Keep uncertainty, dimensions and unusual wording intact; use only `described_as`
 when no narrower interpretation is secure. Parenthetical common type names are
 not automatically individual names. Normalise layout whitespace only.
 
-For the *Arte en la cultura rapanui* table extraction, import individually
+For the _Arte en la cultura rapanui_ table extraction, import individually
 described entries and defer plural, counted, collective and ambiguously grouped
 entries. Its final museum/research section supplies research leads, not object
 claims. The [campaign](../research/campaigns/arte-en-la-cultura-rapanui.md) links
@@ -420,6 +428,14 @@ The Markdown file name without `.md` is the article ID. The website labels
 these publications “Articles” / “Artículos”. An optional `summary` introduces
 the article on object and source pages and in the article index. Write it in
 the same language as the prose.
+
+Register the article's bibliographic record in `collection/sources/` with
+`kind: publication` and `articleId` set to the article's filename ID. Every
+article must have exactly one such source, and each `articleId` must resolve to
+an existing article. The source's `title`, `author` and `language` must exactly
+match the article front matter. The source page links to its article. The
+article page displays a visitor-facing language name such as “Español (Chile)”
+while marking the prose itself as `es-CL`.
 
 Use `author: null` only while authorship is unresolved. An article can be in one
 language; its standalone page marks that language rather than pretending it is

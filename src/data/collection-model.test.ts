@@ -5,8 +5,10 @@ import {
   parseLocation,
   parseObject,
   parseSource,
+  validateArticlePublicationSource,
   validateArticleSubjects,
   validateCollection,
+  validateUniqueSourceArticleLinks,
 } from "./collection-model";
 
 const object = parseObject(
@@ -20,7 +22,14 @@ const source = parseSource(
     kind: "publication",
     reference: "Example catalogue",
     language: "en-GB",
-    claims: [{ id: "name", objectId: "object-one", predicate: "has_name", value: "Object one" }],
+    claims: [
+      {
+        id: "name",
+        objectId: "object-one",
+        predicate: "has_name",
+        value: "Object one",
+      },
+    ],
     images: [{ file: "object-one/front.jpg", alt: "Front view" }],
   },
   "source-one.json",
@@ -44,14 +53,21 @@ describe("collection model", () => {
         },
         "museum-one.json",
       ),
-    ).toMatchObject({ id: "museum-one", name: "Museum One", location: { longitude: -70.123 } });
+    ).toMatchObject({
+      id: "museum-one",
+      name: "Museum One",
+      location: { longitude: -70.123 },
+    });
     expect(
       parseLocation(
         {
           status: "uncertain",
           claimReferences: ["source-one/holder"],
           reviewedAt: "2026-09-01",
-          note: { text: "The source may describe a former display location.", language: "en-GB" },
+          note: {
+            text: "The source may describe a former display location.",
+            language: "en-GB",
+          },
         },
         "object-one.json",
       ),
@@ -120,7 +136,11 @@ describe("collection model", () => {
       "uncertain note",
       () =>
         parseLocation(
-          { status: "uncertain", claimReferences: [], reviewedAt: "2026-09-01" },
+          {
+            status: "uncertain",
+            claimReferences: [],
+            reviewedAt: "2026-09-01",
+          },
           "object-one.json",
         ),
       "uncertain location requires a note",
@@ -133,7 +153,10 @@ describe("collection model", () => {
     const { id: _id, ...record } = source;
     expect(() =>
       parseSource(
-        { ...record, claims: [{ ...record.claims[0], holderId: "museum-one" }] },
+        {
+          ...record,
+          claims: [{ ...record.claims[0], holderId: "museum-one" }],
+        },
         "source-one.json",
       ),
     ).toThrow("holderId is only allowed for held_by claims");
@@ -187,7 +210,11 @@ describe("collection model", () => {
       "object-two.json",
     );
     const location = parseLocation(
-      { status: "reported", claimReferences: ["source-one/name"], reviewedAt: "2026-09-01" },
+      {
+        status: "reported",
+        claimReferences: ["source-one/name"],
+        reviewedAt: "2026-09-01",
+      },
       "object-two.json",
     );
     expect(() =>
@@ -234,7 +261,10 @@ describe("collection model", () => {
       const { id: _id, ...record } = source;
       expect(() =>
         parseSource(
-          { ...record, claims: [{ ...record.claims[0], language: claimLanguage }] },
+          {
+            ...record,
+            claims: [{ ...record.claims[0], language: claimLanguage }],
+          },
           "source-one.json",
         ),
       ).toThrow("claims[0].language is invalid");
@@ -253,7 +283,10 @@ describe("collection model", () => {
 
   test("preserves source research notes with their own language without creating claims", () => {
     const { id: _id, ...record } = source;
-    const notes = { text: "Blank cells repeat the preceding holder.", language: "en-GB" };
+    const notes = {
+      text: "Blank cells repeat the preceding holder.",
+      language: "en-GB",
+    };
     const parsed = parseSource({ ...record, language: "es", notes }, "source-one.json");
     expect(parsed.notes).toEqual(notes);
     expect(parsed.language).toBe("es");
@@ -309,9 +342,15 @@ describe("collection model", () => {
     { file: "another-source/catalogue.pdf" },
     { file: "source-one/subdir/catalogue.pdf" },
     { file: "source-one/catalogue.exe" },
-    { archiveUrl: "https://web.archive.org/web/20240102123456js_/https://example.org/page" },
-    { archiveUrl: "http://web.archive.org/web/20240102123456/https://example.org/page" },
-    { archiveUrl: "https://web.archive.org/web/20240230123456/https://example.org/page" },
+    {
+      archiveUrl: "https://web.archive.org/web/20240102123456js_/https://example.org/page",
+    },
+    {
+      archiveUrl: "http://web.archive.org/web/20240102123456/https://example.org/page",
+    },
+    {
+      archiveUrl: "https://web.archive.org/web/20240230123456/https://example.org/page",
+    },
     { archiveUrl: "https://example.org/page" },
     { archiveUrl: "https://web.archive.org/web/20240102123456/https://" },
   ])("rejects unsafe or unsupported capture references: %j", (captureRef) => {
@@ -439,7 +478,10 @@ describe("collection model", () => {
     );
     expect(linkedSource.objectIds).toEqual(["object-one"]);
     expect(() =>
-      validateCollection({ objects: [unforegroundedObject], sources: [linkedSource] }),
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [linkedSource],
+      }),
     ).not.toThrow();
   });
 
@@ -496,13 +538,21 @@ describe("collection model", () => {
         reference: "Another catalogue",
         language: "en-GB",
         claims: [
-          { id: "name", objectId: "object-one", predicate: "has_name", value: "Other name" },
+          {
+            id: "name",
+            objectId: "object-one",
+            predicate: "has_name",
+            value: "Other name",
+          },
         ],
         images: [],
       },
       "source-two.json",
     );
-    const data = validateCollection({ objects: [object], sources: [source, otherSource] });
+    const data = validateCollection({
+      objects: [object],
+      sources: [source, otherSource],
+    });
     expect(data.claims.get("source-two/name")?.value).toBe("Other name");
   });
 
@@ -606,7 +656,13 @@ describe("collection model", () => {
       parseSource(
         {
           ...record,
-          images: [{ file: "source-two/scan.jpg", alt: "Letter scan", objectId: "object-one" }],
+          images: [
+            {
+              file: "source-two/scan.jpg",
+              alt: "Letter scan",
+              objectId: "object-one",
+            },
+          ],
         },
         "source-two.json",
       ),
@@ -645,7 +701,10 @@ describe("collection model", () => {
       "source-b.json",
     );
     expect(() =>
-      validateCollection({ objects: [unforegroundedObject], sources: [sourceA, sourceB] }),
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [sourceA, sourceB],
+      }),
     ).not.toThrow();
     const reproduces = sourceA.relationships?.[0];
     if (!reproduces) throw Error("fixture relationship is missing");
@@ -670,17 +729,26 @@ describe("collection model", () => {
     const partA = {
       ...sourceA,
       relationships: [
-        { type: "is_part_of" as const, target: { type: "source" as const, id: "source-b" } },
+        {
+          type: "is_part_of" as const,
+          target: { type: "source" as const, id: "source-b" },
+        },
       ],
     };
     const partB = {
       ...sourceB,
       relationships: [
-        { type: "is_part_of" as const, target: { type: "source" as const, id: "source-a" } },
+        {
+          type: "is_part_of" as const,
+          target: { type: "source" as const, id: "source-a" },
+        },
       ],
     };
     expect(() =>
-      validateCollection({ objects: [unforegroundedObject], sources: [partA, partB] }),
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [partA, partB],
+      }),
     ).toThrow("is_part_of relationships contain a cycle");
 
     const sourceC = parseSource(
@@ -702,8 +770,14 @@ describe("collection model", () => {
           {
             ...sourceA,
             relationships: [
-              { type: "is_part_of", target: { type: "source", id: "source-b" } },
-              { type: "is_part_of", target: { type: "source", id: "source-c" } },
+              {
+                type: "is_part_of",
+                target: { type: "source", id: "source-b" },
+              },
+              {
+                type: "is_part_of",
+                target: { type: "source", id: "source-c" },
+              },
             ],
           },
           partB,
@@ -724,12 +798,71 @@ describe("collection model", () => {
       ),
     ).toThrow("depicts must target an object");
     const article = parseArticleFrontmatter(
-      "---\nsubjects:\n  - type: source\n    id: missing\ntitle: Essay\nauthor: null\nlanguage: en\n---\n",
+      "---\nsubjects:\n  - type: source\n    id: missing\ntitle: Example catalogue\nauthor: null\nlanguage: en-GB\n---\n",
       "essay-one.md",
     );
     expect(() =>
       validateArticleSubjects(article, { objects: [object], sources: [source] }, "essay-one.md"),
     ).toThrow("refers to missing source missing");
+  });
+
+  test("requires exactly one linked publication source with matching article metadata", () => {
+    const article = parseArticleFrontmatter(
+      "---\ntitle: Example catalogue\nauthor: null\nlanguage: en-GB\n---\n",
+      "essay-one.md",
+    );
+    const { id: _sourceId, ...sourceRecord } = source;
+    const publication = parseSource({ ...sourceRecord, articleId: "essay-one" }, "source-one.json");
+    expect(() =>
+      validateArticlePublicationSource(article, [publication], "essay-one.md"),
+    ).not.toThrow();
+    expect(() =>
+      validateArticlePublicationSource(
+        { ...article, title: "Different title" },
+        [publication],
+        "essay-one.md",
+      ),
+    ).toThrow("article metadata must match publication source source-one");
+    expect(() =>
+      validateArticlePublicationSource(
+        { ...article, author: "Different author" },
+        [publication],
+        "essay-one.md",
+      ),
+    ).toThrow("article metadata must match publication source source-one");
+    expect(() =>
+      validateArticlePublicationSource(
+        { ...article, language: "es-CL" },
+        [publication],
+        "essay-one.md",
+      ),
+    ).toThrow("article metadata must match publication source source-one");
+    expect(() => validateArticlePublicationSource(article, [], "essay-one.md")).toThrow(
+      "expected exactly one publication source with articleId essay-one",
+    );
+  });
+
+  test("requires one publication source per article", () => {
+    const { id: _sourceId, ...sourceRecord } = source;
+    const publication = parseSource({ ...sourceRecord, articleId: "essay-one" }, "source-one.json");
+    const article = {
+      id: "essay-one",
+      title: "Example catalogue",
+      author: null,
+      language: "en-GB",
+    };
+    expect(() => validateUniqueSourceArticleLinks([publication], [article])).not.toThrow();
+    expect(() =>
+      validateUniqueSourceArticleLinks(
+        [publication, { ...publication, id: "source-two" }],
+        [article],
+      ),
+    ).toThrow(
+      "article essay-one is assigned to multiple publication sources: source-one, source-two",
+    );
+    expect(() => validateUniqueSourceArticleLinks([publication], [])).toThrow(
+      "source source-one refers to missing article essay-one",
+    );
   });
 
   test("rejects relationships to missing records and redundant object links", () => {
@@ -769,7 +902,10 @@ describe("collection model", () => {
       "object-one.json",
     );
     expect(() =>
-      validateCollection({ objects: [unforegroundedObject], sources: [depicted] }),
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [depicted],
+      }),
     ).toThrow("redundant objectId object-one");
   });
 
@@ -798,14 +934,24 @@ describe("collection model", () => {
     expect(() =>
       validateCollection({
         objects: [object, objectTwo],
-        sources: [{ ...scoped, images: [{ ...scoped.images[0], depicts: ["missing-object"] }] }],
+        sources: [
+          {
+            ...scoped,
+            images: [{ ...scoped.images[0], depicts: ["missing-object"] }],
+          },
+        ],
       }),
     ).toThrow("images[0].depicts refers to missing object missing-object");
 
     expect(() =>
       validateCollection({
         objects: [object, objectTwo],
-        sources: [{ ...scoped, images: [{ ...scoped.images[0], depicts: ["object-two"] }] }],
+        sources: [
+          {
+            ...scoped,
+            images: [{ ...scoped.images[0], depicts: ["object-two"] }],
+          },
+        ],
       }),
     ).toThrow("images[0].depicts object object-two is not depicted by the source");
   });

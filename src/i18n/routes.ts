@@ -39,7 +39,7 @@ export function publicRecordPath(
 // Anchors are stable identities shared by both templates. No guessed fragments.
 export const anchors: Record<PageId, readonly string[]> = {
   home: ["main", "collection-title", "resources-title", "events-title"],
-  about: ["main"],
+  about: ["main", "team"],
   collection: ["main", "more-information", "collection-results"],
   visit: ["main"],
   events: ["main"],

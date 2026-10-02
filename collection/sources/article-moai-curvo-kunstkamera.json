@@ -1,0 +1,18 @@
+{
+  "author": "Paula Rossetti",
+  "articleId": "moai-curvo-kunstkamera",
+  "title": "Moai curvo",
+  "kind": "publication",
+  "reference": "MoSA article: Moai curvo",
+  "language": "es-CL",
+  "claims": [
+    {
+      "id": "reproductions-comment",
+      "objectId": "kunstkamera-736-205",
+      "predicate": "described_as",
+      "value": "Pieza única; algunos escultores modernos la han reproducido.",
+      "locator": "Comentario"
+    }
+  ],
+  "images": []
+}

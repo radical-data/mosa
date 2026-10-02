@@ -1,0 +1,18 @@
+{
+  "author": "Paula Rossetti",
+  "articleId": "figura-tapa-mahute",
+  "title": "Figura de tapa / mahute",
+  "kind": "publication",
+  "reference": "MoSA article: Figura de tapa / mahute",
+  "language": "es-CL",
+  "claims": [
+    {
+      "id": "reproductions-comment",
+      "objectId": "peabody-86902",
+      "predicate": "described_as",
+      "value": "Hay una artista local que ha hecho reproducciones y, por lo tanto, se han dado a conocer estas figuras. Estas copias fueron compradas por el Museo local de Rapa Nui, MAPSE.",
+      "locator": "Comentario"
+    }
+  ],
+  "images": []
+}
