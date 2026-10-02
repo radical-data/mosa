@@ -164,6 +164,15 @@ whereabouts. Include archaeological and everyday material alongside carvings
 and contemporary Rapanui work. Counts, groups, fragments, replicas and
 depictions need interpretation before they become individual object records.
 
+For the holder-based Visit map, reconcile institution names against
+existing source evidence before geocoding. Research and record an optional
+mapped location directly on each holder, then assess only holderless
+`located_at` evidence and genuine exceptions. Keep unresolved cases and next
+actions in the focused campaign; collection records remain authoritative for
+accepted claims and assessments. Follow [ADR
+028](adrs/028-map-objects-through-holders.md) for the model and its
+limits.
+
 Useful routes beyond the original PDF table and IndiGen gallery include:
 
 - Institutional catalogues across archaeology, ethnology, art and archives,

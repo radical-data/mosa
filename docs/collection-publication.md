@@ -9,6 +9,15 @@ Follow the implemented source and article model in
 Its [“In everyday work” table](adrs/027-distinguish-displaced-objects-and-documentary-sources.md#in-everyday-work)
 is the quick reference for deciding which record to create.
 
+The holder-based location model in [ADR
+028](adrs/028-map-objects-through-holders.md) resolves supported `held_by`
+claims to reviewed holder IDs while preserving their source wording. Store each
+holder's optional mapped location directly on its holder record; objects with
+an unambiguous holder inherit that point. Add an object assessment only for
+holderless `located_at` evidence or a genuine location exception. Never infer
+current custody from an old claim or assign a precise point when the evidence
+supports only a broader locality.
+
 ## Add or edit an object
 
 Create `collection/objects/<object-id>.json`. The file name without `.json` is
