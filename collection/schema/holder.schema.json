@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://museumofstolenartefacts.org/schema/holder.schema.json",
+  "title": "MoSA collection holder",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name"],
+  "properties": {
+    "name": { "type": "string", "minLength": 1, "pattern": "\\S" },
+    "aliases": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "pattern": "\\S" }
+    },
+    "location": { "$ref": "#/$defs/geocodedLocation" }
+  },
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "geocodedLocation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "precision", "longitude", "latitude", "reference"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "pattern": "\\S" },
+        "precision": { "enum": ["site", "locality", "region", "country"] },
+        "longitude": { "type": "number", "minimum": -180, "maximum": 180 },
+        "latitude": { "type": "number", "minimum": -90, "maximum": 90 },
+        "reference": { "type": "string", "format": "uri", "pattern": "^https?://" }
+      }
+    }
+  }
+}

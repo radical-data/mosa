@@ -26,6 +26,10 @@ build:
 collection-check:
     pnpm validate:collection
 
+# Report holder reconciliation and map coverage without changing collection data.
+locations-report:
+    node --import tsx scripts/report-locations.ts
+
 format:
     pnpm exec biome format --write .
 

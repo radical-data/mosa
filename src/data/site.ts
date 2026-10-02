@@ -2,7 +2,12 @@ import labels from "../content/pages/reference-labels.json";
 import resources from "../content/pages/resource-summaries.json";
 import type { Locale } from "../i18n/routes";
 
-export { collectionRecords, getObjectRecord } from "./collection";
+export {
+  collectionMapLocations,
+  collectionMapUnresolved,
+  collectionRecords,
+  getObjectRecord,
+} from "./collection";
 
 export const contactEmail = "mosa@radicaldata.org";
 export const conceptIds = [

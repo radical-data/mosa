@@ -1,4 +1,12 @@
-import { type Claim, type CollectionData, qualifyClaim, type Source } from "./collection-model";
+import {
+  type Claim,
+  type CollectionData,
+  type GeocodedLocation,
+  type Holder,
+  type ObjectLocation,
+  qualifyClaim,
+  type Source,
+} from "./collection-model";
 
 export interface SourcedClaim {
   claim: Claim;
@@ -110,5 +118,132 @@ export function getSourceRelationships(data: CollectionData, sourceId: string) {
     incoming,
     relatedObjects: [...relatedObjects],
     depictingObjects,
+  };
+}
+
+export interface MappedObject {
+  object: CollectionData["objects"][number];
+  holder?: Holder;
+  status: ObjectLocation["status"];
+  note?: ObjectLocation["note"];
+  claims: SourcedClaim[];
+}
+
+export interface MappedLocation {
+  key: string;
+  location: GeocodedLocation;
+  holders: Holder[];
+  objects: MappedObject[];
+}
+
+export interface UnresolvedObject extends MappedObject {
+  reason: "unassessed" | "unknown" | "unresolved-holder" | "multiple-holders" | "unmapped-holder";
+}
+
+/** Build a map/list projection without inferring a location from claim wording. */
+export function getLocationProjection(data: CollectionData) {
+  const holders = new Map((data.holders ?? []).map((holder) => [holder.id, holder]));
+  const locations = new Map((data.locations ?? []).map((location) => [location.id, location]));
+  const claimsByObject = new Map<string, SourcedClaim[]>();
+  for (const source of data.sources)
+    for (const claim of source.claims) {
+      const claims = claimsByObject.get(claim.objectId) ?? [];
+      claims.push({ claim, source });
+      claimsByObject.set(claim.objectId, claims);
+    }
+
+  const mappedByLocation = new Map<
+    string,
+    { location: GeocodedLocation; objects: MappedObject[] }
+  >();
+  const unresolved: UnresolvedObject[] = [];
+  for (const object of data.objects) {
+    const location = locations.get(object.id);
+    const objectClaims = claimsByObject.get(object.id) ?? [];
+    let holder: Holder | undefined;
+    let geocodedLocation: GeocodedLocation | undefined;
+    let groupKey: string | undefined;
+    let status: ObjectLocation["status"] = location?.status ?? "reported";
+    let reason: UnresolvedObject["reason"] | undefined;
+    let claims: SourcedClaim[];
+
+    if (location) {
+      const selectedClaims = location.claimReferences
+        .map((reference) =>
+          objectClaims.find(({ source, claim }) => qualifyClaim(source.id, claim.id) === reference),
+        )
+        .filter((entry): entry is SourcedClaim => !!entry);
+      const selectedHolderIds = new Set(
+        selectedClaims.map(({ claim }) => claim.holderId).filter((id): id is string => !!id),
+      );
+      holder = location.holderId
+        ? holders.get(location.holderId)
+        : selectedHolderIds.size === 1
+          ? holders.get([...selectedHolderIds][0])
+          : undefined;
+      claims = selectedClaims;
+      if (location.status === "unknown") reason = "unknown";
+      else if (location.location) {
+        geocodedLocation = location.location;
+        groupKey = `object:${object.id}`;
+      } else if (holder?.location) {
+        geocodedLocation = holder.location;
+        groupKey = `holder:${holder.id}`;
+      } else {
+        reason = "unmapped-holder";
+      }
+    } else {
+      status = "reported";
+      const heldBy = objectClaims.filter(({ claim }) => claim.predicate === "held_by");
+      claims = heldBy;
+      if (!heldBy.length) reason = "unassessed";
+      else if (heldBy.some(({ claim }) => !claim.holderId)) reason = "unresolved-holder";
+      else {
+        const holderIds = new Set(heldBy.map(({ claim }) => claim.holderId as string));
+        if (holderIds.size !== 1) reason = "multiple-holders";
+        else {
+          holder = holders.get([...holderIds][0]);
+          if (!holder?.location) reason = "unmapped-holder";
+          else {
+            geocodedLocation = holder.location;
+            groupKey = `holder:${holder.id}`;
+          }
+        }
+      }
+    }
+
+    const entry: MappedObject = {
+      object,
+      ...(holder ? { holder } : {}),
+      status,
+      ...(location?.note ? { note: location.note } : {}),
+      claims,
+    };
+    if (geocodedLocation && groupKey) {
+      const group = mappedByLocation.get(groupKey) ?? { location: geocodedLocation, objects: [] };
+      const objects = group.objects;
+      objects.push(entry);
+      mappedByLocation.set(groupKey, group);
+    } else {
+      unresolved.push({ ...entry, reason: reason ?? "unmapped-holder" });
+    }
+  }
+
+  const mapped = [...mappedByLocation.entries()]
+    .map(([key, { location, objects }]) => {
+      const groupedHolders = new Map<string, Holder>();
+      for (const entry of objects)
+        if (entry.holder) groupedHolders.set(entry.holder.id, entry.holder);
+      return {
+        key,
+        location,
+        holders: [...groupedHolders.values()].sort((a, b) => a.name.localeCompare(b.name)),
+        objects: objects.sort((a, b) => a.object.id.localeCompare(b.object.id)),
+      } satisfies MappedLocation;
+    })
+    .sort((a, b) => a.location.name.localeCompare(b.location.name) || a.key.localeCompare(b.key));
+  return {
+    locations: mapped,
+    unresolved: unresolved.sort((a, b) => a.object.id.localeCompare(b.object.id)),
   };
 }
