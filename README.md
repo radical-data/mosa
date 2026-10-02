@@ -10,6 +10,19 @@ builds one static Docker image from the root [`Dockerfile`](Dockerfile).
 Public website: [museumofstolenartefacts.org](https://museumofstolenartefacts.org/).
 This is the configured project address, not a live health report.
 
+## Licensing
+
+This is a multi-licensed repository. Software code is available under the
+[MIT Licence](LICENSE), eligible original MoSA writing under [CC BY-SA
+4.0](https://creativecommons.org/licenses/by-sa/4.0/), and MoSA-held rights in
+the collection database under [ODC-By
+1.0](https://opendatacommons.org/licenses/by/1-0/).
+
+Third-party source text, images, Indigenous knowledge, pre-existing material
+and other identified exceptions retain their own rights or notices. See
+[Licensing and reuse](LICENSING.md) for the exact scope, attribution guidance
+and exceptions.
+
 ## Start development
 
 Install [mise](https://mise.jdx.dev/) and Git LFS, then run:

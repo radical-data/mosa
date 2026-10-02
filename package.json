@@ -2,6 +2,7 @@
   "name": "mosa",
   "version": "1.0.0",
   "private": true,
+  "license": "MIT",
   "packageManager": "pnpm@11.7.0",
   "engines": {
     "node": ">=24 <25",
