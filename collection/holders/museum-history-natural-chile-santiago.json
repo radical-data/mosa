@@ -1,0 +1,12 @@
+{
+  "name": "Museo Nacional de Historia Natural",
+  "visitUrl": "https://www.mnhn.gob.cl/servicios/visitar-el-museo-publico-general",
+  "location": {
+    "name": "Santiago, Chile",
+    "precision": "locality",
+    "longitude": -70.6693,
+    "latitude": -33.4489,
+    "reference": "https://www.openstreetmap.org/?mlat=-33.4489&mlon=-70.6693#map=10/-33.4489/-70.6693"
+  },
+  "aliases": ["Museo de Historia Natural (Santiago)"]
+}

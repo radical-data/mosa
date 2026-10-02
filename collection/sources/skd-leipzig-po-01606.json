@@ -45,7 +45,8 @@
       "id": "holder",
       "objectId": "moai-kavakava-leipzig-po-01606",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     }
   ],
   "images": [],

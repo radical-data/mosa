@@ -1,0 +1,12 @@
+{
+  "name": "Roemer- und Pelizaeus-Museum",
+  "visitUrl": "https://rpmuseum.de/besuch-planen/",
+  "aliases": ["Roemer und Pelizaeus Museum", "Roemer- und Pelizaeus-Museum Hildesheim"],
+  "location": {
+    "name": "Hildesheim, Germany",
+    "precision": "locality",
+    "longitude": 9.95797,
+    "latitude": 52.1548,
+    "reference": "https://www.openstreetmap.org/?mlat=52.1548&mlon=9.95797#map=10/52.1548/9.95797"
+  }
+}

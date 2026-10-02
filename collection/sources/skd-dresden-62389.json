@@ -45,7 +45,8 @@
       "id": "holder",
       "objectId": "moai-kavakava-dresden-62389",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     }
   ],
   "images": [],

@@ -27,7 +27,8 @@
       "id": "holder",
       "objectId": "moko-berlin-vi-4868",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum"
+      "value": "Ethnologisches Museum",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "participants",

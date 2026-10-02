@@ -1,0 +1,10 @@
+{
+  "name": "Sammlung Ladriere",
+  "location": {
+    "name": "Paris, France (historical collection; approximate)",
+    "precision": "locality",
+    "longitude": 2.3522,
+    "latitude": 48.8566,
+    "reference": "https://www.osterinsel-freunde.de/literatur"
+  }
+}

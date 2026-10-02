@@ -1,0 +1,12 @@
+{
+  "name": "Museo Fonck",
+  "visitUrl": "https://www.museofonck.cl/new_site/index.php/horario-y-valores.html",
+  "location": {
+    "name": "Viña del Mar, Chile",
+    "precision": "locality",
+    "longitude": -71.5518,
+    "latitude": -33.0245,
+    "reference": "https://www.openstreetmap.org/?mlat=-33.0245&mlon=-71.5518#map=10/-33.0245/-71.5518"
+  },
+  "aliases": ["Museo de Arqueología e Historia Francisco Fonck"]
+}

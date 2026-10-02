@@ -27,7 +27,8 @@
       "id": "holder",
       "objectId": "moai-tangata-berlin-vi-4897",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum"
+      "value": "Ethnologisches Museum",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "participants",

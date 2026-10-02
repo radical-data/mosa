@@ -5,6 +5,8 @@ import {
   type CollectionImage,
   type CollectionObject,
   parseArticleFrontmatter,
+  parseHolder,
+  parseLocation,
   parseObject,
   parseSource,
   type Source,
@@ -12,17 +14,27 @@ import {
   validateCollection,
 } from "./collection-model";
 import {
+  getLocationProjection,
   getObjectAccounts,
   getSourceRelationships,
   type SourcedClaim,
   sourceImagesForObject,
 } from "./collection-record";
+import { getVisitHolders } from "./visit-holders";
 
 const objectModules = import.meta.glob<unknown>("../../collection/objects/*.json", {
   eager: true,
   import: "default",
 });
 const sourceModules = import.meta.glob<unknown>("../../collection/sources/*.json", {
+  eager: true,
+  import: "default",
+});
+const holderModules = import.meta.glob<unknown>("../../collection/holders/*.json", {
+  eager: true,
+  import: "default",
+});
+const locationModules = import.meta.glob<unknown>("../../collection/locations/*.json", {
   eager: true,
   import: "default",
 });
@@ -43,12 +55,23 @@ const objects = Object.entries(objectModules).map(([file, value]) =>
 const sources = Object.entries(sourceModules).map(([file, value]) =>
   parseSource(value, basename(file)),
 );
+const holders = Object.entries(holderModules).map(([file, value]) =>
+  parseHolder(value, basename(file)),
+);
+const locations = Object.entries(locationModules).map(([file, value]) =>
+  parseLocation(value, basename(file)),
+);
 const checked = validateCollection(
-  { objects, sources },
+  { objects, sources, holders, locations },
   {
     imageFiles: new Set(Object.keys(imageModules).map(imageName)),
   },
 );
+const collectionMap = getLocationProjection(checked);
+
+export const collectionMapLocations = collectionMap.locations;
+export const collectionMapUnresolved = collectionMap.unresolved;
+export const visitHolders = getVisitHolders(checked);
 
 export interface ArticleEntry extends ArticleMetadata {
   Content: MarkdownInstance<Record<string, unknown>>["Content"];
@@ -93,6 +116,9 @@ const articles: ArticleEntry[] = Object.entries(articleModules).map(([file, modu
 
 export const collectionObjects = checked.objects;
 export const collectionSources = checked.sources;
+export const collectionHolders = checked.holders;
+export const collectionLocations = checked.locations;
+export const collectionLocationProjection = getLocationProjection(checked);
 export const articlePublications = articles;
 
 function imageAsset(image: CollectionImage): ImageMetadata {

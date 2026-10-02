@@ -1,6 +1,8 @@
 import { describe, expect, test } from "vitest";
 import {
   parseArticleFrontmatter,
+  parseHolder,
+  parseLocation,
   parseObject,
   parseSource,
   validateArticleSubjects,
@@ -25,6 +27,192 @@ const source = parseSource(
 );
 
 describe("collection model", () => {
+  test("parses holders with geocoded locations and object location assessments", () => {
+    expect(
+      parseHolder(
+        {
+          name: "Museum One",
+          aliases: ["Museum 1"],
+          visitUrl: "https://example.org/visit",
+          location: {
+            name: "Museum One",
+            precision: "site",
+            longitude: -70.123,
+            latitude: -30.456,
+            reference: "https://example.org/place",
+          },
+        },
+        "museum-one.json",
+      ),
+    ).toMatchObject({ id: "museum-one", name: "Museum One", location: { longitude: -70.123 } });
+    expect(
+      parseLocation(
+        {
+          status: "uncertain",
+          claimReferences: ["source-one/holder"],
+          reviewedAt: "2026-09-01",
+          note: { text: "The source may describe a former display location.", language: "en-GB" },
+        },
+        "object-one.json",
+      ),
+    ).toMatchObject({ id: "object-one", status: "uncertain" });
+  });
+
+  test.each([
+    [
+      "unsafe visitor URL",
+      () => parseHolder({ name: "Museum", visitUrl: "javascript:alert(1)" }, "museum.json"),
+      "visitUrl must be an http(s) URL",
+    ],
+    [
+      "holder alias duplicates",
+      () => parseHolder({ name: "Museum", aliases: ["Museum", "Museum"] }, "museum.json"),
+      "aliases contains duplicates",
+    ],
+    [
+      "coordinate bounds",
+      () =>
+        parseHolder(
+          {
+            name: "Museum",
+            location: {
+              name: "Place",
+              precision: "site",
+              longitude: 181,
+              latitude: 0,
+              reference: "https://example.org/place",
+            },
+          },
+          "museum.json",
+        ),
+      "longitude must be between",
+    ],
+    [
+      "calendar date",
+      () =>
+        parseLocation(
+          { status: "reported", claimReferences: [], reviewedAt: "2026-02-30" },
+          "object-one.json",
+        ),
+      "reviewedAt must be a valid",
+    ],
+    [
+      "unknown point",
+      () =>
+        parseLocation(
+          {
+            status: "unknown",
+            claimReferences: [],
+            location: {
+              name: "Place",
+              precision: "site",
+              longitude: 0,
+              latitude: 0,
+              reference: "https://example.org/place",
+            },
+            reviewedAt: "2026-09-01",
+          },
+          "object-one.json",
+        ),
+      "unknown location cannot have a location",
+    ],
+    [
+      "uncertain note",
+      () =>
+        parseLocation(
+          { status: "uncertain", claimReferences: [], reviewedAt: "2026-09-01" },
+          "object-one.json",
+        ),
+      "uncertain location requires a note",
+    ],
+  ])("rejects invalid location register data: %s", (_label, parse, expected) => {
+    expect(parse).toThrow(expected);
+  });
+
+  test("accepts holderId only on held_by claims and resolves register references", () => {
+    const { id: _id, ...record } = source;
+    expect(() =>
+      parseSource(
+        { ...record, claims: [{ ...record.claims[0], holderId: "museum-one" }] },
+        "source-one.json",
+      ),
+    ).toThrow("holderId is only allowed for held_by claims");
+    const objectWithoutForegrounding = parseObject(
+      { name: "Object one", foregroundedClaims: [] },
+      "object-one.json",
+    );
+    const heldClaim = {
+      id: "holder",
+      objectId: "object-one",
+      predicate: "held_by" as const,
+      value: "Museum One",
+      holderId: "museum-one",
+    };
+    const heldSource = parseSource(
+      { ...record, claims: [heldClaim], images: [] },
+      "source-one.json",
+    );
+    const holder = parseHolder(
+      {
+        name: "Museum One",
+        location: {
+          name: "Museum One",
+          precision: "site",
+          longitude: 0,
+          latitude: 0,
+          reference: "https://example.org/place",
+        },
+      },
+      "museum-one.json",
+    );
+    expect(() =>
+      validateCollection({
+        objects: [objectWithoutForegrounding],
+        sources: [heldSource],
+        holders: [holder],
+      }),
+    ).not.toThrow();
+    expect(() =>
+      validateCollection({
+        objects: [objectWithoutForegrounding],
+        sources: [heldSource],
+        holders: [],
+      }),
+    ).toThrow("holderId refers to missing holder museum-one");
+  });
+
+  test("checks location claim references belong to the assessed object", () => {
+    const otherObject = parseObject(
+      { name: "Object two", foregroundedClaims: [] },
+      "object-two.json",
+    );
+    const location = parseLocation(
+      { status: "reported", claimReferences: ["source-one/name"], reviewedAt: "2026-09-01" },
+      "object-two.json",
+    );
+    expect(() =>
+      validateCollection({
+        objects: [object, otherObject],
+        sources: [source],
+        locations: [location],
+      }),
+    ).toThrow("claim source-one/name is about object-one");
+  });
+
+  test("requires a non-unknown assessment to select a location or resolved holder claim", () => {
+    const emptyAssessment = parseLocation(
+      { status: "reported", claimReferences: [], reviewedAt: "2026-09-01" },
+      "object-one.json",
+    );
+    expect(() =>
+      validateCollection({
+        objects: [object],
+        sources: [source],
+        locations: [emptyAssessment],
+      }),
+    ).toThrow("must select a mapped location or resolved holder claim");
+  });
+
   test("accepts an optional passage locator without changing claim wording", () => {
     const { id: _id, ...record } = source;
     const claim = { ...record.claims[0], locator: "Page 14, table 2, row 6" };

@@ -15,7 +15,8 @@
       "id": "moai-kavakava-munich-193-holder",
       "objectId": "moai-kavakava-munich-193",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "moai-kavakava-munich-193-location",
@@ -69,7 +70,8 @@
       "id": "moai-kavakava-stuttgart-s-40629-l-holder",
       "objectId": "moai-kavakava-stuttgart-s-40629-l",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moai-kavakava-stuttgart-s-40629-l-location",
@@ -123,7 +125,8 @@
       "id": "moai-kavakava-te-papa-holder",
       "objectId": "moai-kavakava-te-papa",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "moai-kavakava-te-papa-location",
@@ -177,7 +180,8 @@
       "id": "moai-kavakava-canterbury-e150-1132-oldman-343-holder",
       "objectId": "moai-kavakava-canterbury-e150-1132-oldman-343",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-kavakava-canterbury-e150-1132-oldman-343-location",
@@ -225,7 +229,8 @@
       "id": "moai-kavakava-canterbury-e150-1133-oldman-349-99-holder",
       "objectId": "moai-kavakava-canterbury-e150-1133-oldman-349-99",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-kavakava-canterbury-e150-1133-oldman-349-99-location",
@@ -279,7 +284,8 @@
       "id": "moai-kavakava-canterbury-e150-1134-oldman-350-holder",
       "objectId": "moai-kavakava-canterbury-e150-1134-oldman-350",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-kavakava-canterbury-e150-1134-oldman-350-location",
@@ -333,7 +339,8 @@
       "id": "moai-kavakava-canterbury-e150-1135-oldman-98-1111-holder",
       "objectId": "moai-kavakava-canterbury-e150-1135-oldman-98-1111",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-kavakava-canterbury-e150-1135-oldman-98-1111-location",
@@ -387,7 +394,8 @@
       "id": "moai-kavakava-new-york-1979-206-1491-holder",
       "objectId": "moai-kavakava-new-york-1979-206-1491",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "moai-kavakava-new-york-1979-206-1491-location",
@@ -441,7 +449,8 @@
       "id": "moai-kavakava-bremen-d00317-holder",
       "objectId": "moai-kavakava-bremen-d00317",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-kavakava-bremen-d00317-location",
@@ -495,7 +504,8 @@
       "id": "moai-kavakava-leiden-rv-510-17-holder",
       "objectId": "moai-kavakava-leiden-rv-510-17",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "moai-kavakava-leiden-rv-510-17-location",
@@ -549,7 +559,8 @@
       "id": "moai-kavakava-leiden-rv-517-3-holder",
       "objectId": "moai-kavakava-leiden-rv-517-3",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "moai-kavakava-leiden-rv-517-3-location",
@@ -603,7 +614,8 @@
       "id": "moai-kavakava-stuttgart-118193-holder",
       "objectId": "moai-kavakava-stuttgart-118193",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moai-kavakava-stuttgart-118193-location",
@@ -657,7 +669,8 @@
       "id": "moai-kavakava-hamburg-e-615-holder",
       "objectId": "moai-kavakava-hamburg-e-615",
       "predicate": "held_by",
-      "value": "MARKK Hamburg"
+      "value": "MARKK Hamburg",
+      "holderId": "markk-hamburg"
     },
     {
       "id": "moai-kavakava-hamburg-e-615-location",
@@ -705,7 +718,8 @@
       "id": "moai-kavakava-hamburg-e-616-holder",
       "objectId": "moai-kavakava-hamburg-e-616",
       "predicate": "held_by",
-      "value": "MARKK Hamburg"
+      "value": "MARKK Hamburg",
+      "holderId": "markk-hamburg"
     },
     {
       "id": "moai-kavakava-hamburg-e-616-location",
@@ -753,7 +767,8 @@
       "id": "moai-kavakava-vienna-vo-22860-holder",
       "objectId": "moai-kavakava-vienna-vo-22860",
       "predicate": "held_by",
-      "value": "Weltmuseum Wien"
+      "value": "Weltmuseum Wien",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "moai-kavakava-vienna-vo-22860-location",
@@ -807,7 +822,8 @@
       "id": "moai-kavakava-berlin-vi-4917-holder",
       "objectId": "moai-kavakava-berlin-vi-4917",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-kavakava-berlin-vi-4917-location",
@@ -861,7 +877,8 @@
       "id": "moai-kavakava-berlin-vi-4981-b-holder",
       "objectId": "moai-kavakava-berlin-vi-4981-b",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-kavakava-berlin-vi-4981-b-location",
@@ -915,7 +932,8 @@
       "id": "moai-kavakava-dresden-18359-holder",
       "objectId": "moai-kavakava-dresden-18359",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moai-kavakava-dresden-18359-location",
@@ -963,7 +981,8 @@
       "id": "moai-kavakava-berlin-vi-7221-holder",
       "objectId": "moai-kavakava-berlin-vi-7221",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-kavakava-berlin-vi-7221-location",
@@ -1017,7 +1036,8 @@
       "id": "moai-kavakava-berlin-vi-7242-holder",
       "objectId": "moai-kavakava-berlin-vi-7242",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-kavakava-berlin-vi-7242-location",
@@ -1071,7 +1091,8 @@
       "id": "moai-kavakava-vina-del-mar-1831-545-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1831-545-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1831-545-coll-felbermayer-location",
@@ -1119,7 +1140,8 @@
       "id": "moai-kavakava-edinburgh-a-1894-381-holder",
       "objectId": "moai-kavakava-edinburgh-a-1894-381",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-kavakava-edinburgh-a-1894-381-location",
@@ -1173,7 +1195,8 @@
       "id": "moai-kavakava-berlin-vi-12650-a-holder",
       "objectId": "moai-kavakava-berlin-vi-12650-a",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-kavakava-berlin-vi-12650-a-location",
@@ -1227,7 +1250,8 @@
       "id": "moai-kavakava-leipzig-po-00447-holder",
       "objectId": "moai-kavakava-leipzig-po-00447",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "moai-kavakava-leipzig-po-00447-location",
@@ -1281,7 +1305,8 @@
       "id": "moai-kavakava-stockholm-1904-20-0001-holder",
       "objectId": "moai-kavakava-stockholm-1904-20-0001",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "moai-kavakava-stockholm-1904-20-0001-location",
@@ -1329,7 +1354,8 @@
       "id": "moai-kavakava-otago-d20-568-holder",
       "objectId": "moai-kavakava-otago-d20-568",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "moai-kavakava-otago-d20-568-location",
@@ -1383,7 +1409,8 @@
       "id": "moai-kavakava-vina-del-mar-1825-539-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1825-539-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1825-539-coll-felbermayer-location",
@@ -1431,7 +1458,8 @@
       "id": "moai-kavakava-vina-del-mar-1833-547-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1833-547-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1833-547-coll-felbermayer-location",
@@ -1479,7 +1507,8 @@
       "id": "moai-kavakava-zurich-rpo-303-holder",
       "objectId": "moai-kavakava-zurich-rpo-303",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-kavakava-zurich-rpo-303-location",
@@ -1533,7 +1562,8 @@
       "id": "moai-kavakava-zurich-rpo-304-holder",
       "objectId": "moai-kavakava-zurich-rpo-304",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-kavakava-zurich-rpo-304-location",
@@ -1587,7 +1617,8 @@
       "id": "moai-kavakava-zurich-rpo-305-holder",
       "objectId": "moai-kavakava-zurich-rpo-305",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-kavakava-zurich-rpo-305-location",
@@ -1641,7 +1672,8 @@
       "id": "moai-kavakava-rapa-nui-17-192-holder",
       "objectId": "moai-kavakava-rapa-nui-17-192",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-kavakava-rapa-nui-17-192-location",
@@ -1695,7 +1727,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-9-registro-surdoc-4-1915-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-9-registro-surdoc-4-1915",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-9-registro-surdoc-4-1915-location",
@@ -1749,7 +1782,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-2-registro-surdoc-4-1985-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-2-registro-surdoc-4-1985",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-2-registro-surdoc-4-1985-location",
@@ -1803,7 +1837,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-5-registro-surdoc-4-1987-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-5-registro-surdoc-4-1987",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-5-registro-surdoc-4-1987-location",
@@ -1857,7 +1892,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-26-registro-surdoc-4-1922-location",
@@ -1911,7 +1947,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-27-registro-surdoc-4-1924-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-27-registro-surdoc-4-1924",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-27-registro-surdoc-4-1924-location",
@@ -1965,7 +2002,8 @@
       "id": "moai-kavakava-canterbury-e138-636-114-38-holder",
       "objectId": "moai-kavakava-canterbury-e138-636-114-38",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-kavakava-canterbury-e138-636-114-38-location",
@@ -2013,7 +2051,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-35-registro-surdoc-4-1927-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-35-registro-surdoc-4-1927",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-35-registro-surdoc-4-1927-location",
@@ -2067,7 +2106,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-15-registro-surdoc-4-1993-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-15-registro-surdoc-4-1993",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-15-registro-surdoc-4-1993-location",
@@ -2121,7 +2161,8 @@
       "id": "moai-kavakava-leipzig-po-01606-holder",
       "objectId": "moai-kavakava-leipzig-po-01606",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "moai-kavakava-leipzig-po-01606-location",
@@ -2175,7 +2216,8 @@
       "id": "moai-kavakava-cambridge-1931-341-holder",
       "objectId": "moai-kavakava-cambridge-1931-341",
       "predicate": "held_by",
-      "value": "Museum of Archeology and Anthropology"
+      "value": "Museum of Archeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "moai-kavakava-cambridge-1931-341-location",
@@ -2229,7 +2271,8 @@
       "id": "moai-kavakava-vina-del-mar-988-holder",
       "objectId": "moai-kavakava-vina-del-mar-988",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-988-location",
@@ -2277,7 +2320,8 @@
       "id": "moai-kavakava-vina-del-mar-989-holder",
       "objectId": "moai-kavakava-vina-del-mar-989",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-989-location",
@@ -2331,7 +2375,8 @@
       "id": "moai-kavakava-vina-del-mar-1010-holder",
       "objectId": "moai-kavakava-vina-del-mar-1010",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1010-location",
@@ -2385,7 +2430,8 @@
       "id": "moai-kavakava-vina-del-mar-5029-holder",
       "objectId": "moai-kavakava-vina-del-mar-5029",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-5029-location",
@@ -2439,7 +2485,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214-location",
@@ -2493,7 +2540,8 @@
       "id": "moai-kavakava-otago-d36-984-holder",
       "objectId": "moai-kavakava-otago-d36-984",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "moai-kavakava-otago-d36-984-location",
@@ -2547,7 +2595,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-49-registro-surdoc-4-1937-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-49-registro-surdoc-4-1937",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-49-registro-surdoc-4-1937-location",
@@ -2601,7 +2650,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-52-registro-surdoc-4-1939-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-52-registro-surdoc-4-1939",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-52-registro-surdoc-4-1939-location",
@@ -2655,7 +2705,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-55-registro-surdoc-4-1940-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-55-registro-surdoc-4-1940",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-55-registro-surdoc-4-1940-location",
@@ -2709,7 +2760,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-19-registro-surdoc-4-2213-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-19-registro-surdoc-4-2213",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-19-registro-surdoc-4-2213-location",
@@ -2763,7 +2815,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-56-registro-surdoc-4-1941-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-56-registro-surdoc-4-1941",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-56-registro-surdoc-4-1941-location",
@@ -2817,7 +2870,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-57-registro-surdoc-4-1942-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-57-registro-surdoc-4-1942",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-57-registro-surdoc-4-1942-location",
@@ -2871,7 +2925,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-58-registro-surdoc-4-1943-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-58-registro-surdoc-4-1943",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-58-registro-surdoc-4-1943-location",
@@ -2925,7 +2980,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-60-registro-surdoc-4-1944-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-60-registro-surdoc-4-1944",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-60-registro-surdoc-4-1944-location",
@@ -2979,7 +3035,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-62-registro-surdoc-4-1945-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-62-registro-surdoc-4-1945",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-62-registro-surdoc-4-1945-location",
@@ -3033,7 +3090,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-63-registro-surdoc-4-1946-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-63-registro-surdoc-4-1946",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-63-registro-surdoc-4-1946-location",
@@ -3087,7 +3145,8 @@
       "id": "moai-kavakava-vina-del-mar-1739-453-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1739-453-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1739-453-coll-felbermayer-location",
@@ -3135,7 +3194,8 @@
       "id": "moai-kavakava-vina-del-mar-1391-105-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1391-105-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1391-105-coll-felbermayer-location",
@@ -3189,7 +3249,8 @@
       "id": "moai-kavakava-vina-del-mar-1571-285-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1571-285-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1571-285-coll-felbermayer-location",
@@ -3237,7 +3298,8 @@
       "id": "moai-kavakava-vina-del-mar-1032-holder",
       "objectId": "moai-kavakava-vina-del-mar-1032",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1032-location",
@@ -3285,7 +3347,8 @@
       "id": "moai-kavakava-vina-del-mar-986-holder",
       "objectId": "moai-kavakava-vina-del-mar-986",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-986-location",
@@ -3333,7 +3396,8 @@
       "id": "moai-kavakava-vina-del-mar-1802-516-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1802-516-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1802-516-coll-felbermayer-location",
@@ -3387,7 +3451,8 @@
       "id": "moai-kavakava-vina-del-mar-985-holder",
       "objectId": "moai-kavakava-vina-del-mar-985",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-985-location",
@@ -3441,7 +3506,8 @@
       "id": "moai-kavakava-vina-del-mar-1041-holder",
       "objectId": "moai-kavakava-vina-del-mar-1041",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1041-location",
@@ -3495,7 +3561,8 @@
       "id": "moai-kavakava-vina-del-mar-1332-46-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1332-46-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1332-46-coll-felbermayer-location",
@@ -3549,7 +3616,8 @@
       "id": "moai-kavakava-vina-del-mar-1341-55-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1341-55-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1341-55-coll-felbermayer-location",
@@ -3603,7 +3671,8 @@
       "id": "moai-kavakava-vina-del-mar-1584-298-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1584-298-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1584-298-coll-felbermayer-location",
@@ -3651,7 +3720,8 @@
       "id": "moai-kavakava-basel-vc-1513-holder",
       "objectId": "moai-kavakava-basel-vc-1513",
       "predicate": "held_by",
-      "value": "Museum der Kulturen Basel"
+      "value": "Museum der Kulturen Basel",
+      "holderId": "museum-der-kulturen-basel"
     },
     {
       "id": "moai-kavakava-basel-vc-1513-location",
@@ -3705,7 +3775,8 @@
       "id": "moai-kavakava-basel-vc-1514-holder",
       "objectId": "moai-kavakava-basel-vc-1514",
       "predicate": "held_by",
-      "value": "Museum der Kulturen Basel"
+      "value": "Museum der Kulturen Basel",
+      "holderId": "museum-der-kulturen-basel"
     },
     {
       "id": "moai-kavakava-basel-vc-1514-location",
@@ -3759,7 +3830,8 @@
       "id": "moai-kavakava-valparaiso-mhnv-53-registro-surdoc-4-1997-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-53-registro-surdoc-4-1997",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-kavakava-valparaiso-mhnv-53-registro-surdoc-4-1997-location",
@@ -3813,7 +3885,8 @@
       "id": "moai-kavakava-basel-vc-1686-holder",
       "objectId": "moai-kavakava-basel-vc-1686",
       "predicate": "held_by",
-      "value": "Museum der Kulturen Basel"
+      "value": "Museum der Kulturen Basel",
+      "holderId": "museum-der-kulturen-basel"
     },
     {
       "id": "moai-kavakava-basel-vc-1686-location",
@@ -3867,7 +3940,8 @@
       "id": "moai-kavakava-goteborg-1947-09-0001-holder",
       "objectId": "moai-kavakava-goteborg-1947-09-0001",
       "predicate": "held_by",
-      "value": "Världskultur Museet"
+      "value": "Världskultur Museet",
+      "holderId": "varldskulturmuseet"
     },
     {
       "id": "moai-kavakava-goteborg-1947-09-0001-location",
@@ -3915,7 +3989,8 @@
       "id": "moai-kavakava-goteborg-1947-10-0001-holder",
       "objectId": "moai-kavakava-goteborg-1947-10-0001",
       "predicate": "held_by",
-      "value": "Världskultur Museet"
+      "value": "Världskultur Museet",
+      "holderId": "varldskulturmuseet"
     },
     {
       "id": "moai-kavakava-goteborg-1947-10-0001-location",
@@ -3963,7 +4038,8 @@
       "id": "moai-kavakava-cambridge-1953-568-b-holder",
       "objectId": "moai-kavakava-cambridge-1953-568-b",
       "predicate": "held_by",
-      "value": "Museum of Archeology and Anthropology"
+      "value": "Museum of Archeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "moai-kavakava-cambridge-1953-568-b-location",
@@ -4017,7 +4093,8 @@
       "id": "moai-kavakava-bremen-d13414-holder",
       "objectId": "moai-kavakava-bremen-d13414",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-kavakava-bremen-d13414-location",
@@ -4071,7 +4148,8 @@
       "id": "moai-kavakava-bremen-d13416-holder",
       "objectId": "moai-kavakava-bremen-d13416",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-kavakava-bremen-d13416-location",
@@ -4125,7 +4203,8 @@
       "id": "moai-kavakava-bremen-d13421-holder",
       "objectId": "moai-kavakava-bremen-d13421",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-kavakava-bremen-d13421-location",
@@ -4179,7 +4258,8 @@
       "id": "moai-kavakava-gottingen-oz-3081-holder",
       "objectId": "moai-kavakava-gottingen-oz-3081",
       "predicate": "held_by",
-      "value": "Ethnologische Sammlung der Universität Göttingen"
+      "value": "Ethnologische Sammlung der Universität Göttingen",
+      "holderId": "ethnological-collection-goettingen"
     },
     {
       "id": "moai-kavakava-gottingen-oz-3081-location",
@@ -4233,7 +4313,8 @@
       "id": "moai-kavakava-vina-del-mar-1575-289-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-1575-289-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-1575-289-coll-felbermayer-location",
@@ -4287,7 +4368,8 @@
       "id": "moai-kavakava-vina-del-mar-2534-1248-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-2534-1248-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-2534-1248-coll-felbermayer-location",
@@ -4341,7 +4423,8 @@
       "id": "moai-kavakava-vina-del-mar-2535-1249-coll-felbermayer-holder",
       "objectId": "moai-kavakava-vina-del-mar-2535-1249-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-2535-1249-coll-felbermayer-location",
@@ -4395,7 +4478,8 @@
       "id": "moai-kavakava-vina-del-mar-5028-holder",
       "objectId": "moai-kavakava-vina-del-mar-5028",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-5028-location",
@@ -4449,7 +4533,8 @@
       "id": "moai-kavakava-rapa-nui-17-10-holder",
       "objectId": "moai-kavakava-rapa-nui-17-10",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-kavakava-rapa-nui-17-10-location",
@@ -4503,7 +4588,8 @@
       "id": "moai-kavakava-cologne-54540-holder",
       "objectId": "moai-kavakava-cologne-54540",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-kavakava-cologne-54540-location",
@@ -4557,7 +4643,8 @@
       "id": "moai-kavakava-cologne-54541-holder",
       "objectId": "moai-kavakava-cologne-54541",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-kavakava-cologne-54541-location",
@@ -4611,7 +4698,8 @@
       "id": "moai-kavakava-cologne-54543-holder",
       "objectId": "moai-kavakava-cologne-54543",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-kavakava-cologne-54543-location",
@@ -4665,7 +4753,8 @@
       "id": "moai-kavakava-cologne-54544-holder",
       "objectId": "moai-kavakava-cologne-54544",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-kavakava-cologne-54544-location",
@@ -4719,7 +4808,8 @@
       "id": "moai-kavakava-munich-94-317-747-holder",
       "objectId": "moai-kavakava-munich-94-317-747",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "moai-kavakava-munich-94-317-747-location",
@@ -4773,7 +4863,8 @@
       "id": "moai-kavakava-munich-94-317-758-holder",
       "objectId": "moai-kavakava-munich-94-317-758",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "moai-kavakava-munich-94-317-758-location",
@@ -4827,7 +4918,8 @@
       "id": "moai-kavakava-dresden-62389-holder",
       "objectId": "moai-kavakava-dresden-62389",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moai-kavakava-dresden-62389-location",
@@ -4875,7 +4967,8 @@
       "id": "moai-kavakava-berlin-vi-54214-holder",
       "objectId": "moai-kavakava-berlin-vi-54214",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-kavakava-berlin-vi-54214-location",
@@ -4929,7 +5022,8 @@
       "id": "moai-kavakava-hannover-et-13957-holder",
       "objectId": "moai-kavakava-hannover-et-13957",
       "predicate": "held_by",
-      "value": "Landesmuseum Hannover"
+      "value": "Landesmuseum Hannover",
+      "holderId": "landesmuseum-hannover"
     },
     {
       "id": "moai-kavakava-hannover-et-13957-location",
@@ -4983,7 +5077,8 @@
       "id": "moai-kavakava-lubeck-94-1-32-holder",
       "objectId": "moai-kavakava-lubeck-94-1-32",
       "predicate": "held_by",
-      "value": "Völkerkundesammlung Lübeck"
+      "value": "Völkerkundesammlung Lübeck",
+      "holderId": "voelkerkundesammlung-luebeck"
     },
     {
       "id": "moai-kavakava-lubeck-94-1-32-location",
@@ -5031,7 +5126,8 @@
       "id": "moai-kavakava-wellington-234568-fe010655-holder",
       "objectId": "moai-kavakava-wellington-234568-fe010655",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "moai-kavakava-wellington-234568-fe010655-location",
@@ -5079,7 +5175,8 @@
       "id": "moai-kavakava-vina-del-mar-4100-holder",
       "objectId": "moai-kavakava-vina-del-mar-4100",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-4100-location",
@@ -5133,7 +5230,8 @@
       "id": "moai-kavakava-vina-del-mar-4636-holder",
       "objectId": "moai-kavakava-vina-del-mar-4636",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-kavakava-vina-del-mar-4636-location",
@@ -5181,7 +5279,8 @@
       "id": "moai-kavakava-rapa-nui-17-299-holder",
       "objectId": "moai-kavakava-rapa-nui-17-299",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastian Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastian Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-kavakava-rapa-nui-17-299-location",
@@ -5235,7 +5334,8 @@
       "id": "moai-kavakava-rapa-nui-17-303-holder",
       "objectId": "moai-kavakava-rapa-nui-17-303",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-kavakava-rapa-nui-17-303-location",
@@ -5289,7 +5389,8 @@
       "id": "moai-kavakava-rapa-nui-17-309-holder",
       "objectId": "moai-kavakava-rapa-nui-17-309",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-kavakava-rapa-nui-17-309-location",
@@ -5343,7 +5444,8 @@
       "id": "moai-kavakava-rapa-nui-17-296-holder",
       "objectId": "moai-kavakava-rapa-nui-17-296",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-kavakava-rapa-nui-17-296-location",
@@ -5397,7 +5499,8 @@
       "id": "moai-kavakava-rapa-nui-17-326-holder",
       "objectId": "moai-kavakava-rapa-nui-17-326",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-kavakava-rapa-nui-17-326-location",
@@ -5451,7 +5554,8 @@
       "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-holder",
       "objectId": "moai-tangata-canterbury-e150-1129-oldman-102-345",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-tangata-canterbury-e150-1129-oldman-102-345-location",
@@ -5499,7 +5603,8 @@
       "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-holder",
       "objectId": "moai-tangata-canterbury-e150-1130-oldman-340-103",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-tangata-canterbury-e150-1130-oldman-340-103-location",
@@ -5553,7 +5658,8 @@
       "id": "moai-tangata-canterbury-e150-1131-oldman-351-holder",
       "objectId": "moai-tangata-canterbury-e150-1131-oldman-351",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-tangata-canterbury-e150-1131-oldman-351-location",
@@ -5607,7 +5713,8 @@
       "id": "moai-tangata-new-york-1984-526-holder",
       "objectId": "moai-tangata-new-york-1984-526",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "moai-tangata-new-york-1984-526-location",
@@ -5661,7 +5768,8 @@
       "id": "moai-tangata-berlin-vi-815-holder",
       "objectId": "moai-tangata-berlin-vi-815",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-tangata-berlin-vi-815-location",
@@ -5715,7 +5823,8 @@
       "id": "moai-tangata-edinburgh-a-1954-100-holder",
       "objectId": "moai-tangata-edinburgh-a-1954-100",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-tangata-edinburgh-a-1954-100-location",
@@ -5769,7 +5878,8 @@
       "id": "moai-tangata-hamburg-22-42-260-holder",
       "objectId": "moai-tangata-hamburg-22-42-260",
       "predicate": "held_by",
-      "value": "MARKK Hamburg"
+      "value": "MARKK Hamburg",
+      "holderId": "markk-hamburg"
     },
     {
       "id": "moai-tangata-hamburg-22-42-260-location",
@@ -5817,7 +5927,8 @@
       "id": "moai-tangata-leipzig-po-00436-holder",
       "objectId": "moai-tangata-leipzig-po-00436",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "moai-tangata-leipzig-po-00436-location",
@@ -5871,7 +5982,8 @@
       "id": "moai-tangata-berlin-vi-4897-holder",
       "objectId": "moai-tangata-berlin-vi-4897",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-tangata-berlin-vi-4897-location",
@@ -5925,7 +6037,8 @@
       "id": "moai-tangata-berlin-vi-4909-holder",
       "objectId": "moai-tangata-berlin-vi-4909",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-tangata-berlin-vi-4909-location",
@@ -5979,7 +6092,8 @@
       "id": "moai-tangata-berlin-vi-4900-holder",
       "objectId": "moai-tangata-berlin-vi-4900",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-tangata-berlin-vi-4900-location",
@@ -6033,7 +6147,8 @@
       "id": "moai-tangata-dresden-48736-holder",
       "objectId": "moai-tangata-dresden-48736",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moai-tangata-dresden-48736-location",
@@ -6081,7 +6196,8 @@
       "id": "moai-tangata-dresden-18356-holder",
       "objectId": "moai-tangata-dresden-18356",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moai-tangata-dresden-18356-location",
@@ -6129,7 +6245,8 @@
       "id": "moai-tangata-dresden-18357-holder",
       "objectId": "moai-tangata-dresden-18357",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moai-tangata-dresden-18357-location",
@@ -6177,7 +6294,8 @@
       "id": "moai-tangata-dresden-18358-holder",
       "objectId": "moai-tangata-dresden-18358",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moai-tangata-dresden-18358-location",
@@ -6225,7 +6343,8 @@
       "id": "moai-tangata-dresden-54420-holder",
       "objectId": "moai-tangata-dresden-54420",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moai-tangata-dresden-54420-location",
@@ -6273,7 +6392,8 @@
       "id": "moai-tangata-hildesheim-v-64-holder",
       "objectId": "moai-tangata-hildesheim-v-64",
       "predicate": "held_by",
-      "value": "Roemer- und Pelizaeus-Museum Hildesheim"
+      "value": "Roemer- und Pelizaeus-Museum Hildesheim",
+      "holderId": "roemer-pelizaeus-museum"
     },
     {
       "id": "moai-tangata-hildesheim-v-64-location",
@@ -6327,7 +6447,8 @@
       "id": "moai-tangata-leiden-rv-517-2-holder",
       "objectId": "moai-tangata-leiden-rv-517-2",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "moai-tangata-leiden-rv-517-2-location",
@@ -6381,7 +6502,8 @@
       "id": "moai-tangata-stockholm-1885-05-0002-holder",
       "objectId": "moai-tangata-stockholm-1885-05-0002",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "moai-tangata-stockholm-1885-05-0002-location",
@@ -6429,7 +6551,8 @@
       "id": "moai-tangata-cambridge-z-6123-holder",
       "objectId": "moai-tangata-cambridge-z-6123",
       "predicate": "held_by",
-      "value": "Museum of Archeology and Anthropology"
+      "value": "Museum of Archeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "moai-tangata-cambridge-z-6123-location",
@@ -6483,7 +6606,8 @@
       "id": "moai-tangata-leiden-rv-702-1-holder",
       "objectId": "moai-tangata-leiden-rv-702-1",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "moai-tangata-leiden-rv-702-1-location",
@@ -6537,7 +6661,8 @@
       "id": "moai-tangata-leiden-rv-547-3-holder",
       "objectId": "moai-tangata-leiden-rv-547-3",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "moai-tangata-leiden-rv-547-3-location",
@@ -6591,7 +6716,8 @@
       "id": "moai-tangata-lubeck-3778b-holder",
       "objectId": "moai-tangata-lubeck-3778b",
       "predicate": "held_by",
-      "value": "Völkerkundesammlung Lübeck"
+      "value": "Völkerkundesammlung Lübeck",
+      "holderId": "voelkerkundesammlung-luebeck"
     },
     {
       "id": "moai-tangata-lubeck-3778b-location",
@@ -6639,7 +6765,8 @@
       "id": "moai-tangata-wellington-fe010507-holder",
       "objectId": "moai-tangata-wellington-fe010507",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "moai-tangata-wellington-fe010507-location",
@@ -6693,7 +6820,8 @@
       "id": "moai-tangata-bergen-bme-1193-holder",
       "objectId": "moai-tangata-bergen-bme-1193",
       "predicate": "held_by",
-      "value": "University Museum of Bergen"
+      "value": "University Museum of Bergen",
+      "holderId": "university-museum-bergen"
     },
     {
       "id": "moai-tangata-bergen-bme-1193-location",
@@ -6747,7 +6875,8 @@
       "id": "moai-tangata-edinburgh-a-1895-301-holder",
       "objectId": "moai-tangata-edinburgh-a-1895-301",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-tangata-edinburgh-a-1895-301-location",
@@ -6801,7 +6930,8 @@
       "id": "moai-tangata-dresden-18360-holder",
       "objectId": "moai-tangata-dresden-18360",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moai-tangata-dresden-18360-location",
@@ -6849,7 +6979,8 @@
       "id": "moai-tangata-stuttgart-5700-holder",
       "objectId": "moai-tangata-stuttgart-5700",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moai-tangata-stuttgart-5700-location",
@@ -6903,7 +7034,8 @@
       "id": "moai-tangata-stuttgart-5701-holder",
       "objectId": "moai-tangata-stuttgart-5701",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moai-tangata-stuttgart-5701-location",
@@ -6957,7 +7089,8 @@
       "id": "moai-tangata-stuttgart-30550-holder",
       "objectId": "moai-tangata-stuttgart-30550",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moai-tangata-stuttgart-30550-location",
@@ -7011,7 +7144,8 @@
       "id": "moai-tangata-stockholm-1908-03-0057-holder",
       "objectId": "moai-tangata-stockholm-1908-03-0057",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "moai-tangata-stockholm-1908-03-0057-location",
@@ -7059,7 +7193,8 @@
       "id": "moai-tangata-frankfurt-am-main-ns-11788-holder",
       "objectId": "moai-tangata-frankfurt-am-main-ns-11788",
       "predicate": "held_by",
-      "value": "Weltkulturen Museum, Frankfurt am Main"
+      "value": "Weltkulturen Museum, Frankfurt am Main",
+      "holderId": "weltkulturen-museum-frankfurt"
     },
     {
       "id": "moai-tangata-frankfurt-am-main-ns-11788-location",
@@ -7113,7 +7248,8 @@
       "id": "moai-tangata-otago-d59-248-holder",
       "objectId": "moai-tangata-otago-d59-248",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "moai-tangata-otago-d59-248-location",
@@ -7167,7 +7303,8 @@
       "id": "moai-tangata-edinburgh-a-1936-99-holder",
       "objectId": "moai-tangata-edinburgh-a-1936-99",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-tangata-edinburgh-a-1936-99-location",
@@ -7221,7 +7358,8 @@
       "id": "moai-tangata-vina-del-mar-4102-holder",
       "objectId": "moai-tangata-vina-del-mar-4102",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-4102-location",
@@ -7269,7 +7407,8 @@
       "id": "moai-tangata-vina-del-mar-5033-holder",
       "objectId": "moai-tangata-vina-del-mar-5033",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-5033-location",
@@ -7323,7 +7462,8 @@
       "id": "moai-tangata-vina-del-mar-975-holder",
       "objectId": "moai-tangata-vina-del-mar-975",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-975-location",
@@ -7377,7 +7517,8 @@
       "id": "moai-tangata-vina-del-mar-982-holder",
       "objectId": "moai-tangata-vina-del-mar-982",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-982-location",
@@ -7431,7 +7572,8 @@
       "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1830-547-coll-felmermayer-location",
@@ -7485,7 +7627,8 @@
       "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1832-546-coll-felbermayer-location",
@@ -7533,7 +7676,8 @@
       "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1840-554-coll-felbermayer-location",
@@ -7581,7 +7725,8 @@
       "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1824-538-coll-felbermayer-location",
@@ -7629,7 +7774,8 @@
       "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1288-2-coll-felbermayer-location",
@@ -7677,7 +7823,8 @@
       "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1291-5-coll-felbermayer-location",
@@ -7725,7 +7872,8 @@
       "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1331-45-coll-felbermayer-location",
@@ -7773,7 +7921,8 @@
       "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1333-47-coll-felbermayer-location",
@@ -7827,7 +7976,8 @@
       "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1827-541-2-coll-felbermayer-location",
@@ -7875,7 +8025,8 @@
       "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1829-543-2-coll-felbermayer-location",
@@ -7929,7 +8080,8 @@
       "id": "moai-tangata-lubeck-7100b-holder",
       "objectId": "moai-tangata-lubeck-7100b",
       "predicate": "held_by",
-      "value": "Völkerkundesammlung Lübeck"
+      "value": "Völkerkundesammlung Lübeck",
+      "holderId": "voelkerkundesammlung-luebeck"
     },
     {
       "id": "moai-tangata-lubeck-7100b-location",
@@ -7977,7 +8129,8 @@
       "id": "moai-tangata-cologne-46889-holder",
       "objectId": "moai-tangata-cologne-46889",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-tangata-cologne-46889-location",
@@ -8031,7 +8184,8 @@
       "id": "moai-tangata-frankfurt-am-main-ns-20327-holder",
       "objectId": "moai-tangata-frankfurt-am-main-ns-20327",
       "predicate": "held_by",
-      "value": "Weltkulturen Museum, Frankfurt am Main"
+      "value": "Weltkulturen Museum, Frankfurt am Main",
+      "holderId": "weltkulturen-museum-frankfurt"
     },
     {
       "id": "moai-tangata-frankfurt-am-main-ns-20327-location",
@@ -8085,7 +8239,8 @@
       "id": "moai-tangata-zurich-12311-holder",
       "objectId": "moai-tangata-zurich-12311",
       "predicate": "held_by",
-      "value": "Völkerkundemuseum der Universität Zürich"
+      "value": "Völkerkundemuseum der Universität Zürich",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-12311-location",
@@ -8139,7 +8294,8 @@
       "id": "moai-tangata-zurich-rpo-301-holder",
       "objectId": "moai-tangata-zurich-rpo-301",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-301-location",
@@ -8193,7 +8349,8 @@
       "id": "moai-tangata-zurich-09977-holder",
       "objectId": "moai-tangata-zurich-09977",
       "predicate": "held_by",
-      "value": "Völkerkundemuseum der Universität Zürich"
+      "value": "Völkerkundemuseum der Universität Zürich",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-09977-location",
@@ -8241,7 +8398,8 @@
       "id": "moai-tangata-zurich-rpo-302-holder",
       "objectId": "moai-tangata-zurich-rpo-302",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-302-location",
@@ -8295,7 +8453,8 @@
       "id": "moai-tangata-zurich-rpo-307-holder",
       "objectId": "moai-tangata-zurich-rpo-307",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-307-location",
@@ -8349,7 +8508,8 @@
       "id": "moai-tangata-zurich-rpo-308-holder",
       "objectId": "moai-tangata-zurich-rpo-308",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-308-location",
@@ -8403,7 +8563,8 @@
       "id": "moai-tangata-zurich-rpo-310-holder",
       "objectId": "moai-tangata-zurich-rpo-310",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-310-location",
@@ -8457,7 +8618,8 @@
       "id": "moai-tangata-zurich-rpo-311-holder",
       "objectId": "moai-tangata-zurich-rpo-311",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-311-location",
@@ -8511,7 +8673,8 @@
       "id": "moai-tangata-zurich-rpo-312-holder",
       "objectId": "moai-tangata-zurich-rpo-312",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-312-location",
@@ -8565,7 +8728,8 @@
       "id": "moai-tangata-zurich-rpo-313-holder",
       "objectId": "moai-tangata-zurich-rpo-313",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-313-location",
@@ -8619,7 +8783,8 @@
       "id": "moai-tangata-zurich-rpo-317-holder",
       "objectId": "moai-tangata-zurich-rpo-317",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-tangata-zurich-rpo-317-location",
@@ -8673,7 +8838,8 @@
       "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914-location",
@@ -8727,7 +8893,8 @@
       "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-11-registro-surdoc-4-1916-location",
@@ -8781,7 +8948,8 @@
       "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-4-registro-surdoc-4-1986-location",
@@ -8835,7 +9003,8 @@
       "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-6-registro-surdoc-4-1988-location",
@@ -8889,7 +9058,8 @@
       "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-7-registro-surdoc-4-1989-location",
@@ -8943,7 +9113,8 @@
       "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990-location",
@@ -8997,7 +9168,8 @@
       "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-22-registro-surdoc-4-1920-location",
@@ -9051,7 +9223,8 @@
       "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-10-registro-surdoc-4-1991-location",
@@ -9105,7 +9278,8 @@
       "id": "moai-tangata-canterbury-e138-635-114-38-holder",
       "objectId": "moai-tangata-canterbury-e138-635-114-38",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-tangata-canterbury-e138-635-114-38-location",
@@ -9153,7 +9327,8 @@
       "id": "moai-tangata-canterbury-e138-926-holder",
       "objectId": "moai-tangata-canterbury-e138-926",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-tangata-canterbury-e138-926-location",
@@ -9201,7 +9376,8 @@
       "id": "moai-tangata-hamburg-22-42-258-holder",
       "objectId": "moai-tangata-hamburg-22-42-258",
       "predicate": "held_by",
-      "value": "MARKK Hamburg"
+      "value": "MARKK Hamburg",
+      "holderId": "markk-hamburg"
     },
     {
       "id": "moai-tangata-hamburg-22-42-258-location",
@@ -9249,7 +9425,8 @@
       "id": "moai-tangata-edinburgh-a-1924-333-holder",
       "objectId": "moai-tangata-edinburgh-a-1924-333",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-tangata-edinburgh-a-1924-333-location",
@@ -9303,7 +9480,8 @@
       "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926-location",
@@ -9357,7 +9535,8 @@
       "id": "moai-tangata-gottingen-oz-454-holder",
       "objectId": "moai-tangata-gottingen-oz-454",
       "predicate": "held_by",
-      "value": "Ethnologische Sammlung der Universität Göttingen"
+      "value": "Ethnologische Sammlung der Universität Göttingen",
+      "holderId": "ethnological-collection-goettingen"
     },
     {
       "id": "moai-tangata-gottingen-oz-454-location",
@@ -9411,7 +9590,8 @@
       "id": "moai-tangata-bremen-d00320-holder",
       "objectId": "moai-tangata-bremen-d00320",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-tangata-bremen-d00320-location",
@@ -9465,7 +9645,8 @@
       "id": "moai-tangata-bremen-d06472-holder",
       "objectId": "moai-tangata-bremen-d06472",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-tangata-bremen-d06472-location",
@@ -9519,7 +9700,8 @@
       "id": "moai-tangata-gottingen-oz-455-holder",
       "objectId": "moai-tangata-gottingen-oz-455",
       "predicate": "held_by",
-      "value": "Ethnologische Sammlung der Universität Göttingen"
+      "value": "Ethnologische Sammlung der Universität Göttingen",
+      "holderId": "ethnological-collection-goettingen"
     },
     {
       "id": "moai-tangata-gottingen-oz-455-location",
@@ -9573,7 +9755,8 @@
       "id": "moai-tangata-otago-d36-985-holder",
       "objectId": "moai-tangata-otago-d36-985",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "moai-tangata-otago-d36-985-location",
@@ -9627,7 +9810,8 @@
       "id": "moai-tangata-vina-del-mar-5030-holder",
       "objectId": "moai-tangata-vina-del-mar-5030",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-5030-location",
@@ -9681,7 +9865,8 @@
       "id": "moai-tangata-vina-del-mar-1036-holder",
       "objectId": "moai-tangata-vina-del-mar-1036",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1036-location",
@@ -9735,7 +9920,8 @@
       "id": "moai-tangata-vina-del-mar-1037-holder",
       "objectId": "moai-tangata-vina-del-mar-1037",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1037-location",
@@ -9789,7 +9975,8 @@
       "id": "moai-tangata-vina-del-mar-1039-holder",
       "objectId": "moai-tangata-vina-del-mar-1039",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1039-location",
@@ -9837,7 +10024,8 @@
       "id": "moai-tangata-vina-del-mar-1040-holder",
       "objectId": "moai-tangata-vina-del-mar-1040",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1040-location",
@@ -9891,7 +10079,8 @@
       "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1352-66-coll-felbermayer-location",
@@ -9945,7 +10134,8 @@
       "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938-location",
@@ -9999,7 +10189,8 @@
       "id": "moai-tangata-stuttgart-118194-holder",
       "objectId": "moai-tangata-stuttgart-118194",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moai-tangata-stuttgart-118194-location",
@@ -10053,7 +10244,8 @@
       "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-holder",
       "objectId": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-tangata-vina-del-mar-1396-110-coll-felbermayer-location",
@@ -10101,7 +10293,8 @@
       "id": "moai-tangata-stockholm-1950-01-0001-holder",
       "objectId": "moai-tangata-stockholm-1950-01-0001",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "moai-tangata-stockholm-1950-01-0001-location",
@@ -10149,7 +10342,8 @@
       "id": "moai-tangata-bremen-d13418-holder",
       "objectId": "moai-tangata-bremen-d13418",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-tangata-bremen-d13418-location",
@@ -10203,7 +10397,8 @@
       "id": "moai-tangata-edinburgh-a-1954-101-holder",
       "objectId": "moai-tangata-edinburgh-a-1954-101",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-tangata-edinburgh-a-1954-101-location",
@@ -10257,7 +10452,8 @@
       "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "moai-tangata-valparaiso-mhnv-67-registro-surdoc-4-1998-location",
@@ -10311,7 +10507,8 @@
       "id": "moai-tangata-bremen-d14890-holder",
       "objectId": "moai-tangata-bremen-d14890",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-tangata-bremen-d14890-location",
@@ -10365,7 +10562,8 @@
       "id": "moai-tangata-cologne-54553-holder",
       "objectId": "moai-tangata-cologne-54553",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-tangata-cologne-54553-location",
@@ -10419,7 +10617,8 @@
       "id": "moai-tangata-berlin-vi-1000-holder",
       "objectId": "moai-tangata-berlin-vi-1000",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-tangata-berlin-vi-1000-location",
@@ -10473,7 +10672,8 @@
       "id": "moai-tangata-bremen-d13412-holder",
       "objectId": "moai-tangata-bremen-d13412",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-tangata-bremen-d13412-location",
@@ -10527,7 +10727,8 @@
       "id": "moai-tangata-bremen-d13419-holder",
       "objectId": "moai-tangata-bremen-d13419",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moai-tangata-bremen-d13419-location",
@@ -10581,7 +10782,8 @@
       "id": "moai-tangata-rapa-nui-17-295-holder",
       "objectId": "moai-tangata-rapa-nui-17-295",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-tangata-rapa-nui-17-295-location",
@@ -10635,7 +10837,8 @@
       "id": "moai-tangata-rapa-nui-17-332-holder",
       "objectId": "moai-tangata-rapa-nui-17-332",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-tangata-rapa-nui-17-332-location",
@@ -10689,7 +10892,8 @@
       "id": "moai-tangata-rapa-nui-17-335-holder",
       "objectId": "moai-tangata-rapa-nui-17-335",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-tangata-rapa-nui-17-335-location",
@@ -10743,7 +10947,8 @@
       "id": "moai-tangata-rapa-nui-17-416-holder",
       "objectId": "moai-tangata-rapa-nui-17-416",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-tangata-rapa-nui-17-416-location",
@@ -10797,7 +11002,8 @@
       "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-holder",
       "objectId": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moai-pa-apa-a-canterbury-e150-1136-oldman-100-341-location",
@@ -10851,7 +11057,8 @@
       "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-holder",
       "objectId": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "moai-pa-apa-a-otago-o51-1-oldman-collection-number-347-location",
@@ -10905,7 +11112,8 @@
       "id": "moai-pa-apa-a-new-york-1979-206-1478-holder",
       "objectId": "moai-pa-apa-a-new-york-1979-206-1478",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "moai-pa-apa-a-new-york-1979-206-1478-location",
@@ -10959,7 +11167,8 @@
       "id": "moai-pa-apa-a-berlin-vi-4912-holder",
       "objectId": "moai-pa-apa-a-berlin-vi-4912",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-pa-apa-a-berlin-vi-4912-location",
@@ -11013,7 +11222,8 @@
       "id": "moai-pa-apa-a-edinburgh-a-1895-373-holder",
       "objectId": "moai-pa-apa-a-edinburgh-a-1895-373",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-pa-apa-a-edinburgh-a-1895-373-location",
@@ -11067,7 +11277,8 @@
       "id": "moai-pa-apa-a-otago-d20-569-holder",
       "objectId": "moai-pa-apa-a-otago-d20-569",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "moai-pa-apa-a-otago-d20-569-location",
@@ -11121,7 +11332,8 @@
       "id": "moai-pa-apa-a-lubeck-7100a-holder",
       "objectId": "moai-pa-apa-a-lubeck-7100a",
       "predicate": "held_by",
-      "value": "Völkerkundesammlung Lübeck"
+      "value": "Völkerkundesammlung Lübeck",
+      "holderId": "voelkerkundesammlung-luebeck"
     },
     {
       "id": "moai-pa-apa-a-lubeck-7100a-location",
@@ -11169,7 +11381,8 @@
       "id": "moai-pa-apa-a-zurich-04964-holder",
       "objectId": "moai-pa-apa-a-zurich-04964",
       "predicate": "held_by",
-      "value": "Völkerkundemuseum der Universität Zürich"
+      "value": "Völkerkundemuseum der Universität Zürich",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-pa-apa-a-zurich-04964-location",
@@ -11223,7 +11436,8 @@
       "id": "moai-pa-apa-a-cambridge-1953-568-a-holder",
       "objectId": "moai-pa-apa-a-cambridge-1953-568-a",
       "predicate": "held_by",
-      "value": "Museum of Archeology and Anthropology"
+      "value": "Museum of Archeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "moai-pa-apa-a-cambridge-1953-568-a-location",
@@ -11277,7 +11491,8 @@
       "id": "moai-pa-apa-a-berlin-vi-42601-b-holder",
       "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-pa-apa-a-berlin-vi-42601-b-location",
@@ -11331,7 +11546,8 @@
       "id": "moai-pa-apa-a-leipzig-po-00437-holder",
       "objectId": "moai-pa-apa-a-leipzig-po-00437",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "moai-pa-apa-a-leipzig-po-00437-location",
@@ -11385,7 +11601,8 @@
       "id": "moai-pa-apa-a-hamburg-e-617-holder",
       "objectId": "moai-pa-apa-a-hamburg-e-617",
       "predicate": "held_by",
-      "value": "MARKK Hamburg"
+      "value": "MARKK Hamburg",
+      "holderId": "markk-hamburg"
     },
     {
       "id": "moai-pa-apa-a-hamburg-e-617-location",
@@ -11433,7 +11650,8 @@
       "id": "moai-pa-apa-a-hamburg-22-42-259-holder",
       "objectId": "moai-pa-apa-a-hamburg-22-42-259",
       "predicate": "held_by",
-      "value": "MARKK Hamburg"
+      "value": "MARKK Hamburg",
+      "holderId": "markk-hamburg"
     },
     {
       "id": "moai-pa-apa-a-hamburg-22-42-259-location",
@@ -11481,7 +11699,8 @@
       "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-holder",
       "objectId": "moai-pa-apa-a-zurich-d0705-original-no-d172",
       "predicate": "held_by",
-      "value": "Völkerkundemuseum der Universität Zürich"
+      "value": "Völkerkundemuseum der Universität Zürich",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-pa-apa-a-zurich-d0705-original-no-d172-location",
@@ -11535,7 +11754,8 @@
       "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-holder",
       "objectId": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-pa-apa-a-vina-del-mar-1329-43-2-coll-felbermayer-location",
@@ -11583,7 +11803,8 @@
       "id": "moai-pa-apa-a-cologne-46890-holder",
       "objectId": "moai-pa-apa-a-cologne-46890",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-pa-apa-a-cologne-46890-location",
@@ -11637,7 +11858,8 @@
       "id": "moai-pa-apa-a-zurich-rpo-306-holder",
       "objectId": "moai-pa-apa-a-zurich-rpo-306",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-pa-apa-a-zurich-rpo-306-location",
@@ -11691,7 +11913,8 @@
       "id": "moai-pa-apa-a-zurich-rpo-309-holder",
       "objectId": "moai-pa-apa-a-zurich-rpo-309",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-pa-apa-a-zurich-rpo-309-location",
@@ -11745,7 +11968,8 @@
       "id": "moai-pa-apa-a-zurich-12312-holder",
       "objectId": "moai-pa-apa-a-zurich-12312",
       "predicate": "held_by",
-      "value": "Völkerkundemuseum der Universität Zürich"
+      "value": "Völkerkundemuseum der Universität Zürich",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "moai-pa-apa-a-zurich-12312-location",
@@ -11799,7 +12023,8 @@
       "id": "moai-pa-apa-a-cologne-48526-holder",
       "objectId": "moai-pa-apa-a-cologne-48526",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-pa-apa-a-cologne-48526-location",
@@ -11853,7 +12078,8 @@
       "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-holder",
       "objectId": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moai-pa-apa-a-vina-del-mar-1335-49-2-coll-felbermayer-location",
@@ -11901,7 +12127,8 @@
       "id": "moai-pa-apa-a-rapa-nui-17-9-holder",
       "objectId": "moai-pa-apa-a-rapa-nui-17-9",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-pa-apa-a-rapa-nui-17-9-location",
@@ -11955,7 +12182,8 @@
       "id": "moai-pa-apa-a-rapa-nui-17-259-holder",
       "objectId": "moai-pa-apa-a-rapa-nui-17-259",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "moai-pa-apa-a-rapa-nui-17-259-location",
@@ -12009,7 +12237,8 @@
       "id": "reimiro-canterbury-e150-1124-oldman-359-105-holder",
       "objectId": "reimiro-canterbury-e150-1124-oldman-359-105",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "reimiro-canterbury-e150-1124-oldman-359-105-location",
@@ -12063,7 +12292,8 @@
       "id": "reimiro-canterbury-e149-175-20-49-holder",
       "objectId": "reimiro-canterbury-e149-175-20-49",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "reimiro-canterbury-e149-175-20-49-location",
@@ -12111,7 +12341,8 @@
       "id": "reimiro-new-york-1979-206-1527-holder",
       "objectId": "reimiro-new-york-1979-206-1527",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "reimiro-new-york-1979-206-1527-location",
@@ -12165,7 +12396,8 @@
       "id": "reimiro-berlin-vi-4870-holder",
       "objectId": "reimiro-berlin-vi-4870",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "reimiro-berlin-vi-4870-location",
@@ -12219,7 +12451,8 @@
       "id": "reimiro-leipzig-po-00440-holder",
       "objectId": "reimiro-leipzig-po-00440",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "reimiro-leipzig-po-00440-location",
@@ -12273,7 +12506,8 @@
       "id": "reimiro-leipzig-po-00441-holder",
       "objectId": "reimiro-leipzig-po-00441",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "reimiro-leipzig-po-00441-location",
@@ -12327,7 +12561,8 @@
       "id": "reimiro-cambridge-e-1894-94-holder",
       "objectId": "reimiro-cambridge-e-1894-94",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "reimiro-cambridge-e-1894-94-location",
@@ -12375,7 +12610,8 @@
       "id": "reimiro-berlin-vi-12648-holder",
       "objectId": "reimiro-berlin-vi-12648",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "reimiro-berlin-vi-12648-location",
@@ -12429,7 +12665,8 @@
       "id": "reimiro-stockholm-1909-10-0021-holder",
       "objectId": "reimiro-stockholm-1909-10-0021",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "reimiro-stockholm-1909-10-0021-location",
@@ -12477,7 +12714,8 @@
       "id": "reimiro-cambridge-1920-801-holder",
       "objectId": "reimiro-cambridge-1920-801",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "reimiro-cambridge-1920-801-location",
@@ -12531,7 +12769,8 @@
       "id": "reimiro-otago-d34-600-holder",
       "objectId": "reimiro-otago-d34-600",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "reimiro-otago-d34-600-location",
@@ -12585,7 +12824,8 @@
       "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-holder",
       "objectId": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "reimiro-valparaiso-mhnv-28-registro-surdoc-4-1994-location",
@@ -12639,7 +12879,8 @@
       "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-holder",
       "objectId": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "reimiro-valparaiso-mhnv-38-registro-surdoc-4-1995-location",
@@ -12693,7 +12934,8 @@
       "id": "reimiro-rapa-nui-17-30-holder",
       "objectId": "reimiro-rapa-nui-17-30",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "reimiro-rapa-nui-17-30-location",
@@ -12747,7 +12989,8 @@
       "id": "reimiro-vina-del-mar-69-holder",
       "objectId": "reimiro-vina-del-mar-69",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "reimiro-vina-del-mar-69-location",
@@ -12801,7 +13044,8 @@
       "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-holder",
       "objectId": "reimiro-vina-del-mar-1639-353-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "reimiro-vina-del-mar-1639-353-coll-felbermayer-location",
@@ -12849,7 +13093,8 @@
       "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-holder",
       "objectId": "reimiro-vina-del-mar-1651-365-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "reimiro-vina-del-mar-1651-365-coll-felbermayer-location",
@@ -12897,7 +13142,8 @@
       "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-holder",
       "objectId": "reimiro-vina-del-mar-1809-523-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "reimiro-vina-del-mar-1809-523-coll-felbermayer-location",
@@ -12945,7 +13191,8 @@
       "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-holder",
       "objectId": "reimiro-vina-del-mar-1856-570-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "reimiro-vina-del-mar-1856-570-coll-felbermayer-location",
@@ -12993,7 +13240,8 @@
       "id": "reimiro-vina-del-mar-3813-holder",
       "objectId": "reimiro-vina-del-mar-3813",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "reimiro-vina-del-mar-3813-location",
@@ -13041,7 +13289,8 @@
       "id": "ao-canterbury-e150-1137-oldman-355-holder",
       "objectId": "ao-canterbury-e150-1137-oldman-355",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "ao-canterbury-e150-1137-oldman-355-location",
@@ -13095,7 +13344,8 @@
       "id": "ao-te-papa-holder",
       "objectId": "ao-te-papa",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "ao-te-papa-location",
@@ -13143,7 +13393,8 @@
       "id": "ao-otago-d47-560-holder",
       "objectId": "ao-otago-d47-560",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "ao-otago-d47-560-location",
@@ -13197,7 +13448,8 @@
       "id": "ao-berlin-vi-4950-a-holder",
       "objectId": "ao-berlin-vi-4950-a",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ao-berlin-vi-4950-a-location",
@@ -13251,7 +13503,8 @@
       "id": "ao-vienna-vo-22845-holder",
       "objectId": "ao-vienna-vo-22845",
       "predicate": "held_by",
-      "value": "Weltmuseum Wien"
+      "value": "Weltmuseum Wien",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "ao-vienna-vo-22845-location",
@@ -13305,7 +13558,8 @@
       "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-holder",
       "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956-location",
@@ -13359,7 +13613,8 @@
       "id": "rapa-canterbury-e150-1138-oldman-354-holder",
       "objectId": "rapa-canterbury-e150-1138-oldman-354",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "rapa-canterbury-e150-1138-oldman-354-location",
@@ -13413,7 +13668,8 @@
       "id": "rapa-canterbury-e150-1139-oldman-108-360-holder",
       "objectId": "rapa-canterbury-e150-1139-oldman-108-360",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "rapa-canterbury-e150-1139-oldman-108-360-location",
@@ -13467,7 +13723,8 @@
       "id": "rapa-canterbury-e150-1140-oldman-s360-holder",
       "objectId": "rapa-canterbury-e150-1140-oldman-s360",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "rapa-canterbury-e150-1140-oldman-s360-location",
@@ -13521,7 +13778,8 @@
       "id": "rapa-new-york-1978-412-1571-holder",
       "objectId": "rapa-new-york-1978-412-1571",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "rapa-new-york-1978-412-1571-location",
@@ -13575,7 +13833,8 @@
       "id": "rapa-new-york-1979-206-1452-holder",
       "objectId": "rapa-new-york-1979-206-1452",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "rapa-new-york-1979-206-1452-location",
@@ -13629,7 +13888,8 @@
       "id": "rapa-cambridge-1955-156-a-holder",
       "objectId": "rapa-cambridge-1955-156-a",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "rapa-cambridge-1955-156-a-location",
@@ -13683,7 +13943,8 @@
       "id": "rapa-cambridge-1955-156-b-holder",
       "objectId": "rapa-cambridge-1955-156-b",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "rapa-cambridge-1955-156-b-location",
@@ -13737,7 +13998,8 @@
       "id": "rapa-cambridge-1955-156-c-holder",
       "objectId": "rapa-cambridge-1955-156-c",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "rapa-cambridge-1955-156-c-location",
@@ -13791,7 +14053,8 @@
       "id": "rapa-berlin-vi-2129-b-holder",
       "objectId": "rapa-berlin-vi-2129-b",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "rapa-berlin-vi-2129-b-location",
@@ -13845,7 +14108,8 @@
       "id": "rapa-cologne-32602-holder",
       "objectId": "rapa-cologne-32602",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "rapa-cologne-32602-location",
@@ -13899,7 +14163,8 @@
       "id": "rapa-canterbury-e150-1140-awf1885-holder",
       "objectId": "rapa-canterbury-e150-1140-awf1885",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "rapa-canterbury-e150-1140-awf1885-location",
@@ -13947,7 +14212,8 @@
       "id": "rapa-leiden-rv-945-21-holder",
       "objectId": "rapa-leiden-rv-945-21",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "rapa-leiden-rv-945-21-location",
@@ -14001,7 +14267,8 @@
       "id": "rapa-cambridge-e-1894-95-holder",
       "objectId": "rapa-cambridge-e-1894-95",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "rapa-cambridge-e-1894-95-location",
@@ -14055,7 +14322,8 @@
       "id": "rapa-otago-o50-128-holder",
       "objectId": "rapa-otago-o50-128",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "rapa-otago-o50-128-location",
@@ -14109,7 +14377,8 @@
       "id": "paoa-berlin-vi-4908-holder",
       "objectId": "paoa-berlin-vi-4908",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "paoa-berlin-vi-4908-location",
@@ -14163,7 +14432,8 @@
       "id": "paoa-berlin-vi-4864-a-holder",
       "objectId": "paoa-berlin-vi-4864-a",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "paoa-berlin-vi-4864-a-location",
@@ -14217,7 +14487,8 @@
       "id": "paoa-dresden-18424-holder",
       "objectId": "paoa-dresden-18424",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "paoa-dresden-18424-location",
@@ -14265,7 +14536,8 @@
       "id": "paoa-dresden-26218-holder",
       "objectId": "paoa-dresden-26218",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "paoa-dresden-26218-location",
@@ -14313,7 +14585,8 @@
       "id": "paoa-cambridge-e-1907-455-holder",
       "objectId": "paoa-cambridge-e-1907-455",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "paoa-cambridge-e-1907-455-location",
@@ -14367,7 +14640,8 @@
       "id": "paoa-frankfurt-am-main-ns-11126-holder",
       "objectId": "paoa-frankfurt-am-main-ns-11126",
       "predicate": "held_by",
-      "value": "Weltkulturen Museum, Frankfurt am Main"
+      "value": "Weltkulturen Museum, Frankfurt am Main",
+      "holderId": "weltkulturen-museum-frankfurt"
     },
     {
       "id": "paoa-frankfurt-am-main-ns-11126-location",
@@ -14421,7 +14695,8 @@
       "id": "paoa-stockholm-1909-10-0022-holder",
       "objectId": "paoa-stockholm-1909-10-0022",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "paoa-stockholm-1909-10-0022-location",
@@ -14469,7 +14744,8 @@
       "id": "paoa-zurich-12314-holder",
       "objectId": "paoa-zurich-12314",
       "predicate": "held_by",
-      "value": "Völkerkundemuseum der Universität Zürich"
+      "value": "Völkerkundemuseum der Universität Zürich",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "paoa-zurich-12314-location",
@@ -14523,7 +14799,8 @@
       "id": "paoa-zurich-rpo-314-holder",
       "objectId": "paoa-zurich-rpo-314",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "paoa-zurich-rpo-314-location",
@@ -14577,7 +14854,8 @@
       "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-holder",
       "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984-location",
@@ -14631,7 +14909,8 @@
       "id": "paoa-otago-d31-846-holder",
       "objectId": "paoa-otago-d31-846",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "paoa-otago-d31-846-location",
@@ -14685,7 +14964,8 @@
       "id": "paoa-otago-d31-847-holder",
       "objectId": "paoa-otago-d31-847",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "paoa-otago-d31-847-location",
@@ -14733,7 +15013,8 @@
       "id": "paoa-bremen-d13432-holder",
       "objectId": "paoa-bremen-d13432",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "paoa-bremen-d13432-location",
@@ -14787,7 +15068,8 @@
       "id": "ua-canterbury-e150-1141-oldman-352-holder",
       "objectId": "ua-canterbury-e150-1141-oldman-352",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "ua-canterbury-e150-1141-oldman-352-location",
@@ -14841,7 +15123,8 @@
       "id": "ua-canterbury-e150-1142-oldman-356-holder",
       "objectId": "ua-canterbury-e150-1142-oldman-356",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "ua-canterbury-e150-1142-oldman-356-location",
@@ -14895,7 +15178,8 @@
       "id": "ua-canterbury-e150-1143-oldman-107-1117-holder",
       "objectId": "ua-canterbury-e150-1143-oldman-107-1117",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "ua-canterbury-e150-1143-oldman-107-1117-location",
@@ -14949,7 +15233,8 @@
       "id": "ua-canterbury-e150-1144-oldman-1118-holder",
       "objectId": "ua-canterbury-e150-1144-oldman-1118",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "ua-canterbury-e150-1144-oldman-1118-location",
@@ -15003,7 +15288,8 @@
       "id": "ua-wellington-ol001114-holder",
       "objectId": "ua-wellington-ol001114",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "ua-wellington-ol001114-location",
@@ -15051,7 +15337,8 @@
       "id": "ua-wellington-ol001119-holder",
       "objectId": "ua-wellington-ol001119",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "ua-wellington-ol001119-location",
@@ -15105,7 +15392,8 @@
       "id": "ua-te-papa-holder",
       "objectId": "ua-te-papa",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "ua-te-papa-location",
@@ -15159,7 +15447,8 @@
       "id": "ua-cambridge-1954-102-holder",
       "objectId": "ua-cambridge-1954-102",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "ua-cambridge-1954-102-location",
@@ -15213,7 +15502,8 @@
       "id": "ua-cambridge-1927-1452-holder",
       "objectId": "ua-cambridge-1927-1452",
       "predicate": "held_by",
-      "value": "Museum of Archaeology and Anthropology"
+      "value": "Museum of Archaeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "ua-cambridge-1927-1452-location",
@@ -15267,7 +15557,8 @@
       "id": "ua-edinburgh-a-1880-14-1-holder",
       "objectId": "ua-edinburgh-a-1880-14-1",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "ua-edinburgh-a-1880-14-1-location",
@@ -15321,7 +15612,8 @@
       "id": "ua-dresden-18370-holder",
       "objectId": "ua-dresden-18370",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "ua-dresden-18370-location",
@@ -15369,7 +15661,8 @@
       "id": "ua-hildesheim-v-62-holder",
       "objectId": "ua-hildesheim-v-62",
       "predicate": "held_by",
-      "value": "Roemer- und Pelizaeus-Museum Hildesheim"
+      "value": "Roemer- und Pelizaeus-Museum Hildesheim",
+      "holderId": "roemer-pelizaeus-museum"
     },
     {
       "id": "ua-hildesheim-v-62-location",
@@ -15423,7 +15716,8 @@
       "id": "ua-berlin-vi-4896-holder",
       "objectId": "ua-berlin-vi-4896",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ua-berlin-vi-4896-location",
@@ -15477,7 +15771,8 @@
       "id": "ua-berlin-vi-4905-holder",
       "objectId": "ua-berlin-vi-4905",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ua-berlin-vi-4905-location",
@@ -15531,7 +15826,8 @@
       "id": "ua-munich-11-170-holder",
       "objectId": "ua-munich-11-170",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "ua-munich-11-170-location",
@@ -15585,7 +15881,8 @@
       "id": "ua-stockholm-1885-05-0001-holder",
       "objectId": "ua-stockholm-1885-05-0001",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "ua-stockholm-1885-05-0001-location",
@@ -15633,7 +15930,8 @@
       "id": "ua-leiden-rv-579-1-holder",
       "objectId": "ua-leiden-rv-579-1",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "ua-leiden-rv-579-1-location",
@@ -15687,7 +15985,8 @@
       "id": "ua-edinburgh-a-1895-371-holder",
       "objectId": "ua-edinburgh-a-1895-371",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "ua-edinburgh-a-1895-371-location",
@@ -15741,7 +16040,8 @@
       "id": "ua-stuttgart-4567-holder",
       "objectId": "ua-stuttgart-4567",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "ua-stuttgart-4567-location",
@@ -15795,7 +16095,8 @@
       "id": "ua-stuttgart-44352-holder",
       "objectId": "ua-stuttgart-44352",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "ua-stuttgart-44352-location",
@@ -15849,7 +16150,8 @@
       "id": "ua-berlin-vi-24939-holder",
       "objectId": "ua-berlin-vi-24939",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ua-berlin-vi-24939-location",
@@ -15903,7 +16205,8 @@
       "id": "ua-berlin-vi-24940-holder",
       "objectId": "ua-berlin-vi-24940",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ua-berlin-vi-24940-location",
@@ -15957,7 +16260,8 @@
       "id": "ua-frankfurt-am-main-ns-13249-holder",
       "objectId": "ua-frankfurt-am-main-ns-13249",
       "predicate": "held_by",
-      "value": "Weltkulturen Museum, Frankfurt am Main"
+      "value": "Weltkulturen Museum, Frankfurt am Main",
+      "holderId": "weltkulturen-museum-frankfurt"
     },
     {
       "id": "ua-frankfurt-am-main-ns-13249-location",
@@ -16011,7 +16315,8 @@
       "id": "ua-wellington-fe008597-holder",
       "objectId": "ua-wellington-fe008597",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "ua-wellington-fe008597-location",
@@ -16065,7 +16370,8 @@
       "id": "ua-zurich-rpo-315-holder",
       "objectId": "ua-zurich-rpo-315",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "ua-zurich-rpo-315-location",
@@ -16119,7 +16425,8 @@
       "id": "ua-vina-del-mar-1027-holder",
       "objectId": "ua-vina-del-mar-1027",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "ua-vina-del-mar-1027-location",
@@ -16167,7 +16474,8 @@
       "id": "ua-dresden-33498-holder",
       "objectId": "ua-dresden-33498",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "ua-dresden-33498-location",
@@ -16215,7 +16523,8 @@
       "id": "ua-stuttgart-118195-holder",
       "objectId": "ua-stuttgart-118195",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "ua-stuttgart-118195-location",
@@ -16269,7 +16578,8 @@
       "id": "ua-leiden-tm-2593-7-holder",
       "objectId": "ua-leiden-tm-2593-7",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "ua-leiden-tm-2593-7-location",
@@ -16323,7 +16633,8 @@
       "id": "ua-goteborg-1927-13-0001-holder",
       "objectId": "ua-goteborg-1927-13-0001",
       "predicate": "held_by",
-      "value": "Världskultur Museet"
+      "value": "Världskultur Museet",
+      "holderId": "varldskulturmuseet"
     },
     {
       "id": "ua-goteborg-1927-13-0001-location",
@@ -16371,7 +16682,8 @@
       "id": "ua-goteborg-1921-18-0002-holder",
       "objectId": "ua-goteborg-1921-18-0002",
       "predicate": "held_by",
-      "value": "Världskultur Museet"
+      "value": "Världskultur Museet",
+      "holderId": "varldskulturmuseet"
     },
     {
       "id": "ua-goteborg-1921-18-0002-location",
@@ -16419,7 +16731,8 @@
       "id": "ua-stockholm-1926-09-0001-holder",
       "objectId": "ua-stockholm-1926-09-0001",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "ua-stockholm-1926-09-0001-location",
@@ -16467,7 +16780,8 @@
       "id": "ua-stockholm-1926-09-0002-holder",
       "objectId": "ua-stockholm-1926-09-0002",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "ua-stockholm-1926-09-0002-location",
@@ -16515,7 +16829,8 @@
       "id": "ua-otago-d32-483-holder",
       "objectId": "ua-otago-d32-483",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "ua-otago-d32-483-location",
@@ -16569,7 +16884,8 @@
       "id": "ua-gottingen-oz-1633-holder",
       "objectId": "ua-gottingen-oz-1633",
       "predicate": "held_by",
-      "value": "Ethnologische Sammlung der Universität Göttingen"
+      "value": "Ethnologische Sammlung der Universität Göttingen",
+      "holderId": "ethnological-collection-goettingen"
     },
     {
       "id": "ua-gottingen-oz-1633-location",
@@ -16623,7 +16939,8 @@
       "id": "ua-bergen-bme-4936-holder",
       "objectId": "ua-bergen-bme-4936",
       "predicate": "held_by",
-      "value": "University Museum of Bergen"
+      "value": "University Museum of Bergen",
+      "holderId": "university-museum-bergen"
     },
     {
       "id": "ua-bergen-bme-4936-location",
@@ -16677,7 +16994,8 @@
       "id": "ua-rapa-nui-17-194-holder",
       "objectId": "ua-rapa-nui-17-194",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)"
+      "value": "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "ua-rapa-nui-17-194-location",
@@ -16731,7 +17049,8 @@
       "id": "tangata-manu-bremen-d00319-holder",
       "objectId": "tangata-manu-bremen-d00319",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "tangata-manu-bremen-d00319-location",
@@ -16785,7 +17104,8 @@
       "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-holder",
       "objectId": "tangata-manu-braunschweig-1708-1149-00-go-iv-763",
       "predicate": "held_by",
-      "value": "Städtisches Museum Braunschweig"
+      "value": "Städtisches Museum Braunschweig",
+      "holderId": "staedtisches-museum-braunschweig"
     },
     {
       "id": "tangata-manu-braunschweig-1708-1149-00-go-iv-763-location",
@@ -16839,7 +17159,8 @@
       "id": "tangata-manu-bremen-d13426-holder",
       "objectId": "tangata-manu-bremen-d13426",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "tangata-manu-bremen-d13426-location",
@@ -16893,7 +17214,8 @@
       "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-holder",
       "objectId": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "tangata-manu-valparaiso-mhnv-40-registro-surdoc-4-1931-location",
@@ -16947,7 +17269,8 @@
       "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-holder",
       "objectId": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "tangata-manu-valparaiso-mhnv-54-registro-surdoc-4-358-location",
@@ -17001,7 +17324,8 @@
       "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-holder",
       "objectId": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "tangata-manu-vina-del-mar-1289-3-coll-felbermayer-location",
@@ -17049,7 +17373,8 @@
       "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-holder",
       "objectId": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "tangata-manu-vina-del-mar-1731-445-coll-felbermayer-location",
@@ -17103,7 +17428,8 @@
       "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-holder",
       "objectId": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "tangata-manu-vina-del-mar-1732-446-coll-felbermayer-location",
@@ -17151,7 +17477,8 @@
       "id": "tangata-manu-cologne-54536-holder",
       "objectId": "tangata-manu-cologne-54536",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "tangata-manu-cologne-54536-location",
@@ -17205,7 +17532,8 @@
       "id": "tangata-manu-cologne-54537-holder",
       "objectId": "tangata-manu-cologne-54537",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "tangata-manu-cologne-54537-location",
@@ -17259,7 +17587,8 @@
       "id": "tangata-manu-leipzig-po-01921-holder",
       "objectId": "tangata-manu-leipzig-po-01921",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "tangata-manu-leipzig-po-01921-location",
@@ -17313,7 +17642,8 @@
       "id": "tangata-manu-munich-94-317-755-holder",
       "objectId": "tangata-manu-munich-94-317-755",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "tangata-manu-munich-94-317-755-location",
@@ -17367,7 +17697,8 @@
       "id": "tangata-manu-lubeck-94-1-31-holder",
       "objectId": "tangata-manu-lubeck-94-1-31",
       "predicate": "held_by",
-      "value": "Völkerkundesammlung Lübeck"
+      "value": "Völkerkundesammlung Lübeck",
+      "holderId": "voelkerkundesammlung-luebeck"
     },
     {
       "id": "tangata-manu-lubeck-94-1-31-location",
@@ -17415,7 +17746,8 @@
       "id": "tangata-manu-vina-del-mar-5049-holder",
       "objectId": "tangata-manu-vina-del-mar-5049",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "tangata-manu-vina-del-mar-5049-location",
@@ -17469,7 +17801,8 @@
       "id": "tangata-manu-vina-del-mar-983-holder",
       "objectId": "tangata-manu-vina-del-mar-983",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "tangata-manu-vina-del-mar-983-location",
@@ -17523,7 +17856,8 @@
       "id": "tangata-manu-vina-del-mar-987-holder",
       "objectId": "tangata-manu-vina-del-mar-987",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "tangata-manu-vina-del-mar-987-location",
@@ -17577,7 +17911,8 @@
       "id": "tangata-manu-lubeck-2009-7-133-holder",
       "objectId": "tangata-manu-lubeck-2009-7-133",
       "predicate": "held_by",
-      "value": "Völkerkundesammlung Lübeck"
+      "value": "Völkerkundesammlung Lübeck",
+      "holderId": "voelkerkundesammlung-luebeck"
     },
     {
       "id": "tangata-manu-lubeck-2009-7-133-location",
@@ -17625,7 +17960,8 @@
       "id": "tangata-manu-vina-del-mar-4983-holder",
       "objectId": "tangata-manu-vina-del-mar-4983",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "tangata-manu-vina-del-mar-4983-location",
@@ -17673,7 +18009,8 @@
       "id": "heke-vienna-vo-22868-holder",
       "objectId": "heke-vienna-vo-22868",
       "predicate": "held_by",
-      "value": "Weltmuseum Wien"
+      "value": "Weltmuseum Wien",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "heke-vienna-vo-22868-location",
@@ -17727,7 +18064,8 @@
       "id": "honu-canterbury-e150-1125-oldman-104-348-holder",
       "objectId": "honu-canterbury-e150-1125-oldman-104-348",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "honu-canterbury-e150-1125-oldman-104-348-location",
@@ -17781,7 +18119,8 @@
       "id": "honu-cologne-32600-holder",
       "objectId": "honu-cologne-32600",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "honu-cologne-32600-location",
@@ -17835,7 +18174,8 @@
       "id": "honu-vina-del-mar-1805-519-coll-felbermayer-holder",
       "objectId": "honu-vina-del-mar-1805-519-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "honu-vina-del-mar-1805-519-coll-felbermayer-location",
@@ -17889,7 +18229,8 @@
       "id": "ika-berlin-vi-4913-holder",
       "objectId": "ika-berlin-vi-4913",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ika-berlin-vi-4913-location",
@@ -17943,7 +18284,8 @@
       "id": "ika-dresden-18365-holder",
       "objectId": "ika-dresden-18365",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "ika-dresden-18365-location",
@@ -17991,7 +18333,8 @@
       "id": "ika-dresden-18369-holder",
       "objectId": "ika-dresden-18369",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "ika-dresden-18369-location",
@@ -18039,7 +18382,8 @@
       "id": "ika-dresden-18414-holder",
       "objectId": "ika-dresden-18414",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "ika-dresden-18414-location",
@@ -18087,7 +18431,8 @@
       "id": "ika-dresden-18422-holder",
       "objectId": "ika-dresden-18422",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "ika-dresden-18422-location",
@@ -18135,7 +18480,8 @@
       "id": "ika-stockholm-1885-05-0003-holder",
       "objectId": "ika-stockholm-1885-05-0003",
       "predicate": "held_by",
-      "value": "Etnografiska Museet"
+      "value": "Etnografiska Museet",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "ika-stockholm-1885-05-0003-location",
@@ -18183,7 +18529,8 @@
       "id": "ika-berlin-vi-13229-holder",
       "objectId": "ika-berlin-vi-13229",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ika-berlin-vi-13229-location",
@@ -18237,7 +18584,8 @@
       "id": "ika-dresden-24812-holder",
       "objectId": "ika-dresden-24812",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "ika-dresden-24812-location",
@@ -18285,7 +18633,8 @@
       "id": "ika-zurich-rpo-318-holder",
       "objectId": "ika-zurich-rpo-318",
       "predicate": "held_by",
-      "value": "Museum Rietberg"
+      "value": "Museum Rietberg",
+      "holderId": "museum-rietberg"
     },
     {
       "id": "ika-zurich-rpo-318-location",
@@ -18339,7 +18688,8 @@
       "id": "ika-edinburgh-a-1924-335-holder",
       "objectId": "ika-edinburgh-a-1924-335",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "ika-edinburgh-a-1924-335-location",
@@ -18393,7 +18743,8 @@
       "id": "ika-gottingen-oz-1546-holder",
       "objectId": "ika-gottingen-oz-1546",
       "predicate": "held_by",
-      "value": "Ethnologische Sammlung der Universität Göttingen"
+      "value": "Ethnologische Sammlung der Universität Göttingen",
+      "holderId": "ethnological-collection-goettingen"
     },
     {
       "id": "ika-gottingen-oz-1546-location",
@@ -18447,7 +18798,8 @@
       "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-holder",
       "objectId": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "ika-valparaiso-mhnv-47-registro-surdoc-4-1936-location",
@@ -18501,7 +18853,8 @@
       "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-holder",
       "objectId": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "ika-valparaiso-mhnv-64-registro-surdoc-4-1947-location",
@@ -18555,7 +18908,8 @@
       "id": "ika-bremen-d13424-holder",
       "objectId": "ika-bremen-d13424",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "ika-bremen-d13424-location",
@@ -18609,7 +18963,8 @@
       "id": "ika-vina-del-mar-1679-393-coll-felbermayer-holder",
       "objectId": "ika-vina-del-mar-1679-393-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "ika-vina-del-mar-1679-393-coll-felbermayer-location",
@@ -18663,7 +19018,8 @@
       "id": "ika-vina-del-mar-1684-398-coll-felbermayer-holder",
       "objectId": "ika-vina-del-mar-1684-398-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "ika-vina-del-mar-1684-398-coll-felbermayer-location",
@@ -18717,7 +19073,8 @@
       "id": "ika-vina-del-mar-1686-400-coll-felbermayer-holder",
       "objectId": "ika-vina-del-mar-1686-400-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "ika-vina-del-mar-1686-400-coll-felbermayer-location",
@@ -18771,7 +19128,8 @@
       "id": "ika-vina-del-mar-1690-404-coll-felbermayer-holder",
       "objectId": "ika-vina-del-mar-1690-404-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "ika-vina-del-mar-1690-404-coll-felbermayer-location",
@@ -18825,7 +19183,8 @@
       "id": "ika-vina-del-mar-1719-433-coll-felbermayer-holder",
       "objectId": "ika-vina-del-mar-1719-433-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "ika-vina-del-mar-1719-433-coll-felbermayer-location",
@@ -18879,7 +19238,8 @@
       "id": "ika-vina-del-mar-1734-448-coll-felbermayer-holder",
       "objectId": "ika-vina-del-mar-1734-448-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "ika-vina-del-mar-1734-448-coll-felbermayer-location",
@@ -18933,7 +19293,8 @@
       "id": "ika-vina-del-mar-810-holder",
       "objectId": "ika-vina-del-mar-810",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "ika-vina-del-mar-810-location",
@@ -18987,7 +19348,8 @@
       "id": "ika-cologne-54531-holder",
       "objectId": "ika-cologne-54531",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "ika-cologne-54531-location",
@@ -19041,7 +19403,8 @@
       "id": "ika-munich-94-317-754-holder",
       "objectId": "ika-munich-94-317-754",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "ika-munich-94-317-754-location",
@@ -19095,7 +19458,8 @@
       "id": "ika-wellington-234567-fe010657-holder",
       "objectId": "ika-wellington-234567-fe010657",
       "predicate": "held_by",
-      "value": "Museum of New Zealand Te Papa Tongarewa"
+      "value": "Museum of New Zealand Te Papa Tongarewa",
+      "holderId": "te-papa"
     },
     {
       "id": "ika-wellington-234567-fe010657-location",
@@ -19143,7 +19507,8 @@
       "id": "manu-vienna-vo-22866-holder",
       "objectId": "manu-vienna-vo-22866",
       "predicate": "held_by",
-      "value": "Weltmuseum Wien"
+      "value": "Weltmuseum Wien",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "manu-vienna-vo-22866-location",
@@ -19197,7 +19562,8 @@
       "id": "manu-hamburg-e-614-holder",
       "objectId": "manu-hamburg-e-614",
       "predicate": "held_by",
-      "value": "MARKK Hamburg"
+      "value": "MARKK Hamburg",
+      "holderId": "markk-hamburg"
     },
     {
       "id": "manu-hamburg-e-614-location",
@@ -19245,7 +19611,8 @@
       "id": "manu-hamburg-22-42-261-holder",
       "objectId": "manu-hamburg-22-42-261",
       "predicate": "held_by",
-      "value": "MARKK Hamburg"
+      "value": "MARKK Hamburg",
+      "holderId": "markk-hamburg"
     },
     {
       "id": "manu-hamburg-22-42-261-location",
@@ -19293,7 +19660,8 @@
       "id": "manu-bremen-d13423-holder",
       "objectId": "manu-bremen-d13423",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "manu-bremen-d13423-location",
@@ -19347,7 +19715,8 @@
       "id": "manu-vina-del-mar-1735-449-coll-felbermayer-holder",
       "objectId": "manu-vina-del-mar-1735-449-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "manu-vina-del-mar-1735-449-coll-felbermayer-location",
@@ -19401,7 +19770,8 @@
       "id": "manu-vina-del-mar-1736-450-coll-felbermayer-holder",
       "objectId": "manu-vina-del-mar-1736-450-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "manu-vina-del-mar-1736-450-coll-felbermayer-location",
@@ -19449,7 +19819,8 @@
       "id": "manu-vina-del-mar-1741-455-coll-felbermayer-holder",
       "objectId": "manu-vina-del-mar-1741-455-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "manu-vina-del-mar-1741-455-coll-felbermayer-location",
@@ -19497,7 +19868,8 @@
       "id": "manu-vina-del-mar-1743-457-coll-felbermayer-holder",
       "objectId": "manu-vina-del-mar-1743-457-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "manu-vina-del-mar-1743-457-coll-felbermayer-location",
@@ -19545,7 +19917,8 @@
       "id": "manu-vina-del-mar-1004-holder",
       "objectId": "manu-vina-del-mar-1004",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "manu-vina-del-mar-1004-location",
@@ -19599,7 +19972,8 @@
       "id": "manu-vina-del-mar-1005-holder",
       "objectId": "manu-vina-del-mar-1005",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "manu-vina-del-mar-1005-location",
@@ -19653,7 +20027,8 @@
       "id": "manu-vina-del-mar-1715-429-coll-felbermayer-holder",
       "objectId": "manu-vina-del-mar-1715-429-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "manu-vina-del-mar-1715-429-coll-felbermayer-location",
@@ -19707,7 +20082,8 @@
       "id": "manu-vina-del-mar-1716-430-coll-felbermayer-holder",
       "objectId": "manu-vina-del-mar-1716-430-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "manu-vina-del-mar-1716-430-coll-felbermayer-location",
@@ -19761,7 +20137,8 @@
       "id": "manu-gottingen-oz-3080-holder",
       "objectId": "manu-gottingen-oz-3080",
       "predicate": "held_by",
-      "value": "Ethnologische Sammlung der Universität Göttingen"
+      "value": "Ethnologische Sammlung der Universität Göttingen",
+      "holderId": "ethnological-collection-goettingen"
     },
     {
       "id": "manu-gottingen-oz-3080-location",
@@ -19815,7 +20192,8 @@
       "id": "manu-cologne-54538-holder",
       "objectId": "manu-cologne-54538",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "manu-cologne-54538-location",
@@ -19869,7 +20247,8 @@
       "id": "manu-cologne-54529-holder",
       "objectId": "manu-cologne-54529",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "manu-cologne-54529-location",
@@ -19923,7 +20302,8 @@
       "id": "manu-munich-94-317-756-holder",
       "objectId": "manu-munich-94-317-756",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "manu-munich-94-317-756-location",
@@ -19977,7 +20357,8 @@
       "id": "manu-munich-94-317-757-holder",
       "objectId": "manu-munich-94-317-757",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "manu-munich-94-317-757-location",
@@ -20031,7 +20412,8 @@
       "id": "moko-canterbury-e150-1126-oldman-344-holder",
       "objectId": "moko-canterbury-e150-1126-oldman-344",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moko-canterbury-e150-1126-oldman-344-location",
@@ -20085,7 +20467,8 @@
       "id": "moko-canterbury-e150-1127-oldman-357-holder",
       "objectId": "moko-canterbury-e150-1127-oldman-357",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moko-canterbury-e150-1127-oldman-357-location",
@@ -20139,7 +20522,8 @@
       "id": "moko-canterbury-e150-1128-oldman-358-holder",
       "objectId": "moko-canterbury-e150-1128-oldman-358",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "moko-canterbury-e150-1128-oldman-358-location",
@@ -20193,7 +20577,8 @@
       "id": "moko-new-york-1978-412-824-holder",
       "objectId": "moko-new-york-1978-412-824",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "moko-new-york-1978-412-824-location",
@@ -20247,7 +20632,8 @@
       "id": "moko-new-york-1995-416-holder",
       "objectId": "moko-new-york-1995-416",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "moko-new-york-1995-416-location",
@@ -20301,7 +20687,8 @@
       "id": "moko-berlin-vi-4868-holder",
       "objectId": "moko-berlin-vi-4868",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moko-berlin-vi-4868-location",
@@ -20355,7 +20742,8 @@
       "id": "moko-berlin-vi-4901-holder",
       "objectId": "moko-berlin-vi-4901",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin"
+      "value": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moko-berlin-vi-4901-location",
@@ -20409,7 +20797,8 @@
       "id": "moko-dresden-18362-holder",
       "objectId": "moko-dresden-18362",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moko-dresden-18362-location",
@@ -20457,7 +20846,8 @@
       "id": "moko-dresden-18363-holder",
       "objectId": "moko-dresden-18363",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moko-dresden-18363-location",
@@ -20505,7 +20895,8 @@
       "id": "moko-dresden-18364-holder",
       "objectId": "moko-dresden-18364",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moko-dresden-18364-location",
@@ -20553,7 +20944,8 @@
       "id": "moko-dresden-18421-holder",
       "objectId": "moko-dresden-18421",
       "predicate": "held_by",
-      "value": "Museum für Völkerkunde Dresden"
+      "value": "Museum für Völkerkunde Dresden",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "moko-dresden-18421-location",
@@ -20601,7 +20993,8 @@
       "id": "moko-leiden-rv-517-4-holder",
       "objectId": "moko-leiden-rv-517-4",
       "predicate": "held_by",
-      "value": "Wereldmuseum Leiden"
+      "value": "Wereldmuseum Leiden",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "moko-leiden-rv-517-4-location",
@@ -20655,7 +21048,8 @@
       "id": "moko-cambridge-z-6124-holder",
       "objectId": "moko-cambridge-z-6124",
       "predicate": "held_by",
-      "value": "Museum of Archeology and Anthropology"
+      "value": "Museum of Archeology and Anthropology",
+      "holderId": "museum-archaeology-anthropology-cambridge"
     },
     {
       "id": "moko-cambridge-z-6124-location",
@@ -20709,7 +21103,8 @@
       "id": "moko-edinburgh-a-1895-374-holder",
       "objectId": "moko-edinburgh-a-1895-374",
       "predicate": "held_by",
-      "value": "National Museums Scotland"
+      "value": "National Museums Scotland",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moko-edinburgh-a-1895-374-location",
@@ -20763,7 +21158,8 @@
       "id": "moko-basel-vc-1517-holder",
       "objectId": "moko-basel-vc-1517",
       "predicate": "held_by",
-      "value": "Museum der Kulturen Basel"
+      "value": "Museum der Kulturen Basel",
+      "holderId": "museum-der-kulturen-basel"
     },
     {
       "id": "moko-basel-vc-1517-location",
@@ -20817,7 +21213,8 @@
       "id": "moko-stuttgart-30549-holder",
       "objectId": "moko-stuttgart-30549",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moko-stuttgart-30549-location",
@@ -20871,7 +21268,8 @@
       "id": "moko-stuttgart-30552-holder",
       "objectId": "moko-stuttgart-30552",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moko-stuttgart-30552-location",
@@ -20925,7 +21323,8 @@
       "id": "moko-stuttgart-49656-holder",
       "objectId": "moko-stuttgart-49656",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moko-stuttgart-49656-location",
@@ -20979,7 +21378,8 @@
       "id": "moko-otago-d20-570-holder",
       "objectId": "moko-otago-d20-570",
       "predicate": "held_by",
-      "value": "Tūhura Otago Museum"
+      "value": "Tūhura Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "moko-otago-d20-570-location",
@@ -21033,7 +21433,8 @@
       "id": "moko-leipzig-po-00231-holder",
       "objectId": "moko-leipzig-po-00231",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "moko-leipzig-po-00231-location",
@@ -21087,7 +21488,8 @@
       "id": "moko-leipzig-po-00232-holder",
       "objectId": "moko-leipzig-po-00232",
       "predicate": "held_by",
-      "value": "GRASSI Museum für Völkerkunde zu Leipzig"
+      "value": "GRASSI Museum für Völkerkunde zu Leipzig",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "moko-leipzig-po-00232-location",
@@ -21141,7 +21543,8 @@
       "id": "moko-munich-19-22-1-holder",
       "objectId": "moko-munich-19-22-1",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "moko-munich-19-22-1-location",
@@ -21195,7 +21598,8 @@
       "id": "moko-bremen-d07092-holder",
       "objectId": "moko-bremen-d07092",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moko-bremen-d07092-location",
@@ -21249,7 +21653,8 @@
       "id": "moko-gottingen-oz-1545-holder",
       "objectId": "moko-gottingen-oz-1545",
       "predicate": "held_by",
-      "value": "Ethnologische Sammlung der Universität Göttingen"
+      "value": "Ethnologische Sammlung der Universität Göttingen",
+      "holderId": "ethnological-collection-goettingen"
     },
     {
       "id": "moko-gottingen-oz-1545-location",
@@ -21303,7 +21708,8 @@
       "id": "moko-stuttgart-119500-holder",
       "objectId": "moko-stuttgart-119500",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "moko-stuttgart-119500-location",
@@ -21357,7 +21763,8 @@
       "id": "moko-vina-del-mar-70-holder",
       "objectId": "moko-vina-del-mar-70",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-70-location",
@@ -21405,7 +21812,8 @@
       "id": "moko-vina-del-mar-1430-144-coll-felbermayer-holder",
       "objectId": "moko-vina-del-mar-1430-144-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-1430-144-coll-felbermayer-location",
@@ -21453,7 +21861,8 @@
       "id": "moko-vina-del-mar-1532-246-coll-felbermayer-holder",
       "objectId": "moko-vina-del-mar-1532-246-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-1532-246-coll-felbermayer-location",
@@ -21501,7 +21910,8 @@
       "id": "moko-vina-del-mar-1680-394-coll-felbermayer-holder",
       "objectId": "moko-vina-del-mar-1680-394-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-1680-394-coll-felbermayer-location",
@@ -21555,7 +21965,8 @@
       "id": "moko-vina-del-mar-1682-396-coll-felbermayer-holder",
       "objectId": "moko-vina-del-mar-1682-396-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-1682-396-coll-felbermayer-location",
@@ -21609,7 +22020,8 @@
       "id": "moko-vina-del-mar-1728-442-coll-felbermayer-holder",
       "objectId": "moko-vina-del-mar-1728-442-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-1728-442-coll-felbermayer-location",
@@ -21657,7 +22069,8 @@
       "id": "moko-vina-del-mar-1730-444-coll-felbermayer-holder",
       "objectId": "moko-vina-del-mar-1730-444-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-1730-444-coll-felbermayer-location",
@@ -21711,7 +22124,8 @@
       "id": "moko-vina-del-mar-1733-447-coll-felbermayer-holder",
       "objectId": "moko-vina-del-mar-1733-447-coll-felbermayer",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-1733-447-coll-felbermayer-location",
@@ -21765,7 +22179,8 @@
       "id": "moko-cologne-54534-holder",
       "objectId": "moko-cologne-54534",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest-Museum"
+      "value": "Rautenstrauch-Joest-Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moko-cologne-54534-location",
@@ -21813,7 +22228,8 @@
       "id": "moko-bremen-d15413-holder",
       "objectId": "moko-bremen-d15413",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "moko-bremen-d15413-location",
@@ -21867,7 +22283,8 @@
       "id": "moko-vina-del-mar-2731-holder",
       "objectId": "moko-vina-del-mar-2731",
       "predicate": "held_by",
-      "value": "Museo de Arqueología e Historia Francisco Fonck"
+      "value": "Museo de Arqueología e Historia Francisco Fonck",
+      "holderId": "museo-francisco-fonck"
     },
     {
       "id": "moko-vina-del-mar-2731-location",

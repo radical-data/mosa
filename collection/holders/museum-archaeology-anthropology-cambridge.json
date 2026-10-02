@@ -1,0 +1,15 @@
+{
+  "name": "Museum of Archaeology and Anthropology",
+  "visitUrl": "https://maa.cam.ac.uk/visit/opening-hours",
+  "aliases": [
+    "Museum of Archeology and Anthropology",
+    "Museum of Archaeology and Anthropology, University of Cambridge"
+  ],
+  "location": {
+    "name": "Cambridge, United Kingdom",
+    "precision": "locality",
+    "longitude": 0.1218,
+    "latitude": 52.2053,
+    "reference": "https://www.openstreetmap.org/?mlat=52.2053&mlon=0.1218#map=10/52.2053/0.1218"
+  }
+}

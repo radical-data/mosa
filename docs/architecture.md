@@ -75,6 +75,12 @@ names and classifications can coexist.
 An optional claim `locator` identifies a passage within the source; see
 [collection authoring](collection-publication.md).
 
+[ADR 028](adrs/028-map-objects-through-holders.md) adds a small holder register
+for the Visit map. Its flow resolves an attributed `held_by` claim to a holder,
+then derives object locations from the holder's embedded mapped location.
+Optional object assessments cover holderless `located_at` evidence and genuine
+exceptions.
+
 An **image record** stays inside the source that represents the image and
 records a local publishable file, alt text, credit, rights, caption and original
 URL where available. Photograph sources use `depicts` relationships to identify

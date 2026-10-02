@@ -27,7 +27,8 @@
       "id": "holder",
       "objectId": "paoa-berlin-vi-4908",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum"
+      "value": "Ethnologisches Museum",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "participants",

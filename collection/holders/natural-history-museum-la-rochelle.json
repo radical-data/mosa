@@ -1,0 +1,12 @@
+{
+  "name": "Muséum d’Histoire naturelle de La Rochelle",
+  "visitUrl": "https://museum.larochelle.fr/preparer-la-visite/informations-pratiques/acces-tarifs-et-horaires",
+  "aliases": ["Museo de Historia Natural La Rochelle"],
+  "location": {
+    "name": "La Rochelle, France",
+    "precision": "locality",
+    "longitude": -1.1511,
+    "latitude": 46.1603,
+    "reference": "https://www.openstreetmap.org/?mlat=46.1603&mlon=-1.1511#map=10/46.1603/-1.1511"
+  }
+}

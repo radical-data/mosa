@@ -5,7 +5,7 @@
   "reference": "Arte en la cultura rapanui — PDF, pages 12–19, “MUSEOS DEL MUNDO EN DONDE HAY PIEZAS DE RAPA NUI”",
   "language": "es",
   "notes": {
-    "text": "In extracting this table, MoSA interprets blank museum/collection and location cells as repeating the preceding values within the same institution block, including where the block continues onto another page. For example, the entries ‘Figura humana curva’ and ‘Figura femenina’ beneath ‘Moko’ inherit ‘Sammlung Raft, Nash’ and ‘Hamburg, Alemania’. Inheritance stops when a new institution or section begins; object cells are never filled down. Wrapped text within a cell and descriptions split across pages are joined, while separate repeated rows remain distinct. These are MoSA’s transcription decisions; the reported holders and locations have not been independently verified as current.",
+    "text": "In extracting this table, MoSA interprets blank museum/collection and location cells as repeating the preceding values within the same institution block, including where the block continues onto another page. For example, the entries ‘Figura humana curva’ and ‘Figura femenina’ beneath ‘Moko’ inherit ‘Sammlung Raft, Nash’ and ‘Hamburg, Alemania’. Inheritance stops when a new institution or section begins; object cells are never filled down. Wrapped text within a cell and descriptions split across pages are joined, while separate repeated rows remain distinct. These are MoSA’s transcription decisions; the reported holders and locations have not been independently verified as current. MoSA resolves this table’s “Museo Miklucho-Maklaja” in Leningrado to the Kunstkamera holder. ArcheoBiblioBase’s institutional history identifies the Leningrad/St Petersburg branch of the N. N. Miklukho-Maklai Institute as the predecessor of the independent Kunstkamera established in 1992 (https://abb.eastview.com/rep/E-29.tab2.php, consulted 2 October 2026). This is an institutional reconciliation, not an identification of these seven entries with particular modern catalogue records or a verification of their present custody; the table’s original holder and location wording is preserved.",
     "language": "en-GB"
   },
   "claims": [
@@ -13,7 +13,8 @@
       "id": "tahonga-figura-humana-berlin-holder",
       "objectId": "tahonga-figura-humana-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "tahonga-figura-humana-berlin-location",
@@ -37,7 +38,8 @@
       "id": "ao-berlin-holder",
       "objectId": "ao-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ao-berlin-location",
@@ -55,7 +57,8 @@
       "id": "moai-piedra-40-cm-berlin-holder",
       "objectId": "moai-piedra-40-cm-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "moai-piedra-40-cm-berlin-location",
@@ -79,7 +82,8 @@
       "id": "ovillo-cuerda-berlin-holder",
       "objectId": "ovillo-cuerda-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "ovillo-cuerda-berlin-location",
@@ -97,7 +101,8 @@
       "id": "madeja-hilo-berlin-holder",
       "objectId": "madeja-hilo-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "madeja-hilo-berlin-location",
@@ -115,7 +120,8 @@
       "id": "palo-mahute-berlin-holder",
       "objectId": "palo-mahute-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "palo-mahute-berlin-location",
@@ -133,7 +139,8 @@
       "id": "mazo-pararaha-berlin-holder",
       "objectId": "mazo-pararaha-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "mazo-pararaha-berlin-location",
@@ -163,7 +170,8 @@
       "id": "punta-lanza-berlin-holder",
       "objectId": "punta-lanza-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "punta-lanza-berlin-location",
@@ -181,7 +189,8 @@
       "id": "rei-miro-parroco-berlin-holder",
       "objectId": "rei-miro-parroco-berlin",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde SMPK"
+      "value": "Museum für Volkerkunde SMPK",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "rei-miro-parroco-berlin-location",
@@ -205,7 +214,8 @@
       "id": "moai-paa-paa-ulster-holder",
       "objectId": "moai-paa-paa-ulster",
       "predicate": "held_by",
-      "value": "Ulster Museum"
+      "value": "Ulster Museum",
+      "holderId": "ulster-museum"
     },
     {
       "id": "moai-paa-paa-ulster-location",
@@ -223,7 +233,8 @@
       "id": "hombre-pajaro-braunschweig-holder",
       "objectId": "hombre-pajaro-braunschweig",
       "predicate": "held_by",
-      "value": "Staaliches Museum Braunsschweig"
+      "value": "Staaliches Museum Braunsschweig",
+      "holderId": "staedtisches-museum-braunschweig"
     },
     {
       "id": "hombre-pajaro-braunschweig-location",
@@ -241,7 +252,8 @@
       "id": "rei-miro-caras-humanas-colonia-holder",
       "objectId": "rei-miro-caras-humanas-colonia",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest Museum"
+      "value": "Rautenstrauch-Joest Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "rei-miro-caras-humanas-colonia-location",
@@ -265,7 +277,8 @@
       "id": "moai-tangata-colonia-holder",
       "objectId": "moai-tangata-colonia",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest Museum"
+      "value": "Rautenstrauch-Joest Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "moai-tangata-colonia-location",
@@ -283,7 +296,8 @@
       "id": "figura-hombre-acostada-colonia-holder",
       "objectId": "figura-hombre-acostada-colonia",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest Museum"
+      "value": "Rautenstrauch-Joest Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "figura-hombre-acostada-colonia-location",
@@ -307,7 +321,8 @@
       "id": "figura-zoomorfa-colonia-holder",
       "objectId": "figura-zoomorfa-colonia",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest Museum"
+      "value": "Rautenstrauch-Joest Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "figura-zoomorfa-colonia-location",
@@ -331,7 +346,8 @@
       "id": "corona-plumas-colonia-holder",
       "objectId": "corona-plumas-colonia",
       "predicate": "held_by",
-      "value": "Rautenstrauch-Joest Museum"
+      "value": "Rautenstrauch-Joest Museum",
+      "holderId": "rautenstrauch-joest-museum"
     },
     {
       "id": "corona-plumas-colonia-location",
@@ -349,7 +365,8 @@
       "id": "moko-sammlung-raft-holder",
       "objectId": "moko-sammlung-raft",
       "predicate": "held_by",
-      "value": "Sammlung Raft, Nash"
+      "value": "Sammlung Raft, Nash",
+      "holderId": "private-collection-raft-nash"
     },
     {
       "id": "moko-sammlung-raft-location",
@@ -367,7 +384,8 @@
       "id": "figura-humana-curva-sammlung-raft-holder",
       "objectId": "figura-humana-curva-sammlung-raft",
       "predicate": "held_by",
-      "value": "Sammlung Raft, Nash"
+      "value": "Sammlung Raft, Nash",
+      "holderId": "private-collection-raft-nash"
     },
     {
       "id": "figura-humana-curva-sammlung-raft-location",
@@ -391,7 +409,8 @@
       "id": "figura-femenina-sammlung-raft-holder",
       "objectId": "figura-femenina-sammlung-raft",
       "predicate": "held_by",
-      "value": "Sammlung Raft, Nash"
+      "value": "Sammlung Raft, Nash",
+      "holderId": "private-collection-raft-nash"
     },
     {
       "id": "figura-femenina-sammlung-raft-location",
@@ -409,7 +428,8 @@
       "id": "figura-humana-dresden-holder",
       "objectId": "figura-humana-dresden",
       "predicate": "held_by",
-      "value": "Staaliches Museum für Volkerkunde"
+      "value": "Staaliches Museum für Volkerkunde",
+      "holderId": "museum-fuer-voelkerkunde-dresden"
     },
     {
       "id": "figura-humana-dresden-location",
@@ -427,7 +447,8 @@
       "id": "hombre-curvo-lubeck-holder",
       "objectId": "hombre-curvo-lubeck",
       "predicate": "held_by",
-      "value": "Volkerkunde Sammlung der Hansestadt"
+      "value": "Volkerkunde Sammlung der Hansestadt",
+      "holderId": "voelkerkundesammlung-luebeck"
     },
     {
       "id": "hombre-curvo-lubeck-location",
@@ -445,7 +466,8 @@
       "id": "kava-kava-munchen-holder",
       "objectId": "kava-kava-munchen",
       "predicate": "held_by",
-      "value": "Staaliches Museum für Volkerkunde"
+      "value": "Staaliches Museum für Volkerkunde",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "kava-kava-munchen-location",
@@ -463,7 +485,8 @@
       "id": "moai-tangata-hildesheim-holder",
       "objectId": "moai-tangata-hildesheim",
       "predicate": "held_by",
-      "value": "Roemer und Pelizaeus Museum"
+      "value": "Roemer und Pelizaeus Museum",
+      "holderId": "roemer-pelizaeus-museum"
     },
     {
       "id": "moai-tangata-hildesheim-location",
@@ -481,7 +504,8 @@
       "id": "ua-hildesheim-holder",
       "objectId": "ua-hildesheim",
       "predicate": "held_by",
-      "value": "Roemer und Pelizaeus Museum"
+      "value": "Roemer und Pelizaeus Museum",
+      "holderId": "roemer-pelizaeus-museum"
     },
     {
       "id": "ua-hildesheim-location",
@@ -499,7 +523,8 @@
       "id": "figura-grotesca-bremen-holder",
       "objectId": "figura-grotesca-bremen",
       "predicate": "held_by",
-      "value": "Ubersee Museum"
+      "value": "Ubersee Museum",
+      "holderId": "uebersee-museum-bremen"
     },
     {
       "id": "figura-grotesca-bremen-location",
@@ -523,7 +548,8 @@
       "id": "figura-humana-leipzig-holder",
       "objectId": "figura-humana-leipzig",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde"
+      "value": "Museum für Volkerkunde",
+      "holderId": "grassi-museum-leipzig"
     },
     {
       "id": "figura-humana-leipzig-location",
@@ -547,7 +573,8 @@
       "id": "moko-brussel-holder",
       "objectId": "moko-brussel",
       "predicate": "held_by",
-      "value": "Musées Rojaux d’Art et d’Histoire"
+      "value": "Musées Rojaux d’Art et d’Histoire",
+      "holderId": "royal-museums-art-history"
     },
     {
       "id": "moko-brussel-location",
@@ -565,7 +592,8 @@
       "id": "tahonga-pajaro-brussel-holder",
       "objectId": "tahonga-pajaro-brussel",
       "predicate": "held_by",
-      "value": "Musées Rojaux d’Art et d’Histoire"
+      "value": "Musées Rojaux d’Art et d’Histoire",
+      "holderId": "royal-museums-art-history"
     },
     {
       "id": "tahonga-pajaro-brussel-location",
@@ -589,7 +617,8 @@
       "id": "piedra-petroglifos-21-cm-brussel-holder",
       "objectId": "piedra-petroglifos-21-cm-brussel",
       "predicate": "held_by",
-      "value": "Musées Rojaux d’Art et d’Histoire"
+      "value": "Musées Rojaux d’Art et d’Histoire",
+      "holderId": "royal-museums-art-history"
     },
     {
       "id": "piedra-petroglifos-21-cm-brussel-location",
@@ -613,7 +642,8 @@
       "id": "piedra-almohada-brussel-holder",
       "objectId": "piedra-almohada-brussel",
       "predicate": "held_by",
-      "value": "Musées Rojaux d’Art et d’Histoire"
+      "value": "Musées Rojaux d’Art et d’Histoire",
+      "holderId": "royal-museums-art-history"
     },
     {
       "id": "piedra-almohada-brussel-location",
@@ -637,7 +667,8 @@
       "id": "piedra-fundamento-casa-brussel-holder",
       "objectId": "piedra-fundamento-casa-brussel",
       "predicate": "held_by",
-      "value": "Musées Rojaux d’Art et d’Histoire"
+      "value": "Musées Rojaux d’Art et d’Histoire",
+      "holderId": "royal-museums-art-history"
     },
     {
       "id": "piedra-fundamento-casa-brussel-location",
@@ -655,7 +686,8 @@
       "id": "moai-piedra-brussel-holder",
       "objectId": "moai-piedra-brussel",
       "predicate": "held_by",
-      "value": "Musées Rojaux d’Art et d’Histoire"
+      "value": "Musées Rojaux d’Art et d’Histoire",
+      "holderId": "royal-museums-art-history"
     },
     {
       "id": "moai-piedra-brussel-location",
@@ -673,7 +705,8 @@
       "id": "moai-paa-paa-vander-straete-holder",
       "objectId": "moai-paa-paa-vander-straete",
       "predicate": "held_by",
-      "value": "Colección Vander Straete"
+      "value": "Colección Vander Straete",
+      "holderId": "private-collection-vander-straete"
     },
     {
       "id": "moai-paa-paa-vander-straete-location",
@@ -691,7 +724,8 @@
       "id": "ao-viena-holder",
       "objectId": "ao-viena",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde"
+      "value": "Museum für Volkerkunde",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "ao-viena-location",
@@ -709,7 +743,8 @@
       "id": "cara-piedra-gris-viena-holder",
       "objectId": "cara-piedra-gris-viena",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde"
+      "value": "Museum für Volkerkunde",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "cara-piedra-gris-viena-location",
@@ -733,7 +768,8 @@
       "id": "pulpo-viena-holder",
       "objectId": "pulpo-viena",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde"
+      "value": "Museum für Volkerkunde",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "pulpo-viena-location",
@@ -751,7 +787,8 @@
       "id": "pajaro-viena-holder",
       "objectId": "pajaro-viena",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde"
+      "value": "Museum für Volkerkunde",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "pajaro-viena-location",
@@ -769,7 +806,8 @@
       "id": "falo-viena-holder",
       "objectId": "falo-viena",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde"
+      "value": "Museum für Volkerkunde",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "falo-viena-location",
@@ -793,7 +831,8 @@
       "id": "anzuelo-piedra-viena-holder",
       "objectId": "anzuelo-piedra-viena",
       "predicate": "held_by",
-      "value": "Museum für Volkerkunde"
+      "value": "Museum für Volkerkunde",
+      "holderId": "weltmuseum-wien"
     },
     {
       "id": "anzuelo-piedra-viena-location",
@@ -811,7 +850,8 @@
       "id": "kava-kava-museo-hombre-holder",
       "objectId": "kava-kava-museo-hombre",
       "predicate": "held_by",
-      "value": "Museo del Hombre"
+      "value": "Museo del Hombre",
+      "holderId": "musee-de-lhomme"
     },
     {
       "id": "kava-kava-museo-hombre-location",
@@ -829,7 +869,8 @@
       "id": "moai-tangata-museo-hombre-holder",
       "objectId": "moai-tangata-museo-hombre",
       "predicate": "held_by",
-      "value": "Museo del Hombre"
+      "value": "Museo del Hombre",
+      "holderId": "musee-de-lhomme"
     },
     {
       "id": "moai-tangata-museo-hombre-location",
@@ -847,7 +888,8 @@
       "id": "cabeza-piedra-museo-hombre-holder",
       "objectId": "cabeza-piedra-museo-hombre",
       "predicate": "held_by",
-      "value": "Museo del Hombre"
+      "value": "Museo del Hombre",
+      "holderId": "musee-de-lhomme"
     },
     {
       "id": "cabeza-piedra-museo-hombre-location",
@@ -865,7 +907,8 @@
       "id": "kava-kava-ladriere-holder",
       "objectId": "kava-kava-ladriere",
       "predicate": "held_by",
-      "value": "Sammlung Ladriere"
+      "value": "Sammlung Ladriere",
+      "holderId": "private-collection-ladriere"
     },
     {
       "id": "kava-kava-ladriere-location",
@@ -883,7 +926,8 @@
       "id": "cabeza-piedra-ladriere-holder",
       "objectId": "cabeza-piedra-ladriere",
       "predicate": "held_by",
-      "value": "Sammlung Ladriere"
+      "value": "Sammlung Ladriere",
+      "holderId": "private-collection-ladriere"
     },
     {
       "id": "cabeza-piedra-ladriere-location",
@@ -901,7 +945,8 @@
       "id": "moai-tangata-manu-ladriere-holder",
       "objectId": "moai-tangata-manu-ladriere",
       "predicate": "held_by",
-      "value": "Sammlung Ladriere"
+      "value": "Sammlung Ladriere",
+      "holderId": "private-collection-ladriere"
     },
     {
       "id": "moai-tangata-manu-ladriere-location",
@@ -919,7 +964,8 @@
       "id": "rei-miro-pollo-ladriere-holder",
       "objectId": "rei-miro-pollo-ladriere",
       "predicate": "held_by",
-      "value": "Sammlung Ladriere"
+      "value": "Sammlung Ladriere",
+      "holderId": "private-collection-ladriere"
     },
     {
       "id": "rei-miro-pollo-ladriere-location",
@@ -943,7 +989,8 @@
       "id": "tahonga-ladriere-holder",
       "objectId": "tahonga-ladriere",
       "predicate": "held_by",
-      "value": "Sammlung Ladriere"
+      "value": "Sammlung Ladriere",
+      "holderId": "private-collection-ladriere"
     },
     {
       "id": "tahonga-ladriere-location",
@@ -961,7 +1008,8 @@
       "id": "rapa-ladriere-holder",
       "objectId": "rapa-ladriere",
       "predicate": "held_by",
-      "value": "Sammlung Ladriere"
+      "value": "Sammlung Ladriere",
+      "holderId": "private-collection-ladriere"
     },
     {
       "id": "rapa-ladriere-location",
@@ -979,7 +1027,8 @@
       "id": "anzuelo-hueso-ladriere-holder",
       "objectId": "anzuelo-hueso-ladriere",
       "predicate": "held_by",
-      "value": "Sammlung Ladriere"
+      "value": "Sammlung Ladriere",
+      "holderId": "private-collection-ladriere"
     },
     {
       "id": "anzuelo-hueso-ladriere-location",
@@ -997,7 +1046,8 @@
       "id": "moai-kava-kava-ratton-holder",
       "objectId": "moai-kava-kava-ratton",
       "predicate": "held_by",
-      "value": "Colección privada Ratton"
+      "value": "Colección privada Ratton",
+      "holderId": "private-collection-ratton"
     },
     {
       "id": "moai-kava-kava-ratton-location",
@@ -1015,7 +1065,8 @@
       "id": "rei-miro-caras-pollo-ratton-holder",
       "objectId": "rei-miro-caras-pollo-ratton",
       "predicate": "held_by",
-      "value": "Colección privada Ratton"
+      "value": "Colección privada Ratton",
+      "holderId": "private-collection-ratton"
     },
     {
       "id": "rei-miro-caras-pollo-ratton-location",
@@ -1039,7 +1090,8 @@
       "id": "moko-laurens-holder",
       "objectId": "moko-laurens",
       "predicate": "held_by",
-      "value": "Sammlung Laurens"
+      "value": "Sammlung Laurens",
+      "holderId": "private-collection-laurens"
     },
     {
       "id": "moko-laurens-location",
@@ -1057,7 +1109,8 @@
       "id": "kava-kava-doble-cabeza-la-rochelle-holder",
       "objectId": "kava-kava-doble-cabeza-la-rochelle",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural La Rochelle"
+      "value": "Museo de Historia Natural La Rochelle",
+      "holderId": "natural-history-museum-la-rochelle"
     },
     {
       "id": "kava-kava-doble-cabeza-la-rochelle-location",
@@ -1081,7 +1134,8 @@
       "id": "figura-humana-acostada-leiden-holder",
       "objectId": "figura-humana-acostada-leiden",
       "predicate": "held_by",
-      "value": "Rijksmuseum voor Volkerkunde"
+      "value": "Rijksmuseum voor Volkerkunde",
+      "holderId": "european-museum-leiden"
     },
     {
       "id": "figura-humana-acostada-leiden-location",
@@ -1105,7 +1159,8 @@
       "id": "kava-kava-vaticano-holder",
       "objectId": "kava-kava-vaticano",
       "predicate": "held_by",
-      "value": "Museo Misionero Etnologico"
+      "value": "Museo Misionero Etnologico",
+      "holderId": "museo-missionario-etnologico"
     },
     {
       "id": "kava-kava-vaticano-location",
@@ -1123,7 +1178,8 @@
       "id": "rei-miro-caras-humanas-vaticano-holder",
       "objectId": "rei-miro-caras-humanas-vaticano",
       "predicate": "held_by",
-      "value": "Museo Misionero Etnologico"
+      "value": "Museo Misionero Etnologico",
+      "holderId": "museo-missionario-etnologico"
     },
     {
       "id": "rei-miro-caras-humanas-vaticano-location",
@@ -1147,7 +1203,8 @@
       "id": "kava-kava-pigorini-holder",
       "objectId": "kava-kava-pigorini",
       "predicate": "held_by",
-      "value": "Museo Preistorico et Etnografico “Luigi Pigorini”"
+      "value": "Museo Preistorico et Etnografico “Luigi Pigorini”",
+      "holderId": "muciv-rome"
     },
     {
       "id": "kava-kava-pigorini-location",
@@ -1165,7 +1222,8 @@
       "id": "moai-mujer-pigorini-holder",
       "objectId": "moai-mujer-pigorini",
       "predicate": "held_by",
-      "value": "Museo Preistorico et Etnografico “Luigi Pigorini”"
+      "value": "Museo Preistorico et Etnografico “Luigi Pigorini”",
+      "holderId": "muciv-rome"
     },
     {
       "id": "moai-mujer-pigorini-location",
@@ -1189,7 +1247,8 @@
       "id": "tahonga-sencillo-sagrados-corazones-holder",
       "objectId": "tahonga-sencillo-sagrados-corazones",
       "predicate": "held_by",
-      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma",
+      "holderId": "sacred-hearts-congregation-rome"
     },
     {
       "id": "tahonga-sencillo-sagrados-corazones-location",
@@ -1213,7 +1272,8 @@
       "id": "tahonga-pajaro-sagrados-corazones-holder",
       "objectId": "tahonga-pajaro-sagrados-corazones",
       "predicate": "held_by",
-      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma",
+      "holderId": "sacred-hearts-congregation-rome"
     },
     {
       "id": "tahonga-pajaro-sagrados-corazones-location",
@@ -1237,7 +1297,8 @@
       "id": "tahonga-caras-humanas-sagrados-corazones-holder",
       "objectId": "tahonga-caras-humanas-sagrados-corazones",
       "predicate": "held_by",
-      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma",
+      "holderId": "sacred-hearts-congregation-rome"
     },
     {
       "id": "tahonga-caras-humanas-sagrados-corazones-location",
@@ -1261,7 +1322,8 @@
       "id": "rapa-sagrados-corazones-holder",
       "objectId": "rapa-sagrados-corazones",
       "predicate": "held_by",
-      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma",
+      "holderId": "sacred-hearts-congregation-rome"
     },
     {
       "id": "rapa-sagrados-corazones-location",
@@ -1279,7 +1341,8 @@
       "id": "aroukou-kurenga-holder",
       "objectId": "aroukou-kurenga",
       "predicate": "held_by",
-      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma",
+      "holderId": "sacred-hearts-congregation-rome"
     },
     {
       "id": "aroukou-kurenga-location",
@@ -1303,7 +1366,8 @@
       "id": "mamari-holder",
       "objectId": "mamari",
       "predicate": "held_by",
-      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma",
+      "holderId": "sacred-hearts-congregation-rome"
     },
     {
       "id": "mamari-location",
@@ -1327,7 +1391,8 @@
       "id": "cara-hombre-sagrados-corazones-holder",
       "objectId": "cara-hombre-sagrados-corazones",
       "predicate": "held_by",
-      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma"
+      "value": "Congregación de los Sagrados Corazones, Via Monte Carmelo, 85, Roma",
+      "holderId": "sacred-hearts-congregation-rome"
     },
     {
       "id": "cara-hombre-sagrados-corazones-location",
@@ -1345,7 +1410,8 @@
       "id": "moai-tangata-leningrado-holder",
       "objectId": "moai-tangata-leningrado",
       "predicate": "held_by",
-      "value": "Museo Miklucho-Maklaja"
+      "value": "Museo Miklucho-Maklaja",
+      "holderId": "kunstkamera"
     },
     {
       "id": "moai-tangata-leningrado-location",
@@ -1363,7 +1429,8 @@
       "id": "moai-tangata-penacho-leningrado-holder",
       "objectId": "moai-tangata-penacho-leningrado",
       "predicate": "held_by",
-      "value": "Museo Miklucho-Maklaja"
+      "value": "Museo Miklucho-Maklaja",
+      "holderId": "kunstkamera"
     },
     {
       "id": "moai-tangata-penacho-leningrado-location",
@@ -1387,7 +1454,8 @@
       "id": "tangata-manu-leningrado-holder",
       "objectId": "tangata-manu-leningrado",
       "predicate": "held_by",
-      "value": "Museo Miklucho-Maklaja"
+      "value": "Museo Miklucho-Maklaja",
+      "holderId": "kunstkamera"
     },
     {
       "id": "tangata-manu-leningrado-location",
@@ -1405,7 +1473,8 @@
       "id": "tablilla-rongo-rongo-leningrado-holder",
       "objectId": "tablilla-rongo-rongo-leningrado",
       "predicate": "held_by",
-      "value": "Museo Miklucho-Maklaja"
+      "value": "Museo Miklucho-Maklaja",
+      "holderId": "kunstkamera"
     },
     {
       "id": "tablilla-rongo-rongo-leningrado-location",
@@ -1423,7 +1492,8 @@
       "id": "figura-curva-sonriente-leningrado-holder",
       "objectId": "figura-curva-sonriente-leningrado",
       "predicate": "held_by",
-      "value": "Museo Miklucho-Maklaja"
+      "value": "Museo Miklucho-Maklaja",
+      "holderId": "kunstkamera"
     },
     {
       "id": "figura-curva-sonriente-leningrado-location",
@@ -1447,7 +1517,8 @@
       "id": "moai-kava-kava-leningrado-holder",
       "objectId": "moai-kava-kava-leningrado",
       "predicate": "held_by",
-      "value": "Museo Miklucho-Maklaja"
+      "value": "Museo Miklucho-Maklaja",
+      "holderId": "kunstkamera"
     },
     {
       "id": "moai-kava-kava-leningrado-location",
@@ -1465,7 +1536,8 @@
       "id": "figura-tipo-kava-kava-leningrado-holder",
       "objectId": "figura-tipo-kava-kava-leningrado",
       "predicate": "held_by",
-      "value": "Museo Miklucho-Maklaja"
+      "value": "Museo Miklucho-Maklaja",
+      "holderId": "kunstkamera"
     },
     {
       "id": "figura-tipo-kava-kava-leningrado-location",
@@ -1489,7 +1561,8 @@
       "id": "tangata-manu-oslo-holder",
       "objectId": "tangata-manu-oslo",
       "predicate": "held_by",
-      "value": "Etnografisk Museum"
+      "value": "Etnografisk Museum",
+      "holderId": "ethnographic-museum-oslo"
     },
     {
       "id": "tangata-manu-oslo-location",
@@ -1507,7 +1580,8 @@
       "id": "rei-miro-concha-holder",
       "objectId": "rei-miro-concha",
       "predicate": "held_by",
-      "value": "Etnografisk Museum"
+      "value": "Etnografisk Museum",
+      "holderId": "ethnographic-museum-oslo"
     },
     {
       "id": "rei-miro-concha-location",
@@ -1531,7 +1605,8 @@
       "id": "rei-miro-caras-humanas-holder",
       "objectId": "rei-miro-caras-humanas",
       "predicate": "held_by",
-      "value": "Etnografisk Museum"
+      "value": "Etnografisk Museum",
+      "holderId": "ethnographic-museum-oslo"
     },
     {
       "id": "rei-miro-caras-humanas-location",
@@ -1555,7 +1630,8 @@
       "id": "tahonga-oslo-1-holder",
       "objectId": "tahonga-oslo-1",
       "predicate": "held_by",
-      "value": "Etnografisk Museum"
+      "value": "Etnografisk Museum",
+      "holderId": "ethnographic-museum-oslo"
     },
     {
       "id": "tahonga-oslo-1-location",
@@ -1573,7 +1649,8 @@
       "id": "tahonga-oslo-2-holder",
       "objectId": "tahonga-oslo-2",
       "predicate": "held_by",
-      "value": "Etnografisk Museum"
+      "value": "Etnografisk Museum",
+      "holderId": "ethnographic-museum-oslo"
     },
     {
       "id": "tahonga-oslo-2-location",
@@ -1591,7 +1668,8 @@
       "id": "ua-oslo-holder",
       "objectId": "ua-oslo",
       "predicate": "held_by",
-      "value": "Etnografisk Museum"
+      "value": "Etnografisk Museum",
+      "holderId": "ethnographic-museum-oslo"
     },
     {
       "id": "ua-oslo-location",
@@ -1609,7 +1687,8 @@
       "id": "rapa-oslo-holder",
       "objectId": "rapa-oslo",
       "predicate": "held_by",
-      "value": "Etnografisk Museum"
+      "value": "Etnografisk Museum",
+      "holderId": "ethnographic-museum-oslo"
     },
     {
       "id": "rapa-oslo-location",
@@ -1627,7 +1706,8 @@
       "id": "lapa-madera-oslo-holder",
       "objectId": "lapa-madera-oslo",
       "predicate": "held_by",
-      "value": "Etnografisk Museum"
+      "value": "Etnografisk Museum",
+      "holderId": "ethnographic-museum-oslo"
     },
     {
       "id": "lapa-madera-oslo-location",
@@ -1651,7 +1731,8 @@
       "id": "tahonga-incrustaciones-holder",
       "objectId": "tahonga-incrustaciones",
       "predicate": "held_by",
-      "value": "Statens Etnografisca Museum"
+      "value": "Statens Etnografisca Museum",
+      "holderId": "ethnografiska-museet-stockholm"
     },
     {
       "id": "tahonga-incrustaciones-location",
@@ -1675,7 +1756,8 @@
       "id": "moai-tangata-britanico-holder",
       "objectId": "moai-tangata-britanico",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "moai-tangata-britanico-location",
@@ -1693,7 +1775,8 @@
       "id": "manu-uru-britanico-holder",
       "objectId": "manu-uru-britanico",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "manu-uru-britanico-location",
@@ -1711,7 +1794,8 @@
       "id": "rei-miro-rongo-rongo-britanico-holder",
       "objectId": "rei-miro-rongo-rongo-britanico",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "rei-miro-rongo-rongo-britanico-location",
@@ -1735,7 +1819,8 @@
       "id": "rei-miro-britanico-holder",
       "objectId": "rei-miro-britanico",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "rei-miro-britanico-location",
@@ -1753,7 +1838,8 @@
       "id": "rapa-britanico-holder",
       "objectId": "rapa-britanico",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "rapa-britanico-location",
@@ -1771,7 +1857,8 @@
       "id": "tablilla-rongo-rongo-britanico-holder",
       "objectId": "tablilla-rongo-rongo-britanico",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "tablilla-rongo-rongo-britanico-location",
@@ -1789,7 +1876,8 @@
       "id": "figura-humana-aberrante-britanico-holder",
       "objectId": "figura-humana-aberrante-britanico",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "figura-humana-aberrante-britanico-location",
@@ -1813,7 +1901,8 @@
       "id": "figura-boca-circular-holder",
       "objectId": "figura-boca-circular",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "figura-boca-circular-location",
@@ -1837,7 +1926,8 @@
       "id": "hoa-haka-nana-ia-holder",
       "objectId": "hoa-hakananai-a",
       "predicate": "held_by",
-      "value": "Museo Britanico"
+      "value": "Museo Britanico",
+      "holderId": "british-museum"
     },
     {
       "id": "hoa-haka-nana-ia-location",
@@ -1861,7 +1951,8 @@
       "id": "rei-miro-pez-hooper-holder",
       "objectId": "rei-miro-pez-hooper",
       "predicate": "held_by",
-      "value": "Hooper Collection"
+      "value": "Hooper Collection",
+      "holderId": "private-collection-hooper"
     },
     {
       "id": "rei-miro-pez-hooper-location",
@@ -1885,7 +1976,8 @@
       "id": "figura-zoomorfica-hooper-holder",
       "objectId": "figura-zoomorfica-hooper",
       "predicate": "held_by",
-      "value": "Hooper Collection"
+      "value": "Hooper Collection",
+      "holderId": "private-collection-hooper"
     },
     {
       "id": "figura-zoomorfica-hooper-location",
@@ -1903,7 +1995,8 @@
       "id": "moko-pit-rivers-holder",
       "objectId": "moko-pit-rivers",
       "predicate": "held_by",
-      "value": "Pit Rivers Museum"
+      "value": "Pit Rivers Museum",
+      "holderId": "pit-rivers-museum"
     },
     {
       "id": "moko-pit-rivers-location",
@@ -1921,7 +2014,8 @@
       "id": "moai-paa-paa-royal-scottish-holder",
       "objectId": "moai-paa-paa-royal-scottish",
       "predicate": "held_by",
-      "value": "The Royal Scottish Museum"
+      "value": "The Royal Scottish Museum",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-paa-paa-royal-scottish-location",
@@ -1939,7 +2033,8 @@
       "id": "moai-tangata-royal-scottish-holder",
       "objectId": "moai-tangata-royal-scottish",
       "predicate": "held_by",
-      "value": "The Royal Scottish Museum"
+      "value": "The Royal Scottish Museum",
+      "holderId": "national-museums-scotland"
     },
     {
       "id": "moai-tangata-royal-scottish-location",
@@ -1957,7 +2052,8 @@
       "id": "moko-ireland-holder",
       "objectId": "moko-ireland",
       "predicate": "held_by",
-      "value": "National Museum of Ireland"
+      "value": "National Museum of Ireland",
+      "holderId": "national-museum-of-ireland"
     },
     {
       "id": "moko-ireland-location",
@@ -1999,7 +2095,8 @@
       "id": "kava-kava-otago-holder",
       "objectId": "kava-kava-otago",
       "predicate": "held_by",
-      "value": "Otago Museum"
+      "value": "Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "kava-kava-otago-location",
@@ -2017,7 +2114,8 @@
       "id": "mujer-vulva-larga-otago-holder",
       "objectId": "mujer-vulva-larga-otago",
       "predicate": "held_by",
-      "value": "Otago Museum"
+      "value": "Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "mujer-vulva-larga-otago-location",
@@ -2035,7 +2133,8 @@
       "id": "pajaro-otago-holder",
       "objectId": "pajaro-otago",
       "predicate": "held_by",
-      "value": "Otago Museum"
+      "value": "Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "pajaro-otago-location",
@@ -2053,7 +2152,8 @@
       "id": "moai-piedra-arcaico-otago-holder",
       "objectId": "moai-piedra-arcaico-otago",
       "predicate": "held_by",
-      "value": "Otago Museum"
+      "value": "Otago Museum",
+      "holderId": "tuhura-otago-museum"
     },
     {
       "id": "moai-piedra-arcaico-otago-location",
@@ -2077,7 +2177,8 @@
       "id": "kava-kava-aukland-holder",
       "objectId": "kava-kava-aukland",
       "predicate": "held_by",
-      "value": "Aukland Institute and Museum"
+      "value": "Aukland Institute and Museum",
+      "holderId": "auckland-war-memorial-museum"
     },
     {
       "id": "kava-kava-aukland-location",
@@ -2095,7 +2196,8 @@
       "id": "figura-hombre-aukland-holder",
       "objectId": "figura-hombre-aukland",
       "predicate": "held_by",
-      "value": "Aukland Institute and Museum"
+      "value": "Aukland Institute and Museum",
+      "holderId": "auckland-war-memorial-museum"
     },
     {
       "id": "figura-hombre-aukland-location",
@@ -2113,7 +2215,8 @@
       "id": "figura-hermafrodita-aukland-holder",
       "objectId": "figura-hermafrodita-aukland",
       "predicate": "held_by",
-      "value": "Aukland Institute and Museum"
+      "value": "Aukland Institute and Museum",
+      "holderId": "auckland-war-memorial-museum"
     },
     {
       "id": "figura-hermafrodita-aukland-location",
@@ -2137,7 +2240,8 @@
       "id": "kava-kava-canterbury-holder",
       "objectId": "kava-kava-canterbury",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "kava-kava-canterbury-location",
@@ -2155,7 +2259,8 @@
       "id": "figura-humana-canterbury-holder",
       "objectId": "figura-humana-canterbury",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "figura-humana-canterbury-location",
@@ -2173,7 +2278,8 @@
       "id": "kava-kava-doble-cabeza-holder",
       "objectId": "kava-kava-doble-cabeza",
       "predicate": "held_by",
-      "value": "Canterbury Museum"
+      "value": "Canterbury Museum",
+      "holderId": "canterbury-museum"
     },
     {
       "id": "kava-kava-doble-cabeza-location",
@@ -2197,7 +2303,8 @@
       "id": "ua-national-museum-new-zealand-holder",
       "objectId": "ua-national-museum-new-zealand",
       "predicate": "held_by",
-      "value": "National Museum of New Zealand"
+      "value": "National Museum of New Zealand",
+      "holderId": "te-papa"
     },
     {
       "id": "ua-national-museum-new-zealand-location",
@@ -2215,7 +2322,8 @@
       "id": "ao-national-museum-new-zealand-holder",
       "objectId": "ao-te-papa",
       "predicate": "held_by",
-      "value": "National Museum of New Zealand"
+      "value": "National Museum of New Zealand",
+      "holderId": "te-papa"
     },
     {
       "id": "ao-national-museum-new-zealand-location",
@@ -2233,7 +2341,8 @@
       "id": "rei-miro-gallo-holder",
       "objectId": "rei-miro-gallo",
       "predicate": "held_by",
-      "value": "Bishop Museum"
+      "value": "Bishop Museum",
+      "holderId": "bishop-museum"
     },
     {
       "id": "rei-miro-gallo-location",
@@ -2257,7 +2366,8 @@
       "id": "rei-miro-deteriorado-bishop-holder",
       "objectId": "rei-miro-deteriorado-bishop",
       "predicate": "held_by",
-      "value": "Bishop Museum"
+      "value": "Bishop Museum",
+      "holderId": "bishop-museum"
     },
     {
       "id": "rei-miro-deteriorado-bishop-location",
@@ -2281,7 +2391,8 @@
       "id": "pie-amuleto-bishop-holder",
       "objectId": "pie-amuleto-bishop",
       "predicate": "held_by",
-      "value": "Bishop Museum"
+      "value": "Bishop Museum",
+      "holderId": "bishop-museum"
     },
     {
       "id": "pie-amuleto-bishop-location",
@@ -2299,7 +2410,8 @@
       "id": "ngaru-a-holder",
       "objectId": "ngaru-a",
       "predicate": "held_by",
-      "value": "Bishop Museum"
+      "value": "Bishop Museum",
+      "holderId": "bishop-museum"
     },
     {
       "id": "ngaru-a-location",
@@ -2329,7 +2441,8 @@
       "id": "palo-platano-bishop-holder",
       "objectId": "palo-platano-bishop",
       "predicate": "held_by",
-      "value": "Bishop Museum"
+      "value": "Bishop Museum",
+      "holderId": "bishop-museum"
     },
     {
       "id": "palo-platano-bishop-location",
@@ -2353,7 +2466,8 @@
       "id": "tahonga-sin-cabeza-bishop-holder",
       "objectId": "tahonga-sin-cabeza-bishop",
       "predicate": "held_by",
-      "value": "Bishop Museum"
+      "value": "Bishop Museum",
+      "holderId": "bishop-museum"
     },
     {
       "id": "tahonga-sin-cabeza-bishop-location",
@@ -2377,7 +2491,8 @@
       "id": "rei-miro-australian-museum-holder",
       "objectId": "rei-miro-australian-museum",
       "predicate": "held_by",
-      "value": "Australian Museum"
+      "value": "Australian Museum",
+      "holderId": "australian-museum"
     },
     {
       "id": "rei-miro-australian-museum-location",
@@ -2395,7 +2510,8 @@
       "id": "cara-humana-doble-peabody-salem-holder",
       "objectId": "cara-humana-doble-peabody-salem",
       "predicate": "held_by",
-      "value": "Peabody Museum"
+      "value": "Peabody Museum",
+      "holderId": "peabody-museum-salem"
     },
     {
       "id": "cara-humana-doble-peabody-salem-location",
@@ -2419,7 +2535,8 @@
       "id": "figura-humana-peabody-salem-holder",
       "objectId": "figura-humana-peabody-salem",
       "predicate": "held_by",
-      "value": "Peabody Museum"
+      "value": "Peabody Museum",
+      "holderId": "peabody-museum-salem"
     },
     {
       "id": "figura-humana-peabody-salem-location",
@@ -2437,7 +2554,8 @@
       "id": "figura-acostada-peabody-salem-holder",
       "objectId": "figura-acostada-peabody-salem",
       "predicate": "held_by",
-      "value": "Peabody Museum"
+      "value": "Peabody Museum",
+      "holderId": "peabody-museum-salem"
     },
     {
       "id": "figura-acostada-peabody-salem-location",
@@ -2461,7 +2579,8 @@
       "id": "tangata-manu-peabody-cambridge-holder",
       "objectId": "tangata-manu-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "tangata-manu-peabody-cambridge-location",
@@ -2479,7 +2598,8 @@
       "id": "pez-peabody-cambridge-holder",
       "objectId": "pez-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "pez-peabody-cambridge-location",
@@ -2497,7 +2617,8 @@
       "id": "hombre-cuclillas-peabody-cambridge-holder",
       "objectId": "hombre-cuclillas-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "hombre-cuclillas-peabody-cambridge-location",
@@ -2515,7 +2636,8 @@
       "id": "tortuga-peabody-cambridge-holder",
       "objectId": "tortuga-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "tortuga-peabody-cambridge-location",
@@ -2533,7 +2655,8 @@
       "id": "cara-pajaro-peabody-cambridge-holder",
       "objectId": "cara-pajaro-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "cara-pajaro-peabody-cambridge-location",
@@ -2551,7 +2674,8 @@
       "id": "piedra-59-cm-peabody-cambridge-holder",
       "objectId": "piedra-59-cm-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "piedra-59-cm-peabody-cambridge-location",
@@ -2575,7 +2699,8 @@
       "id": "piedra-23-cm-peabody-cambridge-holder",
       "objectId": "piedra-23-cm-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "piedra-23-cm-peabody-cambridge-location",
@@ -2599,7 +2724,8 @@
       "id": "cabeza-mahute-peabody-cambridge-holder",
       "objectId": "cabeza-mahute-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "cabeza-mahute-peabody-cambridge-location",
@@ -2623,7 +2749,8 @@
       "id": "figura-humana-aberrante-peabody-cambridge-holder",
       "objectId": "figura-humana-aberrante-peabody-cambridge",
       "predicate": "held_by",
-      "value": "Peabody Museum of Archaeology and Ethnology"
+      "value": "Peabody Museum of Archaeology and Ethnology",
+      "holderId": "peabody-museum-harvard"
     },
     {
       "id": "figura-humana-aberrante-peabody-cambridge-location",
@@ -2647,7 +2774,8 @@
       "id": "tangata-manu-rongorongo-holder",
       "objectId": "tangata-manu-rongorongo",
       "predicate": "held_by",
-      "value": "American Museum of Natural History"
+      "value": "American Museum of Natural History",
+      "holderId": "american-museum-natural-history"
     },
     {
       "id": "tangata-manu-rongorongo-location",
@@ -2671,7 +2799,8 @@
       "id": "ao-pintado-holder",
       "objectId": "ao-pintado",
       "predicate": "held_by",
-      "value": "Smithsonian Institution, United States National Museum"
+      "value": "Smithsonian Institution, United States National Museum",
+      "holderId": "national-museum-natural-history"
     },
     {
       "id": "ao-pintado-location",
@@ -2695,7 +2824,8 @@
       "id": "tablilla-rongo-rongo-smithsonian-holder",
       "objectId": "tablilla-rongo-rongo-smithsonian",
       "predicate": "held_by",
-      "value": "Smithsonian Institution, United States National Museum"
+      "value": "Smithsonian Institution, United States National Museum",
+      "holderId": "national-museum-natural-history"
     },
     {
       "id": "tablilla-rongo-rongo-smithsonian-location",
@@ -2713,7 +2843,8 @@
       "id": "moai-piedra-sombrero-holder",
       "objectId": "moai-piedra-sombrero",
       "predicate": "held_by",
-      "value": "Smithsonian Institution, United States National Museum"
+      "value": "Smithsonian Institution, United States National Museum",
+      "holderId": "national-museum-natural-history"
     },
     {
       "id": "moai-piedra-sombrero-location",
@@ -2737,7 +2868,8 @@
       "id": "figura-zoomorfa-field-holder",
       "objectId": "figura-zoomorfa-field",
       "predicate": "held_by",
-      "value": "Field Museum"
+      "value": "Field Museum",
+      "holderId": "field-museum"
     },
     {
       "id": "figura-zoomorfa-field-location",
@@ -2755,7 +2887,8 @@
       "id": "cabeza-mahute-new-bruswick-holder",
       "objectId": "cabeza-mahute-new-bruswick",
       "predicate": "held_by",
-      "value": "New Bruswick Museum"
+      "value": "New Bruswick Museum",
+      "holderId": "new-brunswick-museum"
     },
     {
       "id": "cabeza-mahute-new-bruswick-location",
@@ -2779,7 +2912,8 @@
       "id": "moai-paa-paa-santiago-holder",
       "objectId": "moai-paa-paa-santiago",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural"
+      "value": "Museo de Historia Natural",
+      "holderId": "museum-history-natural-chile-santiago"
     },
     {
       "id": "moai-paa-paa-santiago-location",
@@ -2797,7 +2931,8 @@
       "id": "moai-tangata-santiago-holder",
       "objectId": "moai-tangata-santiago",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural"
+      "value": "Museo de Historia Natural",
+      "holderId": "museum-history-natural-chile-santiago"
     },
     {
       "id": "moai-tangata-santiago-location",
@@ -2815,7 +2950,8 @@
       "id": "cabeza-doble-piedra-santiago-holder",
       "objectId": "cabeza-doble-piedra-santiago",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural"
+      "value": "Museo de Historia Natural",
+      "holderId": "museum-history-natural-chile-santiago"
     },
     {
       "id": "cabeza-doble-piedra-santiago-location",
@@ -2839,7 +2975,8 @@
       "id": "piedra-35-cm-santiago-holder",
       "objectId": "piedra-35-cm-santiago",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural"
+      "value": "Museo de Historia Natural",
+      "holderId": "museum-history-natural-chile-santiago"
     },
     {
       "id": "piedra-35-cm-santiago-location",
@@ -2863,7 +3000,8 @@
       "id": "piedra-33-cm-santiago-holder",
       "objectId": "piedra-33-cm-santiago",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural"
+      "value": "Museo de Historia Natural",
+      "holderId": "museum-history-natural-chile-santiago"
     },
     {
       "id": "piedra-33-cm-santiago-location",
@@ -2887,7 +3025,8 @@
       "id": "mano-museo-carmen-holder",
       "objectId": "mano-museo-carmen",
       "predicate": "held_by",
-      "value": "Museo del Carmen"
+      "value": "Museo del Carmen",
+      "holderId": "museo-del-carmen"
     },
     {
       "id": "mano-museo-carmen-location",
@@ -2905,7 +3044,8 @@
       "id": "abanico-museo-carmen-holder",
       "objectId": "abanico-museo-carmen",
       "predicate": "held_by",
-      "value": "Museo del Carmen"
+      "value": "Museo del Carmen",
+      "holderId": "museo-del-carmen"
     },
     {
       "id": "abanico-museo-carmen-location",
@@ -2929,7 +3069,8 @@
       "id": "cabeza-piedra-valparaiso-holder",
       "objectId": "cabeza-piedra-valparaiso",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural"
+      "value": "Museo de Historia Natural",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "cabeza-piedra-valparaiso-location",
@@ -2947,7 +3088,8 @@
       "id": "figura-doble-cara-concepcion-holder",
       "objectId": "figura-doble-cara-concepcion",
       "predicate": "held_by",
-      "value": "Museo de Concepcion"
+      "value": "Museo de Concepcion",
+      "holderId": "museo-de-concepcion"
     },
     {
       "id": "figura-doble-cara-concepcion-location",
@@ -2971,7 +3113,8 @@
       "id": "figura-hombre-dos-cabezas-buenos-aires-holder",
       "objectId": "figura-hombre-dos-cabezas-buenos-aires",
       "predicate": "held_by",
-      "value": "Museo Etnografico de la Universidad de Buenos Aires"
+      "value": "Museo Etnografico de la Universidad de Buenos Aires",
+      "holderId": "museo-etnografico-uba"
     },
     {
       "id": "figura-hombre-dos-cabezas-buenos-aires-location",
@@ -2995,7 +3138,8 @@
       "id": "figura-ancha-hombre-buenos-aires-holder",
       "objectId": "figura-ancha-hombre-buenos-aires",
       "predicate": "held_by",
-      "value": "Museo Etnografico de la Universidad de Buenos Aires"
+      "value": "Museo Etnografico de la Universidad de Buenos Aires",
+      "holderId": "museo-etnografico-uba"
     },
     {
       "id": "figura-ancha-hombre-buenos-aires-location",
@@ -3019,7 +3163,8 @@
       "id": "figura-humana-grotesca-buenos-aires-holder",
       "objectId": "figura-humana-grotesca-buenos-aires",
       "predicate": "held_by",
-      "value": "Museo Etnografico de la Universidad de Buenos Aires"
+      "value": "Museo Etnografico de la Universidad de Buenos Aires",
+      "holderId": "museo-etnografico-uba"
     },
     {
       "id": "figura-humana-grotesca-buenos-aires-location",

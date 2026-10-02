@@ -1,0 +1,11 @@
+{
+  "name": "Landesmuseum Hannover",
+  "visitUrl": "https://landesmuseum-hannover.de/besuch/",
+  "location": {
+    "name": "Hannover, Germany",
+    "precision": "locality",
+    "longitude": 9.732,
+    "latitude": 52.3759,
+    "reference": "https://www.openstreetmap.org/?mlat=52.3759&mlon=9.732#map=10/52.3759/9.732"
+  }
+}

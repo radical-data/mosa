@@ -38,7 +38,8 @@
       "objectId": "moai-head-quai-branly-71-1930-35-1",
       "predicate": "held_by",
       "value": "musée du quai Branly",
-      "locator": "Fiche, paragraphe d’introduction"
+      "locator": "Fiche, paragraphe d’introduction",
+      "holderId": "musee-du-quai-branly"
     },
     {
       "id": "dimensions",

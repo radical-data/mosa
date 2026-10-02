@@ -1,0 +1,12 @@
+{
+  "name": "National Museums Scotland",
+  "aliases": ["The Royal Scottish Museum"],
+  "visitUrl": "https://www.nms.ac.uk/national-museum-of-scotland/plan-your-visit/",
+  "location": {
+    "name": "Edinburgh, Scotland",
+    "precision": "locality",
+    "longitude": -3.1883,
+    "latitude": 55.9533,
+    "reference": "https://www.openstreetmap.org/?mlat=55.9533&mlon=-3.1883#map=10/55.9533/-3.1883"
+  }
+}

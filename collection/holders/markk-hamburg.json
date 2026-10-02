@@ -1,0 +1,12 @@
+{
+  "name": "MARKK",
+  "visitUrl": "https://markk-hamburg.de/informationen-service/",
+  "location": {
+    "name": "Hamburg, Germany",
+    "precision": "site",
+    "longitude": 9.98945,
+    "latitude": 53.56862,
+    "reference": "https://www.openstreetmap.org/way/35280679"
+  },
+  "aliases": ["MARKK Hamburg"]
+}

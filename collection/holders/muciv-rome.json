@@ -1,0 +1,16 @@
+{
+  "name": "Museo delle Civiltà",
+  "aliases": [
+    "Museo Preistorico et Etnografico “Luigi Pigorini”",
+    "Museum of Civilizations, Rome.",
+    "Museo delle Civiltà, Rome"
+  ],
+  "location": {
+    "name": "Rome, Italy",
+    "precision": "site",
+    "longitude": 12.471736,
+    "latitude": 41.832366,
+    "reference": "https://www.turismoroma.it/it/luoghi/muciv-museo-delle-civilt%C3%A0"
+  },
+  "visitUrl": "https://www.museodellecivilta.it/en/visit/"
+}

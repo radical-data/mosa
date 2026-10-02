@@ -1,0 +1,12 @@
+{
+  "name": "British Museum",
+  "aliases": ["Museo Britanico"],
+  "visitUrl": "https://www.britishmuseum.org/visit",
+  "location": {
+    "name": "London, United Kingdom",
+    "precision": "site",
+    "longitude": -0.1269566,
+    "latitude": 51.5194133,
+    "reference": "https://www.britishmuseum.org/visit"
+  }
+}

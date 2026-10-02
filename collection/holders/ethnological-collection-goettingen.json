@@ -1,0 +1,12 @@
+{
+  "name": "Ethnologische Sammlung Göttingen",
+  "visitUrl": "https://www.uni-goettingen.de/en/the%2Bethnographic%2Bcollection%2B%28temporarily%2Bclosed%29/38813.html",
+  "location": {
+    "name": "Göttingen, Germany",
+    "precision": "locality",
+    "longitude": 9.9158,
+    "latitude": 51.5413,
+    "reference": "https://www.openstreetmap.org/?mlat=51.5413&mlon=9.9158#map=10/51.5413/9.9158"
+  },
+  "aliases": ["Ethnologische Sammlung der Universität Göttingen"]
+}

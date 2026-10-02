@@ -1,0 +1,11 @@
+{
+  "name": "National Museum of Ireland",
+  "visitUrl": "https://source.museum.ie/en-IE/Museums/Archaeology/Visitor-Information/Opening-Hours%2C-Location-and-Facilities",
+  "location": {
+    "name": "Dublin, Ireland",
+    "precision": "locality",
+    "longitude": -6.2603,
+    "latitude": 53.3498,
+    "reference": "https://www.openstreetmap.org/?mlat=53.3498&mlon=-6.2603#map=10/53.3498/-6.2603"
+  }
+}

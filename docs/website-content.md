@@ -72,6 +72,50 @@ Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-t
 Keep all source accounts, qualifiers and optional locators visible. Holding and
 location labels describe source reports, which may be historical.
 
+The [Visit map](adrs/028-map-objects-through-holders.md) presents holders as
+MoSA's “satellite museums”. Each holder referenced by a resolved `held_by`
+claim gets one named list entry; those with coordinates get individual points.
+Points use one colour, carry no object counts and remain separate even when
+they overlap. There is no clustering or search. MapLibre places museum names on
+the map without overlapping labels; more names appear as visitors zoom in.
+Coincident locality-level points receive a small, consistent screen offset so
+each is clickable. Their labels and popups follow the same offset; the recorded
+coordinates and locality precision remain unchanged. Site-level points stay at
+their verified coordinates.
+Selecting a point or label opens visitor information and expandable object
+evidence in a map popup. Popups mirror the list's name, place, short object count
+and visitor-information button, without technical location-precision labels.
+The camera stays within a single world. At overview scales smaller than the
+viewport, that world stays centred, including on narrow screens.
+Accessible marker buttons are positioned with `map.project()` at their recorded
+longitudes, so they cannot wrap independently of the single-world basemap.
+Clicking the map background, the
+selected point, the close button or pressing Escape clears the selection. An
+in-map fit-to-bounds control restores the view of all mapped museums and clears
+selection. The alphabetical holder list below the map always shows each name
+and place, with a visitor-information button when a verified link is available.
+Clicking a mapped name or its place opens that museum in the map. Only the
+supporting object evidence is expandable, using a short object count alongside
+the row's other actions. Unmapped holders and overlapping
+points remain accessible in the list.
+
+Holder navigation names use the institution's concise public name with normal
+capitalisation for its language. Omit street addresses and unnecessary parent
+organisation suffixes; retain a city when it forms part of the established name
+(for example, Linden-Museum Stuttgart). Keep previous names as holder aliases
+and preserve the original wording of attributed holding claims.
+
+Public access is not an inclusion requirement: private collections and closed
+institutions remain eligible. Use verified optional holder `visitUrl` links for
+visitor information. Keep coordinate references in the holder records rather
+than displaying them as visitor links. Preserve location precision in the data and keep object
+evidence in an expandable supporting section, including historical or uncertain
+status.
+Object location exceptions do not move a holder's pin. The page does not turn
+historical holding claims into assurances of present custody or public display.
+Use a single page introduction leading directly into the map. Keep the full
+holder list and evidence usable without JavaScript or WebGL.
+
 Use explicit `Intl` locales and metric units. Preserve the precision and
 uncertainty of historical dates. Do not infer ownership, consent or cultural
 authority from current holding or location.

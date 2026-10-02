@@ -1,0 +1,12 @@
+{
+  "name": "Kunstkamera",
+  "visitUrl": "https://www.kunstkamera.ru/",
+  "location": {
+    "name": "Saint Petersburg, Russia",
+    "precision": "site",
+    "longitude": 30.3044,
+    "latitude": 59.9417,
+    "reference": "https://www.wikidata.org/wiki/Q1277585#P625"
+  },
+  "aliases": ["Museo Miklucho-Maklaja"]
+}

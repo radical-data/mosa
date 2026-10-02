@@ -85,6 +85,52 @@ Museo de Toulouse. Locate and assess the cited historical records before
 creating object links; row 18 specifically asks whether the Toulouse museum
 still exists and lists a collection of spear points.
 
+## Holder-location follow-up
+
+On 2 October 2026, a bounded location pass covered the seven holders that
+still lacked map points. It searched the table names and collector-name
+variants against museum pages, collection directories and auction catalogues.
+The holder records contain the selected points and location references;
+all seven use locality precision. Private-collection labels explicitly mark
+historical or uncertain geography, not verified current custody. Existing
+object identities and source wording remain unchanged.
+
+The Paris, London, Hamburg and Brussels coordinates reuse the collection's
+existing representative city points. The Saint John point comes from
+[Canada's official geographical names record](https://geonames.nrcan.gc.ca/search-place-names/unique?id=DAEGW&wbdisable=true).
+The [museum's contact page](https://www.nbm-mnb.ca/en/contact-us/) identifies
+facilities in Saint John; the point does not select a storage building.
+
+Remaining questions concern the private collections:
+
+- [Hooper](../../collection/holders/private-collection-hooper.json): retain
+  the table's London locality provisionally. [Sotheby's](https://www.sothebys.com/buy/9a100b18-d135-4b93-81ef-34e0d35821ea/lots/b548c2d4-4719-4582-a3a0-213e36d3182a)
+  uses London/Arundel for James Hooper, while [Christie's](https://www.christies.com/en/lot/lot-6196796)
+  describes his Arundel museum and subsequent collection dispersal. Resolve
+  the two table entries against Hooper inventory numbers before choosing a
+  different historical locality or a successor holder.
+- [Raft, Nash](../../collection/holders/private-collection-raft-nash.json):
+  the [Osterinsel-Freunde directory](https://www.osterinsel-freunde.de/literatur),
+  section 5, associates Ralph Nash and a moko with Hamburg, but
+  [Christie's](https://www.christies.com/lot/lot-6514215) gives London for Ralph
+  Nash in another provenance. Hamburg remains the table-reported locality;
+  verify the underlying name and chronology before merging identities.
+- [Vander Straete](../../collection/holders/private-collection-vander-straete.json):
+  the same directory associates René Vander Straete and moai papa with
+  Brussels, supporting a provisional city estimate beyond the table's Belgium.
+  [Christie's](https://www.christies.com/lot/lot-6381548) discusses a Vander
+  Straete moai papa in Belgium. Compare that publication and the table's
+  illustration or bibliography before asserting an individual-object match.
+- The Paris directory entries support the locations of
+  [Ladriere](../../collection/holders/private-collection-ladriere.json),
+  [Laurens](../../collection/holders/private-collection-laurens.json) and
+  [Ratton](../../collection/holders/private-collection-ratton.json).
+  Guy Ladrière, Quentin Laurens and Charles Ratton are candidate fuller
+  identities, not replacements for the table's labels. The directory draws
+  on a 1994 list and does not establish present holdings. Next seek individual
+  inventory or sale records for these table entries; avoid repeating generic
+  city searches.
+
 ## Next action
 
 Start with the stable-identifier group and the two ambiguous rows, recording

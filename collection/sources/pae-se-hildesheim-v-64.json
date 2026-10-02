@@ -15,7 +15,8 @@
       "id": "holder",
       "objectId": "moai-tangata-hildesheim-v-64",
       "predicate": "held_by",
-      "value": "Roemer- und Pelizaeus-Museum Hildesheim"
+      "value": "Roemer- und Pelizaeus-Museum Hildesheim",
+      "holderId": "roemer-pelizaeus-museum"
     },
     {
       "id": "object-name",

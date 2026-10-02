@@ -1,0 +1,12 @@
+{
+  "name": "Musée du quai Branly",
+  "visitUrl": "https://quaibranly.fr/fr/missions-et-fonctionnement/faq-conditions-de-visite",
+  "location": {
+    "name": "Paris, France",
+    "precision": "site",
+    "longitude": 2.2978,
+    "latitude": 48.86098,
+    "reference": "https://www.openstreetmap.org/way/17954721"
+  },
+  "aliases": ["Musée du quai Branly – Jacques Chirac"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Pitt Rivers Museum",
+  "aliases": ["Pit Rivers Museum"],
+  "visitUrl": "https://www.prm.ox.ac.uk/visit-us",
+  "location": {
+    "name": "Oxford, United Kingdom",
+    "precision": "locality",
+    "longitude": -1.2577,
+    "latitude": 51.752,
+    "reference": "https://www.openstreetmap.org/?mlat=51.752&mlon=-1.2577#map=10/51.752/-1.2577"
+  }
+}

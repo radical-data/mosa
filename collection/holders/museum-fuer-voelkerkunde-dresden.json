@@ -1,0 +1,11 @@
+{
+  "name": "Museum für Völkerkunde Dresden",
+  "visitUrl": "https://voelkerkunde-dresden.skd.museum/besuch/",
+  "location": {
+    "name": "Dresden, Germany",
+    "precision": "locality",
+    "longitude": 13.7373,
+    "latitude": 51.0504,
+    "reference": "https://www.openstreetmap.org/?mlat=51.0504&mlon=13.7373#map=10/51.0504/13.7373"
+  }
+}

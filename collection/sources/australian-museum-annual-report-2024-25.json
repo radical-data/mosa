@@ -17,6 +17,14 @@
       "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
     },
     {
+      "id": "tahia-makemake-holder",
+      "objectId": "petroglyph-tahia-makemake-australian-museum",
+      "predicate": "held_by",
+      "value": "Australian Museum",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph",
+      "holderId": "australian-museum"
+    },
+    {
       "id": "manu-tara-acquisition-group",
       "objectId": "petroglyph-manu-tara-australian-museum",
       "predicate": "described_as",
@@ -24,11 +32,27 @@
       "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
     },
     {
+      "id": "manu-tara-holder",
+      "objectId": "petroglyph-manu-tara-australian-museum",
+      "predicate": "held_by",
+      "value": "Australian Museum",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph",
+      "holderId": "australian-museum"
+    },
+    {
       "id": "tangata-manu-acquisition-group",
       "objectId": "petroglyph-tangata-manu-australian-museum",
       "predicate": "described_as",
       "value": "Six Rapa Nui works were acquired for the AM, including three petroglyphs depicting the significant figures Tahia Makemake, Manu Tara and Tangata Manu which appear at the ceremonial village of Oroŋo in Rapa Nui",
       "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
+    },
+    {
+      "id": "tangata-manu-holder",
+      "objectId": "petroglyph-tangata-manu-australian-museum",
+      "predicate": "held_by",
+      "value": "Australian Museum",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph",
+      "holderId": "australian-museum"
     },
     {
       "id": "moai-carvers-and-construction",
@@ -45,6 +69,14 @@
       "locator": "p. 72, photograph caption"
     },
     {
+      "id": "moai-holder",
+      "objectId": "moai-hoa-haka-nanaia-replica-australian-museum",
+      "predicate": "held_by",
+      "value": "Australian Museum",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph and photograph caption",
+      "holderId": "australian-museum"
+    },
+    {
       "id": "bust-description",
       "objectId": "bust-nua-maria-angata-australian-museum",
       "predicate": "described_as",
@@ -57,6 +89,14 @@
       "predicate": "described_as",
       "value": "a Rongorongo tablet preserving one of the world’s few independently developed writing systems",
       "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph"
+    },
+    {
+      "id": "tablet-holder",
+      "objectId": "kohau-rongorongo-replica-australian-museum",
+      "predicate": "held_by",
+      "value": "Australian Museum",
+      "locator": "p. 72, Case study: Rapa Nui partnership (PDF page 37), acquisition paragraph",
+      "holderId": "australian-museum"
     }
   ],
   "images": []

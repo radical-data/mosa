@@ -1,0 +1,12 @@
+{
+  "name": "Te Papa Tongarewa",
+  "aliases": ["National Museum of New Zealand", "Museum of New Zealand Te Papa Tongarewa"],
+  "visitUrl": "https://www.tepapa.govt.nz/visit",
+  "location": {
+    "name": "Wellington, New Zealand",
+    "precision": "locality",
+    "longitude": 174.7756,
+    "latitude": -41.2866,
+    "reference": "https://www.openstreetmap.org/?mlat=-41.2866&mlon=174.7756#map=10/-41.2866/174.7756"
+  }
+}

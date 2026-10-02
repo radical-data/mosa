@@ -1,0 +1,15 @@
+{
+  "name": "Museo Antropológico Padre Sebastián Englert",
+  "aliases": [
+    "Museo Antropológico Padre Sebastián Englert (MAPSE)",
+    "Museo Antropológico Padre Sebastian Englert (MAPSE)"
+  ],
+  "visitUrl": "https://www.museorapanui.gob.cl/horario-y-entrada",
+  "location": {
+    "name": "Hanga Roa, Rapa Nui",
+    "precision": "locality",
+    "longitude": -109.43,
+    "latitude": -27.15,
+    "reference": "https://www.openstreetmap.org/?mlat=-27.15&mlon=-109.43#map=10/-27.15/-109.43"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Museum Rietberg",
+  "aliases": ["Völkerkundemuseum der Universität Zürich"],
+  "visitUrl": "https://rietberg.ch/en/visit",
+  "location": {
+    "name": "Zürich, Switzerland",
+    "precision": "locality",
+    "longitude": 8.5417,
+    "latitude": 47.3769,
+    "reference": "https://www.openstreetmap.org/?mlat=47.3769&mlon=8.5417#map=10/47.3769/8.5417"
+  }
+}

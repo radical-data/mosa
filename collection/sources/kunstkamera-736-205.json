@@ -9,7 +9,8 @@
       "id": "holder",
       "objectId": "kunstkamera-736-205",
       "predicate": "held_by",
-      "value": "Kunstkamera"
+      "value": "Kunstkamera",
+      "holderId": "kunstkamera"
     },
     {
       "id": "catalogue-number",

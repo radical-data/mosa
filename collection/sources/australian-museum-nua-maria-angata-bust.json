@@ -28,7 +28,8 @@
       "objectId": "bust-nua-maria-angata-australian-museum",
       "predicate": "held_by",
       "value": "Australian Museum",
-      "locator": "Opening paragraph beginning “This carved portrait”"
+      "locator": "Opening paragraph beginning “This carved portrait”",
+      "holderId": "australian-museum"
     },
     {
       "id": "carver",

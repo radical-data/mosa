@@ -17,7 +17,8 @@
       "objectId": "british-museum-figure-oc-ep-29",
       "predicate": "held_by",
       "value": "British Museum",
-      "locator": "Institutional catalogue record"
+      "locator": "Institutional catalogue record",
+      "holderId": "british-museum"
     },
     {
       "id": "type",

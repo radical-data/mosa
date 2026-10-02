@@ -1,0 +1,11 @@
+{
+  "name": "Canterbury Museum",
+  "visitUrl": "https://www.canterburymuseum.com/visit",
+  "location": {
+    "name": "Christchurch, New Zealand",
+    "precision": "locality",
+    "longitude": 172.6362,
+    "latitude": -43.5321,
+    "reference": "https://www.openstreetmap.org/?mlat=-43.5321&mlon=172.6362#map=10/-43.5321/172.6362"
+  }
+}
