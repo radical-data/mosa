@@ -1,9 +1,10 @@
 ---
 import { getCopy } from "../content/content";
+import { articlePublications } from "../data/collection";
 import { readings } from "../data/resources";
 import { getResources } from "../data/site";
 import { messages } from "../i18n/catalogues";
-import { type Locale, publicSectionPath } from "../i18n/routes";
+import { type Locale, publicRecordPath, publicSectionPath } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 import "../styles/resources-page.css";
 
@@ -12,6 +13,7 @@ const { locale } = Astro.props;
 const copy = getCopy("resources", locale);
 const resources = getResources(locale);
 const t = messages(locale);
+const articles = [...articlePublications].sort((a, b) => a.title.localeCompare(b.title, "es-CL"));
 const groupLabels = locale === "en"
   ? { guides: "Practical guides", rights: "Rights and legal frameworks", cases: "Cases and archives", initiatives: "Campaigns and critical perspectives" }
   : { guides: "Guías prácticas", rights: "Derechos y marcos jurídicos", cases: "Casos y archivos", initiatives: "Campañas y perspectivas críticas" };
@@ -23,13 +25,8 @@ const groupLabels = locale === "en"
   </header>
   <div class="container resources-lede">
     <p>{copy.passage05}</p>
-    <a href={publicSectionPath("articles", locale)}>{t.articleIndexTitle} <span aria-hidden="true">↗</span></a>
   </div>
-  <section class="resources-overview" aria-labelledby="resource-pages-title">
-    <div class="container resources-section-head">
-      <p class="eyebrow">MoSA</p>
-      <h2 id="resource-pages-title"><Fragment set:html={copy.passage06} /></h2>
-    </div>
+  <section class="resources-overview" aria-label={locale === "en" ? "MoSA resources" : "Recursos de MoSA"}>
     <div class="resource-detail-cards">
       {resources.map((resource, index) => <a id={resource.id} class:list={["resource-card", `resource-card-${index + 1}`]} href={resource.path}>
         <span class="small availability">{locale === "en" ? "Open resource" : "Abrir recurso"} <span aria-hidden="true">↗</span></span>
@@ -37,21 +34,24 @@ const groupLabels = locale === "en"
       </a>)}
     </div>
   </section>
-  <img class="full-image historical-image resources-historical-image" src="/images/colonial-transport.webp" alt={copy.passage04} width="600" height="522" loading="lazy" />
-  <section class="container participant-map-callout" aria-labelledby="participant-map-title">
-    <div class="participant-map-art" aria-hidden="true">
-      <span class="map-node map-node-centre"></span><span class="map-node map-node-one"></span>
-      <span class="map-node map-node-two"></span><span class="map-node map-node-three"></span>
-      <span class="map-link map-link-one"></span><span class="map-link map-link-two"></span>
-      <span class="map-link map-link-three"></span>
-    </div>
-    <div class="participant-map-copy">
-      <p class="eyebrow">{locale === "en" ? "A MoSA tool" : "Una herramienta de MoSA"}</p>
-      <h2 id="participant-map-title"><Fragment set:html={copy.passage07} /></h2>
-      <p><Fragment set:html={copy.passage08} /></p>
-      <a href={resources.find(({ id }) => id === "actors")?.path}>{locale === "en" ? "Explore the participant map" : "Explora el mapeo de actores"} <span aria-hidden="true">↗</span></a>
-    </div>
+  <section class="container resource-articles" aria-labelledby="resource-articles-title">
+    <header class="resource-articles-header">
+      <div>
+        <p class="eyebrow">MoSA</p>
+        <h2 id="resource-articles-title">{t.articleIndexTitle}</h2>
+        <p>{t.articleIndexDescription}</p>
+      </div>
+      <a href={publicSectionPath("articles", locale)}>{locale === "en" ? "View all articles" : "Ver todos los artículos"} <span aria-hidden="true">↗</span></a>
+    </header>
+    <ol class="resource-article-list">
+      {articles.map((article, index) => <li>
+        <span class="article-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+        <a href={publicRecordPath("articles", article.id, locale)} lang={article.language}>{article.title}</a>
+        {article.author && <span class="article-author" lang={article.language}>{article.author}</span>}
+      </li>)}
+    </ol>
   </section>
+  <img class="full-image historical-image resources-historical-image" src="/images/colonial-transport.webp" alt={copy.passage04} width="600" height="522" loading="lazy" />
   <section id="readings" class="dark-section section resource-readings" aria-labelledby="readings-title">
     <div class="container">
       <h2 id="readings-title" class="eyebrow"><Fragment set:html={copy.passage09} /></h2>
