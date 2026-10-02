@@ -1,40 +1,28 @@
 ---
-import type { CollectionObject, GeocodedLocation, Holder, LocationStatus } from "../data/collection-model";
-import type { SourcedClaim } from "../data/collection-record";
+import type { VisitHolder } from "../data/visit-holders";
 import { type Locale, publicRecordPath } from "../i18n/routes";
 
-interface LocalisedText { text: string; language: string; }
-interface MappedObject { object: CollectionObject; status: LocationStatus; holder?: Holder; claims: SourcedClaim[]; note?: LocalisedText; }
-interface LocationGroup { key: string; location: GeocodedLocation; holders: Holder[]; objects: MappedObject[]; }
-interface UnresolvedObject { object: CollectionObject; status: LocationStatus | "unassessed"; holder?: Holder; claims: SourcedClaim[]; note?: LocalisedText; reason?: string; }
 interface Copy {
-  mapReset: string; mapUnavailable: string;
-  mapSelectPrompt: string; locationListTitle: string; unresolvedTitle: string;
+  mapReset: string; mapUnavailable: string; mapSelectPrompt: string;
+  locationListTitle: string; locationUnknown: string; visitInformation: string; showOnMap: string;
   precisionSite: string; precisionLocality: string; precisionRegion: string; precisionCountry: string;
-  statusReported: string; statusHistorical: string; statusUncertain: string; statusUnknown: string; statusUnassessed: string;
-  holdersLabel: string; objectLabel: string; objectsLabel: string; evidenceLabel: string; coordinateSource: string; noMappedPlaces: string;
-  noUnresolved: string;
+  statusReported: string; statusHistorical: string; statusUncertain: string; statusUnknown: string;
+  objectLabel: string; objectsLabel: string; evidenceLabel: string; coordinateSource: string;
+  relatedObjects: string; noMappedPlaces: string;
 }
-interface Props { locale: Locale; locations: LocationGroup[]; unresolved: UnresolvedObject[]; copy: Copy; }
-const { locale, locations, unresolved, copy } = Astro.props;
+interface Props { locale: Locale; destinations: VisitHolder[]; copy: Copy; }
+const { locale, destinations, copy } = Astro.props;
 const objectPath = (id: string) => publicRecordPath("objects", id, locale);
 const sourcePath = (id: string) => publicRecordPath("sources", id, locale);
-const locationPrecision = { site: copy.precisionSite, locality: copy.precisionLocality, region: copy.precisionRegion, country: copy.precisionCountry };
-const statusLabels = { reported: copy.statusReported, historical: copy.statusHistorical, uncertain: copy.statusUncertain, unknown: copy.statusUnknown, unassessed: copy.statusUnassessed };
+const precisionLabels = { site: copy.precisionSite, locality: copy.precisionLocality, region: copy.precisionRegion, country: copy.precisionCountry };
+const statusLabels = { reported: copy.statusReported, historical: copy.statusHistorical, uncertain: copy.statusUncertain, unknown: copy.statusUnknown };
 const objectCount = (count: number) => `${count} ${count === 1 ? copy.objectLabel : copy.objectsLabel}`;
-const browserLocations = locations.map(({ key, location, holders, objects }) => ({
-  key,
-  location: { name: location.name, precision: location.precision, longitude: location.longitude, latitude: location.latitude, reference: location.reference },
-  holders: holders.map(({ id, name }) => ({ id, name })),
-  objects: objects.map(({ object, status, holder, claims, note }) => ({
-    object: { id: object.id, name: object.name }, status,
-    ...(holder ? { holder: { id: holder.id, name: holder.name } } : {}),
-    claims: [...new Map(claims.map(({ source }) => [source.id, { source: { id: source.id, title: source.title } }])).values()],
-    ...(note ? { note: { text: note.text, language: note.language } } : {}),
-  })),
-}));
+const points = destinations.flatMap(({ holder }) => holder.location ? [{
+  id: holder.id, name: holder.name,
+  longitude: holder.location.longitude, latitude: holder.location.latitude,
+}] : []);
 ---
-<div class="visit-explorer" data-locale={locale} data-locations={JSON.stringify(browserLocations)} data-copy={JSON.stringify({ mapReset: copy.mapReset, mapUnavailable: copy.mapUnavailable, mapSelectPrompt: copy.mapSelectPrompt, locationPrecision, status: statusLabels, holdersLabel: copy.holdersLabel, objectLabel: copy.objectLabel, objectsLabel: copy.objectsLabel, evidenceLabel: copy.evidenceLabel, coordinateSource: copy.coordinateSource })}>
+<div class="visit-explorer" data-points={JSON.stringify(points)}>
   <div class="visit-map-layout">
     <div class="visit-map-column">
       <div class="visit-map-toolbar" hidden><button type="button" class="button" data-map-reset>{copy.mapReset}</button></div>
@@ -48,298 +36,115 @@ const browserLocations = locations.map(({ key, location, holders, objects }) => 
   </div>
   <section class="visit-location-list" aria-labelledby="visit-location-list-title">
     <h3 id="visit-location-list-title">{copy.locationListTitle}</h3>
-    {locations.length === 0 && <p>{copy.noMappedPlaces}</p>}
-    <div>
-      {locations.map((group) => <article class="visit-place">
-        <details>
-          <summary><span>{group.location.name}</span>{" "}<span class="small muted">{locationPrecision[group.location.precision]} · {objectCount(group.objects.length)}</span></summary>
-          <p class="small visit-coordinate-source"><a href={group.location.reference} target="_blank" rel="noreferrer">{copy.coordinateSource}</a></p>
-          <ul>{group.objects.map(({ object, status, holder, claims, note }) => <li>
-          <a href={objectPath(object.id)}>{object.name}</a>
-          <span class="visit-location-meta">{statusLabels[status]}{holder && <> · {holder.name}</>}</span>
-          {note && <p lang={note.language}>{note.text}</p>}
-          {claims.length > 0 && <p class="small visit-evidence">{copy.evidenceLabel}: {[...new Map(claims.map(({ source }) => [source.id, source])).values()].map((source) => <a href={sourcePath(source.id)}>{source.title}</a>)}</p>}
-        </li>)}</ul>
-        </details>
-      </article>)}
-    </div>
-  </section>
-  <section class="visit-unresolved" aria-labelledby="visit-unresolved-title">
-    <h3 id="visit-unresolved-title">{copy.unresolvedTitle}</h3>
-    {unresolved.length === 0 ? <p>{copy.noUnresolved}</p> : <details class="visit-unresolved-details"><summary>{objectCount(unresolved.length)}</summary><ul>{unresolved.map(({ object, status, holder, claims, note }) => <li>
-      <a href={objectPath(object.id)}>{object.name}</a>
-      <span class="visit-location-meta">{statusLabels[status]}{holder && <> · {holder.name}</>}</span>
-      {note && <p lang={note.language}>{note.text}</p>}
-      {claims.length > 0 && <p class="small visit-evidence">{copy.evidenceLabel}: {[...new Map(claims.map(({ source }) => [source.id, source])).values()].map((source) => <a href={sourcePath(source.id)}>{source.title}</a>)}</p>}
-    </li>)}</ul></details>}
+    {points.length === 0 && <p>{copy.noMappedPlaces}</p>}
+    {destinations.map(({ holder, objects }) => <article class="visit-place" data-holder-id={holder.id}>
+      <details>
+        <summary><span>{holder.name}</span>{" "}<span class="small muted">{holder.location?.name ?? copy.locationUnknown}</span></summary>
+        {holder.location && <button class="button visit-show-on-map" type="button" data-show-holder={holder.id} hidden>{copy.showOnMap}</button>}
+        <div class="visit-holder-content">
+          <p class="small muted">{holder.location ? `${holder.location.name} · ${precisionLabels[holder.location.precision]}` : copy.locationUnknown}</p>
+          <p class="visit-holder-links">
+            {holder.visitUrl && <a href={holder.visitUrl} target="_blank" rel="noreferrer">{copy.visitInformation} ↗</a>}
+            {holder.location && <a href={holder.location.reference} target="_blank" rel="noreferrer">{copy.coordinateSource} ↗</a>}
+          </p>
+          <details class="visit-holder-objects">
+            <summary>{copy.relatedObjects} · {objectCount(objects.length)}</summary>
+            <ul>{objects.map(({ object, status, claims, note }) => <li>
+              <a href={objectPath(object.id)}>{object.name}</a>
+              <span class="visit-location-meta">{statusLabels[status]}</span>
+              {note && <p lang={note.language}>{note.text}</p>}
+              <p class="small visit-evidence">{copy.evidenceLabel}: {[...new Map(claims.map(({ source }) => [source.id, source])).values()].map((source, index) => <Fragment>{index > 0 && " · "}<a href={sourcePath(source.id)}>{source.title}</a></Fragment>)}</p>
+            </li>)}</ul>
+          </details>
+        </div>
+      </details>
+    </article>)}
   </section>
 </div>
 
 <script>
-  import type { GeoJSONSource } from "maplibre-gl";
   import * as maplibregl from "maplibre-gl";
   import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
   import "maplibre-gl/dist/maplibre-gl.css";
 
-  type PropsData = {
-    locale: string;
-    mapReset: string;
-    mapUnavailable: string;
-    mapSelectPrompt: string;
-    locationPrecision: Record<string, string>;
-    status: Record<string, string>;
-    holdersLabel: string;
-    objectLabel: string;
-    objectsLabel: string;
-    evidenceLabel: string;
-    coordinateSource: string;
-  };
-  type Mapped = {
-    object: { id: string; name: string };
-    status: string;
-    holder?: { id: string; name: string };
-    claims: Array<{ source: { id: string; title: string } }>;
-    note?: { text: string; language: string };
-  };
-  type LocationEntry = { key: string; location: { name: string; precision: string; longitude: number; latitude: number; reference: string }; holders: Array<{ id: string; name: string }>; objects: Mapped[] };
+  type Point = { id: string; name: string; longitude: number; latitude: number };
   const root = document.querySelector<HTMLElement>(".visit-explorer");
   const mapElement = root?.querySelector<HTMLElement>("[data-map]");
-  const details = root?.querySelector<HTMLElement>("[data-map-details]");
-  if (root && mapElement && details) {
+  const panel = root?.querySelector<HTMLElement>("[data-map-details]");
+  if (root && mapElement && panel) {
     try {
-      const locale = root.dataset.locale ?? "en";
-      const locations = JSON.parse(root.dataset.locations ?? "[]") as LocationEntry[];
-      const copy = JSON.parse(root.dataset.copy ?? "{}") as PropsData;
-      const objectCount = (count: number) => `${count} ${count === 1 ? copy.objectLabel : copy.objectsLabel}`;
+      const points = JSON.parse(root.dataset.points ?? "[]") as Point[];
+      const rows = new Map([...root.querySelectorAll<HTMLElement>("[data-holder-id]")].map((row) => [row.dataset.holderId, row]));
+      const markers = new Map<string, HTMLButtonElement>();
       maplibregl.setWorkerUrl(maplibreWorkerUrl);
-      const fallback = mapElement.querySelector<HTMLElement>(".visit-map-fallback");
-      const objectHref = (id: string) => locale === "en" ? `/en/collection/${encodeURIComponent(id)}/` : `/es/coleccion/${encodeURIComponent(id)}/`;
-      const sourceHref = (id: string) => locale === "en" ? `/en/sources/${encodeURIComponent(id)}/` : `/es/fuentes/${encodeURIComponent(id)}/`;
-
-      const clearDetails = () => {
-        details.replaceChildren();
-        const prompt = document.createElement("p");
-        prompt.className = "muted";
-        prompt.textContent = copy.mapSelectPrompt;
-        details.append(prompt);
-      };
-      const heading = (text: string) => {
-        const element = document.createElement("h3");
-        element.textContent = text;
-        return element;
-      };
-      const addObject = (container: HTMLElement, item: Mapped) => {
-        const article = document.createElement("article");
-        article.className = "visit-detail-object";
-        const link = document.createElement("a");
-        link.href = objectHref(item.object.id);
-        link.textContent = item.object.name;
-        article.append(link);
-        const status = document.createElement("p");
-        status.className = "small muted";
-        status.textContent = copy.status[item.status] ?? item.status;
-        if (item.holder) status.textContent += ` · ${item.holder.name}`;
-        article.append(status);
-        if (item.note) {
-          const note = document.createElement("p");
-          note.lang = item.note.language;
-          note.textContent = item.note.text;
-          article.append(note);
-        }
-        if (item.claims.length) {
-          const evidence = document.createElement("p");
-          evidence.className = "small visit-evidence";
-          const label = document.createTextNode(`${copy.evidenceLabel}: `);
-          evidence.append(label);
-          const sources = [...new Map(item.claims.map(({ source }) => [source.id, source])).values()];
-          for (const [index, source] of sources.entries()) {
-            if (index) evidence.append(document.createTextNode(" · "));
-            const sourceLink = document.createElement("a");
-            sourceLink.href = sourceHref(source.id);
-            sourceLink.textContent = source.title;
-            evidence.append(sourceLink);
-          }
-          article.append(evidence);
-        }
-        container.append(article);
-      };
-      const showLocation = (entry: LocationEntry) => {
-        details.replaceChildren(heading(entry.location.name));
-        const precision = document.createElement("p");
-        precision.className = "small muted";
-        precision.textContent = `${copy.locationPrecision[entry.location.precision] ?? entry.location.precision} · ${objectCount(entry.objects.length)}`;
-        details.append(precision);
-        const coordinateSource = document.createElement("p");
-        coordinateSource.className = "small visit-coordinate-source";
-        const coordinateSourceLink = document.createElement("a");
-        coordinateSourceLink.href = entry.location.reference;
-        coordinateSourceLink.target = "_blank";
-        coordinateSourceLink.rel = "noreferrer";
-        coordinateSourceLink.textContent = copy.coordinateSource;
-        coordinateSource.append(coordinateSourceLink);
-        details.append(coordinateSource);
-        const holderNames = entry.holders.map(({ name }) => name);
-        if (holderNames.length) {
-          const holders = document.createElement("p");
-          holders.className = "small";
-          holders.textContent = `${copy.holdersLabel}: ${holderNames.join(", ")}`;
-          details.append(holders);
-        }
-        for (const object of entry.objects) addObject(details, object);
-      };
-      const showCluster = (entries: LocationEntry[]) => {
-        details.replaceChildren(heading(copy.objectsLabel));
-        const list = document.createElement("ul");
-        for (const entry of entries) {
-          const item = document.createElement("li");
-          const button = document.createElement("button");
-          button.type = "button";
-          button.className = "visit-cluster-place";
-          button.textContent = `${entry.location.name} · ${objectCount(entry.objects.length)}`;
-          button.addEventListener("click", () => showLocation(entry));
-          item.append(button);
-          list.append(item);
-        }
-        details.append(list);
-      };
-
-      const featureCollection = {
-        type: "FeatureCollection" as const,
-        features: locations.map(({ key, location, objects }) => ({
-          type: "Feature" as const,
-          geometry: { type: "Point" as const, coordinates: [location.longitude, location.latitude] },
-          properties: { locationKey: key, objectCount: objects.length },
-        })),
-      };
       const map = new maplibregl.Map({
         container: mapElement,
         style: {
           version: 8,
           sources: {
-            land: {
-              type: "geojson",
-              data: "/map/natural-earth-land-110m.geojson",
-              attribution: "Natural Earth",
-            },
-            places: {
-              type: "geojson",
-              data: featureCollection,
-              cluster: true,
-              clusterRadius: 46,
-              clusterMaxZoom: 14,
-              clusterProperties: { objectCount: ["+", ["get", "objectCount"]] },
-            },
+            land: { type: "geojson", data: "/map/natural-earth-land-110m.geojson", attribution: "Natural Earth" },
           },
           layers: [
             { id: "background", type: "background", paint: { "background-color": "#e9e7e1" } },
             { id: "land", type: "fill", source: "land", paint: { "fill-color": "#f9f8f4", "fill-outline-color": "#d0cec7" } },
-            { id: "place-index", type: "circle", source: "places", paint: { "circle-radius": 0, "circle-opacity": 0 } },
           ],
         },
-        center: [-110, -10],
-        zoom: 0.6,
-        minZoom: 0.6,
-        maxZoom: 12,
-        dragRotate: false,
-        touchPitch: false,
-        pitchWithRotate: false,
-        attributionControl: { compact: true },
-        cooperativeGestures: true,
+        center: [-110, -10], zoom: 0.6, minZoom: 0.6, maxZoom: 12,
+        dragRotate: false, touchPitch: false, pitchWithRotate: false,
+        attributionControl: { compact: true }, cooperativeGestures: true,
       });
-      map.dragRotate.disable();
       map.touchZoomRotate.disableRotation();
-      map.touchPitch.disable();
-      map.addControl(new maplibregl.NavigationControl({ showCompass: false, visualizePitch: false }), "top-right");
-      map.keyboard.enable();
-      const reset = root.querySelector<HTMLButtonElement>("[data-map-reset]");
-      reset?.addEventListener("click", () => {
-        if (locations.length === 0) map.flyTo({ center: [-110, -10], zoom: 0.6 });
-        else if (locations.length === 1) map.flyTo({ center: [locations[0].location.longitude, locations[0].location.latitude], zoom: 2 });
-        else {
-          const bounds = new maplibregl.LngLatBounds();
-          for (const { location } of locations) bounds.extend([location.longitude, location.latitude]);
-          map.fitBounds(bounds, { padding: 56, maxZoom: 4, duration: 600 });
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+      const showHolder = (point: Point) => {
+        const content = rows.get(point.id)?.querySelector(".visit-holder-content");
+        if (!content) return;
+        const heading = document.createElement("h3");
+        heading.textContent = point.name;
+        panel.replaceChildren(heading, content.cloneNode(true));
+        for (const [id, button] of markers) {
+          button.setAttribute("aria-pressed", String(id === point.id));
         }
-      });
-
-      const markerElements = new Map<string, maplibregl.Marker>();
-      const markerButtons = new Map<string, HTMLButtonElement>();
-      const markerLabel = (key: string, feature: { count: number; cluster: boolean }) => {
-        if (feature.cluster) return objectCount(feature.count);
-        const location = locations.find(({ key: locationKey }) => locationKey === key.slice("location-".length));
-        return `${location?.location.name ?? ""} · ${objectCount(feature.count)}`;
       };
-      const renderMarkers = () => {
-        if (!map.isStyleLoaded() || !map.getSource("places")) return;
-        const features = map.querySourceFeatures("places");
-        const visible = new Map<string, { coordinates: [number, number]; count: number; cluster: boolean; clusterId?: number }>();
-        for (const feature of features) {
-          const props = feature.properties as Record<string, unknown>;
-          const coordinates = (feature.geometry as { coordinates: [number, number] }).coordinates;
-          const cluster = props.cluster === true || props.cluster === 1;
-          const key = cluster ? `cluster-${String(props.cluster_id)}` : `location-${String(props.locationKey)}`;
-          visible.set(key, { coordinates, count: Number(props.objectCount ?? props.point_count ?? 0), cluster, clusterId: Number(props.cluster_id) });
+      const fitAll = (duration: number) => {
+        if (!points.length) return;
+        if (points.length === 1) {
+          map.easeTo({ center: [points[0].longitude, points[0].latitude], zoom: 2, duration });
+          return;
         }
-        for (const [key, marker] of markerElements) {
-          if (!visible.has(key)) { marker.remove(); markerElements.delete(key); markerButtons.delete(key); }
-        }
-        for (const [key, feature] of visible) {
-          let marker = markerElements.get(key);
-          if (!marker) {
-            const button = document.createElement("button");
-            button.type = "button";
-            button.className = "visit-map-marker";
-            button.setAttribute("aria-label", markerLabel(key, feature));
-            marker = new maplibregl.Marker({ element: button, anchor: "center" }).setLngLat(feature.coordinates).addTo(map);
-            markerElements.set(key, marker);
-            markerButtons.set(key, button);
-            button.addEventListener("click", () => {
-              if (feature.cluster) {
-                const source = map.getSource("places") as GeoJSONSource | undefined;
-                if (map.getZoom() < 6 && feature.clusterId !== undefined) {
-                  void source?.getClusterExpansionZoom(feature.clusterId).then((zoom) => {
-                    map.easeTo({ center: feature.coordinates, zoom });
-                  });
-                } else if (feature.clusterId !== undefined) {
-                  void source?.getClusterLeaves(feature.clusterId, 1000, 0).then((leaves) => {
-                    const entries = leaves
-                      .map((leaf) => locations.find(({ key }) => key === String(leaf.properties?.locationKey)))
-                      .filter((entry): entry is LocationEntry => Boolean(entry));
-                    showCluster(entries);
-                  });
-                }
-              } else {
-                const entry = locations.find(({ key: locationKey }) => locationKey === String(featureKeyId(key)));
-                if (entry) showLocation(entry);
-              }
+        const bounds = new maplibregl.LngLatBounds();
+        for (const point of points) bounds.extend([point.longitude, point.latitude]);
+        map.fitBounds(bounds, { padding: 36, maxZoom: 4, duration });
+      };
+      root.querySelector("[data-map-reset]")?.addEventListener("click", () => fitAll(600));
+      map.on("load", () => {
+        mapElement.querySelector(".visit-map-fallback")?.remove();
+        root.querySelector(".visit-map-toolbar")?.removeAttribute("hidden");
+        for (const point of points) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "visit-map-marker";
+          button.setAttribute("aria-label", point.name);
+          button.setAttribute("aria-pressed", "false");
+          button.title = point.name;
+          button.addEventListener("click", () => showHolder(point));
+          new maplibregl.Marker({ element: button, anchor: "center" })
+            .setLngLat([point.longitude, point.latitude]).addTo(map);
+          markers.set(point.id, button);
+          const listButton = rows.get(point.id)?.querySelector<HTMLButtonElement>("[data-show-holder]");
+          if (listButton) {
+            listButton.hidden = false;
+            listButton.addEventListener("click", () => {
+              showHolder(point);
+              map.easeTo({ center: [point.longitude, point.latitude], zoom: Math.max(map.getZoom(), 3) });
+              mapElement.scrollIntoView({ block: "center", behavior: "smooth" });
+              button.focus({ preventScroll: true });
             });
-          } else marker.setLngLat(feature.coordinates);
-          const button = markerButtons.get(key);
-          if (button) {
-            button.textContent = String(feature.count);
-            button.setAttribute("aria-label", markerLabel(key, feature));
           }
         }
-      };
-      function featureKeyId(key: string) { return key.slice("location-".length); }
-      map.on("load", () => {
-        fallback?.remove();
-        mapElement.classList.add("is-ready");
-        root.querySelector<HTMLElement>(".visit-map-toolbar")?.removeAttribute("hidden");
-        renderMarkers();
-        if (locations.length === 1) map.jumpTo({ center: [locations[0].location.longitude, locations[0].location.latitude], zoom: 2 });
-        else if (locations.length > 1) {
-          const bounds = new maplibregl.LngLatBounds();
-          for (const { location } of locations) bounds.extend([location.longitude, location.latitude]);
-          map.fitBounds(bounds, { padding: 56, maxZoom: 4, duration: 0 });
-        }
+        fitAll(0);
       });
-      map.on("idle", renderMarkers);
-      map.on("moveend", renderMarkers);
-      clearDetails();
     } catch (error) {
       console.error("Could not initialise the Visit map", error);
-      mapElement.classList.add("has-map-error");
     }
   }
 </script>

@@ -3,7 +3,7 @@ import PageIntro from "../components/PageIntro.astro";
 import PageLink from "../components/PageLink.astro";
 import VisitMap from "../components/VisitMap.astro";
 import { getCopy } from "../content/content";
-import { collectionMapLocations, collectionMapUnresolved } from "../data/site";
+import { visitHolders } from "../data/site";
 import type { Locale } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
@@ -20,9 +20,9 @@ const copy = getCopy("visit", locale);
         <p class="visit-statement">{copy.mapLead}</p>
         <p class="small muted">{copy.mapExplanation}</p>
       </div>
-      <p class="visit-count"><strong>{collectionMapLocations.reduce((total, entry) => total + entry.objects.length, 0)}</strong><span>{copy.objectCountLabel}</span></p>
+      <p class="visit-count"><strong>{visitHolders.length}</strong><span>{copy.holderCountLabel}</span></p>
     </div>
-    <VisitMap locale={locale} locations={collectionMapLocations} unresolved={collectionMapUnresolved} copy={copy} />
+    <VisitMap locale={locale} destinations={visitHolders} copy={copy} />
   </section>
   <section class="container section connect-strip"><div><h2 class="eyebrow">{copy.passage09}</h2><p>{copy.passage10}</p></div><PageLink class="button" page="events" locale={locale}>{copy.passage16}<span aria-hidden="true">↗</span></PageLink></section>
 </Layout>

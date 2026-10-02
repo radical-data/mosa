@@ -35,6 +35,7 @@ export interface Holder {
   id: string;
   name: string;
   aliases?: string[];
+  visitUrl?: string;
   location?: GeocodedLocation;
 }
 
@@ -302,7 +303,7 @@ export function parseHolder(value: unknown, file: string): Holder {
   if (!isObject(value)) throw Error(errors.join("\n"));
   add(
     errors,
-    sameKeys(value, ["name", "aliases", "location"]),
+    sameKeys(value, ["name", "aliases", "location", "visitUrl"]),
     `${file}: contains an unsupported field`,
   );
   add(errors, text(value.name), `${file}: name is required`);
@@ -318,6 +319,8 @@ export function parseHolder(value: unknown, file: string): Holder {
     }
   }
   if ("location" in value) parseGeocodedLocation(value.location, `${file}: location`, errors);
+  if ("visitUrl" in value)
+    add(errors, validHttpUrl(value.visitUrl), `${file}: visitUrl must be an http(s) URL`);
   if (errors.length) throw Error(errors.join("\n"));
   return { ...(value as Omit<Holder, "id">), id: holderId };
 }

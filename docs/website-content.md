@@ -72,13 +72,20 @@ Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-t
 Keep all source accounts, qualifiers and optional locators visible. Holding and
 location labels describe source reports, which may be historical.
 
-The [Visit map](adrs/028-map-objects-through-holders.md) derives
-object positions from resolved holding claims and each holder's embedded
-mapped location, with explicit object assessments for holderless location
-evidence or genuine exceptions. Show the map's precision and historical or
-uncertain status alongside its grouped object list. A museum pin represents
-the mapped institution, not proof of an object's exact room or public display.
-Keep the list available when JavaScript or WebGL is unavailable.
+The [Visit map](adrs/028-map-objects-through-holders.md) presents holders as
+MoSA's “satellite museums”. Each holder referenced by a resolved `held_by`
+claim gets one named list entry; those with coordinates get individual points.
+Points use one colour, carry no object counts and remain separate even when
+they overlap. There is no clustering or search. The alphabetical holder list
+keeps overlapping points and holders without coordinates accessible.
+
+Public access is not an inclusion requirement: private collections and closed
+institutions remain eligible. Use verified optional holder `visitUrl` links for
+visitor information. Show location precision and keep object evidence in an
+expandable supporting section, including historical or uncertain status.
+Object location exceptions do not move a holder's pin. The page does not turn
+historical holding claims into assurances of present custody or public display.
+Keep the full holder list and evidence usable without JavaScript or WebGL.
 
 Use explicit `Intl` locales and metric units. Preserve the precision and
 uncertainty of historical dates. Do not infer ownership, consent or cultural

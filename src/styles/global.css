@@ -1019,9 +1019,9 @@ strong {
 .visit-map-marker {
   display: grid;
   place-items: center;
-  min-width: 2.3rem;
-  height: 2.3rem;
-  padding-inline: 0.55rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  padding: 0;
   border: 2px solid #fff;
   border-radius: 50%;
   background: var(--coral);
@@ -1033,9 +1033,11 @@ strong {
   cursor: pointer;
 }
 .visit-map-marker:hover,
-.visit-map-marker:focus-visible {
+.visit-map-marker:focus-visible,
+.visit-map-marker[aria-pressed="true"] {
   z-index: 2;
-  transform: scale(1.12);
+  outline: 2px solid #111;
+  outline-offset: 2px;
 }
 .visit-map-details {
   padding: 1.5rem;
@@ -1091,7 +1093,7 @@ strong {
 .visit-place {
   border-top: 1px solid var(--rule);
 }
-.visit-place details > summary {
+.visit-place > details > summary {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -1101,10 +1103,10 @@ strong {
   font-weight: 500;
   list-style-position: inside;
 }
-.visit-place details > summary span:first-child {
+.visit-place > details > summary span:first-child {
   font-size: 1.15rem;
 }
-.visit-place details > summary span:last-child {
+.visit-place > details > summary span:last-child {
   text-align: right;
 }
 .visit-place .visit-coordinate-source {
@@ -1823,4 +1825,33 @@ h3 {
   display: inline-block;
   margin-right: 0.5rem;
   text-decoration: underline;
+}
+
+.visit-holder-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-block: 1rem;
+}
+.visit-holder-links a,
+.visit-holder-objects a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.visit-holder-content {
+  padding-bottom: 1rem;
+}
+.visit-holder-objects > summary {
+  cursor: pointer;
+  padding-block: 0.75rem;
+  font-size: 0.9rem;
+}
+.visit-holder-objects ul {
+  padding-left: 1.25rem;
+}
+.visit-holder-objects li {
+  padding-block: 0.8rem;
+}
+.visit-show-on-map {
+  margin-bottom: 1rem;
 }

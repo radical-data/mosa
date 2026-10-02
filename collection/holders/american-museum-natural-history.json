@@ -1,5 +1,6 @@
 {
   "name": "American Museum of Natural History",
+  "visitUrl": "https://www.amnh.org/plan-your-visit",
   "location": {
     "name": "New York, United States",
     "precision": "locality",

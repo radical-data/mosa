@@ -1,6 +1,7 @@
 {
   "name": "Australian Museum",
   "aliases": ["Australian Museum ethnographic collection"],
+  "visitUrl": "https://australian.museum/visit/",
   "location": {
     "name": "Sydney, Australia",
     "precision": "locality",

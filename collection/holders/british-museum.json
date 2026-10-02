@@ -1,6 +1,7 @@
 {
   "name": "British Museum",
   "aliases": ["Museo Britanico"],
+  "visitUrl": "https://www.britishmuseum.org/visit",
   "location": {
     "name": "London, United Kingdom",
     "precision": "locality",

@@ -18,6 +18,11 @@ holderless `located_at` evidence or a genuine location exception. Never infer
 current custody from an old claim or assign a precise point when the evidence
 supports only a broader locality.
 
+A holder may also have an optional `visitUrl`: a verified official visitor
+information page using HTTP(S). Closed institutions and private collections
+remain eligible for the Visit page. Omit an unverified URL; a coordinate
+reference is not a visitor-information link.
+
 ## Add or edit an object
 
 Create `collection/objects/<object-id>.json`. The file name without `.json` is

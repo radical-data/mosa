@@ -33,6 +33,7 @@ describe("collection model", () => {
         {
           name: "Museum One",
           aliases: ["Museum 1"],
+          visitUrl: "https://example.org/visit",
           location: {
             name: "Museum One",
             precision: "site",
@@ -58,6 +59,11 @@ describe("collection model", () => {
   });
 
   test.each([
+    [
+      "unsafe visitor URL",
+      () => parseHolder({ name: "Museum", visitUrl: "javascript:alert(1)" }, "museum.json"),
+      "visitUrl must be an http(s) URL",
+    ],
     [
       "holder alias duplicates",
       () => parseHolder({ name: "Museum", aliases: ["Museum", "Museum"] }, "museum.json"),

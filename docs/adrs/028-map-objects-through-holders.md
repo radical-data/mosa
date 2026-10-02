@@ -68,12 +68,24 @@ labelled at that level. A holder's mapped location is an institutional map
 reference, not a claim that every object is in a particular room or even
 available to visit.
 
-Build a shared projection for the map and its static list, grouping objects by
-resolved location and counting distinct objects. Retain unresolved objects in
-the list. Use MapLibre GL JS for the map and bundle the required runtime assets
-and geographic data with the static website. The Visit page must not depend on
-external tile, style, font or geocoding services; a map failure must leave the
-list available. The map is not a movement map and draws no undocumented routes.
+Retain the object-location projection for collection research. The Visit page
+uses a separate holder projection: one destination for each holder referenced
+by a resolved `held_by` claim, with distinct objects and their source evidence
+as supporting detail. Multiple institutions in one locality stay separate.
+Object-location exceptions do not reposition their holders.
+
+Present holders as MoSA's “satellite museums”, including closed institutions
+and private collections. Public access is not an inclusion criterion. Holders
+without coordinates remain in the named list. Optional `visitUrl` values link
+to verified official visitor information; they do not assert opening status.
+Use one colour and one unnumbered point per mapped holder, with no clustering,
+even at overlapping coordinates. The alphabetical list provides access to all
+holders, and object evidence is expandable beneath each destination.
+
+Use MapLibre GL JS and bundle the runtime assets and geographic data with the
+static website. The page must not depend on external tile, style, font or
+geocoding services; a map failure must leave the list available. The map draws
+no undocumented movement routes.
 
 ## Consequences
 

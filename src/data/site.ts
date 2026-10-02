@@ -7,6 +7,7 @@ export {
   collectionMapUnresolved,
   collectionRecords,
   getObjectRecord,
+  visitHolders,
 } from "./collection";
 
 export const contactEmail = "mosa@radicaldata.org";

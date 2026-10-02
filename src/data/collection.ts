@@ -20,6 +20,7 @@ import {
   type SourcedClaim,
   sourceImagesForObject,
 } from "./collection-record";
+import { getVisitHolders } from "./visit-holders";
 
 const objectModules = import.meta.glob<unknown>("../../collection/objects/*.json", {
   eager: true,
@@ -70,6 +71,7 @@ const collectionMap = getLocationProjection(checked);
 
 export const collectionMapLocations = collectionMap.locations;
 export const collectionMapUnresolved = collectionMap.unresolved;
+export const visitHolders = getVisitHolders(checked);
 
 export interface ArticleEntry extends ArticleMetadata {
   Content: MarkdownInstance<Record<string, unknown>>["Content"];

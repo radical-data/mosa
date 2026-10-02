@@ -1,6 +1,7 @@
 {
   "name": "Museum of New Zealand Te Papa Tongarewa",
   "aliases": ["National Museum of New Zealand"],
+  "visitUrl": "https://www.tepapa.govt.nz/visit",
   "location": {
     "name": "Wellington, New Zealand",
     "precision": "locality",

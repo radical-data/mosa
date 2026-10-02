@@ -12,7 +12,8 @@
       "uniqueItems": true,
       "items": { "type": "string", "minLength": 1, "pattern": "\\S" }
     },
-    "location": { "$ref": "#/$defs/geocodedLocation" }
+    "location": { "$ref": "#/$defs/geocodedLocation" },
+    "visitUrl": { "type": "string", "format": "uri", "pattern": "^https?://" }
   },
   "$defs": {
     "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },

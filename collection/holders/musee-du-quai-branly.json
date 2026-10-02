@@ -1,5 +1,6 @@
 {
   "name": "musée du quai Branly",
+  "visitUrl": "https://quaibranly.fr/fr/missions-et-fonctionnement/faq-conditions-de-visite",
   "location": {
     "name": "Paris, France",
     "precision": "locality",

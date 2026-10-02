@@ -1,6 +1,7 @@
 {
   "name": "Museum Rietberg",
   "aliases": ["Völkerkundemuseum der Universität Zürich"],
+  "visitUrl": "https://rietberg.ch/en/visit",
   "location": {
     "name": "Zürich, Switzerland",
     "precision": "locality",
