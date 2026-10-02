@@ -68,12 +68,42 @@ and derive image galleries from explicit `depicts` relationships. Article
 pages retain their declared prose language and can concern multiple objects and
 sources or have no record subjects. Methodological notes and preservation captures are excluded from public rendering and search.
 
-The object index offers grid and table views alongside text search. Preserve the
-selected view and query when switching languages.
+The object index uses one shared card for featured objects and catalogue results.
+Cards contain an uncropped image in a white square frame, or a plain pale-grey
+square when no image is available, followed by the object name, source count and
+image-source link. Missing-image text is available to screen readers but is not
+displayed. The white image frame avoids adding a contrasting border around
+photographs with white backgrounds; the photograph itself remains unchanged.
+Image captions, credits and rights remain on the object page and in text search.
+Grid and list views share text search. Image availability does not filter the
+catalogue. Language switching preserves the query and view. Legacy `view=table`
+URLs select the list view.
+
+Featured objects appear in configured order above the full catalogue. They also
+remain in the catalogue; featured cards do not add to the result count. A text
+query hides the featured section.
+
+`src/content/collection-presentation.json` contains website presentation choices,
+not collection assertions. `featuredObjectIds` is an ordered list of existing
+object handles. The optional `leadImages` map selects a lead image by object
+handle, with a `sourceId` and `file` from that object's depicting gallery. The
+build rejects unknown handles, duplicate featured handles and lead images that
+are not in the object's gallery. Without an override, photographs precede other
+image sources, then source ID and file determine the order. Cards and galleries
+use the same lead image. Do not create object-specific template branches.
 
 Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-the-git-collection.md).
-Keep all source accounts, qualifiers and optional locators visible. Holding and
-location labels describe source reports, which may be historical.
+The shared template orders foregrounded perspectives, images, origin, reported
+holding, articles and complete source accounts. Empty sections are omitted.
+Foregrounding is explicitly MoSA's editorial selection, not a truth ranking.
+Claims selected for foregrounding are not repeated in the origin or holding
+summary, but remain in their complete source account. Image frames contain the
+whole image and link to a larger version.
+
+Source accounts use native expandable details, available without JavaScript.
+Keep every claim's wording, attribution, language, qualifiers and optional
+locators in the account. Sources without claims still link to their source page.
+Holding and location labels describe source reports, which may be historical.
 
 Use explicit `Intl` locales and metric units. Preserve the precision and
 uncertainty of historical dates. Do not infer ownership, consent or cultural
