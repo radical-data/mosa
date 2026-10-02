@@ -1,4 +1,5 @@
 ---
+import PageIntro from "../components/PageIntro.astro";
 import { getCopy } from "../content/content";
 import { articlePublications } from "../data/collection";
 import { readings } from "../data/resources";
@@ -19,13 +20,7 @@ const groupLabels = locale === "en"
   : { guides: "Guías prácticas", rights: "Derechos y marcos jurídicos", cases: "Casos y archivos", initiatives: "Campañas y perspectivas críticas" };
 ---
 <Layout locale={locale} page="resources" title={copy.title} description={copy.description}>
-  <header class="container resources-title">
-    <p class="eyebrow">MoSA</p>
-    <h1>{copy.passage03}</h1>
-  </header>
-  <div class="container resources-lede">
-    <p>{copy.passage05}</p>
-  </div>
+  <PageIntro title={copy.passage03}><p>{copy.passage05}</p></PageIntro>
   <section class="resources-overview" aria-label={locale === "en" ? "MoSA resources" : "Recursos de MoSA"}>
     <div class="resource-detail-cards">
       {resources.map((resource, index) => <a id={resource.id} class:list={["resource-card", `resource-card-${index + 1}`]} href={resource.path}>
@@ -37,7 +32,6 @@ const groupLabels = locale === "en"
   <section class="container resource-articles" aria-labelledby="resource-articles-title">
     <header class="resource-articles-header">
       <div>
-        <p class="eyebrow">MoSA</p>
         <h2 id="resource-articles-title">{t.articleIndexTitle}</h2>
         <p>{t.articleIndexDescription}</p>
       </div>
