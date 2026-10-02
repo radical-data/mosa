@@ -1,5 +1,4 @@
 import labels from "../content/pages/reference-labels.json";
-import resources from "../content/pages/resource-summaries.json";
 import type { Locale } from "../i18n/routes";
 
 export {
@@ -9,6 +8,7 @@ export {
   getObjectRecord,
   visitHolders,
 } from "./collection";
+export { getResources } from "./resources";
 
 export const contactEmail = "mosa@radicaldata.org";
 export const conceptIds = [
@@ -30,12 +30,3 @@ export const getConcepts = (locale: Locale) =>
   }));
 export const getTypes = (locale: Locale) =>
   typeIds.map((id) => ({ id, label: labels[locale][id] }));
-const resourceIds = ["guide", "letter", "directory", "generator"] as const;
-export function getResources(locale: Locale) {
-  const copy = resources[locale];
-  return resourceIds.map((id) => ({
-    id,
-    title: copy[`${id}Title`],
-    description: copy[`${id}Description`],
-  }));
-}

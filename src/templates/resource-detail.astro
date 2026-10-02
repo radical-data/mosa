@@ -1,0 +1,48 @@
+---
+import ActorMapGuide from "../components/resources/ActorMapGuide.astro";
+import DirectoryGuide from "../components/resources/DirectoryGuide.astro";
+import LetterGuide from "../components/resources/LetterGuide.astro";
+import RestitutionGuide from "../components/resources/RestitutionGuide.astro";
+import { resourceLabels } from "../data/resources";
+import { type Locale, pagePath, type ResourceId } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; resource: ResourceId; }
+
+const { locale, resource } = Astro.props;
+const label = resourceLabels[locale][resource];
+const isEnglish = locale === "en";
+---
+
+<Layout locale={locale} page="resources" resource={resource} title={`${label.title} — MoSA`} description={label.description}>
+  <nav class="container resource-breadcrumb" aria-label={isEnglish ? "Breadcrumb" : "Migas de pan"}>
+    <a href={pagePath("resources", locale)}>{isEnglish ? "Resources" : "Recursos"}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{label.title}</span>
+  </nav>
+  {resource === "guide" && <RestitutionGuide locale={locale} />}
+  {resource === "letter" && <div class="container"><LetterGuide locale={locale} /></div>}
+  {resource === "directory" && <DirectoryGuide locale={locale} />}
+  {resource === "actors" && <div class="container"><ActorMapGuide locale={locale} /></div>}
+  <div class="container resource-detail-back">
+    <a href={pagePath("resources", locale)}>← {isEnglish ? "Back to resources" : "Volver a recursos"}</a>
+  </div>
+</Layout>
+
+<style>
+  .resource-detail-back {
+    padding-block: 3rem 6rem;
+  }
+
+  .resource-detail-back a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  @media print {
+    .resource-breadcrumb,
+    .resource-detail-back {
+      display: none;
+    }
+  }
+</style>

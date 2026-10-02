@@ -1,0 +1,18 @@
+{
+  "author": "Paula Rossetti, Leo Pakarati, Ana María Arredondo",
+  "articleId": "la-tablilla-mamari",
+  "title": "La tablilla Mamari",
+  "kind": "publication",
+  "reference": "MoSA article: La tablilla Mamari",
+  "language": "es-CL",
+  "claims": [
+    {
+      "id": "calendar-interpretation-comment",
+      "objectId": "mamari",
+      "predicate": "described_as",
+      "value": "la interpretación calendárica es solo una propuesta entre otras, no un hecho establecido.",
+      "locator": "La tablilla Mamari"
+    }
+  ],
+  "images": []
+}

@@ -11,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
 
 interface Props { locale: Locale; record: NonNullable<ReturnType<typeof getSourceRecord>>; }
 const { locale, record } = Astro.props;
-const { source, outgoing, incoming, relatedObjects, depictingObjects, images, claims, articles } = record;
+const { source, outgoing, incoming, relatedObjects, depictingObjects, images, claims, articles, publicationArticle } = record;
 const t = messages(locale);
 const kindLabels: Record<SourceKind, string> = {
   webpage: t.sourceKindWebpage, publication: t.sourceKindPublication, photograph: t.sourceKindPhotograph,
@@ -70,6 +70,17 @@ const sourceURL = referenceURL(source.reference);
         </ul>
       </section>
     )}
-    {articles.length > 0 && <section><h2>{locale === "en" ? "Articles about this source" : "Artículos sobre esta fuente"}</h2>{articles.map((article) => <ArticlePreview article={article} locale={locale} />)}</section>}
+    {articles.length > 0 && (
+      <section>
+        <h2>{locale === "en" ? "Articles about this source" : "Artículos sobre esta fuente"}</h2>
+        {articles.map((article) => <ArticlePreview article={article} locale={locale} />)}
+      </section>
+    )}
+    {publicationArticle && (
+      <section>
+        <h2>{locale === "en" ? "MoSA article" : "Artículo de MoSA"}</h2>
+        <ArticlePreview article={publicationArticle} locale={locale} />
+      </section>
+    )}
   </article>
 </Layout>

@@ -2,12 +2,14 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { messages } from "../i18n/catalogues";
-import { absolutePageURL, type Locale, localeIds, locales, type PageId, type PublicSection, pagePath, publicRecordPath, publicSectionPath, siteURL } from "../i18n/routes";
+import { absolutePageURL, type Locale, localeIds, locales, type PageId, type PublicSection, pagePath, publicRecordPath, publicSectionPath, type ResourceId, resourcePath, siteURL } from "../i18n/routes";
 import "../styles/global.css";
 
-interface Props { title: string; description: string; locale: Locale; page?: PageId; collectionItemId?: string; publicRecord?: { section: PublicSection; id: string }; publicIndex?: PublicSection; }
-const { title, description, locale, page, collectionItemId, publicRecord, publicIndex } = Astro.props;
-const pathFor = (id: Locale) => publicRecord
+interface Props { title: string; description: string; locale: Locale; page?: PageId; resource?: ResourceId; collectionItemId?: string; publicRecord?: { section: PublicSection; id: string }; publicIndex?: PublicSection; }
+const { title, description, locale, page, resource, collectionItemId, publicRecord, publicIndex } = Astro.props;
+const pathFor = (id: Locale) => resource
+  ? resourcePath(resource, id)
+  : publicRecord
   ? publicRecordPath(publicRecord.section, publicRecord.id, id)
   : publicIndex
     ? publicSectionPath(publicIndex, id)

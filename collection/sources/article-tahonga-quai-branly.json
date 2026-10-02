@@ -1,0 +1,18 @@
+{
+  "author": "Paula Rossetti",
+  "articleId": "tahonga-quai-branly",
+  "title": "Escultura en madera tahoŋa",
+  "kind": "publication",
+  "reference": "MoSA article: Escultura en madera tahoŋa",
+  "language": "es-CL",
+  "claims": [
+    {
+      "id": "museum-comment",
+      "objectId": "quai-branly-71-1935-61-283",
+      "predicate": "described_as",
+      "value": "Este es un objeto muy poco conocido. Actualmente se talla mucho, pero no con esta cabeza. Esta pieza la pusieron en exposición luego de que visitamos el museo (Leo Pakarati y Paula Rossetti visitan el museo para la grabación del documental Te Kuhane o te Tupuna).",
+      "locator": "Comentario"
+    }
+  ],
+  "images": []
+}

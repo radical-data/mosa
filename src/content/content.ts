@@ -6,7 +6,6 @@ import events from "./pages/events.json";
 import home from "./pages/home.json";
 import interfaceCopy from "./pages/interface.json";
 import referenceLabels from "./pages/reference-labels.json";
-import resourceSummaries from "./pages/resource-summaries.json";
 import resources from "./pages/resources.json";
 import visit from "./pages/visit.json";
 
@@ -20,7 +19,6 @@ export const content = {
   contact,
   interface: interfaceCopy,
   "reference-labels": referenceLabels,
-  "resource-summaries": resourceSummaries,
 };
 // Spanish supplies the key shape; the build checks both languages have those keys.
 export function getCopy<P extends keyof typeof content>(

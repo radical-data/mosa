@@ -1,0 +1,58 @@
+---
+import { organisations } from "../../data/resources";
+import type { Locale } from "../../i18n/routes";
+import "../../styles/resource-guides.css";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const en = locale === "en";
+---
+
+<section class="directory-guide" lang={en ? "en-GB" : "es-CL"} aria-labelledby="directory-guide-title">
+  <header class="directory-masthead">
+    <div class="directory-title-block">
+      <p class="resource-guide-kicker">{en ? "A field guide to connections" : "Una guía para encontrar vínculos"}</p>
+      <h1 id="directory-guide-title">{en ? "Directory of organisations" : "Directorio de organizaciones"}</h1>
+    </div>
+    <div class="directory-lead-block">
+      <p class="directory-lead">{en
+        ? "Organisations and initiatives working with restitution, memory, language and Indigenous data sovereignty."
+        : "Organizaciones e iniciativas que trabajan en restitución, memoria, lenguas y soberanía indígena de datos."}</p>
+      <p>{en
+        ? "This directory is a starting point for learning and making connections. Inclusion does not imply endorsement. Check each organisation’s current remit and contact details before relying on them."
+        : "Este directorio es un punto de partida para conocer iniciativas y establecer vínculos. La inclusión no implica respaldo. Revisa el trabajo y los datos de contacto vigentes de cada organización antes de usarlos."}</p>
+    </div>
+  </header>
+
+  <div class="directory-table-wrap">
+    <table class="directory-table">
+      <caption class="sr-only">{en ? "Organisations and initiatives" : "Organizaciones e iniciativas"}</caption>
+      <thead><tr>
+        <th scope="col">{en ? "Organisation" : "Organización"}</th>
+        <th scope="col">{en ? "Focus" : "Ámbito"}</th>
+        <th scope="col">{en ? "Explore" : "Conocer"}</th>
+      </tr></thead>
+      <tbody>{organisations.map((organisation, index) => <tr>
+        <th scope="row">
+          <span class="directory-index">{String(index + 1).padStart(2, "0")}</span>
+          <span class="directory-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="directory-org-name">{organisation.name}</span>
+        </th>
+        <td data-label={en ? "Focus" : "Ámbito"}>
+          <p>{organisation.description[locale]}</p>
+          <ul class="directory-tags" aria-label={en ? "Topics" : "Temas"}>
+            {organisation.tags.map((tag) => <li>{tag}</li>)}
+          </ul>
+        </td>
+        <td data-label={en ? "Explore" : "Conocer"}><a class="directory-link" href={organisation.url} target="_blank" rel="noreferrer">
+          {en ? "Visit website" : "Visitar sitio web"}<span aria-hidden="true">↗</span>
+          <span class="sr-only"> — {organisation.name}</span>
+        </a></td>
+      </tr>)}</tbody>
+    </table>
+  </div>
+  <p class="directory-footnote">{en ? "A changing landscape · Last reviewed by each organisation" : "Un panorama en movimiento · Consulta la información vigente de cada organización"}</p>
+</section>

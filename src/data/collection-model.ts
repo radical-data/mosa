@@ -125,6 +125,7 @@ export interface SourceCapture {
 
 export interface Source {
   id: string;
+  articleId?: string;
   title: string;
   kind: SourceKind;
   author: string | null;
@@ -168,6 +169,7 @@ const captureMethods: SourceCaptureMethod[] = [
 ];
 const objectKeys = ["foregroundedClaims", "name"];
 const sourceKeys = [
+  "articleId",
   "author",
   "captures",
   "claims",
@@ -395,6 +397,14 @@ export function parseSource(value: unknown, file: string): Source {
   add(errors, sameKeys(value, sourceKeys), `${file}: contains an unsupported field`);
   add(errors, text(value.title), `${file}: title is required`);
   add(errors, sourceKinds.includes(value.kind as SourceKind), `${file}: kind is unsupported`);
+  if ("articleId" in value) {
+    add(errors, id(value.articleId), `${file}: articleId is invalid`);
+    add(
+      errors,
+      value.kind === "publication",
+      `${file}: articleId is only allowed for publication sources`,
+    );
+  }
   add(errors, value.author === null || text(value.author), `${file}: author must be text or null`);
   add(errors, text(value.reference), `${file}: reference is required`);
   add(
@@ -835,10 +845,48 @@ export function validateArticleSubjects(
   file: string,
 ) {
   const objectIds = new Set(data.objects.map((object) => object.id));
-  const sourceIds = new Set(data.sources.map((source) => source.id));
+  const sources = new Map(data.sources.map((source) => [source.id, source]));
   for (const subject of metadata.subjects ?? []) {
-    const exists =
-      subject.type === "object" ? objectIds.has(subject.id) : sourceIds.has(subject.id);
+    const exists = subject.type === "object" ? objectIds.has(subject.id) : sources.has(subject.id);
     if (!exists) throw Error(`${file}: refers to missing ${subject.type} ${subject.id}`);
   }
+}
+
+export function validateArticlePublicationSource(
+  article: ArticleMetadata,
+  sources: Source[],
+  file: string,
+) {
+  const matches = sources.filter((source) => source.articleId === article.id);
+  if (matches.length !== 1)
+    throw Error(`${file}: expected exactly one publication source with articleId ${article.id}`);
+  const source = matches[0];
+  if (source.kind !== "publication")
+    throw Error(
+      `${file}: source ${source.id} for article ${article.id} must have kind publication`,
+    );
+  if (
+    source.title !== article.title ||
+    source.author !== article.author ||
+    source.language !== article.language
+  )
+    throw Error(`${file}: article metadata must match publication source ${source.id}`);
+}
+
+export function validateUniqueSourceArticleLinks(sources: Source[], articles: ArticleMetadata[]) {
+  const articleIds = new Set(articles.map((article) => article.id));
+  const sourcesByArticle = new Map<string, string[]>();
+  for (const source of sources) {
+    if (!source.articleId) continue;
+    if (!articleIds.has(source.articleId))
+      throw Error(`source ${source.id} refers to missing article ${source.articleId}`);
+    const matches = sourcesByArticle.get(source.articleId) ?? [];
+    matches.push(source.id);
+    sourcesByArticle.set(source.articleId, matches);
+  }
+  const duplicate = [...sourcesByArticle].find(([, sourceIds]) => sourceIds.length > 1);
+  if (duplicate)
+    throw Error(
+      `article ${duplicate[0]} is assigned to multiple publication sources: ${duplicate[1].join(", ")}`,
+    );
 }

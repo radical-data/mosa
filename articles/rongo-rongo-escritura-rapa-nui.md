@@ -1,0 +1,33 @@
+---
+subjects: []
+title: "Rongo rongo: la escritura de Rapa Nui"
+summary: La tradición, transmisión y discusión sobre el sistema de signos rongo rongo.
+author: Paula Rossetti, Leo Pakarati, Ana María Arredondo
+language: es-CL
+---
+
+## Rongo rongo: la escritura de Rapa Nui
+
+*Paula Rossetti, Leo Pakarati y Ana María Arredondo*
+
+El *rongo rongo*, o *kohau rongorongo* ("tablillas parlantes"), es uno de los aspectos culturales más singulares de Rapa Nui: una escritura jeroglífica grabada en tablillas de madera con signos que reproducen la forma de figuras humanas, animales, plantas, elementos del firmamento, puntos, rayas, figuras abstractas e incluso *reimiro* (adornos pectorales de madera con forma de media luna creciente). Es una de las pocas escrituras del mundo que se conserva sin haber sido descifrada hasta hoy.
+
+El hermano Eugenio Eyraud, de la Congregación de los Sagrados Corazones, fue el primer occidental en registrar y dar a conocer la existencia de esta escritura, al observar una tablilla en la isla en 1864. Esa fecha marca el primer registro occidental, no el origen de la escritura: sobre esto último, la tradición oral sostiene que las tablillas son mucho más antiguas, que fue Hotu Matu'a quien las trajo consigo desde la tierra ancestral, o bien que debieron desarrollarse con posterioridad en Rapa Nui, existiendo ya antes de la llegada de los europeos.
+
+El desarrollo de una escritura es un proceso complejo, y es justamente eso lo que hace tan notable al *rongo rongo*: cabe preguntarse si el pueblo rapa nui pudo, en efecto, desarrollar un sistema propio de escritura. La tradición oral responde que sí. Existe, no obstante, la postura de un investigador, Steven Roger Fischer, quien sostiene lo contrario: que el *rongo rongo* habría surgido como una especie de imitación de la escritura occidental, tras el contacto con los españoles en 1770. Es una postura que las investigaciones actuales tienden a rechazar. Estudios recientes aportan evidencia en la dirección opuesta: al datar por radiocarbono cuatro tablillas de una misma colección, una de ellas —la Échancrée— arrojó un rango de entre 1493 y 1509 d.C., varios siglos anterior a la llegada de los primeros europeos a la isla en 1722, lo que sugiere que la escritura *rongo rongo* pudo haberse originado de manera independiente, antes de cualquier contacto externo.
+
+La producción y lectura del *rongo rongo* era tarea de especialistas, los *maori rongo rongo*, y existían escuelas dedicadas a este aprendizaje. Se cree que los niños que participaban de esta formación pertenecían a la elite, y que el propio rey era el maestro por excelencia. Las recitaciones o *pata'uta'u* que los *maori rongo rongo* hacían a partir de las tablillas se mantuvieron vivas en la memoria oral durante generaciones, incluso después de que el conocimiento para leer los signos comenzara a perderse. Por esa estrecha relación con la recitación, muchos investigadores postularon históricamente que el *rongo rongo* no era una escritura formal, sino un recurso mnemotécnico para guiar cantos, genealogías y tradiciones orales. La investigación lingüística más reciente, sin embargo, tiende a descartar esa idea, y aporta indicios de que se trataría más bien de un sistema de escritura estructurado, o al menos de una proto-escritura.
+
+Es significativo, en cualquier caso, que este tipo de escritura no exista en el resto de Oceanía. Rapa Nui integra así el reducido número de culturas de la humanidad que desarrollaron un sistema propio de escritura, junto a Egipto, Mesopotamia, el valle del Indo (Mohenjo-Daro) y la cultura maya.
+
+## Un patrimonio disperso
+
+*Paula Rossetti, Leo Pakarati y Ana María Arredondo*
+
+Hoy no existe ninguna tablilla *rongo rongo* original en Rapa Nui. Las cerca de treinta piezas conocidas que sobrevivieron se encuentran repartidas en museos y colecciones de Roma, Tahiti, Santiago de Chile, Londres, Viena, Berlín, San Petersburgo, Washington, Honolulu, entre otras. En la isla, sin embargo, se siguen tallando tablillas con signos *rongo rongo* para la venta al turismo, una continuidad artesanal que mantiene viva la memoria visual de la escritura, aunque desligada ya de sus tablillas originales y del conocimiento que permitía leerlas.
+
+## Una asimetría que persiste
+
+*Paula Rossetti, Leo Pakarati y Ana María Arredondo*
+
+Resulta significativo que se continúen otorgando permisos para tomar muestras de estas tablillas, realizar análisis de radiocarbono y generar modelos tridimensionales de alta precisión, mientras que en Rapa Nui no existe acceso directo a ninguna tablilla original, ni siquiera para su observación. Se investiga sobre el patrimonio de Rapa Nui como recurso científico disponible para quien lo custodia, sin que exista un canal equivalente para que la comunidad de origen —para quienes estos objetos no son solo especímenes de madera fechables, sino parte de una memoria familiar y espiritual— pueda siquiera verlos. El acceso al conocimiento sobre el propio patrimonio es, también, parte del equilibrio que se busca restituir.
