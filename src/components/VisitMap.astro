@@ -8,19 +8,17 @@ interface MappedObject { object: CollectionObject; status: LocationStatus; holde
 interface LocationGroup { key: string; location: GeocodedLocation; holders: Holder[]; objects: MappedObject[]; }
 interface UnresolvedObject { object: CollectionObject; status: LocationStatus | "unassessed"; holder?: Holder; claims: SourcedClaim[]; note?: LocalisedText; reason?: string; }
 interface Copy {
-  searchLabel: string; searchPlaceholder: string; mapReset: string; mapUnavailable: string;
+  mapReset: string; mapUnavailable: string;
   mapSelectPrompt: string; locationListTitle: string; unresolvedTitle: string;
   precisionSite: string; precisionLocality: string; precisionRegion: string; precisionCountry: string;
   statusReported: string; statusHistorical: string; statusUncertain: string; statusUnknown: string; statusUnassessed: string;
   holdersLabel: string; objectLabel: string; objectsLabel: string; evidenceLabel: string; coordinateSource: string; noMappedPlaces: string;
-  noUnresolved: string; noSearchMatches: string;
+  noUnresolved: string;
 }
 interface Props { locale: Locale; locations: LocationGroup[]; unresolved: UnresolvedObject[]; copy: Copy; }
 const { locale, locations, unresolved, copy } = Astro.props;
 const objectPath = (id: string) => publicRecordPath("objects", id, locale);
 const sourcePath = (id: string) => publicRecordPath("sources", id, locale);
-const locationSearchText = (group: LocationGroup) => [group.location.name, ...group.holders.map(({ name }) => name), ...group.objects.flatMap(({ object, holder }) => [object.name, holder?.name ?? ""])].join(" ");
-const unresolvedSearchText = (item: Pick<UnresolvedObject, "object" | "holder">) => [item.object.name, item.holder?.name ?? ""].join(" ");
 const locationPrecision = { site: copy.precisionSite, locality: copy.precisionLocality, region: copy.precisionRegion, country: copy.precisionCountry };
 const statusLabels = { reported: copy.statusReported, historical: copy.statusHistorical, uncertain: copy.statusUncertain, unknown: copy.statusUnknown, unassessed: copy.statusUnassessed };
 const objectCount = (count: number) => `${count} ${count === 1 ? copy.objectLabel : copy.objectsLabel}`;
@@ -35,20 +33,8 @@ const browserLocations = locations.map(({ key, location, holders, objects }) => 
     ...(note ? { note: { text: note.text, language: note.language } } : {}),
   })),
 }));
-const browserUnresolved = unresolved.map(({ object, status, holder, claims, note, reason }) => ({
-  object: { id: object.id, name: object.name }, status,
-  ...(holder ? { holder: { id: holder.id, name: holder.name } } : {}),
-  claims: [...new Map(claims.map(({ source }) => [source.id, { source: { id: source.id, title: source.title } }])).values()],
-  ...(note ? { note: { text: note.text, language: note.language } } : {}),
-  ...(reason ? { reason } : {}),
-}));
 ---
-<div class="visit-explorer" data-locale={locale} data-locations={JSON.stringify(browserLocations)} data-unresolved={JSON.stringify(browserUnresolved)} data-copy={JSON.stringify({ mapReset: copy.mapReset, mapUnavailable: copy.mapUnavailable, mapSelectPrompt: copy.mapSelectPrompt, locationPrecision, status: statusLabels, holdersLabel: copy.holdersLabel, objectLabel: copy.objectLabel, objectsLabel: copy.objectsLabel, evidenceLabel: copy.evidenceLabel, coordinateSource: copy.coordinateSource })}>
-  <div class="visit-search" hidden>
-    <label for="visit-search">{copy.searchLabel}</label>
-    <input id="visit-search" type="search" placeholder={copy.searchPlaceholder} autocomplete="off" />
-    <p id="visit-search-status" class="small muted" role="status" aria-live="polite"></p>
-  </div>
+<div class="visit-explorer" data-locale={locale} data-locations={JSON.stringify(browserLocations)} data-copy={JSON.stringify({ mapReset: copy.mapReset, mapUnavailable: copy.mapUnavailable, mapSelectPrompt: copy.mapSelectPrompt, locationPrecision, status: statusLabels, holdersLabel: copy.holdersLabel, objectLabel: copy.objectLabel, objectsLabel: copy.objectsLabel, evidenceLabel: copy.evidenceLabel, coordinateSource: copy.coordinateSource })}>
   <div class="visit-map-layout">
     <div class="visit-map-column">
       <div class="visit-map-toolbar" hidden><button type="button" class="button" data-map-reset>{copy.mapReset}</button></div>
@@ -63,10 +49,10 @@ const browserUnresolved = unresolved.map(({ object, status, holder, claims, note
   <section class="visit-location-list" aria-labelledby="visit-location-list-title">
     <h3 id="visit-location-list-title">{copy.locationListTitle}</h3>
     {locations.length === 0 && <p>{copy.noMappedPlaces}</p>}
-    <div data-visit-places>
-      {locations.map((group) => <article class="visit-place" data-location-key={group.key} data-search={locationSearchText(group)}>
+    <div>
+      {locations.map((group) => <article class="visit-place">
         <details>
-          <summary><span>{group.location.name}</span><span class="small muted">{locationPrecision[group.location.precision]} · {objectCount(group.objects.length)}</span></summary>
+          <summary><span>{group.location.name}</span>{" "}<span class="small muted">{locationPrecision[group.location.precision]} · {objectCount(group.objects.length)}</span></summary>
           <p class="small visit-coordinate-source"><a href={group.location.reference} target="_blank" rel="noreferrer">{copy.coordinateSource}</a></p>
           <ul>{group.objects.map(({ object, status, holder, claims, note }) => <li>
           <a href={objectPath(object.id)}>{object.name}</a>
@@ -80,14 +66,13 @@ const browserUnresolved = unresolved.map(({ object, status, holder, claims, note
   </section>
   <section class="visit-unresolved" aria-labelledby="visit-unresolved-title">
     <h3 id="visit-unresolved-title">{copy.unresolvedTitle}</h3>
-    {unresolved.length === 0 ? <p>{copy.noUnresolved}</p> : <details class="visit-unresolved-details"><summary>{objectCount(unresolved.length)}</summary><ul data-visit-unresolved>{unresolved.map(({ object, status, holder, claims, note }) => <li data-search={unresolvedSearchText({ object, holder })}>
+    {unresolved.length === 0 ? <p>{copy.noUnresolved}</p> : <details class="visit-unresolved-details"><summary>{objectCount(unresolved.length)}</summary><ul>{unresolved.map(({ object, status, holder, claims, note }) => <li>
       <a href={objectPath(object.id)}>{object.name}</a>
       <span class="visit-location-meta">{statusLabels[status]}{holder && <> · {holder.name}</>}</span>
       {note && <p lang={note.language}>{note.text}</p>}
       {claims.length > 0 && <p class="small visit-evidence">{copy.evidenceLabel}: {[...new Map(claims.map(({ source }) => [source.id, source])).values()].map((source) => <a href={sourcePath(source.id)}>{source.title}</a>)}</p>}
     </li>)}</ul></details>}
   </section>
-  <p class="small muted visit-no-matches" data-no-matches hidden>{copy.noSearchMatches}</p>
 </div>
 
 <script>
@@ -127,32 +112,9 @@ const browserUnresolved = unresolved.map(({ object, status, holder, claims, note
       const copy = JSON.parse(root.dataset.copy ?? "{}") as PropsData;
       const objectCount = (count: number) => `${count} ${count === 1 ? copy.objectLabel : copy.objectsLabel}`;
       maplibregl.setWorkerUrl(maplibreWorkerUrl);
-      const searchPanel = root.querySelector<HTMLElement>(".visit-search");
-      const searchInput = root.querySelector<HTMLInputElement>("#visit-search");
-      const searchStatus = root.querySelector<HTMLElement>("#visit-search-status");
-      const noMatches = root.querySelector<HTMLElement>("[data-no-matches]");
       const fallback = mapElement.querySelector<HTMLElement>(".visit-map-fallback");
       const objectHref = (id: string) => locale === "en" ? `/en/collection/${encodeURIComponent(id)}/` : `/es/coleccion/${encodeURIComponent(id)}/`;
       const sourceHref = (id: string) => locale === "en" ? `/en/sources/${encodeURIComponent(id)}/` : `/es/fuentes/${encodeURIComponent(id)}/`;
-      const applySearch = () => {
-        const query = searchInput?.value.trim().toLocaleLowerCase(locale) ?? "";
-        const locationRows = [...root.querySelectorAll<HTMLElement>("[data-visit-places] .visit-place")];
-        const unknownRows = [...root.querySelectorAll<HTMLElement>("[data-visit-unresolved] > li")];
-        let shown = 0;
-        for (const row of [...locationRows, ...unknownRows]) {
-          const match = !query || (row.dataset.search ?? "").toLocaleLowerCase(locale).includes(query);
-          row.hidden = !match;
-          if (match && query) {
-            const disclosure = row.closest("details");
-            if (disclosure) disclosure.open = true;
-          }
-          if (match) shown += 1;
-        }
-        noMatches?.toggleAttribute("hidden", shown > 0);
-        if (searchStatus) searchStatus.textContent = `${shown}`;
-      };
-      searchInput?.addEventListener("input", applySearch);
-      searchPanel?.removeAttribute("hidden");
 
       const clearDetails = () => {
         details.replaceChildren();
@@ -326,7 +288,7 @@ const browserUnresolved = unresolved.map(({ object, status, holder, claims, note
           if (!marker) {
             const button = document.createElement("button");
             button.type = "button";
-            button.className = feature.cluster ? "visit-map-marker is-cluster" : "visit-map-marker";
+            button.className = "visit-map-marker";
             button.setAttribute("aria-label", markerLabel(key, feature));
             marker = new maplibregl.Marker({ element: button, anchor: "center" }).setLngLat(feature.coordinates).addTo(map);
             markerElements.set(key, marker);
@@ -355,7 +317,6 @@ const browserUnresolved = unresolved.map(({ object, status, holder, claims, note
           const button = markerButtons.get(key);
           if (button) {
             button.textContent = String(feature.count);
-            button.classList.toggle("is-cluster", feature.cluster);
             button.setAttribute("aria-label", markerLabel(key, feature));
           }
         }

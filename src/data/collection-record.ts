@@ -140,6 +140,15 @@ export interface UnresolvedObject extends MappedObject {
   reason: "unassessed" | "unknown" | "unresolved-holder" | "multiple-holders" | "unmapped-holder";
 }
 
+function geocodedLocationKey(location: GeocodedLocation) {
+  return JSON.stringify([
+    location.name.normalize("NFKC").trim().toLocaleLowerCase("en"),
+    location.precision,
+    location.longitude,
+    location.latitude,
+  ]);
+}
+
 /** Build a map/list projection without inferring a location from claim wording. */
 export function getLocationProjection(data: CollectionData) {
   const holders = new Map((data.holders ?? []).map((holder) => [holder.id, holder]));
@@ -185,10 +194,10 @@ export function getLocationProjection(data: CollectionData) {
       if (location.status === "unknown") reason = "unknown";
       else if (location.location) {
         geocodedLocation = location.location;
-        groupKey = `object:${object.id}`;
+        groupKey = geocodedLocationKey(geocodedLocation);
       } else if (holder?.location) {
         geocodedLocation = holder.location;
-        groupKey = `holder:${holder.id}`;
+        groupKey = geocodedLocationKey(geocodedLocation);
       } else {
         reason = "unmapped-holder";
       }
@@ -206,7 +215,7 @@ export function getLocationProjection(data: CollectionData) {
           if (!holder?.location) reason = "unmapped-holder";
           else {
             geocodedLocation = holder.location;
-            groupKey = `holder:${holder.id}`;
+            groupKey = geocodedLocationKey(geocodedLocation);
           }
         }
       }

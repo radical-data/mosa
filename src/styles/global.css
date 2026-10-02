@@ -967,27 +967,6 @@ strong {
   color: var(--muted);
   font-size: 0.8rem;
 }
-.visit-search {
-  display: grid;
-  grid-template-columns: minmax(12rem, 1fr);
-  gap: 0.5rem;
-  max-width: 34rem;
-  margin-bottom: 1rem;
-}
-.visit-search label {
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-.visit-search input {
-  border: 1px solid #777;
-  border-radius: 0;
-  min-height: 2.8rem;
-  padding: 0.6rem 0.75rem;
-}
-.visit-search p {
-  min-height: 1.2em;
-  margin: 0;
-}
 .visit-map-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(17rem, 0.7fr);
@@ -1052,12 +1031,6 @@ strong {
   font-weight: 600;
   line-height: 1;
   cursor: pointer;
-}
-.visit-map-marker.is-cluster {
-  min-width: 2.8rem;
-  height: 2.8rem;
-  background: #111;
-  color: #fff;
 }
 .visit-map-marker:hover,
 .visit-map-marker:focus-visible {
@@ -1184,9 +1157,6 @@ strong {
   text-decoration: underline;
   text-decoration-color: var(--coral);
   text-underline-offset: 0.2em;
-}
-.visit-no-matches {
-  margin-top: 1rem;
 }
 .contact-layout {
   display: grid;
