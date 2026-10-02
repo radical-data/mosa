@@ -27,7 +27,8 @@
       "id": "holder",
       "objectId": "moai-kavakava-berlin-vi-7242",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum"
+      "value": "Ethnologisches Museum",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "participants",

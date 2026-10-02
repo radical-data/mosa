@@ -1,0 +1,10 @@
+{
+  "name": "Museum der Kulturen Basel",
+  "location": {
+    "name": "Basel, Switzerland",
+    "precision": "locality",
+    "longitude": 7.5886,
+    "latitude": 47.5596,
+    "reference": "https://www.openstreetmap.org/?mlat=47.5596&mlon=7.5886#map=10/47.5596/7.5886"
+  }
+}

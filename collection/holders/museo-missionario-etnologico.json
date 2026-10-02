@@ -1,0 +1,11 @@
+{
+  "name": "Museo Missionario Etnologico",
+  "aliases": ["Museo Misionero Etnologico"],
+  "location": {
+    "name": "Vatican City",
+    "precision": "locality",
+    "longitude": 12.4534,
+    "latitude": 41.9029,
+    "reference": "https://www.openstreetmap.org/?mlat=41.9029&mlon=12.4534#map=10/41.9029/12.4534"
+  }
+}

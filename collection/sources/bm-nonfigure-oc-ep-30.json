@@ -17,7 +17,8 @@
       "objectId": "british-museum-weapon-club-oc-ep-30",
       "predicate": "held_by",
       "value": "British Museum",
-      "locator": "Collection record"
+      "locator": "Collection record",
+      "holderId": "british-museum"
     },
     {
       "id": "object-type",

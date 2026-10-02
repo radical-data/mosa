@@ -1,0 +1,10 @@
+{
+  "name": "Världskultur Museet",
+  "location": {
+    "name": "Gothenburg, Sweden",
+    "precision": "locality",
+    "longitude": 11.9746,
+    "latitude": 57.7089,
+    "reference": "https://www.openstreetmap.org/?mlat=57.7089&mlon=11.9746#map=10/57.7089/11.9746"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Muséum d’Histoire naturelle de La Rochelle",
+  "aliases": ["Museo de Historia Natural La Rochelle"],
+  "location": {
+    "name": "La Rochelle, France",
+    "precision": "locality",
+    "longitude": -1.1511,
+    "latitude": 46.1603,
+    "reference": "https://www.openstreetmap.org/?mlat=46.1603&mlon=-1.1511#map=10/46.1603/-1.1511"
+  }
+}

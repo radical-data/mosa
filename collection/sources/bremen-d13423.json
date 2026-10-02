@@ -57,7 +57,8 @@
       "id": "holding-institution",
       "objectId": "manu-bremen-d13423",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     }
   ],
   "notes": {

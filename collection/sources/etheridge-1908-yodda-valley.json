@@ -15,6 +15,14 @@
       "predicate": "described_as",
       "value": "We have in our collection a semi-human wooden figure from Easter Island terminating below in an undivided pointed and rounded base.",
       "locator": "p. 25, final paragraph (1908; PDF page 3)"
+    },
+    {
+      "id": "historical-holder",
+      "objectId": "wooden-figure-etheridge-1908-australian-museum",
+      "predicate": "held_by",
+      "value": "our collection",
+      "locator": "p. 25, final paragraph (1908; PDF page 3)",
+      "holderId": "australian-museum"
     }
   ],
   "images": [],

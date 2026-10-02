@@ -1,0 +1,10 @@
+{
+  "name": "The Metropolitan Museum of Art",
+  "location": {
+    "name": "New York, United States",
+    "precision": "locality",
+    "longitude": -74.006,
+    "latitude": 40.7128,
+    "reference": "https://www.openstreetmap.org/?mlat=40.7128&mlon=-74.006#map=10/40.7128/-74.006"
+  }
+}

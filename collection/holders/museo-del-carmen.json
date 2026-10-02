@@ -1,0 +1,10 @@
+{
+  "name": "Museo del Carmen",
+  "location": {
+    "name": "Maipú, Chile",
+    "precision": "locality",
+    "longitude": -70.7574,
+    "latitude": -33.5106,
+    "reference": "https://www.openstreetmap.org/?mlat=-33.5106&mlon=-70.7574#map=10/-33.5106/-70.7574"
+  }
+}

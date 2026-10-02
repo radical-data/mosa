@@ -1,0 +1,10 @@
+{
+  "name": "Peabody Museum of Archaeology and Ethnology",
+  "location": {
+    "name": "Cambridge, Massachusetts, United States",
+    "precision": "locality",
+    "longitude": -71.1097,
+    "latitude": 42.3736,
+    "reference": "https://www.openstreetmap.org/?mlat=42.3736&mlon=-71.1097#map=10/42.3736/-71.1097"
+  }
+}

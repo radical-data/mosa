@@ -1,0 +1,10 @@
+{
+  "name": "GRASSI Museum für Völkerkunde zu Leipzig",
+  "location": {
+    "name": "Leipzig, Germany",
+    "precision": "locality",
+    "longitude": 12.3731,
+    "latitude": 51.3397,
+    "reference": "https://www.openstreetmap.org/?mlat=51.3397&mlon=12.3731#map=10/51.3397/12.3731"
+  }
+}

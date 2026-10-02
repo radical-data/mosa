@@ -57,7 +57,8 @@
       "id": "holding-institution",
       "objectId": "moai-tangata-bremen-d13418",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     }
   ],
   "notes": {

@@ -1,0 +1,10 @@
+{
+  "name": "Museum Fünf Kontinente",
+  "location": {
+    "name": "Munich, Germany",
+    "precision": "locality",
+    "longitude": 11.5756,
+    "latitude": 48.1372,
+    "reference": "https://www.openstreetmap.org/?mlat=48.1372&mlon=11.5756#map=10/48.1372/11.5756"
+  }
+}

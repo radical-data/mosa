@@ -27,7 +27,8 @@
       "id": "holder",
       "objectId": "moai-tangata-rapa-nui-17-416",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert"
+      "value": "Museo Antropológico Padre Sebastián Englert",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "creator",

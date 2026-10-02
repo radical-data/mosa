@@ -1,0 +1,11 @@
+{
+  "name": "Museum of Cultural History, University of Oslo",
+  "aliases": ["Etnografisk Museum"],
+  "location": {
+    "name": "Oslo, Norway",
+    "precision": "locality",
+    "longitude": 10.7522,
+    "latitude": 59.9139,
+    "reference": "https://www.openstreetmap.org/?mlat=59.9139&mlon=10.7522#map=10/59.9139/10.7522"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Royal Museums of Art and History",
+  "aliases": ["Musées Rojaux d’Art et d’Histoire"],
+  "location": {
+    "name": "Brussels, Belgium",
+    "precision": "locality",
+    "longitude": 4.3517,
+    "latitude": 50.8503,
+    "reference": "https://www.openstreetmap.org/?mlat=50.8503&mlon=4.3517#map=10/50.8503/4.3517"
+  }
+}

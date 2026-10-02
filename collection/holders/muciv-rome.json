@@ -1,0 +1,14 @@
+{
+  "name": "Museo delle Civiltà, Rome",
+  "aliases": [
+    "Museo Preistorico et Etnografico “Luigi Pigorini”",
+    "Museum of Civilizations, Rome."
+  ],
+  "location": {
+    "name": "Rome, Italy",
+    "precision": "locality",
+    "longitude": 12.4964,
+    "latitude": 41.9028,
+    "reference": "https://www.openstreetmap.org/?mlat=41.9028&mlon=12.4964#map=10/41.9028/12.4964"
+  }
+}

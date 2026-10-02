@@ -1,0 +1,11 @@
+{
+  "name": "Etnografiska Museet",
+  "aliases": ["Statens Etnografisca Museum"],
+  "location": {
+    "name": "Stockholm, Sweden",
+    "precision": "locality",
+    "longitude": 18.0686,
+    "latitude": 59.3293,
+    "reference": "https://www.openstreetmap.org/?mlat=59.3293&mlon=18.0686#map=10/59.3293/18.0686"
+  }
+}

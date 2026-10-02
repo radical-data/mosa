@@ -1,0 +1,10 @@
+{
+  "name": "Weltmuseum Wien",
+  "location": {
+    "name": "Vienna, Austria",
+    "precision": "locality",
+    "longitude": 16.3738,
+    "latitude": 48.2082,
+    "reference": "https://www.openstreetmap.org/?mlat=48.2082&mlon=16.3738#map=10/48.2082/16.3738"
+  }
+}

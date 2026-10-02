@@ -1,0 +1,10 @@
+{
+  "name": "Museo Miklucho-Maklaja",
+  "location": {
+    "name": "Saint Petersburg, Russia",
+    "precision": "locality",
+    "longitude": 30.3351,
+    "latitude": 59.9343,
+    "reference": "https://www.openstreetmap.org/?mlat=59.9343&mlon=30.3351#map=10/59.9343/30.3351"
+  }
+}

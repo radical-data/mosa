@@ -1,0 +1,11 @@
+{
+  "name": "Städtisches Museum Braunschweig",
+  "aliases": ["Staaliches Museum Braunsschweig"],
+  "location": {
+    "name": "Braunschweig, Germany",
+    "precision": "locality",
+    "longitude": 10.5268,
+    "latitude": 52.2689,
+    "reference": "https://www.openstreetmap.org/?mlat=52.2689&mlon=10.5268#map=10/52.2689/10.5268"
+  }
+}

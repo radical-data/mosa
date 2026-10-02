@@ -1,0 +1,10 @@
+{
+  "name": "MARKK Hamburg",
+  "location": {
+    "name": "Hamburg, Germany",
+    "precision": "locality",
+    "longitude": 9.987,
+    "latitude": 53.5488,
+    "reference": "https://www.openstreetmap.org/?mlat=53.5488&mlon=9.987#map=10/53.5488/9.987"
+  }
+}

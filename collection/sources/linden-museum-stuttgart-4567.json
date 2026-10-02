@@ -27,7 +27,8 @@
       "id": "holder",
       "objectId": "ua-stuttgart-4567",
       "predicate": "held_by",
-      "value": "Linden-Museum Stuttgart"
+      "value": "Linden-Museum Stuttgart",
+      "holderId": "stuttgart-linden-museum"
     },
     {
       "id": "dating",

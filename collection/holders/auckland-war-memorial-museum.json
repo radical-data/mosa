@@ -1,0 +1,11 @@
+{
+  "name": "Auckland War Memorial Museum",
+  "aliases": ["Aukland Institute and Museum"],
+  "location": {
+    "name": "Auckland, New Zealand",
+    "precision": "locality",
+    "longitude": 174.7645,
+    "latitude": -36.8509,
+    "reference": "https://www.openstreetmap.org/?mlat=-36.8509&mlon=174.7645#map=10/-36.8509/174.7645"
+  }
+}

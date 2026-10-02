@@ -1,0 +1,11 @@
+{
+  "name": "National Museum of Natural History, Smithsonian Institution",
+  "aliases": ["Smithsonian Institution, United States National Museum"],
+  "location": {
+    "name": "Washington, DC, United States",
+    "precision": "locality",
+    "longitude": -77.0369,
+    "latitude": 38.9072,
+    "reference": "https://www.openstreetmap.org/?mlat=38.9072&mlon=-77.0369#map=10/38.9072/-77.0369"
+  }
+}

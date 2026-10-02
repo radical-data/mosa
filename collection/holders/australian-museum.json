@@ -1,0 +1,11 @@
+{
+  "name": "Australian Museum",
+  "aliases": ["Australian Museum ethnographic collection"],
+  "location": {
+    "name": "Sydney, Australia",
+    "precision": "locality",
+    "longitude": 151.2093,
+    "latitude": -33.8688,
+    "reference": "https://www.openstreetmap.org/?mlat=-33.8688&mlon=151.2093#map=10/-33.8688/151.2093"
+  }
+}

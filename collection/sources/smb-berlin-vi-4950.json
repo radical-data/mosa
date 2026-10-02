@@ -27,7 +27,8 @@
       "id": "holder",
       "objectId": "ao-berlin-vi-4950-a",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum"
+      "value": "Ethnologisches Museum",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "participants",

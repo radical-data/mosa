@@ -1,0 +1,10 @@
+{
+  "name": "Field Museum",
+  "location": {
+    "name": "Chicago, United States",
+    "precision": "locality",
+    "longitude": -87.6298,
+    "latitude": 41.8781,
+    "reference": "https://www.openstreetmap.org/?mlat=41.8781&mlon=-87.6298#map=10/41.8781/-87.6298"
+  }
+}

@@ -17,7 +17,8 @@
       "objectId": "british-museum-flake-oc-6339",
       "predicate": "held_by",
       "value": "British Museum",
-      "locator": "Collection record"
+      "locator": "Collection record",
+      "holderId": "british-museum"
     },
     {
       "id": "object-type",

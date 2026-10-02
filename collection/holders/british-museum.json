@@ -1,0 +1,11 @@
+{
+  "name": "British Museum",
+  "aliases": ["Museo Britanico"],
+  "location": {
+    "name": "London, United Kingdom",
+    "precision": "locality",
+    "longitude": -0.1278,
+    "latitude": 51.5074,
+    "reference": "https://www.openstreetmap.org/?mlat=51.5074&mlon=-0.1278#map=10/51.5074/-0.1278"
+  }
+}

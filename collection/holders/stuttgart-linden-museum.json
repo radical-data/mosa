@@ -1,0 +1,10 @@
+{
+  "name": "Linden-Museum Stuttgart",
+  "location": {
+    "name": "Stuttgart, Germany",
+    "precision": "locality",
+    "longitude": 9.1829,
+    "latitude": 48.7758,
+    "reference": "https://www.openstreetmap.org/?mlat=48.7758&mlon=9.1829#map=10/48.7758/9.1829"
+  }
+}

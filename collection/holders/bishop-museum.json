@@ -1,0 +1,10 @@
+{
+  "name": "Bishop Museum",
+  "location": {
+    "name": "Honolulu, Hawaii, United States",
+    "precision": "locality",
+    "longitude": -157.8583,
+    "latitude": 21.3069,
+    "reference": "https://www.openstreetmap.org/?mlat=21.3069&mlon=-157.8583#map=10/21.3069/-157.8583"
+  }
+}

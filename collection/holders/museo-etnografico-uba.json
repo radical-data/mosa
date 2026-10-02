@@ -1,0 +1,11 @@
+{
+  "name": "Museo Etnográfico Juan B. Ambrosetti",
+  "aliases": ["Museo Etnografico de la Universidad de Buenos Aires"],
+  "location": {
+    "name": "Buenos Aires, Argentina",
+    "precision": "locality",
+    "longitude": -58.3816,
+    "latitude": -34.6037,
+    "reference": "https://www.openstreetmap.org/?mlat=-34.6037&mlon=-58.3816#map=10/-34.6037/-58.3816"
+  }
+}

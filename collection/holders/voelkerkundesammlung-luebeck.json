@@ -1,0 +1,11 @@
+{
+  "name": "Völkerkundesammlung Lübeck",
+  "aliases": ["Volkerkunde Sammlung der Hansestadt"],
+  "location": {
+    "name": "Lübeck, Germany",
+    "precision": "locality",
+    "longitude": 10.6866,
+    "latitude": 53.8655,
+    "reference": "https://www.openstreetmap.org/?mlat=53.8655&mlon=10.6866#map=10/53.8655/10.6866"
+  }
+}

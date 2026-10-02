@@ -1,0 +1,11 @@
+{
+  "name": "Wereldmuseum Leiden",
+  "aliases": ["Rijksmuseum voor Volkenkunde", "Rijksmuseum voor Volkerkunde"],
+  "location": {
+    "name": "Leiden, the Netherlands",
+    "precision": "locality",
+    "longitude": 4.497,
+    "latitude": 52.1601,
+    "reference": "https://www.openstreetmap.org/?mlat=52.1601&mlon=4.497#map=10/52.1601/4.497"
+  }
+}

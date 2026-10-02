@@ -1,0 +1,11 @@
+{
+  "name": "Peabody Essex Museum",
+  "aliases": ["Peabody Museum"],
+  "location": {
+    "name": "Salem, Massachusetts, United States",
+    "precision": "locality",
+    "longitude": -70.8967,
+    "latitude": 42.5195,
+    "reference": "https://www.openstreetmap.org/?mlat=42.5195&mlon=-70.8967#map=10/42.5195/-70.8967"
+  }
+}

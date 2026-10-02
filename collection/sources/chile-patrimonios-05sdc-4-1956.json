@@ -51,7 +51,8 @@
       "id": "holder",
       "objectId": "ao-valparaiso-mhnv-76-registro-surdoc-4-1956",
       "predicate": "held_by",
-      "value": "Museo Historia Natural de Valparaíso"
+      "value": "Museo Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     }
   ],
   "images": [],
