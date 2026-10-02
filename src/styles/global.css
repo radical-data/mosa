@@ -1194,6 +1194,9 @@ strong {
   font-size: 0.9rem;
   color: var(--muted);
 }
+.contact-social {
+  margin-top: 2.5rem;
+}
 .privacy-note h2 {
   color: #000;
 }
@@ -1294,7 +1297,20 @@ strong {
   text-underline-offset: 4px;
 }
 .footer-purpose {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.9rem;
   font-size: 0.9rem;
+}
+.footer-external {
+  margin-top: 1rem;
+}
+.footer-external-title {
+  color: #aaa;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 .newsletter-footer {
   padding-block: 2.5rem;
@@ -1322,8 +1338,21 @@ strong {
   padding-top: 2rem;
   font-size: 0.65rem;
 }
+.footer-legal {
+  max-width: 620px;
+}
+.footer-legal p + p {
+  margin-top: 0.55rem;
+}
+.footer-legal a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
 .footer-bottom > div {
   text-align: right;
+}
+.footer-bottom > .footer-legal {
+  text-align: left;
 }
 .footer-bottom img {
   width: 300px;

@@ -1,4 +1,5 @@
 ---
+import { githubURL, instagramURL } from "../data/site";
 import { messages } from "../i18n/catalogues";
 import { type Locale, pageIds, pagePath } from "../i18n/routes";
 import NewsletterSignup from "./NewsletterSignup.astro";
@@ -13,11 +14,23 @@ const t = messages(locale);
   <div class="container footer-grid">
     <PageLink page="home" locale={locale} class="brand" aria-label={`MoSA — ${t.home}`}><img src="/images/logo-light.png" alt="Museum of Stolen Artefacts" lang="en" width="303" height="162" loading="lazy" /></PageLink>
     <nav aria-label={t.footerNavigation}>{pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)}>{t[id]}</a>)}</nav>
-    <div class="footer-purpose"><p>{t.footerPurpose}</p><PageLink class="text-link" page="contact" locale={locale}>{t.connect} <span aria-hidden="true">↗</span></PageLink></div>
+    <div class="footer-purpose">
+      <p>{t.footerPurpose}</p>
+      <PageLink class="text-link" page="contact" locale={locale}>{t.connect} <span aria-hidden="true">↗</span></PageLink>
+      <nav class="footer-external" aria-label={t.elsewhere}>
+        <span class="footer-external-title">{t.elsewhere}</span>
+        <a href={instagramURL}>{t.instagram} <span aria-hidden="true">↗</span></a>
+        <a href={githubURL}>{t.githubSource} <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
   </div>
   <NewsletterSignup locale={locale} placement="footer" />
   <div class="container footer-bottom">
-    <p><span lang="en">Museum of Stolen Artefacts</span> © {new Date().getFullYear()}.</p>
+    <div class="footer-legal">
+      <p><span lang="en">Museum of Stolen Artefacts</span> © {new Date().getFullYear()}.</p>
+      <p>{t.footerWrittenLicencePrefix} <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license"><span lang="en">CC BY-SA 4.0</span></a>.</p>
+      <p>{t.footerDatabasePrefix} <a href={`${githubURL}/tree/main/collection`}>{t.footerDatabaseName}</a>, {t.footerDatabaseMiddle} <a href="https://opendatacommons.org/licenses/by/1-0/" rel="license"><span lang="en">ODC-By 1.0</span></a>. {t.footerRightsExceptions}</p>
+    </div>
     <div><p>{t.funding}</p><img src="/images/funding-logo.webp" alt="Creative Industries Fund NL" lang="en" width="3221" height="193" loading="lazy" /></div>
   </div>
 </footer>

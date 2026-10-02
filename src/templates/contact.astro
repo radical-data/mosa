@@ -1,7 +1,7 @@
 ---
 import NewsletterSignup from "../components/NewsletterSignup.astro";
 import { getCopy } from "../content/content";
-import { contactEmail } from "../data/site";
+import { contactEmail, instagramURL } from "../data/site";
 import type { Locale } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
@@ -26,6 +26,11 @@ const copy = getCopy("contact", locale);
         <p class="small muted" id="contact-email-help"><Fragment set:html={copy.passage06} /></p>
       </div>
       <p><Fragment set:html={copy.passage07} /></p>
+      <section class="contact-social" aria-labelledby="contact-social-title">
+        <h2 class="eyebrow" id="contact-social-title">{copy.socialHeading}</h2>
+        <p>{copy.instagramDescription}</p>
+        <a class="text-link" href={instagramURL}>{copy.instagramLink} <span aria-hidden="true">↗</span></a>
+      </section>
       <section class="privacy-note" aria-labelledby="contact-privacy-title">
         <h2 class="eyebrow" id="contact-privacy-title"><Fragment set:html={copy.passage08} /></h2>
         <p><Fragment set:html={copy.passage09} /></p>

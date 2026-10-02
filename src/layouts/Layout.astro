@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import { githubURL, instagramURL } from "../data/site";
 import { messages } from "../i18n/catalogues";
 import { absolutePageURL, type Locale, localeIds, locales, type PageId, type PublicSection, pagePath, publicRecordPath, publicSectionPath, type ResourceId, resourcePath, siteURL } from "../i18n/routes";
 import "../styles/global.css";
@@ -22,6 +23,13 @@ const pageURL = (id: Locale) => {
 };
 const canonicalURL = pageURL(locale);
 const isPublicRoute = Boolean(page || publicRecord || publicIndex);
+const organisationSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Museum of Stolen Artefacts",
+  url: siteURL,
+  sameAs: [githubURL, instagramURL],
+});
 ---
 <!doctype html>
 <html lang={locales[locale].language}>
@@ -43,6 +51,7 @@ const isPublicRoute = Boolean(page || publicRecord || publicIndex);
     </>}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" href="/fonts/general-sans-500.woff2" as="font" type="font/woff2" crossorigin />
+    {isPublicRoute && <script type="application/ld+json" set:html={organisationSchema} is:inline />}
     <title>{title}</title>
   </head>
   <body>
