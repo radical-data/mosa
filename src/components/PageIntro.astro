@@ -7,3 +7,84 @@ const { title, image } = Astro.props;
   <div class="intro-copy"><slot /></div>
   {image && <img class="intro-art" src={`/images/${image}.webp`} alt="" aria-hidden="true" width="300" height="360" />}
 </section>
+
+<style>
+  .page-intro {
+    position: relative;
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .page-intro h1 {
+    margin-bottom: 2.75rem;
+  }
+
+  .intro-copy {
+    max-width: 950px;
+  }
+
+  .has-art .intro-copy {
+    max-width: 76%;
+  }
+
+  .intro-art {
+    position: absolute;
+    right: var(--gutter);
+    top: 4rem;
+    width: 15%;
+    height: 230px;
+    object-fit: contain;
+    transform: rotate(-13deg);
+  }
+
+  @media (max-width: 800px) {
+    .page-intro {
+      padding-top: 2rem;
+    }
+
+    .page-intro h1 {
+      margin-bottom: 2rem;
+    }
+
+    .intro-art {
+      height: 170px;
+      top: 2.5rem;
+      width: 17%;
+    }
+
+    .has-art .intro-copy {
+      max-width: 78%;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .page-intro.has-art {
+      padding-top: 3rem;
+    }
+
+    .intro-art {
+      width: 20%;
+      height: 115px;
+      top: 1rem;
+    }
+
+    .has-art h1 {
+      max-width: 75%;
+    }
+
+    .has-art .intro-copy {
+      max-width: 100%;
+      margin-top: 3rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .intro-art {
+      display: none;
+    }
+
+    .has-art h1 {
+      max-width: 100%;
+    }
+  }
+</style>

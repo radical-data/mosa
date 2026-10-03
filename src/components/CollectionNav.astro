@@ -14,3 +14,22 @@ const t = messages(locale);
     {t.documentsImages}
   </a>
 </nav>
+
+<style>
+  .collection-subnav a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 0.3rem;
+  }
+
+  .collection-subnav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin-block: 0 3rem;
+    padding-block: 0.75rem;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.9rem;
+  }
+</style>

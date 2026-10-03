@@ -12,3 +12,91 @@ const { event, open = false } = Astro.props;
   </summary>
   <div class="event-body"><p><Fragment set:html={event.body} /></p>{event.note && <p class="muted small"><Fragment set:html={event.note} /></p>}</div>
 </details>
+
+<style>
+  .event {
+    border-block: 1px solid var(--rule);
+  }
+
+  .event[open] {
+    border-bottom-color: var(--coral);
+  }
+
+  .event + .event {
+    border-top: 0;
+  }
+
+  .event summary {
+    display: grid;
+    grid-template-columns: 1fr 4fr 40px;
+    list-style: none;
+    cursor: pointer;
+    gap: 2rem;
+    padding-block: 1.5rem;
+    font-weight: 500;
+  }
+
+  .event summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .event-meta time {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  .event-title {
+    padding-top: 0.1rem;
+  }
+
+  .event-symbol::after {
+    content: "+";
+    font-size: 2.5rem;
+    line-height: 0.7;
+    font-weight: 400;
+  }
+
+  .event[open] .event-symbol::after {
+    content: "−";
+    color: var(--coral);
+  }
+
+  .event-body {
+    padding: 0 5rem 1.5rem calc((100% - 104px) / 5 + 2rem);
+  }
+
+  @media (max-width: 520px) {
+    .event summary {
+      grid-template-columns: 1fr 28px;
+      gap: 1rem;
+    }
+
+    .event-meta {
+      grid-column: 1;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .event-title {
+      grid-column: 1;
+    }
+
+    .event-symbol {
+      grid-column: 2;
+      grid-row: 1 / 3;
+      align-self: center;
+    }
+
+    .event-body {
+      padding: 0 0 1.5rem;
+    }
+  }
+</style>

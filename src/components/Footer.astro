@@ -34,3 +34,152 @@ const t = messages(locale);
     <div><p>{t.funding}</p><img src="/images/funding-logo.webp" alt="Creative Industries Fund NL" lang="en" width="3221" height="193" loading="lazy" /></div>
   </div>
 </footer>
+
+<style>
+  .site-footer {
+    background: #000;
+    color: #fff;
+    padding-bottom: 2rem;
+  }
+
+  .footer-statement {
+    overflow: hidden;
+    border-bottom: 1px solid #666;
+    padding-block: 2rem 2.5rem;
+  }
+
+  .footer-statement span {
+    display: block;
+    width: auto;
+    margin-inline: var(--gutter);
+    overflow-wrap: anywhere;
+    font-size: clamp(3.5rem, 8.6vw, 9rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1.12;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-block: 3rem 5rem;
+  }
+
+  .footer-grid :global(.brand) {
+    width: 115px;
+  }
+
+  .footer-grid nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+
+  .footer-grid nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 4px;
+  }
+
+  .footer-purpose {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-external {
+    margin-top: 1rem;
+  }
+
+  .footer-external-title {
+    color: #aaa;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-top: 2rem;
+    font-size: 0.65rem;
+  }
+
+  .footer-legal {
+    max-width: 620px;
+  }
+
+  .footer-legal p + p {
+    margin-top: 0.55rem;
+  }
+
+  .footer-legal a {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .footer-bottom > div {
+    text-align: right;
+  }
+
+  .footer-bottom > .footer-legal {
+    text-align: left;
+  }
+
+  .footer-bottom img {
+    width: 300px;
+    margin-left: auto;
+  }
+
+  @media (max-width: 800px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+    }
+
+    .footer-bottom > div {
+      text-align: left;
+    }
+
+    .footer-bottom img {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 3rem;
+    }
+
+    .footer-purpose {
+      grid-column: 1 / -1;
+    }
+
+    .footer-statement {
+      padding-block: 1.5rem;
+    }
+
+    .footer-bottom img {
+      width: 260px;
+    }
+  }
+
+  @media print {
+    .site-footer {
+      display: none;
+    }
+  }
+</style>
