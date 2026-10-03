@@ -23,6 +23,14 @@ const isEnglish = locale === "en";
 </Layout>
 
 <style>
+  .resource-breadcrumb {
+    display: flex;
+    gap: 0.65rem;
+    padding-top: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
   .resource-detail-back {
     padding-block: 3rem 6rem;
   }
@@ -33,6 +41,7 @@ const isEnglish = locale === "en";
   }
 
   @media print {
+    :global(.site-header),
     .resource-breadcrumb,
     .resource-detail-back {
       display: none;

@@ -1,6 +1,5 @@
 ---
 import type { Locale } from "../../i18n/routes";
-import "../../styles/resource-guides.css";
 
 interface Props {
   locale: Locale;
@@ -148,3 +147,167 @@ const copy = en
     </div>
   </article>
 </section>
+
+<style>
+  .resource-guide-kicker {
+    margin: 0 0 1rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .letter-guide {
+    display: grid;
+    grid-template-columns: minmax(20rem, 1.3fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 6vw, 6rem);
+    align-items: start;
+    margin-block: 3rem 5rem;
+  }
+  .letter-guide-intro {
+    position: sticky;
+    top: 2rem;
+    padding-top: 0.7rem;
+  }
+  .letter-guide-intro h1 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(3.1rem, 4.8vw, 4.9rem);
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    line-height: 0.88;
+  }
+  .letter-guide-intro h2 {
+    margin-bottom: 1.2rem;
+    font-size: clamp(1.4rem, 2.2vw, 2.25rem);
+    font-weight: 400;
+    line-height: 0.98;
+  }
+  .letter-guide-intro > p:not(.resource-guide-kicker) {
+    max-width: 34ch;
+    font-size: 1.05rem;
+  }
+  .letter-print {
+    display: inline-flex;
+    gap: 0.65rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0;
+    background: #fff;
+    color: #000;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  .letter-print:hover {
+    background: #ff6d6d;
+  }
+  .letter-paper {
+    width: 100%;
+    max-width: 48rem;
+    margin-inline: auto;
+    background: #080808;
+    color: #fff;
+    box-shadow: 0 1.2rem 3rem rgb(0 0 0 / 14%);
+  }
+  .letter-paper-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem clamp(1.25rem, 4vw, 3rem);
+    border-bottom: 1px solid #555;
+    color: #c5c5c5;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .letter-paper-body {
+    max-width: 42rem;
+    margin-inline: auto;
+    padding: clamp(1.5rem, 5vw, 4rem) clamp(1.25rem, 7vw, 5.2rem) 4rem;
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+  .letter-paper-body p {
+    margin: 0 0 1.3rem;
+  }
+  .letter-paper-body .letter-address {
+    margin-bottom: 2rem;
+  }
+  .letter-subject {
+    padding-block: 0.85rem;
+    border-block: 1px solid #555;
+  }
+  .letter-paper-body .letter-salutation {
+    margin-block: 2rem 2.4rem;
+  }
+  .letter-part {
+    margin-block: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+    break-inside: avoid;
+  }
+  .letter-part h3 {
+    margin: 0 0 1rem;
+    color: #ff8585;
+    font-size: 1.25rem;
+  }
+  .letter-part h4 {
+    margin: 1.3rem 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .letter-part ul {
+    padding-left: 1.2rem;
+  }
+  .letter-part li {
+    margin-block: 0.6rem;
+  }
+
+  @media (max-width: 850px) {
+    .letter-guide {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .letter-guide-intro {
+      position: static;
+    }
+    .letter-guide-intro h2 {
+      max-width: 14ch;
+    }
+  }
+
+  @media print {
+    .letter-guide {
+      display: block;
+      margin: 0;
+    }
+    .letter-guide-intro,
+    .letter-print {
+      display: none;
+    }
+    .letter-paper {
+      max-width: none;
+      background: #fff;
+      color: #000;
+      box-shadow: none;
+    }
+    .letter-paper-header {
+      border-color: #999;
+      color: #444;
+    }
+    .letter-paper-body {
+      max-width: none;
+      padding: 1.5cm 2cm;
+      font-size: 11pt;
+    }
+    .letter-part {
+      border-color: #999;
+    }
+    .letter-part h3 {
+      color: #000;
+    }
+  }
+</style>
