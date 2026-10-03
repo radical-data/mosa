@@ -17,19 +17,11 @@ export default defineConfig({
     {
       name: "General Sans",
       cssVariable: "--font-general-sans",
-      provider: fontProviders.local(),
+      provider: fontProviders.fontshare(),
       weights: [300, 400, 500, 600],
       styles: ["normal"],
       display: "swap",
       fallbacks: ["Arial", "sans-serif"],
-      options: {
-        variants: [
-          { src: ["./src/assets/fonts/general-sans-300.woff2"], weight: 300, style: "normal" },
-          { src: ["./src/assets/fonts/general-sans-400.woff2"], weight: 400, style: "normal" },
-          { src: ["./src/assets/fonts/general-sans-500.woff2"], weight: 500, style: "normal" },
-          { src: ["./src/assets/fonts/general-sans-600.woff2"], weight: 600, style: "normal" },
-        ],
-      },
     },
     {
       name: "MoSA English Fallback",

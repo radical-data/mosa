@@ -28,10 +28,15 @@ foregrounding. AI-assisted or team-authored drafts still need named human
 review. Obtain permission before sending private material to an external
 service.
 
-The local General Sans fonts do not cover every Rapa Nui character. Astro's
-local Fonts API loads `src/assets/fonts/noto-sans-eng.woff2` only for its
-current additional characters under the
-[SIL Open Font License](../public/fonts/noto-sans-OFL.txt).
+General Sans is a closed-source Fontshare font under the ITF Free Font License.
+Use Astro's Fontshare provider so clean builds obtain official font files
+without redistributing their binaries through this repository. Request only the
+weights used by the site. Do not add General Sans font files to Git or modify,
+subset or convert them.
+
+General Sans does not cover every Rapa Nui character. Astro's local Fonts API
+loads `src/assets/fonts/noto-sans-eng.woff2` only for its current additional
+characters under the [SIL Open Font License](../public/fonts/noto-sans-OFL.txt).
 
 ## Website media
 
