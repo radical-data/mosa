@@ -1,6 +1,26 @@
 import { defineConfig, fontProviders } from "astro/config";
 import { validateLocalisation } from "./scripts/validate-localisation.ts";
 import { siteURL } from "./src/i18n/routes.ts";
+
+// Astro's Fontshare adapter currently expands variable ranges into static weights.
+const generalSansVariableProvider = {
+  name: "fontshare-general-sans-variable",
+  resolveFont: () => ({
+    fonts: [
+      {
+        src: [
+          {
+            url: "https://cdn.fontshare.com/wf/LHQJ5KSAL7VGAEIDSTEXCCOIUKFLT2I6/GW57XUEG4ZBVMLZZTQZTGYPROITRRQ5W/JA3IZUEMJ2J6WWT2OQVJOAWDXO3YL4YG.woff2",
+            format: "woff2",
+          },
+        ],
+        weight: [200, 700],
+        style: "normal",
+      },
+    ],
+  }),
+};
+
 export default defineConfig({
   site: siteURL,
   output: "static",
@@ -17,8 +37,8 @@ export default defineConfig({
     {
       name: "General Sans",
       cssVariable: "--font-general-sans",
-      provider: fontProviders.fontshare(),
-      weights: [300, 400, 500, 600],
+      provider: generalSansVariableProvider,
+      weights: ["200 700"],
       styles: ["normal"],
       display: "swap",
       fallbacks: ["Arial", "sans-serif"],
