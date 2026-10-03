@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import { siteImages } from "../assets/site-images";
 import NewsletterSignup from "../components/NewsletterSignup.astro";
 import { getCopy } from "../content/content";
 import { contactEmail, instagramURL } from "../data/site";
@@ -13,8 +15,8 @@ const copy = getCopy("contact", locale);
   <section class="container section contact-layout">
     <div class="contact-art">
       <h1><Fragment set:html={copy.passage03} /></h1>
-      <img class="contact-figure" src="/images/kavakava.webp" alt="" aria-hidden="true" width="222" height="972" />
-      <img class="contact-tablet" src="/images/rongorongo.webp" alt="" aria-hidden="true" width="919" height="692" />
+      <Image class="contact-figure" src={siteImages.kavakava} alt="" aria-hidden="true" loading="eager" />
+      <Image class="contact-tablet" src={siteImages.rongorongo} alt="" aria-hidden="true" loading="eager" />
     </div>
     <div class="contact-content">
       <p class="contact-intro"><Fragment set:html={copy.passage04} /></p>

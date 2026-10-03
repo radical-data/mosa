@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import { siteImages } from "../assets/site-images";
 import { messages } from "../i18n/catalogues";
 import { anchors, type Locale, languageLink, localeIds, locales, type PageId, pageIds, pagePath } from "../i18n/routes";
 import PageLink from "./PageLink.astro";
@@ -8,7 +10,7 @@ const { locale, page } = Astro.props;
 const t = messages(locale);
 ---
 <header class="site-header container">
-  <PageLink class="brand" page="home" locale={locale} aria-label={`MoSA — ${t.home}`}><img src="/images/logo-dark.png" alt="Museum of Stolen Artefacts" lang="en" width="303" height="162" /></PageLink>
+  <PageLink class="brand" page="home" locale={locale} aria-label={`MoSA — ${t.home}`}><Image src={siteImages["logo-dark"]} alt="Museum of Stolen Artefacts" lang="en" loading="eager" /></PageLink>
   <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">{t.menu} <span aria-hidden="true">+</span></button>
   <nav id="primary-navigation" aria-label={t.primaryNavigation}>
     {pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)} aria-current={page === id ? "page" : undefined}>{t[id]}</a>)}

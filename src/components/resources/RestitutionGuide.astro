@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import { siteImages } from "../../assets/site-images";
 import { restitutionGuide } from "../../data/restitution-guide";
 import type { Locale } from "../../i18n/routes";
 
@@ -19,7 +21,7 @@ const closingSections = copy.sections.filter((section) => !copy.movements.some((
       <h2>{copy.introTitle}</h2>
       {copy.intro.map((paragraph) => <p>{paragraph}</p>)}
     </div>
-    <img src="/images/wooden-figure.webp" alt="" aria-hidden="true" width="246" height="971" />
+    <Image src={siteImages["wooden-figure"]} alt="" aria-hidden="true" loading="eager" />
   </header>
 
   <section class="guide-opening container" aria-labelledby="guide-opening-title">

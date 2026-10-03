@@ -1,11 +1,12 @@
 ---
+import { Image, Picture } from "astro:assets";
+import { siteImages } from "../assets/site-images";
 import Event from "../components/Event.astro";
 import PageLink from "../components/PageLink.astro";
 import { getCopy } from "../content/content";
 import { getEvents } from "../data/events";
 import { storedEvents } from "../data/load-events";
 import { getConcepts, getResources } from "../data/site";
-
 import type { Locale } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
@@ -19,9 +20,9 @@ const [nextEvent] = getEvents(storedEvents, locale).upcoming;
 ---
 <Layout locale={locale} page="home" title={copy.title} description={copy.description}>
   <section class="hero container">
-    <img class="hero-art hero-figure" src="/images/wooden-figure.webp" alt="" width="246" height="971" aria-hidden="true" />
-    <img class="hero-art hero-tablet" src="/images/rongorongo.webp" alt="" width="919" height="692" aria-hidden="true" />
-    <img class="hero-art hero-mahute" src="/images/mahute.webp" alt="" width="405" height="957" aria-hidden="true" />
+    <Image class="hero-art hero-figure" src={siteImages["wooden-figure"]} alt="" aria-hidden="true" loading="eager" />
+    <Image class="hero-art hero-tablet" src={siteImages.rongorongo} alt="" aria-hidden="true" loading="eager" />
+    <Image class="hero-art hero-mahute" src={siteImages.mahute} alt="" aria-hidden="true" loading="eager" />
     <h1><Fragment set:html={copy.passage04} /></h1>
     <p><Fragment set:html={copy.passage05} /></p>
     <p><Fragment set:html={copy.introAuthority} /></p>
@@ -39,9 +40,9 @@ const [nextEvent] = getEvents(storedEvents, locale).upcoming;
     <div class="section-heading"><div><h2 id="events-title" class="eyebrow"><Fragment set:html={copy.passage11} /></h2><p><Fragment set:html={copy.passage12} /></p></div><PageLink class="text-link" page="events" locale={locale}>{copy.passage17}<span aria-hidden="true">↗</span></PageLink></div>
     {nextEvent ? <Event event={nextEvent} open /> : <p class="muted">{t.eventsPending}</p>}
   </section>
-  <img class="full-image landscape" src="/images/rapa-nui-absence.webp" alt={copy.passage03} width="1800" height="1200" loading="lazy" />
+  <Picture class="full-image landscape" src={siteImages["rapa-nui-absence"]} alt={copy.passage03} formats={["avif", "webp"]} fallbackFormat="webp" widths={[600, 900, 1200, 1800]} sizes="100vw" loading="lazy" />
   <section class="container section prose-section home-about">
-    <div><h2 class="eyebrow"><Fragment set:html={copy.passage13} /></h2><img class="about-figure" src="/images/kavakava.webp" alt="" aria-hidden="true" width="222" height="972" loading="lazy" /></div>
+    <div><h2 class="eyebrow"><Fragment set:html={copy.passage13} /></h2><Image class="about-figure" src={siteImages.kavakava} alt="" aria-hidden="true" loading="lazy" /></div>
     <div><p class="statement"><Fragment set:html={copy.passage14} /></p><PageLink class="button" page="about" locale={locale}>{copy.passage18}<span aria-hidden="true">↗</span></PageLink></div>
   </section>
 </Layout>

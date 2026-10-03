@@ -1,11 +1,17 @@
 ---
-interface Props { title: string; image?: string; }
+import { Image } from "astro:assets";
+import { siteImages } from "../assets/site-images";
+import type { SiteImageId } from "../data/site-image-ids";
+
+type PageIntroArtId = Extract<SiteImageId, "mahute" | "rongorongo">;
+
+interface Props { title: string; image?: PageIntroArtId; }
 const { title, image } = Astro.props;
 ---
 <section class:list={["page-intro container", { "has-art": image }]}>
   <h1>{title}</h1>
   <div class="intro-copy"><slot /></div>
-  {image && <img class="intro-art" src={`/images/${image}.webp`} alt="" aria-hidden="true" width="300" height="360" />}
+  {image && <Image class="intro-art" src={siteImages[image]} alt="" aria-hidden="true" loading="eager" />}
 </section>
 
 <style>

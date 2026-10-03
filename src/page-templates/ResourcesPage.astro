@@ -1,4 +1,6 @@
 ---
+import { Picture } from "astro:assets";
+import { siteImages } from "../assets/site-images";
 import PageIntro from "../components/PageIntro.astro";
 import { getCopy } from "../content/content";
 import { articlePublications } from "../data/collection";
@@ -44,7 +46,7 @@ const groupLabels = locale === "en"
       </li>)}
     </ol>
   </section>
-  <img class="full-image historical-image resources-historical-image" src="/images/colonial-transport.webp" alt={copy.passage04} width="600" height="522" loading="lazy" />
+  <Picture class="full-image historical-image resources-historical-image" src={siteImages["colonial-transport"]} alt={copy.passage04} formats={["avif", "webp"]} fallbackFormat="webp" widths={[400, 600]} sizes="100vw" loading="lazy" />
   <section id="readings" class="dark-section section resource-readings" aria-labelledby="readings-title">
     <div class="container">
       <h2 id="readings-title" class="eyebrow"><Fragment set:html={copy.passage09} /></h2>

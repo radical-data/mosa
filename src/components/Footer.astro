@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import { siteImages } from "../assets/site-images";
 import { githubURL, instagramURL } from "../data/site";
 import { messages } from "../i18n/catalogues";
 import { type Locale, pageIds, pagePath } from "../i18n/routes";
@@ -12,7 +14,7 @@ const t = messages(locale);
 <footer class="site-footer">
   <div class="footer-statement"><span>{t.footerStatement}</span></div>
   <div class="container footer-grid">
-    <PageLink page="home" locale={locale} class="brand" aria-label={`MoSA — ${t.home}`}><img src="/images/logo-light.png" alt="Museum of Stolen Artefacts" lang="en" width="303" height="162" loading="lazy" /></PageLink>
+    <PageLink page="home" locale={locale} class="brand" aria-label={`MoSA — ${t.home}`}><Image src={siteImages["logo-light"]} alt="Museum of Stolen Artefacts" lang="en" loading="lazy" /></PageLink>
     <nav aria-label={t.footerNavigation}>{pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)}>{t[id]}</a>)}</nav>
     <div class="footer-purpose">
       <p>{t.footerPurpose}</p>
@@ -31,7 +33,7 @@ const t = messages(locale);
       <p>{t.footerWrittenLicencePrefix} <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license"><span lang="en">CC BY-SA 4.0</span></a>.</p>
       <p>{t.footerDatabasePrefix} <a href={`${githubURL}/tree/main/collection`}>{t.footerDatabaseName}</a>, {t.footerDatabaseMiddle} <a href="https://opendatacommons.org/licenses/by/1-0/" rel="license"><span lang="en">ODC-By 1.0</span></a>. {t.footerRightsExceptions}</p>
     </div>
-    <div><p>{t.funding}</p><img src="/images/funding-logo.webp" alt="Creative Industries Fund NL" lang="en" width="3221" height="193" loading="lazy" /></div>
+    <div><p>{t.funding}</p><Image src={siteImages["funding-logo"]} alt="Creative Industries Fund NL" lang="en" loading="lazy" /></div>
   </div>
 </footer>
 
