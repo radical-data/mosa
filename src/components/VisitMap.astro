@@ -26,7 +26,7 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
     <p class="visit-map-fallback" hidden>{copy.mapUnavailable}</p>
     <noscript><p class="visit-map-fallback">{copy.mapUnavailable}</p></noscript>
   </section>
-  <section class="visit-location-list" aria-labelledby="visit-location-list-title">
+  <section class="visit-location-list" id="museum-directory" aria-labelledby="visit-location-list-title">
     <h2 id="visit-location-list-title">{copy.locationListTitle} <span class="small muted">({destinations.length})</span></h2>
     {points.length === 0 && <p>{copy.noMappedPlaces}</p>}
     {destinations.map(({ holder, objects }) => <article class="visit-place" data-holder-id={holder.id}>
@@ -382,7 +382,7 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
           ],
         },
         locale: root.dataset.locale === "es" ? {
-          "Map.Title": "Mapa de museos satélite",
+          "Map.Title": "Mapa de nuestras sedes",
           "NavigationControl.ZoomIn": "Acercar",
           "NavigationControl.ZoomOut": "Alejar",
           "Popup.Close": root.dataset.mapClose ?? "Cerrar",
