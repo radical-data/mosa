@@ -59,6 +59,25 @@ assert.match(
 assert.match(picture, /<source\b[^>]*type="image\/avif"/i, "responsive image offers AVIF");
 assert.match(picture, /<source\b[^>]*type="image\/webp"/i, "responsive image offers WebP");
 
+for (const [className, largestWidth] of [
+  ["hero-figure", 192],
+  ["hero-tablet", 640],
+  ["hero-mahute", 405],
+  ["about-figure", 222],
+  ["header-logo", 303],
+] as const) {
+  const image = englishHomepageHTML.match(
+    new RegExp(`<img\\b(?=[^>]*class="[^"]*\\b${className}\\b)[^>]*>`, "i"),
+  )?.[0];
+  assert.ok(image, `English homepage includes the ${className} image`);
+  assert.match(image, /\bsizes="[^"]+"/i, `${className}: responsive sizes`);
+  const srcset = image.match(/\bsrcset="([^"]+)"/i)?.[1];
+  assert.ok(srcset, `${className}: responsive srcset`);
+  const widths = [...srcset.matchAll(/\s(\d+)w(?:,|$)/g)].map((match) => Number(match[1]));
+  assert.ok(widths.length > 1, `${className}: multiple generated widths`);
+  assert.equal(Math.max(...widths), largestWidth, `${className}: bounded source width`);
+}
+
 for (const [index, html] of htmlPages.entries()) {
   assert.doesNotMatch(
     html,

@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from "astro:assets";
+import { Picture } from "astro:assets";
 import { siteImages } from "../assets/site-images";
 import Event from "../components/Event.astro";
 import PageLink from "../components/PageLink.astro";
@@ -20,9 +20,9 @@ const [nextEvent] = getEvents(storedEvents, locale).upcoming;
 ---
 <Layout locale={locale} page="home" title={copy.title} description={copy.description}>
   <section class="hero container">
-    <Image class="hero-art hero-figure" src={siteImages["wooden-figure"]} alt="" aria-hidden="true" loading="eager" />
-    <Image class="hero-art hero-tablet" src={siteImages.rongorongo} alt="" aria-hidden="true" loading="eager" />
-    <Image class="hero-art hero-mahute" src={siteImages.mahute} alt="" aria-hidden="true" loading="eager" />
+    <Picture class="hero-art hero-figure" src={siteImages["wooden-figure"]} alt="" aria-hidden="true" formats={["avif", "webp"]} fallbackFormat="webp" widths={[64, 96, 128, 192]} sizes="(max-width: 520px) 7vw, (max-width: 800px) 5vw, (min-width: 1600px) 56px, 3.5vw" loading="eager" fetchpriority="low" />
+    <Picture class="hero-art hero-tablet" src={siteImages.rongorongo} alt="" aria-hidden="true" formats={["avif", "webp"]} fallbackFormat="webp" widths={[192, 320, 480, 640]} sizes="(max-width: 520px) 24vw, (max-width: 800px) 21vw, (min-width: 1600px) 256px, 16vw" loading="eager" fetchpriority="low" />
+    <Picture class="hero-art hero-mahute" src={siteImages.mahute} alt="" aria-hidden="true" formats={["avif", "webp"]} fallbackFormat="webp" widths={[96, 192, 288, 405]} sizes="(max-width: 520px) 13vw, (min-width: 1600px) 192px, 12vw" loading="eager" fetchpriority="low" />
     <h1><Fragment set:html={copy.passage04} /></h1>
     <p><Fragment set:html={copy.passage05} /></p>
     <p><Fragment set:html={copy.introAuthority} /></p>
@@ -42,7 +42,7 @@ const [nextEvent] = getEvents(storedEvents, locale).upcoming;
   </section>
   <Picture class="full-image landscape" src={siteImages["rapa-nui-absence"]} alt={copy.passage03} formats={["avif", "webp"]} fallbackFormat="webp" widths={[600, 900, 1200, 1800]} sizes="100vw" loading="lazy" />
   <section class="container section prose-section home-about">
-    <div><h2 class="eyebrow"><Fragment set:html={copy.passage13} /></h2><Image class="about-figure" src={siteImages.kavakava} alt="" aria-hidden="true" loading="lazy" /></div>
+    <div><h2 class="eyebrow"><Fragment set:html={copy.passage13} /></h2><Picture class="about-figure" src={siteImages.kavakava} alt="" aria-hidden="true" formats={["avif", "webp"]} fallbackFormat="webp" widths={[64, 128, 192, 222]} sizes="(max-width: 520px) 32px, (max-width: 800px) 15vw, (min-width: 1600px) 105px, 7vw" loading="lazy" /></div>
     <div><p class="statement"><Fragment set:html={copy.passage14} /></p><PageLink class="button" page="about" locale={locale}>{copy.passage18}<span aria-hidden="true">↗</span></PageLink></div>
   </section>
 </Layout>
