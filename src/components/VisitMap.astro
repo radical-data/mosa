@@ -64,7 +64,7 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
 
   .visit-map.maplibregl-map,
   .visit-map :global(.maplibregl-popup) {
-    font-family: "General Sans", "MoSA Eng Fallback", Arial, sans-serif;
+    font-family: var(--font-noto-sans-eng), var(--font-general-sans), Arial, sans-serif;
   }
 
   .visit-map :global(.maplibregl-ctrl-group) {
@@ -523,7 +523,11 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
       map.on("load", async () => {
         try {
           // MapLibre renders and collision-places names using the site's bundled font.
-          await document.fonts.load('400 14px "General Sans"').catch(() => []);
+          const generalSans = getComputedStyle(document.documentElement)
+            .getPropertyValue("--font-general-sans")
+            .split(",")[0]
+            .trim();
+          await document.fonts.load(`400 14px ${generalSans}`, "Museum").catch(() => []);
           map.addSource("museums", {
             type: "geojson",
             data: {

@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { githubURL, instagramURL } from "../data/site";
@@ -51,7 +52,8 @@ const organisationSchema = JSON.stringify({
       <link rel="sitemap" href="/sitemap-index.xml" />
     </>}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" href="/fonts/general-sans-500.woff2" as="font" type="font/woff2" crossorigin />
+    <Font cssVariable="--font-general-sans" preload={[{ weight: 500, style: "normal" }]} />
+    <Font cssVariable="--font-noto-sans-eng" />
     {isPublicRoute && <script type="application/ld+json" set:html={organisationSchema} is:inline />}
     <title>{title}</title>
   </head>

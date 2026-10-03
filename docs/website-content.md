@@ -28,9 +28,9 @@ foregrounding. AI-assisted or team-authored drafts still need named human
 review. Obtain permission before sending private material to an external
 service.
 
-The local General Sans fonts do not cover every Rapa Nui character. The
-`public/fonts/noto-sans-eng.woff2` subset supplies current additional
-characters under the
+The local General Sans fonts do not cover every Rapa Nui character. Astro's
+local Fonts API loads `src/assets/fonts/noto-sans-eng.woff2` only for its
+current additional characters under the
 [SIL Open Font License](../public/fonts/noto-sans-OFL.txt).
 
 ## Collection and publication presentation
