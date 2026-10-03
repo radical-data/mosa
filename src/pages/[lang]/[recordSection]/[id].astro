@@ -7,8 +7,8 @@ import CollectionNav from "../../../components/CollectionNav.astro";
 import { articlePublications, collectionObjects, getArticleRecord, getObjectRecord, getSourceRecord, sourceRecords } from "../../../data/collection";
 import { type Locale, localeIds, pagePath, publicRecordPath } from "../../../i18n/routes";
 import Layout from "../../../layouts/Layout.astro";
-import ArticleDetail from "../../../templates/article-detail.astro";
-import SourceDetail from "../../../templates/source-detail.astro";
+import ArticleDetailPage from "../../../page-templates/ArticleDetailPage.astro";
+import SourceDetailPage from "../../../page-templates/SourceDetailPage.astro";
 
 interface Props {
   locale: Locale;
@@ -90,7 +90,7 @@ const referenceURL = (value: string) => {
 };
 ---
 
-{recordKind === "source" && sourceRecord ? <SourceDetail locale={locale} record={sourceRecord} /> : recordKind === "article" && articleRecord ? <ArticleDetail locale={locale} article={articleRecord} /> : <Layout
+{recordKind === "source" && sourceRecord ? <SourceDetailPage locale={locale} record={sourceRecord} /> : recordKind === "article" && articleRecord ? <ArticleDetailPage locale={locale} article={articleRecord} /> : <Layout
   locale={locale}
   page={record ? "collection" : undefined}
   collectionItemId={record?.object.id}

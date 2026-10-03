@@ -1,7 +1,7 @@
 ---
 import type { Locale } from "../../../i18n/routes";
-import Articles from "../../../templates/articles.astro";
-import Sources from "../../../templates/sources.astro";
+import ArticlesPage from "../../../page-templates/ArticlesPage.astro";
+import SourcesPage from "../../../page-templates/SourcesPage.astro";
 
 export function getStaticPaths() {
   return [
@@ -15,4 +15,4 @@ export function getStaticPaths() {
 interface Props { locale: Locale; section: "sources" | "articles"; }
 const { locale, section } = Astro.props;
 ---
-{section === "sources" ? <Sources locale={locale} /> : <Articles locale={locale} />}
+{section === "sources" ? <SourcesPage locale={locale} /> : <ArticlesPage locale={locale} />}

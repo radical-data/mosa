@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import { siteImages } from "../assets/site-images";
 import { githubURL, instagramURL } from "../data/site";
 import { messages } from "../i18n/catalogues";
 import { type Locale, pageIds, pagePath } from "../i18n/routes";
@@ -12,7 +14,7 @@ const t = messages(locale);
 <footer class="site-footer">
   <div class="footer-statement"><span>{t.footerStatement}</span></div>
   <div class="container footer-grid">
-    <PageLink page="home" locale={locale} class="brand" aria-label={`MoSA — ${t.home}`}><img src="/images/logo-light.png" alt="Museum of Stolen Artefacts" lang="en" width="303" height="162" loading="lazy" /></PageLink>
+    <PageLink page="home" locale={locale} class="brand" aria-label={`MoSA — ${t.home}`}><Image src={siteImages["logo-light"]} alt="Museum of Stolen Artefacts" lang="en" loading="lazy" /></PageLink>
     <nav aria-label={t.footerNavigation}>{pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)}>{t[id]}</a>)}</nav>
     <div class="footer-purpose">
       <p>{t.footerPurpose}</p>
@@ -31,6 +33,155 @@ const t = messages(locale);
       <p>{t.footerWrittenLicencePrefix} <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license"><span lang="en">CC BY-SA 4.0</span></a>.</p>
       <p>{t.footerDatabasePrefix} <a href={`${githubURL}/tree/main/collection`}>{t.footerDatabaseName}</a>, {t.footerDatabaseMiddle} <a href="https://opendatacommons.org/licenses/by/1-0/" rel="license"><span lang="en">ODC-By 1.0</span></a>. {t.footerRightsExceptions}</p>
     </div>
-    <div><p>{t.funding}</p><img src="/images/funding-logo.webp" alt="Creative Industries Fund NL" lang="en" width="3221" height="193" loading="lazy" /></div>
+    <div><p>{t.funding}</p><Image src={siteImages["funding-logo"]} alt="Creative Industries Fund NL" lang="en" loading="lazy" /></div>
   </div>
 </footer>
+
+<style>
+  .site-footer {
+    background: #000;
+    color: #fff;
+    padding-bottom: 2rem;
+  }
+
+  .footer-statement {
+    overflow: hidden;
+    border-bottom: 1px solid #666;
+    padding-block: 2rem 2.5rem;
+  }
+
+  .footer-statement span {
+    display: block;
+    width: auto;
+    margin-inline: var(--gutter);
+    overflow-wrap: anywhere;
+    font-size: clamp(3.5rem, 8.6vw, 9rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1.12;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-block: 3rem 5rem;
+  }
+
+  .footer-grid :global(.brand) {
+    width: 115px;
+  }
+
+  .footer-grid nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+
+  .footer-grid nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 4px;
+  }
+
+  .footer-purpose {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-external {
+    margin-top: 1rem;
+  }
+
+  .footer-external-title {
+    color: #aaa;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding-top: 2rem;
+    font-size: 0.65rem;
+  }
+
+  .footer-legal {
+    max-width: 620px;
+  }
+
+  .footer-legal p + p {
+    margin-top: 0.55rem;
+  }
+
+  .footer-legal a {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .footer-bottom > div {
+    text-align: right;
+  }
+
+  .footer-bottom > .footer-legal {
+    text-align: left;
+  }
+
+  .footer-bottom img {
+    width: 300px;
+    margin-left: auto;
+  }
+
+  @media (max-width: 800px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+    }
+
+    .footer-bottom > div {
+      text-align: left;
+    }
+
+    .footer-bottom img {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 3rem;
+    }
+
+    .footer-purpose {
+      grid-column: 1 / -1;
+    }
+
+    .footer-statement {
+      padding-block: 1.5rem;
+    }
+
+    .footer-bottom img {
+      width: 260px;
+    }
+  }
+
+  @media print {
+    .site-footer {
+      display: none;
+    }
+  }
+</style>

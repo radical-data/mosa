@@ -1,0 +1,327 @@
+---
+import { Image, Picture } from "astro:assets";
+import { siteImages } from "../assets/site-images";
+import Event from "../components/Event.astro";
+import PageLink from "../components/PageLink.astro";
+import { getCopy } from "../content/content";
+import { getEvents } from "../data/events";
+import { storedEvents } from "../data/load-events";
+import { getConcepts, getResources } from "../data/site";
+import type { Locale } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("home", locale);
+const t = getCopy("interface", locale);
+const concepts = getConcepts(locale).filter((concept) => concept.id !== "moai");
+const resources = getResources(locale);
+const [nextEvent] = getEvents(storedEvents, locale).upcoming;
+---
+<Layout locale={locale} page="home" title={copy.title} description={copy.description}>
+  <section class="hero container">
+    <Image class="hero-art hero-figure" src={siteImages["wooden-figure"]} alt="" aria-hidden="true" loading="eager" />
+    <Image class="hero-art hero-tablet" src={siteImages.rongorongo} alt="" aria-hidden="true" loading="eager" />
+    <Image class="hero-art hero-mahute" src={siteImages.mahute} alt="" aria-hidden="true" loading="eager" />
+    <h1><Fragment set:html={copy.passage04} /></h1>
+    <p><Fragment set:html={copy.passage05} /></p>
+    <p><Fragment set:html={copy.introAuthority} /></p>
+  </section>
+  <section class="container section home-collection" aria-labelledby="collection-title">
+    <div class="section-heading"><div><h2 id="collection-title" class="eyebrow"><Fragment set:html={copy.passage06} /></h2><p><Fragment set:html={copy.passage07} /></p></div><PageLink class="button" page="collection" locale={locale}>{copy.passage15}<span aria-hidden="true">↗</span></PageLink></div>
+    <p class="small concepts-label"><Fragment set:html={copy.passage08} /></p>
+    <div class="concepts">{concepts.map((concept, index) => <div class:list={["concept-row", `concept-row-${index}`]}><span class="struck" aria-hidden="true">{concept.label}</span><span lang={concept.language}>{concept.label}</span>{Array.from({ length: 8 }, () => <span class="struck" aria-hidden="true">{concept.label}</span>)}</div>)}</div>
+  </section>
+  <section class="section" aria-labelledby="resources-title">
+    <div class="container section-heading"><div><h2 id="resources-title" class="eyebrow"><Fragment set:html={copy.passage09} /></h2><p><Fragment set:html={copy.passage10} /></p></div><PageLink class="text-link" page="resources" locale={locale}>{copy.passage16}<span aria-hidden="true">↗</span></PageLink></div>
+    <div class="resource-lines">{resources.map((resource) => <a class="resource-line" href={resource.path}><div class="container"><h3>{resource.title}</h3><span aria-hidden="true">↗</span><p>{resource.description}</p></div></a>)}</div>
+  </section>
+  <section class="container section" aria-labelledby="events-title">
+    <div class="section-heading"><div><h2 id="events-title" class="eyebrow"><Fragment set:html={copy.passage11} /></h2><p><Fragment set:html={copy.passage12} /></p></div><PageLink class="text-link" page="events" locale={locale}>{copy.passage17}<span aria-hidden="true">↗</span></PageLink></div>
+    {nextEvent ? <Event event={nextEvent} open /> : <p class="muted">{t.eventsPending}</p>}
+  </section>
+  <Picture class="full-image landscape" src={siteImages["rapa-nui-absence"]} alt={copy.passage03} formats={["avif", "webp"]} fallbackFormat="webp" widths={[600, 900, 1200, 1800]} sizes="100vw" loading="lazy" />
+  <section class="container section prose-section home-about">
+    <div><h2 class="eyebrow"><Fragment set:html={copy.passage13} /></h2><Image class="about-figure" src={siteImages.kavakava} alt="" aria-hidden="true" loading="lazy" /></div>
+    <div><p class="statement"><Fragment set:html={copy.passage14} /></p><PageLink class="button" page="about" locale={locale}>{copy.passage18}<span aria-hidden="true">↗</span></PageLink></div>
+  </section>
+</Layout>
+
+<style>
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: min(690px, 58vw);
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+.hero h1 {
+  font-size: clamp(2.6rem, 5.4vw, 5.4rem);
+  text-align: center;
+  max-width: 1120px;
+  letter-spacing: -0.055em;
+  line-height: 1.03;
+  z-index: 1;
+}
+.hero p {
+  max-width: 710px;
+  width: 66%;
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  z-index: 1;
+}
+.hero-art {
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+}
+.hero-figure {
+  width: 3.5%;
+  height: 30%;
+  top: 0;
+  left: 37%;
+  transform: rotate(-12deg);
+}
+.hero-tablet {
+  width: 16%;
+  right: 8%;
+  top: 6%;
+  transform: rotate(-16deg);
+}
+.hero-mahute {
+  height: 40%;
+  width: 12%;
+  left: 6%;
+  top: 32%;
+  transform: rotate(14deg);
+}
+.home-collection {
+  padding-top: 2rem;
+}
+.concepts-label {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+.concepts {
+  overflow: hidden;
+  padding-block: 0.3rem;
+}
+.concept-row {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 0.65rem;
+  font-size: clamp(1.8rem, 3.8vw, 3.9rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.5;
+  position: relative;
+}
+.concept-row-1 {
+  margin-left: -7%;
+}
+.concept-row-2 {
+  margin-left: -21%;
+}
+.concept-row-3 {
+  margin-left: -5%;
+}
+.concept-row-4 {
+  margin-left: -32%;
+}
+.concept-row-5 {
+  margin-left: -12%;
+}
+.struck {
+  position: relative;
+}
+.struck::after {
+  content: "";
+  position: absolute;
+  top: 48%;
+  height: 0.26em;
+  left: -0.05em;
+  right: -0.05em;
+  background: var(--coral);
+}
+.concept-row:hover > span:not(.struck) {
+  color: #595959;
+}
+.home-about :global(.struck-text) {
+  text-decoration: line-through;
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 0.12em;
+}
+.resource-lines {
+  border-top: 1px solid #000;
+}
+.resource-line {
+  display: block;
+  border-bottom: 1px solid #000;
+  transition: background 150ms;
+}
+.resource-line > div {
+  position: relative;
+  padding-block: 1.25rem;
+  padding-right: calc(var(--gutter) + 3rem);
+}
+.resource-line h3 {
+  font-size: clamp(1.7rem, 3.6vw, 3.5rem);
+}
+.resource-line span {
+  position: absolute;
+  right: var(--gutter);
+  top: 0.5rem;
+  font-size: 3rem;
+}
+.resource-line p {
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  max-width: 1000px;
+}
+.resource-line:hover,
+.resource-line:focus-visible {
+  background: var(--coral);
+}
+.home-about .button {
+  margin-top: 1.75rem;
+}
+.about-figure {
+  width: 23%;
+  max-height: 260px;
+  object-fit: contain;
+  margin: 4rem auto 0;
+  transform: rotate(13deg);
+}
+@media (max-width: 1100px) {
+  .hero {
+    min-height: 590px;
+  }
+  .hero-figure {
+    top: 2%;
+    height: 25%;
+  }
+  .hero-tablet {
+    top: 8%;
+  }
+  .hero-mahute {
+    height: 30%;
+    top: 38%;
+    left: 4%;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    min-height: 600px;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.55rem, 6.8vw, 4rem);
+  }
+  .hero p {
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .hero-tablet {
+    width: 21%;
+    right: 10%;
+    top: 3%;
+  }
+  .hero-figure {
+    left: 35%;
+    height: 21%;
+    width: 5%;
+    top: 0;
+  }
+  .hero-mahute {
+    width: 12%;
+    height: 27%;
+    top: 41%;
+    left: 2%;
+  }
+  .concept-row {
+    font-size: 2.3rem;
+  }
+  .home-about {
+    grid-template-columns: 1fr 3fr;
+  }
+  .about-figure {
+    width: 70%;
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 520px) {
+  .hero {
+    min-height: 590px;
+    padding-top: 8rem;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+  .hero :global(.desktop-break) {
+    display: none;
+  }
+  .hero p {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  .hero-mahute {
+    top: 1%;
+    left: 12%;
+    width: 13%;
+    height: 22%;
+  }
+  .hero-figure {
+    left: 45%;
+    height: 21%;
+    width: 7%;
+  }
+  .hero-tablet {
+    top: 4%;
+    width: 24%;
+    right: 9%;
+  }
+  .concept-row {
+    font-size: 1.9rem;
+  }
+  .concepts-label {
+    margin-bottom: 1.5rem;
+  }
+  .resource-line h3 {
+    font-size: 1.6rem;
+  }
+  .resource-line span {
+    font-size: 2.25rem;
+    top: 1rem;
+  }
+  .resource-line p {
+    font-size: 0.8rem;
+  }
+  .home-about {
+    grid-template-columns: 1fr;
+  }
+  .home-about > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .about-figure {
+    width: 32px;
+    height: 130px;
+    margin: 0 1rem 0 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .resource-line {
+    transition: none;
+  }
+}
+</style>

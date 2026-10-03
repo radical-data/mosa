@@ -10,7 +10,7 @@ describe("Visit map presentation", () => {
       props: { locale: "en", destinations: [], copy: getCopy("visit", "en") },
     });
 
-    expect(html).toContain('<p class="visit-map-fallback" hidden>');
-    expect(html).toContain('<noscript><p class="visit-map-fallback">');
+    expect(html).toMatch(/<p class="visit-map-fallback" hidden\b[^>]*>/);
+    expect(html).toMatch(/<noscript><p class="visit-map-fallback"[^>]*>/);
   });
 });

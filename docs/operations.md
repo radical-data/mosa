@@ -32,6 +32,20 @@ caches may store them but must revalidate before reuse. Fingerprinted `/_astro/`
 assets use a one-year immutable cache policy. There are no language-specific
 server rules apart from the root redirect to Spanish.
 
+## Website assets
+
+Site-owned images and local fonts belong under `src/assets`. Astro processes
+them during the site build and emits fingerprinted files under `/_astro/`;
+Nginx serves these with the one-year immutable cache policy. HTML remains
+`no-cache`, so it can refer to the current asset fingerprints after deployment.
+Collection imagery follows the collection image pipeline under
+`collection/images/` and is not website-owned static media.
+
+After deploying asset or layout changes, check the live pages with PageSpeed
+Insights or Lighthouse. Review image delivery, font loading and layout shifts
+against the change. Keep this as a post-deployment check rather than adding a
+heavy, permanent performance job to CI.
+
 Build it directly with:
 
 ```sh

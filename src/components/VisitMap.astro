@@ -53,6 +53,288 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
   </section>
 </div>
 
+<style>
+  .visit-map {
+    position: relative;
+    height: clamp(24rem, 56vw, 42rem);
+    min-height: 340px;
+    overflow: hidden;
+    background: #e9e7e1;
+  }
+
+  .visit-map.maplibregl-map,
+  .visit-map :global(.maplibregl-popup) {
+    font-family: var(--font-noto-sans-eng), var(--font-general-sans), Arial, sans-serif;
+  }
+
+  .visit-map :global(.maplibregl-ctrl-group) {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .visit-map :global(.maplibregl-ctrl-attrib) {
+    font-size: 0.65rem;
+  }
+
+  .visit-map-fallback {
+    position: absolute;
+    z-index: 1;
+    inset: 50% auto auto 50%;
+    width: min(28rem, 82%);
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.25rem;
+    background: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .visit-map :global(.visit-map-marker) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    padding: 0;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #000;
+    box-shadow: 0 1px 6px #0005;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .visit-map :global(.visit-map-marker:hover),
+  .visit-map :global(.visit-map-marker:focus-visible),
+  .visit-map :global(.visit-map-marker[aria-pressed="true"]) {
+    z-index: 2;
+    outline: 2px solid #111;
+    outline-offset: 2px;
+  }
+
+  .visit-map :global(.maplibregl-ctrl-group button) {
+    width: 36px;
+    height: 36px;
+  }
+
+  .visit-map :global(.visit-map-reset svg) {
+    vertical-align: middle;
+  }
+
+  .visit-map :global(.maplibregl-popup-content) {
+    padding: 1.5rem 1.25rem 0.25rem;
+    border-radius: 0;
+    box-shadow: 0 3px 18px #0002;
+    max-height: min(22rem, 55vh);
+    overflow-y: auto;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .visit-map :global(.visit-map-popup h2) {
+    padding-right: 6rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  .visit-map :global(.maplibregl-popup-close-button) {
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+  }
+
+  .visit-evidence a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    margin-right: 0.5rem;
+  }
+
+  .visit-location-list {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .visit-location-list > h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .visit-place {
+    position: relative;
+    padding-block: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .visit-place-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding-right: 7rem;
+  }
+
+  .visit-holder-objects > summary {
+    cursor: pointer;
+    padding-block: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .visit-unresolved-details > summary {
+    width: fit-content;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 0.2em;
+  }
+
+  .visit-place > .visit-holder-objects > summary {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .visit-place > .visit-holder-objects[open] {
+    margin-top: 1rem;
+  }
+
+  .visit-place-identity {
+    position: relative;
+  }
+
+  .visit-place h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+
+  .visit-place-select {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .visit-place-select::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  .visit-holder-location {
+    margin: 0;
+  }
+
+  .visit-visitor-link {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+  }
+
+  .visit-map :global(.visit-map-popup .visit-visitor-link) {
+    margin-block: 1rem;
+  }
+
+  .visit-place ul,
+  .visit-unresolved ul {
+    margin: 0 0 1rem;
+    padding: 0 0 0 2rem;
+  }
+
+  .visit-place li,
+  .visit-unresolved li {
+    padding-block: 0.8rem;
+    border-top: 1px solid #e5e3dd;
+  }
+
+  .visit-place li > a,
+  .visit-unresolved li > a {
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 0.2em;
+  }
+
+  .visit-location-meta {
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .visit-place li p,
+  .visit-unresolved li p {
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+  }
+
+  .visit-unresolved {
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .visit-unresolved ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .visit-holder-objects a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .visit-map :global(.visit-holder-content) {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .visit-map :global(.visit-holder-content > .visit-holder-objects > summary) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .visit-map :global(.visit-holder-content > .visit-holder-objects[open]) {
+    margin-top: 1rem;
+  }
+
+  .visit-holder-objects ul {
+    padding-left: 1.25rem;
+  }
+
+  .visit-holder-objects li {
+    padding-block: 0.8rem;
+  }
+
+  @media (max-width: 520px) {
+    .visit-map {
+      height: 30rem;
+      min-height: 0;
+    }
+
+    .visit-place-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 0;
+    }
+
+    .visit-place-identity {
+      padding-right: 7rem;
+    }
+  }
+</style>
+
 <script>
   import * as maplibregl from "maplibre-gl";
   import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
@@ -241,7 +523,11 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
       map.on("load", async () => {
         try {
           // MapLibre renders and collision-places names using the site's bundled font.
-          await document.fonts.load('400 14px "General Sans"').catch(() => []);
+          const generalSans = getComputedStyle(document.documentElement)
+            .getPropertyValue("--font-general-sans")
+            .split(",")[0]
+            .trim();
+          await document.fonts.load(`400 14px ${generalSans}`, "Museum").catch(() => []);
           map.addSource("museums", {
             type: "geojson",
             data: {

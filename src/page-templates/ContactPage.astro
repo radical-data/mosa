@@ -1,0 +1,151 @@
+---
+import { Image } from "astro:assets";
+import { siteImages } from "../assets/site-images";
+import NewsletterSignup from "../components/NewsletterSignup.astro";
+import { getCopy } from "../content/content";
+import { contactEmail, instagramURL } from "../data/site";
+import type { Locale } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("contact", locale);
+---
+<Layout locale={locale} page="contact" title={copy.title} description={copy.description}>
+  <section class="container section contact-layout">
+    <div class="contact-art">
+      <h1><Fragment set:html={copy.passage03} /></h1>
+      <Image class="contact-figure" src={siteImages.kavakava} alt="" aria-hidden="true" loading="eager" />
+      <Image class="contact-tablet" src={siteImages.rongorongo} alt="" aria-hidden="true" loading="eager" />
+    </div>
+    <div class="contact-content">
+      <p class="contact-intro"><Fragment set:html={copy.passage04} /></p>
+      <div class="contact-email-block">
+        <h2 class="eyebrow"><Fragment set:html={copy.passage05} /></h2>
+        <address class="contact-address">
+          <a class="contact-email" href={`mailto:${contactEmail}`} aria-describedby="contact-email-help">{contactEmail}</a>
+        </address>
+        <p class="small muted" id="contact-email-help"><Fragment set:html={copy.passage06} /></p>
+      </div>
+      <p><Fragment set:html={copy.passage07} /></p>
+      <section class="contact-social" aria-labelledby="contact-social-title">
+        <h2 class="eyebrow" id="contact-social-title">{copy.socialHeading}</h2>
+        <p>{copy.instagramDescription}</p>
+        <a class="text-link" href={instagramURL}>{copy.instagramLink} <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="privacy-note" aria-labelledby="contact-privacy-title">
+        <h2 class="eyebrow" id="contact-privacy-title"><Fragment set:html={copy.passage08} /></h2>
+        <p><Fragment set:html={copy.passage09} /></p>
+        <p><Fragment set:html={copy.passage10} /></p>
+      </section>
+      <NewsletterSignup locale={locale} placement="contact" />
+    </div>
+  </section>
+</Layout>
+
+<style>
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 4rem;
+  padding-top: 3.5rem;
+}
+.contact-art {
+  position: relative;
+}
+.contact-figure {
+  height: 300px;
+  width: auto;
+  margin: 3rem 15% 0 auto;
+  transform: rotate(6deg);
+}
+.contact-tablet {
+  width: 48%;
+  margin-top: 4rem;
+  transform: rotate(-18deg);
+}
+.contact-content {
+  min-width: 0;
+  max-width: 560px;
+  margin-left: auto;
+}
+.contact-intro {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+}
+.contact-email-block {
+  padding-block: 1.5rem;
+  margin-bottom: 2.5rem;
+  border-block: 1px solid var(--rule);
+}
+.contact-address {
+  font-style: normal;
+  margin-block: 1rem;
+}
+.contact-email {
+  display: inline-block;
+  max-width: 100%;
+  padding-block: 0.25rem;
+  font-size: clamp(1.35rem, 2.6vw, 2.4rem);
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
+}
+.contact-email:hover {
+  text-decoration-thickness: 0.12em;
+}
+.privacy-note {
+  margin-block: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.contact-social {
+  margin-top: 2.5rem;
+}
+.privacy-note h2 {
+  color: #000;
+}
+@media (max-width: 800px) {
+  .contact-layout {
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+  .contact-layout h1 {
+    font-size: 3rem;
+  }
+  .contact-figure {
+    height: 220px;
+    margin-top: 8rem;
+  }
+  .contact-tablet {
+    width: 85%;
+  }
+  .contact-intro {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 520px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+  .contact-art h1 {
+    font-size: 3.5rem;
+  }
+  .contact-figure,
+  .contact-tablet {
+    display: none;
+  }
+  .contact-content {
+    max-width: none;
+    margin-left: 0;
+  }
+  .contact-intro {
+    margin-top: 0;
+  }
+}
+</style>
