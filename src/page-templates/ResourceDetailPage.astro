@@ -1,8 +1,4 @@
 ---
-import ActorMapGuide from "../components/resources/ActorMapGuide.astro";
-import DirectoryGuide from "../components/resources/DirectoryGuide.astro";
-import LetterGuide from "../components/resources/LetterGuide.astro";
-import RestitutionGuide from "../components/resources/RestitutionGuide.astro";
 import { resourceLabels } from "../data/resources";
 import { type Locale, pagePath, type ResourceId } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
@@ -20,10 +16,7 @@ const isEnglish = locale === "en";
     <span aria-hidden="true">/</span>
     <span aria-current="page">{label.title}</span>
   </nav>
-  {resource === "guide" && <RestitutionGuide locale={locale} />}
-  {resource === "letter" && <div class="container"><LetterGuide locale={locale} /></div>}
-  {resource === "directory" && <DirectoryGuide locale={locale} />}
-  {resource === "actors" && <div class="container"><ActorMapGuide locale={locale} /></div>}
+  <slot />
   <div class="container resource-detail-back">
     <a href={pagePath("resources", locale)}>← {isEnglish ? "Back to resources" : "Volver a recursos"}</a>
   </div>
