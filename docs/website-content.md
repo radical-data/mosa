@@ -33,6 +33,19 @@ local Fonts API loads `src/assets/fonts/noto-sans-eng.woff2` only for its
 current additional characters under the
 [SIL Open Font License](../public/fonts/noto-sans-OFL.txt).
 
+## Website media
+
+Put site-owned interface and editorial images in `src/assets/site-images/`,
+register their stable IDs in `src/data/site-image-ids.ts` and resolve them
+through `src/assets/site-images.ts`. Render them with Astro's `Image` or
+`Picture` component so the build supplies intrinsic dimensions, responsive
+formats and fingerprinted URLs. Event files refer to the stable image ID, not a
+public path.
+
+This directory is for website presentation assets only. Publishable collection
+representations remain in `collection/images/` with their source metadata and
+relationships; follow the collection image workflow for those files.
+
 ## Collection and publication presentation
 
 Collection navigation names come from object JSON. Source-attributed names,
