@@ -91,7 +91,7 @@ Keep all source accounts, qualifiers and optional locators visible. Holding and
 location labels describe source reports, which may be historical.
 
 The [Visit map](adrs/028-map-objects-through-holders.md) presents holders as
-MoSA's “satellite museums”. Each holder referenced by a resolved `held_by`
+MoSA's “branches” / “sedes”. Each holder referenced by a resolved `held_by`
 claim gets one named list entry; those with coordinates get individual points.
 Points use one colour, carry no object counts and remain separate even when
 they overlap. There is no clustering or search. MapLibre places museum names on
