@@ -9,7 +9,7 @@ const t = messages(locale);
 ---
 <header class="site-header container">
   <PageLink class="brand" page="home" locale={locale} aria-label={`MoSA — ${t.home}`}><img src="/images/logo-dark.png" alt="Museum of Stolen Artefacts" lang="en" width="303" height="162" /></PageLink>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" hidden>{t.menu} <span aria-hidden="true">+</span></button>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">{t.menu} <span aria-hidden="true">+</span></button>
   <nav id="primary-navigation" aria-label={t.primaryNavigation}>
     {pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)} aria-current={page === id ? "page" : undefined}>{t[id]}</a>)}
   </nav>
@@ -26,8 +26,6 @@ const t = messages(locale);
   const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
   const nav = document.querySelector<HTMLElement>("#primary-navigation");
   if (toggle && nav) {
-    toggle.hidden = false;
-    nav.classList.add("collapsible");
     const close = () => { toggle.setAttribute("aria-expanded", "false"); nav.classList.remove("is-open"); };
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") !== "true";
@@ -39,3 +37,132 @@ const t = messages(locale);
     window.matchMedia("(min-width: 1101px)").addEventListener("change", close);
   }
 </script>
+
+<style>
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    min-height: 112px;
+    padding-block: 1.5rem;
+  }
+
+  .brand {
+    display: block;
+    flex-shrink: 0;
+    width: 98px;
+  }
+
+  .site-header nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.1rem, 2.1vw, 2.25rem);
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  .site-header nav a {
+    position: relative;
+    padding-block: 0.4rem;
+    white-space: normal;
+  }
+
+  .site-header nav a:hover,
+  .site-header nav a[aria-current="page"] {
+    background: linear-gradient(transparent 55%, var(--coral) 55%, var(--coral) 75%, transparent 75%);
+  }
+
+  .site-header nav a[aria-current="page"] {
+    font-weight: 600;
+  }
+
+  .site-header .language-switcher {
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    padding-block: 0;
+  }
+
+  .language-switcher a[aria-current="true"] {
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 1100px) {
+    .site-header {
+      gap: 1rem;
+      min-height: 92px;
+    }
+
+    .brand {
+      width: 85px;
+    }
+
+    :global(.js) .menu-toggle {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      padding: 0.5rem 0;
+      background: none;
+      border: 0;
+      font-weight: 500;
+    }
+
+    .menu-toggle span {
+      font-size: 1.7rem;
+    }
+
+    .menu-toggle[aria-expanded="true"] span {
+      transform: rotate(45deg);
+    }
+
+    .site-header #primary-navigation {
+      order: 4;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      padding-block: 1rem;
+      font-size: 1rem;
+    }
+
+    :global(.js) .site-header #primary-navigation {
+      display: none;
+    }
+
+    :global(.js) .site-header #primary-navigation.is-open {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    .site-header #primary-navigation.is-open a {
+      padding-block: 0.8rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .site-header #primary-navigation.is-open a[aria-current="page"] {
+      background: none;
+      text-decoration: underline;
+      text-decoration-color: var(--coral);
+      text-decoration-thickness: 4px;
+    }
+
+    .site-header .language-switcher {
+      gap: 0.85rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .site-header .language-switcher {
+      flex-basis: 100%;
+      justify-content: flex-end;
+    }
+  }
+</style>
