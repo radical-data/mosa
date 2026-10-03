@@ -2,6 +2,7 @@ node_modules/
 .astro/
 dist/
 .pnpm-store/
+src/assets/fonts/general-sans-*.woff2
 .DS_Store
 .env
 .env.*
