@@ -179,6 +179,22 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
     padding-right: 7rem;
   }
 
+  .visit-holder-objects > summary {
+    cursor: pointer;
+    padding-block: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .visit-unresolved-details > summary {
+    width: fit-content;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 0.2em;
+  }
+
   .visit-place > .visit-holder-objects > summary {
     position: absolute;
     top: 1.5rem;
@@ -271,16 +287,6 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
     padding: 0;
   }
 
-  .visit-unresolved-details > summary {
-    width: fit-content;
-    padding-block: 0.5rem;
-    cursor: pointer;
-    font-size: 0.9rem;
-    text-decoration: underline;
-    text-decoration-color: var(--coral);
-    text-underline-offset: 0.2em;
-  }
-
   .visit-holder-objects a {
     text-decoration: underline;
     text-underline-offset: 0.2em;
@@ -301,12 +307,6 @@ const points = destinations.flatMap(({ holder }) => holder.location ? [{
 
   .visit-map :global(.visit-holder-content > .visit-holder-objects[open]) {
     margin-top: 1rem;
-  }
-
-  .visit-holder-objects > summary {
-    cursor: pointer;
-    padding-block: 0.75rem;
-    font-size: 0.9rem;
   }
 
   .visit-holder-objects ul {

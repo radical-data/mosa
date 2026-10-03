@@ -25,3 +25,24 @@ const subjectTitle = (subject: RecordReference) =>
     </div>
   </section>
 </Layout>
+
+<style>
+
+.article-index-list {
+  border-top: 1px solid var(--rule);
+}
+.article-index-list > :global(.article-preview) {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.8fr) 2fr;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.article-index-list :global(h2) {
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  margin-block: 0.35rem;
+}
+.article-index-list > :global(.article-preview) {
+  grid-template-columns: 1fr;
+}
+</style>

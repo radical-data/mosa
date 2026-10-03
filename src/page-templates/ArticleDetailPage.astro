@@ -25,3 +25,16 @@ const subjectTitle = (subject: RecordReference) =>
     <ArticleBody article={article} locale={locale} showTitle={false} />
   </article>
 </Layout>
+
+<style>
+
+.article-detail > section {
+  margin-block-start: clamp(3rem, 8vw, 6rem);
+}
+.article-detail > section h2 {
+  margin-block-end: 1rem;
+}
+.article-detail > :global(.article-body) {
+  margin-block-start: 3rem;
+}
+</style>

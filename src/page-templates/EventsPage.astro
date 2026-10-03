@@ -21,3 +21,45 @@ const { upcoming, past } = getEvents(storedEvents, locale);
   {past.length > 0 && <section class="container section prose-section archive"><h2 class="eyebrow"><Fragment set:html={copy.passage06} /></h2>{past.map((event) => <article class="archive-card">{event.image && <img src={event.image} alt={event.imageAlt} width="1200" height="900" loading="lazy" />}<div><time datetime={event.dateTime} class="small">{event.dateLabel}</time><h3><Fragment set:html={event.title} /></h3><p><Fragment set:html={event.body} /></p></div></article>)}</section>}
   <section class="container section connect-strip"><h2><Fragment set:html={copy.passage09} /></h2><PageLink class="text-link" page="contact" locale={locale}>{copy.passage10}<span aria-hidden="true">↗</span></PageLink></section>
 </Layout>
+
+<style>
+
+.events-programme {
+  padding-top: 1.5rem;
+}
+.archive-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  border-block: 1px solid var(--rule);
+  padding-block: 1.5rem;
+}
+.archive-card:not(:has(> img)) {
+  grid-template-columns: 1fr;
+}
+.archive-card + .archive-card {
+  border-top: 0;
+}
+.archive-card > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.archive-card h3 {
+  margin-block: 2rem 1rem;
+}
+.archive-card p {
+  font-size: 0.95rem;
+}
+@media (max-width: 520px) {
+  .archive-card {
+    grid-template-columns: 1fr;
+  }
+  .archive-card > img {
+    aspect-ratio: 1.25;
+  }
+  .archive-card h3 {
+    margin-top: 1rem;
+  }
+}
+</style>

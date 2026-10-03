@@ -84,3 +84,44 @@ const sourceURL = referenceURL(source.reference);
     )}
   </article>
 </Layout>
+
+<style>
+
+.source-metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 1rem;
+  margin-block: 2rem;
+}
+.source-metadata > div {
+  border-top: 1px solid var(--rule);
+  padding-top: 0.6rem;
+  overflow-wrap: anywhere;
+}
+.source-metadata dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.source-metadata dd {
+  margin: 0.25rem 0 0;
+}
+.source-detail > section {
+  margin-block-start: clamp(3rem, 8vw, 6rem);
+}
+.source-detail > section h2 {
+  margin-block-end: 1rem;
+}
+.source-relations,
+.source-claims {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.source-relations li,
+.source-claims li {
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  overflow-wrap: anywhere;
+}
+</style>

@@ -21,3 +21,27 @@ const copy = getCopy("visit", locale);
   </section>
   <section class="container section connect-strip"><div><h2 class="eyebrow">{copy.passage09}</h2><p>{copy.passage10}</p></div><PageLink class="button" page="events" locale={locale}>{copy.passage16}<span aria-hidden="true">↗</span></PageLink></section>
 </Layout>
+
+<style>
+
+.visit-distribution {
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+}
+.visit-intro {
+  max-width: 58rem;
+  margin-bottom: 2rem;
+}
+.visit-intro h1 {
+  margin-bottom: 1.5rem;
+}
+.visit-invitation {
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  margin-bottom: 1rem;
+}
+@media (max-width: 520px) {
+  .visit-distribution {
+    padding-top: 2rem;
+  }
+}
+</style>
