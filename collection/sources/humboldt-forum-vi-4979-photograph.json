@@ -1,0 +1,24 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4979",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/162879-klinge",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The Humboldt Forum page identifies this image credit as Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and labels it CC-BY-NC-SA. The unchanged full-resolution image is registered locally under those terms.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "klinge-berlin-vi-4979/smb.jpg",
+      "alt": "Ansicht der Obsidianklinge.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/8/7/9/4/304978-1-ger-DE/be097254b61b-ca31c319d1c5c05032e2abaa331c051465723d68b0e328a3a8a6c72d9188187274e4412e.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "klinge-berlin-vi-4979" } }
+  ]
+}

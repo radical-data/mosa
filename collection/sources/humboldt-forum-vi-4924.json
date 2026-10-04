@@ -1,0 +1,110 @@
+{
+  "author": "Humboldt Forum Collections Online",
+  "title": "Humboldt Forum Collections Online record for Nähunterlage — VI 4924",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/162878-naehunterlage",
+  "language": "en-GB",
+  "claims": [
+    {
+      "id": "object-type",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "classified_as",
+      "value": "Nähunterlage",
+      "language": "de"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "catalogue_number",
+      "value": "VI 4924"
+    },
+    {
+      "id": "holder",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "date",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "made_during",
+      "value": "vor 1883",
+      "language": "de"
+    },
+    {
+      "id": "material",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "made_of",
+      "value": "Knochen",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "dimensions-length-width",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "described_as",
+      "value": "Länge x Breite: 25,7 x 9,3 cm",
+      "language": "de"
+    },
+    {
+      "id": "dimensions-height-width-depth",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 26 x 9,5 x 1 cm",
+      "language": "de"
+    },
+    {
+      "id": "involved-parties",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "described_as",
+      "value": "S.M.S. Hyäne (Expedition); Wilhem Geiseler (Collector)"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "naehunterlage-berlin-vi-4924",
+      "predicate": "described_as",
+      "value": "Zugang ungeklärt, von Kanonenboot S.M.S. Hyäne, Wilhelm Geiseler 1883",
+      "language": "de"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-4924-photograph"
+      }
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields. The Places / Cultures entry is retained as the catalogue's categorisation and is not treated as evidence of manufacture or findspot. The two separately labelled measurements are preserved as listed.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-04t22-02-26-623z.html",
+      "capturedAt": "2026-10-04T22:02:26.623Z",
+      "method": "singlefile"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4875",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165774-figur",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The Humboldt Forum page identifies this image credit as Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and labels it CC-BY-NC-SA. The unchanged full-resolution image is registered locally under those terms.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "figur-berlin-vi-4875/smb.jpg",
+      "alt": "Ansicht der geschnitzten Holzfigur.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/0/8/6/6/296680-1-ger-DE/cfaa2faa9da1-bb3aab44a3b56d2d381d9797afec538c49692102aa75ef9b1d24819485c49e76170d70a3.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "figur-berlin-vi-4875" } }
+  ]
+}

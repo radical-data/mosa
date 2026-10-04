@@ -1,0 +1,30 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4877 b",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165248-ko-honga",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The catalogue page identifies this photograph as Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and labels it CC-BY-NC-SA. The cleared original image is preserved unchanged.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "ko-honga-berlin-vi-4877-b/smb.jpg",
+      "alt": "Flacher, rundlicher dunkler Holzgegenstand mit eingeritzter Umrandung.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_large/7/3/0/5/305037-1-ger-DE/afc6b0ed43a5-8970260bf012e29ac6a24ecaf45e433ce43aceff4ddc7f20006b2150b542b22423e039ae.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ko-honga-berlin-vi-4877-b"
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for VI 4865",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165242-netzsenker",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "catalogue_number",
+      "value": "VI 4865"
+    },
+    {
+      "id": "name",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "has_name",
+      "value": "Netzsenker",
+      "language": "de"
+    },
+    {
+      "id": "classification",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "classified_as",
+      "value": "Netzsenker",
+      "language": "de"
+    },
+    {
+      "id": "participants",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "described_as",
+      "value": "Heinrich August Schlubach (Collector)"
+    },
+    {
+      "id": "date",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "made_during",
+      "value": "vor 1883",
+      "language": "de"
+    },
+    {
+      "id": "material",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "made_of",
+      "value": "Stein, durchbohrt, geschliffen",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 11,5 x 11,5 x 11 cm",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "holder",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "netzsenker-berlin-vi-4865",
+      "predicate": "described_as",
+      "value": "Schenkung von Heinrich August Schlubach 1883",
+      "language": "de"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields inspected on 4 October 2026. German field values retain their original wording. Places/Cultures is retained as a combined source description, not treated as a making place. The image is represented by a separate photograph source; its image-specific CC BY-NC-SA 4.0 credit was inspected, and its unchanged local image is registered.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-4865-photograph"
+      }
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-10-04t21-58-57-000z.html",
+      "capturedAt": "2026-10-04T21:58:57.000Z",
+      "method": "singlefile"
+    }
+  ]
+}

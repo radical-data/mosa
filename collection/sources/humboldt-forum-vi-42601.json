@@ -1,0 +1,109 @@
+{
+  "author": "Humboldt Forum Collections Online",
+  "title": "Humboldt Forum Collections Online record for moai paepae — VI 42601",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165794-moai-paepae",
+  "language": "en-GB",
+  "claims": [
+    {
+      "id": "catalogue-title",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "classified_as",
+      "value": "moai paepae"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "classified_as",
+      "value": "Figur",
+      "language": "de"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "catalogue_number",
+      "value": "VI 42601"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "date",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "made_during",
+      "value": "vor 1933",
+      "language": "de"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 64 x 14,5 x 8,5 cm",
+      "language": "de"
+    },
+    {
+      "id": "disposal",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Völkerkundliches Museum Johann Friedrich Gustav Umlauff (Disposal)"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "moai-pa-apa-a-berlin-vi-42601-b",
+      "predicate": "described_as",
+      "value": "Tausch von Museum Johann Friedrich Gustav Umlauff 1933",
+      "language": "de"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "smb-berlin-vi-42601-photograph"
+      }
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields. The Places / Cultures entry is retained as the catalogue's categorisation and is not treated as evidence of manufacture or findspot. The displayed photograph matches the existing Staatliche Museen zu Berlin photograph in composition and view and carries the same Anika Niemeck credit; the existing photograph source is reused.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-04t21-58-41-000z.html",
+      "capturedAt": "2026-10-04T21:58:41.000Z",
+      "method": "singlefile"
+    }
+  ]
+}

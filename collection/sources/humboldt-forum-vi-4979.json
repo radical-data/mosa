@@ -1,0 +1,123 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for VI 4979",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/162879-klinge",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "catalogue_number",
+      "value": "VI 4979"
+    },
+    {
+      "id": "name",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "has_name",
+      "value": "Klinge",
+      "language": "de"
+    },
+    {
+      "id": "classification",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "classified_as",
+      "value": "Klinge",
+      "language": "de"
+    },
+    {
+      "id": "participants-expedition",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "described_as",
+      "value": "S.M.S. Hyäne (Expedition)"
+    },
+    {
+      "id": "participants-collector",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "described_as",
+      "value": "Wilhem Geiseler (Collector)"
+    },
+    {
+      "id": "date",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "made_during",
+      "value": "vor1883",
+      "language": "de"
+    },
+    {
+      "id": "material",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "made_of",
+      "value": "Obsidian",
+      "language": "de"
+    },
+    {
+      "id": "dimensions-object",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "described_as",
+      "value": "Objektmaß: 3,5 x 14,5 x 3,7 cm",
+      "language": "de"
+    },
+    {
+      "id": "dimensions-height-width-depth",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 15 x 9,5 x 3,5 cm",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "holder",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "klinge-berlin-vi-4979",
+      "predicate": "described_as",
+      "value": "Zugang ungeklärt, von Kanonenboot S.M.S. Hyäne, Wilhelm Geiseler 1883",
+      "language": "de"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-4979-photograph"
+      }
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the supplied displayed catalogue fields. German field values retain their original wording. Places/Cultures is retained as the catalogue's categorisation, not evidence of manufacture or findspot. The image is represented by a separate photograph source; its unchanged full-resolution image and CC-BY-NC-SA credit are registered.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-04t22-05-50-164z.html",
+      "capturedAt": "2026-10-04T22:05:50.164Z",
+      "method": "singlefile"
+    }
+  ]
+}

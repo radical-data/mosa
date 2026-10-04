@@ -1,0 +1,24 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4886",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165243-tasche",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The Humboldt Forum page identifies this image credit as Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and labels it CC-BY-NC-SA. The unchanged full-resolution image is registered locally under those terms.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "tasche-berlin-vi-4886/smb.jpg",
+      "alt": "Ansicht der geflochtenen Tasche.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/2/2/1/2/322122-1-ger-DE/f50398384a16-0fd04df8ca4e328791124107493d8ad465a7b4dfad2e23b51e6711934157ef08c81e517a.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "tasche-berlin-vi-4886" } }
+  ]
+}

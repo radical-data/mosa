@@ -1,0 +1,20 @@
+{
+  "author": null,
+  "title": "Photograph of Figur, Berlin — VI 7240",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/166030-figur",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "figur-berlin-vi-7240/smb.jpg",
+      "alt": "Steinfigur mit stilisierten Gesichtszügen, Frontalansicht.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Leonie Gärtner",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/4/6/7/6/296764-1-ger-DE/d51874b85298-b41d77dbc523e55a8453012436632076a9ef4d00e03f0140011ad1a6b45fe02c6b39cf83.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "figur-berlin-vi-7240" } }
+  ]
+}
