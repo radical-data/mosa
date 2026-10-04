@@ -1,0 +1,116 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for VI 4930",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/162876-gefaess-fuer-farbe",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "catalogue_number",
+      "value": "VI 4930"
+    },
+    {
+      "id": "name",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "has_name",
+      "value": "Gefäß für Farbe",
+      "language": "de"
+    },
+    {
+      "id": "classification",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "classified_as",
+      "value": "Gefäß für Farbe",
+      "language": "de"
+    },
+    {
+      "id": "participants-expedition",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "described_as",
+      "value": "S.M.S. Hyäne (Expedition)"
+    },
+    {
+      "id": "participants-collector",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "described_as",
+      "value": "Wilhem Geiseler (Collector)"
+    },
+    {
+      "id": "date",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "made_during",
+      "value": "vor1883",
+      "language": "de"
+    },
+    {
+      "id": "material",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt, bemalt",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 7 x 4,5 x 4,5 cm",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "holder",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "gefaess-fuer-farbe-berlin-vi-4930",
+      "predicate": "described_as",
+      "value": "Zugang ungeklärt, von Kanonenboot S.M.S. Hyäne, Wilhelm Geiseler 1883",
+      "language": "de"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-4930-photograph"
+      }
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the supplied displayed catalogue fields. German field values retain their original wording. Places/Cultures is retained as the catalogue's categorisation, not evidence of manufacture or findspot. The image is represented by a separate photograph source; its unchanged full-resolution image and CC-BY-NC-SA credit are registered.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-04t22-05-00-650z.html",
+      "capturedAt": "2026-10-04T22:05:00.650Z",
+      "method": "singlefile"
+    }
+  ]
+}

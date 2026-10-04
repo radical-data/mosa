@@ -1,0 +1,103 @@
+{
+  "author": "Humboldt Forum Collections Online",
+  "title": "Humboldt Forum Collections Online record for Figur — VI 7240",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/166030-figur",
+  "language": "en-GB",
+  "claims": [
+    {
+      "id": "object-type",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "classified_as",
+      "value": "Figur",
+      "language": "de"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "catalogue_number",
+      "value": "VI 7240"
+    },
+    {
+      "id": "holder",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "date",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "made_during",
+      "value": "vor 1884",
+      "language": "de"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "made_of",
+      "value": "Tuffstein, behauen",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 79 x 27 x 29 cm",
+      "language": "de"
+    },
+    {
+      "id": "involved-parties",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "described_as",
+      "value": "S.M.S. Hyäne (Expedition); E. Weisser (Persons/Corporate bodies)"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "described_as",
+      "value": "Module 16 Oceania: Rituals and Beliefs"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "figur-berlin-vi-7240",
+      "predicate": "described_as",
+      "value": "Zugang ungeklärt, von S.M.S. Hyäne, E. Weisser 1884",
+      "language": "de"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-7240-photograph"
+      }
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields. The Places / Cultures entry is retained as the catalogue's categorisation and is not treated as evidence of manufacture or findspot.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-04t22-03-19-065z.html",
+      "capturedAt": "2026-10-04T22:03:19.065Z",
+      "method": "singlefile"
+    }
+  ]
+}

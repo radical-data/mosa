@@ -1,0 +1,30 @@
+{
+  "author": null,
+  "title": "Photograph of Rapa, Berlin — VI 810",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/160633-rapa",
+  "language": "und",
+  "claims": [],
+  "notes": {
+    "text": "The image information panel credits Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and states CC-BY-NC-SA. The cleared original image is preserved unchanged.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "rapa-berlin-vi-810/smb.jpg",
+      "alt": "Langstieliges, flaches Holzobjekt mit zwei unterschiedlich geformten paddelförmigen Enden.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_large/9/9/6/4/314699-1-ger-DE/df17c2b77413-b441f02803f98d3b162fe775f82d61540351e4a52515bc0fdbca8e3933da0d62762bcfa2.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "rapa-berlin-vi-810"
+      }
+    }
+  ]
+}

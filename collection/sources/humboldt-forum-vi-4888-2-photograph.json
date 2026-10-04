@@ -1,0 +1,30 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4888 <2>",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165249-tasche",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The catalogue page identifies this photograph as Staatliche Museen zu Berlin, Ethnologisches Museum / Volker Linke and labels it CC-BY-NC-SA. The cleared original image is preserved unchanged.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "tasche-berlin-vi-4888-2/smb.jpg",
+      "alt": "Rechteckige, flache Tasche aus hellen geflochtenen Fasern.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Volker Linke",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_large/6/3/1/2/322136-1-ger-DE/8643fb5be65f-a506d5f0fb20923ce0a9412a735c2bc7f3e0ad5c7d9abacd1f2e7403f6170f41fc715733.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "tasche-berlin-vi-4888-2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "author": null,
+  "title": "Photograph of ko honga, Berlin — VI 4877 a",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165247-ko-honga",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "ko-honga-berlin-vi-4877-a/smb.jpg",
+      "alt": "Geschnitzter dunkler Brustschmuck mit seitlichem Gesichtsprofil.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/3/7/5/6/66573-1-ger-DE/62446e46730e-1ed5c0c1fc225b547a0d0bcb5378dfee3fc100ce9295e96f285d6a452a624eaac4e7c8da.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "ko-honga-berlin-vi-4877-a" } }
+  ]
+}

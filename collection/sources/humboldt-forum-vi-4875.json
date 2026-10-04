@@ -1,0 +1,124 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for VI 4875",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165774-figur",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "catalogue_number",
+      "value": "VI 4875"
+    },
+    {
+      "id": "name",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "has_name",
+      "value": "Figur",
+      "language": "de"
+    },
+    {
+      "id": "classification",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "classified_as",
+      "value": "Figur",
+      "language": "de"
+    },
+    {
+      "id": "participant-collector",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "described_as",
+      "value": "Heinrich August Schlubach (Collector)"
+    },
+    {
+      "id": "date",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "made_during",
+      "value": "vor1883",
+      "language": "de"
+    },
+    {
+      "id": "material",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt",
+      "language": "de"
+    },
+    {
+      "id": "dimensions-object",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "described_as",
+      "value": "Objektmaß: 6 x 103 x 12,5 cm",
+      "language": "de"
+    },
+    {
+      "id": "dimensions-photograph",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 24,5 x 23 x 11 cm (siehe Foto)",
+      "language": "de"
+    },
+    {
+      "id": "dimensions-storage",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 6,5 x 23 x 13 cm (Lagermaß)",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "holder",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "figur-berlin-vi-4875",
+      "predicate": "described_as",
+      "value": "Schenkung von Heinrich August Schlubach 1883",
+      "language": "de"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-4875-photograph"
+      }
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the supplied displayed catalogue fields. German field values retain their original wording. Places/Cultures is retained as the catalogue's categorisation, not evidence of manufacture or findspot. Three distinct measurements are preserved as separately labelled by the catalogue. The image is represented by a separate photograph source; its unchanged full-resolution image and CC-BY-NC-SA credit are registered.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-04t22-06-15-530z.html",
+      "capturedAt": "2026-10-04T22:06:15.530Z",
+      "method": "singlefile"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for VI 13229",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/158988-brustschmuck",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "catalogue_number",
+      "value": "VI 13229"
+    },
+    {
+      "id": "name",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "has_name",
+      "value": "Brustschmuck",
+      "language": "de"
+    },
+    {
+      "id": "classification",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "classified_as",
+      "value": "Brustschmuck",
+      "language": "de"
+    },
+    {
+      "id": "participants",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "P. Otto Zembsch (Collector)"
+    },
+    {
+      "id": "date",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "made_during",
+      "value": "vor 1896",
+      "language": "de"
+    },
+    {
+      "id": "material",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Objektmaß: 7,5 x 11,5 x 5,6 cm",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "holder",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "ika-berlin-vi-13229",
+      "predicate": "described_as",
+      "value": "Ankauf von P. Otto Zembsch 1896",
+      "language": "de"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields inspected on 4 October 2026. The Humboldt Forum title/classification Brustschmuck differs from the SMB and IndiGen wording; this source's wording is preserved as its own attributed claim. German field values retain their original wording. Places/Cultures is retained as a combined source description, not treated as a making place. The Humboldt Forum image and the registered SMB image were visually compared: they show the same photographic work, with the Humboldt Forum file at lower resolution. Both credit Anika Niemeck.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "relationships": [
+    { "type": "reproduces", "target": { "type": "source", "id": "smb-berlin-vi-13229-photograph" } }
+  ],
+  "captures": [
+    {
+      "file": "2026-10-04t21-57-30-000z.html",
+      "capturedAt": "2026-10-04T21:57:30.000Z",
+      "method": "singlefile"
+    }
+  ]
+}

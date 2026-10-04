@@ -1,0 +1,24 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4986",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/163078-messer-oder-waffe",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The Humboldt Forum page identifies this image credit as Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and labels it CC-BY-NC-SA. The unchanged full-resolution image is registered locally under those terms.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "messer-oder-waffe-berlin-vi-4986/smb.jpg",
+      "alt": "Ansicht des Messers oder der Waffe.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/7/3/9/1/311937-1-ger-DE/cb4dbdc3ada7-7c7ba90af1deb458b5ad5236726a1e06007b1846265c223220debd21d151acdc63702771.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "messer-oder-waffe-berlin-vi-4986" } }
+  ]
+}

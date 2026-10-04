@@ -99,6 +99,7 @@ focused work valuable.
 
 | Campaign | Next useful contribution to growth |
 | --- | --- |
+| [Humboldt Forum Rapa Nui display catalogue](campaigns/humboldt-forum-rapa-nui-display.md) | Integration complete. Resume only with object-specific evidence that can test the nine unaccessioned Berlin entries against accessioned records. |
 | [Australian Museum](campaigns/australian-museum.md) | Resolve the paper's disputed identifiers and obtain the inventory/Robins crosswalk. Resume the named pagination and display-label gaps when accessible; do not restart the twenty-object import. |
 | [Bishop mata‘a paper](campaigns/bishop-mataa-paper.md) | High potential specimen coverage, but first settle accession versus analytical sample conventions and review the three existing specimens. The 332 sample labels are not 332 verified new museum accessions. |
 | [Arte table follow-up](campaigns/arte-en-la-cultura-rapanui.md) | Take the stable-identifier group and two ambiguous rows before low-specificity searches. Revisit the 22 collective rows and eight research-section leads when individualising evidence exists. |

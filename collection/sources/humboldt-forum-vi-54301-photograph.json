@@ -1,0 +1,30 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 54301",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/158993-ua",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The catalogue page identifies this photograph as Staatliche Museen zu Berlin, Ethnologisches Museum / Melanie Herrschaft and labels it CC-BY-NC-SA. The cleared original image is preserved unchanged.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "ua-berlin-vi-54301/smb.jpg",
+      "alt": "Langer Holzstab mit geschnitztem menschlichen Kopf am Ende.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Melanie Herrschaft",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_large/7/9/6/5/325697-1-ger-DE/2e9bc93bdbd8-34471328377ffaf4e17cd148c652f92a8eccd47f983015012510f738a698d064fa78a20f.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ua-berlin-vi-54301"
+      }
+    }
+  ]
+}

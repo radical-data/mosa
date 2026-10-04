@@ -1,0 +1,30 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4865",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165242-netzsenker",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The catalogue page identifies this photograph as Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and labels it CC-BY-NC-SA. The cleared original image is preserved unchanged.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "netzsenker-berlin-vi-4865/smb.jpg",
+      "alt": "Runder, unregelmäßiger Steingegenstand mit kleiner Einkerbung.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_large/0/8/5/2/312580-1-ger-DE/fba617e1d369-186118c67ead6a176a99bce7eb979eea3338b4f638d1a0c9d33f3cbea22ca2f499d48fa7.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "netzsenker-berlin-vi-4865"
+      }
+    }
+  ]
+}

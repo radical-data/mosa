@@ -1,0 +1,20 @@
+{
+  "author": null,
+  "title": "Photograph of Beilklinge, Berlin — VI 4943",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/162880-beilklinge",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "beilklinge-berlin-vi-4943/smb.jpg",
+      "alt": "Längliche, bearbeitete Steinklinge in einer Aufsicht.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/5/5/7/2/292755-1-ger-DE/12388fd1a971-ad3a72aa714ab7f7449089fcd8192bb76045ec691c950ffe2f1ed2389f43541f415c36ea.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "beilklinge-berlin-vi-4943" } }
+  ]
+}

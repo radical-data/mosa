@@ -1,0 +1,30 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4919",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/162877-ruder",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The catalogue page identifies this photograph as Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and labels it CC-BY-NC-SA. The cleared original image is preserved unchanged.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "ruder-berlin-vi-4919/smb.jpg",
+      "alt": "Langgestrecktes, geschnitztes Holzruder, Aufsicht.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_large/9/7/3/5/315379-1-ger-DE/2df62c675197-341af1a344d5c0b4db8890a9d71a20d8f75e9e70295aa449ea8d9492386516785fec23d4.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "ruder-berlin-vi-4919"
+      }
+    }
+  ]
+}

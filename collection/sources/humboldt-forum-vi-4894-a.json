@@ -1,0 +1,103 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for Maea mo moa, Berlin — VI 4894 a",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165240-maea-mo-moa",
+  "language": "de",
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "has_name",
+      "value": "maea mo moa"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "catalogue_number",
+      "value": "VI 4894 a"
+    },
+    {
+      "id": "object-type",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "classified_as",
+      "value": "Wertgegenstand (?)"
+    },
+    {
+      "id": "holder",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "date",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "made_during",
+      "value": "vor 1883"
+    },
+    {
+      "id": "material",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "made_of",
+      "value": "Stein, Pflanzenmaterial"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]"
+    },
+    {
+      "id": "participant",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "described_as",
+      "value": "Heinrich August Schlubach (Collector)"
+    },
+    {
+      "id": "measurements",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 5,5 x 5 x 5,5 cm"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "described_as",
+      "value": "Schenkung von Heinrich August Schlubach 1883"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "maea-mo-moa-berlin-vi-4894-a",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields. The catalogue retains the uncertain classification marker in Wertgegenstand (?). The Places / Cultures field is not treated as a findspot or place of making. The image information panel credits Staatliche Museen zu Berlin, Ethnologisches Museum, Anika Niemeck and states CC-BY-NC-SA; the unchanged image is registered with its separate photograph source.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-4894-a-photograph"
+      }
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-10-04t22-01-53-265z.html",
+      "capturedAt": "2026-10-04T22:01:53.265Z",
+      "method": "singlefile"
+    }
+  ]
+}
