@@ -86,16 +86,17 @@ const t = messages(locale);
   margin-bottom: 2rem;
 }
 .collection-grid {
+  --collection-columns: 4;
+  --collection-column-gap: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 3.5rem 1rem;
+  grid-template-columns: repeat(var(--collection-columns), minmax(0, 1fr));
+  align-items: start;
+  gap: 3.5rem var(--collection-column-gap);
   margin-top: 2rem;
 }
-.collection-card:nth-child(3) {
-  grid-column: 4;
-}
-.collection-card:nth-child(5) {
-  grid-column: 3;
+.collection-grid[data-masonry] {
+  display: block;
+  position: relative;
 }
 .collection-caption {
   margin-top: 1.25rem;
@@ -128,15 +129,11 @@ const t = messages(locale);
   margin-right: 0.5rem;
   text-decoration: underline;
 }
-
-@media (min-width: 801px) {
-  .collection-grid:has(.collection-card[hidden]) {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-  .collection-grid:has(.collection-card[hidden]) .collection-card {
-    grid-column: auto;
-  }
+.collection-grid[data-masonry] .collection-card {
+  position: absolute;
+  width: calc((100% - (var(--collection-columns) - 1) * var(--collection-column-gap)) / var(--collection-columns));
 }
+
 @media (max-width: 1100px) {
   .info-card {
     padding: 1.5rem;
@@ -144,11 +141,8 @@ const t = messages(locale);
 }
 @media (max-width: 800px) {
   .collection-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2.5rem 1rem;
-  }
-  .collection-card:nth-child(n) {
-    grid-column: auto;
+    --collection-columns: 2;
+    row-gap: 2.5rem;
   }
 }
 @media (max-width: 520px) {

@@ -63,6 +63,11 @@ pages with `reproduces` and to depicted objects with `depicts`.
 The collection contains objects and sources. Its subnavigation uses the label
 “Documents and images” / “Documentos e imágenes” for sources. The site publishes
 object and source indexes and detail pages.
+The object index uses masonry placement in the shortest available column, with
+four columns on wider screens and two on narrow screens. Images retain their
+natural proportions without cropping or height limits. A small client script
+repacks the cards after search filtering and size changes; document and keyboard
+order remain unchanged. Without JavaScript, the same cards use a regular grid.
 Sources are listed at `/en/sources/` and `/es/fuentes/`; articles are listed
 at `/en/articles/` and `/es/articulos/`, labelled “Articles” / “Artículos”.
 Articles are authored MoSA publications rather than collection records. Their
