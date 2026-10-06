@@ -1,3 +1,4 @@
+import { initialiseCollectionMasonry } from "../components/collection-masonry";
 import { referenceCount } from "./messages";
 import { matchesSearch } from "./search";
 import { updateLanguageLinks } from "./switcher";
@@ -11,6 +12,7 @@ const cards = Array.from(document.querySelectorAll<HTMLElement>(".collection-car
 const locale =
   document.querySelector<HTMLElement>("[data-locale]")?.dataset.locale === "en" ? "en" : "es";
 if (controls && search && results && count && empty && cards.length) {
+  const layout = initialiseCollectionMasonry(results, cards);
   controls.hidden = false;
   const filter = () => {
     let visible = 0;
@@ -26,6 +28,7 @@ if (controls && search && results && count && empty && cards.length) {
     count.textContent = referenceCount(locale, { count: visible });
     empty.hidden = visible > 0;
     results.hidden = visible === 0;
+    layout();
     const url = new URL(location.href);
     for (const key of ["concept", "type", "view"]) url.searchParams.delete(key);
     if (search.value) url.searchParams.set("q", search.value);
