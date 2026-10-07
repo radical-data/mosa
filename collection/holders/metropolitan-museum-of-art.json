@@ -1,5 +1,6 @@
 {
   "name": "The Metropolitan Museum of Art",
+  "countryCode": "US",
   "visitUrl": "https://www.metmuseum.org/plan-your-visit",
   "location": {
     "name": "New York, United States",

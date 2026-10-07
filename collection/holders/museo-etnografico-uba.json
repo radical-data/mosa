@@ -1,5 +1,6 @@
 {
   "name": "Museo Etnográfico Juan B. Ambrosetti",
+  "countryCode": "AR",
   "visitUrl": "https://museoetnografico.filo.uba.ar/horarios",
   "aliases": ["Museo Etnografico de la Universidad de Buenos Aires"],
   "location": {

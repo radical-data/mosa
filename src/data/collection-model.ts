@@ -1,4 +1,5 @@
 import { parse as parseYaml } from "yaml";
+import holderSchema from "../../collection/schema/holder.schema.json";
 
 export const predicates = [
   "has_name",
@@ -35,6 +36,7 @@ export interface Holder {
   id: string;
   name: string;
   aliases?: string[];
+  countryCode?: string;
   visitUrl?: string;
   location?: GeocodedLocation;
 }
@@ -192,6 +194,7 @@ const captureKeys = ["archiveUrl", "capturedAt", "file", "method", "note", "orig
 const captureExtensions = "html|pdf|jpg|jpeg|png|webp|avif|tif|tiff";
 const locationPrecisions: LocationPrecision[] = ["site", "locality", "region", "country"];
 const locationStatuses: LocationStatus[] = ["reported", "historical", "uncertain", "unknown"];
+const countryCodes = new Set<string>(holderSchema.properties.countryCode.enum);
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
   !!value && typeof value === "object" && !Array.isArray(value);
@@ -305,7 +308,7 @@ export function parseHolder(value: unknown, file: string): Holder {
   if (!isObject(value)) throw Error(errors.join("\n"));
   add(
     errors,
-    sameKeys(value, ["name", "aliases", "location", "visitUrl"]),
+    sameKeys(value, ["name", "aliases", "countryCode", "location", "visitUrl"]),
     `${file}: contains an unsupported field`,
   );
   add(errors, text(value.name), `${file}: name is required`);
@@ -321,6 +324,12 @@ export function parseHolder(value: unknown, file: string): Holder {
     }
   }
   if ("location" in value) parseGeocodedLocation(value.location, `${file}: location`, errors);
+  if ("countryCode" in value)
+    add(
+      errors,
+      typeof value.countryCode === "string" && countryCodes.has(value.countryCode),
+      `${file}: countryCode must be an ISO 3166-1 alpha-2 code`,
+    );
   if ("visitUrl" in value)
     add(errors, validHttpUrl(value.visitUrl), `${file}: visitUrl must be an http(s) URL`);
   if (errors.length) throw Error(errors.join("\n"));

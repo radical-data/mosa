@@ -1,5 +1,6 @@
 {
   "name": "Pitt Rivers Museum",
+  "countryCode": "GB",
   "aliases": ["Pit Rivers Museum"],
   "visitUrl": "https://www.prm.ox.ac.uk/visit-us",
   "location": {

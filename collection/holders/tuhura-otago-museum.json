@@ -1,5 +1,6 @@
 {
   "name": "Tūhura Otago Museum",
+  "countryCode": "NZ",
   "aliases": ["Otago Museum"],
   "visitUrl": "https://tuhura.nz/visit/opening-hours/",
   "location": {

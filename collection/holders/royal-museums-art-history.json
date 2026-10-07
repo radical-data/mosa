@@ -1,5 +1,6 @@
 {
   "name": "Royal Museums of Art and History",
+  "countryCode": "BE",
   "visitUrl": "https://www.artandhistory.museum/index.php/en/practical-information",
   "aliases": ["Musées Rojaux d’Art et d’Histoire"],
   "location": {

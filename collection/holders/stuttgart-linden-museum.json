@@ -1,5 +1,6 @@
 {
   "name": "Linden-Museum Stuttgart",
+  "countryCode": "DE",
   "visitUrl": "https://lindenmuseum.de/besuch/",
   "location": {
     "name": "Stuttgart, Germany",

@@ -1,5 +1,6 @@
 {
   "name": "Museo Nacional de Historia Natural",
+  "countryCode": "CL",
   "visitUrl": "https://www.mnhn.gob.cl/servicios/visitar-el-museo-publico-general",
   "location": {
     "name": "Santiago, Chile",

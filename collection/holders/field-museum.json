@@ -1,5 +1,6 @@
 {
   "name": "Field Museum",
+  "countryCode": "US",
   "visitUrl": "https://www.fieldmuseum.org/visit",
   "location": {
     "name": "Chicago, United States",

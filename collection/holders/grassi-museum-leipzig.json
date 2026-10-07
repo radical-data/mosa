@@ -1,5 +1,6 @@
 {
   "name": "GRASSI Museum für Völkerkunde zu Leipzig",
+  "countryCode": "DE",
   "visitUrl": "https://grassi-leipzig.de/besuch",
   "location": {
     "name": "Leipzig, Germany",

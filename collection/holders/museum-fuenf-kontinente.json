@@ -1,5 +1,6 @@
 {
   "name": "Museum Fünf Kontinente",
+  "countryCode": "DE",
   "visitUrl": "https://www.museum-fuenf-kontinente.de/en/besuch/besuch-planen",
   "location": {
     "name": "Munich, Germany",

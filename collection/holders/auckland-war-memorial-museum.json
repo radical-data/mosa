@@ -1,5 +1,6 @@
 {
   "name": "Auckland War Memorial Museum",
+  "countryCode": "NZ",
   "aliases": ["Aukland Institute and Museum"],
   "visitUrl": "https://www.aucklandmuseum.com/visit/plan-your-visit/hours-and-admission",
   "location": {

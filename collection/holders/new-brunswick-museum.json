@@ -1,5 +1,6 @@
 {
   "name": "New Brunswick Museum",
+  "countryCode": "CA",
   "visitUrl": "https://www.nbm-mnb.ca/en/contact-us/",
   "aliases": ["New Bruswick Museum"],
   "location": {

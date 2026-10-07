@@ -1,5 +1,6 @@
 {
   "name": "Te Papa Tongarewa",
+  "countryCode": "NZ",
   "aliases": ["National Museum of New Zealand", "Museum of New Zealand Te Papa Tongarewa"],
   "visitUrl": "https://www.tepapa.govt.nz/visit",
   "location": {

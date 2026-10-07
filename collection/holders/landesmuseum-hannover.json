@@ -1,5 +1,6 @@
 {
   "name": "Landesmuseum Hannover",
+  "countryCode": "DE",
   "visitUrl": "https://landesmuseum-hannover.de/besuch/",
   "location": {
     "name": "Hannover, Germany",

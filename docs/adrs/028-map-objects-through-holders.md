@@ -34,6 +34,9 @@ institutions, private collections, congregations or other holding agents. A
 holder can embed an optional mapped `location` with a name, precision,
 longitude, latitude and reference. Coordinates use WGS84. The reference
 identifies the evidence used to establish the mapped location.
+An optional holder `countryCode` records the reviewed country of its site or
+base for catalogue grouping, independently of coordinates. It uses an assigned
+ISO 3166-1 alpha-2 code and is omitted when no single country is supported.
 
 The default map path is:
 

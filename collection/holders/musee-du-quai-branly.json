@@ -1,5 +1,6 @@
 {
   "name": "Musée du quai Branly",
+  "countryCode": "FR",
   "visitUrl": "https://quaibranly.fr/fr/missions-et-fonctionnement/faq-conditions-de-visite",
   "location": {
     "name": "Paris, France",
