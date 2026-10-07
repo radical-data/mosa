@@ -52,6 +52,20 @@ const t = messages(locale);
       link.addEventListener("click", close);
     });
     document.addEventListener("keydown", (event) => {
+      if (event.key === "Tab" && toggle.getAttribute("aria-expanded") === "true") {
+        const links = Array.from(panel.querySelectorAll<HTMLAnchorElement>("a[href]"));
+        const first = links[0];
+        const last = links.at(-1);
+        if (event.shiftKey && (document.activeElement === toggle || !panel.contains(document.activeElement))) {
+          event.preventDefault(); last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault(); toggle.focus();
+        } else if (!event.shiftKey && document.activeElement === toggle) {
+          event.preventDefault(); first?.focus();
+        } else if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault(); toggle.focus();
+        }
+      }
       if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") { close(); toggle.focus(); }
     });
     window.matchMedia("(min-width: 1101px)").addEventListener("change", close);
@@ -193,7 +207,7 @@ const t = messages(locale);
   text-underline-offset: 0.25em;
 }
 @media (max-width: 1100px) {
-html.menu-open {
+:global(html.menu-open) {
     overflow: hidden;
   }
 .site-header {
@@ -235,10 +249,12 @@ html.menu-open {
 .navigation-panel.is-open {
     position: fixed;
     inset: 0 auto auto 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     width: min(100%, 30rem);
     height: min(100svh, 34.875rem);
-    min-height: 34.875rem;
+    min-height: 0;
     padding: 58px 0 18px 27px;
     overflow: auto;
     background: #fff;
@@ -276,9 +292,9 @@ html.menu-open {
     display: block;
   }
 .navigation-panel.is-open .language-switcher {
-    position: absolute;
-    left: 27px;
-    bottom: 18px;
+    position: static;
+    margin-top: auto;
+    flex-shrink: 0;
     display: flex;
     gap: 0.85rem;
     padding: 0;

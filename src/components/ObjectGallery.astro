@@ -17,7 +17,8 @@ const copy = locale === "en"
 <div class="image-gallery">
   {images.map(({ image, source, asset }) => (
     <figure>
-      <a class="image-link" href={asset.src} aria-label={`${copy.larger}: ${image.alt}`}>
+      <a class="image-link" href={asset.src}>
+        <span class="sr-only">{copy.larger}: </span>
         <Image
           src={asset}
           alt={image.alt}
