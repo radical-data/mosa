@@ -33,7 +33,8 @@
       "id": "holder",
       "objectId": "mamari",
       "predicate": "held_by",
-      "value": "Padri dei Sacri Cuori (SSCC)"
+      "value": "Padri dei Sacri Cuori (SSCC)",
+      "holderId": "sacred-hearts-congregation-rome"
     },
     {
       "id": "location-account",

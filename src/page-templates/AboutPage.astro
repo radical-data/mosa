@@ -1,0 +1,46 @@
+---
+import { Picture } from "astro:assets";
+import { siteImages } from "../assets/site-images";
+import PageIntro from "../components/PageIntro.astro";
+import { getCopy } from "../content/content";
+import { githubURL } from "../data/site";
+import type { Locale } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const copy = getCopy("about", locale);
+---
+<Layout locale={locale} page="about" title={copy.title} description={copy.description}>
+  <PageIntro title={copy.passage03} image="rongorongo"><p><Fragment set:html={copy.passage06} /></p><p><Fragment set:html={copy.introAuthority} /></p></PageIntro>
+  <section class="container section prose-section"><h2 class="eyebrow"><Fragment set:html={copy.passage07} /></h2><p class="statement"><Fragment set:html={copy.passage08} /></p></section>
+  <Picture class="full-image landscape" src={siteImages["rapa-nui-absence"]} alt={copy.passage04} formats={["avif", "webp"]} fallbackFormat="webp" widths={[600, 900, 1200, 1800]} sizes="100vw" loading="lazy" />
+  <div class="dark-section"><section class="container section prose-section"><h2><Fragment set:html={copy.passage09} /></h2><div><p><Fragment set:html={copy.passage10} /></p><p><Fragment set:html={copy.passage11} /></p></div></section>
+  <section class="container section prose-section"><h2><Fragment set:html={copy.passage12} /></h2><div><p><Fragment set:html={copy.passage13} /></p><p><Fragment set:html={copy.reconnectionRelationships} /></p><p><Fragment set:html={copy.passage14} /></p></div></section></div>
+  <section class="container section prose-section"><h2>{copy.territoryHeading}</h2><div><p><Fragment set:html={copy.territoryRelationships} /></p><p><Fragment set:html={copy.territoryFabric} /></p><p><Fragment set:html={copy.territoryMana} /></p><p><Fragment set:html={copy.territoryDispersal} /></p><p><Fragment set:html={copy.territoryQuestions} /></p></div></section>
+  <Picture class="full-image workshop" src={siteImages.workshop} alt={copy.passage05} formats={["avif", "webp"]} fallbackFormat="webp" widths={[600, 900, 1200]} sizes="100vw" loading="lazy" />
+  <section id="team" class="container section prose-section"><h2><Fragment set:html={copy.passage15} /></h2><div><div class="two-columns"><p><Fragment set:html={copy.passage16} /></p><p><Fragment set:html={copy.passage17} /></p><p><Fragment set:html={copy.passage18} /></p><p><Fragment set:html={copy.passage19} /></p></div></div></section>
+  <section class="container section prose-section open-source"><h2>{copy.openSourceHeading}</h2><div><p>{copy.openSourceDescription}</p><a class="text-link" href={githubURL}>{copy.openSourceLink} <span aria-hidden="true">↗</span></a></div></section>
+</Layout>
+
+<style>
+
+.workshop {
+  max-height: 700px;
+  aspect-ratio: 1.85;
+}
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 520px) {
+  .workshop {
+    aspect-ratio: 1.2;
+  }
+  .two-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+</style>

@@ -1,0 +1,12 @@
+{
+  "name": "Übersee-Museum Bremen",
+  "visitUrl": "https://www.uebersee-museum.de/museumsbesuch/planen/eintritt-und-oeffnungszeiten/",
+  "aliases": ["Ubersee Museum"],
+  "location": {
+    "name": "Bremen, Germany",
+    "precision": "locality",
+    "longitude": 8.8017,
+    "latitude": 53.0793,
+    "reference": "https://www.openstreetmap.org/?mlat=53.0793&mlon=8.8017#map=10/53.0793/8.8017"
+  }
+}

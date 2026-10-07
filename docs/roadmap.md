@@ -9,6 +9,32 @@
 - Choose foregrounded claims with Rapa Nui collaborators rather than treating
   prominence as an automatic museum-data rule.
 - Review canonical navigation names against source-attributed names.
+- Write a critical article examining when creative “returns” redistribute
+  authority and restore relationships, and when digital surrogates, artistic
+  interventions and institutional programmes merely circulate representations
+  or defer physical restitution. Use the creative restitution sources as case
+  studies.
+
+## Exhibition: A Short History of Taking Things and Keeping Them
+
+Develop an exhibition that turns museums themselves into subjects of scrutiny:
+use their catalogues, declarations, refusals and policies to examine how they
+justify authority and make possession appear ordinary. Let institutional wording
+carry the provocative humour, with accurate attribution and context clearly
+separated from MoSA's commentary.
+
+Proposed placement: an **Exhibitions** navigation entry and a homepage **Now
+showing** feature, leading to one continuous page with shareable sections on
+acquisition, expertise, universality, care, delay and return. Placement and
+presentation remain to be decided.
+
+Reuse the documentary source records as evidence and the existing article model
+for authored interpretation linked to those sources. Add a dedicated exhibition
+layout with paired English and Spanish routes; documents can be exhibits without
+becoming displaced-object records. Avoid a general exhibition system until a
+concrete need emerges. Next step: draft the entrance and two complete exhibits
+to test the voice, sequence and visual treatment before implementing the whole
+exhibition.
 
 ## Shared research programme
 
@@ -33,6 +59,13 @@ publication rules. The shared IndiGen history remains a separate existing
 follow-up: its Bishop paper has one collection source and a shared identifier
 transcription, with its PDF kept private. Continue its bounded identity work
 without treating the register as the default campaign format.
+
+## Accepted work awaiting implementation
+
+- Implement [ADR 029: short opaque object identifiers](adrs/029-use-short-opaque-object-identifiers.md).
+  Add allocation, permanent reservations, integration checks and contributor
+  lookup before migrating existing object handles and references. Preserve
+  published URLs and update authoring guidance with the implementation.
 
 ## Implemented model and deferred work
 

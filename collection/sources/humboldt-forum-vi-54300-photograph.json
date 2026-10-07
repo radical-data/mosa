@@ -1,0 +1,20 @@
+{
+  "author": null,
+  "title": "Photograph of moai tangata, Berlin — VI 54300",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165783-moai-tangata",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "moai-tangata-berlin-vi-54300/smb.jpg",
+      "alt": "Geschnitzte Holzfigur einer stehenden Person, Frontalansicht.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/2/7/9/1/311972-1-ger-DE/a701fbb02f70-7a936a97e01fa1099574a1aea21f51d9e31af2b4e435aff2377bf0ddc630643a9a7eed33.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "moai-tangata-berlin-vi-54300" } }
+  ]
+}

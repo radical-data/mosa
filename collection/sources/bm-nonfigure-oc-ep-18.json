@@ -17,7 +17,8 @@
       "objectId": "british-museum-tool-implement-oc-ep-18",
       "predicate": "held_by",
       "value": "British Museum",
-      "locator": "Collection record"
+      "locator": "Collection record",
+      "holderId": "british-museum"
     },
     {
       "id": "object-type",

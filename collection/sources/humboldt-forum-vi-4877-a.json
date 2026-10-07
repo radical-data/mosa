@@ -1,0 +1,109 @@
+{
+  "author": "Humboldt Forum Collections Online",
+  "title": "Humboldt Forum Collections Online record for ko honga — VI 4877 a",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165247-ko-honga",
+  "language": "en-GB",
+  "claims": [
+    {
+      "id": "catalogue-title",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "has_name",
+      "value": "ko honga"
+    },
+    {
+      "id": "object-type",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "classified_as",
+      "value": "Brustschmuck",
+      "language": "de"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "catalogue_number",
+      "value": "VI 4877 a"
+    },
+    {
+      "id": "holder",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "date",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "made_during",
+      "value": "vor 1883",
+      "language": "de"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 10,5 x 7 x 7 cm",
+      "language": "de"
+    },
+    {
+      "id": "collector",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "described_as",
+      "value": "Heinrich August Schlubach (Collector)"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "ko-honga-berlin-vi-4877-a",
+      "predicate": "described_as",
+      "value": "Schenkung von Heinrich August Schublach 1883",
+      "language": "de"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-4877-a-photograph"
+      }
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields. The Places / Cultures entry is retained as the catalogue's categorisation and is not treated as evidence of manufacture or findspot. The collector and acquisition fields spell the name differently; both source wordings are preserved.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-04t22-00-28-094z.html",
+      "capturedAt": "2026-10-04T22:00:28.094Z",
+      "method": "singlefile"
+    }
+  ]
+}

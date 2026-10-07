@@ -1,0 +1,11 @@
+{
+  "name": "Ulster Museum",
+  "visitUrl": "https://www.ulstermuseum.org/visit",
+  "location": {
+    "name": "Belfast, Northern Ireland",
+    "precision": "locality",
+    "longitude": -5.9301,
+    "latitude": 54.5973,
+    "reference": "https://www.openstreetmap.org/?mlat=54.5973&mlon=-5.9301#map=10/54.5973/-5.9301"
+  }
+}

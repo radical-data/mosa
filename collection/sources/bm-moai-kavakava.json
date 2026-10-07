@@ -15,7 +15,8 @@
       "id": "holder",
       "objectId": "moai-kavakava-british-museum",
       "predicate": "held_by",
-      "value": "British Museum"
+      "value": "British Museum",
+      "holderId": "british-museum"
     },
     {
       "id": "name",

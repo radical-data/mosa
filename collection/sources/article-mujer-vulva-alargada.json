@@ -1,0 +1,18 @@
+{
+  "author": "Paula Rossetti",
+  "articleId": "mujer-vulva-alargada",
+  "title": "Escultura en madera, mujer con vulva alargada",
+  "kind": "publication",
+  "reference": "MoSA article: Escultura en madera, mujer con vulva alargada",
+  "language": "es-CL",
+  "claims": [
+    {
+      "id": "interpretation-comment",
+      "objectId": "moai-mujer-pigorini",
+      "predicate": "described_as",
+      "value": "Es una escultura controvertida, en el museo la tienen como «mujer dando a luz (moai kava kava)», sin embargo, también se piensa que es una mujer con la vulva alargada.",
+      "locator": "Comentario"
+    }
+  ],
+  "images": []
+}

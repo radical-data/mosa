@@ -17,7 +17,8 @@
       "objectId": "british-museum-dance-costume-2020-2005-1",
       "predicate": "held_by",
       "value": "British Museum",
-      "locator": "Collection record"
+      "locator": "Collection record",
+      "holderId": "british-museum"
     },
     {
       "id": "object-type",

@@ -6,21 +6,40 @@ import {
   type CollectionImage,
   type CollectionObject,
   parseArticleFrontmatter,
+  parseHolder,
+  parseLocation,
   parseObject,
   parseSource,
   type Source,
+  validateArticlePublicationSource,
   validateArticleSubjects,
   validateCollection,
+  validateUniqueSourceArticleLinks,
 } from "./collection-model";
 import { resolveCollectionPresentation } from "./collection-presentation";
-import { getObjectAccounts, getSourceRelationships, type SourcedClaim } from "./collection-record";
+import {
+  getLocationProjection,
+  getObjectAccounts,
+  getSourceRelationships,
+  type SourcedClaim,
+  sourceImagesForObject,
+} from "./collection-record";
 import { buildObjectSearchExact } from "./collection-search";
+import { getVisitHolders } from "./visit-holders";
 
 const objectModules = import.meta.glob<unknown>("../../collection/objects/*.json", {
   eager: true,
   import: "default",
 });
 const sourceModules = import.meta.glob<unknown>("../../collection/sources/*.json", {
+  eager: true,
+  import: "default",
+});
+const holderModules = import.meta.glob<unknown>("../../collection/holders/*.json", {
+  eager: true,
+  import: "default",
+});
+const locationModules = import.meta.glob<unknown>("../../collection/locations/*.json", {
   eager: true,
   import: "default",
 });
@@ -41,12 +60,23 @@ const objects = Object.entries(objectModules).map(([file, value]) =>
 const sources = Object.entries(sourceModules).map(([file, value]) =>
   parseSource(value, basename(file)),
 );
+const holders = Object.entries(holderModules).map(([file, value]) =>
+  parseHolder(value, basename(file)),
+);
+const locations = Object.entries(locationModules).map(([file, value]) =>
+  parseLocation(value, basename(file)),
+);
 const checked = validateCollection(
-  { objects, sources },
+  { objects, sources, holders, locations },
   {
     imageFiles: new Set(Object.keys(imageModules).map(imageName)),
   },
 );
+const collectionMap = getLocationProjection(checked);
+
+export const collectionMapLocations = collectionMap.locations;
+export const collectionMapUnresolved = collectionMap.unresolved;
+export const visitHolders = getVisitHolders(checked);
 
 export interface ArticleEntry extends ArticleMetadata {
   Content: MarkdownInstance<Record<string, unknown>>["Content"];
@@ -86,11 +116,16 @@ const articles: ArticleEntry[] = Object.entries(articleModules).map(([file, modu
     { objects: checked.objects, sources: checked.sources },
     basename(file),
   );
+  validateArticlePublicationSource(metadata, checked.sources, basename(file));
   return { ...metadata, Content: module.Content };
 });
+validateUniqueSourceArticleLinks(checked.sources, articles);
 
 export const collectionObjects = checked.objects;
 export const collectionSources = checked.sources;
+export const collectionHolders = checked.holders;
+export const collectionLocations = checked.locations;
+export const collectionLocationProjection = getLocationProjection(checked);
 export const articlePublications = articles;
 
 function imageAsset(image: CollectionImage): ImageMetadata {
@@ -102,7 +137,11 @@ function imageAsset(image: CollectionImage): ImageMetadata {
 
 export const sourceRecords: SourceEntry[] = checked.sources.map((source) => ({
   ...source,
-  imagesWithAssets: source.images.map((image) => ({ image, source, asset: imageAsset(image) })),
+  imagesWithAssets: source.images.map((image) => ({
+    image,
+    source,
+    asset: imageAsset(image),
+  })),
   searchText: [source.title, source.author ?? "", source.reference, ...(source.topics ?? [])].join(
     " ",
   ),
@@ -111,16 +150,13 @@ export const sourceRecords: SourceEntry[] = checked.sources.map((source) => ({
 const depictingGalleries = new Map<string, SourcedImage[]>(
   checked.objects.map(({ id }) => [
     id,
-    sourceRecords
-      .filter((source) =>
-        source.relationships?.some(
-          (relationship) =>
-            relationship.type === "depicts" &&
-            relationship.target.type === "object" &&
-            relationship.target.id === id,
-        ),
-      )
-      .flatMap((source) => source.imagesWithAssets),
+    sourceRecords.flatMap((source) =>
+      sourceImagesForObject(source, id).map((image) => ({
+        image,
+        source,
+        asset: imageAsset(image),
+      })),
+    ),
   ]),
 );
 const collectionPresentation = resolveCollectionPresentation(
@@ -147,6 +183,7 @@ export function getSourceRecord(sourceId: string) {
         article.subjects?.some((subject) => subject.type === "source" && subject.id === sourceId),
       )
       .sort((a, b) => a.id.localeCompare(b.id)),
+    publicationArticle: articles.find((article) => article.id === source.articleId),
   };
 }
 

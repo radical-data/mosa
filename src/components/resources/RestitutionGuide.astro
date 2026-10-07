@@ -1,0 +1,406 @@
+---
+import { Image } from "astro:assets";
+import { siteImages } from "../../assets/site-images";
+import { restitutionGuide } from "../../data/restitution-guide";
+import type { Locale } from "../../i18n/routes";
+
+interface Props { locale: Locale; }
+
+const { locale } = Astro.props;
+const copy = restitutionGuide[locale];
+const isEnglish = locale === "en";
+const movementSections = copy.sections.filter((section) => copy.movements.some((movement) => movement.id === section.id));
+const closingSections = copy.sections.filter((section) => !copy.movements.some((movement) => movement.id === section.id));
+---
+
+<article class="restitution-guide">
+  <header class="guide-hero container">
+    <p class="guide-kicker">{isEnglish ? "A possible route" : "Una ruta posible"}</p>
+    <h1>{copy.title}</h1>
+    <div class="guide-hero-copy">
+      <h2>{copy.introTitle}</h2>
+      {copy.intro.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
+    <Image src={siteImages["wooden-figure"]} alt="" aria-hidden="true" loading="eager" />
+  </header>
+
+  <section class="guide-opening container" aria-labelledby="guide-opening-title">
+    <h2 id="guide-opening-title">{copy.startingPoints.title}</h2>
+    <ol>
+      {copy.startingPoints.items.map((item, index) => <li><span aria-hidden="true">0{index + 1}</span><p>{item}</p></li>)}
+    </ol>
+    <p class="guide-opening-close">{copy.startingPoints.closing}</p>
+  </section>
+
+  <section class="guide-contrast container" aria-labelledby="guide-contrast-title">
+    <div class="guide-contrast-heading">
+      <p class="guide-kicker">{isEnglish ? "The route changes" : "La ruta cambia"}</p>
+      <h2 id="guide-contrast-title">{copy.heritageContrast.title}</h2>
+      <p>{copy.heritageContrast.intro}</p>
+    </div>
+    <article class="guide-contrast-card is-coral">
+      <h3>{copy.heritageContrast.heritage.title}</h3>
+      {copy.heritageContrast.heritage.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </article>
+    <article class="guide-contrast-card is-dark">
+      <h3>{copy.heritageContrast.ancestors.title}</h3>
+      {copy.heritageContrast.ancestors.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      <ul>{copy.heritageContrast.ancestors.questions.map((question) => <li>{question}</li>)}</ul>
+      <p>{copy.heritageContrast.ancestors.closing}</p>
+    </article>
+  </section>
+
+  <section class="guide-movements" aria-labelledby="guide-movements-title" data-movement-guide>
+    <div class="container">
+      <div class="guide-movements-heading">
+        <p class="guide-kicker">{isEnglish ? "Use the route without losing the relationship" : "Usar la ruta sin perder la relación"}</p>
+        <h2 id="guide-movements-title">{isEnglish ? "Four movements" : "Cuatro movimientos"}</h2>
+      </div>
+      <div class="guide-movement-shell">
+        <div class="guide-movement-rail" role="tablist" aria-label={isEnglish ? "Guide movements" : "Movimientos de la guía"}>
+          {copy.movements.map((movement, index) => <button type="button" role="tab" id={`tab-${movement.id}`} aria-controls={`panel-${movement.id}`} aria-selected={index === 0 ? "true" : "false"} tabindex={index === 0 ? "0" : "-1"} data-movement-tab={movement.id}>
+            <span>0{index + 1}</span>{movement.title}
+          </button>)}
+        </div>
+        <div class="guide-movement-panels">
+          {movementSections.map((section, index) => {
+            const movement = copy.movements.find((item) => item.id === section.id);
+            return <section role="tabpanel" id={`panel-${section.id}`} aria-labelledby={`tab-${section.id}`} hidden={index !== 0} data-movement-panel={section.id}>
+              <p class="guide-panel-number">0{index + 1}</p>
+              <h3>{section.title}</h3>
+              {movement && <p class="guide-panel-question">{movement.question}</p>}
+              {section.blocks.slice(0, 4).map((block) => {
+                if (block.type === "paragraph") return <p>{block.text}</p>;
+                if (block.type === "heading") return <h4>{block.text}</h4>;
+                if (block.type === "list") return <ul>{block.items.slice(0, 5).map((item) => <li>{item}</li>)}</ul>;
+                if (block.type === "quote") return <blockquote>{block.text}</blockquote>;
+                if (block.type === "sequence") return <p class="guide-sequence">{block.items.join(" → ")}</p>;
+                return <ul class="guide-checklist">{block.items.slice(0, 5).map((item) => <li>{item}</li>)}</ul>;
+              })}
+              <a href={`#${section.id}`}>{isEnglish ? "Read the full movement" : "Leer el movimiento completo"} <span aria-hidden="true">↓</span></a>
+            </section>;
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="guide-longread container">
+    {movementSections.map((section, index) => <section id={section.id} class="guide-chapter" aria-labelledby={`${section.id}-title`}>
+      <header><p>0{index + 1}</p><h2 id={`${section.id}-title`}>{section.title}</h2></header>
+      <div class="guide-chapter-body">
+        {section.blocks.map((block) => {
+          if (block.type === "paragraph") return <p>{block.text}</p>;
+          if (block.type === "heading") return block.level === 2 ? <h3>{block.text}</h3> : <h4>{block.text}</h4>;
+          if (block.type === "list") return <ul>{block.items.map((item) => <li>{item}</li>)}</ul>;
+          if (block.type === "quote") return <blockquote>{block.text}</blockquote>;
+          if (block.type === "sequence") return <p class="guide-sequence">{block.items.join(" → ")}</p>;
+          return <ul class="guide-checklist">{block.items.map((item) => <li>{item}</li>)}</ul>;
+        })}
+      </div>
+    </section>)}
+  </div>
+
+  <div class="guide-closing">
+    {closingSections.map((section, index) => <section id={section.id} class:list={["guide-closing-section", { "is-dark": index % 2 === 0 }]} aria-labelledby={`${section.id}-title`}>
+      <div class="container guide-closing-grid">
+        <h2 id={`${section.id}-title`}>{section.title}</h2>
+        <div>
+          {section.blocks.map((block) => {
+            if (block.type === "paragraph") return <p>{block.text}</p>;
+            if (block.type === "heading") return <h3>{block.text}</h3>;
+            if (block.type === "list") return <ul>{block.items.map((item) => <li>{item}</li>)}</ul>;
+            if (block.type === "quote") return <blockquote>{block.text}</blockquote>;
+            if (block.type === "sequence") return <p class="guide-sequence">{block.items.join(" → ")}</p>;
+            return <ul class="guide-checklist">{block.items.map((item) => <li>{item}</li>)}</ul>;
+          })}
+        </div>
+      </div>
+    </section>)}
+  </div>
+</article>
+
+<script>
+  for (const guide of document.querySelectorAll<HTMLElement>("[data-movement-guide]")) {
+    const tabs = [...guide.querySelectorAll<HTMLButtonElement>("[data-movement-tab]")];
+    const panels = [...guide.querySelectorAll<HTMLElement>("[data-movement-panel]")];
+    const activate = (tab: HTMLButtonElement) => {
+      const id = tab.dataset.movementTab;
+      for (const candidate of tabs) {
+        const selected = candidate === tab;
+        candidate.setAttribute("aria-selected", String(selected));
+        candidate.tabIndex = selected ? 0 : -1;
+      }
+      for (const panel of panels) panel.hidden = panel.dataset.movementPanel !== id;
+    };
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => activate(tab));
+      tab.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        event.preventDefault();
+        const offset = event.key === "ArrowRight" ? 1 : -1;
+        const next = tabs[(index + offset + tabs.length) % tabs.length];
+        activate(next);
+        next.focus();
+      });
+    });
+  }
+</script>
+
+<style>
+  .restitution-guide {
+    --guide-rule: #c7c7c2;
+    overflow: clip;
+  }
+  .guide-kicker {
+    margin: 0;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+  .guide-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+    min-height: 48rem;
+    padding-block: clamp(4rem, 9vw, 9rem);
+  }
+  .guide-hero > .guide-kicker { grid-column: 1 / 4; }
+  .guide-hero h1 {
+    grid-column: 1 / 12;
+    margin: 0;
+    font-size: clamp(4rem, 7vw, 7rem);
+    font-weight: 500;
+    letter-spacing: -0.075em;
+    line-height: 0.88;
+    text-wrap: balance;
+  }
+  .guide-hero-copy {
+    grid-column: 6 / 12;
+    margin-top: 2rem;
+    font-size: clamp(1.1rem, 1.55vw, 1.45rem);
+  }
+  .guide-hero-copy h2 {
+    margin: 0 0 2rem;
+    font-size: clamp(2.1rem, 4vw, 4.2rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 0.95;
+  }
+  .guide-hero > img {
+    position: absolute;
+    bottom: -5rem;
+    left: 8%;
+    width: clamp(5rem, 8vw, 8rem);
+    height: auto;
+    filter: grayscale(1);
+    transform: rotate(-8deg);
+  }
+  .guide-opening { padding-block: clamp(6rem, 11vw, 11rem); }
+  .guide-opening > h2,
+  .guide-contrast-heading h2,
+  .guide-movements-heading h2 {
+    margin: 0;
+    font-size: clamp(3.4rem, 7vw, 7.4rem);
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    line-height: 0.88;
+  }
+  .guide-opening ol {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 2rem;
+    margin: 5rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .guide-opening li {
+    border-top: 1px solid var(--guide-rule);
+    padding-top: 1rem;
+    font-size: clamp(1.2rem, 1.8vw, 1.7rem);
+  }
+  .guide-opening li:nth-child(1) { grid-column: 1 / 5; }
+  .guide-opening li:nth-child(2) { grid-column: 5 / 9; margin-top: 8rem; }
+  .guide-opening li:nth-child(3) { grid-column: 9 / 13; margin-top: 16rem; }
+  .guide-opening li span {
+    display: block;
+    margin-bottom: 3rem;
+    color: var(--coral);
+    font-size: 2.4rem;
+  }
+  .guide-opening-close {
+    max-width: 32ch;
+    margin: 5rem 0 0 auto;
+    font-size: clamp(1.5rem, 2.6vw, 2.6rem);
+  }
+  .guide-contrast {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding-block: clamp(5rem, 9vw, 9rem);
+  }
+  .guide-contrast-heading { grid-column: 1 / 9; margin-bottom: 3rem; }
+  .guide-contrast-heading p:last-child {
+    max-width: 48ch;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+  .guide-contrast-card { grid-column: span 6; padding: clamp(2rem, 4vw, 4rem); }
+  .guide-contrast-card h3 {
+    margin: 0 0 5rem;
+    font-size: clamp(2.5rem, 4.5vw, 4.8rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+  .guide-contrast-card p,
+  .guide-contrast-card li { font-size: 1.1rem; }
+  .guide-contrast-card.is-coral { background: var(--coral); }
+  .guide-contrast-card.is-dark { background: #000; color: #fff; }
+  .guide-movements {
+    padding-block: clamp(5rem, 9vw, 9rem);
+    background: #000;
+    color: #fff;
+  }
+  .guide-movements-heading {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 4rem;
+  }
+  .guide-movement-shell {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    min-height: 44rem;
+    border: 1px solid #4e4e4e;
+  }
+  .guide-movement-rail {
+    display: grid;
+    grid-column: 1 / 5;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    background: var(--coral);
+  }
+  .guide-movement-rail button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    border-right: 1px solid #000;
+    padding: 1.25rem 0.8rem;
+    background: var(--coral);
+    color: #000;
+    font: inherit;
+    font-size: 1.05rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+  .guide-movement-rail button[aria-selected="true"] { background: #fff; font-weight: 600; }
+  .guide-movement-panels { grid-column: 5 / 13; background: #fff; color: #000; }
+  .guide-movement-panels > section { min-height: 100%; padding: clamp(2.5rem, 6vw, 6rem); }
+  .guide-movement-panels > section[hidden] { display: none; }
+  .guide-panel-number { color: var(--coral); font-size: 1.6rem; }
+  .guide-movement-panels h3 {
+    margin: 0 0 1rem;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    line-height: 0.9;
+  }
+  .guide-panel-question { max-width: 38ch; font-size: 1.5rem; }
+  .guide-movement-panels h4 { margin: 2.5rem 0 0.5rem; font-size: 1.4rem; }
+  .guide-movement-panels a { display: inline-block; margin-top: 2rem; color: inherit; }
+  .guide-longread { padding-block: clamp(5rem, 9vw, 9rem); }
+  .guide-chapter {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+    border-top: 1px solid var(--guide-rule);
+    padding-block: clamp(4rem, 8vw, 8rem);
+    scroll-margin-top: 1rem;
+  }
+  .guide-chapter > header { grid-column: 1 / 6; }
+  .guide-chapter > header > p { color: var(--coral); font-size: 1.6rem; }
+  .guide-chapter h2 {
+    margin: 0;
+    font-size: clamp(3.4rem, 7vw, 7rem);
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 0.88;
+  }
+  .guide-chapter-body { grid-column: 7 / 13; font-size: 1.08rem; }
+  .guide-chapter-body h3 { margin: 3.5rem 0 1rem; font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1; }
+  .guide-chapter-body h4 { margin: 2.5rem 0 0.7rem; font-size: 1.35rem; }
+  .guide-chapter-body li { margin-block: 0.55rem; }
+  .guide-chapter-body blockquote,
+  .guide-movement-panels blockquote {
+    margin: 2.5rem 0;
+    border-left: 0.4rem solid var(--coral);
+    padding: 1.5rem;
+    background: #f2f2ef;
+  }
+  .guide-sequence { font-size: clamp(1.3rem, 2.3vw, 2.1rem); font-weight: 600; }
+  .guide-checklist { padding: 0; list-style: none; }
+  .guide-checklist li::before { margin-right: 0.7rem; content: "□"; }
+  .guide-closing-section { padding-block: clamp(5rem, 9vw, 9rem); }
+  .guide-closing-section.is-dark { background: #000; color: #fff; }
+  .guide-closing-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .guide-closing-grid > h2 {
+    grid-column: 1 / 6;
+    margin: 0;
+    font-size: clamp(3.2rem, 6vw, 6rem);
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 0.9;
+  }
+  .guide-closing-grid > div { grid-column: 7 / 13; }
+  .guide-closing-grid h3 { margin-top: 2.5rem; font-size: 1.5rem; }
+
+  @media (max-width: 800px) {
+    .guide-hero { min-height: auto; }
+    .guide-hero > .guide-kicker,
+    .guide-hero h1,
+    .guide-hero-copy,
+    .guide-contrast-heading,
+    .guide-chapter > header,
+    .guide-chapter-body,
+    .guide-closing-grid > h2,
+    .guide-closing-grid > div { grid-column: 1 / -1; }
+    .guide-hero h1 { font-size: clamp(4rem, 19vw, 7rem); }
+    .guide-hero > img { display: none; }
+    .guide-opening ol { display: block; }
+    .guide-opening li,
+    .guide-opening li:nth-child(2),
+    .guide-opening li:nth-child(3) { margin: 2rem 0; }
+    .guide-opening li span { margin-bottom: 1rem; }
+    .guide-contrast-card { grid-column: 1 / -1; }
+    .guide-movements-heading { display: block; }
+    .guide-movements-heading .guide-kicker { margin-bottom: 1rem; }
+    .guide-movement-shell { display: block; min-height: 0; }
+    .guide-movement-rail { display: grid; grid-template-columns: repeat(2, 1fr); }
+    .guide-movement-rail button {
+      min-height: 4rem;
+      border-bottom: 1px solid #000;
+      writing-mode: horizontal-tb;
+      transform: none;
+    }
+    .guide-movement-panels > section { min-height: 38rem; padding: 2rem 1.25rem; }
+    .guide-chapter { row-gap: 2.5rem; }
+  }
+  @media print {
+    .guide-movement-rail { display: none; }
+    .guide-movement-panels { grid-column: 1 / -1; }
+    .guide-movement-panels > section[hidden] { display: block; }
+    .guide-movements { background: #fff; color: #000; }
+    .guide-movement-panels > section { break-before: page; }
+    .guide-chapter,
+    .guide-closing-section { break-inside: avoid; }
+  }
+</style>

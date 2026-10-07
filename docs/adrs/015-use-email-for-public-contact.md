@@ -2,7 +2,8 @@
 
 ## Status
 
-Accepted on 2026-09-13. The website implements the approved address,
+Accepted on 2026-09-13 and updated on 2026-10-02 to distinguish mailing-list
+subscriptions from private enquiries. The website implements the approved address,
 `mosa@radicaldata.org`, as selectable text and a native email link. Mailbox operations,
 privacy details and delivery verification remain separate work.
 
@@ -17,8 +18,8 @@ intake, automated routing or another service.
 ## Decision
 
 Use email-only contact as a complete solution that can remain indefinitely. Keep
-the public website static, without a contact endpoint, submission store, worker,
-challenge provider or CRM. Defer a form until observed needs justify it.
+the public website static, without a contact endpoint, submission store or worker.
+Defer a contact form until observed needs justify it.
 
 The address must be readable/copyable and work as a `mailto:` link without
 JavaScript. Invite enquiries about restitution, reconnection, collection information,
@@ -37,6 +38,16 @@ working days and the old design's retention periods were proposals, not policy.
 Ordinary email must not be advertised as anonymous or end-to-end confidential.
 Staff answer directly; automated AI routing, summaries, translation and replies
 are outside this decision.
+
+The mailing list is a separate, public subscription service rather than a route
+for correspondence. The website may submit an email address directly from a
+static HTML form to MoSA's existing Mailchimp audience. It must not put a
+Mailchimp API key in the website, proxy submissions, retain subscriber data in
+the site or merge enquiries into the audience. Mailchimp owns confirmation,
+unsubscription and subscriber management. The website must identify that
+processing and preserve direct email as the contact route. External channels
+link to the website's newsletter section rather than a separately maintained
+hosted-form presentation.
 
 ## Alternatives considered
 

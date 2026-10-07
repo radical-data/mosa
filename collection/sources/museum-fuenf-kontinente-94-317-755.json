@@ -21,7 +21,8 @@
       "id": "holder",
       "objectId": "tangata-manu-munich-94-317-755",
       "predicate": "held_by",
-      "value": "Museum Fünf Kontinente"
+      "value": "Museum Fünf Kontinente",
+      "holderId": "museum-fuenf-kontinente"
     },
     {
       "id": "material",

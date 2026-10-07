@@ -1,6 +1,7 @@
 import { formatEventInstant, formatHistoricalDate } from "../i18n/format";
 import type { Locale } from "../i18n/routes";
 import type { EventData } from "./event-schema";
+import type { SiteImageId } from "./site-image-ids";
 
 // File loading stays separate from the date and display rules.
 export interface EventEntry {
@@ -38,7 +39,7 @@ export interface DisplayEvent {
   dateTime: string;
   dateLabel: string;
   venue?: string;
-  image?: string;
+  image?: SiteImageId;
   title: string;
   body: string;
   note?: string;

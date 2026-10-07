@@ -1,0 +1,110 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for VI 54301",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/158993-ua",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "catalogue_number",
+      "value": "VI 54301"
+    },
+    {
+      "id": "name",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "has_name",
+      "value": "ua"
+    },
+    {
+      "id": "classification",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "classified_as",
+      "value": "Stab",
+      "language": "de"
+    },
+    {
+      "id": "material-wood",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt",
+      "language": "de"
+    },
+    {
+      "id": "material-shell",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "made_of",
+      "value": "Perlmutt",
+      "language": "de"
+    },
+    {
+      "id": "material-obsidian",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "made_of",
+      "value": "Obsidian",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 8 x 120 x 8,5 cm",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "described_as",
+      "value": "Module 16 Oceania: Rituals and Beliefs"
+    },
+    {
+      "id": "holder",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "ua-berlin-vi-54301",
+      "predicate": "described_as",
+      "value": "Zugang ungeklärt",
+      "language": "de"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields inspected on 4 October 2026. German field values retain their original wording. Places/Cultures is retained as a combined source description, not treated as a making place. The image is represented by a separate photograph source; its image-specific CC BY-NC-SA 4.0 credit was inspected, and its unchanged local image is registered.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-54301-photograph"
+      }
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-10-04t22-03-10-864z.html",
+      "capturedAt": "2026-10-04T22:03:10.864Z",
+      "method": "singlefile"
+    }
+  ]
+}

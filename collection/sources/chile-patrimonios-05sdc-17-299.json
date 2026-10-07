@@ -27,7 +27,8 @@
       "id": "holder",
       "objectId": "moai-kavakava-rapa-nui-17-299",
       "predicate": "held_by",
-      "value": "Museo Antropológico Padre Sebastián Englert"
+      "value": "Museo Antropológico Padre Sebastián Englert",
+      "holderId": "museo-antropologico-padre-sebastian-englert"
     },
     {
       "id": "technique",

@@ -1,5 +1,6 @@
 import { z } from "astro/zod";
 import { hasUnsupportedMarkup } from "../i18n/markup";
+import { siteImageIds } from "./site-image-ids";
 
 // One event is one file under content/events/. Its facts and both languages stay
 // together, so announcing or withdrawing an event is a single file operation.
@@ -17,10 +18,7 @@ const eventCopy = z
   })
   .strict();
 const shared = { venue: z.string().trim().min(1).optional(), es: eventCopy, en: eventCopy };
-const image = z
-  .string()
-  .regex(/^\/images\/[\w-]+\.(?:webp|jpg|png)$/)
-  .optional();
+const image = z.enum(siteImageIds).optional();
 // A zone determines the local calendar day even when the hour is unknown.
 const timeZone = z
   .string()

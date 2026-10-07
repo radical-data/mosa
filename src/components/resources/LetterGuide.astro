@@ -1,0 +1,313 @@
+---
+import type { Locale } from "../../i18n/routes";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const en = locale === "en";
+const copy = en
+  ? {
+      intro:
+        "Adapt this structure to your relationship and process. Keep only what is accurate and appropriate to share. Bracketed text is a prompt to replace or remove.",
+      label: "Adaptable letter template",
+      community: "Community or cultural organisation",
+      address: "Postal address",
+      place: "City, country and date",
+      institution: "Institution or custodian and address",
+      subject: "request for restitution or return of…",
+      salutation: "Dear [name or institutional team],",
+      mandate: "Representation and mandate",
+      withMandate: "Where there is a collective mandate",
+      mandateText:
+        "We write as [community, family or organisation], represented by [people and roles], under a mandate agreed through [process or decision]. This request concerns [person or entity], connected with [territory or community].",
+      forming: "Where a collective mandate is still being formed",
+      formingText:
+        "We write as [person or group] to begin a conversation about [person or entity]. We are still identifying the relevant authorities and relationships. Please share the information needed to support that process and avoid treating this initial contact as a final collective mandate.",
+      relationship: "Relationship and meaning",
+      relationshipText:
+        "Describe the relationship, meaning, names and knowledge that the community has decided may be shared. Do not include restricted or sacred knowledge without authorisation.",
+      history: "History and separation",
+      historyText:
+        "Describe what is known about separation, including sources, dates and uncertainties. If the history is not yet clear, say so.",
+      request: "What we are asking for",
+      requestText:
+        "We request [specific action: information, access, suspension of an activity, transfer of title or restitution]. We would like [desired outcome or conditions] to be considered by [responsible decision-making body].",
+      interim: "While the process continues",
+      interimText:
+        "For example: pause display, sampling, publication or other use while this request is considered, where appropriate.",
+      records: "Information and records",
+      recordsText:
+        "Please provide the complete associated record, including acquisition documents, earlier inventories, correspondence, photographs, research, conservation records, samples and derived data where relevant.",
+      next: "Next steps and response",
+      nextText:
+        "Please confirm receipt, name the people and body responsible for the decision, explain the applicable process and provide a timetable for the next response by [date].",
+      attachments: "Possible supporting material",
+      attachItems: [
+        "A community or organisational statement describing who is represented and the scope of the mandate.",
+        "A decision or record from the relevant authority, where available.",
+        "A note describing how additional families, authorities or knowledge holders will be consulted.",
+      ],
+      closing:
+        "We welcome respectful dialogue and ask that it lead to clear responsibilities, decisions and steps.",
+      signoff: "Sincerely,",
+      signature: "Names, roles and signatures as appropriate",
+      print: "Print or save this template",
+    }
+  : {
+      intro:
+        "Adapta esta estructura a tu relación y a tu proceso. Conserva solo lo que sea correcto y pertinente compartir. El texto entre corchetes es una indicación que puedes reemplazar o eliminar.",
+      label: "Modelo de carta adaptable",
+      community: "Nombre de la comunidad u organización cultural",
+      address: "Dirección postal",
+      place: "Ciudad, país y fecha",
+      institution: "Institución o custodio y dirección",
+      subject: "solicitud de restitución o retorno de…",
+      salutation: "Estimadas y estimados [nombre o equipo de la institución]:",
+      mandate: "Representación y mandato",
+      withMandate: "Cuando existe un mandato colectivo",
+      mandateText:
+        "Nos dirigimos a ustedes como [comunidad, familia u organización], representada por [personas y cargos], de acuerdo con un mandato acordado mediante [proceso o resolución]. Esta solicitud se refiere a [persona o entidad], vinculada con [territorio o comunidad].",
+      forming: "Cuando el mandato colectivo aún se está construyendo",
+      formingText:
+        "Nos dirigimos a ustedes como [persona o grupo] para iniciar una conversación sobre [persona o entidad]. Aún estamos identificando las autoridades y relaciones pertinentes. Les pedimos compartir la información necesaria para acompañar ese proceso y no interpretar este primer contacto como un mandato colectivo definitivo.",
+      relationship: "Relación y significado",
+      relationshipText:
+        "Describe la relación, el significado, los nombres y los conocimientos que la comunidad haya decidido compartir. No incluyas conocimientos restringidos o sagrados sin autorización.",
+      history: "Historia y separación",
+      historyText:
+        "Describe lo que se conoce sobre la separación, incluyendo fuentes, fechas e incertidumbres. Si la historia aún no está clara, indícalo.",
+      request: "Qué solicitamos",
+      requestText:
+        "Solicitamos [acción concreta: información, acceso, suspensión de una actividad, transferencia de titularidad o restitución]. Pedimos que [resultado o condiciones deseadas] sean consideradas por [órgano responsable de decidir].",
+      interim: "Mientras avanza el proceso",
+      interimText:
+        "Por ejemplo: pausar la exhibición, el muestreo, la publicación u otro uso mientras se evalúa esta solicitud, si corresponde.",
+      records: "Información y antecedentes",
+      recordsText:
+        "Solicitamos los antecedentes asociados disponibles, incluidos documentos de adquisición, inventarios anteriores, correspondencia, fotografías, investigaciones, registros de conservación, muestras y datos derivados, cuando corresponda.",
+      next: "Próximos pasos y respuesta",
+      nextText:
+        "Agradecemos confirmar la recepción, indicar quiénes y qué órgano tomarán la decisión, explicar el procedimiento aplicable y proponer un plazo para la próxima respuesta antes de [fecha].",
+      attachments: "Antecedentes que podrían acompañar la solicitud",
+      attachItems: [
+        "Una declaración comunitaria u organizacional que indique a quién se representa y cuál es el alcance del mandato.",
+        "Una resolución o antecedente de la autoridad correspondiente, si existe.",
+        "Una nota sobre cómo se consultará a otras familias, autoridades o personas portadoras de conocimiento.",
+      ],
+      closing:
+        "Estamos disponibles para un diálogo respetuoso y pedimos que se traduzca en responsabilidades, decisiones y pasos claros.",
+      signoff: "Atentamente,",
+      signature: "Nombres, cargos y firmas que correspondan",
+      print: "Imprimir o guardar este modelo",
+    };
+---
+
+<section class="letter-guide" lang={en ? "en-GB" : "es-CL"} aria-labelledby="letter-guide-title">
+  <div class="letter-guide-intro">
+    <p class="resource-guide-kicker">{en ? "A working document" : "Un documento de trabajo"}</p>
+    <h1>{en ? "Restitution request letter" : "Modelo de carta de solicitud"}</h1>
+    <h2 id="letter-guide-title">{en ? "Write from your own relationship" : "Escribe desde tu propia relación"}</h2>
+    <p>{copy.intro}</p>
+    <button class="letter-print" type="button" onclick="window.print()">
+      <span aria-hidden="true">↗</span> {copy.print}
+    </button>
+  </div>
+  <article class="letter-paper" aria-label={copy.label}>
+    <header class="letter-paper-header">
+      <span>{en ? "MoSA · RESTITUTION" : "MoSA · RESTITUCIÓN"}</span>
+      <span>{en ? "A letter to adapt" : "Una carta para adaptar"}</span>
+    </header>
+    <div class="letter-paper-body">
+      <p class="letter-address"><strong>[{copy.community}]</strong><br />[{copy.address}]<br />[{copy.place}]</p>
+      <p class="letter-address"><strong>[{copy.institution}]</strong></p>
+      <p class="letter-subject"><strong>{en ? "Subject:" : "Asunto:"}</strong> [{copy.subject}]</p>
+      <p class="letter-salutation">{copy.salutation}</p>
+
+      <section class="letter-part">
+        <h3>{copy.mandate}</h3>
+        <h4>{copy.withMandate}</h4>
+        <p>{copy.mandateText}</p>
+        <h4>{copy.forming}</h4>
+        <p>{copy.formingText}</p>
+      </section>
+      <section class="letter-part"><h3>{copy.relationship}</h3><p>[{copy.relationshipText}]</p></section>
+      <section class="letter-part"><h3>{copy.history}</h3><p>[{copy.historyText}]</p></section>
+      <section class="letter-part"><h3>{copy.request}</h3><p>{copy.requestText}</p></section>
+      <section class="letter-part"><h3>{copy.interim}</h3><p>[{copy.interimText}]</p></section>
+      <section class="letter-part"><h3>{copy.records}</h3><p>{copy.recordsText}</p></section>
+      <section class="letter-part"><h3>{copy.next}</h3><p>{copy.nextText}</p></section>
+      <section class="letter-part">
+        <h3>{copy.attachments}</h3>
+        <ul>{copy.attachItems.map((item) => <li>{item}</li>)}</ul>
+      </section>
+      <p>{copy.closing}</p>
+      <p>{copy.signoff}<br /><strong>[{copy.signature}]</strong></p>
+    </div>
+  </article>
+</section>
+
+<style>
+  .resource-guide-kicker {
+    margin: 0 0 1rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .letter-guide {
+    display: grid;
+    grid-template-columns: minmax(20rem, 1.3fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 6vw, 6rem);
+    align-items: start;
+    margin-block: 3rem 5rem;
+  }
+  .letter-guide-intro {
+    position: sticky;
+    top: 2rem;
+    padding-top: 0.7rem;
+  }
+  .letter-guide-intro h1 {
+    margin: 0 0 1.5rem;
+    font-size: clamp(3.1rem, 4.8vw, 4.9rem);
+    font-weight: 400;
+    letter-spacing: -0.065em;
+    line-height: 0.88;
+  }
+  .letter-guide-intro h2 {
+    margin-bottom: 1.2rem;
+    font-size: clamp(1.4rem, 2.2vw, 2.25rem);
+    font-weight: 400;
+    line-height: 0.98;
+  }
+  .letter-guide-intro > p:not(.resource-guide-kicker) {
+    max-width: 34ch;
+    font-size: 1.05rem;
+  }
+  .letter-print {
+    display: inline-flex;
+    gap: 0.65rem;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid #000;
+    border-radius: 0;
+    background: #fff;
+    color: #000;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  .letter-print:hover {
+    background: #ff6d6d;
+  }
+  .letter-paper {
+    width: 100%;
+    max-width: 48rem;
+    margin-inline: auto;
+    background: #080808;
+    color: #fff;
+    box-shadow: 0 1.2rem 3rem rgb(0 0 0 / 14%);
+  }
+  .letter-paper-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem clamp(1.25rem, 4vw, 3rem);
+    border-bottom: 1px solid #555;
+    color: #c5c5c5;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .letter-paper-body {
+    max-width: 42rem;
+    margin-inline: auto;
+    padding: clamp(1.5rem, 5vw, 4rem) clamp(1.25rem, 7vw, 5.2rem) 4rem;
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+  .letter-paper-body p {
+    margin: 0 0 1.3rem;
+  }
+  .letter-paper-body .letter-address {
+    margin-bottom: 2rem;
+  }
+  .letter-subject {
+    padding-block: 0.85rem;
+    border-block: 1px solid #555;
+  }
+  .letter-paper-body .letter-salutation {
+    margin-block: 2rem 2.4rem;
+  }
+  .letter-part {
+    margin-block: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+    break-inside: avoid;
+  }
+  .letter-part h3 {
+    margin: 0 0 1rem;
+    color: #ff8585;
+    font-size: 1.25rem;
+  }
+  .letter-part h4 {
+    margin: 1.3rem 0 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .letter-part ul {
+    padding-left: 1.2rem;
+  }
+  .letter-part li {
+    margin-block: 0.6rem;
+  }
+
+  @media (max-width: 850px) {
+    .letter-guide {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .letter-guide-intro {
+      position: static;
+    }
+    .letter-guide-intro h2 {
+      max-width: 14ch;
+    }
+  }
+
+  @media print {
+    .letter-guide {
+      display: block;
+      margin: 0;
+    }
+    .letter-guide-intro,
+    .letter-print {
+      display: none;
+    }
+    .letter-paper {
+      max-width: none;
+      background: #fff;
+      color: #000;
+      box-shadow: none;
+    }
+    .letter-paper-header {
+      border-color: #999;
+      color: #444;
+    }
+    .letter-paper-body {
+      max-width: none;
+      padding: 1.5cm 2cm;
+      font-size: 11pt;
+    }
+    .letter-part {
+      border-color: #999;
+    }
+    .letter-part h3 {
+      color: #000;
+    }
+  }
+</style>

@@ -51,7 +51,8 @@
       "id": "holder",
       "objectId": "moai-tangata-valparaiso-mhnv-34-registro-surdoc-4-1926",
       "predicate": "held_by",
-      "value": "Museo Historia Natural de Valparaíso"
+      "value": "Museo Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     }
   ],
   "images": [],

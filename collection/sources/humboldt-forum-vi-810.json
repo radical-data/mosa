@@ -1,0 +1,103 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for Rapa, Berlin — VI 810",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/160633-rapa",
+  "language": "de",
+  "claims": [
+    {
+      "id": "name",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "has_name",
+      "value": "rapa"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "catalogue_number",
+      "value": "VI 810"
+    },
+    {
+      "id": "object-type",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "classified_as",
+      "value": "Tanzpaddel"
+    },
+    {
+      "id": "holder",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "date",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "made_during",
+      "value": "vor 1872"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt"
+    },
+    {
+      "id": "geographical-relations",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]"
+    },
+    {
+      "id": "participants",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "described_as",
+      "value": "Christy Collection (Disposal)"
+    },
+    {
+      "id": "measurements",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 70,5 x 16 x 2 cm"
+    },
+    {
+      "id": "acquisition",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "described_as",
+      "value": "Tausch von Christy Collection 1872"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "rapa-berlin-vi-810",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields. The catalogue presents the object in Module 15 Collections from Oceania. The Places / Cultures field is retained as contextual wording and is not treated as a findspot or place of making. The image information panel credits Staatliche Museen zu Berlin, Ethnologisches Museum, Anika Niemeck and states CC-BY-NC-SA; the unchanged image is registered with its separate photograph source.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-810-photograph"
+      }
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-10-04t22-03-27-253z.html",
+      "capturedAt": "2026-10-04T22:03:27.253Z",
+      "method": "singlefile"
+    }
+  ]
+}

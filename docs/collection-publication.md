@@ -9,6 +9,28 @@ Follow the implemented source and article model in
 Its [“In everyday work” table](adrs/027-distinguish-displaced-objects-and-documentary-sources.md#in-everyday-work)
 is the quick reference for deciding which record to create.
 
+The holder-based location model in [ADR
+028](adrs/028-map-objects-through-holders.md) resolves supported `held_by`
+claims to reviewed holder IDs while preserving their source wording. Store each
+holder's optional mapped location directly on its holder record; objects with
+an unambiguous holder inherit that point. Add an object assessment only for
+holderless `located_at` evidence or a genuine location exception. Never infer
+current custody from an old claim or assign a precise point when the evidence
+supports only a broader locality.
+
+Prefer verified museum-site coordinates to city-centre points. When holders
+share exact coordinates, check whether they are historical names for the same
+institution, distinct sites that were given a common city point, or genuinely
+unresolved locality-level records. Reconcile supported aliases while retaining
+source wording; do not alter recorded coordinates or invent street-level
+precision to separate markers. Small visual offsets for coincident approximate
+points belong in the map presentation, not the collection records.
+
+A holder may also have an optional `visitUrl`: a verified official visitor
+information page using HTTP(S). Closed institutions and private collections
+remain eligible for the Visit page. Omit an unverified URL; a coordinate
+reference is not a visitor-information link.
+
 ## Add or edit an object
 
 Create `collection/objects/<object-id>.json`. The file name without `.json` is
@@ -78,6 +100,11 @@ files. For an unlinked source, use `notes` to explain its relevance and why no
 object relationship is established. This records it without inventing object
 identities or requiring a shareable copy of the original.
 
+For a source that is the bibliographic record of an authored MoSA article, add
+`articleId` with the article's filename ID. Use this field only on a
+`publication` source. The source must agree with the article's title, author and
+language, and its detail page links to the authored text.
+
 Use `objectIds` when a source documents an object before any claims are
 extracted. Do not repeat an object ID already linked by one of the source's
 claims or `depicts` relationships. A source can link one object with `objectIds`
@@ -107,7 +134,10 @@ gallery.
   "language": "en-GB",
   "claims": [],
   "relationships": [
-    { "type": "depicts", "target": { "type": "object", "id": "example-object" } }
+    {
+      "type": "depicts",
+      "target": { "type": "object", "id": "example-object" }
+    }
   ],
   "images": [
     {
@@ -171,6 +201,32 @@ Public source notes record concise methodological decisions; caveats needed to
 understand a claim belong in its value because notes are not rendered on the site.
 Validate each batch and review the affected object pages in both language routes.
 
+### Extract audiovisual claims
+
+Register a film once as an `audiovisual` source. Attribute selected accounts to
+the film using the existing claims and “Recorded in” presentation; its credits
+do not imply that the director speaks every passage or that each account is a
+collective position. Preserve qualifications and nested quotations. Include a
+speaker in the locator only when needed to understand the passage.
+
+Use timestamp ranges and identify the reviewed edition in the reference or
+notes. Use original-language transcripts for spoken claims, preserving wording
+and qualifications; translated subtitles must not replace the spoken account.
+Check the selected passages in context and record consequential transcription
+uncertainty in source notes. Set the source language to the extracted wording.
+When one passage is spoken in another language, set that claim's optional
+`language` field to its BCP 47 tag; otherwise it inherits the source language.
+This override marks the claim value only. The locator remains in the source
+language.
+Keep restricted films, transcripts and working frames in `research-local/`; a
+film source needs no public media file.
+
+Register independently identifiable drawings or publications shown in the film
+as sources and connect them with existing relationships. Image publication
+requires its own rights evidence. Keep the workflow proportionate: reuse
+existing fields and record consequential limitations once, without requiring
+speaker registries, passage records or duplicate reports.
+
 ### Extract a source table
 
 Choose and state the table scope; visually review the rows and layout before
@@ -201,7 +257,7 @@ Keep uncertainty, dimensions and unusual wording intact; use only `described_as`
 when no narrower interpretation is secure. Parenthetical common type names are
 not automatically individual names. Normalise layout whitespace only.
 
-For the *Arte en la cultura rapanui* table extraction, import individually
+For the _Arte en la cultura rapanui_ table extraction, import individually
 described entries and defer plural, counted, collective and ambiguously grouped
 entries. Its final museum/research section supplies research leads, not object
 claims. The [campaign](../research/campaigns/arte-en-la-cultura-rapanui.md) links
@@ -333,6 +389,14 @@ in the source record's declared language; the gallery and
 collection previews mark that language explicitly. Gallery interface labels
 are translated for each route.
 
+For a source with representations of different objects, such as film stills,
+set each image's optional `depicts` array to the object IDs visible in that
+image. These IDs must also have a `depicts` relationship on the owning source.
+Omitting the array retains the source's depiction links; an empty array keeps
+the image on the source page only. This narrows object galleries without making
+a film frame into a separate source. For example, a Paris moai still must not
+appear in Hoa Hakananaiʻa's gallery merely because the film depicts both.
+
 Astro optimises website copies with the direct `sharp` dependency. Run a full
 build after adding images so decoding and optimisation are checked as well as
 the metadata. Review the gallery on both language routes.
@@ -364,6 +428,14 @@ The Markdown file name without `.md` is the article ID. The website labels
 these publications “Articles” / “Artículos”. An optional `summary` introduces
 the article on object and source pages and in the article index. Write it in
 the same language as the prose.
+
+Register the article's bibliographic record in `collection/sources/` with
+`kind: publication` and `articleId` set to the article's filename ID. Every
+article must have exactly one such source, and each `articleId` must resolve to
+an existing article. The source's `title`, `author` and `language` must exactly
+match the article front matter. The source page links to its article. The
+article page displays a visitor-facing language name such as “Español (Chile)”
+while marking the prose itself as `es-CL`.
 
 Use `author: null` only while authorship is unresolved. An article can be in one
 language; its standalone page marks that language rather than pretending it is

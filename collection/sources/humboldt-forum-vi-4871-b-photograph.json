@@ -1,0 +1,24 @@
+{
+  "author": null,
+  "title": "Humboldt Forum photograph of VI 4871 b",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165241-musikstock",
+  "language": "en",
+  "claims": [],
+  "notes": {
+    "text": "The Humboldt Forum page identifies this image credit as Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and labels it CC-BY-NC-SA. The unchanged full-resolution image is registered locally under those terms.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "musikstock-berlin-vi-4871-b/smb.jpg",
+      "alt": "Ansicht des geschnitzten Musikstocks.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/1/1/1/2/312111-1-ger-DE/c19d9e0f5036-0ae90a8fdcb7d98dee4cf73b37084009a9a04a5064235f447181ecd5b4dbcf0d1f899e8c.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "musikstock-berlin-vi-4871-b" } }
+  ]
+}

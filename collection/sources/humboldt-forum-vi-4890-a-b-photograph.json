@@ -1,0 +1,30 @@
+{
+  "author": null,
+  "title": "Photograph of Mörser mit Stößel, Berlin — VI 4890 a,b",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165245-moerser-mit-stoessel",
+  "language": "und",
+  "claims": [],
+  "notes": {
+    "text": "The image information panel credits Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and states CC-BY-NC-SA. The cleared original image is preserved unchanged.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "moerser-mit-stoessel-berlin-vi-4890-a-b/smb.jpg",
+      "alt": "Steinerner Mörser mit daneben liegendem Stößel, Aufsicht.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_large/7/9/0/2/312097-1-ger-DE/376a343c1976-9beac87aa2e32301020fce046a925b8a5ab4a47ac5d0a069df420ffa9ef657762a9b3a55.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "moerser-mit-stoessel-berlin-vi-4890-a-b"
+      }
+    }
+  ]
+}

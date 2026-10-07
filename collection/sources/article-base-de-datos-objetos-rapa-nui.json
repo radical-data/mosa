@@ -1,0 +1,20 @@
+{
+  "author": "Paula Rossetti",
+  "articleId": "base-de-datos-objetos-rapa-nui",
+  "title": "Base de datos de objetos rapa nui",
+  "kind": "publication",
+  "reference": "MoSA article: Base de datos de objetos rapa nui",
+  "language": "es-CL",
+  "relationships": [
+    {
+      "type": "discusses",
+      "target": {
+        "type": "source",
+        "id": "ana-maria-arredondo-rapa-nui-object-database"
+      },
+      "locator": "Descripción"
+    }
+  ],
+  "claims": [],
+  "images": []
+}

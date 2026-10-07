@@ -74,11 +74,18 @@ describe("event files", () => {
   });
   it("requires an image and its description to travel together in both languages", () => {
     const alt = { es: { ...copy.es, imageAlt: "Foto" }, en: { ...copy.en, imageAlt: "Photo" } };
-    expect(() => parse(one("x", { date: "2026-07-25", image: "/images/a.webp" }))).toThrow();
+    expect(() => parse(one("x", { date: "2026-07-25", image: "unknown-image" }))).toThrow();
     expect(() => parse(one("x", { date: "2026-07-25", ...alt }))).toThrow();
     expect(() =>
-      parse(one("x", { date: "2026-07-25", image: "/images/a.webp", ...alt })),
+      parse(one("x", { date: "2026-07-25", image: "community-gathering", ...alt })),
     ).not.toThrow();
+    expect(
+      getEvents(
+        parse(one("x", { date: "2026-07-25", image: "community-gathering", ...alt })),
+        "en",
+        new Date("2026-01-01T00:00:00Z"),
+      ).upcoming[0]?.image,
+    ).toBe("community-gathering");
   });
   it("requires both languages, matching optional fields and safe markup", () => {
     expect(() =>

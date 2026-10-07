@@ -1,7 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { formatEventInstant, formatHistoricalDate, formatNumber } from "./format";
 import { referenceCount } from "./messages";
-import { anchors, languageLink, localeIds, pageIds, pagePath } from "./routes";
+import {
+  anchors,
+  languageLink,
+  localeIds,
+  pageIds,
+  pagePath,
+  resourceIds,
+  resourcePath,
+} from "./routes";
 import { collectionState, matchesSearch } from "./search";
 
 describe("localised routes and collection state", () => {
@@ -49,6 +57,26 @@ describe("localised routes and collection state", () => {
     expect(languageLink("resources", "en", article)).toBe("/en/articles/a-story/");
     const object = new URL("https://example.org/en/collection/a-carving/");
     expect(languageLink("collection", "es", object)).toBe("/es/coleccion/a-carving/");
+  });
+  it("keeps resource detail routes bilingual and outside primary page navigation", () => {
+    expect(resourceIds).toEqual(["guide", "letter", "directory", "actors"]);
+    expect(pageIds).not.toContain("guide");
+    expect(resourcePath("guide", "es")).toBe("/es/recursos/guia-de-restitucion/");
+    expect(resourcePath("guide", "en")).toBe("/en/resources/restitution-guide/");
+    const letter = new URL("https://example.org/es/recursos/modelo-de-carta/#main");
+    expect(languageLink("resources", "en", letter)).toBe(
+      "/en/resources/restitution-letter-template/#main",
+    );
+    const actors = new URL("https://example.org/en/resources/participant-map/");
+    expect(languageLink("resources", "es", actors)).toBe("/es/recursos/mapeo-de-actores/");
+    const guide = new URL("https://example.org/en/resources/restitution-guide/#translate");
+    expect(languageLink("resources", "es", guide)).toBe(
+      "/es/recursos/guia-de-restitucion/#translate",
+    );
+    const invalid = new URL("https://example.org/en/resources/organisation-directory/#directory");
+    expect(languageLink("resources", "es", invalid)).toBe(
+      "/es/recursos/directorio-de-organizaciones/",
+    );
   });
   it("keeps original-name diacritics meaningful", () => {
     expect(matchesSearch("berlin", "Berlín", "Berlín")).toBe(true);

@@ -1,0 +1,30 @@
+{
+  "author": null,
+  "title": "Photograph of Maea mo moa, Berlin — VI 4894 a",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165240-maea-mo-moa",
+  "language": "und",
+  "claims": [],
+  "notes": {
+    "text": "The image information panel credits Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck and states CC-BY-NC-SA. The cleared original image is preserved unchanged.",
+    "language": "en-GB"
+  },
+  "images": [
+    {
+      "file": "maea-mo-moa-berlin-vi-4894-a/smb.jpg",
+      "alt": "Steinobjekt mit netzartiger Fassung aus braunen Fasern.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_large/5/2/1/0/80125-1-ger-DE/8c14279303c9-34d03f5751bf398a9cc9132f5bc7c8aa9632cb2d9b725310a1534ec1af1966bce3a31d55.jpg"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "maea-mo-moa-berlin-vi-4894-a"
+      }
+    }
+  ]
+}

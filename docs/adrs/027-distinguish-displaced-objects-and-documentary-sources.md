@@ -93,11 +93,11 @@ declared languages.
 For a photograph found through a British Museum catalogue webpage, the records
 will be:
 
-| Record | Owns |
-| --- | --- |
-| Object: the particular carving | Stable object identity and foregrounded claims |
-| Source: British Museum catalogue webpage | Catalogue text, extracted claims and preserved webpage capture |
-| Source: photograph of the carving | Photograph attribution, reference, image-specific rights and publishable image file |
+| Record                                   | Owns                                                                                |
+| ---------------------------------------- | ----------------------------------------------------------------------------------- |
+| Object: the particular carving           | Stable object identity and foregrounded claims                                      |
+| Source: British Museum catalogue webpage | Catalogue text, extracted claims and preserved webpage capture                      |
+| Source: photograph of the carving        | Photograph attribution, reference, image-specific rights and publishable image file |
 
 The catalogue webpage **reproduces** the photograph. The photograph **depicts**
 the object. It appears in the object's gallery and has its own source page with
@@ -113,8 +113,13 @@ justified. Resized renditions remain files representing the same photograph.
 Image entries represent their owning photograph source rather than naming
 an `objectId`. Derive object-gallery membership from `depicts`; a photograph may
 depict several objects. A document scan does not enter an artefact gallery just
-because its source concerns that artefact. Preserve file-level alt text,
-captions, credits, rights and original URLs.
+because its source concerns that artefact. A source such as a film can depict
+several objects across different frames. An optional image-level `depicts` list
+narrows that representation to a subset of the source's depicted objects; an
+empty list excludes it from object galleries. Without the list, existing
+source-level gallery behaviour is retained. This addresses the Te Kuhane stills
+without inventing independently authored sources for extracted frames. Preserve
+file-level alt text, captions, credits, rights and original URLs.
 
 The source index lists every source and supports text search and kind/topic
 filters, with the complete listing available without JavaScript. Search titles,
@@ -126,16 +131,16 @@ the corresponding record or article and supported index filters.
 
 ### In everyday work
 
-| Task | What the researcher does |
-|---|---|
-| Register another displaced carving | Create an object with a stable identity; link documentary sources. |
-| Add a museum catalogue | Create a source and extract its attributed object claims. |
-| Separate an embedded photograph | Create a photograph source; connect it to the publishing source and depicted object. |
+| Task                                                       | What the researcher does                                                                                                    |
+| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Register another displaced carving                         | Create an object with a stable identity; link documentary sources.                                                          |
+| Add a museum catalogue                                     | Create a source and extract its attributed object claims.                                                                   |
+| Separate an embedded photograph                            | Create a photograph source; connect it to the publishing source and depicted object.                                        |
 | Add a catalogue record for a photograph of a Rapa Nui site | Create webpage and photograph sources; do not create a site object when the site's displacement is not under investigation. |
-| Examine a refusal letter | Create a correspondence source and an article about it; no object is required. |
-| Discuss *Black Panther* | Create an audiovisual source, identify the relevant scene with a locator, and explain its relevance in an article. |
-| Exhibit the refusal letter | Present its existing source record prominently; do not duplicate or convert it. |
-| Publish MoSA's interpretation | Create an authored article and link its object and source subjects; do not make it a collection record. |
+| Examine a refusal letter                                   | Create a correspondence source and an article about it; no object is required.                                              |
+| Discuss _Black Panther_                                    | Create an audiovisual source, identify the relevant scene with a locator, and explain its relevance in an article.          |
+| Exhibit the refusal letter                                 | Present its existing source record prominently; do not duplicate or convert it.                                             |
+| Publish MoSA's interpretation                              | Create an authored article and link its object and source subjects; do not make it a collection record.                     |
 
 Compare this with one record type that allows overlapping object and source
 roles. A single type makes it easy to misread documentary identity as object
@@ -153,11 +158,11 @@ results, and preserve unrelated work.
 
 Use three main Conventional Commits in dependency order:
 
-| Commit | Scope |
-|---|---|
-| `docs(collection): define objects and documentary sources` | This ADR and rationale. Keep the implementation status accurate. |
-| `feat(collection)!: separate photograph sources` | Model and validation, full record migration, image ownership, article subjects, affected loaders and research tools, tests, and matching authoring and skill guidance. Schema, data and consumers change together. |
-| `feat(website): publish sources and articles` | Public indexes and pages, navigation, relationships, search, localisation, metadata, sitemap, HTTP coverage, and final presentation guidance. |
+| Commit                                                     | Scope                                                                                                                                                                                                              |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `docs(collection): define objects and documentary sources` | This ADR and rationale. Keep the implementation status accurate.                                                                                                                                                   |
+| `feat(collection)!: separate photograph sources`           | Model and validation, full record migration, image ownership, article subjects, affected loaders and research tools, tests, and matching authoring and skill guidance. Schema, data and consumers change together. |
+| `feat(website): publish sources and articles`              | Public indexes and pages, navigation, relationships, search, localisation, metadata, sitemap, HTTP coverage, and final presentation guidance.                                                                      |
 
 The breaking collection commit body and `BREAKING CHANGE` footer will describe
 the new authoring contract and state that existing records migrate in the same
@@ -184,6 +189,15 @@ commit. Keep these boundaries in reviewable branch history. Pushing, merging
 and deployment remain separate actions.
 
 ## Consequences
+
+### Article and publication-source implementation note
+
+Each authored article now has exactly one companion `publication` source whose
+`articleId` names the article. That identifier must resolve, and the source and
+article must agree on title, author and language. The source page links to its
+article. Article pages show a localised language name while retaining the
+article's declared language on the prose. The authoring contract and example
+are maintained in the [collection authoring guide](../collection-publication.md).
 
 MoSA can publish and analyse documentary sources in their own right, while
 maintaining a clear path from a photograph to its publication context and

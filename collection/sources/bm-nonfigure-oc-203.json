@@ -17,7 +17,8 @@
       "objectId": "british-museum-club-oc-203",
       "predicate": "held_by",
       "value": "British Museum",
-      "locator": "Collection record"
+      "locator": "Collection record",
+      "holderId": "british-museum"
     },
     {
       "id": "object-type",

@@ -1,0 +1,33 @@
+{
+  "title": "Tepano's forearm tattoo of a moai being dragged to shore",
+  "kind": "artwork",
+  "author": null,
+  "reference": "https://www.biodiversitylibrary.org/page/33471776",
+  "language": "en-GB",
+  "date": "before May 1884",
+  "topics": ["displacement", "representations"],
+  "claims": [],
+  "relationships": [
+    {
+      "type": "depicts",
+      "target": {
+        "type": "object",
+        "id": "hoa-hakananai-a"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "hoa-hakananai-a/tepano-tattoo-stolpe-1899.png",
+      "alt": "Printed line drawing of a forearm bearing a tattoo: a recumbent moai at the top, ten small figures hauling a vertical line, two larger standing figures and a small figure on the moai.",
+      "caption": "Hjalmar Stolpe's 1899 printed depiction of the tattoo recorded on Tepano's forearm. Stolpe interpreted its hauling scene as the removal of Hoa Hakananaiʻa.",
+      "credit": "Hjalmar Stolpe, Über die Tätowirung der Oster-Insulaner (1899), p. 8, Fig. 10. Scan: Biodiversity Heritage Library, contributed by Missouri Botanical Garden, Peter H. Raven Library.",
+      "rights": "Public domain. Biodiversity Heritage Library considers the 1899 volume no longer under copyright protection. Scan contributed by Missouri Botanical Garden, Peter H. Raven Library.",
+      "originalUrl": "https://www.biodiversitylibrary.org/pageimage/33471776"
+    }
+  ],
+  "notes": {
+    "text": "The tattooist is unknown. The name Tepano is retained as published by Stolpe and is not equated with Juan Tepano or another individual. The tattoo was not photographed: this representation is a lossless crop of Stolpe's printed line drawing, Figure 10. Tepano described its subject as people dragging one of Rapa Nui's large stone statues to the shore; Stolpe inferred that the statue was Hoa Hakananaiʻa from the reported interval and Tepano's recognition of Palmer. The editorial title and depicts relationship follow that explicit identification without treating it as Tepano's own statement.",
+    "language": "en-GB"
+  }
+}

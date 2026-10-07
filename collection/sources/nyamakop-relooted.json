@@ -1,0 +1,22 @@
+{
+  "title": "Relooted",
+  "kind": "audiovisual",
+  "author": "Nyamakop",
+  "reference": "https://store.steampowered.com/app/3255890/",
+  "language": "en",
+  "date": "2026",
+  "topics": ["displacement", "restitution", "museum-practices", "representations"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "A South African Africanfuturist heist game released on 10 February 2026. Players plan museum break-ins to reclaim real African artefacts from Western collections. The game turns the procedural language of restitution into a counter-heist fantasy while presenting researched object histories. It is registered as a creative source, not as evidence that its fictional treaty, institutions or recoveries occurred. Its represented artefacts have not been reconciled with MoSA object records, and no promotional media is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-03t20-08-49-409z.html",
+      "capturedAt": "2026-10-03T20:08:49.409Z",
+      "method": "singlefile"
+    }
+  ]
+}

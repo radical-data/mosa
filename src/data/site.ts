@@ -1,10 +1,20 @@
 import labels from "../content/pages/reference-labels.json";
-import resources from "../content/pages/resource-summaries.json";
 import type { Locale } from "../i18n/routes";
 
-export { collectionRecords, getObjectRecord } from "./collection";
+export {
+  collectionMapLocations,
+  collectionMapUnresolved,
+  collectionRecords,
+  getObjectRecord,
+  visitHolders,
+} from "./collection";
+export { getResources } from "./resources";
 
 export const contactEmail = "mosa@radicaldata.org";
+export const githubURL = "https://github.com/radical-data/mosa";
+export const instagramURL = "https://www.instagram.com/museumofstolenartefacts/";
+export const mailchimpSignupAction =
+  "https://radicaldata.us18.list-manage.com/subscribe/post?u=3484234c1c5960682945b6be0&id=712b203609&f_id=0094b6e6f0";
 export const conceptIds = [
   "stoneMoai",
   "taoa",
@@ -24,12 +34,3 @@ export const getConcepts = (locale: Locale) =>
   }));
 export const getTypes = (locale: Locale) =>
   typeIds.map((id) => ({ id, label: labels[locale][id] }));
-const resourceIds = ["guide", "letter", "directory", "generator"] as const;
-export function getResources(locale: Locale) {
-  const copy = resources[locale];
-  return resourceIds.map((id) => ({
-    id,
-    title: copy[`${id}Title`],
-    description: copy[`${id}Description`],
-  }));
-}

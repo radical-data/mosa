@@ -1,0 +1,602 @@
+---
+import type { VisitHolder } from "../data/visit-holders";
+import { type Locale, publicRecordPath } from "../i18n/routes";
+
+interface Copy {
+  mapReset: string; mapUnavailable: string; mapLabel: string; mapClose: string;
+  locationListTitle: string; locationUnknown: string; visitInformation: string; showOnMap: string;
+  statusReported: string; statusHistorical: string; statusUncertain: string; statusUnknown: string;
+  objectLabel: string; objectsLabel: string; evidenceLabel: string;
+  noMappedPlaces: string;
+}
+interface Props { locale: Locale; destinations: VisitHolder[]; copy: Copy; }
+const { locale, destinations, copy } = Astro.props;
+const objectPath = (id: string) => publicRecordPath("objects", id, locale);
+const sourcePath = (id: string) => publicRecordPath("sources", id, locale);
+const statusLabels = { reported: copy.statusReported, historical: copy.statusHistorical, uncertain: copy.statusUncertain, unknown: copy.statusUnknown };
+const objectCount = (count: number) => `${count} ${count === 1 ? copy.objectLabel : copy.objectsLabel}`;
+const points = destinations.flatMap(({ holder }) => holder.location ? [{
+  id: holder.id, name: holder.name,
+  longitude: holder.location.longitude, latitude: holder.location.latitude,
+  precision: holder.location.precision,
+}] : []);
+---
+<div class="visit-explorer" data-points={JSON.stringify(points)} data-map-reset={copy.mapReset} data-map-close={copy.mapClose} data-locale={locale}>
+  <section class="visit-map" data-map aria-label={copy.mapLabel}>
+    <p class="visit-map-fallback" hidden>{copy.mapUnavailable}</p>
+    <noscript><p class="visit-map-fallback">{copy.mapUnavailable}</p></noscript>
+  </section>
+  <section class="visit-location-list" id="museum-directory" aria-labelledby="visit-location-list-title">
+    <h2 id="visit-location-list-title">{copy.locationListTitle} <span class="small muted">({destinations.length})</span></h2>
+    {points.length === 0 && <p>{copy.noMappedPlaces}</p>}
+    {destinations.map(({ holder, objects }) => <article class="visit-place" data-holder-id={holder.id}>
+      <div class="visit-place-header">
+        <div class="visit-place-identity">
+          <h3>
+            <span data-holder-name>{holder.name}</span>
+            {holder.location && <button class="visit-place-select" type="button" data-show-holder={holder.id} aria-label={`${holder.name} — ${copy.showOnMap}`} hidden>{holder.name}</button>}
+          </h3>
+          <p class="small muted visit-holder-location">{holder.location?.name ?? copy.locationUnknown}</p>
+        </div>
+        {holder.visitUrl && <a class="button visit-visitor-link" href={holder.visitUrl} target="_blank" rel="noreferrer">{copy.visitInformation} <span aria-hidden="true">↗</span></a>}
+      </div>
+          <details class="visit-holder-objects">
+            <summary>{objectCount(objects.length)}</summary>
+            <ul>{objects.map(({ object, status, claims, note }) => <li>
+              <a href={objectPath(object.id)}>{object.name}</a>
+              <span class="visit-location-meta">{statusLabels[status]}</span>
+              {note && <p lang={note.language}>{note.text}</p>}
+              <p class="small visit-evidence">{copy.evidenceLabel}: {[...new Map(claims.map(({ source }) => [source.id, source])).values()].map((source, index) => <Fragment>{index > 0 && " · "}<a href={sourcePath(source.id)}>{source.title}</a></Fragment>)}</p>
+            </li>)}</ul>
+          </details>
+    </article>)}
+  </section>
+</div>
+
+<style>
+  .visit-map {
+    position: relative;
+    height: clamp(24rem, 56vw, 42rem);
+    min-height: 340px;
+    overflow: hidden;
+    background: #e9e7e1;
+  }
+
+  .visit-map.maplibregl-map,
+  .visit-map :global(.maplibregl-popup) {
+    font-family: var(--font-noto-sans-eng), var(--font-general-sans), Arial, sans-serif;
+  }
+
+  .visit-map :global(.maplibregl-ctrl-group) {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .visit-map :global(.maplibregl-ctrl-attrib) {
+    font-size: 0.65rem;
+  }
+
+  .visit-map-fallback {
+    position: absolute;
+    z-index: 1;
+    inset: 50% auto auto 50%;
+    width: min(28rem, 82%);
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.25rem;
+    background: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .visit-map :global(.visit-map-marker) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 1.1rem;
+    height: 1.1rem;
+    padding: 0;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #000;
+    box-shadow: 0 1px 6px #0005;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .visit-map :global(.visit-map-marker:hover),
+  .visit-map :global(.visit-map-marker:focus-visible),
+  .visit-map :global(.visit-map-marker[aria-pressed="true"]) {
+    z-index: 2;
+    outline: 2px solid #111;
+    outline-offset: 2px;
+  }
+
+  .visit-map :global(.maplibregl-ctrl-group button) {
+    width: 36px;
+    height: 36px;
+  }
+
+  .visit-map :global(.visit-map-reset svg) {
+    vertical-align: middle;
+  }
+
+  .visit-map :global(.maplibregl-popup-content) {
+    padding: 1.5rem 1.25rem 0.25rem;
+    border-radius: 0;
+    box-shadow: 0 3px 18px #0002;
+    max-height: min(22rem, 55vh);
+    overflow-y: auto;
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .visit-map :global(.visit-map-popup h2) {
+    padding-right: 6rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  .visit-map :global(.maplibregl-popup-close-button) {
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+  }
+
+  .visit-evidence a {
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    margin-right: 0.5rem;
+  }
+
+  .visit-location-list {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .visit-location-list > h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .visit-place {
+    position: relative;
+    padding-block: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .visit-place-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding-right: 7rem;
+  }
+
+  .visit-holder-objects > summary {
+    cursor: pointer;
+    padding-block: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .visit-unresolved-details > summary {
+    width: fit-content;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 0.2em;
+  }
+
+  .visit-place > .visit-holder-objects > summary {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .visit-place > .visit-holder-objects[open] {
+    margin-top: 1rem;
+  }
+
+  .visit-place-identity {
+    position: relative;
+  }
+
+  .visit-place h3 {
+    margin-bottom: 0.3rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+
+  .visit-place-select {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .visit-place-select::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  .visit-holder-location {
+    margin: 0;
+  }
+
+  .visit-visitor-link {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+  }
+
+  .visit-map :global(.visit-map-popup .visit-visitor-link) {
+    margin-block: 1rem;
+  }
+
+  .visit-place ul,
+  .visit-unresolved ul {
+    margin: 0 0 1rem;
+    padding: 0 0 0 2rem;
+  }
+
+  .visit-place li,
+  .visit-unresolved li {
+    padding-block: 0.8rem;
+    border-top: 1px solid #e5e3dd;
+  }
+
+  .visit-place li > a,
+  .visit-unresolved li > a {
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-underline-offset: 0.2em;
+  }
+
+  .visit-location-meta {
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+  }
+
+  .visit-place li p,
+  .visit-unresolved li p {
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+  }
+
+  .visit-unresolved {
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .visit-unresolved ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .visit-holder-objects a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .visit-map :global(.visit-holder-content) {
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .visit-map :global(.visit-holder-content > .visit-holder-objects > summary) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .visit-map :global(.visit-holder-content > .visit-holder-objects[open]) {
+    margin-top: 1rem;
+  }
+
+  .visit-holder-objects ul {
+    padding-left: 1.25rem;
+  }
+
+  .visit-holder-objects li {
+    padding-block: 0.8rem;
+  }
+
+  @media (max-width: 520px) {
+    .visit-map {
+      height: 30rem;
+      min-height: 0;
+    }
+
+    .visit-place-header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 0;
+    }
+
+    .visit-place-identity {
+      padding-right: 7rem;
+    }
+  }
+</style>
+
+<script>
+  import * as maplibregl from "maplibre-gl";
+  import maplibreWorkerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
+  import "maplibre-gl/dist/maplibre-gl.css";
+  import { constrainVisitMapCamera } from "./visit-map-camera";
+
+  type Point = { id: string; name: string; longitude: number; latitude: number; precision: string; offset: [number, number] };
+  const root = document.querySelector<HTMLElement>(".visit-explorer");
+  const mapElement = root?.querySelector<HTMLElement>("[data-map]");
+  if (root && mapElement) {
+    const fallback = mapElement.querySelector<HTMLElement>(".visit-map-fallback");
+    let mapReady = false;
+    const showUnavailable = (error: unknown) => {
+      console.error("Could not initialise the Visit map", error);
+      if (!mapReady && fallback) fallback.hidden = false;
+    };
+    try {
+      const recordedPoints = JSON.parse(root.dataset.points ?? "[]") as Omit<Point, "offset">[];
+      const points: Point[] = recordedPoints.map((point) => {
+        const shared = recordedPoints.filter((other) => other.precision === "locality" && other.longitude === point.longitude && other.latitude === point.latitude);
+        const index = shared.findIndex((other) => other.id === point.id);
+        // Separate coincident approximate points in pixels, preserving their recorded geography.
+        const angle = index * 2 * Math.PI / shared.length - Math.PI / 2;
+        const offset: [number, number] = index >= 0 && shared.length > 1
+          ? [Math.round(18 * Math.cos(angle)), Math.round(18 * Math.sin(angle))] : [0, 0];
+        return { ...point, offset };
+      });
+      const rows = new Map([...root.querySelectorAll<HTMLElement>("[data-holder-id]")].map((row) => [row.dataset.holderId, row]));
+      const markers = new Map<string, HTMLButtonElement>();
+      let selectedId: string | undefined;
+      let popup: maplibregl.Popup | undefined;
+      let popupTriggerId: string | undefined;
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      maplibregl.setWorkerUrl(maplibreWorkerUrl);
+      const map = new maplibregl.Map({
+        container: mapElement,
+        style: {
+          version: 8,
+          sources: {
+            land: { type: "geojson", data: "/map/natural-earth-land-110m.geojson", attribution: "Natural Earth" },
+          },
+          layers: [
+            { id: "background", type: "background", paint: { "background-color": "#e9e7e1" } },
+            { id: "land", type: "fill", source: "land", paint: { "fill-color": "#f9f8f4", "fill-outline-color": "#d0cec7" } },
+          ],
+        },
+        locale: root.dataset.locale === "es" ? {
+          "Map.Title": "Mapa de nuestras sedes",
+          "NavigationControl.ZoomIn": "Acercar",
+          "NavigationControl.ZoomOut": "Alejar",
+          "Popup.Close": root.dataset.mapClose ?? "Cerrar",
+          "AttributionControl.ToggleAttribution": "Mostrar créditos",
+          "CooperativeGesturesHandler.WindowsHelpText": "Usa Ctrl + desplazamiento para acercar o alejar el mapa",
+          "CooperativeGesturesHandler.MacHelpText": "Usa ⌘ + desplazamiento para acercar o alejar el mapa",
+          "CooperativeGesturesHandler.MobileHelpText": "Usa dos dedos para mover el mapa",
+        } : { "Popup.Close": root.dataset.mapClose ?? "Close" },
+        center: [-110, -10], zoom: 0.6, minZoom: -2, maxZoom: 12,
+        // Permit the whole world to fit inside a tall, narrow map viewport.
+        renderWorldCopies: false,
+        transformConstrain: (center, zoom) => {
+          const camera = constrainVisitMapCamera({
+            longitude: center.lng, latitude: center.lat, zoom,
+            width: mapElement.clientWidth, height: mapElement.clientHeight,
+          });
+          return { center: new maplibregl.LngLat(camera.longitude, camera.latitude), zoom: camera.zoom };
+        },
+        dragRotate: false, touchPitch: false, pitchWithRotate: false,
+        attributionControl: { compact: true }, cooperativeGestures: true,
+      });
+      map.on("error", (event) => showUnavailable(event.error));
+      map.touchZoomRotate.disableRotation();
+      map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+      const clearSelection = () => {
+        popup?.remove();
+        popup = undefined;
+        selectedId = undefined;
+        popupTriggerId = undefined;
+        for (const button of markers.values()) button.setAttribute("aria-pressed", "false");
+      };
+      const openPopup = (point: Point, body: HTMLElement, zoom = map.getZoom()) => {
+        popupTriggerId = point.id;
+        const [x, y] = point.offset;
+        popup = new maplibregl.Popup({
+          className: "visit-map-popup", closeOnClick: false,
+          offset: {
+            center: [x, y],
+            top: [x, y + 16], bottom: [x, y - 16], left: [x + 16, y], right: [x - 16, y],
+            "top-left": [x + 12, y + 12], "top-right": [x - 12, y + 12],
+            "bottom-left": [x + 12, y - 12], "bottom-right": [x - 12, y - 12],
+          },
+          maxWidth: "min(22rem, calc(100vw - 4rem))",
+        }).setLngLat([point.longitude, point.latitude]).setDOMContent(body).addTo(map);
+        popup.on("close", () => {
+          for (const button of markers.values()) button.setAttribute("aria-pressed", "false");
+          selectedId = undefined;
+          popupTriggerId = undefined;
+          popup = undefined;
+        });
+        map.easeTo({
+          center: [point.longitude, point.latitude], zoom,
+          offset: [0, Math.min(mapElement.clientHeight / 4, 120)],
+          duration: reducedMotion.matches ? 0 : 400,
+        });
+      };
+      const showHolder = (point: Point, zoom = map.getZoom()) => {
+        clearSelection();
+        const row = rows.get(point.id);
+        if (!row) return;
+        selectedId = point.id;
+        markers.get(point.id)?.setAttribute("aria-pressed", "true");
+        const body = document.createElement("div");
+        body.className = "visit-holder-content";
+        const heading = document.createElement("h2");
+        heading.textContent = point.name;
+        body.append(heading);
+        const location = row.querySelector<HTMLElement>(".visit-holder-location")?.cloneNode(true) as HTMLElement | undefined;
+        if (location) body.append(location);
+        const visitLink = row.querySelector(".visit-visitor-link");
+        if (visitLink) body.append(visitLink.cloneNode(true));
+        const objects = row.querySelector<HTMLDetailsElement>(".visit-holder-objects")?.cloneNode(true) as HTMLDetailsElement | undefined;
+        if (objects) {
+          objects.open = false;
+          body.append(objects);
+        }
+        openPopup(point, body, zoom);
+      };
+      const positionMarkers = () => {
+        for (const point of points) {
+          const button = markers.get(point.id);
+          if (!button) continue;
+          // Project the recorded longitude: MapLibre 6's HTML Marker can wrap
+          // independently of renderWorldCopies, leaving a point without land.
+          const position = map.project([point.longitude, point.latitude]);
+          const x = position.x + point.offset[0];
+          const y = position.y + point.offset[1];
+          const visible = x >= 0 && x <= mapElement.clientWidth && y >= 0 && y <= mapElement.clientHeight;
+          button.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
+          button.style.visibility = visible ? "visible" : "hidden";
+          if (popup && selectedId === point.id) {
+            // Popups use the same wrapping helper; reset their canonical anchor.
+            popup.setLngLat([point.longitude, point.latitude]);
+            popup.getElement().style.visibility = visible ? "visible" : "hidden";
+          }
+        }
+      };
+      map.on("move", positionMarkers);
+      map.on("resize", positionMarkers);
+      mapElement.addEventListener("keydown", (event) => {
+        if (event.key !== "Escape" || !popupTriggerId) return;
+        const button = markers.get(popupTriggerId);
+        clearSelection();
+        button?.focus({ preventScroll: true });
+      });
+      map.on("click", (event) => {
+        if (!map.getLayer("museum-labels")) return;
+        const feature = map.queryRenderedFeatures(event.point, { layers: ["museum-labels"] })[0];
+        const point = points.find((point) => point.id === feature?.properties?.id);
+        if (point && selectedId !== point.id) showHolder(point);
+        else clearSelection();
+      });
+      map.on("mouseenter", "museum-labels", () => { map.getCanvas().style.cursor = "pointer"; });
+      map.on("mouseleave", "museum-labels", () => { map.getCanvas().style.cursor = ""; });
+      const fitAll = (duration: number) => {
+        if (!points.length) return;
+        if (points.length === 1) {
+          map.easeTo({ center: [points[0].longitude, points[0].latitude], zoom: 2, duration });
+          return;
+        }
+        const bounds = new maplibregl.LngLatBounds();
+        for (const point of points) bounds.extend([point.longitude, point.latitude]);
+        map.fitBounds(bounds, { padding: { top: 60, right: 60, bottom: 60, left: 60 }, maxZoom: 4, duration });
+      };
+      const resetControl = document.createElement("div");
+      resetControl.className = "maplibregl-ctrl maplibregl-ctrl-group";
+      const resetButton = document.createElement("button");
+      resetButton.type = "button";
+      resetButton.className = "visit-map-reset";
+      resetButton.title = root.dataset.mapReset ?? "Fit all museums";
+      resetButton.setAttribute("aria-label", resetButton.title);
+      resetButton.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></svg>';
+      resetButton.addEventListener("click", () => {
+        clearSelection();
+        fitAll(reducedMotion.matches ? 0 : 600);
+      });
+      resetControl.append(resetButton);
+      map.on("load", async () => {
+        try {
+          // MapLibre renders and collision-places names using the site's bundled font.
+          const generalSans = getComputedStyle(document.documentElement)
+            .getPropertyValue("--font-general-sans")
+            .split(",")[0]
+            .trim();
+          await document.fonts.load(`400 14px ${generalSans}`, "Museum").catch(() => []);
+          map.addSource("museums", {
+            type: "geojson",
+            data: {
+              type: "FeatureCollection",
+              features: points.map((point) => ({
+                type: "Feature", properties: {
+                  id: point.id, name: point.name, offset: point.offset,
+                  anchors: [
+                    "top", [point.offset[0] / 13, point.offset[1] / 13 + 1],
+                    "bottom", [point.offset[0] / 13, point.offset[1] / 13 - 1],
+                    "left", [point.offset[0] / 13 + 1, point.offset[1] / 13],
+                    "right", [point.offset[0] / 13 - 1, point.offset[1] / 13],
+                  ],
+                },
+                geometry: { type: "Point", coordinates: [point.longitude, point.latitude] },
+              })),
+            },
+          });
+          // Reserve each HTML marker's footprint in MapLibre's label placement.
+          map.addImage("museum-marker-space", { width: 22, height: 22, data: new Uint8Array(22 * 22 * 4) });
+          map.addLayer({
+            id: "museum-marker-footprints", type: "symbol", source: "museums",
+            layout: { "icon-image": "museum-marker-space", "icon-allow-overlap": true, "icon-offset": ["get", "offset"] },
+          });
+          map.addLayer({
+            id: "museum-labels", type: "symbol", source: "museums",
+            layout: {
+              "text-field": ["get", "name"], "text-font": ["General Sans", "Arial"],
+              "text-size": 13, "text-max-width": 14,
+              "text-variable-anchor-offset": ["get", "anchors"],
+              "text-justify": "auto", "text-padding": 5,
+            },
+            paint: { "text-color": "#222222", "text-halo-color": "#f9f8f4", "text-halo-width": 2 },
+          });
+          map.addControl({ onAdd: () => resetControl, onRemove: () => resetControl.remove() }, "top-right");
+          for (const point of points) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "visit-map-marker";
+            button.setAttribute("aria-label", point.name);
+            button.setAttribute("aria-pressed", "false");
+            button.title = point.name;
+            button.addEventListener("click", (event) => {
+              event.stopPropagation();
+              if (selectedId === point.id) clearSelection();
+              else showHolder(point);
+            });
+            map.getCanvasContainer().append(button);
+            markers.set(point.id, button);
+            const listButton = rows.get(point.id)?.querySelector<HTMLButtonElement>("[data-show-holder]");
+            if (listButton) {
+              listButton.hidden = false;
+              rows.get(point.id)?.querySelector("[data-holder-name]")?.remove();
+              listButton.addEventListener("click", () => {
+                mapElement.scrollIntoView({ block: "center", behavior: reducedMotion.matches ? "instant" : "smooth" });
+                showHolder(point, Math.max(map.getZoom(), 3));
+              });
+            }
+          }
+          fitAll(0);
+          positionMarkers();
+          mapReady = true;
+          if (fallback) fallback.hidden = true;
+        } catch (error) {
+          showUnavailable(error);
+        }
+      });
+    } catch (error) {
+      showUnavailable(error);
+    }
+  }
+</script>

@@ -1,0 +1,20 @@
+{
+  "author": null,
+  "title": "Photograph of Nähunterlage, Berlin — VI 4924",
+  "kind": "photograph",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/162878-naehunterlage",
+  "language": "de",
+  "claims": [],
+  "images": [
+    {
+      "file": "naehunterlage-berlin-vi-4924/smb.jpg",
+      "alt": "Flaches, ovales Knochenobjekt mit einer kleinen Bohrung.",
+      "credit": "Staatliche Museen zu Berlin, Ethnologisches Museum / Anika Niemeck",
+      "rights": "CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)",
+      "originalUrl": "https://sammlungenonline.humboldtforum.org/var/media/storage/images/_aliases/hum_full/6/9/3/2/312396-1-ger-DE/cb51f7f2b0f7-3acf24e798ba0a32073d983ee7ab02ae65e9a3f98ca72fe9dff76c129abe5fd00b9334fd.jpg"
+    }
+  ],
+  "relationships": [
+    { "type": "depicts", "target": { "type": "object", "id": "naehunterlage-berlin-vi-4924" } }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "American Museum of Natural History",
+  "visitUrl": "https://www.amnh.org/plan-your-visit",
+  "location": {
+    "name": "New York, United States",
+    "precision": "site",
+    "longitude": -73.97421,
+    "latitude": 40.7811,
+    "reference": "https://www.openstreetmap.org/way/388436810"
+  }
+}

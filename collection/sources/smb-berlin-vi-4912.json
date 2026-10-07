@@ -21,7 +21,8 @@
       "id": "holder",
       "objectId": "moai-pa-apa-a-berlin-vi-4912",
       "predicate": "held_by",
-      "value": "Ethnologisches Museum"
+      "value": "Ethnologisches Museum",
+      "holderId": "ethnologisches-museum-berlin"
     },
     {
       "id": "participants",

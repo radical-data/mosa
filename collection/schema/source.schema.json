@@ -79,6 +79,7 @@
         "properties": {
           "id": { "$ref": "#/$defs/id" },
           "objectId": { "$ref": "#/$defs/id" },
+          "holderId": { "$ref": "#/$defs/id" },
           "predicate": {
             "enum": [
               "has_name",
@@ -94,7 +95,13 @@
             ]
           },
           "value": { "type": "string", "minLength": 1 }
-        }
+        },
+        "allOf": [
+          {
+            "if": { "required": ["holderId"] },
+            "then": { "properties": { "predicate": { "const": "held_by" } } }
+          }
+        ]
       }
     },
     "images": {

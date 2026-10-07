@@ -1,0 +1,22 @@
+{
+  "title": "Dahomey",
+  "kind": "audiovisual",
+  "author": "Mati Diop",
+  "reference": "https://www.moma.org/calendar/events/10091",
+  "language": "fr",
+  "date": "2024",
+  "topics": ["displacement", "restitution", "museum-practices", "representations"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "Diop's fantasy documentary follows twenty-six royal treasures from the Kingdom of Dahomey as they leave Paris and return to Benin. It gives one returned entity an imagined voice and places a debate among students at the University of Abomey-Calavi inside the film, refusing to make the state transfer its final word. MoMA's programme page was preserved as accessible documentation after an attempted capture of the distributor's official English press kit produced only an empty browser PDF viewer; the film itself has not been transcribed for claims. No individual treasure has been reconciled with a MoSA object record, and no film still is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-03t20-13-55-244z.html",
+      "capturedAt": "2026-10-03T20:13:55.244Z",
+      "method": "singlefile"
+    }
+  ]
+}

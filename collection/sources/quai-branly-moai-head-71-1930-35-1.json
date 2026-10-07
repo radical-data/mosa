@@ -1,0 +1,57 @@
+{
+  "title": "Tête Moaï — Musée du quai Branly, 71.1930.35.1",
+  "kind": "publication",
+  "author": "Philippe Peltier",
+  "reference": "Société des Amis du musée du quai Branly, ‘Tête Moaï’, https://www.amisquaibranly.fr/wp-content/uploads/2016/10/fiche-tte-moai.pdf",
+  "language": "fr",
+  "claims": [
+    {
+      "id": "classification",
+      "objectId": "moai-head-quai-branly-71-1930-35-1",
+      "predicate": "classified_as",
+      "value": "Tête Moaï",
+      "locator": "Fiche, en-tête"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-head-quai-branly-71-1930-35-1",
+      "predicate": "catalogue_number",
+      "value": "71.1930.35.1",
+      "locator": "Fiche, N° d’inventaire"
+    },
+    {
+      "id": "date",
+      "objectId": "moai-head-quai-branly-71-1930-35-1",
+      "predicate": "made_during",
+      "value": "XIIe-XVe siècles",
+      "locator": "Fiche, date"
+    },
+    {
+      "id": "material",
+      "objectId": "moai-head-quai-branly-71-1930-35-1",
+      "predicate": "made_of",
+      "value": "lithique andésite du volcan Rano Raraku",
+      "locator": "Fiche, matériaux"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-head-quai-branly-71-1930-35-1",
+      "predicate": "held_by",
+      "value": "musée du quai Branly",
+      "locator": "Fiche, paragraphe d’introduction",
+      "holderId": "musee-du-quai-branly"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-head-quai-branly-71-1930-35-1",
+      "predicate": "described_as",
+      "value": "Dimensions : 170 x 100 x 90 cm",
+      "locator": "Fiche, dimensions"
+    }
+  ],
+  "images": [],
+  "notes": {
+    "text": "The fiche gives the inventory number, classification, date, material and dimensions for this particular head. It is reconciled to the monumental head encountered by the family in Te Kuhane at 00:43:05: the film shows a single monumental head in the museum gallery, whose scale and squared brow, projecting nose and mouth profile agree with the photograph by Thesupermat captioned 71.1930.35.1 (https://commons.wikimedia.org/wiki/File:Paris_-_Mus%C3%A9e_du_quai_Branly_-_T%C3%AAte_d%27anc%C3%AAtre_moai_-_71.1930.35.1_-_001.jpg). The separate close-up at 00:42:25 shows a smaller head and is not matched to this object. The fiche was inspected online; no preserved copy is attached. The authorised film still is registered with the film, not this publication.",
+    "language": "en-GB"
+  }
+}

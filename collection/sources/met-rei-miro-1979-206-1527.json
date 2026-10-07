@@ -63,7 +63,8 @@
       "id": "holder",
       "objectId": "reimiro-new-york-1979-206-1527",
       "predicate": "held_by",
-      "value": "The Metropolitan Museum of Art"
+      "value": "The Metropolitan Museum of Art",
+      "holderId": "metropolitan-museum-of-art"
     },
     {
       "id": "display-status",

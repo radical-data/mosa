@@ -1,0 +1,12 @@
+{
+  "name": "Rautenstrauch-Joest-Museum",
+  "visitUrl": "https://rautenstrauch-joest-museum.de/Service",
+  "aliases": ["Rautenstrauch-Joest Museum"],
+  "location": {
+    "name": "Cologne, Germany",
+    "precision": "locality",
+    "longitude": 6.9603,
+    "latitude": 50.9375,
+    "reference": "https://www.openstreetmap.org/?mlat=50.9375&mlon=6.9603#map=10/50.9375/6.9603"
+  }
+}

@@ -1,9 +1,108 @@
 ---
-interface Props { title: string; image?: string; }
+import { Image } from "astro:assets";
+import { siteImages } from "../assets/site-images";
+import type { SiteImageId } from "../data/site-image-ids";
+
+type PageIntroArtId = Extract<SiteImageId, "mahute" | "rongorongo">;
+
+interface Props { title: string; image?: PageIntroArtId; }
 const { title, image } = Astro.props;
 ---
 <section class:list={["page-intro container", { "has-art": image }]}>
   <h1>{title}</h1>
   <div class="intro-copy"><slot /></div>
-  {image && <img class="intro-art" src={`/images/${image}.webp`} alt="" aria-hidden="true" width="300" height="360" />}
+  {image && <Image class="intro-art" src={siteImages[image]} alt="" aria-hidden="true" loading="eager" />}
 </section>
+
+<style>
+.page-intro {
+  position: relative;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
+}
+.page-intro h1 {
+  margin-bottom: 2.75rem;
+}
+.intro-copy {
+  max-width: 950px;
+}
+.has-art .intro-copy {
+  max-width: 76%;
+}
+.intro-art {
+  position: absolute;
+  right: var(--gutter);
+  top: 4rem;
+  width: 15%;
+  height: 230px;
+  object-fit: contain;
+  transform: rotate(-13deg);
+}
+@media (max-width: 800px) {
+.page-intro {
+    padding-top: 2rem;
+  }
+.page-intro h1 {
+    margin-bottom: 2rem;
+  }
+.intro-art {
+    height: 170px;
+    top: 2.5rem;
+    width: 17%;
+  }
+.has-art .intro-copy {
+    max-width: 78%;
+  }
+}
+@media (max-width: 520px) {
+.page-intro.has-art {
+    padding-top: 3rem;
+  }
+.intro-art {
+    width: 20%;
+    height: 115px;
+    top: 1rem;
+  }
+.has-art h1 {
+    max-width: 75%;
+  }
+.has-art .intro-copy {
+    max-width: 100%;
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 520px) {
+.page-intro,
+  .page-intro.has-art {
+    padding-top: 22px;
+    padding-bottom: 3rem;
+  }
+.page-intro h1,
+  .has-art h1 {
+    max-width: 100%;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+  }
+.page-intro .intro-copy,
+  .has-art .intro-copy {
+    max-width: 315px;
+    margin-top: 0;
+    font-size: 0.875rem;
+    line-height: 1.35;
+  }
+.page-intro .intro-art {
+    display: none;
+  }
+}
+@media (max-width: 380px) {
+.intro-art {
+    display: none;
+  }
+.has-art h1 {
+    max-width: 100%;
+  }
+}
+</style>

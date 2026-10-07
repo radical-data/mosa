@@ -1,0 +1,12 @@
+{
+  "name": "Museo Etnologico Anima Mundi",
+  "visitUrl": "https://www.museivaticani.va/content/museivaticani/en/info.html",
+  "aliases": ["Museo Misionero Etnologico", "Museo Missionario Etnologico"],
+  "location": {
+    "name": "Vatican City",
+    "precision": "locality",
+    "longitude": 12.4534,
+    "latitude": 41.9029,
+    "reference": "https://www.openstreetmap.org/?mlat=41.9029&mlon=12.4534#map=10/41.9029/12.4534"
+  }
+}

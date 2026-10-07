@@ -2,6 +2,7 @@
   "author": "British Museum",
   "title": "British Museum collection record for Hoa Hakananaiʻa",
   "kind": "webpage",
+  "topics": ["displacement", "restitution", "museum-practices"],
   "reference": "https://www.britishmuseum.org/collection/object/E_Oc1869-1005-1",
   "language": "en",
   "claims": [
@@ -27,7 +28,8 @@
       "id": "holder",
       "objectId": "hoa-hakananai-a",
       "predicate": "held_by",
-      "value": "British Museum"
+      "value": "British Museum",
+      "holderId": "british-museum"
     },
     {
       "id": "made-at",

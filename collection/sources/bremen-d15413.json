@@ -63,7 +63,8 @@
       "id": "holding-institution",
       "objectId": "moko-bremen-d15413",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     }
   ],
   "notes": {

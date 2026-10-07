@@ -1,0 +1,116 @@
+{
+  "author": "Ethnologisches Museum, Staatliche Museen zu Berlin",
+  "title": "Humboldt Forum Collections Online record for VI 4919",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/162877-ruder",
+  "language": "en",
+  "claims": [
+    {
+      "id": "catalogue-number",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "catalogue_number",
+      "value": "VI 4919"
+    },
+    {
+      "id": "name",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "has_name",
+      "value": "Ruder (?)",
+      "language": "de"
+    },
+    {
+      "id": "classification",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "classified_as",
+      "value": "Ruder (?)",
+      "language": "de"
+    },
+    {
+      "id": "participants-expedition",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "described_as",
+      "value": "S.M.S. Hyäne (Expedition)"
+    },
+    {
+      "id": "participants-collector",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "described_as",
+      "value": "Wilhem Geiseler (Collector)"
+    },
+    {
+      "id": "date",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "made_during",
+      "value": "vor 1883",
+      "language": "de"
+    },
+    {
+      "id": "material",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 53,5 x 15 x 12,5 cm",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "holder",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "ruder-berlin-vi-4919",
+      "predicate": "described_as",
+      "value": "Zugang ungeklärt, von Kanonenboot S.M.S. Hyäne, Wilhelm Geiseler 1883",
+      "language": "de"
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields inspected on 4 October 2026. The question mark in the title and type is retained. German field values retain their original wording. Places/Cultures is retained as a combined source description, not treated as a making place. The image is represented by a separate photograph source; its image-specific CC BY-NC-SA 4.0 credit was inspected, and its unchanged local image is registered.",
+    "language": "en-GB"
+  },
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-4919-photograph"
+      }
+    }
+  ],
+  "captures": [
+    {
+      "file": "2026-10-04t22-02-18-310z.html",
+      "capturedAt": "2026-10-04T22:02:18.310Z",
+      "method": "singlefile"
+    }
+  ]
+}

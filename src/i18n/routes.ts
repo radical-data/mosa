@@ -16,6 +16,20 @@ export const routes = {
 } as const;
 export type PageId = keyof typeof routes;
 export const pageIds = Object.keys(routes) as PageId[];
+export const resourceRoutes = {
+  guide: { es: "/es/recursos/guia-de-restitucion/", en: "/en/resources/restitution-guide/" },
+  letter: { es: "/es/recursos/modelo-de-carta/", en: "/en/resources/restitution-letter-template/" },
+  directory: {
+    es: "/es/recursos/directorio-de-organizaciones/",
+    en: "/en/resources/organisation-directory/",
+  },
+  actors: { es: "/es/recursos/mapeo-de-actores/", en: "/en/resources/participant-map/" },
+} as const;
+export type ResourceId = keyof typeof resourceRoutes;
+export const resourceIds = Object.keys(resourceRoutes) as ResourceId[];
+export function resourcePath(resource: ResourceId, locale: Locale): string {
+  return resourceRoutes[resource][locale];
+}
 export function pagePath(page: PageId, locale: Locale): string {
   return routes[page][locale];
 }
@@ -39,17 +53,33 @@ export function publicRecordPath(
 // Anchors are stable identities shared by both templates. No guessed fragments.
 export const anchors: Record<PageId, readonly string[]> = {
   home: ["main", "collection-title", "resources-title", "events-title"],
-  about: ["main"],
+  about: ["main", "team"],
   collection: ["main", "more-information", "collection-results"],
   visit: ["main"],
   events: ["main"],
-  resources: ["main", "guide", "letter", "directory", "generator"],
-  contact: ["main", "contact-privacy-title", "contact-email-help"],
+  resources: [
+    "main",
+    "guide",
+    "letter",
+    "directory",
+    "actors",
+    "readings",
+    "begin",
+    "translate",
+    "sustain",
+    "reconnect",
+  ],
+  contact: ["main", "contact-privacy-title", "contact-email-help", "newsletter"],
 };
 export function languageLink(page: PageId, locale: Locale, current: URL): string {
   let targetPath = pagePath(page, locale);
   let filterKeys: string[] = [];
   const path = current.pathname;
+  const resourceMatch = Object.entries(resourceRoutes).find(
+    ([, paths]) => paths.es === path || paths.en === path,
+  );
+  if (page === "resources" && resourceMatch)
+    targetPath = resourcePath(resourceMatch[0] as ResourceId, locale);
   const sourceMatch = /^\/(?:en\/sources|es\/fuentes)(?:\/([^/]+))?\/?$/.exec(path);
   const articleMatch = /^\/(?:en\/articles|es\/articulos)(?:\/([^/]+))?\/?$/.exec(path);
   const objectPrefix =
@@ -75,6 +105,11 @@ export function languageLink(page: PageId, locale: Locale, current: URL): string
     const value = current.searchParams.get(key);
     if (value) target.searchParams.set(key, value);
   }
-  if (anchors[page].some((anchor) => `#${anchor}` === current.hash)) target.hash = current.hash;
+  const validAnchors = resourceMatch
+    ? resourceMatch[0] === "guide"
+      ? ["main", "begin", "translate", "sustain", "reconnect"]
+      : ["main"]
+    : anchors[page];
+  if (validAnchors.some((anchor) => `#${anchor}` === current.hash)) target.hash = current.hash;
   return `${target.pathname}${target.search}${target.hash}`;
 }

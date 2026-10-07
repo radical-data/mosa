@@ -1,0 +1,22 @@
+{
+  "title": "The Other Nefertiti",
+  "kind": "artwork",
+  "author": "Nora Al-Badri and Jan Nikolai Nelles",
+  "reference": "https://alloversky.com/puzzlepieces/the-other-nefertiti",
+  "language": "en",
+  "date": "2015",
+  "topics": ["displacement", "restitution", "museum-practices", "representations"],
+  "claims": [],
+  "images": [],
+  "notes": {
+    "text": "The artists describe this digital object, intervention, 3D print and video as a challenge to colonial possession and restricted access to cultural heritage. Their account says that they clandestinely scanned the bust of Nefertiti in Berlin, released the data, exhibited a 3D print in Cairo and buried it in the Sahara as a counter-act to excavation. The Stiftung Preussischer Kulturbesitz disputed that the published data could have been produced by the method shown (https://www.smb.museum/en/research/whats-new/detail/response-to-the-alleged-nefertiti-hack-at-the-neues-museum/). This record therefore documents the artwork and the artists' stated procedure, not independent verification of the scan's technical origin. No MoSA object relationship is established, and no image or 3D file is republished.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-03t20-08-15-033z.html",
+      "capturedAt": "2026-10-03T20:08:15.033Z",
+      "method": "singlefile"
+    }
+  ]
+}

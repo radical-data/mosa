@@ -1,0 +1,12 @@
+{
+  "name": "Museo de Concepción",
+  "visitUrl": "https://www.mhnconcepcion.gob.cl/planifica-tu-visita",
+  "aliases": ["Museo de Concepcion"],
+  "location": {
+    "name": "Concepción, Chile",
+    "precision": "locality",
+    "longitude": -73.0444,
+    "latitude": -36.8201,
+    "reference": "https://www.openstreetmap.org/?mlat=-36.8201&mlon=-73.0444#map=10/-36.8201/-73.0444"
+  }
+}

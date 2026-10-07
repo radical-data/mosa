@@ -14,6 +14,9 @@ const Content = article.Content;
 const language = new Intl.DisplayNames([locale === "en" ? "en-GB" : "es-CL"], {
   type: "language",
 }).of(article.language);
+const languageLabel = language?.replace(/^./u, (letter) =>
+  letter.toLocaleUpperCase(locale === "en" ? "en-GB" : "es-CL"),
+);
 const copy = {
   en: { by: "By", language: "Published in" },
   es: { by: "Por", language: "Publicado en" },
@@ -25,7 +28,7 @@ const t = copy[locale];
   <header>
     {showTitle && <h2 lang={article.language}><a href={publicRecordPath("articles", article.id, locale)}>{article.title}</a></h2>}
     <p class="small muted">
-      {article.author && <>{t.by} <span lang={article.language}>{article.author}</span> · </>}{t.language} {language ?? article.language}
+      {article.author && <>{t.by} <span lang={article.language}>{article.author}</span> · </>}{t.language} {languageLabel ?? article.language}
     </p>
   </header>
   <div class="article-prose" lang={article.language}><Content /></div>

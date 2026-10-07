@@ -1,0 +1,12 @@
+{
+  "name": "New Brunswick Museum",
+  "visitUrl": "https://www.nbm-mnb.ca/en/contact-us/",
+  "aliases": ["New Bruswick Museum"],
+  "location": {
+    "name": "Saint John, New Brunswick, Canada (approximate)",
+    "precision": "locality",
+    "longitude": -66.038889,
+    "latitude": 45.259167,
+    "reference": "https://www.nbm-mnb.ca/en/contact-us/"
+  }
+}

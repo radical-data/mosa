@@ -1,0 +1,50 @@
+---
+import { resourceLabels } from "../data/resources";
+import { type Locale, pagePath, type ResourceId } from "../i18n/routes";
+import Layout from "../layouts/Layout.astro";
+
+interface Props { locale: Locale; resource: ResourceId; }
+
+const { locale, resource } = Astro.props;
+const label = resourceLabels[locale][resource];
+const isEnglish = locale === "en";
+---
+
+<Layout locale={locale} page="resources" resource={resource} title={`${label.title} — MoSA`} description={label.description}>
+  <nav class="container resource-breadcrumb" aria-label={isEnglish ? "Breadcrumb" : "Migas de pan"}>
+    <a href={pagePath("resources", locale)}>{isEnglish ? "Resources" : "Recursos"}</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{label.title}</span>
+  </nav>
+  <slot />
+  <div class="container resource-detail-back">
+    <a href={pagePath("resources", locale)}>← {isEnglish ? "Back to resources" : "Volver a recursos"}</a>
+  </div>
+</Layout>
+
+<style>
+  .resource-breadcrumb {
+    display: flex;
+    gap: 0.65rem;
+    padding-top: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .resource-detail-back {
+    padding-block: 3rem 6rem;
+  }
+
+  .resource-detail-back a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  @media print {
+    :global(.site-header),
+    .resource-breadcrumb,
+    .resource-detail-back {
+      display: none;
+    }
+  }
+</style>

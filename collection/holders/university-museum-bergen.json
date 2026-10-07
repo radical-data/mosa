@@ -1,0 +1,11 @@
+{
+  "name": "University Museum of Bergen",
+  "visitUrl": "https://www4.uib.no/en/university-museum-of-bergen/visit-the-museum/plan-your-visit",
+  "location": {
+    "name": "Bergen, Norway",
+    "precision": "locality",
+    "longitude": 5.3221,
+    "latitude": 60.3913,
+    "reference": "https://www.openstreetmap.org/?mlat=60.3913&mlon=5.3221#map=10/60.3913/5.3221"
+  }
+}

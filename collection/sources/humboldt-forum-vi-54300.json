@@ -1,0 +1,102 @@
+{
+  "author": "Humboldt Forum Collections Online",
+  "title": "Humboldt Forum Collections Online record for moai tangata — VI 54300",
+  "kind": "webpage",
+  "reference": "https://sammlungenonline.humboldtforum.org/en/object-catalogue/165783-moai-tangata",
+  "language": "en-GB",
+  "claims": [
+    {
+      "id": "catalogue-title",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "classified_as",
+      "value": "moai tangata"
+    },
+    {
+      "id": "object-type",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "classified_as",
+      "value": "Figur",
+      "language": "de"
+    },
+    {
+      "id": "catalogue-number",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "catalogue_number",
+      "value": "VI 54300"
+    },
+    {
+      "id": "holder",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "held_by",
+      "value": "Ethnologisches Museum - Staatliche Museen zu Berlin",
+      "holderId": "ethnologisches-museum-berlin"
+    },
+    {
+      "id": "material-technique",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "made_of",
+      "value": "Holz, geschnitzt",
+      "language": "de"
+    },
+    {
+      "id": "places-cultures",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "described_as",
+      "value": "Polynesien [Großregion]; Osterinsel (Rapa Nui) [Insel]",
+      "language": "de"
+    },
+    {
+      "id": "dimensions",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "described_as",
+      "value": "Höhe x Breite x Tiefe: 28 x 6 x 7 cm",
+      "language": "de"
+    },
+    {
+      "id": "previous-owner",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "described_as",
+      "value": "Dr. Stölpel (Previous owner)"
+    },
+    {
+      "id": "exhibition-format",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "described_as",
+      "value": "Exhibition Format: Original"
+    },
+    {
+      "id": "exhibition-module",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "described_as",
+      "value": "Module 15 Collections from Oceania"
+    },
+    {
+      "id": "acquisition-context",
+      "objectId": "moai-tangata-berlin-vi-54300",
+      "predicate": "described_as",
+      "value": "Zugang ungeklärt",
+      "language": "de"
+    }
+  ],
+  "images": [],
+  "relationships": [
+    {
+      "type": "reproduces",
+      "target": {
+        "type": "source",
+        "id": "humboldt-forum-vi-54300-photograph"
+      }
+    }
+  ],
+  "notes": {
+    "text": "Selective transcription of the displayed catalogue fields. The Places / Cultures entry is retained as the catalogue's categorisation and is not treated as evidence of manufacture or findspot. The page lists Module 15 Collections from Oceania. Image-specific credit and CC BY-NC-SA 4.0 terms were reviewed; the versioned image asset is represented by the linked photograph source.",
+    "language": "en-GB"
+  },
+  "captures": [
+    {
+      "file": "2026-10-04t20-47-08-975z.html",
+      "capturedAt": "2026-10-04T20:47:08.975Z",
+      "method": "singlefile"
+    }
+  ]
+}

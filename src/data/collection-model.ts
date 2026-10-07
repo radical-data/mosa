@@ -26,12 +26,45 @@ export interface Claim {
   objectId: string;
   predicate: Predicate;
   value: string;
+  language?: string;
   locator?: string;
+  holderId?: string;
+}
+
+export interface Holder {
+  id: string;
+  name: string;
+  aliases?: string[];
+  visitUrl?: string;
+  location?: GeocodedLocation;
+}
+
+export type LocationPrecision = "site" | "locality" | "region" | "country";
+
+export interface GeocodedLocation {
+  name: string;
+  precision: LocationPrecision;
+  longitude: number;
+  latitude: number;
+  reference: string;
+}
+
+export type LocationStatus = "reported" | "historical" | "uncertain" | "unknown";
+
+export interface ObjectLocation {
+  id: string;
+  status: LocationStatus;
+  claimReferences: string[];
+  holderId?: string;
+  location?: GeocodedLocation;
+  reviewedAt: string;
+  note?: { text: string; language: string };
 }
 
 export interface CollectionImage {
   file: string;
   alt: string;
+  depicts?: string[];
   originalUrl?: string;
   caption?: string;
   credit?: string;
@@ -92,6 +125,7 @@ export interface SourceCapture {
 
 export interface Source {
   id: string;
+  articleId?: string;
   title: string;
   kind: SourceKind;
   author: string | null;
@@ -119,6 +153,8 @@ export interface ArticleMetadata {
 export interface CollectionData {
   objects: CollectionObject[];
   sources: Source[];
+  holders?: Holder[];
+  locations?: ObjectLocation[];
 }
 
 const identifier = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -133,6 +169,7 @@ const captureMethods: SourceCaptureMethod[] = [
 ];
 const objectKeys = ["foregroundedClaims", "name"];
 const sourceKeys = [
+  "articleId",
   "author",
   "captures",
   "claims",
@@ -147,12 +184,14 @@ const sourceKeys = [
   "title",
   "topics",
 ];
-const claimKeys = ["id", "objectId", "predicate", "value", "locator"];
-const imageKeys = ["alt", "caption", "credit", "file", "originalUrl", "rights"];
+const claimKeys = ["id", "objectId", "predicate", "value", "language", "locator", "holderId"];
+const imageKeys = ["alt", "caption", "credit", "depicts", "file", "originalUrl", "rights"];
 const relationshipKeys = ["locator", "target", "type"];
 const recordReferenceKeys = ["id", "type"];
 const captureKeys = ["archiveUrl", "capturedAt", "file", "method", "note", "originalUrl"];
 const captureExtensions = "html|pdf|jpg|jpeg|png|webp|avif|tif|tiff";
+const locationPrecisions: LocationPrecision[] = ["site", "locality", "region", "country"];
+const locationStatuses: LocationStatus[] = ["reported", "historical", "uncertain", "unknown"];
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
   !!value && typeof value === "object" && !Array.isArray(value);
@@ -226,6 +265,130 @@ export function parseObject(value: unknown, file: string): CollectionObject {
   return { ...(value as Omit<CollectionObject, "id">), id: objectId };
 }
 
+function parseGeocodedLocation(value: unknown, at: string, errors: string[]) {
+  add(errors, isObject(value), `${at} must be an object`);
+  if (!isObject(value)) return;
+  add(
+    errors,
+    sameKeys(value, ["name", "precision", "longitude", "latitude", "reference"]),
+    `${at} contains an unsupported field`,
+  );
+  add(errors, text(value.name), `${at}.name is required`);
+  add(
+    errors,
+    locationPrecisions.includes(value.precision as LocationPrecision),
+    `${at}.precision is unsupported`,
+  );
+  add(
+    errors,
+    typeof value.longitude === "number" &&
+      Number.isFinite(value.longitude) &&
+      value.longitude >= -180 &&
+      value.longitude <= 180,
+    `${at}.longitude must be between -180 and 180`,
+  );
+  add(
+    errors,
+    typeof value.latitude === "number" &&
+      Number.isFinite(value.latitude) &&
+      value.latitude >= -90 &&
+      value.latitude <= 90,
+    `${at}.latitude must be between -90 and 90`,
+  );
+  add(errors, validHttpUrl(value.reference), `${at}.reference must be an http(s) URL`);
+}
+
+export function parseHolder(value: unknown, file: string): Holder {
+  const errors: string[] = [];
+  const holderId = fileId(file, "json");
+  add(errors, isObject(value), `${file}: expected an object`);
+  if (!isObject(value)) throw Error(errors.join("\n"));
+  add(
+    errors,
+    sameKeys(value, ["name", "aliases", "location", "visitUrl"]),
+    `${file}: contains an unsupported field`,
+  );
+  add(errors, text(value.name), `${file}: name is required`);
+  if ("aliases" in value) {
+    add(errors, Array.isArray(value.aliases), `${file}: aliases must be an array`);
+    if (Array.isArray(value.aliases)) {
+      add(errors, value.aliases.every(text), `${file}: aliases contains an invalid alias`);
+      add(
+        errors,
+        new Set(value.aliases).size === value.aliases.length,
+        `${file}: aliases contains duplicates`,
+      );
+    }
+  }
+  if ("location" in value) parseGeocodedLocation(value.location, `${file}: location`, errors);
+  if ("visitUrl" in value)
+    add(errors, validHttpUrl(value.visitUrl), `${file}: visitUrl must be an http(s) URL`);
+  if (errors.length) throw Error(errors.join("\n"));
+  return { ...(value as Omit<Holder, "id">), id: holderId };
+}
+
+export function parseLocation(value: unknown, file: string): ObjectLocation {
+  const errors: string[] = [];
+  const objectId = fileId(file, "json");
+  add(errors, isObject(value), `${file}: expected an object`);
+  if (!isObject(value)) throw Error(errors.join("\n"));
+  add(
+    errors,
+    sameKeys(value, ["status", "claimReferences", "holderId", "location", "reviewedAt", "note"]),
+    `${file}: contains an unsupported field`,
+  );
+  add(
+    errors,
+    locationStatuses.includes(value.status as LocationStatus),
+    `${file}: status is unsupported`,
+  );
+  add(errors, Array.isArray(value.claimReferences), `${file}: claimReferences must be an array`);
+  if (Array.isArray(value.claimReferences)) {
+    add(
+      errors,
+      value.claimReferences.every(reference),
+      `${file}: claimReferences contains an invalid claim reference`,
+    );
+    add(
+      errors,
+      new Set(value.claimReferences).size === value.claimReferences.length,
+      `${file}: claimReferences contains duplicates`,
+    );
+  }
+  if ("holderId" in value) add(errors, id(value.holderId), `${file}: holderId is invalid`);
+  if ("location" in value) parseGeocodedLocation(value.location, `${file}: location`, errors);
+  add(
+    errors,
+    typeof value.reviewedAt === "string" &&
+      /^\d{4}-\d{2}-\d{2}$/.test(value.reviewedAt) &&
+      Number.isFinite(Date.parse(`${value.reviewedAt}T00:00:00Z`)) &&
+      new Date(`${value.reviewedAt}T00:00:00Z`).toISOString().slice(0, 10) === value.reviewedAt,
+    `${file}: reviewedAt must be a valid YYYY-MM-DD date`,
+  );
+  if ("note" in value) {
+    add(errors, isObject(value.note), `${file}: note must be an object`);
+    if (isObject(value.note)) {
+      add(
+        errors,
+        sameKeys(value.note, ["text", "language"]),
+        `${file}: note contains an unsupported field`,
+      );
+      add(errors, text(value.note.text), `${file}: note.text is required`);
+      add(
+        errors,
+        typeof value.note.language === "string" && language.test(value.note.language),
+        `${file}: note.language is invalid`,
+      );
+    }
+  }
+  if (value.status === "unknown")
+    add(errors, !("location" in value), `${file}: unknown location cannot have a location`);
+  if (["historical", "uncertain"].includes(String(value.status)))
+    add(errors, "note" in value, `${file}: ${value.status} location requires a note`);
+  if (errors.length) throw Error(errors.join("\n"));
+  return { ...(value as Omit<ObjectLocation, "id">), id: objectId };
+}
+
 export function parseSource(value: unknown, file: string): Source {
   const errors: string[] = [];
   const sourceId = fileId(file, "json");
@@ -234,6 +397,14 @@ export function parseSource(value: unknown, file: string): Source {
   add(errors, sameKeys(value, sourceKeys), `${file}: contains an unsupported field`);
   add(errors, text(value.title), `${file}: title is required`);
   add(errors, sourceKinds.includes(value.kind as SourceKind), `${file}: kind is unsupported`);
+  if ("articleId" in value) {
+    add(errors, id(value.articleId), `${file}: articleId is invalid`);
+    add(
+      errors,
+      value.kind === "publication",
+      `${file}: articleId is only allowed for publication sources`,
+    );
+  }
   add(errors, value.author === null || text(value.author), `${file}: author must be text or null`);
   add(errors, text(value.reference), `${file}: reference is required`);
   add(
@@ -408,8 +579,22 @@ export function parseSource(value: unknown, file: string): Source {
         `${at}.predicate is unsupported`,
       );
       add(errors, text(claim.value), `${at}.value is required`);
+      if ("language" in claim)
+        add(
+          errors,
+          typeof claim.language === "string" && language.test(claim.language),
+          `${at}.language is invalid`,
+        );
       if ("locator" in claim)
         add(errors, text(claim.locator), `${at}.locator must be non-empty text`);
+      if ("holderId" in claim) {
+        add(errors, id(claim.holderId), `${at}.holderId is invalid`);
+        add(
+          errors,
+          claim.predicate === "held_by",
+          `${at}.holderId is only allowed for held_by claims`,
+        );
+      }
     });
   if (Array.isArray(value.images))
     value.images.forEach((entry, index) => {
@@ -423,6 +608,17 @@ export function parseSource(value: unknown, file: string): Source {
         `${at}.file must be a safe collection image path`,
       );
       add(errors, typeof entry.alt === "string", `${at}.alt is required`);
+      if ("depicts" in entry) {
+        add(errors, Array.isArray(entry.depicts), `${at}.depicts must be an array`);
+        if (Array.isArray(entry.depicts)) {
+          add(errors, entry.depicts.every(id), `${at}.depicts contains an invalid object ID`);
+          add(
+            errors,
+            new Set(entry.depicts).size === entry.depicts.length,
+            `${at}.depicts contains duplicates`,
+          );
+        }
+      }
       for (const field of ["caption", "credit", "rights"])
         if (field in entry) add(errors, text(entry[field]), `${at}.${field} cannot be empty`);
       if ("originalUrl" in entry) {
@@ -452,6 +648,8 @@ export function validateCollection(
   const objects = new Map<string, CollectionObject>();
   const claims = new Map<string, Claim>();
   const sources = new Set<string>();
+  const holders = new Map<string, Holder>();
+  const locations = new Map<string, ObjectLocation>();
   for (const object of data.objects) {
     if (objects.has(object.id)) errors.push(`duplicate object id: ${object.id}`);
     objects.set(object.id, object);
@@ -468,6 +666,18 @@ export function validateCollection(
         )
         .map((relationship) => relationship.target.id),
     );
+    for (const [index, image] of source.images.entries()) {
+      for (const objectId of image.depicts ?? []) {
+        if (!objects.has(objectId))
+          errors.push(
+            `${source.id}.json: images[${index}].depicts refers to missing object ${objectId}`,
+          );
+        if (!depictedObjects.has(objectId))
+          errors.push(
+            `${source.id}.json: images[${index}].depicts object ${objectId} is not depicted by the source`,
+          );
+      }
+    }
     for (const objectId of source.objectIds ?? []) {
       if (!objects.has(objectId))
         errors.push(`${source.id}.json: objectIds refers to missing object ${objectId}`);
@@ -513,6 +723,46 @@ export function validateCollection(
         errors.push(`${source.id}.json: ${type} cannot target itself`);
     }
   }
+  for (const holder of data.holders ?? []) {
+    if (holders.has(holder.id)) errors.push(`duplicate holder id: ${holder.id}`);
+    holders.set(holder.id, holder);
+  }
+  for (const location of data.locations ?? []) {
+    if (locations.has(location.id))
+      errors.push(`duplicate location assessment for object: ${location.id}`);
+    locations.set(location.id, location);
+  }
+  for (const source of data.sources)
+    for (const claim of source.claims)
+      if (claim.holderId && !holders.has(claim.holderId))
+        errors.push(
+          `${source.id}/${claim.id}: holderId refers to missing holder ${claim.holderId}`,
+        );
+  for (const location of locations.values()) {
+    if (!objects.has(location.id))
+      errors.push(
+        `${location.id}.json: location assessment refers to missing object ${location.id}`,
+      );
+    if (location.holderId && !holders.has(location.holderId))
+      errors.push(`${location.id}.json: holderId refers to missing holder ${location.holderId}`);
+    let resolvesHolder = Boolean(location.holderId);
+    for (const claimRef of location.claimReferences) {
+      const claim = claims.get(claimRef);
+      if (!claim)
+        errors.push(`${location.id}.json: claimReferences refers to missing claim ${claimRef}`);
+      else {
+        if (claim.objectId !== location.id)
+          errors.push(
+            `${location.id}.json: claimReferences claim ${claimRef} is about ${claim.objectId}`,
+          );
+        if (claim.holderId) resolvesHolder = true;
+      }
+    }
+    if (location.status !== "unknown" && !location.location && !resolvesHolder)
+      errors.push(
+        `${location.id}.json: ${location.status} assessment must select a mapped location or resolved holder claim`,
+      );
+  }
   const parentSources = new Map<string, string[]>();
   for (const source of data.sources)
     for (const relationship of source.relationships ?? [])
@@ -546,6 +796,8 @@ export function validateCollection(
   return {
     objects: [...objects.values()].sort((a, b) => a.id.localeCompare(b.id)),
     sources: [...data.sources].sort((a, b) => a.id.localeCompare(b.id)),
+    holders: [...holders.values()].sort((a, b) => a.id.localeCompare(b.id)),
+    locations: [...locations.values()].sort((a, b) => a.id.localeCompare(b.id)),
     claims,
   };
 }
@@ -593,10 +845,48 @@ export function validateArticleSubjects(
   file: string,
 ) {
   const objectIds = new Set(data.objects.map((object) => object.id));
-  const sourceIds = new Set(data.sources.map((source) => source.id));
+  const sources = new Map(data.sources.map((source) => [source.id, source]));
   for (const subject of metadata.subjects ?? []) {
-    const exists =
-      subject.type === "object" ? objectIds.has(subject.id) : sourceIds.has(subject.id);
+    const exists = subject.type === "object" ? objectIds.has(subject.id) : sources.has(subject.id);
     if (!exists) throw Error(`${file}: refers to missing ${subject.type} ${subject.id}`);
   }
+}
+
+export function validateArticlePublicationSource(
+  article: ArticleMetadata,
+  sources: Source[],
+  file: string,
+) {
+  const matches = sources.filter((source) => source.articleId === article.id);
+  if (matches.length !== 1)
+    throw Error(`${file}: expected exactly one publication source with articleId ${article.id}`);
+  const source = matches[0];
+  if (source.kind !== "publication")
+    throw Error(
+      `${file}: source ${source.id} for article ${article.id} must have kind publication`,
+    );
+  if (
+    source.title !== article.title ||
+    source.author !== article.author ||
+    source.language !== article.language
+  )
+    throw Error(`${file}: article metadata must match publication source ${source.id}`);
+}
+
+export function validateUniqueSourceArticleLinks(sources: Source[], articles: ArticleMetadata[]) {
+  const articleIds = new Set(articles.map((article) => article.id));
+  const sourcesByArticle = new Map<string, string[]>();
+  for (const source of sources) {
+    if (!source.articleId) continue;
+    if (!articleIds.has(source.articleId))
+      throw Error(`source ${source.id} refers to missing article ${source.articleId}`);
+    const matches = sourcesByArticle.get(source.articleId) ?? [];
+    matches.push(source.id);
+    sourcesByArticle.set(source.articleId, matches);
+  }
+  const duplicate = [...sourcesByArticle].find(([, sourceIds]) => sourceIds.length > 1);
+  if (duplicate)
+    throw Error(
+      `article ${duplicate[0]} is assigned to multiple publication sources: ${duplicate[1].join(", ")}`,
+    );
 }

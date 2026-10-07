@@ -1,0 +1,11 @@
+{
+  "name": "The Metropolitan Museum of Art",
+  "visitUrl": "https://www.metmuseum.org/plan-your-visit",
+  "location": {
+    "name": "New York, United States",
+    "precision": "site",
+    "longitude": -73.96292,
+    "latitude": 40.77955,
+    "reference": "https://www.wikidata.org/wiki/Q160236#P625"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Tūhura Otago Museum",
+  "aliases": ["Otago Museum"],
+  "visitUrl": "https://tuhura.nz/visit/opening-hours/",
+  "location": {
+    "name": "Dunedin, New Zealand",
+    "precision": "locality",
+    "longitude": 170.5028,
+    "latitude": -45.8788,
+    "reference": "https://www.openstreetmap.org/?mlat=-45.8788&mlon=170.5028#map=10/-45.8788/170.5028"
+  }
+}

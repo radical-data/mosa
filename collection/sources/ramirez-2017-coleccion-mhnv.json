@@ -15,7 +15,8 @@
       "id": "mhnv-1-holder",
       "objectId": "paoa-valparaiso-mhnv-1-registro-surdoc-4-1984",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "mhnv-21-inventory",
@@ -27,7 +28,8 @@
       "id": "mhnv-21-holder",
       "objectId": "moai-kavakava-valparaiso-mhnv-21-registro-surdoc-4-2214",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "mhnv-3-inventory",
@@ -39,7 +41,8 @@
       "id": "mhnv-3-holder",
       "objectId": "moai-tangata-valparaiso-mhnv-3-registro-surdoc-4-1914",
       "predicate": "held_by",
-      "value": "Museo de Historia Natural de Valparaíso"
+      "value": "Museo de Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     },
     {
       "id": "mhnv-1-type",

@@ -2,9 +2,13 @@
 subjects:
   - type: object
     id: hoa-hakananai-a
+  - type: object
+    id: moai-hava-british-museum
+  - type: source
+    id: te-kuhane-o-te-tupuna
 title: Hoa Haka Nana Ia
 summary: La historia de Hoa Haka Nana Ia, su traslado a Inglaterra y las disputas sobre su nombre y su retorno a Rapa Nui.
-author: null
+author: Paula Rossetti, Leo Pakarati, Ana María Arredondo
 language: es-CL
 ---
 
@@ -18,7 +22,9 @@ Jotefa, uno de los testimonios recogidos por Routledge, relató que él, nueve n
 
 Más allá de su papel en esta ceremonia, no se sabe si el moai estuvo en algún momento sobre un *ahu* (altar). Es posible que representara la dignidad del *ariki henua*, el rey reconocido por todos los clanes, quien presidía la ceremonia del *tangata manu* y luego se retiraba. Otras versiones de la tradición oral también sostienen que este moai, junto a otras estructuras de piedra distribuidas a lo largo del territorio, marcaba la división de la isla entre dos grandes sectores que agrupaban a los distintos clanes.
 
-**1868: la llegada del Topaze**
+## 1868: la llegada del Topaze
+
+*Paula Rossetti, Leo Pakarati y Ana María Arredondo*
 
 En 1868 llegó a la isla una expedición inglesa en el barco *Topaze*, al mando de Richard Ashmore Powell, quien fue informado durante su estadía de que el moai se encontraba en la casa *Taura Renga* en *Orongo*.
 
@@ -32,24 +38,28 @@ En esa misma ocasión se llevaron también el *moai Hava*, de menor tamaño, que
 
 Este acontecimiento quedó registrado en un tatuaje en el brazo de un hombre llamado Tepano, donde aparecían hombres trasladando el moai y un jefe sobre la estatua, con un báculo. Este diseño se conoció gracias al registro dejado por el sueco Stolpe, quien estuvo en Tahiti hacia 1883 y conoció a este hombre rapa nui.
 
-**El traslado a Inglaterra**
+## El traslado a Inglaterra
+
+*Paula Rossetti, Leo Pakarati y Ana María Arredondo*
 
 Ambos moai, Hoa Haka Nana ia y Hava, llegaron a Inglaterra en 1869. El Almirantazgo los entregó a la Reina Victoria, quien determinó que debían trasladarse al Museo Británico.
 
 Hoa Haka Nana ia permaneció en el Museo Británico hasta 1940, año en que este cerró debido a la guerra. Finalizada esta, y años más tarde, fue trasladado al Museum of Mankind, donde quedó en exhibición. En el año 2000 volvió al Museo Británico, donde hoy se exhibe de forma permanente en la SALA 24, como parte de la exposición «Vida y muerte» ("Living and Dying"), mientras que el *moai Hava* no se exhibe de forma permanente.
 
-**El nombre: una traducción disputada**
+## El nombre: una traducción disputada
+
+*Paula Rossetti, Leo Pakarati y Ana María Arredondo*
 
 La traducción del nombre *Hoa Haka Nanaia* es dudosa. Es posible que haya sido una frase acuñada para explicar el acto de entrega de este moai; hoy suele traducirse como "el amigo robado" o "el moai robado", término que probablemente no se habría usado en el momento original.
 
 Otras versiones de algunos ancianos actuales señalan que la traducción sería más bien "el dueño o amigo que otorga poder, energía o mana", a partir de una forma *Hoa Haka Mana Ia*. También se ha propuesto *Hoa Haka na'a ia*, que significaría "el amigo que se escondió". Lo cierto es que hasta el día de hoy hay disputas respecto del nombre y su forma de escribirlo.
 
-**Un emblema de la restitución**
+## Un emblema de la restitución
+
+*Paula Rossetti, Leo Pakarati y Ana María Arredondo*
 
 Hoa Haka Nanaia es un moai único, y gran parte de la población rapa nui solo lo conoce a través de imágenes y registros, sin haberlo visto nunca en persona. Con el tiempo, se ha convertido en un emblema del proceso de restitución que el pueblo rapa nui exige. El año 2015 se estrenó el documental *Te Kuhane o te Tupuna* ("El espíritu del ancestro"), realizado por Leonardo Pakarati, centrado en los objetos rapa nui repartidos por el mundo, particularmente en dos museos europeos, entre ellos el Museo Británico. A partir de él se inició un movimiento que no se ha detenido hasta hoy. Luego, autoridades pertenecientes a la Comisión de Desarrollo de Isla de Pascua (CODEIPA) viajaron a Londres en 2018 y dieron inicio a un proceso de solicitud formal para que este *moai*, junto al *Hava*, fueran devueltos a Rapa Nui.
 
-Posterior a esa solicitud, se acordó un memorándum de entendimiento con diversas acciones conjuntas, entre las cuales no aparece, sin embargo, ni siquiera la posible discusión respecto del retorno del moai a su territorio. En su propia página, el Museo Británico señala textualmente:
+Posterior a esa solicitud se acordó un memorándum de entendimiento con diversas acciones conjuntas. Sin embargo, allí no aparece siquiera la posibilidad de discutir el retorno del moai a su territorio.
 
-"Hoa Hakananai'a representa una de las grandes tradiciones del mundo y es testimonio de la importancia global de la cultura rapanui. Su presencia en Londres influye en la comprensión pública de la historia de Rapa Nui, los logros artísticos de su gente, pasados, presentes y futuros, y los desafíos que enfrenta la comunidad en la actualidad. La fortaleza de la colección del Museo Británico reside en su amplitud y profundidad, que permite a millones de visitantes comprender las culturas del mundo y cómo se interconectan —ya sea a través del comercio, la migración, la conquista, el intercambio pacífico u otras interacciones— tanto en el pasado como en el presente."
-
-Cabe entonces preguntarse: ¿quieren los rapa nui que la comprensión de su cultura dependa de un moai descontextualizado, exhibido a más de 16.000 kilómetros de su territorio? ¿Puede hablarse de "importancia global" de una cultura sin la presencia de quienes la sostienen hoy? Si Hoa Haka Nanaia es, como dice el museo, testimonio de "los desafíos que enfrenta la comunidad en la actualidad", ¿por qué esos desafíos no incluyen, para el museo, la posibilidad misma del retorno? ¿A quién sirve, finalmente, que sea Londres —y no Rapa Nui— el lugar desde donde el mundo aprende a mirar este *moai*?
+Cabe entonces preguntarse: ¿quieren los rapa nui que la comprensión de su cultura dependa de un moai descontextualizado, exhibido a más de 16.000 kilómetros de su territorio? ¿Puede hablarse de la importancia global de una cultura sin la presencia de quienes la sostienen hoy? ¿A quién sirve, finalmente, que sea Londres —y no Rapa Nui— el lugar desde donde el mundo aprende a mirar este *moai*?

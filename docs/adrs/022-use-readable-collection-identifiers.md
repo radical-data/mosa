@@ -5,6 +5,12 @@
 Accepted and implemented. Extends
 [ADR 020](020-use-a-git-backed-public-collection.md).
 
+The object identifier policy is superseded by
+[ADR 029](029-use-short-opaque-object-identifiers.md), accepted on 2026-10-05
+but not yet implemented. Readable object handles remain in use pending that
+migration. Source, article, local claim and image asset identifier conventions
+from this decision remain in effect.
+
 The image-relationship parts of this decision were superseded by
 [ADR 027](027-distinguish-displaced-objects-and-documentary-sources.md).
 Images remain identified by their asset paths, but their photograph source owns

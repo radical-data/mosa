@@ -3,6 +3,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   parseArticleFrontmatter,
+  parseHolder,
+  parseLocation,
   parseObject,
   parseSource,
   validateArticleSubjects,
@@ -22,11 +24,19 @@ const json = async (directory: string, name: string) =>
 
 const objectNames = await files("objects", ".json");
 const sourceNames = await files("sources", ".json");
+const holderNames = await files("holders", ".json");
+const locationNames = await files("locations", ".json");
 const objects = await Promise.all(
   objectNames.map(async (name) => parseObject(await json("objects", name), name)),
 );
 const sources = await Promise.all(
   sourceNames.map(async (name) => parseSource(await json("sources", name), name)),
+);
+const holders = await Promise.all(
+  holderNames.map(async (name) => parseHolder(await json("holders", name), name)),
+);
+const locations = await Promise.all(
+  locationNames.map(async (name) => parseLocation(await json("locations", name), name)),
 );
 const imageEntries = await readdir(path.join(root, "images"), {
   recursive: true,
@@ -50,7 +60,7 @@ for (const image of imageFiles) {
     throw Error(`images/${image}: Git LFS content is not hydrated`);
 }
 const checked = validateCollection(
-  { objects, sources },
+  { objects, sources, holders, locations },
   {
     imageFiles,
   },
@@ -70,5 +80,5 @@ for (const name of articleNames) {
   validateArticleSubjects(metadata, checked, name);
 }
 console.log(
-  `Validated ${objects.length} objects, ${sources.length} sources, ${checked.claims.size} claims, ${imageFiles.size} images and ${articleIds.size} articles.`,
+  `Validated ${objects.length} objects, ${sources.length} sources, ${checked.claims.size} claims, ${holders.length} holders, ${locations.length} location assessments, ${imageFiles.size} images and ${articleIds.size} articles.`,
 );

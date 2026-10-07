@@ -1,0 +1,12 @@
+{
+  "name": "Ethnologisches Museum",
+  "visitUrl": "https://www.humboldtforum.org/de/besuch/",
+  "aliases": ["Museum für Volkerkunde SMPK", "Ethnologisches Museum, Staatliche Museen zu Berlin"],
+  "location": {
+    "name": "Berlin, Germany",
+    "precision": "locality",
+    "longitude": 13.405,
+    "latitude": 52.52,
+    "reference": "https://www.openstreetmap.org/?mlat=52.52&mlon=13.405#map=10/52.52/13.405"
+  }
+}

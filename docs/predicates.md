@@ -33,6 +33,14 @@ not by replacing the source's wording with an editorial summary.
 does not imply ownership, consent or cultural authority. A catalogue number does
 not establish object identity by itself.
 
+Under [ADR 028](adrs/028-map-objects-through-holders.md), a `held_by`
+claim may also resolve to a stable holder record for map projection. The
+`holderId` reference supplements the attributed text; it does not replace it
+or turn the claim into an independently verified statement of current
+custody. `located_at` continues to preserve each source's own location
+account; an object assessment can use that evidence when no holder can be
+resolved.
+
 The current model deliberately omits event participants, movement endpoints,
 custody transitions and restitution actions. Add a new
 predicate only when a real public record requires it and the distinction can be

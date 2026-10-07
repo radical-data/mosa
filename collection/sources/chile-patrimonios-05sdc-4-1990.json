@@ -52,7 +52,8 @@
       "id": "institution",
       "objectId": "moai-tangata-valparaiso-mhnv-8-registro-surdoc-4-1990",
       "predicate": "held_by",
-      "value": "Museo Historia Natural de Valparaíso"
+      "value": "Museo Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     }
   ],
   "notes": {

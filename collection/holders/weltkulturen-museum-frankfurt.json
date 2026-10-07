@@ -1,0 +1,12 @@
+{
+  "name": "Weltkulturen Museum",
+  "visitUrl": "https://www.weltkulturenmuseum.de/en/your-visit/",
+  "location": {
+    "name": "Frankfurt am Main, Germany",
+    "precision": "locality",
+    "longitude": 8.6821,
+    "latitude": 50.1109,
+    "reference": "https://www.openstreetmap.org/?mlat=50.1109&mlon=8.6821#map=10/50.1109/8.6821"
+  },
+  "aliases": ["Weltkulturen Museum, Frankfurt am Main"]
+}

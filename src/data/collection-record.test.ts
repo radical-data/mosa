@@ -1,6 +1,11 @@
 import { describe, expect, test } from "vitest";
 import { type CollectionData, validateCollection } from "./collection-model";
-import { getObjectAccounts, getSourceRelationships } from "./collection-record";
+import {
+  getLocationProjection,
+  getObjectAccounts,
+  getSourceRelationships,
+  sourceImagesForObject,
+} from "./collection-record";
 
 // Synthetic examples exercise retained competencies, not historical assertions.
 function fixture() {
@@ -114,6 +119,176 @@ function fixture() {
 }
 
 describe("retained collection competencies", () => {
+  test("shared holder locations group objects while conflicts stay unresolved", () => {
+    const data: CollectionData = {
+      objects: [
+        { id: "object-one", name: "One", foregroundedClaims: [] },
+        { id: "object-two", name: "Two", foregroundedClaims: [] },
+        { id: "object-three", name: "Three", foregroundedClaims: [] },
+        { id: "object-four", name: "Four", foregroundedClaims: [] },
+      ],
+      sources: [
+        {
+          id: "catalogue-a",
+          title: "Catalogue A",
+          kind: "webpage",
+          author: null,
+          reference: "https://example.org/a",
+          language: "en",
+          images: [],
+          claims: [
+            {
+              id: "holder-one",
+              objectId: "object-one",
+              predicate: "held_by",
+              value: "Museum A",
+              holderId: "museum-a",
+            },
+            {
+              id: "holder-two",
+              objectId: "object-two",
+              predicate: "held_by",
+              value: "Museum A",
+              holderId: "museum-a",
+            },
+            {
+              id: "holder-three-a",
+              objectId: "object-three",
+              predicate: "held_by",
+              value: "Museum A",
+              holderId: "museum-a",
+            },
+            {
+              id: "holder-three-b",
+              objectId: "object-three",
+              predicate: "held_by",
+              value: "Museum B",
+              holderId: "museum-b",
+            },
+            {
+              id: "holder-four",
+              objectId: "object-four",
+              predicate: "held_by",
+              value: "Museum B",
+              holderId: "museum-b",
+            },
+          ],
+        },
+      ],
+      holders: [
+        {
+          id: "museum-a",
+          name: "Museum A",
+          location: {
+            name: "Shared place",
+            precision: "site",
+            longitude: 0,
+            latitude: 0,
+            reference: "https://example.org/museum-a",
+          },
+        },
+        {
+          id: "museum-b",
+          name: "Museum B",
+          location: {
+            name: "Shared place",
+            precision: "site",
+            longitude: 0,
+            latitude: 0,
+            reference: "https://example.org/museum-b",
+          },
+        },
+      ],
+    };
+    const projection = getLocationProjection(validateCollection(data));
+    expect(
+      projection.locations.map(({ location, holders, objects }) => [
+        location.name,
+        holders.map(({ id }) => id),
+        objects.length,
+        objects.map(({ object }) => object.id),
+      ]),
+    ).toEqual([
+      ["Shared place", ["museum-a", "museum-b"], 3, ["object-four", "object-one", "object-two"]],
+    ]);
+    expect(projection.locations[0].objects[1].holder?.id).toBe("museum-a");
+    expect(projection.locations[0].objects[1].claims[0]).toMatchObject({
+      claim: { id: "holder-one" },
+      source: { id: "catalogue-a" },
+    });
+    expect(projection.unresolved).toMatchObject([
+      { object: { id: "object-three" }, reason: "multiple-holders" },
+    ]);
+  });
+
+  test("an explicit object location overrides conflicting holder claims and stays object-scoped", () => {
+    const data: CollectionData = {
+      objects: [{ id: "object-one", name: "One", foregroundedClaims: [] }],
+      sources: [
+        {
+          id: "catalogue-a",
+          title: "Catalogue A",
+          kind: "webpage",
+          author: null,
+          reference: "https://example.org/a",
+          language: "en",
+          images: [],
+          claims: [
+            {
+              id: "holder-a",
+              objectId: "object-one",
+              predicate: "held_by",
+              value: "Museum A",
+              holderId: "museum-a",
+            },
+            {
+              id: "holder-b",
+              objectId: "object-one",
+              predicate: "held_by",
+              value: "Museum B",
+              holderId: "museum-b",
+            },
+          ],
+        },
+      ],
+      holders: [
+        { id: "museum-a", name: "Museum A" },
+        { id: "museum-b", name: "Museum B" },
+      ],
+      locations: [
+        {
+          id: "object-one",
+          status: "uncertain",
+          claimReferences: ["catalogue-a/holder-a", "catalogue-a/holder-b"],
+          location: {
+            name: "Reported locality",
+            precision: "locality",
+            longitude: -70,
+            latitude: -30,
+            reference: "https://example.org/locality",
+          },
+          reviewedAt: "2026-09-01",
+          note: { text: "The sources identify different holders.", language: "en-GB" },
+        },
+      ],
+    };
+    const projection = getLocationProjection(validateCollection(data));
+    expect(projection.locations).toMatchObject([
+      {
+        location: { name: "Reported locality", precision: "locality" },
+        objects: [
+          {
+            object: { id: "object-one" },
+            status: "uncertain",
+            note: { text: "The sources identify different holders." },
+            claims: [{ claim: { id: "holder-a" } }, { claim: { id: "holder-b" } }],
+          },
+        ],
+      },
+    ]);
+    expect(projection.unresolved).toEqual([]);
+  });
+
   test("cases 01/02: foregrounding preserves competing names, source attribution and uncertainty", () => {
     const data = fixture();
     const before = structuredClone(data);
@@ -170,6 +345,45 @@ describe("retained collection competencies", () => {
     ]);
     expect(record?.sources.some((source) => source.id === "unpublished-photograph")).toBe(true);
     expect(getObjectAccounts(data, "object-two")?.sources).toHaveLength(1);
+  });
+
+  test("image depiction lists narrow each object's gallery and preserve source-page images", () => {
+    const data = fixture();
+    data.sources.push({
+      id: "film",
+      title: "Film with several objects",
+      kind: "audiovisual",
+      author: null,
+      reference: "Film",
+      language: "en",
+      claims: [],
+      images: [
+        { file: "film/hoa.jpg", alt: "Hoa still", depicts: ["object-one"] },
+        { file: "film/figure.jpg", alt: "Figure still", depicts: ["object-two"] },
+        { file: "film/shared.jpg", alt: "Shared still" },
+        { file: "film/unassigned.jpg", alt: "Unassigned still", depicts: [] },
+      ],
+      relationships: [
+        { type: "depicts", target: { type: "object", id: "object-one" } },
+        { type: "depicts", target: { type: "object", id: "object-two" } },
+      ],
+    });
+    const checked = validateCollection(data);
+    const film = checked.sources.find(({ id }) => id === "film");
+    if (!film) throw Error("film fixture is missing");
+
+    expect(sourceImagesForObject(film, "object-one").map(({ file }) => file)).toEqual([
+      "film/hoa.jpg",
+      "film/shared.jpg",
+    ]);
+    expect(sourceImagesForObject(film, "object-two").map(({ file }) => file)).toEqual([
+      "film/figure.jpg",
+      "film/shared.jpg",
+    ]);
+    expect(
+      getObjectAccounts(checked, "object-one")?.sources.find(({ id }) => id === "film")?.images,
+    ).toEqual(sourceImagesForObject(film, "object-one"));
+    expect(getSourceRelationships(checked, "film")?.source.images).toHaveLength(4);
   });
 
   test("ADR 027: source relationships project outgoing, incoming and object links", () => {

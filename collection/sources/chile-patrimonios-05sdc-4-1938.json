@@ -52,7 +52,8 @@
       "id": "holder",
       "objectId": "moai-tangata-valparaiso-mhnv-50-registro-surdoc-4-1938",
       "predicate": "held_by",
-      "value": "Museo Historia Natural de Valparaíso"
+      "value": "Museo Historia Natural de Valparaíso",
+      "holderId": "museo-historia-natural-valparaiso"
     }
   ],
   "notes": {

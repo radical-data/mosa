@@ -1,0 +1,41 @@
+---
+import { Content as ParticipantMapContent } from "../../content/participant-map.es.md";
+---
+
+<article class="actor-map-document" lang="es-CL">
+  <ParticipantMapContent />
+</article>
+
+<style>
+  :global(.actor-map-document h1) {
+    max-width: 10ch;
+    margin: 0 0 clamp(4rem, 8vw, 8rem);
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 400;
+    letter-spacing: -0.075em;
+    line-height: 0.86;
+  }
+  :global(.actor-map-document h2) {
+    max-width: 20ch;
+    margin: clamp(4rem, 8vw, 8rem) 0 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #000;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.95;
+  }
+  :global(.actor-map-document h3) {
+    max-width: 30ch;
+    margin: 3rem 0 1rem;
+    font-size: clamp(1.35rem, 2.2vw, 2.15rem);
+    font-weight: 500;
+    line-height: 1.05;
+  }
+  :global(.actor-map-document p) {
+    max-width: 76ch;
+    margin: 0 0 1.4rem;
+    font-size: clamp(1.05rem, 1.45vw, 1.25rem);
+    line-height: 1.58;
+  }
+</style>

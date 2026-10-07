@@ -57,7 +57,8 @@
       "id": "holding-institution",
       "objectId": "tangata-manu-bremen-d00319",
       "predicate": "held_by",
-      "value": "Übersee-Museum Bremen"
+      "value": "Übersee-Museum Bremen",
+      "holderId": "uebersee-museum-bremen"
     }
   ],
   "notes": {

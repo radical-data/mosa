@@ -1,5 +1,6 @@
 ---
 import type { Claim } from "../data/collection-model";
+import { claimValueLanguage } from "../data/collection-record";
 import { predicateLabel } from "../i18n/predicates";
 import type { Locale } from "../i18n/routes";
 
@@ -9,16 +10,17 @@ interface Props {
   locale: Locale;
 }
 
-const { claim, language, locale } = Astro.props;
-const lang = language === "und" ? undefined : language;
+const { claim, language: sourceLanguage, locale } = Astro.props;
+const valueLang = claimValueLanguage(claim, sourceLanguage);
+const locatorLang = sourceLanguage === "und" ? undefined : sourceLanguage;
 ---
 
 <p>
   <strong>{predicateLabel(claim.predicate, locale)}:</strong>{" "}
-  <span lang={lang}>{claim.value}</span>
+  <span lang={valueLang}>{claim.value}</span>
 </p>
 {claim.locator && (
   <p class="small muted">
-    {locale === "en" ? "Passage" : "Pasaje"}: <span lang={lang}>{claim.locator}</span>
+    {locale === "en" ? "Passage" : "Pasaje"}: <span lang={locatorLang}>{claim.locator}</span>
   </p>
 )}

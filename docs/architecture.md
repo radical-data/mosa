@@ -75,11 +75,19 @@ names and classifications can coexist.
 An optional claim `locator` identifies a passage within the source; see
 [collection authoring](collection-publication.md).
 
+[ADR 028](adrs/028-map-objects-through-holders.md) adds a small holder register
+for the Visit map. Its flow resolves an attributed `held_by` claim to a holder,
+then derives object locations from the holder's embedded mapped location.
+Optional object assessments cover holderless `located_at` evidence and genuine
+exceptions.
+
 An **image record** stays inside the source that represents the image and
 records a local publishable file, alt text, credit, rights, caption and original
 URL where available. Photograph sources use `depicts` relationships to identify
 the objects shown; the same photograph can depict several objects, and the
-object pages derive their galleries from those relationships. A catalogue page
+object pages derive their galleries from those relationships. An optional
+image-level `depicts` subset restricts individual frames or representations to
+the objects actually shown. A catalogue page
 that reproduces an independently authored photograph links to its photograph
 source with `reproduces`. Scans and captures remain representations of their
 documentary source unless the physical item itself is under investigation. The
@@ -89,7 +97,14 @@ An **article** is an authored MoSA publication, not a collection record. Its
 Markdown has its own author and language. Optional `subjects` can identify
 multiple objects and sources, or be omitted for a general article. These links
 state what the publication examines; they do not make it a third research record
-type. Article prose does not become an unattributed claim. Sources have public
+type. Its companion `publication` source names the article with `articleId`.
+Every article must have exactly one such source; the source title, author and
+language must match the article, and `articleId` must resolve to an article.
+This keeps the authored text and bibliographic record distinct but explicitly
+paired. The source page links to its article, and article pages label their
+language in the visitor's interface language while marking the prose with its
+BCP 47 tag.
+Article prose does not become an unattributed claim. Sources have public
 index and detail pages within the collection. Articles have separate public
 publication pages reached through Resources and relevant records. Object pages
 retain their existing URLs and information hierarchy.

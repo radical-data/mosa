@@ -1,10 +1,14 @@
 import { describe, expect, test } from "vitest";
 import {
   parseArticleFrontmatter,
+  parseHolder,
+  parseLocation,
   parseObject,
   parseSource,
+  validateArticlePublicationSource,
   validateArticleSubjects,
   validateCollection,
+  validateUniqueSourceArticleLinks,
 } from "./collection-model";
 
 const object = parseObject(
@@ -18,13 +22,224 @@ const source = parseSource(
     kind: "publication",
     reference: "Example catalogue",
     language: "en-GB",
-    claims: [{ id: "name", objectId: "object-one", predicate: "has_name", value: "Object one" }],
+    claims: [
+      {
+        id: "name",
+        objectId: "object-one",
+        predicate: "has_name",
+        value: "Object one",
+      },
+    ],
     images: [{ file: "object-one/front.jpg", alt: "Front view" }],
   },
   "source-one.json",
 );
 
 describe("collection model", () => {
+  test("parses holders with geocoded locations and object location assessments", () => {
+    expect(
+      parseHolder(
+        {
+          name: "Museum One",
+          aliases: ["Museum 1"],
+          visitUrl: "https://example.org/visit",
+          location: {
+            name: "Museum One",
+            precision: "site",
+            longitude: -70.123,
+            latitude: -30.456,
+            reference: "https://example.org/place",
+          },
+        },
+        "museum-one.json",
+      ),
+    ).toMatchObject({
+      id: "museum-one",
+      name: "Museum One",
+      location: { longitude: -70.123 },
+    });
+    expect(
+      parseLocation(
+        {
+          status: "uncertain",
+          claimReferences: ["source-one/holder"],
+          reviewedAt: "2026-09-01",
+          note: {
+            text: "The source may describe a former display location.",
+            language: "en-GB",
+          },
+        },
+        "object-one.json",
+      ),
+    ).toMatchObject({ id: "object-one", status: "uncertain" });
+  });
+
+  test.each([
+    [
+      "unsafe visitor URL",
+      () => parseHolder({ name: "Museum", visitUrl: "javascript:alert(1)" }, "museum.json"),
+      "visitUrl must be an http(s) URL",
+    ],
+    [
+      "holder alias duplicates",
+      () => parseHolder({ name: "Museum", aliases: ["Museum", "Museum"] }, "museum.json"),
+      "aliases contains duplicates",
+    ],
+    [
+      "coordinate bounds",
+      () =>
+        parseHolder(
+          {
+            name: "Museum",
+            location: {
+              name: "Place",
+              precision: "site",
+              longitude: 181,
+              latitude: 0,
+              reference: "https://example.org/place",
+            },
+          },
+          "museum.json",
+        ),
+      "longitude must be between",
+    ],
+    [
+      "calendar date",
+      () =>
+        parseLocation(
+          { status: "reported", claimReferences: [], reviewedAt: "2026-02-30" },
+          "object-one.json",
+        ),
+      "reviewedAt must be a valid",
+    ],
+    [
+      "unknown point",
+      () =>
+        parseLocation(
+          {
+            status: "unknown",
+            claimReferences: [],
+            location: {
+              name: "Place",
+              precision: "site",
+              longitude: 0,
+              latitude: 0,
+              reference: "https://example.org/place",
+            },
+            reviewedAt: "2026-09-01",
+          },
+          "object-one.json",
+        ),
+      "unknown location cannot have a location",
+    ],
+    [
+      "uncertain note",
+      () =>
+        parseLocation(
+          {
+            status: "uncertain",
+            claimReferences: [],
+            reviewedAt: "2026-09-01",
+          },
+          "object-one.json",
+        ),
+      "uncertain location requires a note",
+    ],
+  ])("rejects invalid location register data: %s", (_label, parse, expected) => {
+    expect(parse).toThrow(expected);
+  });
+
+  test("accepts holderId only on held_by claims and resolves register references", () => {
+    const { id: _id, ...record } = source;
+    expect(() =>
+      parseSource(
+        {
+          ...record,
+          claims: [{ ...record.claims[0], holderId: "museum-one" }],
+        },
+        "source-one.json",
+      ),
+    ).toThrow("holderId is only allowed for held_by claims");
+    const objectWithoutForegrounding = parseObject(
+      { name: "Object one", foregroundedClaims: [] },
+      "object-one.json",
+    );
+    const heldClaim = {
+      id: "holder",
+      objectId: "object-one",
+      predicate: "held_by" as const,
+      value: "Museum One",
+      holderId: "museum-one",
+    };
+    const heldSource = parseSource(
+      { ...record, claims: [heldClaim], images: [] },
+      "source-one.json",
+    );
+    const holder = parseHolder(
+      {
+        name: "Museum One",
+        location: {
+          name: "Museum One",
+          precision: "site",
+          longitude: 0,
+          latitude: 0,
+          reference: "https://example.org/place",
+        },
+      },
+      "museum-one.json",
+    );
+    expect(() =>
+      validateCollection({
+        objects: [objectWithoutForegrounding],
+        sources: [heldSource],
+        holders: [holder],
+      }),
+    ).not.toThrow();
+    expect(() =>
+      validateCollection({
+        objects: [objectWithoutForegrounding],
+        sources: [heldSource],
+        holders: [],
+      }),
+    ).toThrow("holderId refers to missing holder museum-one");
+  });
+
+  test("checks location claim references belong to the assessed object", () => {
+    const otherObject = parseObject(
+      { name: "Object two", foregroundedClaims: [] },
+      "object-two.json",
+    );
+    const location = parseLocation(
+      {
+        status: "reported",
+        claimReferences: ["source-one/name"],
+        reviewedAt: "2026-09-01",
+      },
+      "object-two.json",
+    );
+    expect(() =>
+      validateCollection({
+        objects: [object, otherObject],
+        sources: [source],
+        locations: [location],
+      }),
+    ).toThrow("claim source-one/name is about object-one");
+  });
+
+  test("requires a non-unknown assessment to select a location or resolved holder claim", () => {
+    const emptyAssessment = parseLocation(
+      { status: "reported", claimReferences: [], reviewedAt: "2026-09-01" },
+      "object-one.json",
+    );
+    expect(() =>
+      validateCollection({
+        objects: [object],
+        sources: [source],
+        locations: [emptyAssessment],
+      }),
+    ).toThrow("must select a mapped location or resolved holder claim");
+  });
+
   test("accepts an optional passage locator without changing claim wording", () => {
     const { id: _id, ...record } = source;
     const claim = { ...record.claims[0], locator: "Page 14, table 2, row 6" };
@@ -32,6 +247,29 @@ describe("collection model", () => {
     expect(parsed.claims[0]).toEqual(claim);
     expect(parseSource(record, "source-one.json").claims[0].locator).toBeUndefined();
   });
+
+  test("accepts an optional claim language override and leaves it absent by default", () => {
+    const { id: _id, ...record } = source;
+    const claim = { ...record.claims[0], language: "en" };
+    expect(parseSource({ ...record, claims: [claim] }, "source-one.json").claims[0]).toEqual(claim);
+    expect(parseSource(record, "source-one.json").claims[0].language).toBeUndefined();
+  });
+
+  test.each([null, "", "  ", 14, "English", { language: "en" }])(
+    "rejects malformed claim language overrides: %j",
+    (claimLanguage) => {
+      const { id: _id, ...record } = source;
+      expect(() =>
+        parseSource(
+          {
+            ...record,
+            claims: [{ ...record.claims[0], language: claimLanguage }],
+          },
+          "source-one.json",
+        ),
+      ).toThrow("claims[0].language is invalid");
+    },
+  );
 
   test.each([null, "", "  ", 14, { page: 14 }, ["page 14"]])(
     "rejects malformed passage locators: %j",
@@ -45,7 +283,10 @@ describe("collection model", () => {
 
   test("preserves source research notes with their own language without creating claims", () => {
     const { id: _id, ...record } = source;
-    const notes = { text: "Blank cells repeat the preceding holder.", language: "en-GB" };
+    const notes = {
+      text: "Blank cells repeat the preceding holder.",
+      language: "en-GB",
+    };
     const parsed = parseSource({ ...record, language: "es", notes }, "source-one.json");
     expect(parsed.notes).toEqual(notes);
     expect(parsed.language).toBe("es");
@@ -76,6 +317,24 @@ describe("collection model", () => {
     expect(parseSource(record, "source-one.json").captures).toBeUndefined();
   });
 
+  test("parses explicit image depiction scopes, including an empty list", () => {
+    const { id: _id, ...record } = source;
+    const image = { ...record.images[0], depicts: [] };
+    const parsed = parseSource({ ...record, images: [image] }, "source-one.json");
+    expect(parsed.images[0].depicts).toEqual([]);
+    expect(parseSource(record, "source-one.json").images[0].depicts).toBeUndefined();
+  });
+
+  test.each([null, "object-one", ["bad id"], ["object-one", "object-one"]])(
+    "rejects malformed image depiction lists: %j",
+    (depicts) => {
+      const { id: _id, ...record } = source;
+      expect(() =>
+        parseSource({ ...record, images: [{ ...record.images[0], depicts }] }, "source-one.json"),
+      ).toThrow("images[0].depicts");
+    },
+  );
+
   test.each([
     { file: "../source-one/catalogue.pdf" },
     { file: "/source-one/catalogue.pdf" },
@@ -83,9 +342,15 @@ describe("collection model", () => {
     { file: "another-source/catalogue.pdf" },
     { file: "source-one/subdir/catalogue.pdf" },
     { file: "source-one/catalogue.exe" },
-    { archiveUrl: "https://web.archive.org/web/20240102123456js_/https://example.org/page" },
-    { archiveUrl: "http://web.archive.org/web/20240102123456/https://example.org/page" },
-    { archiveUrl: "https://web.archive.org/web/20240230123456/https://example.org/page" },
+    {
+      archiveUrl: "https://web.archive.org/web/20240102123456js_/https://example.org/page",
+    },
+    {
+      archiveUrl: "http://web.archive.org/web/20240102123456/https://example.org/page",
+    },
+    {
+      archiveUrl: "https://web.archive.org/web/20240230123456/https://example.org/page",
+    },
     { archiveUrl: "https://example.org/page" },
     { archiveUrl: "https://web.archive.org/web/20240102123456/https://" },
   ])("rejects unsafe or unsupported capture references: %j", (captureRef) => {
@@ -213,7 +478,10 @@ describe("collection model", () => {
     );
     expect(linkedSource.objectIds).toEqual(["object-one"]);
     expect(() =>
-      validateCollection({ objects: [unforegroundedObject], sources: [linkedSource] }),
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [linkedSource],
+      }),
     ).not.toThrow();
   });
 
@@ -270,13 +538,21 @@ describe("collection model", () => {
         reference: "Another catalogue",
         language: "en-GB",
         claims: [
-          { id: "name", objectId: "object-one", predicate: "has_name", value: "Other name" },
+          {
+            id: "name",
+            objectId: "object-one",
+            predicate: "has_name",
+            value: "Other name",
+          },
         ],
         images: [],
       },
       "source-two.json",
     );
-    const data = validateCollection({ objects: [object], sources: [source, otherSource] });
+    const data = validateCollection({
+      objects: [object],
+      sources: [source, otherSource],
+    });
     expect(data.claims.get("source-two/name")?.value).toBe("Other name");
   });
 
@@ -380,7 +656,13 @@ describe("collection model", () => {
       parseSource(
         {
           ...record,
-          images: [{ file: "source-two/scan.jpg", alt: "Letter scan", objectId: "object-one" }],
+          images: [
+            {
+              file: "source-two/scan.jpg",
+              alt: "Letter scan",
+              objectId: "object-one",
+            },
+          ],
         },
         "source-two.json",
       ),
@@ -419,7 +701,10 @@ describe("collection model", () => {
       "source-b.json",
     );
     expect(() =>
-      validateCollection({ objects: [unforegroundedObject], sources: [sourceA, sourceB] }),
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [sourceA, sourceB],
+      }),
     ).not.toThrow();
     const reproduces = sourceA.relationships?.[0];
     if (!reproduces) throw Error("fixture relationship is missing");
@@ -444,17 +729,26 @@ describe("collection model", () => {
     const partA = {
       ...sourceA,
       relationships: [
-        { type: "is_part_of" as const, target: { type: "source" as const, id: "source-b" } },
+        {
+          type: "is_part_of" as const,
+          target: { type: "source" as const, id: "source-b" },
+        },
       ],
     };
     const partB = {
       ...sourceB,
       relationships: [
-        { type: "is_part_of" as const, target: { type: "source" as const, id: "source-a" } },
+        {
+          type: "is_part_of" as const,
+          target: { type: "source" as const, id: "source-a" },
+        },
       ],
     };
     expect(() =>
-      validateCollection({ objects: [unforegroundedObject], sources: [partA, partB] }),
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [partA, partB],
+      }),
     ).toThrow("is_part_of relationships contain a cycle");
 
     const sourceC = parseSource(
@@ -476,8 +770,14 @@ describe("collection model", () => {
           {
             ...sourceA,
             relationships: [
-              { type: "is_part_of", target: { type: "source", id: "source-b" } },
-              { type: "is_part_of", target: { type: "source", id: "source-c" } },
+              {
+                type: "is_part_of",
+                target: { type: "source", id: "source-b" },
+              },
+              {
+                type: "is_part_of",
+                target: { type: "source", id: "source-c" },
+              },
             ],
           },
           partB,
@@ -498,12 +798,71 @@ describe("collection model", () => {
       ),
     ).toThrow("depicts must target an object");
     const article = parseArticleFrontmatter(
-      "---\nsubjects:\n  - type: source\n    id: missing\ntitle: Essay\nauthor: null\nlanguage: en\n---\n",
+      "---\nsubjects:\n  - type: source\n    id: missing\ntitle: Example catalogue\nauthor: null\nlanguage: en-GB\n---\n",
       "essay-one.md",
     );
     expect(() =>
       validateArticleSubjects(article, { objects: [object], sources: [source] }, "essay-one.md"),
     ).toThrow("refers to missing source missing");
+  });
+
+  test("requires exactly one linked publication source with matching article metadata", () => {
+    const article = parseArticleFrontmatter(
+      "---\ntitle: Example catalogue\nauthor: null\nlanguage: en-GB\n---\n",
+      "essay-one.md",
+    );
+    const { id: _sourceId, ...sourceRecord } = source;
+    const publication = parseSource({ ...sourceRecord, articleId: "essay-one" }, "source-one.json");
+    expect(() =>
+      validateArticlePublicationSource(article, [publication], "essay-one.md"),
+    ).not.toThrow();
+    expect(() =>
+      validateArticlePublicationSource(
+        { ...article, title: "Different title" },
+        [publication],
+        "essay-one.md",
+      ),
+    ).toThrow("article metadata must match publication source source-one");
+    expect(() =>
+      validateArticlePublicationSource(
+        { ...article, author: "Different author" },
+        [publication],
+        "essay-one.md",
+      ),
+    ).toThrow("article metadata must match publication source source-one");
+    expect(() =>
+      validateArticlePublicationSource(
+        { ...article, language: "es-CL" },
+        [publication],
+        "essay-one.md",
+      ),
+    ).toThrow("article metadata must match publication source source-one");
+    expect(() => validateArticlePublicationSource(article, [], "essay-one.md")).toThrow(
+      "expected exactly one publication source with articleId essay-one",
+    );
+  });
+
+  test("requires one publication source per article", () => {
+    const { id: _sourceId, ...sourceRecord } = source;
+    const publication = parseSource({ ...sourceRecord, articleId: "essay-one" }, "source-one.json");
+    const article = {
+      id: "essay-one",
+      title: "Example catalogue",
+      author: null,
+      language: "en-GB",
+    };
+    expect(() => validateUniqueSourceArticleLinks([publication], [article])).not.toThrow();
+    expect(() =>
+      validateUniqueSourceArticleLinks(
+        [publication, { ...publication, id: "source-two" }],
+        [article],
+      ),
+    ).toThrow(
+      "article essay-one is assigned to multiple publication sources: source-one, source-two",
+    );
+    expect(() => validateUniqueSourceArticleLinks([publication], [])).toThrow(
+      "source source-one refers to missing article essay-one",
+    );
   });
 
   test("rejects relationships to missing records and redundant object links", () => {
@@ -543,7 +902,57 @@ describe("collection model", () => {
       "object-one.json",
     );
     expect(() =>
-      validateCollection({ objects: [unforegroundedObject], sources: [depicted] }),
+      validateCollection({
+        objects: [unforegroundedObject],
+        sources: [depicted],
+      }),
     ).toThrow("redundant objectId object-one");
+  });
+
+  test("validates image depiction targets against objects and source depicts links", () => {
+    const { id: _id, ...record } = source;
+    const objectTwo = parseObject(
+      { name: "Object two", foregroundedClaims: [] },
+      "object-two.json",
+    );
+    const relationship = {
+      type: "depicts" as const,
+      target: { type: "object" as const, id: "object-one" },
+    };
+    const scoped = parseSource(
+      {
+        ...record,
+        relationships: [relationship],
+        images: [{ ...record.images[0], depicts: ["object-one"] }],
+      },
+      "source-one.json",
+    );
+    expect(() =>
+      validateCollection({ objects: [object, objectTwo], sources: [scoped] }),
+    ).not.toThrow();
+
+    expect(() =>
+      validateCollection({
+        objects: [object, objectTwo],
+        sources: [
+          {
+            ...scoped,
+            images: [{ ...scoped.images[0], depicts: ["missing-object"] }],
+          },
+        ],
+      }),
+    ).toThrow("images[0].depicts refers to missing object missing-object");
+
+    expect(() =>
+      validateCollection({
+        objects: [object, objectTwo],
+        sources: [
+          {
+            ...scoped,
+            images: [{ ...scoped.images[0], depicts: ["object-two"] }],
+          },
+        ],
+      }),
+    ).toThrow("images[0].depicts object object-two is not depicted by the source");
   });
 });
