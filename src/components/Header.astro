@@ -10,14 +10,19 @@ const { locale, page } = Astro.props;
 const t = messages(locale);
 ---
 <header class="site-header container">
-  <PageLink class="brand" page="home" locale={locale} aria-label={`MoSA — ${t.home}`}><Picture class="header-logo" src={siteImages["logo-dark"]} alt="Museum of Stolen Artefacts" lang="en" formats={["avif", "webp"]} fallbackFormat="webp" widths={[96, 160, 240, 303]} sizes="(max-width: 1100px) 85px, 98px" loading="eager" /></PageLink>
-  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">{t.menu} <span aria-hidden="true">+</span></button>
-  <nav id="primary-navigation" aria-label={t.primaryNavigation}>
-    {pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)} aria-current={page === id ? "page" : undefined}>{t[id]}</a>)}
-  </nav>
-  {page && <nav class="language-switcher" aria-label={t.language}>
-    {localeIds.map((id) => <a href={languageLink(page, id, Astro.url)} lang={locales[id].language} hreflang={locales[id].hreflang} aria-current={locale === id ? "true" : undefined} data-language-link data-anchors={JSON.stringify(page ? anchors[page] : [])} data-page={page}>{locales[id].name}</a>)}
-  </nav>}
+  <PageLink class="brand" page="home" locale={locale} aria-label={`MoSA — ${t.home}`}><Picture class="header-logo" src={siteImages["logo-dark"]} alt="Museum of Stolen Artefacts" lang="en" formats={["avif", "webp"]} fallbackFormat="webp" widths={[96, 160, 240, 303]} sizes="(max-width: 1100px) 118px, 98px" loading="eager" /></PageLink>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-panel" aria-label={t.menu} data-open-label={t.menu} data-close-label={t.closeMenu} hidden>
+    <span class="menu-label">{t.menu}</span>
+    <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+  </button>
+  <div class="navigation-panel" id="navigation-panel">
+    <nav id="primary-navigation" aria-label={t.primaryNavigation}>
+      {pageIds.map((id) => <a class:list={{ "nav-home": id === "home" }} href={pagePath(id, locale)} aria-current={page === id ? "page" : undefined}>{t[id]}</a>)}
+    </nav>
+    {page && <nav class="language-switcher" aria-label={t.language}>
+      {localeIds.map((id) => <a href={languageLink(page, id, Astro.url)} lang={locales[id].language} hreflang={locales[id].hreflang} aria-current={locale === id ? "true" : undefined} data-language-link data-anchors={JSON.stringify(page ? anchors[page] : [])} data-page={page}>{locales[id].name}</a>)}
+    </nav>}
+  </div>
 </header>
 <script>
   import { updateLanguageLinks } from "../i18n/switcher";
@@ -26,14 +31,41 @@ const t = messages(locale);
   window.addEventListener("hashchange", updateLanguageLinks);
   window.addEventListener("popstate", updateLanguageLinks);
   const toggle = document.querySelector<HTMLButtonElement>(".menu-toggle");
-  const nav = document.querySelector<HTMLElement>("#primary-navigation");
-  if (toggle && nav) {
-    const close = () => { toggle.setAttribute("aria-expanded", "false"); nav.classList.remove("is-open"); };
+  const panel = document.querySelector<HTMLElement>("#navigation-panel");
+  if (toggle && panel) {
+    toggle.hidden = false;
+    panel.classList.add("collapsible");
+    const close = () => {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", toggle.dataset.openLabel ?? "");
+      panel.classList.remove("is-open");
+      document.documentElement.classList.remove("menu-open");
+    };
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") !== "true";
-      toggle.setAttribute("aria-expanded", String(open)); nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? toggle.dataset.closeLabel ?? "" : toggle.dataset.openLabel ?? "");
+      panel.classList.toggle("is-open", open);
+      document.documentElement.classList.toggle("menu-open", open);
+    });
+    panel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", close);
     });
     document.addEventListener("keydown", (event) => {
+      if (event.key === "Tab" && toggle.getAttribute("aria-expanded") === "true") {
+        const links = Array.from(panel.querySelectorAll<HTMLAnchorElement>("a[href]"));
+        const first = links[0];
+        const last = links.at(-1);
+        if (event.shiftKey && (document.activeElement === toggle || !panel.contains(document.activeElement))) {
+          event.preventDefault(); last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault(); toggle.focus();
+        } else if (!event.shiftKey && document.activeElement === toggle) {
+          event.preventDefault(); first?.focus();
+        } else if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault(); toggle.focus();
+        }
+      }
       if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") { close(); toggle.focus(); }
     });
     window.matchMedia("(min-width: 1101px)").addEventListener("change", close);
@@ -41,130 +73,271 @@ const t = messages(locale);
 </script>
 
 <style>
-  .site-header {
-    display: flex;
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  min-height: 112px;
+  padding-block: 1.5rem;
+}
+.brand {
+  display: block;
+  flex-shrink: 0;
+  width: 98px;
+}
+.navigation-panel {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.1rem, 2.1vw, 2.25rem);
+  margin-left: auto;
+}
+.nav-home {
+  display: none;
+}
+.site-header nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.1rem, 2.1vw, 2.25rem);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.site-header nav a {
+  position: relative;
+  padding-block: 0.4rem;
+  white-space: nowrap;
+}
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  background: linear-gradient(transparent 55%, var(--coral) 55%, var(--coral) 75%, transparent 75%);
+}
+.site-header nav a[aria-current="page"] {
+  font-weight: 600;
+}
+.menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: grid;
+  gap: 5px;
+  width: 25px;
+}
+.menu-icon > span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #231f20;
+  transform-origin: center;
+  transition:
+    opacity 150ms,
+    transform 150ms;
+}
+.footer-grid .brand {
+  width: 115px;
+}
+@media (max-width: 1100px) {
+.site-header {
+    gap: 1rem;
+  }
+.site-header nav {
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 800px) {
+.site-header {
+    min-height: 92px;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    min-height: 112px;
-    padding-block: 1.5rem;
   }
-
-  .brand {
-    display: block;
-    flex-shrink: 0;
-    width: 98px;
+.brand {
+    width: 85px;
   }
-
-  .site-header nav {
+.menu-toggle {
     display: flex;
+    gap: 1rem;
     align-items: center;
-    gap: clamp(1.1rem, 2.1vw, 2.25rem);
-    font-size: 0.875rem;
-    font-weight: 400;
+    padding: 0.5rem 0;
+    background: none;
+    border: 0;
+    font-weight: 500;
   }
-
-  .site-header nav a {
-    position: relative;
-    padding-block: 0.4rem;
-    white-space: normal;
+.menu-toggle span {
+    font-size: 1.7rem;
   }
-
-  .site-header nav a:hover,
-  .site-header nav a[aria-current="page"] {
-    background: linear-gradient(transparent 55%, var(--coral) 55%, var(--coral) 75%, transparent 75%);
+.menu-toggle[aria-expanded="true"] span {
+    transform: rotate(45deg);
   }
-
-  .site-header nav a[aria-current="page"] {
-    font-weight: 600;
-  }
-
-  .site-header .language-switcher {
-    gap: 0.85rem;
+.site-header nav {
+    flex-basis: 100%;
     flex-wrap: wrap;
-    flex-basis: auto;
-    padding-block: 0;
+    padding-block: 1rem;
+    font-size: 1rem;
   }
-
-  .language-switcher a[aria-current="true"] {
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 0.25em;
-  }
-
-  .menu-toggle {
+.site-header nav.collapsible {
     display: none;
   }
-
-  @media (max-width: 1100px) {
-    .site-header {
-      gap: 1rem;
-      min-height: 92px;
-    }
-
-    .brand {
-      width: 85px;
-    }
-
-    :global(.js) .menu-toggle {
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-      padding: 0.5rem 0;
-      background: none;
-      border: 0;
-      font-weight: 500;
-    }
-
-    .menu-toggle span {
-      font-size: 1.7rem;
-    }
-
-    .menu-toggle[aria-expanded="true"] span {
-      transform: rotate(45deg);
-    }
-
-    .site-header #primary-navigation {
-      order: 4;
-      flex-basis: 100%;
-      flex-wrap: wrap;
-      padding-block: 1rem;
-      font-size: 1rem;
-    }
-
-    :global(.js) .site-header #primary-navigation {
-      display: none;
-    }
-
-    :global(.js) .site-header #primary-navigation.is-open {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-    }
-
-    .site-header #primary-navigation.is-open a {
-      padding-block: 0.8rem;
-      border-top: 1px solid var(--rule);
-    }
-
-    .site-header #primary-navigation.is-open a[aria-current="page"] {
-      background: none;
-      text-decoration: underline;
-      text-decoration-color: var(--coral);
-      text-decoration-thickness: 4px;
-    }
-
-    .site-header .language-switcher {
-      gap: 0.85rem;
-    }
+.site-header nav.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
   }
-
-  @media (max-width: 380px) {
-    .site-header .language-switcher {
-      flex-basis: 100%;
-      justify-content: flex-end;
-    }
+.site-header nav.is-open a {
+    padding-block: 0.8rem;
+    border-top: 1px solid var(--rule);
   }
+.site-header nav.is-open a[aria-current="page"] {
+    background: none;
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-decoration-thickness: 4px;
+  }
+}
+.site-header nav a {
+  white-space: normal;
+}
+.site-header .language-switcher {
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  padding-block: 0;
+}
+.language-switcher a[aria-current="true"] {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+@media (max-width: 1100px) {
+:global(html.menu-open) {
+    overflow: hidden;
+  }
+.site-header {
+    position: relative;
+    z-index: 60;
+    min-height: 75px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+.site-header .brand {
+    position: relative;
+    z-index: 61;
+    width: 118px;
+  }
+.menu-toggle {
+    display: flex;
+    gap: 7px;
+    background: none;
+    border: 0;
+    align-items: center;
+    margin-left: auto;
+    padding: 15px 0 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    z-index: 81;
+  }
+.navigation-panel {
+    order: 4;
+    flex-basis: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+.navigation-panel.collapsible {
+    display: none;
+  }
+.navigation-panel.is-open {
+    position: fixed;
+    inset: 0 auto auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: min(100%, 30rem);
+    height: min(100svh, 34.875rem);
+    min-height: 0;
+    padding: 58px 0 18px 27px;
+    overflow: auto;
+    background: #fff;
+    border-radius: 0 0 200px;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 18%);
+    z-index: 80;
+  }
+.navigation-panel.is-open #primary-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 0;
+  }
+.navigation-panel.is-open #primary-navigation a {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1.2;
+  }
+.navigation-panel.is-open #primary-navigation a:hover,
+  .navigation-panel.is-open #primary-navigation a[aria-current="page"] {
+    background: linear-gradient(
+      transparent 63%,
+      var(--coral) 63%,
+      var(--coral) 78%,
+      transparent 78%
+    );
+  }
+.navigation-panel.is-open .nav-home {
+    display: block;
+  }
+.navigation-panel.is-open .language-switcher {
+    position: static;
+    margin-top: auto;
+    flex-shrink: 0;
+    display: flex;
+    gap: 0.85rem;
+    padding: 0;
+    font-size: 0.8rem;
+  }
+.menu-toggle[aria-expanded="true"] {
+    position: fixed;
+    top: 12px;
+    left: min(calc(100vw - 47px), 433px);
+    padding: 0;
+  }
+.menu-toggle[aria-expanded="true"] .menu-label {
+    display: none;
+  }
+.menu-toggle[aria-expanded="true"] .menu-icon {
+    gap: 0;
+    width: 31px;
+    height: 27px;
+    transform: none;
+  }
+.menu-toggle[aria-expanded="true"] .menu-icon > span {
+    position: absolute;
+    top: 12px;
+    width: 31px;
+  }
+.menu-toggle[aria-expanded="true"] .menu-icon > span:first-child {
+    transform: rotate(41deg);
+  }
+.menu-toggle[aria-expanded="true"] .menu-icon > span:nth-child(2) {
+    opacity: 0;
+  }
+.menu-toggle[aria-expanded="true"] .menu-icon > span:last-child {
+    transform: rotate(-41deg);
+  }
+}
+@media (max-width: 380px) {
+.navigation-panel.is-open #primary-navigation a {
+    font-size: 46px;
+  }
+}
+@media (max-width: 520px) {
+.navigation-panel.is-open {
+    width: 100%;
+  }
+}
 </style>

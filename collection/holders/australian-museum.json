@@ -1,5 +1,6 @@
 {
   "name": "Australian Museum",
+  "countryCode": "AU",
   "aliases": ["Australian Museum ethnographic collection"],
   "visitUrl": "https://australian.museum/visit/",
   "location": {

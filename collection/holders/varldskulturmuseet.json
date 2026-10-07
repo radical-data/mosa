@@ -1,5 +1,6 @@
 {
   "name": "Världskulturmuseet",
+  "countryCode": "SE",
   "visitUrl": "https://www.varldskulturmuseet.se/besok/oppettider/",
   "location": {
     "name": "Gothenburg, Sweden",

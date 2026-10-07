@@ -1,5 +1,6 @@
 {
   "name": "National Museums Scotland",
+  "countryCode": "GB",
   "aliases": ["The Royal Scottish Museum"],
   "visitUrl": "https://www.nms.ac.uk/national-museum-of-scotland/plan-your-visit/",
   "location": {

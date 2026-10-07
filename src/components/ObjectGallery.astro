@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import type { SourcedImage } from "../data/collection";
+import type { Locale } from "../i18n/routes";
+import { publicRecordPath } from "../i18n/routes";
+
+interface Props {
+  images: SourcedImage[];
+  locale: Locale;
+}
+
+const { images, locale } = Astro.props;
+const copy = locale === "en"
+  ? { credit: "Credit", rights: "Rights", original: "Original image", larger: "Open larger image", recorded: "Recorded in" }
+  : { credit: "Crédito", rights: "Derechos", original: "Imagen original", larger: "Abrir imagen ampliada", recorded: "Registrado en" };
+---
+<div class="image-gallery">
+  {images.map(({ image, source, asset }) => (
+    <figure>
+      <a class="image-link" href={asset.src}>
+        <span class="sr-only">{copy.larger}: </span>
+        <Image
+          src={asset}
+          alt={image.alt}
+          lang={source.language === "und" ? undefined : source.language}
+          widths={[480, 960, 1440]}
+          sizes="(max-width: 60rem) 100vw, 50vw"
+        />
+      </a>
+      <figcaption class="small">
+        {image.caption && <span lang={source.language === "und" ? undefined : source.language}>{image.caption}</span>}
+        {image.credit && <span>{copy.credit}: <span lang={source.language === "und" ? undefined : source.language}>{image.credit}</span></span>}
+        {image.rights && <span>{copy.rights}: <span lang={source.language === "und" ? undefined : source.language}>{image.rights}</span></span>}
+        {image.originalUrl && <a href={image.originalUrl} rel="noreferrer">{copy.original}</a>}
+        <span>{copy.recorded}: <a href={publicRecordPath("sources", source.id, locale)}>{source.title}</a></span>
+      </figcaption>
+    </figure>
+  ))}
+</div>
+
+<style>
+  .image-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1rem; }
+  figure { margin: 0; min-width: 0; }
+  .image-link { display: block; position: relative; aspect-ratio: 4 / 3; max-height: 80vh; background: #fff; }
+  .image-link :global(img) { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+  figcaption { display: grid; gap: .25rem; margin-block-start: .5rem; }
+</style>

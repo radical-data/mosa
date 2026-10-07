@@ -1,5 +1,6 @@
 {
   "name": "Sammlung Kulturen der Welt",
+  "countryCode": "DE",
   "visitUrl": "https://skw.luebecker-museen.de/programm",
   "aliases": ["Volkerkunde Sammlung der Hansestadt", "Völkerkundesammlung Lübeck"],
   "location": {

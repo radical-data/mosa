@@ -1,5 +1,6 @@
 {
   "name": "Bishop Museum",
+  "countryCode": "US",
   "visitUrl": "https://www.bishopmuseum.org/visit/",
   "location": {
     "name": "Honolulu, Hawaii, United States",

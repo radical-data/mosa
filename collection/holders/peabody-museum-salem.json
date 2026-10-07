@@ -1,5 +1,6 @@
 {
   "name": "Peabody Essex Museum",
+  "countryCode": "US",
   "aliases": ["Peabody Museum"],
   "visitUrl": "https://www.pem.org/visit",
   "location": {

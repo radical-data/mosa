@@ -1,5 +1,6 @@
 import type { ImageMetadata, MarkdownInstance } from "astro";
 import { stringify as stringifyYaml } from "yaml";
+import presentationConfig from "../content/collection-presentation.json";
 import {
   type ArticleMetadata,
   type CollectionImage,
@@ -15,6 +16,7 @@ import {
   validateCollection,
   validateUniqueSourceArticleLinks,
 } from "./collection-model";
+import { resolveCollectionPresentation } from "./collection-presentation";
 import {
   getLocationProjection,
   getObjectAccounts,
@@ -22,6 +24,7 @@ import {
   type SourcedClaim,
   sourceImagesForObject,
 } from "./collection-record";
+import { buildObjectSearchExact } from "./collection-search";
 import { getVisitHolders } from "./visit-holders";
 
 const objectModules = import.meta.glob<unknown>("../../collection/objects/*.json", {
@@ -144,6 +147,24 @@ export const sourceRecords: SourceEntry[] = checked.sources.map((source) => ({
   ),
 }));
 
+const depictingGalleries = new Map<string, SourcedImage[]>(
+  checked.objects.map(({ id }) => [
+    id,
+    sourceRecords.flatMap((source) =>
+      sourceImagesForObject(source, id).map((image) => ({
+        image,
+        source,
+        asset: imageAsset(image),
+      })),
+    ),
+  ]),
+);
+const collectionPresentation = resolveCollectionPresentation(
+  presentationConfig,
+  checked.objects.map(({ id }) => id),
+  depictingGalleries,
+);
+
 export function getSourceRecord(sourceId: string) {
   const relationships = getSourceRelationships(
     { objects: checked.objects, sources: checked.sources },
@@ -179,26 +200,17 @@ export function getObjectRecord(objectId: string): CollectionRecord | undefined 
       entry.subjects?.some((subject) => subject.type === "object" && subject.id === objectId),
     )
     .sort((a, b) => a.id.localeCompare(b.id));
-  const recordImages = objectSources.flatMap((source) =>
-    sourceImagesForObject(source, objectId).map((image) => ({
-      image,
-      source,
-      asset: imageAsset(image),
-    })),
-  );
+  const recordImages = collectionPresentation.imagesByObjectId.get(objectId) ?? [];
   return {
     ...accounts,
     images: recordImages,
     articles: recordArticles,
-    searchExact: [
-      object.id,
-      object.name,
-      ...objectSources.map((source) => source.reference),
-      ...claims.map(
-        ({ claim, source }) =>
-          `${claim.predicate} ${claim.value} ${source.title} ${source.reference}`,
-      ),
-    ].join(" "),
+    searchExact: buildObjectSearchExact({
+      object,
+      sources: objectSources,
+      claims,
+      images: recordImages,
+    }),
     searchFoldable: object.name,
   };
 }

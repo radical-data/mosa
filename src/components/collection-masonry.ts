@@ -6,13 +6,35 @@ export function masonryPositions(heights: number[], columns: number, gap: number
     bottoms[column] = top + height + gap;
     return { column, top };
   });
-  return { positions, height: Math.max(0, ...bottoms) - (heights.length ? gap : 0) };
+  return {
+    positions,
+    height: Math.max(0, ...bottoms) - (heights.length ? gap : 0),
+    nextTop: Math.max(0, Math.min(...bottoms)),
+  };
 }
 
-export function initialiseCollectionMasonry(container: HTMLElement, cards: HTMLElement[]) {
+export interface CollectionMasonryMetrics {
+  /** Top of the next card in the currently shortest column. */
+  nextTop: number;
+  /** Bottom of the tallest column, excluding the trailing gap. */
+  height: number;
+}
+
+export function initialiseCollectionMasonry(
+  container: HTMLElement,
+  cards: HTMLElement[],
+  enabled: () => boolean = () => true,
+  afterLayout?: (metrics: CollectionMasonryMetrics) => void,
+) {
   container.dataset.masonry = "true";
+  const cardSet = new Set(cards);
 
   const layout = () => {
+    if (!enabled()) {
+      container.style.height = "";
+      afterLayout?.({ nextTop: 0, height: 0 });
+      return;
+    }
     if (container.hidden) return;
     const style = getComputedStyle(container);
     const columns = Number(style.getPropertyValue("--collection-columns"));
@@ -20,9 +42,13 @@ export function initialiseCollectionMasonry(container: HTMLElement, cards: HTMLE
     const rowGap = Number.parseFloat(style.rowGap);
     const width = container.getBoundingClientRect().width;
     const columnWidth = (width - columnGap * (columns - 1)) / columns;
-    const visible = cards.filter((card) => !card.hidden);
+    // Follow the current sorted DOM order, including after a filter or layout change.
+    const visible = Array.from(container.children).filter(
+      (card): card is HTMLElement =>
+        card instanceof HTMLElement && cardSet.has(card) && !card.hidden,
+    );
     // Read all sizes before writing positions to avoid repeated layout work.
-    const { positions, height } = masonryPositions(
+    const { positions, height, nextTop } = masonryPositions(
       visible.map((card) => card.getBoundingClientRect().height),
       columns,
       rowGap,
@@ -33,6 +59,7 @@ export function initialiseCollectionMasonry(container: HTMLElement, cards: HTMLE
       card.style.top = `${top}px`;
     });
     container.style.height = `${height}px`;
+    afterLayout?.({ nextTop, height });
   };
 
   let frame = 0;

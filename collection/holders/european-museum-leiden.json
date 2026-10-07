@@ -1,5 +1,6 @@
 {
   "name": "Wereldmuseum Leiden",
+  "countryCode": "NL",
   "visitUrl": "https://leiden.wereldmuseum.nl/nl/plan-je-bezoek-in-wereldmuseum-leiden",
   "aliases": ["Rijksmuseum voor Volkenkunde", "Rijksmuseum voor Volkerkunde"],
   "location": {

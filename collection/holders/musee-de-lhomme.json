@@ -1,5 +1,6 @@
 {
   "name": "Musée de l’Homme",
+  "countryCode": "FR",
   "visitUrl": "https://www.museedelhomme.fr/fr/tarifs-horaires-acces",
   "aliases": ["Museo del Hombre"],
   "location": {

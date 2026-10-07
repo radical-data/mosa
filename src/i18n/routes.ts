@@ -88,7 +88,18 @@ export function languageLink(page: PageId, locale: Locale, current: URL): string
     targetPath = sourceMatch[1]
       ? publicRecordPath("sources", decodeURIComponent(sourceMatch[1]), locale)
       : publicSectionPath("sources", locale);
-    filterKeys = ["q", "kind", "topic"];
+    filterKeys = [
+      "scope",
+      "q",
+      "view",
+      "sort",
+      "holder",
+      "country",
+      "kind",
+      "images",
+      "photos",
+      "limit",
+    ];
   } else if (articleMatch) {
     targetPath = articleMatch[1]
       ? publicRecordPath("articles", decodeURIComponent(articleMatch[1]), locale)
@@ -98,7 +109,20 @@ export function languageLink(page: PageId, locale: Locale, current: URL): string
     targetPath = objectMatch?.[1]
       ? publicRecordPath("objects", decodeURIComponent(objectMatch[1]), locale)
       : pagePath(page, locale);
-    filterKeys = ["q", "concept", "type", "view"];
+    filterKeys = [
+      "scope",
+      "q",
+      "view",
+      "sort",
+      "holder",
+      "country",
+      "kind",
+      "images",
+      "photos",
+      "limit",
+      "concept",
+      "type",
+    ];
   }
   const target = new URL(targetPath, current.origin);
   for (const key of filterKeys) {

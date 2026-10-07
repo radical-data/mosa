@@ -49,7 +49,7 @@ describe("localised routes and collection state", () => {
       "https://example.org/en/sources/?q=letter&kind=correspondence&topic=restitution&tracking=x",
     );
     expect(languageLink("collection", "es", sourceIndex)).toBe(
-      "/es/fuentes/?q=letter&kind=correspondence&topic=restitution",
+      "/es/fuentes/?q=letter&kind=correspondence",
     );
     const sourceDetail = new URL("https://example.org/es/fuentes/a-letter/");
     expect(languageLink("collection", "en", sourceDetail)).toBe("/en/sources/a-letter/");

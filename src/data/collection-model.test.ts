@@ -42,6 +42,7 @@ describe("collection model", () => {
         {
           name: "Museum One",
           aliases: ["Museum 1"],
+          countryCode: "CL",
           visitUrl: "https://example.org/visit",
           location: {
             name: "Museum One",
@@ -56,6 +57,7 @@ describe("collection model", () => {
     ).toMatchObject({
       id: "museum-one",
       name: "Museum One",
+      countryCode: "CL",
       location: { longitude: -70.123 },
     });
     expect(
@@ -73,6 +75,25 @@ describe("collection model", () => {
       ),
     ).toMatchObject({ id: "object-one", status: "uncertain" });
   });
+
+  test("accepts a holder country without coordinates and an unknown country without a code", () => {
+    expect(parseHolder({ name: "Museum", countryCode: "NZ" }, "museum.json")).toMatchObject({
+      id: "museum",
+      countryCode: "NZ",
+    });
+    expect(
+      parseHolder({ name: "Private collection" }, "private-collection.json"),
+    ).not.toHaveProperty("countryCode");
+  });
+
+  test.each(["cl", "ZZ", "CLA", "", null])(
+    "rejects invalid holder country code %s",
+    (countryCode) => {
+      expect(() => parseHolder({ name: "Museum", countryCode }, "museum.json")).toThrow(
+        "countryCode must be an ISO 3166-1 alpha-2 code",
+      );
+    },
+  );
 
   test.each([
     [

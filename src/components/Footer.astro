@@ -12,28 +12,38 @@ const { locale } = Astro.props;
 const t = messages(locale);
 ---
 <footer class="site-footer">
-  <div class="footer-statement"><span>{t.footerStatement}</span></div>
-  <div class="container footer-grid">
-    <PageLink page="home" locale={locale} class="brand" aria-label={`MoSA — ${t.home}`}><Image src={siteImages["logo-light"]} alt="Museum of Stolen Artefacts" lang="en" loading="lazy" /></PageLink>
-    <nav aria-label={t.footerNavigation}>{pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)}>{t[id]}</a>)}</nav>
-    <div class="footer-purpose">
-      <p>{t.footerPurpose}</p>
-      <PageLink class="text-link" page="contact" locale={locale}>{t.connect} <span aria-hidden="true">↗</span></PageLink>
-      <nav class="footer-external" aria-label={t.elsewhere}>
-        <span class="footer-external-title">{t.elsewhere}</span>
-        <a href={instagramURL}>{t.instagram} <span aria-hidden="true">↗</span></a>
-        <a href={githubURL}>{t.githubSource} <span aria-hidden="true">↗</span></a>
-      </nav>
+  <div class="container footer-content">
+    <!-- Voice -->
+    <p class="footer-statement">{t.footerStatement.split(/(en relación|separado)/).map((part, index) => index % 2 ? <span>{part}</span> : part)}</p>
+    <!-- Actions -->
+    <div class="footer-main">
+      <div class="footer-navigation">
+        <nav aria-label={t.footerNavigation}>
+          <p class="footer-nav-title">{t.footerMuseum}</p>
+          {pageIds.filter((id) => id !== "home").map((id) => <a href={pagePath(id, locale)}>{t[id]}</a>)}
+        </nav>
+        <nav aria-label={t.elsewhere}>
+          <p class="footer-nav-title">{t.elsewhere}</p>
+          {[{ href: instagramURL, label: t.instagram }, { href: githubURL, label: t.githubSource }].map(({ href, label }) => (
+            <a href={href}>{label}<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10 10 2M3.5 2H10v6.5" /></svg></a>
+          ))}
+        </nav>
+      </div>
+      <NewsletterSignup locale={locale} placement="footer" />
     </div>
-  </div>
-  <NewsletterSignup locale={locale} placement="footer" />
-  <div class="container footer-bottom">
+    <!-- Colophon -->
+    <div class="footer-bottom">
+      <div class="footer-brand">
+        <PageLink page="home" locale={locale} class="brand" aria-label={`MoSA — ${t.home}`}><Image src={siteImages["logo-light"]} alt="Museum of Stolen Artefacts" lang="en" loading="lazy" /></PageLink>
+        <p>{t.footerPurpose.split(/(?<=\.) /).map((line) => <span>{line}</span>)}</p>
+      </div>
     <div class="footer-legal">
       <p><span lang="en">Museum of Stolen Artefacts</span> © {new Date().getFullYear()}.</p>
       <p>{t.footerWrittenLicencePrefix} <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license"><span lang="en">CC BY-SA 4.0</span></a>.</p>
       <p>{t.footerDatabasePrefix} <a href={`${githubURL}/tree/main/collection`}>{t.footerDatabaseName}</a>, {t.footerDatabaseMiddle} <a href="https://opendatacommons.org/licenses/by/1-0/" rel="license"><span lang="en">ODC-By 1.0</span></a>. {t.footerRightsExceptions}</p>
     </div>
-    <div><p>{t.funding}</p><Image src={siteImages["funding-logo"]} alt="Creative Industries Fund NL" lang="en" loading="lazy" /></div>
+      <div class="footer-funding"><p>{t.funding}</p><Image src={siteImages["funding-logo"]} alt="Creative Industries Fund NL" lang="en" loading="lazy" /></div>
+    </div>
   </div>
 </footer>
 
@@ -41,147 +51,111 @@ const t = messages(locale);
   .site-footer {
     background: #000;
     color: #fff;
-    padding-bottom: 2rem;
+    padding-block: clamp(3rem, 6.1vw, 5.5rem) clamp(2.5rem, 3.9vw, 3.5rem);
   }
-
+  .footer-content {
+    --gutter: clamp(1.25rem, 5.55vw, 5.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+  .site-footer p { margin: 0; }
   .footer-statement {
-    overflow: hidden;
-    border-bottom: 1px solid #666;
-    padding-block: 2rem 2.5rem;
-  }
-
-  .footer-statement span {
-    display: block;
-    width: auto;
-    margin-inline: var(--gutter);
-    overflow-wrap: anywhere;
-    font-size: clamp(3.5rem, 8.6vw, 9rem);
+    max-width: 12em;
+    font-size: clamp(2.75rem, 6.7vw, 6rem);
     font-weight: 400;
     letter-spacing: -0.045em;
-    line-height: 1.12;
+    line-height: 1.06;
+    text-wrap: balance;
   }
-
-  .footer-grid {
+  .footer-statement span { white-space: nowrap; }
+  .footer-main {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 3rem;
-    padding-block: 3rem 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+    gap: 3rem clamp(2rem, 8.9vw, 8rem);
+    border-top: 1px solid #666;
+    padding-top: clamp(2.5rem, 3.9vw, 3.5rem);
   }
-
-  .footer-grid :global(.brand) {
-    width: 115px;
+  .footer-navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+    gap: 2.5rem 1.5rem;
+    align-items: start;
   }
-
-  .footer-grid nav {
+  .footer-navigation nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.7rem;
-    font-size: 0.85rem;
-    font-weight: 400;
+    min-width: 0;
   }
-
-  .footer-grid nav a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--coral);
-    text-underline-offset: 4px;
-  }
-
-  .footer-purpose {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.9rem;
-    font-size: 0.9rem;
-  }
-
-  .footer-external {
-    margin-top: 1rem;
-  }
-
-  .footer-external-title {
+  .footer-navigation .footer-nav-title {
+    margin-bottom: 0.5rem;
     color: #aaa;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
-
+  .footer-navigation a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding-block: 0.375rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  .footer-navigation svg { flex-shrink: 0; }
+  .site-footer a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--coral);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
   .footer-bottom {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
-    padding-top: 2rem;
-    font-size: 0.65rem;
+    gap: 2rem 3rem;
+    border-top: 1px solid #666;
+    padding-top: 2.5rem;
   }
-
+  .footer-brand {
+    flex: 0 1 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+  }
+  .footer-brand :global(.brand) { width: 115px; }
+  .footer-brand span { display: block; }
+  .footer-legal, .footer-funding {
+    display: flex;
+    flex-direction: column;
+    color: #cfcfcf;
+    font-size: 0.8125rem;
+    line-height: 1.55;
+  }
   .footer-legal {
-    max-width: 620px;
+    flex: 1 1 400px;
+    max-width: 560px;
+    gap: 0.5rem;
   }
-
-  .footer-legal p + p {
-    margin-top: 0.55rem;
-  }
-
   .footer-legal a {
     text-decoration: underline;
     text-underline-offset: 0.18em;
   }
-
-  .footer-bottom > div {
-    text-align: right;
+  .footer-funding {
+    flex: 0 1 300px;
+    align-items: flex-start;
+    gap: 0.875rem;
   }
-
-  .footer-bottom > .footer-legal {
-    text-align: left;
-  }
-
-  .footer-bottom img {
-    width: 300px;
-    margin-left: auto;
-  }
-
-  @media (max-width: 800px) {
-    .footer-grid {
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-    }
-
-    .footer-bottom {
-      flex-direction: column;
-    }
-
-    .footer-bottom > div {
-      text-align: left;
-    }
-
-    .footer-bottom img {
-      margin-left: 0;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .footer-grid {
-      grid-template-columns: 1fr 1fr;
-      padding-bottom: 3rem;
-    }
-
-    .footer-purpose {
-      grid-column: 1 / -1;
-    }
-
-    .footer-statement {
-      padding-block: 1.5rem;
-    }
-
-    .footer-bottom img {
-      width: 260px;
-    }
-  }
-
+  .footer-funding img { width: 300px; }
   @media print {
-    .site-footer {
-      display: none;
-    }
+    .site-footer { display: none; }
   }
 </style>

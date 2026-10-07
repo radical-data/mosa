@@ -63,21 +63,14 @@ pages with `reproduces` and to depicted objects with `depicts`.
 The collection contains objects and sources. Its subnavigation uses the label
 “Documents and images” / “Documentos e imágenes” for sources. The site publishes
 object and source indexes and detail pages.
-The object index uses masonry placement in the shortest available column, with
-four columns on wider screens and two on narrow screens. Images retain their
-natural proportions without cropping or height limits. A small client script
-repacks the cards after search filtering and size changes; document and keyboard
-order remain unchanged. Without JavaScript, the same cards use a regular grid.
 Sources are listed at `/en/sources/` and `/es/fuentes/`; articles are listed
 at `/en/articles/` and `/es/articulos/`, labelled “Articles” / “Artículos”.
 Articles are authored MoSA publications rather than collection records. Their
 source files live under `articles/`, and they appear through Resources and links
 from the objects and sources they examine. Articles sit under Resources, outside the primary
 navigation. Their index links back to Resources, and individual articles show
-the Resources → Articles path. Source indexes
-provide text search and kind/topic filters, with the full list available without
-JavaScript. Language switching retains the corresponding record or article and
-supported index filters.
+the Resources → Articles path. Language switching retains the corresponding record or article and supported
+collection filters.
 
 Source pages show bibliographic metadata, publishable representations, related
 objects and source relationships, attributed object claims with locators, and
@@ -91,9 +84,104 @@ and derive image galleries from explicit `depicts` relationships. Article
 pages retain their declared prose language and can concern multiple objects and
 sources or have no record subjects. Methodological notes and preservation captures are excluded from public rendering and search.
 
+The collection uses one shared catalogue with Everything, Objects, and Documents
+and images scopes. The source index routes open its Documents and images scope.
+Objects and sources remain separate records with their own detail pages.
+Kind labels and
+links to related objects distinguish documentary records from physical objects.
+
+Masonry grid and list layouts share search, sorting, filters and result order.
+The grid uses four columns above 800px and two below, matching the established
+collection layout. Images fill their column width at their natural aspect ratio.
+Masonry follows the sorted reading order and reflows when images load or results
+change; list rows retain small contained thumbnails. Cards
+show source-attributed classifications, reported holding and catalogue numbers
+for objects, or authorship, dates and related objects for sources. Values link
+to their sources; cards show at most two values per field and link to the full
+record when there are more. Images are uncropped. Unillustrated grid cards use
+compact text rather than a large placeholder; list rows keep small thumbnails.
+Image captions, credits and rights remain on detail pages and in text search.
+
+Search covers public claims, source metadata, related record titles and image
+metadata, excluding notes and preservation captures. With no query the order
+control displays Name A–Z. Starting a search selects Relevance unless the visitor
+has explicitly chosen alphabetical order. Title and direct matches rank ahead of
+related-record matches; ties use alphabetical order. Relevance is unavailable
+without a query. Source counts describe documentation
+coverage, not importance, and do not affect ordering.
+
+All three scopes share the same always-visible filters and retain selections when
+switching. “Held by” (“En manos de”) and “Located in” (“Se encuentra en”) match an object or a
+document's directly associated objects. Institution plus country must match the
+same holder of the same object. The country selection narrows the institution
+menu; with no country selected, all institutions remain available, including
+holders without a country. Institution options include their localised country
+when recorded. Choosing a country clears an incompatible institution selection
+and displays an accessible notice; clearing the country retains the institution.
+The same reconciliation applies when restoring shared URLs or browser history.
+Document kind matches a source or an object's
+directly associated sources. This is browsing context, not an assertion that a
+document is held by an institution or that its publisher is located there.
+Classification and topic filters are omitted; inconsistent classification terms
+need a reviewed vocabulary before they can support useful filtering. Their
+source wording remains searchable, and classifications remain on cards. Retired
+classification and topic URL parameters are ignored rather than silently filtering.
+“Located in” uses the institution's country, not the object's origin; source accounts
+of holding may be historical.
+The interface does not infer catalogue kinds from titles or countries from
+free-text locations. Country names are localised from holder `countryCode`;
+unknown countries stay unset. Card labels use Institution and Classification;
+links to sources provide the attribution context.
+An optional image filter tests the record's own publishable image in every scope.
+
+The counts describe one filtered result set: Everything always equals Objects
+plus Documents and images. The same rule applies when individual photograph
+records are included or grouped. An empty scope links to matches in the other
+scope; an empty search with grouped photo matches offers to include those records.
+
+JavaScript enhances the static listings in batches of 24. In masonry view, more
+results load as the shortest column's next insertion point approaches the
+viewport, so tall photographs do not leave an empty stretch before the next
+batch. Automatic loading preserves focus and updates the loaded count in the
+URL. The manual Show more button remains a fallback; list view loads manually.
+The scroll-loading hint appears only in grid view while more results remain.
+Search, scope, view, order, filters and loaded count survive language changes,
+shared URLs and Back navigation. Switching layout preserves the loaded count.
+Legacy `view=table` URLs select the list view.
+
+`src/content/collection-presentation.json` contains website presentation choices,
+not collection assertions. Its optional `galleryOnlySourceIds` list identifies
+reviewed routine object photographs grouped with their objects in both Everything
+and Documents and images, including when searching. The shared “Include separate
+photograph records” option includes them individually in both scopes. This option
+never hides photographs on object cards or in galleries. Counts appear in the
+scope navigation; result updates are also announced to screen readers without
+adding a duplicate visible summary. Without JavaScript, listings use the grouped
+default and object galleries still provide the photographs. Historical and
+research photographs remain visible unless explicitly reviewed for grouping;
+missing dates or a `depicts` link do not imply that a photograph is contemporary.
+New photographs appear independently by default until reviewed. The build rejects
+listed IDs that are not photographs available in an object gallery.
+
+The optional `leadImages` map selects a lead image by
+object handle, with a `sourceId` and `file` from that object's depicting gallery.
+The build rejects unknown handles and lead images that are not in the object's
+gallery. Without an override, photographs precede other
+image sources, then source ID and file determine the order. Cards and galleries
+use the same lead image. Do not create object-specific template branches.
+
 Object pages follow the hierarchy in [ADR 025](adrs/025-retain-competencies-in-the-git-collection.md).
-Keep all source accounts, qualifiers and optional locators visible. Holding and
-location labels describe source reports, which may be historical.
+The shared template orders foregrounded perspectives, images, origin, reported
+holding, articles and complete source accounts. Empty sections are omitted.
+Foregrounding is explicitly MoSA's editorial selection, not a truth ranking.
+Claims selected for foregrounding are not repeated in the origin or holding
+summary, but remain in their complete source account. Image frames contain the
+whole image and link to a larger version.
+
+Source accounts use native expandable details, available without JavaScript.
+Keep every claim's wording, attribution, language, qualifiers and optional
+locators in the account. Sources without claims still link to their source page.
+Holding and location labels describe source reports, which may be historical.
 
 The [Visit map](adrs/028-map-objects-through-holders.md) presents holders as
 MoSA's “branches” / “sedes”. Each holder referenced by a resolved `held_by`
@@ -152,6 +240,15 @@ for sensitive information. Keep Instagram and the GitHub source repository in
 the global footer. Explain the open-source website and its MIT licence on the
 About page. Use descriptive text labels rather than icon-only links, and let
 external links follow normal browser behaviour instead of forcing a new tab.
+
+The footer is organised into three bands:
+
+1. **Voice.** The project statement.
+2. **Actions.** Museum navigation, external links and the newsletter form.
+3. **Colophon.** Branding, licensing and funding.
+
+The bands stack their contents on narrow screens. The newsletter form uses a
+coral button and submits directly to Mailchimp.
 
 ## Licensing
 

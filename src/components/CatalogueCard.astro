@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import { getCopy } from "../content/content";
+import type { CatalogueItem } from "../data/catalogue";
+import { messages } from "../i18n/catalogues";
+import { type Locale, publicRecordPath } from "../i18n/routes";
+
+interface Props { item: CatalogueItem; locale: Locale; hidden?: boolean; }
+const { item, locale, hidden = false } = Astro.props;
+const c = getCopy("catalogue", locale);
+const t = messages(locale);
+const kinds: Record<string, string> = { object: c.object, webpage: t.sourceKindWebpage, publication: t.sourceKindPublication, photograph: t.sourceKindPhotograph, artwork: t.sourceKindArtwork, correspondence: t.sourceKindCorrespondence, audiovisual: t.sourceKindAudiovisual, other: t.sourceKindOther };
+const href = publicRecordPath(item.section, item.id, locale);
+const language = item.language === "und" ? undefined : item.language;
+const labels = { classification: c.classificationLabel, holder: c.holderLabel, catalogueNumber: c.catalogueNumberLabel, author: c.authorLabel, date: c.dateLabel, about: c.aboutLabel, documents: c.documentsLabel };
+const groups = [...new Set(item.details.map(detail => detail.label))].map(label => ({ label, details: item.details.filter(detail => detail.label === label) }));
+---
+<article class:list={["catalogue-card", { "is-document": item.section === "sources", "has-image": Boolean(item.image) }]} data-catalogue-card data-key={item.key} data-record-id={item.id} hidden={hidden}>
+  <div class="catalogue-media">
+    {item.image ? <a href={href} tabindex="-1"><Image src={item.image.asset} alt={item.image.image.alt} lang={item.image.source.language === "und" ? undefined : item.image.source.language} widths={[160, 400, 720]} sizes="(max-width: 800px) 45vw, 23vw" loading="lazy" /></a> : <span class="image-absence" aria-hidden="true"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18"/><path d="m3 17 6-6 5 5 3-3 4 4"/><circle cx="16" cy="8" r="2"/></svg></span>}
+  </div>
+  <div class="catalogue-heading">
+    <p class:list={["record-kind", { "kind-object": item.section === "objects" }]}>{kinds[item.kind] ?? item.kind}</p>
+    <h2><a href={href} lang={language}>{item.title}</a></h2>
+  </div>
+  <dl class="catalogue-details">
+    {groups.map(({ label, details }) => <div class={`detail-${label}`}>
+      <dt>{labels[label]}</dt>
+      {details.slice(0, 2).map(detail => <dd lang={detail.language === "und" ? undefined : detail.language}>
+        {detail.hrefId ? <a href={publicRecordPath("objects", detail.hrefId, locale)}>{detail.value}</a> : detail.sourceId ? <a href={publicRecordPath("sources", detail.sourceId, locale)}>{detail.value}</a> : label === "documents" ? <a href={`${href}#sources`}>{detail.value}</a> : detail.value}
+      </dd>)}
+      {details.length > 2 && <dd><a href={href}>{c.moreDetails} <span aria-hidden="true">↗</span></a></dd>}
+    </div>)}
+  </dl>
+</article>
+<style>
+.catalogue-card { min-width: 0; display: grid; align-content: start; gap: 1rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.catalogue-card.has-image { border-top: 0; padding-top: 0; }
+.catalogue-media { display: none; }
+.has-image .catalogue-media { display: block; }
+.catalogue-media a { display: block; background: #fff; }
+.catalogue-media :global(img) { display: block; width: 100%; height: auto; }
+.image-absence { display: grid; place-items: center; width: 100%; height: 100%; background: #f3f2ef; color: #76736c; }
+.record-kind { display: inline-block; margin: 0 0 .7rem; padding: .2rem .45rem; background: #eee; font-size: .72rem; line-height: 1.3; font-weight: 400; }
+.kind-object { background: var(--coral); }
+h2 { margin: 0; font-size: clamp(1.1rem, 1.5vw, 1.35rem); line-height: 1.25; font-weight: 500; letter-spacing: -.025em; overflow-wrap: anywhere; }
+h2 a:hover { text-decoration: underline; text-decoration-color: var(--coral); text-underline-offset: .2em; }
+.catalogue-details { display: grid; gap: .65rem; margin: 0; font-size: .82rem; line-height: 1.45; overflow-wrap: anywhere; }
+dt { color: var(--muted); font-size: .72rem; }
+dd { margin: 0; }
+.catalogue-details dd a { text-decoration: underline; text-decoration-color: #ccc; text-underline-offset: .18em; }
+.catalogue-details dd a:hover { text-decoration-color: var(--coral); }
+:global([data-catalogue][data-view="list"]) .catalogue-card { grid-template-columns: 80px minmax(0, 1.25fr) minmax(0, 1fr); gap: 1.5rem; padding: 1.25rem 0; border-top: 1px solid var(--rule); }
+:global([data-catalogue][data-view="list"]) .catalogue-media { display: block; width: 80px; height: 80px; }
+:global([data-catalogue][data-view="list"]) .catalogue-media a { height: 100%; }
+:global([data-catalogue][data-view="list"]) .catalogue-media :global(img) { height: 100%; object-fit: contain; }
+:global([data-catalogue][data-view="list"]) .catalogue-details { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .65rem 1rem; }
+@media (max-width: 520px) {
+  h2 { font-size: .95rem; }
+  .catalogue-details { font-size: .75rem; }
+}
+@media (max-width: 45rem) {
+  :global([data-catalogue][data-view="list"]) .catalogue-card { grid-template-columns: 56px minmax(0,1fr); gap: .7rem 1rem; }
+  :global([data-catalogue][data-view="list"]) .catalogue-media { width: 56px; height: 56px; grid-row: 1 / 3; }
+  :global([data-catalogue][data-view="list"]) .catalogue-details { grid-column: 2; grid-template-columns: minmax(0,1fr); }
+}
+</style>

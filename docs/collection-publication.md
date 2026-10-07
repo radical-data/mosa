@@ -26,6 +26,13 @@ source wording; do not alter recorded coordinates or invent street-level
 precision to separate markers. Small visual offsets for coincident approximate
 points belong in the map presentation, not the collection records.
 
+A holder may have a `countryCode` for the country of its reviewed institutional
+site or base. Use an assigned uppercase ISO 3166-1 alpha-2 code (for example,
+`CL` or `GB`). This is a catalogue grouping field, not the object's place of
+origin or proof of present custody. It can be recorded without mapped
+coordinates. Omit it when the holder's country is unknown or a single country
+cannot be supported, including for private holders whose location is not public.
+
 A holder may also have an optional `visitUrl`: a verified official visitor
 information page using HTTP(S). Closed institutions and private collections
 remain eligible for the Visit page. Omit an unverified URL; a coordinate

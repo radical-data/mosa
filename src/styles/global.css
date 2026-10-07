@@ -301,3 +301,14 @@ h2,
 h3 {
   overflow-wrap: anywhere;
 }
+
+@media (max-width: 1100px) {
+  html.menu-open {
+    overflow: hidden;
+  }
+}
+@media (max-width: 520px) {
+  :root {
+    --gutter: 15px;
+  }
+}

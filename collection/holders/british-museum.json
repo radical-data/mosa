@@ -1,5 +1,6 @@
 {
   "name": "British Museum",
+  "countryCode": "GB",
   "aliases": ["Museo Britanico"],
   "visitUrl": "https://www.britishmuseum.org/visit",
   "location": {

@@ -1,5 +1,6 @@
 {
   "name": "Museum der Kulturen Basel",
+  "countryCode": "CH",
   "visitUrl": "https://www.mkb.ch/de/ihr-besuch.html",
   "location": {
     "name": "Basel, Switzerland",
