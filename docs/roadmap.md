@@ -34,6 +34,13 @@ follow-up: its Bishop paper has one collection source and a shared identifier
 transcription, with its PDF kept private. Continue its bounded identity work
 without treating the register as the default campaign format.
 
+## Accepted work awaiting implementation
+
+- Implement [ADR 029: short opaque object identifiers](adrs/029-use-short-opaque-object-identifiers.md).
+  Add allocation, permanent reservations, integration checks and contributor
+  lookup before migrating existing object handles and references. Preserve
+  published URLs and update authoring guidance with the implementation.
+
 ## Implemented model and deferred work
 
 The distinction between displaced objects and documentary sources is
