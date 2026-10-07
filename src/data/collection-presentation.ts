@@ -5,6 +5,7 @@ export interface CollectionPresentationLeadImage {
 
 export interface CollectionPresentationConfig {
   leadImages?: Record<string, CollectionPresentationLeadImage>;
+  galleryOnlySourceIds?: string[];
 }
 
 export interface PresentationImage {

@@ -1,5 +1,6 @@
 import type { Locale } from "../i18n/routes";
 import about from "./pages/about.json";
+import catalogue from "./pages/catalogue.json";
 import collection from "./pages/collection.json";
 import contact from "./pages/contact.json";
 import events from "./pages/events.json";
@@ -13,6 +14,7 @@ export const content = {
   home,
   about,
   collection,
+  catalogue,
   visit,
   events,
   resources,

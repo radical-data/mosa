@@ -11,6 +11,7 @@ describe("collection masonry", () => {
         { column: 1, top: 240 },
       ],
       height: 2000,
+      nextTop: 310,
     });
   });
 
@@ -18,8 +19,9 @@ describe("collection masonry", () => {
     expect(masonryPositions([50], 4, 20)).toEqual({
       positions: [{ column: 0, top: 0 }],
       height: 50,
+      nextTop: 0,
     });
-    expect(masonryPositions([], 4, 20)).toEqual({ positions: [], height: 0 });
+    expect(masonryPositions([], 4, 20)).toEqual({ positions: [], height: 0, nextTop: 0 });
   });
 
   it("breaks equal-height ties from left to right and omits the final gap", () => {
@@ -31,6 +33,13 @@ describe("collection masonry", () => {
         { column: 1, top: 120 },
       ],
       height: 180,
+      nextTop: 190,
     });
+  });
+
+  it("reports the shortest column insertion point beside a tall image", () => {
+    const layout = masonryPositions([2000, 100], 2, 20);
+    expect(layout.height).toBe(2000);
+    expect(layout.nextTop).toBe(120);
   });
 });

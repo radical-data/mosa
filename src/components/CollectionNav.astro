@@ -7,7 +7,8 @@ const { locale, active } = Astro.props;
 const t = messages(locale);
 ---
 <nav class="collection-subnav" aria-label={t.collectionSubnavigation}>
-  <a href={pagePath("collection", locale)} aria-current={active === "objects" ? "page" : undefined}>
+  <a href={pagePath("collection", locale)}>{locale === "en" ? "Everything" : "Todo"}</a>
+  <a href={`${pagePath("collection", locale)}?scope=objects`} aria-current={active === "objects" ? "page" : undefined}>
     {locale === "en" ? "Objects" : "Objetos"}
   </a>
   <a href={publicSectionPath("sources", locale)} aria-current={active === "sources" ? "page" : undefined}>

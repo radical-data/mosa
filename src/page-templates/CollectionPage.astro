@@ -1,131 +1,131 @@
 ---
-import CollectionCard from "../components/CollectionCard.astro";
-import CollectionNav from "../components/CollectionNav.astro";
-import PageIntro from "../components/PageIntro.astro";
+import CatalogueCard from "../components/CatalogueCard.astro";
 import { getCopy } from "../content/content";
-import { collectionRecords } from "../data/collection";
+import { catalogueHolders, catalogueItems } from "../data/catalogue";
 import { messages } from "../i18n/catalogues";
-import { referenceCount } from "../i18n/messages";
-import type { Locale } from "../i18n/routes";
+import { type Locale, pagePath, publicSectionPath } from "../i18n/routes";
 import Layout from "../layouts/Layout.astro";
 
-interface Props { locale: Locale; }
-const { locale } = Astro.props;
+interface Props { locale: Locale; defaultScope?: "all" | "sources"; }
+const { locale, defaultScope = "all" } = Astro.props;
+const c = getCopy("catalogue", locale);
 const copy = getCopy("collection", locale);
-const collection = collectionRecords;
 const t = messages(locale);
+const kinds: Record<string, string> = { webpage: t.sourceKindWebpage, publication: t.sourceKindPublication, photograph: t.sourceKindPhotograph, artwork: t.sourceKindArtwork, correspondence: t.sourceKindCorrespondence, audiovisual: t.sourceKindAudiovisual, other: t.sourceKindOther };
+const items = [...catalogueItems].sort((a,b) => a.title.localeCompare(b.title, locale) || a.key.localeCompare(b.key, locale));
+const groupedPhotos = items.filter(item => item.galleryOnly).length;
+const counts = { all: items.length - groupedPhotos, objects: items.filter(item => item.section === "objects").length, sources: items.filter(item => item.section === "sources" && !item.galleryOnly).length };
+const usedKinds = [...new Set(items.filter(item => item.section === "sources").map(item => item.kind))];
+const countryNames = new Intl.DisplayNames([locale === "es" ? "es-CL" : "en-GB"], { type: "region" });
+const countries = [...new Set(catalogueHolders.flatMap(holder => holder.countryCode ? [holder.countryCode] : []))].map(code => ({code, name: countryNames.of(code) ?? code})).sort((a,b) => a.name.localeCompare(b.name,locale));
+const paths = { all: pagePath("collection", locale), objects: `${pagePath("collection", locale)}?scope=objects`, sources: publicSectionPath("sources", locale) };
+const clientItems = items.map(({ image, details, ...item }) => ({ ...item, hasImage: Boolean(image) }));
 ---
-<Layout locale={locale} page="collection" title={copy.title} description={copy.description}>
-  <PageIntro title={copy.passage03} image="mahute"><p><Fragment set:html={copy.passage06} /></p><a class="text-link" href="#more-information">{copy.passage17}</a></PageIntro>
-  <section class="container section collection-section" aria-label={t.collectionExplore} data-locale={locale}>
-    <CollectionNav locale={locale} active="objects" />
-    <h2 class="catalogue-heading">{t.allObjects}</h2>
-    <div class="collection-controls" hidden>
-      <fieldset class="view-controls">
-        <legend class="sr-only">{t.collectionView}</legend>
-        <span aria-hidden="true">{t.viewAs}</span>
-        <button type="button" data-collection-view="grid" aria-pressed="true">{t.grid}</button>
-        <button type="button" data-collection-view="list" aria-pressed="false">{t.table}</button>
-      </fieldset>
-      <label class="collection-search" for="collection-search">
-        <span>{t.collectionSearch}</span>
-        <input id="collection-search" type="search" />
-      </label>
-    </div>
-    <p class="small muted" id="collection-count" role="status" aria-live="polite">{referenceCount(locale, { count: collection.length })}</p>
-    {collection.length === 0 && <p>{t.collectionPending}</p>}
-    <div class="catalogue-grid" id="collection-results">{collection.map((record) => <CollectionCard record={record} locale={locale} />)}</div>
-    <div class="empty-state" hidden><h2><Fragment set:html={t.noMatches} /></h2><p><Fragment set:html={t.noMatchesHelp} /></p><button class="button" type="button" id="reset-filters">{t.clearFilters}</button></div>
-    <noscript><p><Fragment set:html={t.enableCollectionScript} /></p></noscript>
-  </section>
-  <section class="container section" id="more-information"><h2 class="eyebrow"><Fragment set:html={copy.passage12} /></h2><div class="info-grid"><article class="info-card coral"><h3><Fragment set:html={copy.passage13} /></h3><p><Fragment set:html={copy.passage14} /></p></article><article class="info-card"><h3><Fragment set:html={copy.passage15} /></h3><p><Fragment set:html={copy.passage16} /></p></article></div></section>
+<Layout locale={locale} page="collection" publicIndex={defaultScope === "sources" ? "sources" : undefined} title={copy.title} description={c.intro}>
+  <div data-catalogue data-locale={locale} data-default-scope={defaultScope} data-view="grid" class:list={{ "source-index": defaultScope === "sources" }}>
+    <header class="container catalogue-intro">
+      <p class="eyebrow">MoSA</p>
+      <h1>{copy.passage03}</h1>
+      <p class="intro-text">{c.intro}</p>
+      <a class="text-link intro-link" href="#more-information">{c.moreInformation} <span aria-hidden="true">↗</span></a>
+    </header>
+    <section class="container catalogue-section" aria-label={c.scope}>
+      <div class="catalogue-navigation">
+        <nav class="scope-nav" aria-label={c.scope}>
+          {(["all", "objects", "sources"] as const).map(scope => <a data-scope={scope} href={paths[scope]} aria-current={scope === defaultScope ? "page" : undefined}><span class="scope-label">{c[scope]}</span> <span data-scope-count>{counts[scope]}</span></a>)}
+        </nav>
+        <fieldset class="view-controls" data-catalogue-controls hidden><legend class="sr-only">{c.view}</legend>
+          <button type="button" data-view="grid" aria-pressed="true"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1 1h5v5H1zm9 0h5v5h-5zM1 10h5v5H1zm9 0h5v5h-5z"/></svg>{c.grid}</button>
+          <button type="button" data-view="list" aria-pressed="false"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M1 2h14v2H1zm0 5h14v2H1zm0 5h14v2H1z"/></svg>{c.list}</button>
+        </fieldset>
+      </div>
+      <div class="catalogue-controls" data-catalogue-controls hidden>
+        <div class="search-row">
+          <label class="catalogue-search">{c.search}<div><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg><input type="search" data-filter="q" placeholder={c.placeholder} autocomplete="off" /></div></label>
+          <label class="sort-control">{c.sort}<select data-filter="sort"><option value="relevance" data-relevance-option hidden disabled>{c.relevance}</option><option value="name" selected>{c.name}</option><option value="name-desc">{c.nameDesc}</option></select></label>
+        </div>
+        <div class="catalogue-filters">
+          <div class="shared-filters">
+            <label>{c.country}<select data-filter="country"><option value="">{c.allCountries}</option>{countries.map(country => <option value={country.code}>{country.name}</option>)}</select></label>
+            <label>{c.holder}<select data-filter="holder"><option value="">{c.allHolders}</option>{[...catalogueHolders].sort((a,b)=>a.name.localeCompare(b.name,locale)).map(holder => <option value={holder.id} data-country={holder.countryCode} data-name={holder.name}>{holder.name}{holder.countryCode ? ` — ${countryNames.of(holder.countryCode) ?? holder.countryCode}` : ""}</option>)}</select></label>
+            <label>{c.kind}<select data-filter="kind"><option value="">{c.allKinds}</option>{usedKinds.map(kind => <option value={kind}>{kinds[kind]}</option>)}</select></label>
+          </div>
+        </div>
+        <p class="filter-notice" data-holder-notice data-message={c.holderCleared} role="status" aria-live="polite"></p>
+        <div class="filter-row">
+          <label class="image-filter"><input type="checkbox" data-filter="images" />{c.images}</label>
+          <label class="image-filter"><input type="checkbox" data-filter="photos" />{c.photos}</label>
+          <button class="reset-link" data-reset type="button">{c.reset}</button>
+        </div>
+      </div>
+      <p class="sr-only" data-result-count role="status" aria-live="polite">{counts[defaultScope]} {c.results}</p>
+      <div id="collection-results" class="catalogue-results">{items.map(item => <CatalogueCard item={item} locale={locale} hidden={Boolean(item.galleryOnly) || (defaultScope === "sources" && item.section !== "sources")} />)}</div>
+      <div class="empty-state" data-empty hidden><h2>{c.empty}</h2><p>{c.emptyHelp}</p><div><button type="button" class="button" data-reset>{c.reset}</button><button type="button" class="text-link" data-cross-scope hidden></button><button type="button" class="text-link" data-reveal-photos hidden>{c.includePhotoMatches}</button></div></div>
+      <div class="load-more" data-catalogue-controls hidden><p class="auto-loading-note" data-auto-loading hidden>{c.autoLoading}</p><p data-shown></p><button type="button" class="button" data-more hidden>{c.more} <span aria-hidden="true">↓</span></button></div>
+      <noscript><p>{c.noScript}</p></noscript>
+    </section>
+    <section class="container section" id="more-information"><h2 class="eyebrow">{copy.passage12}</h2><div class="info-grid"><article class="info-card coral"><h3>{copy.passage13}</h3><p><Fragment set:html={copy.passage14} /></p></article><article class="info-card"><h3>{copy.passage15}</h3><p><Fragment set:html={copy.passage16} /></p></article></div></section>
+    <script type="application/json" id="catalogue-data" set:html={JSON.stringify(clientItems).replaceAll("<", "\\u003c")} is:inline />
+  </div>
 </Layout>
-
-<script>
-  import "../i18n/collection-client";
-</script>
-
+<script>import "../i18n/collection-client";</script>
 <style>
-.collection-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+.catalogue-intro { padding-block: 2rem 1rem; }
+.catalogue-intro .eyebrow { font-size: .8rem; letter-spacing: .08em; }
+.catalogue-intro h1 { margin-bottom: 1.5rem; }
+.intro-text { max-width: 48rem; font-size: clamp(1rem, 1.4vw, 1.25rem); line-height: 1.5; }
+.intro-link { font-size: .85rem; }
+.catalogue-section { padding-block: 1.5rem 2rem; }
+.catalogue-navigation { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem 2rem; padding-bottom: 1rem; }
+.scope-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.scope-nav a { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding-block: .5rem; font-size: 1rem; }
+.scope-nav a[aria-current="page"] .scope-label { font-weight: 500; text-decoration: underline; text-decoration-color: var(--coral); text-decoration-thickness: 4px; text-underline-offset: .45em; }
+.scope-nav [data-scope-count] { font-size: .75rem; font-weight: 400; color: var(--muted); text-decoration: none; }
+.view-controls { margin: 0; min-width: 0; display: flex; gap: .25rem; padding: .2rem; border: 1px solid var(--rule); }
+.view-controls button { display: flex; align-items: center; gap: .5rem; padding: .65rem .8rem; border: 0; background: #fff; font-size: .85rem; min-height: 40px; }
+.view-controls button[aria-pressed="true"] { background: #000; color: #fff; }
+.catalogue-controls { margin-block: 1.75rem 2rem; }
+.search-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(10rem, .3fr); gap: 1rem 2rem; }
+.catalogue-controls label { font-size: .78rem; font-weight: 400; }
+.catalogue-search > div { display: flex; align-items: center; gap: .75rem; border-bottom: 1px solid #000; margin-top: .4rem; }
+.catalogue-search svg { flex-shrink: 0; }
+.catalogue-search input { min-width: 0; width: 100%; border: 0; padding: .7rem 0; font-size: 1rem; background: #fff; }
+.sort-control, .shared-filters label { display: grid; gap: .4rem; min-width: 0; }
+.catalogue-controls select { max-width: 100%; min-width: 0; width: 100%; padding: .75rem .5rem; border: 1px solid var(--rule); background: #fff; border-radius: 0; font-size: .85rem; }
+.filter-row { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem 1.5rem; margin-top: 1.25rem; }
+.filter-notice:empty { margin: 0; }
+.filter-notice { font-size: .875rem; }
+.catalogue-filters { margin-top: 1.25rem; }
+.shared-filters { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1rem; margin-block: .75rem; }
+.image-filter { display: flex; gap: .65rem; align-items: center; min-height: 44px; }
+.image-filter input { width: 18px; height: 18px; accent-color: #000; }
+.reset-link { border: 0; background: none; text-decoration: underline; text-underline-offset: .2em; font-size: .8rem; min-height: 44px; }
+.catalogue-results { overflow-anchor: none; --collection-columns: 4; --collection-column-gap: 1rem; display: grid; grid-template-columns: repeat(var(--collection-columns),minmax(0,1fr)); align-items: start; gap: 3.5rem var(--collection-column-gap); }
+[data-view="grid"] .catalogue-results[data-masonry] { display: block; position: relative; }
+[data-view="grid"] .catalogue-results[data-masonry] :global(.catalogue-card) { position: absolute; width: calc((100% - (var(--collection-columns) - 1) * var(--collection-column-gap)) / var(--collection-columns)); }
+[data-view="list"] .catalogue-results { display: block; }
+[data-view="list"] .auto-loading-note { display: none; }
+.load-more { display: flex; flex-direction: column; align-items: center; gap: .75rem; margin-block: 2.5rem; }
+.load-more p { margin: 0; color: var(--muted); font-size: .8rem; }
+.load-more .button { min-height: 48px; padding-inline: 2rem; }
+.empty-state > div { display: flex; flex-wrap: wrap; gap: 1rem; }
+.empty-state .text-link { border: 0; background: none; }
+.info-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1rem; }
+.info-card { background: #000; color: #fff; padding: 2rem; min-height: 260px; display: flex; flex-direction: column; justify-content: end; }
+.info-card.coral { background: var(--coral); color: #000; }
+.info-card h3 { margin-bottom: 1rem; }
+.info-card p { font-size: .95rem; }
+@media(max-width:800px) { .catalogue-results { overflow-anchor: none; --collection-columns: 2; row-gap: 2.5rem; } }
+@media(max-width:40rem) {
+  .catalogue-intro { padding-block: 2rem; }
+  .catalogue-intro h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+  .catalogue-section { padding-top: 1rem; }
+  .scope-nav { gap: .25rem 1rem; }
+  .scope-nav a { font-size: .9rem; }
+  .search-row { grid-template-columns: minmax(0,1fr); }
+  .sort-control { grid-template-columns: auto minmax(0,1fr); align-items: center; }
+  .shared-filters { grid-template-columns: minmax(0,1fr); }
+  .info-grid { grid-template-columns: minmax(0,1fr); }
+  .info-card { padding: 1.5rem; }
 }
-.view-controls {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-shrink: 0;
-  font-size: 0.85rem;
-}
-.view-controls button {
-  border: 0;
-  padding: 0.5rem 0;
-  background: transparent;
-  font-weight: 400;
-}
-.view-controls button[aria-pressed="true"] {
-  text-decoration: line-through;
-  text-decoration-color: var(--coral);
-  text-decoration-thickness: 3px;
-}
-.collection-search {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.85rem;
-}
-.collection-search input {
-  width: min(16rem, 45vw);
-  padding: 0.45rem 0;
-  border: 0;
-  border-bottom: 1px solid var(--rule);
-  border-radius: 0;
-  background: #fff;
-}
-@media (max-width: 520px) {
-.collection-section {
-    padding-top: 2.5rem;
-  }
-.collection-controls {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 1.25rem;
-    margin-block: 2.5rem 1.5rem;
-  }
-.view-controls {
-    gap: 18px;
-    font-size: 1rem;
-  }
-.view-controls button {
-    padding: 0;
-  }
-.collection-search {
-    width: 100%;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.25rem;
-    font-size: 1rem;
-  }
-.collection-search input {
-    width: 100%;
-  }
-}
-.view-controls {
-  flex-wrap: wrap;
-  flex-shrink: 1;
-}
-
-  .catalogue-heading { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: .5rem; }
-  .catalogue-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem 1.25rem; margin-top: 1.5rem; }
-  .catalogue-grid.is-list { display: block; }
-  .collection-controls { margin-block: 1.5rem 1rem; gap: 1rem 2rem; }
-  @media (max-width: 65rem) { .catalogue-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 40rem) { .catalogue-grid { grid-template-columns: minmax(0, 1fr); } }
 </style>
