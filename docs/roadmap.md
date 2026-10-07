@@ -9,6 +9,11 @@
 - Choose foregrounded claims with Rapa Nui collaborators rather than treating
   prominence as an automatic museum-data rule.
 - Review canonical navigation names against source-attributed names.
+- Write a critical article examining when creative “returns” redistribute
+  authority and restore relationships, and when digital surrogates, artistic
+  interventions and institutional programmes merely circulate representations
+  or defer physical restitution. Use the creative restitution sources as case
+  studies.
 
 ## Shared research programme
 
