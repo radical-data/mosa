@@ -16,7 +16,7 @@ const noteId = `newsletter-note-${placement}`;
 ---
 <section
   id={placement === "contact" ? "newsletter" : undefined}
-  class:list={["newsletter", `newsletter-${placement}`, placement === "footer" && "container"]}
+  class:list={["newsletter", `newsletter-${placement}`]}
   aria-labelledby={titleId}
 >
   <div class="newsletter-copy">
@@ -106,25 +106,60 @@ const noteId = `newsletter-note-${placement}`;
   }
 
   .newsletter-footer {
-    padding-block: 2.5rem;
-    border-block: 1px solid #666;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: 1.75rem;
+    min-width: 0;
+  }
+
+  .newsletter-footer .newsletter-copy p {
+    max-width: 30rem;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .newsletter-footer .newsletter-form > label {
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .newsletter-footer .newsletter-field {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .newsletter-footer .newsletter-field input {
+    flex: 999 1 220px;
+    height: 48px;
+    padding: 0 0.875rem;
+    font-size: 1rem;
     border-color: #fff;
     background: #000;
     color: #fff;
   }
 
   .newsletter-footer .newsletter-field .button {
-    border-color: #fff;
-    background: #fff;
+    flex: 1 0 auto;
+    width: auto;
+    height: 48px;
+    padding: 0 1.375rem;
+    border-radius: 0;
+    border-color: var(--coral);
+    background: var(--coral);
     color: #000;
+    font-size: 0.9375rem;
   }
 
   .newsletter-footer .newsletter-field .button:hover {
-    border-color: var(--coral);
-    background: var(--coral);
+    border-color: #fff;
+    background: #fff;
+  }
+
+  .newsletter-footer .newsletter-note {
+    margin-top: 0.625rem;
+    color: #cfcfcf;
+    font-size: 0.78125rem;
   }
 
   @media (max-width: 800px) {

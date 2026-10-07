@@ -180,6 +180,15 @@ the global footer. Explain the open-source website and its MIT licence on the
 About page. Use descriptive text labels rather than icon-only links, and let
 external links follow normal browser behaviour instead of forcing a new tab.
 
+The footer is organised into three bands:
+
+1. **Voice.** The project statement.
+2. **Actions.** Museum navigation, external links and the newsletter form.
+3. **Colophon.** Branding, licensing and funding.
+
+The bands stack their contents on narrow screens. The newsletter form uses a
+coral button and submits directly to Mailchimp.
+
 ## Licensing
 
 The website footer identifies original MoSA writing as CC BY-SA 4.0 and the
